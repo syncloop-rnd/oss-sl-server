@@ -1,0 +1,365 @@
+{
+  "latest" : {
+    "createdTS" : "",
+    "input" : [ {
+      "id" : "j2_7",
+      "text" : "*payload",
+      "li_attr" : {
+        "id" : "j2_7"
+      },
+      "a_attr" : {
+        "href" : "#",
+        "id" : "j2_7_anchor"
+      },
+      "state" : {
+        "loaded" : true,
+        "opened" : false,
+        "selected" : false,
+        "disabled" : false,
+        "hidden" : false
+      },
+      "data" : {
+        "guid" : "c7594dcc-f171-4e01-b860-21219072d729",
+        "columnType" : "-1"
+      },
+      "children" : [ {
+        "id" : "j2_4",
+        "text" : "staticPayload",
+        "li_attr" : {
+          "id" : "j2_4"
+        },
+        "a_attr" : {
+          "href" : "#",
+          "id" : "j2_4_anchor"
+        },
+        "state" : {
+          "loaded" : true,
+          "opened" : false,
+          "selected" : false,
+          "disabled" : false,
+          "hidden" : false
+        },
+        "data" : { },
+        "children" : [ ],
+        "type" : "string"
+      }, {
+        "id" : "j2_5",
+        "text" : "inputJSONSchema",
+        "li_attr" : {
+          "id" : "j2_5"
+        },
+        "a_attr" : {
+          "href" : "#",
+          "id" : "j2_5_anchor"
+        },
+        "state" : {
+          "loaded" : true,
+          "opened" : false,
+          "selected" : false,
+          "disabled" : false,
+          "hidden" : false
+        },
+        "data" : { },
+        "children" : [ ],
+        "type" : "string"
+      }, {
+        "id" : "j2_3",
+        "text" : "functionDescription",
+        "li_attr" : {
+          "id" : "j2_3"
+        },
+        "a_attr" : {
+          "href" : "#",
+          "id" : "j2_3_anchor"
+        },
+        "state" : {
+          "loaded" : true,
+          "opened" : false,
+          "selected" : false,
+          "disabled" : false,
+          "hidden" : false
+        },
+        "data" : { },
+        "children" : [ ],
+        "type" : "string"
+      }, {
+        "id" : "j2_2",
+        "text" : "fqn",
+        "li_attr" : {
+          "id" : "j2_2"
+        },
+        "a_attr" : {
+          "href" : "#",
+          "id" : "j2_2_anchor"
+        },
+        "state" : {
+          "loaded" : true,
+          "opened" : false,
+          "selected" : false,
+          "disabled" : false,
+          "hidden" : false
+        },
+        "data" : { },
+        "children" : [ ],
+        "type" : "string"
+      }, {
+        "id" : "j2_1",
+        "text" : "agentID",
+        "li_attr" : {
+          "id" : "j2_1"
+        },
+        "a_attr" : {
+          "href" : "#",
+          "id" : "j2_1_anchor"
+        },
+        "state" : {
+          "loaded" : true,
+          "opened" : false,
+          "selected" : false,
+          "disabled" : false,
+          "hidden" : false
+        },
+        "data" : { },
+        "children" : [ ],
+        "type" : "string"
+      } ],
+      "type" : "document"
+    } ],
+    "output" : [ {
+      "id" : "j3_1",
+      "text" : "status",
+      "li_attr" : {
+        "id" : "j3_1"
+      },
+      "a_attr" : {
+        "href" : "#",
+        "id" : "j3_1_anchor"
+      },
+      "state" : {
+        "loaded" : true,
+        "opened" : false,
+        "selected" : false,
+        "disabled" : false,
+        "hidden" : false
+      },
+      "data" : { },
+      "children" : [ ],
+      "type" : "string"
+    }, {
+      "id" : "j3_2",
+      "text" : "error",
+      "li_attr" : {
+        "id" : "j3_2"
+      },
+      "a_attr" : {
+        "href" : "#",
+        "id" : "j3_2_anchor"
+      },
+      "state" : {
+        "loaded" : true,
+        "opened" : false,
+        "selected" : false,
+        "disabled" : false,
+        "hidden" : false
+      },
+      "data" : { },
+      "children" : [ ],
+      "type" : "string"
+    } ],
+    "api" : [ {
+      "id" : "j1_1",
+      "text" : "Invoke",
+      "li_attr" : {
+        "id" : "j1_1"
+      },
+      "a_attr" : {
+        "href" : "javascript:void(0)",
+        "id" : "j1_1_anchor"
+      },
+      "state" : {
+        "loaded" : true,
+        "opened" : false,
+        "selected" : true,
+        "disabled" : false,
+        "hidden" : false
+      },
+      "data" : {
+        "guid" : "19ca9b16-c241-47a8-b11b-884b6b3894ce",
+        "columnType" : "-1",
+        "transformers" : [ {
+          "op" : "copy",
+          "from" : "/*payload/fqn",
+          "to" : "/fqn",
+          "inTypePath" : "document/string",
+          "outTypePath" : "string",
+          "direction" : "in"
+        }, {
+          "op" : "copy",
+          "from" : "/*payload/agentID",
+          "to" : "/identifier",
+          "inTypePath" : "document/string",
+          "outTypePath" : "string",
+          "direction" : "in"
+        }, {
+          "op" : "copy",
+          "from" : "/*payload/staticPayload",
+          "to" : "/staticPayload",
+          "inTypePath" : "document/string",
+          "outTypePath" : "string",
+          "direction" : "in"
+        }, {
+          "op" : "copy",
+          "from" : "/*payload/inputJSONSchema",
+          "to" : "/inputJSONSchema",
+          "inTypePath" : "document/string",
+          "outTypePath" : "string",
+          "direction" : "in"
+        }, {
+          "op" : "copy",
+          "from" : "/*payload/functionDescription",
+          "to" : "/functionDescription",
+          "inTypePath" : "document/string",
+          "outTypePath" : "string",
+          "direction" : "in"
+        }, {
+          "op" : "copy",
+          "from" : "/status",
+          "to" : "/status",
+          "inTypePath" : "string",
+          "outTypePath" : "string",
+          "direction" : "out"
+        }, {
+          "op" : "copy",
+          "from" : "/error",
+          "to" : "/error",
+          "inTypePath" : "string",
+          "outTypePath" : "string",
+          "direction" : "out"
+        } ],
+        "lines" : [ {
+          "inputPath" : "*payload/fqn",
+          "outputPath" : "fqn",
+          "inpJsTree" : "#launching_arrow_jsTree",
+          "outpJsTree" : "#landing_arrow_jsTree_function",
+          "INPath" : "*payload/fqn",
+          "OUTPath" : "fqn",
+          "direction" : "in",
+          "op" : "copy",
+          "line" : 0,
+          "dashedLine" : false,
+          "inType" : "string",
+          "outType" : "string",
+          "inTypePath" : "document/string",
+          "outTypePath" : "string"
+        }, {
+          "inputPath" : "*payload/agentID",
+          "outputPath" : "identifier",
+          "inpJsTree" : "#launching_arrow_jsTree",
+          "outpJsTree" : "#landing_arrow_jsTree_function",
+          "INPath" : "*payload/agentID",
+          "OUTPath" : "identifier",
+          "direction" : "in",
+          "op" : "copy",
+          "line" : 0,
+          "dashedLine" : false,
+          "inType" : "string",
+          "outType" : "string",
+          "inTypePath" : "document/string",
+          "outTypePath" : "string"
+        }, {
+          "inputPath" : "*payload/staticPayload",
+          "outputPath" : "staticPayload",
+          "inpJsTree" : "#launching_arrow_jsTree",
+          "outpJsTree" : "#landing_arrow_jsTree_function",
+          "INPath" : "*payload/staticPayload",
+          "OUTPath" : "staticPayload",
+          "direction" : "in",
+          "op" : "copy",
+          "line" : 0,
+          "dashedLine" : false,
+          "inType" : "string",
+          "outType" : "string",
+          "inTypePath" : "document/string",
+          "outTypePath" : "string"
+        }, {
+          "inputPath" : "*payload/inputJSONSchema",
+          "outputPath" : "inputJSONSchema",
+          "inpJsTree" : "#launching_arrow_jsTree",
+          "outpJsTree" : "#landing_arrow_jsTree_function",
+          "INPath" : "*payload/inputJSONSchema",
+          "OUTPath" : "inputJSONSchema",
+          "direction" : "in",
+          "op" : "copy",
+          "line" : 0,
+          "dashedLine" : false,
+          "inType" : "string",
+          "outType" : "string",
+          "inTypePath" : "document/string",
+          "outTypePath" : "string"
+        }, {
+          "inputPath" : "*payload/functionDescription",
+          "outputPath" : "functionDescription",
+          "inpJsTree" : "#launching_arrow_jsTree",
+          "outpJsTree" : "#landing_arrow_jsTree_function",
+          "INPath" : "*payload/functionDescription",
+          "OUTPath" : "functionDescription",
+          "direction" : "in",
+          "op" : "copy",
+          "line" : 0,
+          "dashedLine" : false,
+          "inType" : "string",
+          "outType" : "string",
+          "inTypePath" : "document/string",
+          "outTypePath" : "string"
+        }, {
+          "inputPath" : "status",
+          "outputPath" : "status",
+          "inpJsTree" : "#launching_arrow_jsTree_function",
+          "outpJsTree" : "#landing_arrow_jsTree",
+          "INPath" : "status",
+          "OUTPath" : "status",
+          "direction" : "out",
+          "op" : "copy",
+          "line" : 0,
+          "dashedLine" : false,
+          "inType" : "string",
+          "outType" : "string",
+          "inTypePath" : "string",
+          "outTypePath" : "string"
+        }, {
+          "inputPath" : "error",
+          "outputPath" : "error",
+          "inpJsTree" : "#launching_arrow_jsTree_function",
+          "outpJsTree" : "#landing_arrow_jsTree",
+          "INPath" : "error",
+          "OUTPath" : "error",
+          "direction" : "out",
+          "op" : "copy",
+          "line" : 0,
+          "dashedLine" : false,
+          "inType" : "string",
+          "outType" : "string",
+          "inTypePath" : "string",
+          "outTypePath" : "string"
+        } ],
+        "dropList" : [ ],
+        "createList" : [ ],
+        "initiateList" : [ ],
+        "fqn" : "packages/Awareness/dashboard/services/java/addTool",
+        "serviceType" : "service"
+      },
+      "children" : [ ],
+      "type" : "invoke"
+    } ],
+    "api_info" : {
+      "title" : "",
+      "description" : ""
+    },
+    "lockedByUser" : "admin"
+  },
+  "consumers" : "",
+  "developers" : "developers",
+  "enableServiceDocumentValidation" : false,
+  "created_on" : "1751957530718",
+  "modified_on" : 1751957530718
+}

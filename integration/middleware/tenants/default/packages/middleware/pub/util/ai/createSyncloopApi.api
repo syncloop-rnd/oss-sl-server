@@ -1,0 +1,407 @@
+{
+  "latest" : {
+    "createdTS" : "",
+    "input" : [ {
+      "id" : "j2_3",
+      "text" : "*payload",
+      "li_attr" : {
+        "id" : "j2_3"
+      },
+      "a_attr" : {
+        "href" : "#",
+        "id" : "j2_3_anchor"
+      },
+      "state" : {
+        "loaded" : true,
+        "opened" : true,
+        "selected" : false,
+        "disabled" : false,
+        "hidden" : false
+      },
+      "data" : {
+        "guid" : "81ccce61-601d-4ef8-93e4-9184f141f263",
+        "columnType" : "-1"
+      },
+      "children" : [ {
+        "id" : "j2_1",
+        "text" : "filePath",
+        "li_attr" : {
+          "id" : "j2_1"
+        },
+        "a_attr" : {
+          "href" : "#",
+          "id" : "j2_1_anchor"
+        },
+        "state" : {
+          "loaded" : true,
+          "opened" : false,
+          "selected" : false,
+          "disabled" : false
+        },
+        "data" : {
+          "guid" : "7b94962f-6b66-433b-9bd6-d6b8843de198",
+          "columnType" : "-1"
+        },
+        "children" : [ ],
+        "type" : "string"
+      }, {
+        "id" : "j2_2",
+        "text" : "api",
+        "li_attr" : {
+          "id" : "j2_2"
+        },
+        "a_attr" : {
+          "href" : "#",
+          "id" : "j2_2_anchor"
+        },
+        "state" : {
+          "loaded" : true,
+          "opened" : false,
+          "selected" : false,
+          "disabled" : false
+        },
+        "data" : {
+          "guid" : "24c678b5-945c-49de-a0dd-6f919d148327",
+          "columnType" : "-1"
+        },
+        "children" : [ ],
+        "type" : "document"
+      } ],
+      "type" : "document"
+    } ],
+    "output" : [ {
+      "id" : "j3_1",
+      "text" : "filePath",
+      "li_attr" : {
+        "id" : "j3_1"
+      },
+      "a_attr" : {
+        "href" : "#",
+        "id" : "j3_1_anchor"
+      },
+      "state" : {
+        "loaded" : true,
+        "opened" : false,
+        "selected" : false,
+        "disabled" : false,
+        "hidden" : false
+      },
+      "data" : { },
+      "children" : [ ],
+      "type" : "string"
+    }, {
+      "id" : "j3_2",
+      "text" : "file",
+      "li_attr" : {
+        "id" : "j3_2"
+      },
+      "a_attr" : {
+        "href" : "#",
+        "id" : "j3_2_anchor"
+      },
+      "state" : {
+        "loaded" : true,
+        "opened" : false,
+        "selected" : false,
+        "disabled" : false,
+        "hidden" : false
+      },
+      "data" : { },
+      "children" : [ ],
+      "type" : "javaObject"
+    } ],
+    "api" : [ {
+      "id" : "j1_1",
+      "text" : "Transformer",
+      "li_attr" : {
+        "id" : "j1_1"
+      },
+      "a_attr" : {
+        "href" : "javascript:void(0)",
+        "id" : "j1_1_anchor"
+      },
+      "state" : {
+        "loaded" : true,
+        "opened" : false,
+        "selected" : false,
+        "disabled" : false,
+        "hidden" : false
+      },
+      "data" : {
+        "guid" : "4bb690c7-1183-4cea-bb31-0045f00ca85a",
+        "columnType" : "-1",
+        "transformers" : [ ],
+        "lines" : [ ],
+        "dropList" : [ ],
+        "createList" : [ {
+          "path" : "filePath",
+          "value" : "#{*TenantPackagePath}packages/#{*payload/filePath}",
+          "id" : "fdb3b3a3-0d30-46d4-8b4f-4e4f0b414009",
+          "evaluate" : "EEV",
+          "typePath" : "string"
+        } ],
+        "initiateList" : [ ]
+      },
+      "children" : [ ],
+      "type" : "transformer"
+    }, {
+      "id" : "j1_2",
+      "text" : "Invoke",
+      "li_attr" : {
+        "id" : "j1_2"
+      },
+      "a_attr" : {
+        "href" : "javascript:void(0)",
+        "id" : "j1_2_anchor"
+      },
+      "state" : {
+        "loaded" : true,
+        "opened" : false,
+        "selected" : false,
+        "disabled" : false,
+        "hidden" : false
+      },
+      "data" : {
+        "guid" : "29c5efa5-f8f7-4ec8-acdf-478b874c3e09",
+        "columnType" : "-1",
+        "transformers" : [ {
+          "op" : "copy",
+          "from" : "/*payload/api",
+          "to" : "/root",
+          "inTypePath" : "document/document",
+          "outTypePath" : "document",
+          "direction" : "in"
+        }, {
+          "op" : "copy",
+          "from" : "/jsonString",
+          "to" : "/fileContent",
+          "inTypePath" : "string",
+          "outTypePath" : "string",
+          "direction" : "out"
+        } ],
+        "lines" : [ {
+          "inputPath" : "*payload/api",
+          "outputPath" : "root",
+          "inpJsTree" : "#launching_arrow_jsTree",
+          "outpJsTree" : "#landing_arrow_jsTree_function",
+          "INPath" : "*payload/api",
+          "OUTPath" : "root",
+          "direction" : "in",
+          "op" : "copy",
+          "line" : 0,
+          "dashedLine" : false,
+          "inType" : "document",
+          "outType" : "document",
+          "inTypePath" : "document/document",
+          "outTypePath" : "document"
+        }, {
+          "inputPath" : "jsonString",
+          "outputPath" : "fileContent",
+          "inpJsTree" : "#launching_arrow_jsTree_function",
+          "outpJsTree" : "#landing_arrow_jsTree",
+          "INPath" : "jsonString",
+          "OUTPath" : "fileContent",
+          "direction" : "out",
+          "op" : "copy",
+          "line" : 0,
+          "dashedLine" : false,
+          "inType" : "string",
+          "outType" : "string",
+          "inTypePath" : "string",
+          "outTypePath" : "string"
+        } ],
+        "dropList" : [ ],
+        "createList" : [ ],
+        "initiateList" : [ {
+          "path" : "fileContent",
+          "id" : "673b151c-3af9-415e-8cf6-921e644230d1",
+          "typePath" : "string"
+        } ],
+        "fqn" : "packages/middleware/pub/json/toJson",
+        "serviceType" : "service"
+      },
+      "children" : [ ],
+      "type" : "invoke"
+    }, {
+      "id" : "j1_4",
+      "text" : "Invoke",
+      "li_attr" : {
+        "id" : "j1_4"
+      },
+      "a_attr" : {
+        "href" : "javascript:void(0)",
+        "id" : "j1_4_anchor"
+      },
+      "state" : {
+        "loaded" : true,
+        "opened" : false,
+        "selected" : false,
+        "disabled" : false,
+        "hidden" : false
+      },
+      "data" : {
+        "guid" : "33d85674-20d0-4f53-8f32-b44893b43a15",
+        "columnType" : "-1",
+        "transformers" : [ {
+          "op" : "copy",
+          "from" : "/fileContent",
+          "to" : "/text",
+          "inTypePath" : "string",
+          "outTypePath" : "string",
+          "direction" : "in"
+        }, {
+          "op" : "copy",
+          "from" : "/bytes",
+          "to" : "/bytes",
+          "inTypePath" : "byteList",
+          "outTypePath" : "byteList",
+          "direction" : "out"
+        } ],
+        "lines" : [ {
+          "inputPath" : "fileContent",
+          "outputPath" : "text",
+          "inpJsTree" : "#launching_arrow_jsTree",
+          "outpJsTree" : "#landing_arrow_jsTree_function",
+          "INPath" : "fileContent",
+          "OUTPath" : "text",
+          "direction" : "in",
+          "op" : "copy",
+          "line" : 0,
+          "dashedLine" : false,
+          "inType" : "string",
+          "outType" : "string",
+          "inTypePath" : "string",
+          "outTypePath" : "string"
+        }, {
+          "inputPath" : "bytes",
+          "outputPath" : "bytes",
+          "inpJsTree" : "#launching_arrow_jsTree_function",
+          "outpJsTree" : "#landing_arrow_jsTree",
+          "INPath" : "bytes",
+          "OUTPath" : "bytes",
+          "direction" : "out",
+          "op" : "copy",
+          "line" : 0,
+          "dashedLine" : false,
+          "inType" : "byteList",
+          "outType" : "byteList",
+          "inTypePath" : "byteList",
+          "outTypePath" : "byteList"
+        } ],
+        "dropList" : [ ],
+        "createList" : [ ],
+        "initiateList" : [ ],
+        "fqn" : "packages/middleware/pub/string/stringToBytes",
+        "serviceType" : "service"
+      },
+      "children" : [ ],
+      "type" : "invoke"
+    }, {
+      "id" : "j1_3",
+      "text" : "Invoke",
+      "li_attr" : {
+        "id" : "j1_3"
+      },
+      "a_attr" : {
+        "href" : "javascript:void(0)",
+        "id" : "j1_3_anchor"
+      },
+      "state" : {
+        "loaded" : true,
+        "opened" : false,
+        "selected" : false,
+        "disabled" : false,
+        "hidden" : false
+      },
+      "data" : {
+        "guid" : "6770de34-b324-45d6-a37b-7bc6223c557a",
+        "columnType" : "-1",
+        "transformers" : [ {
+          "op" : "copy",
+          "from" : "/bytes",
+          "to" : "/bytes",
+          "inTypePath" : "byteList",
+          "outTypePath" : "byteList",
+          "direction" : "in"
+        }, {
+          "op" : "copy",
+          "from" : "/filePath",
+          "to" : "/filename",
+          "inTypePath" : "string",
+          "outTypePath" : "string",
+          "direction" : "in"
+        }, {
+          "op" : "copy",
+          "from" : "/file",
+          "to" : "/file",
+          "inTypePath" : "javaObject",
+          "outTypePath" : "javaObject",
+          "direction" : "out"
+        } ],
+        "lines" : [ {
+          "inputPath" : "bytes",
+          "outputPath" : "bytes",
+          "inpJsTree" : "#launching_arrow_jsTree",
+          "outpJsTree" : "#landing_arrow_jsTree_function",
+          "INPath" : "bytes",
+          "OUTPath" : "bytes",
+          "direction" : "in",
+          "op" : "copy",
+          "line" : 0,
+          "dashedLine" : false,
+          "inType" : "byteList",
+          "outType" : "byteList",
+          "inTypePath" : "byteList",
+          "outTypePath" : "byteList"
+        }, {
+          "inputPath" : "filePath",
+          "outputPath" : "filename",
+          "inpJsTree" : "#launching_arrow_jsTree",
+          "outpJsTree" : "#landing_arrow_jsTree_function",
+          "INPath" : "filePath",
+          "OUTPath" : "filename",
+          "direction" : "in",
+          "op" : "copy",
+          "line" : 0,
+          "dashedLine" : false,
+          "inType" : "string",
+          "outType" : "string",
+          "inTypePath" : "string",
+          "outTypePath" : "string"
+        }, {
+          "inputPath" : "file",
+          "outputPath" : "file",
+          "inpJsTree" : "#launching_arrow_jsTree_function",
+          "outpJsTree" : "#landing_arrow_jsTree",
+          "INPath" : "file",
+          "OUTPath" : "file",
+          "direction" : "out",
+          "op" : "copy",
+          "line" : 0,
+          "dashedLine" : false,
+          "inType" : "javaObject",
+          "outType" : "javaObject",
+          "inTypePath" : "javaObject",
+          "outTypePath" : "javaObject"
+        } ],
+        "dropList" : [ ],
+        "createList" : [ ],
+        "initiateList" : [ ],
+        "fqn" : "packages/middleware/pub/io/bytesToFile",
+        "serviceType" : "service"
+      },
+      "children" : [ ],
+      "type" : "invoke"
+    } ],
+    "api_info" : {
+      "title" : "",
+      "description" : ""
+    },
+    "lockedByUser" : "admin"
+  },
+  "consumers" : "",
+  "developers" : "administrators",
+  "enableServiceDocumentValidation" : false,
+  "created_on" : "1776150815244",
+  "modified_on" : 1776150815244
+}

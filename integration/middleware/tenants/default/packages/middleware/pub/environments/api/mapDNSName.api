@@ -1,0 +1,883 @@
+{
+  "latest" : {
+    "createdTS" : "",
+    "input" : [ {
+      "id" : "j2_1",
+      "text" : "id",
+      "icon" : null,
+      "li_attr" : {
+        "id" : "j2_1"
+      },
+      "a_attr" : {
+        "href" : "#",
+        "id" : "j2_1_anchor"
+      },
+      "state" : {
+        "loaded" : true,
+        "opened" : false,
+        "selected" : false,
+        "disabled" : false
+      },
+      "data" : { },
+      "children" : [ ],
+      "type" : "integer"
+    }, {
+      "id" : "j2_2",
+      "text" : "registrar_name",
+      "icon" : null,
+      "li_attr" : {
+        "id" : "j2_2"
+      },
+      "a_attr" : {
+        "href" : "#",
+        "id" : "j2_2_anchor"
+      },
+      "state" : {
+        "loaded" : true,
+        "opened" : false,
+        "selected" : false,
+        "disabled" : false
+      },
+      "data" : { },
+      "children" : [ ],
+      "type" : "string"
+    }, {
+      "id" : "j2_3",
+      "text" : "dnsName",
+      "icon" : null,
+      "li_attr" : {
+        "id" : "j2_3"
+      },
+      "a_attr" : {
+        "href" : "#",
+        "id" : "j2_3_anchor"
+      },
+      "state" : {
+        "loaded" : true,
+        "opened" : false,
+        "selected" : false,
+        "disabled" : false
+      },
+      "data" : { },
+      "children" : [ ],
+      "type" : "string"
+    } ],
+    "output" : [ {
+      "id" : "j3_1",
+      "text" : "response",
+      "icon" : null,
+      "li_attr" : {
+        "id" : "j3_1"
+      },
+      "a_attr" : {
+        "href" : "#",
+        "id" : "j3_1_anchor"
+      },
+      "state" : {
+        "loaded" : true,
+        "opened" : false,
+        "selected" : false,
+        "disabled" : false
+      },
+      "data" : { },
+      "children" : [ ],
+      "type" : "document"
+    }, {
+      "id" : "j3_2",
+      "text" : "status",
+      "icon" : null,
+      "li_attr" : {
+        "id" : "j3_2"
+      },
+      "a_attr" : {
+        "href" : "#",
+        "id" : "j3_2_anchor"
+      },
+      "state" : {
+        "loaded" : true,
+        "opened" : false,
+        "selected" : false,
+        "disabled" : false
+      },
+      "data" : { },
+      "children" : [ ],
+      "type" : "boolean"
+    } ],
+    "lockedByUser" : "admin",
+    "api" : [ {
+      "id" : "j1_1",
+      "text" : "Invoke",
+      "icon" : null,
+      "li_attr" : {
+        "id" : "j1_1"
+      },
+      "a_attr" : {
+        "href" : "javascript:void(0)",
+        "id" : "j1_1_anchor"
+      },
+      "state" : {
+        "loaded" : true,
+        "opened" : false,
+        "selected" : false,
+        "disabled" : false
+      },
+      "data" : {
+        "transformers" : [ {
+          "op" : "copy",
+          "from" : "/id",
+          "to" : "/inputDocList/0/id",
+          "inTypePath" : "integer",
+          "outTypePath" : "documentList/integer",
+          "direction" : "in"
+        }, {
+          "op" : "copy",
+          "from" : "/outputDocList/0/dns_mapping",
+          "to" : "/environment/dns_mapping",
+          "inTypePath" : "documentList/boolean",
+          "outTypePath" : "document/boolean",
+          "direction" : "out"
+        }, {
+          "op" : "copy",
+          "from" : "/outputDocList/0/sub_domain",
+          "to" : "/environment/sub_domain",
+          "inTypePath" : "documentList/string",
+          "outTypePath" : "document/string",
+          "direction" : "out"
+        }, {
+          "op" : "copy",
+          "from" : "/outputDocList/0/protocol",
+          "to" : "/environment/protocol",
+          "inTypePath" : "documentList/string",
+          "outTypePath" : "document/string",
+          "direction" : "out"
+        } ],
+        "lines" : [ {
+          "inputPath" : "id",
+          "outputPath" : "inputDocList/id",
+          "inpJsTree" : "#launching_arrow_jsTree",
+          "outpJsTree" : "#landing_arrow_jsTree_function",
+          "INPath" : "id",
+          "OUTPath" : "inputDocList/#0/id",
+          "direction" : "in",
+          "op" : "copy",
+          "line" : 0,
+          "dashedLine" : false,
+          "inType" : "integer",
+          "outType" : "integer",
+          "inTypePath" : "integer",
+          "outTypePath" : "documentList/integer"
+        }, {
+          "inputPath" : "outputDocList/dns_mapping",
+          "outputPath" : "environment/dns_mapping",
+          "inpJsTree" : "#launching_arrow_jsTree_function",
+          "outpJsTree" : "#landing_arrow_jsTree",
+          "INPath" : "outputDocList/#0/dns_mapping",
+          "OUTPath" : "environment/dns_mapping",
+          "direction" : "out",
+          "op" : "copy",
+          "line" : 0,
+          "dashedLine" : false,
+          "inType" : "boolean",
+          "outType" : "boolean",
+          "inTypePath" : "documentList/boolean",
+          "outTypePath" : "document/boolean"
+        }, {
+          "inputPath" : "outputDocList/sub_domain",
+          "outputPath" : "environment/sub_domain",
+          "inpJsTree" : "#launching_arrow_jsTree_function",
+          "outpJsTree" : "#landing_arrow_jsTree",
+          "INPath" : "outputDocList/#0/sub_domain",
+          "OUTPath" : "environment/sub_domain",
+          "direction" : "out",
+          "op" : "copy",
+          "line" : 0,
+          "dashedLine" : false,
+          "inType" : "string",
+          "outType" : "string",
+          "inTypePath" : "documentList/string",
+          "outTypePath" : "document/string"
+        }, {
+          "inputPath" : "outputDocList/protocol",
+          "outputPath" : "environment/protocol",
+          "inpJsTree" : "#launching_arrow_jsTree_function",
+          "outpJsTree" : "#landing_arrow_jsTree",
+          "INPath" : "outputDocList/#0/protocol",
+          "OUTPath" : "environment/protocol",
+          "direction" : "out",
+          "op" : "copy",
+          "line" : 0,
+          "dashedLine" : false,
+          "inType" : "string",
+          "outType" : "string",
+          "inTypePath" : "documentList/string",
+          "outTypePath" : "document/string"
+        } ],
+        "dropList" : [ {
+          "path" : "inputDocList",
+          "typePath" : "documentList"
+        } ],
+        "createList" : [ ],
+        "serviceType" : "sql",
+        "fqn" : "packages/middleware/pub/environments/adapter/services/DQL/getEnvironmentById"
+      },
+      "children" : [ ],
+      "type" : "invoke"
+    }, {
+      "id" : "j1_6",
+      "text" : "Transformer",
+      "icon" : null,
+      "li_attr" : {
+        "id" : "j1_6"
+      },
+      "a_attr" : {
+        "href" : "javascript:void(0)",
+        "id" : "j1_6_anchor"
+      },
+      "state" : {
+        "loaded" : true,
+        "opened" : false,
+        "selected" : false,
+        "disabled" : false
+      },
+      "data" : {
+        "transformers" : [ ],
+        "lines" : [ ],
+        "dropList" : [ ],
+        "createList" : [ {
+          "path" : "type",
+          "value" : "CNAME",
+          "evaluate" : null,
+          "typePath" : "string"
+        } ]
+      },
+      "children" : [ ],
+      "type" : "transformer"
+    }, {
+      "id" : "j1_2",
+      "text" : "Invoke",
+      "icon" : null,
+      "li_attr" : {
+        "id" : "j1_2"
+      },
+      "a_attr" : {
+        "href" : "javascript:void(0)",
+        "id" : "j1_2_anchor"
+      },
+      "state" : {
+        "loaded" : true,
+        "opened" : false,
+        "selected" : false,
+        "disabled" : false
+      },
+      "data" : {
+        "transformers" : [ {
+          "op" : "copy",
+          "from" : "/registrar_name",
+          "to" : "/inputDocList/0/name",
+          "inTypePath" : "string",
+          "outTypePath" : "documentList/string",
+          "direction" : "in"
+        }, {
+          "op" : "copy",
+          "from" : "/outputDocList/0/api_username",
+          "to" : "/domain_reg/api_username",
+          "inTypePath" : "documentList/string",
+          "outTypePath" : "document/string",
+          "direction" : "out"
+        }, {
+          "op" : "copy",
+          "from" : "/outputDocList/0/api_password",
+          "to" : "/domain_reg/api_password",
+          "inTypePath" : "documentList/string",
+          "outTypePath" : "document/string",
+          "direction" : "out"
+        } ],
+        "lines" : [ {
+          "inputPath" : "registrar_name",
+          "outputPath" : "inputDocList/name",
+          "inpJsTree" : "#launching_arrow_jsTree",
+          "outpJsTree" : "#landing_arrow_jsTree_function",
+          "INPath" : "registrar_name",
+          "OUTPath" : "inputDocList/#0/name",
+          "direction" : "in",
+          "op" : "copy",
+          "line" : 0,
+          "dashedLine" : false,
+          "inType" : "string",
+          "outType" : "string",
+          "inTypePath" : "string",
+          "outTypePath" : "documentList/string"
+        }, {
+          "inputPath" : "outputDocList/api_username",
+          "outputPath" : "domain_reg/api_username",
+          "inpJsTree" : "#launching_arrow_jsTree_function",
+          "outpJsTree" : "#landing_arrow_jsTree",
+          "INPath" : "outputDocList/#0/api_username",
+          "OUTPath" : "domain_reg/api_username",
+          "direction" : "out",
+          "op" : "copy",
+          "line" : 0,
+          "dashedLine" : false,
+          "inType" : "string",
+          "outType" : "string",
+          "inTypePath" : "documentList/string",
+          "outTypePath" : "document/string"
+        }, {
+          "inputPath" : "outputDocList/api_password",
+          "outputPath" : "domain_reg/api_password",
+          "inpJsTree" : "#launching_arrow_jsTree_function",
+          "outpJsTree" : "#landing_arrow_jsTree",
+          "INPath" : "outputDocList/#0/api_password",
+          "OUTPath" : "domain_reg/api_password",
+          "direction" : "out",
+          "op" : "copy",
+          "line" : 0,
+          "dashedLine" : false,
+          "inType" : "string",
+          "outType" : "string",
+          "inTypePath" : "documentList/string",
+          "outTypePath" : "document/string"
+        } ],
+        "dropList" : [ ],
+        "createList" : [ ],
+        "serviceType" : "sql",
+        "status" : "enabled",
+        "fqn" : "packages/middleware/pub/environments/adapter/services/DQL/getDomainRegistrar"
+      },
+      "children" : [ ],
+      "type" : "invoke"
+    }, {
+      "id" : "j1_9",
+      "text" : "SWITCH",
+      "icon" : null,
+      "li_attr" : {
+        "id" : "j1_9"
+      },
+      "a_attr" : {
+        "href" : "javascript:void(0)",
+        "id" : "j1_9_anchor"
+      },
+      "state" : {
+        "loaded" : true,
+        "opened" : true,
+        "selected" : false,
+        "disabled" : false
+      },
+      "data" : {
+        "switch" : "domain_reg/api_username"
+      },
+      "children" : [ {
+        "id" : "j1_10",
+        "text" : "CASE",
+        "icon" : null,
+        "li_attr" : {
+          "id" : "j1_10"
+        },
+        "a_attr" : {
+          "href" : "javascript:void(0)",
+          "id" : "j1_10_anchor"
+        },
+        "state" : {
+          "loaded" : true,
+          "opened" : true,
+          "selected" : false,
+          "disabled" : false
+        },
+        "data" : {
+          "case" : "#default"
+        },
+        "children" : [ {
+          "id" : "j1_3",
+          "text" : "SWITCH",
+          "icon" : null,
+          "li_attr" : {
+            "id" : "j1_3"
+          },
+          "a_attr" : {
+            "href" : "javascript:void(0)",
+            "id" : "j1_3_anchor"
+          },
+          "state" : {
+            "loaded" : true,
+            "opened" : true,
+            "selected" : false,
+            "disabled" : false
+          },
+          "data" : {
+            "switch" : "environment/dns_mapping"
+          },
+          "children" : [ {
+            "id" : "j1_4",
+            "text" : "CASE",
+            "icon" : null,
+            "li_attr" : {
+              "id" : "j1_4"
+            },
+            "a_attr" : {
+              "href" : "javascript:void(0)",
+              "id" : "j1_4_anchor"
+            },
+            "state" : {
+              "loaded" : true,
+              "opened" : true,
+              "selected" : false,
+              "disabled" : false
+            },
+            "data" : {
+              "case" : "false"
+            },
+            "children" : [ {
+              "id" : "j1_11",
+              "text" : "Transformer",
+              "icon" : null,
+              "li_attr" : {
+                "id" : "j1_11"
+              },
+              "a_attr" : {
+                "href" : "javascript:void(0)",
+                "id" : "j1_11_anchor"
+              },
+              "state" : {
+                "loaded" : true,
+                "opened" : false,
+                "selected" : false,
+                "disabled" : false
+              },
+              "data" : {
+                "transformers" : [ ],
+                "lines" : [ ],
+                "dropList" : [ ],
+                "createList" : [ {
+                  "path" : "subdomain_url",
+                  "value" : "#{environment/protocol}://#{environment/sub_domain}",
+                  "evaluate" : "EEV",
+                  "typePath" : "string"
+                } ]
+              },
+              "children" : [ ],
+              "type" : "transformer"
+            }, {
+              "id" : "j1_8",
+              "text" : "Invoke",
+              "icon" : null,
+              "li_attr" : {
+                "id" : "j1_8"
+              },
+              "a_attr" : {
+                "href" : "javascript:void(0)",
+                "id" : "j1_8_anchor"
+              },
+              "state" : {
+                "loaded" : true,
+                "opened" : false,
+                "selected" : false,
+                "disabled" : false
+              },
+              "data" : {
+                "transformers" : [ {
+                  "op" : "copy",
+                  "from" : "/domain",
+                  "to" : "/domain",
+                  "inTypePath" : "string",
+                  "outTypePath" : "string",
+                  "direction" : "out"
+                }, {
+                  "op" : "copy",
+                  "from" : "/parts/#0",
+                  "to" : "/subdomain_name",
+                  "inTypePath" : "stringList",
+                  "outTypePath" : "string",
+                  "direction" : "out"
+                }, {
+                  "op" : "copy",
+                  "from" : "/subdomain_url",
+                  "to" : "/url",
+                  "inTypePath" : "string",
+                  "outTypePath" : "string",
+                  "direction" : "in"
+                } ],
+                "lines" : [ {
+                  "inputPath" : "domain",
+                  "outputPath" : "domain",
+                  "inpJsTree" : "#launching_arrow_jsTree_function",
+                  "outpJsTree" : "#landing_arrow_jsTree",
+                  "INPath" : "domain",
+                  "OUTPath" : "domain",
+                  "direction" : "out",
+                  "op" : "copy",
+                  "line" : 0,
+                  "dashedLine" : false,
+                  "inType" : "string",
+                  "outType" : "string",
+                  "inTypePath" : "string",
+                  "outTypePath" : "string"
+                }, {
+                  "inputPath" : "parts",
+                  "outputPath" : "subdomain_name",
+                  "inpJsTree" : "#launching_arrow_jsTree_function",
+                  "outpJsTree" : "#landing_arrow_jsTree",
+                  "INPath" : "parts/#0",
+                  "OUTPath" : "subdomain_name",
+                  "direction" : "out",
+                  "op" : "copy",
+                  "line" : 0,
+                  "dashedLine" : false,
+                  "inType" : "stringList",
+                  "outType" : "string",
+                  "inTypePath" : "stringList",
+                  "outTypePath" : "string"
+                }, {
+                  "inputPath" : "subdomain_url",
+                  "outputPath" : "url",
+                  "inpJsTree" : "#launching_arrow_jsTree",
+                  "outpJsTree" : "#landing_arrow_jsTree_function",
+                  "INPath" : "subdomain_url",
+                  "OUTPath" : "url",
+                  "direction" : "in",
+                  "op" : "copy",
+                  "line" : 0,
+                  "dashedLine" : false,
+                  "inType" : "string",
+                  "outType" : "string",
+                  "inTypePath" : "string",
+                  "outTypePath" : "string"
+                } ],
+                "dropList" : [ ],
+                "createList" : [ ],
+                "serviceType" : "service",
+                "fqn" : "packages/middleware/pub/client/http/urlMeta"
+              },
+              "children" : [ ],
+              "type" : "invoke"
+            }, {
+              "id" : "j1_5",
+              "text" : "Invoke",
+              "icon" : null,
+              "li_attr" : {
+                "id" : "j1_5"
+              },
+              "a_attr" : {
+                "href" : "javascript:void(0)",
+                "id" : "j1_5_anchor"
+              },
+              "state" : {
+                "loaded" : true,
+                "opened" : false,
+                "selected" : true,
+                "disabled" : false
+              },
+              "data" : {
+                "transformers" : [ {
+                  "op" : "copy",
+                  "from" : "/registrar_name",
+                  "to" : "/registrar_name",
+                  "inTypePath" : "string",
+                  "outTypePath" : "string",
+                  "direction" : "in"
+                }, {
+                  "op" : "copy",
+                  "from" : "/dnsName",
+                  "to" : "/value",
+                  "inTypePath" : "string",
+                  "outTypePath" : "string",
+                  "direction" : "in"
+                }, {
+                  "op" : "copy",
+                  "from" : "/type",
+                  "to" : "/type",
+                  "inTypePath" : "string",
+                  "outTypePath" : "string",
+                  "direction" : "in"
+                }, {
+                  "op" : "copy",
+                  "from" : "/domain",
+                  "to" : "/domain",
+                  "inTypePath" : "string",
+                  "outTypePath" : "string",
+                  "direction" : "in"
+                }, {
+                  "op" : "copy",
+                  "from" : "/response",
+                  "to" : "/response",
+                  "inTypePath" : "document",
+                  "outTypePath" : "document",
+                  "direction" : "out"
+                }, {
+                  "op" : "copy",
+                  "from" : "/subdomain_name",
+                  "to" : "/name",
+                  "inTypePath" : "string",
+                  "outTypePath" : "string",
+                  "direction" : "in"
+                }, {
+                  "op" : "copy",
+                  "from" : "/status",
+                  "to" : "/status",
+                  "inTypePath" : "boolean",
+                  "outTypePath" : "boolean",
+                  "direction" : "out"
+                }, {
+                  "op" : "copy",
+                  "from" : "/id",
+                  "to" : "/environment_id",
+                  "inTypePath" : "integer",
+                  "outTypePath" : "integer",
+                  "direction" : "in"
+                } ],
+                "lines" : [ {
+                  "inputPath" : "registrar_name",
+                  "outputPath" : "registrar_name",
+                  "inpJsTree" : "#launching_arrow_jsTree",
+                  "outpJsTree" : "#landing_arrow_jsTree_function",
+                  "INPath" : "registrar_name",
+                  "OUTPath" : "registrar_name",
+                  "direction" : "in",
+                  "op" : "copy",
+                  "line" : 0,
+                  "dashedLine" : false,
+                  "inType" : "string",
+                  "outType" : "string",
+                  "inTypePath" : "string",
+                  "outTypePath" : "string"
+                }, {
+                  "inputPath" : "dnsName",
+                  "outputPath" : "value",
+                  "inpJsTree" : "#launching_arrow_jsTree",
+                  "outpJsTree" : "#landing_arrow_jsTree_function",
+                  "INPath" : "dnsName",
+                  "OUTPath" : "value",
+                  "direction" : "in",
+                  "op" : "copy",
+                  "line" : 0,
+                  "dashedLine" : false,
+                  "inType" : "string",
+                  "outType" : "string",
+                  "inTypePath" : "string",
+                  "outTypePath" : "string"
+                }, {
+                  "inputPath" : "type",
+                  "outputPath" : "type",
+                  "inpJsTree" : "#launching_arrow_jsTree",
+                  "outpJsTree" : "#landing_arrow_jsTree_function",
+                  "INPath" : "type",
+                  "OUTPath" : "type",
+                  "direction" : "in",
+                  "op" : "copy",
+                  "line" : 0,
+                  "dashedLine" : false,
+                  "inType" : "string",
+                  "outType" : "string",
+                  "inTypePath" : "string",
+                  "outTypePath" : "string"
+                }, {
+                  "inputPath" : "domain",
+                  "outputPath" : "domain",
+                  "inpJsTree" : "#launching_arrow_jsTree",
+                  "outpJsTree" : "#landing_arrow_jsTree_function",
+                  "INPath" : "domain",
+                  "OUTPath" : "domain",
+                  "direction" : "in",
+                  "op" : "copy",
+                  "line" : 0,
+                  "dashedLine" : false,
+                  "inType" : "string",
+                  "outType" : "string",
+                  "inTypePath" : "string",
+                  "outTypePath" : "string"
+                }, {
+                  "inputPath" : "response",
+                  "outputPath" : "response",
+                  "inpJsTree" : "#launching_arrow_jsTree_function",
+                  "outpJsTree" : "#landing_arrow_jsTree",
+                  "INPath" : "response",
+                  "OUTPath" : "response",
+                  "direction" : "out",
+                  "op" : "copy",
+                  "line" : 0,
+                  "dashedLine" : false,
+                  "inType" : "document",
+                  "outType" : "document",
+                  "inTypePath" : "document",
+                  "outTypePath" : "document"
+                }, {
+                  "inputPath" : "subdomain_name",
+                  "outputPath" : "name",
+                  "inpJsTree" : "#launching_arrow_jsTree",
+                  "outpJsTree" : "#landing_arrow_jsTree_function",
+                  "INPath" : "subdomain_name",
+                  "OUTPath" : "name",
+                  "direction" : "in",
+                  "op" : "copy",
+                  "line" : 0,
+                  "dashedLine" : false,
+                  "inType" : "string",
+                  "outType" : "string",
+                  "inTypePath" : "string",
+                  "outTypePath" : "string"
+                }, {
+                  "inputPath" : "status",
+                  "outputPath" : "status",
+                  "inpJsTree" : "#launching_arrow_jsTree_function",
+                  "outpJsTree" : "#landing_arrow_jsTree",
+                  "INPath" : "status",
+                  "OUTPath" : "status",
+                  "direction" : "out",
+                  "op" : "copy",
+                  "line" : 0,
+                  "dashedLine" : false,
+                  "inType" : "boolean",
+                  "outType" : "boolean",
+                  "inTypePath" : "boolean",
+                  "outTypePath" : "boolean"
+                }, {
+                  "inputPath" : "id",
+                  "outputPath" : "environment_id",
+                  "inpJsTree" : "#launching_arrow_jsTree",
+                  "outpJsTree" : "#landing_arrow_jsTree_function",
+                  "INPath" : "id",
+                  "OUTPath" : "environment_id",
+                  "direction" : "in",
+                  "op" : "copy",
+                  "line" : 0,
+                  "dashedLine" : false,
+                  "inType" : "integer",
+                  "outType" : "integer",
+                  "inTypePath" : "integer",
+                  "outTypePath" : "integer"
+                } ],
+                "dropList" : [ ],
+                "createList" : [ ],
+                "serviceType" : "api",
+                "fqn" : "packages/middleware/pub/environments/api/createDNSRecords"
+              },
+              "children" : [ ],
+              "type" : "invoke"
+            }, {
+              "id" : "j1_13",
+              "text" : "SWITCH",
+              "icon" : null,
+              "li_attr" : {
+                "id" : "j1_13"
+              },
+              "a_attr" : {
+                "href" : "javascript:void(0)",
+                "id" : "j1_13_anchor"
+              },
+              "state" : {
+                "loaded" : true,
+                "opened" : false,
+                "selected" : false,
+                "disabled" : false
+              },
+              "data" : {
+                "switch" : "status"
+              },
+              "children" : [ {
+                "id" : "j1_14",
+                "text" : "CASE",
+                "icon" : null,
+                "li_attr" : {
+                  "id" : "j1_14"
+                },
+                "a_attr" : {
+                  "href" : "javascript:void(0)",
+                  "id" : "j1_14_anchor"
+                },
+                "state" : {
+                  "loaded" : true,
+                  "opened" : true,
+                  "selected" : false,
+                  "disabled" : false
+                },
+                "data" : {
+                  "case" : "true"
+                },
+                "children" : [ {
+                  "id" : "j1_7",
+                  "text" : "Invoke",
+                  "icon" : null,
+                  "li_attr" : {
+                    "id" : "j1_7"
+                  },
+                  "a_attr" : {
+                    "href" : "javascript:void(0)",
+                    "id" : "j1_7_anchor"
+                  },
+                  "state" : {
+                    "loaded" : true,
+                    "opened" : false,
+                    "selected" : false,
+                    "disabled" : false
+                  },
+                  "data" : {
+                    "transformers" : [ {
+                      "op" : "copy",
+                      "from" : "/id",
+                      "to" : "/inputDocList/0/id",
+                      "inTypePath" : "integer",
+                      "outTypePath" : "documentList/integer",
+                      "direction" : "in"
+                    } ],
+                    "lines" : [ {
+                      "inputPath" : "id",
+                      "outputPath" : "inputDocList/id",
+                      "inpJsTree" : "#launching_arrow_jsTree",
+                      "outpJsTree" : "#landing_arrow_jsTree_function",
+                      "INPath" : "id",
+                      "OUTPath" : "inputDocList/#0/id",
+                      "direction" : "in",
+                      "op" : "copy",
+                      "line" : 0,
+                      "dashedLine" : false,
+                      "inType" : "integer",
+                      "outType" : "integer",
+                      "inTypePath" : "integer",
+                      "outTypePath" : "documentList/integer"
+                    } ],
+                    "dropList" : [ ],
+                    "createList" : [ ],
+                    "serviceType" : "sql",
+                    "fqn" : "packages/middleware/pub/environments/adapter/services/DML/updateDNSMapping"
+                  },
+                  "children" : [ ],
+                  "type" : "invoke"
+                } ],
+                "type" : "group"
+              } ],
+              "type" : "switch"
+            } ],
+            "type" : "group"
+          } ],
+          "type" : "switch"
+        } ],
+        "type" : "group"
+      }, {
+        "id" : "j1_12",
+        "text" : "CASE",
+        "icon" : null,
+        "li_attr" : {
+          "id" : "j1_12"
+        },
+        "a_attr" : {
+          "href" : "javascript:void(0)",
+          "id" : "j1_12_anchor"
+        },
+        "state" : {
+          "loaded" : true,
+          "opened" : false,
+          "selected" : false,
+          "disabled" : false
+        },
+        "data" : {
+          "case" : "#null"
+        },
+        "children" : [ ],
+        "type" : "group"
+      } ],
+      "type" : "switch"
+    } ]
+  },
+  "consumers" : "",
+  "developers" : "developers",
+  "enableServiceDocumentValidation" : false
+}

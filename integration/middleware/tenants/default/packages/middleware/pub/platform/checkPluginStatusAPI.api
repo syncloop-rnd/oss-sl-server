@@ -1,0 +1,552 @@
+{
+  "latest" : {
+    "createdTS" : "",
+    "input" : [ {
+      "id" : "j2_1",
+      "text" : "*payload",
+      "li_attr" : {
+        "id" : "j2_1"
+      },
+      "a_attr" : {
+        "href" : "#",
+        "id" : "j2_1_anchor"
+      },
+      "state" : {
+        "loaded" : true,
+        "opened" : true,
+        "selected" : false,
+        "disabled" : false,
+        "hidden" : false
+      },
+      "data" : { },
+      "children" : [ {
+        "id" : "j2_2",
+        "text" : "modified_on",
+        "li_attr" : {
+          "id" : "j2_2"
+        },
+        "a_attr" : {
+          "href" : "#",
+          "id" : "j2_2_anchor"
+        },
+        "state" : {
+          "loaded" : true,
+          "opened" : false,
+          "selected" : false,
+          "disabled" : false
+        },
+        "data" : { },
+        "children" : [ ],
+        "type" : "number"
+      }, {
+        "id" : "j2_3",
+        "text" : "short_description",
+        "li_attr" : {
+          "id" : "j2_3"
+        },
+        "a_attr" : {
+          "href" : "#",
+          "id" : "j2_3_anchor"
+        },
+        "state" : {
+          "loaded" : true,
+          "opened" : false,
+          "selected" : false,
+          "disabled" : false
+        },
+        "data" : { },
+        "children" : [ ],
+        "type" : "string"
+      }, {
+        "id" : "j2_4",
+        "text" : "latest_version_number",
+        "li_attr" : {
+          "id" : "j2_4"
+        },
+        "a_attr" : {
+          "href" : "#",
+          "id" : "j2_4_anchor"
+        },
+        "state" : {
+          "loaded" : true,
+          "opened" : false,
+          "selected" : false,
+          "disabled" : false
+        },
+        "data" : { },
+        "children" : [ ],
+        "type" : "number"
+      }, {
+        "id" : "j2_5",
+        "text" : "website",
+        "li_attr" : {
+          "id" : "j2_5"
+        },
+        "a_attr" : {
+          "href" : "#",
+          "id" : "j2_5_anchor"
+        },
+        "state" : {
+          "loaded" : true,
+          "opened" : false,
+          "selected" : false,
+          "disabled" : false
+        },
+        "data" : { },
+        "children" : [ ],
+        "type" : "string"
+      }, {
+        "id" : "j2_6",
+        "text" : "unique_id",
+        "li_attr" : {
+          "id" : "j2_6"
+        },
+        "a_attr" : {
+          "href" : "#",
+          "id" : "j2_6_anchor"
+        },
+        "state" : {
+          "loaded" : true,
+          "opened" : false,
+          "selected" : false,
+          "disabled" : false
+        },
+        "data" : { },
+        "children" : [ ],
+        "type" : "string"
+      }, {
+        "id" : "j2_7",
+        "text" : "cost_type",
+        "li_attr" : {
+          "id" : "j2_7"
+        },
+        "a_attr" : {
+          "href" : "#",
+          "id" : "j2_7_anchor"
+        },
+        "state" : {
+          "loaded" : true,
+          "opened" : false,
+          "selected" : false,
+          "disabled" : false
+        },
+        "data" : { },
+        "children" : [ ],
+        "type" : "string"
+      }, {
+        "id" : "j2_8",
+        "text" : "tag_name",
+        "li_attr" : {
+          "id" : "j2_8"
+        },
+        "a_attr" : {
+          "href" : "#",
+          "id" : "j2_8_anchor"
+        },
+        "state" : {
+          "loaded" : true,
+          "opened" : false,
+          "selected" : false,
+          "disabled" : false
+        },
+        "data" : { },
+        "children" : [ ],
+        "type" : "string"
+      }, {
+        "id" : "j2_9",
+        "text" : "verified",
+        "li_attr" : {
+          "id" : "j2_9"
+        },
+        "a_attr" : {
+          "href" : "#",
+          "id" : "j2_9_anchor"
+        },
+        "state" : {
+          "loaded" : true,
+          "opened" : false,
+          "selected" : false,
+          "disabled" : false
+        },
+        "data" : { },
+        "children" : [ ],
+        "type" : "boolean"
+      }, {
+        "id" : "j2_10",
+        "text" : "description",
+        "li_attr" : {
+          "id" : "j2_10"
+        },
+        "a_attr" : {
+          "href" : "#",
+          "id" : "j2_10_anchor"
+        },
+        "state" : {
+          "loaded" : true,
+          "opened" : false,
+          "selected" : false,
+          "disabled" : false
+        },
+        "data" : { },
+        "children" : [ ],
+        "type" : "string"
+      }, {
+        "id" : "j2_11",
+        "text" : "screenshot",
+        "li_attr" : {
+          "id" : "j2_11"
+        },
+        "a_attr" : {
+          "href" : "#",
+          "id" : "j2_11_anchor"
+        },
+        "state" : {
+          "loaded" : true,
+          "opened" : false,
+          "selected" : false,
+          "disabled" : false
+        },
+        "data" : { },
+        "children" : [ ],
+        "type" : "string"
+      }, {
+        "id" : "j2_12",
+        "text" : "license_description",
+        "li_attr" : {
+          "id" : "j2_12"
+        },
+        "a_attr" : {
+          "href" : "#",
+          "id" : "j2_12_anchor"
+        },
+        "state" : {
+          "loaded" : true,
+          "opened" : false,
+          "selected" : false,
+          "disabled" : false
+        },
+        "data" : { },
+        "children" : [ ],
+        "type" : "string"
+      }, {
+        "id" : "j2_13",
+        "text" : "published_by",
+        "li_attr" : {
+          "id" : "j2_13"
+        },
+        "a_attr" : {
+          "href" : "#",
+          "id" : "j2_13_anchor"
+        },
+        "state" : {
+          "loaded" : true,
+          "opened" : false,
+          "selected" : false,
+          "disabled" : false
+        },
+        "data" : { },
+        "children" : [ ],
+        "type" : "string"
+      }, {
+        "id" : "j2_14",
+        "text" : "name_slug",
+        "li_attr" : {
+          "id" : "j2_14"
+        },
+        "a_attr" : {
+          "href" : "#",
+          "id" : "j2_14_anchor"
+        },
+        "state" : {
+          "loaded" : true,
+          "opened" : false,
+          "selected" : false,
+          "disabled" : false
+        },
+        "data" : { },
+        "children" : [ ],
+        "type" : "string"
+      }, {
+        "id" : "j2_15",
+        "text" : "latest_version",
+        "li_attr" : {
+          "id" : "j2_15"
+        },
+        "a_attr" : {
+          "href" : "#",
+          "id" : "j2_15_anchor"
+        },
+        "state" : {
+          "loaded" : true,
+          "opened" : false,
+          "selected" : false,
+          "disabled" : false
+        },
+        "data" : { },
+        "children" : [ ],
+        "type" : "string"
+      }, {
+        "id" : "j2_16",
+        "text" : "created_on",
+        "li_attr" : {
+          "id" : "j2_16"
+        },
+        "a_attr" : {
+          "href" : "#",
+          "id" : "j2_16_anchor"
+        },
+        "state" : {
+          "loaded" : true,
+          "opened" : false,
+          "selected" : false,
+          "disabled" : false
+        },
+        "data" : { },
+        "children" : [ ],
+        "type" : "number"
+      }, {
+        "id" : "j2_17",
+        "text" : "vendor",
+        "li_attr" : {
+          "id" : "j2_17"
+        },
+        "a_attr" : {
+          "href" : "#",
+          "id" : "j2_17_anchor"
+        },
+        "state" : {
+          "loaded" : true,
+          "opened" : false,
+          "selected" : false,
+          "disabled" : false
+        },
+        "data" : { },
+        "children" : [ ],
+        "type" : "string"
+      }, {
+        "id" : "j2_18",
+        "text" : "service",
+        "li_attr" : {
+          "id" : "j2_18"
+        },
+        "a_attr" : {
+          "href" : "#",
+          "id" : "j2_18_anchor"
+        },
+        "state" : {
+          "loaded" : true,
+          "opened" : false,
+          "selected" : false,
+          "disabled" : false
+        },
+        "data" : { },
+        "children" : [ ],
+        "type" : "string"
+      }, {
+        "id" : "j2_19",
+        "text" : "privacy_policy",
+        "li_attr" : {
+          "id" : "j2_19"
+        },
+        "a_attr" : {
+          "href" : "#",
+          "id" : "j2_19_anchor"
+        },
+        "state" : {
+          "loaded" : true,
+          "opened" : false,
+          "selected" : false,
+          "disabled" : false
+        },
+        "data" : { },
+        "children" : [ ],
+        "type" : "string"
+      }, {
+        "id" : "j2_20",
+        "text" : "name",
+        "li_attr" : {
+          "id" : "j2_20"
+        },
+        "a_attr" : {
+          "href" : "#",
+          "id" : "j2_20_anchor"
+        },
+        "state" : {
+          "loaded" : true,
+          "opened" : false,
+          "selected" : false,
+          "disabled" : false
+        },
+        "data" : { },
+        "children" : [ ],
+        "type" : "string"
+      }, {
+        "id" : "j2_21",
+        "text" : "id",
+        "li_attr" : {
+          "id" : "j2_21"
+        },
+        "a_attr" : {
+          "href" : "#",
+          "id" : "j2_21_anchor"
+        },
+        "state" : {
+          "loaded" : true,
+          "opened" : false,
+          "selected" : false,
+          "disabled" : false
+        },
+        "data" : { },
+        "children" : [ ],
+        "type" : "number"
+      }, {
+        "id" : "j2_22",
+        "text" : "installing_path",
+        "li_attr" : {
+          "id" : "j2_22"
+        },
+        "a_attr" : {
+          "href" : "#",
+          "id" : "j2_22_anchor"
+        },
+        "state" : {
+          "loaded" : true,
+          "opened" : false,
+          "selected" : false,
+          "disabled" : false
+        },
+        "data" : { },
+        "children" : [ ],
+        "type" : "string"
+      } ],
+      "type" : "document"
+    } ],
+    "output" : [ {
+      "id" : "j3_2",
+      "text" : "response",
+      "li_attr" : {
+        "id" : "j3_2"
+      },
+      "a_attr" : {
+        "href" : "#",
+        "id" : "j3_2_anchor"
+      },
+      "state" : {
+        "loaded" : true,
+        "opened" : false,
+        "selected" : false,
+        "disabled" : false
+      },
+      "data" : { },
+      "children" : [ ],
+      "type" : "string"
+    } ],
+    "api" : [ {
+      "id" : "j1_3",
+      "text" : "Invoke",
+      "li_attr" : {
+        "id" : "j1_3"
+      },
+      "a_attr" : {
+        "href" : "javascript:void(0)",
+        "id" : "j1_3_anchor"
+      },
+      "state" : {
+        "loaded" : true,
+        "opened" : false,
+        "selected" : true,
+        "disabled" : false,
+        "hidden" : false
+      },
+      "data" : {
+        "guid" : "bcc2bf50-8a8e-4c3e-b58d-2be1315b8218",
+        "columnType" : "-1",
+        "transformers" : [ {
+          "op" : "copy",
+          "from" : "/*payload/unique_id",
+          "to" : "/unique_id",
+          "inTypePath" : "document/string",
+          "outTypePath" : "string",
+          "direction" : "in"
+        }, {
+          "op" : "copy",
+          "from" : "/*payload/latest_version_number",
+          "to" : "/latest_version_number",
+          "inTypePath" : "document/number",
+          "outTypePath" : "number",
+          "direction" : "in"
+        }, {
+          "op" : "copy",
+          "from" : "/response",
+          "to" : "/response",
+          "inTypePath" : "string",
+          "outTypePath" : "string",
+          "direction" : "out"
+        } ],
+        "lines" : [ {
+          "inputPath" : "*payload/unique_id",
+          "outputPath" : "unique_id",
+          "inpJsTree" : "#launching_arrow_jsTree",
+          "outpJsTree" : "#landing_arrow_jsTree_function",
+          "INPath" : "*payload/unique_id",
+          "OUTPath" : "unique_id",
+          "direction" : "in",
+          "op" : "copy",
+          "line" : 0,
+          "dashedLine" : false,
+          "inType" : "string",
+          "outType" : "string",
+          "inTypePath" : "document/string",
+          "outTypePath" : "string"
+        }, {
+          "inputPath" : "*payload/latest_version_number",
+          "outputPath" : "latest_version_number",
+          "inpJsTree" : "#launching_arrow_jsTree",
+          "outpJsTree" : "#landing_arrow_jsTree_function",
+          "INPath" : "*payload/latest_version_number",
+          "OUTPath" : "latest_version_number",
+          "direction" : "in",
+          "op" : "copy",
+          "line" : 0,
+          "dashedLine" : false,
+          "inType" : "number",
+          "outType" : "number",
+          "inTypePath" : "document/number",
+          "outTypePath" : "number"
+        }, {
+          "inputPath" : "response",
+          "outputPath" : "response",
+          "inpJsTree" : "#launching_arrow_jsTree_function",
+          "outpJsTree" : "#landing_arrow_jsTree",
+          "INPath" : "response",
+          "OUTPath" : "response",
+          "direction" : "out",
+          "op" : "copy",
+          "line" : 0,
+          "dashedLine" : false,
+          "inType" : "string",
+          "outType" : "string",
+          "inTypePath" : "string",
+          "outTypePath" : "string"
+        } ],
+        "dropList" : [ ],
+        "createList" : [ ],
+        "initiateList" : [ ],
+        "fqn" : "packages/middleware/pub/platform/checkPluginStatus",
+        "serviceType" : "service"
+      },
+      "children" : [ ],
+      "type" : "invoke"
+    } ],
+    "api_info" : {
+      "title" : "",
+      "description" : ""
+    },
+    "lockedByUser" : "admin"
+  },
+  "consumers" : "",
+  "developers" : "administrators",
+  "enableServiceDocumentValidation" : false,
+  "created_on" : "1724681448849",
+  "modified_on" : 1724681448849
+}

@@ -1,0 +1,25 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="20" height="20" viewBox="0 0 20 20">
+  <defs>
+    <style>
+      .cls-1 {
+        filter: url(#filter);
+      }
+
+      .cls-2 {
+        fill: #4f4f6e;
+        fill-rule: evenodd;
+      }
+    </style>
+    <filter id="filter" filterUnits="userSpaceOnUse">
+      <feFlood result="flood" flood-color="#7b7b7b"/>
+      <feComposite result="composite" operator="in" in2="SourceGraphic"/>
+      <feBlend result="blend" in2="SourceGraphic"/>
+    </filter>
+  </defs>
+  <g id="Clear_Cache" data-name="Clear Cache">
+    <g class="cls-1">
+      <path id="Shape_1_copy" data-name="Shape 1 copy" class="cls-2" d="M926.238,7.91s6.1,1.737,8.051-.887a0.777,0.777,0,0,1,1.088.444l6.746-6.432s2.469-.487,1.741,2.218l-6.528,6.21a0.934,0.934,0,0,1,.435,1.331L934.725,19S924.3,15.781,926.238,7.91ZM926.673,8.8s5.885,1.516,7.834-1.109c0,0,.494-0.349,1.088.444l6.311-5.988s1.546-1.076,1.523.887l-6.964,6.21s1,0.992.436,1.774l-2.829,7.1S925.872,14.787,926.673,8.8Z" transform="translate(-925)"/>
+      <path class="cls-2" d="M932.113,8.8l4.352,4.214,0.218-.665-4.134-3.992Zm2.612-1.109,2.393,2.218,0.435-.444-2.176-2Zm-8.269,3.105a11.878,11.878,0,0,0,3.481-.222s0.334-.578-0.435-0.665c0,0-.488.556-3.264,0.222Zm0.652,2a7.2,7.2,0,0,0,2.829-.444s0.142-.686-0.653-0.444a16.224,16.224,0,0,1-2.393.222Zm1.306,1.553a2.6,2.6,0,0,0,1.741-.887s0.76-.154.653,0.444a12.565,12.565,0,0,1-1.959,1.109Zm1.958,1.774,1.741-2s0.754-.258.436,0.665l-1.959,2Zm1.959,1.331s1.327-1.9,1.306-2.661c0,0,.817-0.556.652,0.444,0,0-.914,2.368-1.523,2.661Z" transform="translate(-925)"/>
+    </g>
+  </g>
+</svg>

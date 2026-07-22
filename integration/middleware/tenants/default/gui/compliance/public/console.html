@@ -1,0 +1,2041 @@
+<!DOCTYPE html>
+<html ng-app="complianceApp">
+<head>
+  <meta charset="utf-8">
+  <title>Compliance Editor - Modern Banking Style</title>
+  <base href="/"><script src="env.js"></script>
+  <script>
+    window.ENV = window.env || {};
+  </script>
+  <!-- AngularJS -->
+  <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.8.2/angular.min.js"></script>
+  <link rel="shortcut icon" href="compliance/public/images/favicon.ico" type="image/x-icon" />
+  <!-- FontAwesome CSS -->
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <!-- Google Fonts -->
+
+<style>
+  @import url("https://fonts.googleapis.com/css2?family=Figtree:ital,wght@0,300..900;1,300..900&display=swap");
+  /* Base styling for the body */
+  body {
+    margin: 0;
+    padding: 0;
+    font-family: Figtree, sans-serif !important;
+    color: #333;
+  }
+
+  /* Container for full-page layout */
+  .container {
+    display: flex;
+    height: 100vh;
+  }
+ .primary_btn{
+        background: #2C61F5;
+    color: #fff;
+    padding: 8px 15px;
+    border-radius: 8px;
+    font-size: 15px;
+    font-weight: 600;
+    box-shadow: none;
+    border: 1px solid #2C61F5;
+    cursor: pointer;
+    font-family: Figtree, sans-serif !important;
+ }
+ .table-flex{
+  display: flex;
+  align-items: center;
+ }
+  .primary_btn i{
+        display: inline-block;
+    padding-right: 4px;
+  }
+  .primary_btn:hover{
+      background: #234fcb;
+  }
+ .secondry_btn{
+    background: #fff;
+    color: #2C61F5;
+    padding: 8px 15px;
+    border-radius: 8px;
+    font-size: 14px;
+    font-weight: 600;
+    box-shadow: none;
+    border: 1px solid #2C61F5;
+    cursor: pointer;
+    font-family: Figtree, sans-serif !important;
+ }
+  .secondry_btn:hover{
+     background: #2C61F5;
+    color: #fff;
+  }
+  /* Sidebar for Profiles */
+  .sidebar {
+    width: 20%;
+    padding: 20px;
+    overflow-y: auto;
+        background-color: #f9f9f9;
+        border-right: 1px solid #eee;
+  }
+  .selected-profile{
+    background-color: #2c61f512;
+  }
+  .sidebar h2 {
+  font-weight: 600;
+    margin-bottom: 32px;
+    font-size: 28px;
+    border-bottom: 1px solid #ddd;
+    padding-bottom: 24px;
+    margin-top: 8px;
+    color: #12114b;
+  }
+    .icon-deletebtn{
+      border: none;
+      background-color: #fff;
+      color: #74777e;
+    }
+  .icon-deletebtn:hover{
+    background-color: #ff2d2d12;
+    color: #ff2d2d;
+  }
+  .list-toolbar {
+    display: flex;
+    justify-content: space-around;
+    margin-bottom: 10px;
+  }
+  .tick-grey{
+    border: none;
+    background-color: inherit;
+    padding: 4px 6px;
+    color: #6c7078;
+  }
+.tick-grey:hover{
+  color: #2c61f5;
+  border-radius: 4px;
+    background-color: #2c61f512;
+}
+  .list-toolbar button,.copy-btn {
+    background: none;
+    border: none;
+    cursor: pointer;
+    font-size: 1.2em;
+    color: #74777e; /* Bright blue for interactivity */
+    transition: background-color 0.3s, color 0.3s;
+    border-radius: 4px;
+    padding: 4px;
+  }
+  .plus_icon{
+    border-radius: 4px;
+    padding: 6px;
+  }
+  .list-toolbar button:hover,.copy-btn:hover,.plus_icon:hover {
+    color: #175cff; /* Darker blue on hover */
+    background-color: rgba(44, 97, 245, 0.07); /* Subtle background highlight */
+  }
+  .refresh-btn{
+    background: #ddd;
+    color: #303030;
+    padding: 8px 15px;
+    border-radius: 8px;
+    font-size: 14px;
+    font-weight: 600;
+    box-shadow: none;
+    border: 1px solid #ddd;
+  }
+
+  .sidebar input[type="text"] {
+    width: 100%;
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    margin-bottom: 15px;
+  }
+
+  .sidebar table {
+    width: 100%;
+    border-collapse: collapse;
+    background: #fff;
+    color: #333;
+    border-radius: 8px; /* Softer corners for elegance */
+    overflow: hidden;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1); /* Subtle shadow for depth */
+  }
+
+  /* .selected-profile {
+    background-color: #cce5ff !important;
+    color: #333 !important;
+  } */
+
+  .sidebar .icon-btn {
+    background: none;
+    border: none;
+    padding: 5px;
+    margin: 0 3px;
+    font-size: 14px;
+    cursor: pointer;
+    color: #74777e;
+    border-radius: 4px; /* Circular buttons for a modern touch */
+    transition: background-color 0.3s, color 0.3s;
+  }
+
+  .sidebar .icon-btn:hover {
+    color: #2e2f31;
+    background-color: rgba(0,123,255,0.1);
+  }
+
+  /* Main Content Area */
+  .main {
+    width: 80%;
+    padding: 20px;
+    overflow-y: auto;
+  }
+
+  /* Existing Tab header styles for main content (if needed) */
+  .tab-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+.tab-body{
+  padding-top: 5px;
+    border: 1px solid #bbb;
+    padding: 25px;
+    border-radius: 0px 5px 5px 5px;
+}
+  .tabs-left {
+    display: flex;
+  }
+  .tabs-right{
+    display: flex;
+    gap: 4px;
+    align-items: center;
+  }
+  .tabs-right .edit_btn{
+    padding: 4px 7px !important;
+  }
+  .tabs-left button {
+    border: 0;
+    margin-right: 0;
+    font-size: 18px;
+    padding: 16px 28px;
+    color: #606060;
+    background-color: inherit;
+    font-family: Figtree, sans-serif !important;
+    cursor: pointer;
+  }
+  .tabs-left button:hover{
+    color: #000;
+  }
+  .tabs-left button.active {
+    color: #000;
+    font-weight: 500;
+    border-bottom: solid 2px #ffffff !important;
+    border: solid 1px #bbb;
+    border-radius: 4px 4px 0px 0px;
+        border-bottom: 0 !important;
+  }
+
+
+
+  /* Active table styling for main tabs */
+  .active-table {
+    width: 100%;
+    border-collapse: collapse;
+    background-color: white;
+    color: black;
+    border-radius: 8px;
+    overflow: hidden;
+    margin-bottom: 20px;
+  }
+
+
+  .active-table th{
+      border: 1px solid #ebecf0;
+    padding: 8px;
+    text-align: left;
+    font-family: Figtree, sans-serif !important;
+    font-size: 14px;
+    color: #202122;
+    font-weight: 400;
+  }
+  .active-table td{
+         border: 1px solid #ebecf0;
+    padding: 8px;
+    text-align: left;
+    font-family: Figtree, sans-serif !important;
+    font-size: 14px;
+    color: #202122;
+    font-weight: 600;
+  }
+
+  .active-table tr.selected-row {
+    background-color: #cce5ff !important;
+    color: #333 !important;
+  }
+
+  /* Expandable row for comments and examples */
+  .expand-row {
+    background: #e9ecef; /* Light gray for contrast */
+  }
+
+  .expand-row div {
+    padding: 10px;
+  }
+
+  .expand-row ul {
+    list-style: none;
+    padding: 0;
+  }
+
+  .expand-row li {
+    margin-bottom: 5px;
+  }
+
+/* Modal Dialog styling */
+.modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0,0,0,0.6);
+  display: none;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+}
+
+.modal.active {
+  display: flex;
+}
+
+/* Enlarged modal content dimensions */
+.modal-content {
+  background: #fff;
+  padding: 25px;
+  width: 90%;
+  height: 90%;
+  border-radius: 8px; /* Rounded corners for softness */
+  box-shadow: 0px 0px 10px rgba(0,0,0,0.1);
+  display: flex;
+  flex-direction: column;
+}
+
+.modal-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 15px;
+  border-bottom: 1px solid #eee; /* Separator for clarity */
+  padding-bottom: 10px;
+}
+
+.modal-header h3 {
+  margin: 0;
+  font-weight: 500;
+}
+
+.modal-header button {
+  background: none;
+  border: none;
+  font-size: 1.5em;
+  cursor: pointer;
+  color: #333;
+}
+
+.modal-body {
+  padding: 0px;
+  flex-grow: 1;
+  overflow-y: auto;
+  font-family: 'Roboto', sans-serif;
+}
+
+input[type="text"],
+textarea {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 15px;
+  border: 1px solid #e9e9e9;
+  border-radius: 4px;
+  box-sizing: border-box;
+  font-size: 1em;
+}
+
+/* --- Modal Tab Styling (Refined) --- */
+/* Tab header container for modal dialogs */
+.modal .tab-header {
+  display: flex;
+  list-style: none;
+  margin: 0px;
+  padding: 0;
+}
+
+/* Individual tab styling */
+.modal .tab-header li {
+  padding: 10px 20px;
+  cursor: pointer;
+    border: 0;
+    margin-right: 0;
+    font-size: 18px;
+    padding: 16px 28px;
+    color: #606060;
+    background-color: inherit;
+    font-family: Figtree, sans-serif !important;
+}
+.modal .tab-header li:hover{
+  color: #000;
+}
+/* Active tab styling */
+.modal .tab-header li.active {
+ color: #000;
+    font-weight: 500;
+    border-bottom: solid 2px #ffffff !important;
+    border: solid 1px #bbb;
+    border-radius: 4px 4px 0px 0px;
+    border-bottom: 0 !important;
+}
+
+/* Tab content styling for modal dialogs */
+.modal .tab-content {
+  border: 1px solid #bbb;
+  padding: 15px;
+  background: #fff;
+  border: 0px 5px 5px 5px;
+}
+
+/* Textarea styled with a monospace font for report details */
+textarea {
+  font-family: 'Courier New', Courier, monospace;
+  resize: none;
+  width: 100%;
+}
+label{
+    font-size: 16px;
+    color: rgba(92, 94, 101, .8);
+    font-weight: 500;
+    margin-top: 0;
+    line-height: 1.2;
+        margin-bottom: 5px;
+    display: block;
+}
+
+  /* Icon-only buttons in main tables */
+  .icon-btn {
+    background: none;
+    border: none;
+    padding: 5px;
+    font-size: 15px;
+    cursor: pointer;
+    color: #74777e;
+    border-radius: 4px;
+    transition: background-color 0.3s, color 0.3s;
+  }
+
+  .icon-btn:hover {
+    color: #2e2f31;
+    background-color: rgba(0,123,255,0.1);
+  }
+
+  .modal-footer{
+	float:right;
+
+  }
+      .spinner {
+      animation: spin 2s linear infinite;
+    }
+
+
+
+    @keyframes spin {
+      from { transform: rotate(0deg); }
+      to { transform: rotate(360deg); }
+    }
+	        .progress-container {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 10px;
+            background-color: rgba(0, 0, 0, 0.1); /* Light background for visibility */
+            z-index: 1000; /* Ensure it overlays other content */
+        }
+	     /* Actual progress bar */
+        .progress-bar {
+            height: 100%;
+            width: 0;
+            background-color: #E1CD13;
+            transition: width 0.25s ease-in-out; /* Smooth transition for width changes */
+        }
+
+.grok-style-box {
+    background-color: #f8f9fa;
+    border: 1px solid #e9ecef;
+    border-radius: 8px;
+    padding: 16px;
+    margin: 10px 0;
+    font-family: Arial, sans-serif;
+    font-size: 16px;
+    line-height: 1.4;
+    color: #333;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    max-width: 100%;
+}
+.delete_icon,.edit_btn,.tick-btn{
+      border: none;
+      background-color: inherit;
+          padding: 0;
+}
+.tick-btn{
+    border: none;
+      background-color: inherit;
+          padding: 4px 6px;
+          color: #20ab20;
+}
+.tick-btn:hover{
+  border-radius: 4px;
+  background-color: #20ab2030;
+}
+
+.edit_btn:hover{
+   border-radius: 4px;
+   background-color: #2c61f512;
+}
+.edit_btn:hover img{
+  filter: brightness(0) saturate(100%) invert(30%) sepia(86%) saturate(6152%) hue-rotate(227deg) brightness(101%) contrast(101%);
+ -webkit-filter: brightness(0) saturate(100%) invert(30%) sepia(86%) saturate(6152%) hue-rotate(227deg) brightness(101%) contrast(101%);
+}
+.delete_icon:hover {
+    border-radius: 4px;
+    background-color: #ff2d2d12;
+}
+.delete_icon:hover img {
+    filter: brightness(0) saturate(100%) invert(11%) sepia(60%) saturate(7164%) hue-rotate(358deg) brightness(109%) contrast(116%);
+    -webkit-filter: brightness(0) saturate(100%) invert(11%) sepia(60%) saturate(7164%) hue-rotate(358deg) brightness(109%) contrast(116%);
+}
+.agent_bubble_1 {
+  align-self: flex-start;
+  background-color: #a4eca5;
+  width: 50%;
+}
+
+  .agent_bubble_2 {
+    align-self: flex-start;
+    background-color: #d1e0d1;
+    width: 50%;
+  }
+
+  .agent_bubble_4 {
+    align-self: flex-start;
+    background-color: #ababab;
+    width: 50%;
+  }
+
+  .agent_bubble_3 {
+    align-self: flex-start;
+    background-color: #67f671;
+    width: 50%;
+  }
+  .user_side {
+    float: right;
+  }
+
+</style>
+
+</head>
+<body ng-controller="MainController">
+<div style="width:100%;height:30px;background:#12114b;border-bottom:2px solid #e2cd12;padding-bottom:6px">
+<img width="200px" height="35px" src="middleware/pub/server/ui/assets/img/syncloop-logo.svg" alt="SyncLoop" style="padding-bottom:5px;">
+</div>
+
+  <div class="container">
+    <!-- Sidebar: Profiles -->
+    <div class="sidebar">
+
+      <h2> <!--<i class="fas fa-folder-open"></i>--> {{entityName}}</h2>
+      <div class="list-toolbar">
+        <button ng-click="createProfile()" title="Create Profile"><i class="fas fa-plus"></i></button>
+	<a href="/packages.ComplianceCheck.dashboard.services.api.wrapper.generateProfileReport.main?profileUUID={{selectedProfileUUID}}" target="_blank" title="Show Report" class="copy-btn"><i class="fas fa-file-alt"></i></a>
+        <a href="/packages.ComplianceCheck.dashboard.services.api.wrapper.generateFullReport.main?entityUUID={{entityUUID}}" target="_blank" title="Show full Report" class="copy-btn"><i class="fas fa-file"></i></a>
+ 	<button ng-click="validateAllRules()" title="Validate selected profile">
+			<i  ng-if="!selectedProfile.inProgress" class="fas fa-check-circle"></i>
+			<i  ng-if="selectedProfile.inProgress" class="fa-solid fa-spinner spinner"></i>
+		</button>
+      </div>
+      <input type="text" ng-model="profileSearch" placeholder="Search profiles..." />
+      <table class="active-table">
+        <thead>
+          <tr>
+            <th>#</th>
+            <th>Description</th>
+            <th>Actions</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr ng-repeat="(index, item) in profiles | filter:profileSearch"
+              ng-class="{'selected-profile': item.UUID === selectedProfileUUID}">
+            <td>{{index + 1}}</td>
+            <td>
+              <span ng-if="!item.isEditing" ng-click="loadPair(item)" style="cursor:pointer;">
+                {{decodeBase64(item.description)}}
+              </span>
+              <input ng-if="item.isEditing" type="text" ng-model="item.editDescription" style="width:100%;" />
+            </td>
+            <td style="display: flex; flex-shrink: 0;">
+              <button class="edit_btn" ng-if="!item.isEditing" ng-click="startEditProfile(item)" title="Edit">
+                <img src="compliance/public/images/edit_icon.svg">
+              </button>
+              <button class="tick-btn" ng-if="item.isEditing" ng-click="updateProfile(item)" title="Save">
+                <i class="fas fa-check"></i>
+              </button>
+              <button class="delete_icon" ng-click="deleteProfile(item)" title="Delete">
+                 <img src="compliance/public/images/delete.svg">
+              </button>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+      <!-- Hidden file input for Profiles import -->
+      <input type="file" id="profileFileInput" accept=".json" style="display:none" onchange="angular.element(this).scope().fileChangedProfiles(this)" />
+    </div>
+
+    <!-- Main Content Area -->
+    <div class="main">
+      <div class="tab-header">
+        <div class="tabs-left">
+          <button ng-class="{'active': activeTab==='compliance'}" ng-click="activeTab='compliance'">
+            <i class="fas fa-gavel"></i> Regulations
+          </button>
+          <button ng-class="{'active': activeTab==='documents'}" ng-click="activeTab='documents'">
+            <i class="fas fa-file-alt"></i> Policy Documents
+          </button>
+          <button ng-class="{'active': activeTab==='database'}" ng-click="activeTab='database'">
+            <i class="fas fa-database"></i> Database
+          </button>
+        </div>
+        <div class="tabs-right">
+          <button ng-click="triggerFileInput()" title="Import" class="edit_btn">
+           <img src="compliance/public/images/menu_export.svg">
+          </button>
+          <button ng-click="exportCurrentTab()" title="Export" class="edit_btn">
+           <img src="compliance/public/images/menu_import.svg">
+          </button>
+          <button ng-click="saveCurrentTab()" title="Save" class="primary_btn">
+            <i class="fas fa-save"></i> Save
+          </button>
+        </div>
+      </div>
+
+      <!-- Hidden file input for main tab import -->
+      <input type="file" id="jsonFileInput" accept=".json" style="display:none" onchange="angular.element(this).scope().fileChanged(this)" />
+
+      <!-- ProfileRules Tab -->
+      <div ng-show="activeTab==='compliance'" class="tab-body">
+        <input type="text" ng-model="complianceSearch" placeholder="Search  regulation..." />
+        <table class="active-table ">
+          <thead>
+            <tr>
+              <th>#</th>
+              <th ng-click="sortBy('articleReference')">Article Reference <i class="fas fa-sort"></i></th>
+              <th ng-click="sortBy('status')">Status <i class="fas fa-sort"></i></th>
+              <th>Lock</th>
+              <th>Actions</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr ng-repeat-start="rule in (profileRules | filter:complianceSearch | orderBy:sortColumn:reverseSort) | limitTo: pageSize : (currentPage-1)*pageSize"
+                ng-init="rowIndex = $index + (currentPage-1)*pageSize">
+              <td>{{rowIndex + 1}}</td>
+              <td>{{rule.articleReference}}</td>
+              <td><input type="checkbox" ng-model="rule.status=='success'" disabled /></td>
+              <td>
+                <input type="checkbox"
+                       ng-checked="rule.locked.status"
+                       ng-click="toggleLock(rule)"
+                       ng-disabled="rule.locked.status && rule.locked.lockedBy !== getLoggedInUser()"
+                       title="{{rule.locked.status ? 'Locked by ' + rule.locked.lockedBy + ' (click to unlock if you are the owner)' : 'Click to lock this row'}}" />
+              </td>
+              <td class="table-flex">
+                <button class="edit_btn" ng-click="openRuleDialog(rule)" title="Edit" ng-disabled="rule.locked.status">
+                    <img src="compliance/public/images/edit_icon.svg">
+                </button>
+                <button class="tick-grey" ng-click="validateRule(rule)" title="Validate">
+                  <i  ng-if="!rule.inProgress" class="fas fa-check"></i>
+				          <i  ng-if="rule.inProgress" class="fa-solid fa-spinner spinner"></i>
+                </button>
+                <button class="edit_btn" ng-click="toggleComments(rule)" title="Toggle Comments">
+                 <img src="compliance/public/images/comment.svg">
+                </button>
+                <button class="edit_btn" ng-click="toggleExamples(rule)" title="Toggle Examples">
+                   <img src="compliance/public/images/schema.svg">
+                </button>
+                <button class="delete_icon" ng-click="deleteRule(rule)" title="Delete" ng-disabled="rule.locked.status">
+                   <img src="compliance/public/images/delete.svg">
+                </button>
+
+              </td>
+            </tr>
+            <tr ng-repeat-end ng-if="rule.showComments || rule.showExamples">
+              <td colspan="5">
+                <div ng-if="rule.showComments">
+                  <strong>Comments:</strong>
+                  <ul>
+                    <li ng-repeat="comment in rule.comments | orderBy:'createdDateTime'">
+                      <span ng-if="!comment.isEditing">{{comment.User}}: {{decodeBase64(comment.comment)}}</span>
+                      <input ng-if="comment.isEditing" type="text" ng-model="comment.editText" />
+                      <br>(Modified: {{comment.modifiedDateTime | date:'short'}})
+                      <span ng-if="comment.User === getLoggedInUser()">
+                        <button class="edit_btn" ng-if="!comment.isEditing" ng-click="startEditComment(comment)" title="Edit Comment">
+                           <img src="compliance/public/images/edit_icon.svg">
+                        </button>
+                        <button class="icon-btn" ng-if="comment.isEditing" ng-click="saveEditComment(rule, comment)" title="Save Comment">
+                          <i class="fas fa-check"></i>
+                        </button>
+                        <button class="delete_icon" ng-if="comment.User === getLoggedInUser()" ng-click="deleteComment(rule, comment)" title="Delete Comment">
+                           <img src="compliance/public/images/delete.svg">
+                        </button>
+                      </span>
+                    </li>
+                  </ul>
+                  <div ng-if="!rule.locked.status">
+                    <input type="text" ng-model="rule.newComment" placeholder="Add comment..." />
+                    <button ng-click="addComment(rule)">Add Comment</button>
+                  </div>
+                </div>
+                <div ng-if="rule.showExamples">
+                  <strong>Examples:</strong>
+                  <ul>
+                    <li ng-repeat="example in rule.examples">
+                      <span ng-if="!example.isEditing">{{decodeBase64(example.example)}}</span>
+                      <input ng-if="example.isEditing" type="text" ng-model="example.editText" />
+                      <span>
+                        <button class="edit_btn" ng-if="!example.isEditing" ng-click="startEditExample(example)" title="Edit Example">
+                          <img src="compliance/public/images/edit_icon.svg">
+                        </button>
+                        <button class="icon-btn" ng-if="example.isEditing" ng-click="saveEditExample(rule, example)" title="Save Example">
+                          <i class="fas fa-check"></i>
+                        </button>
+                        <button class="delete_icon" ng-click="deleteExample(rule, example)" title="Delete Example">
+                           <img src="compliance/public/images/delete.svg">
+                        </button>
+                      </span>
+                    </li>
+                  </ul>
+                  <div ng-if="!rule.locked.status">
+                    <input type="text" ng-model="rule.newExample" placeholder="Add example..." />
+                    <button ng-click="addExample(rule)" style="padding: 6px 8px 4px;"><i class="fas fa-plus"></i></button>
+                  </div>
+                </div>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+        <!-- Pagination Controls -->
+        <div class="pagination"  style="float:right;">
+          <button ng-disabled="currentPage === 1" ng-click="currentPage = currentPage - 1">Prev</button>
+          <span>Page {{currentPage}} of {{getTotalPages()}}</span>
+          <button ng-disabled="currentPage >= getTotalPages()" ng-click="currentPage = currentPage + 1">Next</button>
+        </div>
+        <button ng-click="openRuleDialog(null)" class="secondry_btn"><i class="fas fa-plus"></i> Add Rule</button>
+      </div>
+
+      <!-- ProfileDocuments Tab -->
+      <div ng-show="activeTab==='documents'" class="tab-body">
+        <input type="text" ng-model="documentSearch" placeholder="Search policy document..." />
+        <table class="active-table">
+          <thead>
+            <tr>
+              <th>#</th>
+              <th style="display:none;" ng-click="sortByDoc('description')">Description <i class="fas fa-sort"></i></th>
+              <th ng-click="sortByDoc('location')">Location <i class="fas fa-sort"></i></th>
+              <th>Status</th>
+              <th>Actions</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr ng-repeat="doc in profileDocuments | filter:documentSearch | orderBy:docSortColumn:docReverseSort">
+              <td>{{$index + 1}}</td>
+              <td>{{decodeBase64(doc.description)}}</td>
+              <td>{{doc.location}}</td>
+              <td><input type="checkbox" ng-model="doc.status" disabled /></td>
+              <td>
+                <button class="edit_btn" ng-click="uploadDocument(doc)" title="Upload/Edit">
+                   <img src="compliance/public/images/export_icon.svg" ng-class="{'fa-upload': !doc.location.startsWith('http'), 'fa-edit': doc.location.startsWith('http')}">
+                </button>
+                <button class="delete_icon" ng-click="deleteDocument(doc)" title="Delete">
+                   <img src="compliance/public/images/delete.svg">
+                </button>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+        <button ng-click="createDocument()" class="secondry_btn"><i class="fas fa-plus"></i> Add Document</button>
+      </div>
+
+      <!-- ProfileDatabase Tab -->
+      <div ng-show="activeTab==='database'" class="tab-body">
+        <input type="text" ng-model="databaseSearch" placeholder="Search database..." />
+        <table class="active-table">
+          <thead>
+            <tr>
+              <th>#</th>
+              <th ng-click="sortByDatabase('jdbcURL')">JDBC URL <i class="fas fa-sort"></i></th>
+              <th ng-click="sortByDatabase('user')">User <i class="fas fa-sort"></i></th>
+              <th ng-click="sortByDatabase('description')">Description <i class="fas fa-sort"></i></th>
+              <th ng-click="sortByDatabase('active')">Active <i class="fas fa-sort"></i></th>
+              <th>Actions</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr ng-repeat="(index, db) in (profileDatabases | filter:databaseSearch | orderBy:databaseSortColumn:databaseReverseSort)">
+              <td>{{$index + 1}}</td>
+              <td>{{decodeBase64(db.jdbcURL)}}</td>
+              <td>{{decodeBase64(db.user)}}</td>
+              <td>{{decodeBase64(db.description)}}</td>
+              <td><input type="checkbox" ng-model="db.active" disabled /></td>
+              <td>
+                <button class="edit_btn" ng-click="openDatabaseDialog(db)" title="Edit">
+                  <img src="compliance/public/images/edit_icon.svg">
+                </button>
+                <button class="delete_icon" ng-click="deleteDatabase(db)" title="Delete">
+                   <img src="compliance/public/images/delete.svg">
+                </button>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+        <button ng-click="openDatabaseDialog(null)" class="secondry_btn"><i class="fas fa-plus"></i> Add Database</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Modal for adding/editing a ProfileRule -->
+<div class="modal" ng-class="{'active': showRuleModal}">
+  <div class="modal-content">
+    <div class="modal-header">
+      <h3>{{ruleModalTitle}}</h3>
+      <button ng-click="closeRuleDialog()"><i class="fas fa-times"></i></button>
+    </div>
+    <!-- Initialize selectedTab to 'description' -->
+    <div class="modal-body" ng-init="selectedTab='description'">
+      <!-- Common Article Reference -->
+      <label>Article Reference</label>
+      <input type="text" ng-model="currentRule.articleReference" />
+
+      <!-- Tab Headers -->
+      <ul class="tab-header" Style="justify-content: normal;">
+        <li ng-class="{'active': selectedTab === 'description'}" ng-click="selectedTab = 'description'">
+          Description
+        </li>
+        <li ng-class="{'active': selectedTab === 'rule'}" ng-click="selectedTab = 'rule'">
+          Rule
+        </li>
+        <li ng-class="{'active': selectedTab === 'action'}" ng-click="selectedTab = 'action'">
+          Action
+        </li>
+        <li ng-class="{'active': selectedTab === 'condition'}" ng-click="selectedTab = 'condition'">
+          Condition
+        </li>
+        <li ng-class="{'active': selectedTab === 'additionalCriteria'}" ng-click="selectedTab = 'additionalCriteria'">
+          Additional Criteria
+        </li>
+        <li ng-class="{'active': selectedTab === 'report'}" ng-click="selectedTab = 'report'">
+          Findings
+        </li>
+		<li ng-class="{'active': selectedTab === 'logs'}" ng-click="selectedTab = 'logs'">
+          Logs
+        </li>
+      </ul>
+
+      <!-- Tab Contents -->
+      <div class="tab-content">
+        <div ng-show="selectedTab === 'description'">
+          <label>Description</label>
+          <textarea ng-model="currentRule.description" rows="16"></textarea>
+        </div>
+        <div ng-show="selectedTab === 'rule'">
+          <label>Rule</label>
+          <textarea ng-model="currentRule.rule"  rows="16"></textarea>
+        </div>
+        <div ng-show="selectedTab === 'action'">
+          <label>Action</label>
+          <textarea ng-model="currentRule.action"  rows="16"></textarea>
+        </div>
+        <div ng-show="selectedTab === 'condition'">
+          <label>Condition</label>
+          <textarea ng-model="currentRule.condition"  rows="16"></textarea>
+        </div>
+        <div ng-show="selectedTab === 'additionalCriteria'">
+          <label>Additional Criteria</label>
+          <textarea ng-model="currentRule.additionalCriteria" rows="16"></textarea>
+        </div>
+        <div ng-show="selectedTab === 'report'">
+          <label>Report</label>
+          <textarea ng-model="currentRule.report"  rows="16"></textarea>
+        </div>
+		<div ng-show="selectedTab === 'logs'">
+		  <div ng-repeat="log in currentRule.logs">
+            <div class="{{log.user_side}}" style="width: 100%">
+              <div>
+                <strong style="visibility: hidden;">{{log.label}}</strong>
+                <span ng-bind-html="log.text"></span>
+              </div>
+            </div>
+          </div>
+          <!--<textarea ng-model="currentRule.logs"  rows="28"></textarea>-->
+        </div>
+      </div>
+    </div>
+    <div class="modal-footer" style="margin-top: 25px;">
+      <button class="primary_btn" ng-click="saveRule()">
+	  <i ng-if="!currentRule.inProgress" class="fas fa-save"></i> Save
+	  <i ng-if="currentRule.inProgress" class="fa-solid fa-spinner spinner"></i>
+	  </button>
+
+	  <button class="refresh-btn" ng-click="loadLogs()">
+	  <i ng-if="!currentRule.syncProgress" class="fas fa-sync"></i>
+	  <i ng-if="currentRule.syncProgress" class="fa-solid fa-spinner spinner"></i>
+	  </button>
+    </div>
+  </div>
+</div>
+
+
+    <div class="modal" ng-class="{'active': inProgressVisible}">
+	  <div class="modal-content" style="width:20px;height:20px">
+		<span class="fa-solid fa-spinner spinner"></span>
+	  </div>
+  </div>
+
+
+  <!-- Modal for adding/editing a ProfileDatabase -->
+  <div class="modal" ng-class="{'active': showDatabaseModal}">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h3>{{databaseModalTitle}}</h3>
+        <button ng-click="closeDatabaseDialog()"><i class="fas fa-times"></i></button>
+      </div>
+      <div class="modal-body">
+        <label>JDBC URL</label>
+        <input type="text" ng-model="currentDatabase.jdbcURL" />
+
+        <label>User</label>
+        <input type="text" ng-model="currentDatabase.user" />
+
+        <label>Password</label>
+        <input type="text" ng-model="currentDatabase.password" />
+
+        <label>Properties</label>
+        <textarea ng-model="currentDatabase.properties" maxlength="300"></textarea>
+
+        <label>Description</label>
+        <textarea ng-model="currentDatabase.description" maxlength="300"></textarea>
+
+        <label>Details</label>
+        <textarea ng-model="currentDatabase.details" maxlength="300"></textarea>
+
+        <label>Active</label>
+        <input type="checkbox" ng-model="currentDatabase.active" />
+      </div>
+      <div class="modal-footer" >
+        <button class="primary_btn" ng-click="saveDatabase()" style="margin-top: 25px;"><i class="fas fa-save"></i> Save</button>
+      </div>
+    </div>
+  </div>
+
+
+
+    <div class="modal" ng-class="{'active': showReprotModal}">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h3>Report</h3>
+        <button ng-click="closeReportDialog()"><i class="fas fa-times"></i></button>
+      </div>
+      <div class="modal-body">
+
+        <label>Report</label>
+        <textarea ng-model="analysisLogs"  rows="40"></textarea>
+    </div>
+	</div>
+  </div>
+  <div ng-if="selectedProfile.inProgress" class="progress-container">
+        <div class="progress-bar" ng-style="{ width: selectedProfile.progress + '%' }"></div>
+  </div>
+
+  <script>
+    var app = angular.module('complianceApp', []);
+    app.controller('MainController', ['$scope', '$http', '$filter','$sce', function($scope, $http, $filter,$sce) {
+
+      // Base64 utility functions with proper Unicode handling
+      $scope.decodeBase64 = function(str) {
+        try {
+          return decodeURIComponent(atob(str).split('').map(function(c) {
+            return '%' + ('00' + c.charCodeAt(0).toString(16)).slice(-2);
+          }).join(''));
+        } catch(e) {
+          return str;
+        }
+      };
+
+      $scope.encodeBase64 = function(str) {
+        try {
+          return btoa(encodeURIComponent(str).replace(/%([0-9A-F]{2})/g, function(match, p1) {
+            return String.fromCharCode('0x' + p1);
+          }));
+        } catch(e) {
+          return str;
+        }
+      };
+
+      // UUID generator (v4)
+      function generateUUID() {
+        var d = new Date().getTime();
+        var d2 = (performance && performance.now && (performance.now()*1000)) || 0;
+        return 'xxxxxxxx-xxxx-4xxx-yxxx-xxxxxxxxxxxx'.replace(/[xy]/g, function(c) {
+          var r = Math.random() * 16;
+          if (d > 0) {
+            r = (d + r) % 16 | 0;
+            d = Math.floor(d / 16);
+          } else {
+            r = (d2 + r) % 16 | 0;
+            d2 = Math.floor(d2 / 16);
+          }
+          return (c === 'x' ? r : (r & 0x3 | 0x8)).toString(16);
+        });
+      }
+      window.generateUUID = generateUUID;
+	  $scope.currentUser="system";
+      function getLoggedInUser() {
+	    if($scope.currentUser=="system") $http.get(window.ENV.API_BASE_URL + "/tenant/" + localStorage.getItem("tenant")
+                + '/packages.ComplianceCheck.dashboard.services.api.GET.getCurrentUser.main' + "?access_token=" + encodeURIComponent(localStorage.getItem("AuthToken"))).then(function(response) {
+			console.log(response);
+			if(response.data){
+				$scope.currentUser=response.data.currentUser;
+			}
+		});
+        return $scope.currentUser;
+      }
+      window.getLoggedInUser = getLoggedInUser;
+      $scope.getLoggedInUser = getLoggedInUser;
+
+      // Pagination settings for ProfileRules
+      $scope.currentPage = 1;
+      $scope.pageSize = 20;
+      $scope.getTotalPages = function() {
+        var filtered = $filter('filter')($scope.profileRules, $scope.complianceSearch);
+        return Math.ceil(filtered.length / $scope.pageSize) || 1;
+      };
+
+      // Load default ProfileRules (plain text) and encode fields; assign UUID if missing.
+      var defaultProfileRulesJSON = {"ProfileRules": []};
+    /*    "ProfileRules": [
+          {
+            "articleReference": "Paragraph 2(a)",
+            "description": "Applicability",
+            "rule": "Every RBI-regulated",
+            "action": "Verify that.",
+            "condition": "True if the entity.",
+            "additionalCriteria": "Check for any specific exemptions.",
+            "examples": [{"User":"system","example":"For example, a regulated Non-Banking Financial Company (NBFC) should have a KYC.",
+			"dateTime": "1741827106740"}]
+          }
+        ]
+      };*/
+
+      // Process default ProfileRules: encode fields, assign UUID if missing, remove deprecated properties, and add locked option.
+      $scope.profileRules = defaultProfileRulesJSON.ProfileRules.map(function(rule) {
+        if (!rule.UUID) { rule.UUID = generateUUID(); }
+        rule.articleReference = rule.articleReference || "No Article Reference";
+        rule.description = $scope.encodeBase64(rule.description || "");
+        rule.rule = $scope.encodeBase64(rule.rule || "");
+        rule.action = $scope.encodeBase64(rule.action || "");
+        rule.condition = $scope.encodeBase64(rule.condition || "");
+        rule.additionalCriteria = $scope.encodeBase64(rule.additionalCriteria || "");
+        rule.report = $scope.encodeBase64(rule.report || "");
+        rule.comments = rule.comments || [];
+        rule.examples = rule.examples || [];
+        delete rule.approvedBy;
+        delete rule.reviewedBy;
+        rule.locked = rule.locked || {status: false, lockedBy: ""};
+        return rule;
+      });
+
+      $scope.profileDocuments = [];
+      $scope.profileDatabases = [];
+
+      // Create default Profiles
+      $scope.profiles = [{
+        UUID: generateUUID(),
+        description: $scope.encodeBase64("Tax Compliance rules"),
+        createdBy: getLoggedInUser(),
+        createdDateTime: Date.now(),
+        modifiedDateTime: Date.now()
+      }];
+
+      // Sorting defaults
+      $scope.sortColumn = 'articleReference';
+      $scope.reverseSort = false;
+      $scope.docSortColumn = 'description';
+      $scope.docReverseSort = false;
+      $scope.databaseSortColumn = 'jdbcURL';
+      $scope.databaseReverseSort = false;
+
+      // Active tab: 'compliance' for ProfileRules, 'documents' for ProfileDocuments, and now 'database' for ProfileDatabase
+      $scope.activeTab = 'compliance';
+
+      // Track selected Profile UUID for highlighting and operations
+      //$scope.selectedProfileUUID = $scope.profiles[0].UUID;
+
+      // Modal state for ProfileRules and ProfileDatabase
+      $scope.showRuleModal = false;
+      $scope.currentRule = {};
+      $scope.ruleModalTitle = "Add Rule";
+
+      $scope.showDatabaseModal = false;
+      $scope.currentDatabase = {};
+      $scope.databaseModalTitle = "Add Database";
+
+      // Open modal for add/edit ProfileRule.
+      $scope.openRuleDialog = function(rule) {
+        if (rule) {
+          if (rule.locked && rule.locked.status && rule.locked.lockedBy !== getLoggedInUser()) {
+            alert("This rule is locked by " + rule.locked.lockedBy + ". You cannot edit it.");
+            return;
+          }
+          $scope.ruleModalTitle = "Edit Rule";
+          $scope.currentRule = angular.copy(rule);
+          $scope.currentRule.description = $scope.decodeBase64(rule.description);
+          $scope.currentRule.rule = $scope.decodeBase64(rule.rule);
+          $scope.currentRule.action = $scope.decodeBase64(rule.action);
+          $scope.currentRule.condition = $scope.decodeBase64(rule.condition);
+          $scope.currentRule.additionalCriteria = $scope.decodeBase64(rule.additionalCriteria);
+          $scope.currentRule.report = $scope.decodeBase64(rule.report);
+        } else {
+          $scope.ruleModalTitle = "Add Rule";
+          $scope.currentRule = {
+            UUID: generateUUID(),
+            articleReference: "",
+            description: "",
+            rule: "",
+            action: "",
+            condition: "",
+            additionalCriteria: "",
+            report: "",
+            status: false,
+            locked: {status: false, lockedBy: ""},
+            comments: [],
+            examples: [],
+            createdDateTime: Date.now(),
+            modifiedDateTime: Date.now()
+          };
+        }
+        $scope.showRuleModal = true;
+      };
+
+      $scope.closeRuleDialog = function() {
+        $scope.showRuleModal = false;
+      };
+
+	  $scope.closeReportDialog = function() {
+        $scope.showReprotModal = false;
+		$scope.report="";
+      };
+
+      // Save ProfileRule – encode text fields and ensure articleReference is not empty.
+      $scope.saveRule = function() {
+	    $scope.inProgressVisible = true;
+        if(!$scope.currentRule.articleReference || $scope.currentRule.articleReference.trim() === ""){
+          $scope.currentRule.articleReference = "No Article Reference";
+        }
+        $scope.currentRule.description = $scope.encodeBase64($scope.currentRule.description || "");
+        $scope.currentRule.rule = $scope.encodeBase64($scope.currentRule.rule || "");
+        $scope.currentRule.action = $scope.encodeBase64($scope.currentRule.action || "");
+        $scope.currentRule.condition = $scope.encodeBase64($scope.currentRule.condition || "");
+        $scope.currentRule.additionalCriteria = $scope.encodeBase64($scope.currentRule.additionalCriteria || "");
+        $scope.currentRule.report = $scope.encodeBase64($scope.currentRule.report || "");
+
+        var idx = $scope.profileRules.findIndex(function(r) { return r.UUID === $scope.currentRule.UUID; });
+        if (idx >= 0) {
+          $scope.profileRules[idx] = angular.copy($scope.currentRule);
+        } else {
+          $scope.profileRules.push(angular.copy($scope.currentRule));
+          //$http.post('/rule', $scope.currentRule);
+        }
+		$http.post(window.ENV.API_BASE_URL + "/tenant/" + localStorage.getItem("tenant")
+                + '/packages.ComplianceCheck.dashboard.services.api.POST.wrapper.upsertProfileRules.main?profileUUID='+$scope.selectedProfileUUID
+                + "&access_token=" + encodeURIComponent(localStorage.getItem("AuthToken")), $scope.currentRule, {headers: { 'Content-Type': 'application/json' }})
+		  .then(function(response){
+			if(response.data){
+				$scope.inProgressVisible = false;
+			}
+		});
+        $scope.closeRuleDialog();
+      };
+
+	  function getTextBetweenStrings(text, str1, str2) {
+		const regex = new RegExp(`${str1}(.*?)${str2}`);
+		const match = text.match(regex);
+		return match ? match[1] : null;
+	  }
+
+	  function formatToHtmlBox(inputString, username, agentCount, userClass) {
+		// Replace all newline characters with <br> tags
+		const formattedText = inputString.replace(/\n/g, '<br>');
+
+		// Return HTML with class instead of inline styles
+		const htmlString = `
+			<div class="grok-style-box agent_bubble_${agentCount} ${userClass}">
+			    <b>${username}</b><br />
+				${formattedText}
+			</div>
+		`;
+
+		return htmlString;
+	  }
+
+	  $scope.loadLogs = function() {
+		  $scope.currentRule.syncProgress=true;
+          const hashMap = {};
+          let count = 1;
+		  $http.get(window.ENV.API_BASE_URL + "/tenant/"
+                  + localStorage.getItem("tenant") + '/packages.ComplianceCheck.dashboard.services.api.GET.getLogs.main?ruleUUID=' + $scope.currentRule.UUID
+                  + "&access_token=" + encodeURIComponent(localStorage.getItem("AuthToken"))).then(function(response) {
+			if(response){
+				if(response.data.logs){
+					$scope.currentRule.logs=[];
+					var logs=$scope.decodeBase64(response.data.logs);
+					// Convert string to JSON object
+					const transcription = JSON.parse(logs).transcription;
+
+					// Iterate over the logs array
+					transcription.forEach(log => {
+
+					    var type = log.substr(log.indexOf("#"), log.indexOf("[")).trim();
+                        var username = log.substr(log.indexOf("[") + 1, log.indexOf("]") - log.indexOf("[") - 1).trim();
+
+                        if (null == hashMap[username]) {
+                          hashMap[username] = count;
+                          count++;
+                        }
+
+                        let agentCount = hashMap[username];
+
+						var logLine = $sce.trustAsHtml(formatToHtmlBox(log.substr(log.indexOf(":") + 1).trim(), username,
+                                agentCount, (type == "#Function Call")? "user_side": ""));
+						$scope.currentRule.logs.push({ label: username, text: logLine,
+                          user_side: (type == "#Function Call")? "user_side": "", agent_count: agentCount});
+					});
+				}
+				$scope.currentRule.syncProgress=false;
+				$scope.currentRule.inProgress=false;
+			}
+		  });
+	  }
+
+      $scope.deleteRule = function(rule) {
+	    $scope.inProgressVisible = true;
+        if (rule.locked && rule.locked.status && rule.locked.lockedBy !== getLoggedInUser()) {
+		  alert("This rule is locked by " + rule.locked.lockedBy + ". You cannot delete it.");
+          return;
+        }
+        $scope.profileRules = $scope.profileRules.filter(function(r) {
+          return r.UUID !== rule.UUID;
+        });
+        $http.delete(window.ENV.API_BASE_URL + "/tenant/" + localStorage.getItem("tenant") + '/packages.ComplianceCheck.dashboard.services.api.wrapper.deleteProfileRule.main?UUID=' + rule.UUID + "&access_token=" + encodeURIComponent(localStorage.getItem("AuthToken"))).then(function(response){
+			if(response.data){
+				console.log(response.data);
+			}
+			$scope.inProgressVisible = false;
+		});
+      };
+
+      // Lock/Unlock functionality
+      $scope.toggleLock = function(rule) {
+        if (!rule.locked) {
+          rule.locked = {status: false, lockedBy: ""};
+        }
+        if (!rule.locked.status) {
+          rule.locked.status = true;
+          rule.locked.lockedBy = getLoggedInUser();
+        } else {
+          if (rule.locked.lockedBy === getLoggedInUser()) {
+            rule.locked.status = false;
+            rule.locked.lockedBy = "";
+          } else {
+            alert("This row is locked by another user.");
+          }
+        }
+      };
+
+
+      $scope.sortBy = function(column) {
+        if ($scope.sortColumn === column) {
+          $scope.reverseSort = !$scope.reverseSort;
+        } else {
+          $scope.sortColumn = column;
+          $scope.reverseSort = false;
+        }
+      };
+
+      $scope.sortByDoc = function(column) {
+        if ($scope.docSortColumn === column) {
+          $scope.docReverseSort = !$scope.docReverseSort;
+        } else {
+          $scope.docSortColumn = column;
+          $scope.docReverseSort = false;
+        }
+      };
+
+      $scope.sortByDatabase = function(column) {
+        if ($scope.databaseSortColumn === column) {
+          $scope.databaseReverseSort = !$scope.databaseReverseSort;
+        } else {
+          $scope.databaseSortColumn = column;
+          $scope.databaseReverseSort = false;
+        }
+      };
+
+      // Profiles functions
+      $scope.loadPair = function(profile) {
+	    var UUID=profile.UUID;
+	    $scope.profileRules = [];
+		$scope.inProgressVisible = true;
+        $scope.selectedProfileUUID = UUID;
+		$scope.selectedProfile = profile;
+        $http.get(window.ENV.API_BASE_URL + "/tenant/" + localStorage.getItem("tenant") + '/packages.ComplianceCheck.dashboard.services.api.GET.getProfileRules.main?UUID=' + UUID + "&access_token=" + encodeURIComponent(localStorage.getItem("AuthToken"))).then(function(response) {
+		  //console.log("-------------Logging rules----------");
+		  //console.log($scope.profileRules);
+          if (response.data && response.data.ProfileRules) {
+            $scope.profileRules = response.data.ProfileRules.map(function(rule) {
+              if (!rule.UUID) { rule.UUID = generateUUID(); }
+              rule.articleReference = rule.article_reference || "No Article Reference";
+              //rule.description = $scope.encodeBase64(rule.description || "");
+              //rule.rule = $scope.encodeBase64(rule.rule || "");
+              //rule.action = $scope.encodeBase64(rule.action || "");
+              //rule.condition = $scope.encodeBase64(rule.condition || "");
+              rule.additionalCriteria = rule.additional_criteria || "";
+              //rule.report = $scope.encodeBase64(rule.report || "");
+              rule.comments = rule.comments || [];
+              rule.examples = rule.examples || [];
+              //delete rule.approvedBy;
+              //delete rule.reviewedBy;
+              rule.locked = rule.locked_user || {status: false, lockedBy: ""};
+			  $scope.inProgressVisible = false;
+              return rule;
+            });
+			//$scope.inProgressVisible = false;
+            $scope.profileDocuments = (response.data.ProfileDocuments || []).map(function(doc) {
+              doc.description = $scope.encodeBase64(doc.description || "");
+			  $scope.inProgressVisible = false;
+              return doc;
+            });
+            if (response.data.ProfileDetails && response.data.ProfileDetails.ProfileDatabase) {
+              $scope.profileDatabases = response.data.ProfileDetails.ProfileDatabase.map(function(db) {
+                if (!db.UUID) { db.UUID = generateUUID(); }
+                db.jdbcURL = $scope.encodeBase64(db.jdbcURL || "");
+                db.user = $scope.encodeBase64(db.user || "");
+                db.password = $scope.encodeBase64(db.password || "");
+                db.properties = $scope.encodeBase64(db.properties || "");
+                db.description = $scope.encodeBase64(db.description || "");
+                db.details = $scope.encodeBase64(db.details || "");
+				$scope.inProgressVisible = false;
+                return db;
+              });
+            } else {
+			  $scope.inProgressVisible = false;
+              $scope.profileDatabases = [];
+            }
+          }else
+		   $scope.inProgressVisible = false;
+        });
+
+      };
+
+      $scope.createProfile = function() {
+        var newProfile = {
+          UUID: generateUUID(),
+          description: $scope.encodeBase64("--Profile name--"),
+          createdBy: getLoggedInUser(),
+          createdDateTime: Date.now(),
+          modifiedDateTime: Date.now(),
+		  entityUUID: $scope.entityUUID
+        };
+        $scope.profiles.push(newProfile);
+        $http.post(window.ENV.API_BASE_URL + "/tenant/" + localStorage.getItem("tenant") + '/packages.ComplianceCheck.dashboard.services.api.POST.upsertProfile.main' + "?access_token=" + encodeURIComponent(localStorage.getItem("AuthToken")), newProfile);
+      };
+
+
+      $scope.startEditProfile = function(profile) {
+        profile.isEditing = true;
+        profile.editDescription = $scope.decodeBase64(profile.description);
+      };
+
+      $scope.updateProfile = function(profile) {
+        profile.description = $scope.encodeBase64(profile.editDescription || "");
+        profile.modifiedDateTime = Date.now();
+        $http.post(window.ENV.API_BASE_URL + "/tenant/" + localStorage.getItem("tenant") + '/packages.ComplianceCheck.dashboard.services.api.POST.upsertProfile.main' + "?access_token=" + encodeURIComponent(localStorage.getItem("AuthToken")), profile).then(function() {
+          profile.isEditing = false;
+        });
+      };
+
+      $scope.deleteProfile = function(profile) {
+	    $scope.inProgressVisible = true;
+        if (confirm("Are you sure to delete this profile?")) {
+          $scope.profiles = $scope.profiles.filter(function(i) {
+            return i.UUID !== profile.UUID;
+          });
+          $http.delete(window.ENV.API_BASE_URL + "/tenant/" + localStorage.getItem("tenant") + '/packages.ComplianceCheck.dashboard.services.api.wrapper.deleteProfile.main?UUID=' + profile.UUID + "&access_token=" + encodeURIComponent(localStorage.getItem("AuthToken")))
+		  .then(function(response){
+		    $scope.inProgressVisible = false;
+			loadProfiles();
+		  });
+        }
+      };
+
+      // Profiles Import / Export / Save functions
+      $scope.triggerProfileFileInput = function() {
+        document.getElementById('profileFileInput').click();
+      };
+
+      $scope.fileChangedProfiles = function(element) {
+        var file = element.files[0];
+        if (file && file.name.match(/\.json$/i)) {
+          var reader = new FileReader();
+          reader.onload = function(e) {
+            try {
+              var jsonData = JSON.parse(e.target.result);
+              if (jsonData.Profiles && Array.isArray(jsonData.Profiles)) {
+                mergeProfilesData(jsonData);
+              } else {
+                alert("Invalid Profiles JSON");
+              }
+            } catch (err) {
+              alert("Error parsing Profiles JSON file.");
+            }
+          };
+          reader.readAsText(file);
+        } else {
+          alert("Please select a valid JSON file.");
+        }
+        element.value = "";
+      };
+
+      $scope.exportProfiles = function() {
+        var exportData = { Profiles: $scope.profiles };
+        downloadFile("CompliancePairList.json", JSON.stringify(exportData, null, 2));
+      };
+
+      $scope.saveProfiles = function() {
+        $http.post(window.ENV.API_BASE_URL + "/tenant/" + localStorage.getItem("tenant") + '/list' + "?access_token=" + encodeURIComponent(localStorage.getItem("AuthToken")), $scope.profiles).then(function() {
+          alert("Profiles saved successfully.");
+        });
+      };
+
+      // Main tab Import / Export / Save functions
+      $scope.triggerFileInput = function() {
+	    //$scope.tempUUID=$scope.selectedProfileUUID;
+        document.getElementById('jsonFileInput').click();
+      };
+      //$scope.tempUUID=null;
+      $scope.fileChanged = function(element) {
+        var file = element.files[0];
+        if (file && file.name.match(/\.json$/i)) {
+          var reader = new FileReader();
+          reader.onload = function(e) {
+            try {
+              var jsonData = JSON.parse(e.target.result);
+              if ($scope.activeTab === 'compliance' && jsonData.ProfileRules) {
+                if (!Array.isArray(jsonData.ProfileRules)) {
+                  jsonData.ProfileRules = [jsonData.ProfileRules];
+                }
+                $scope.$apply(function() {
+                  mergeProfileRulesData(jsonData);
+                });
+              } else if ($scope.activeTab === 'documents' && jsonData.ProfileDocuments) {
+                if (!Array.isArray(jsonData.ProfileDocuments)) {
+                  jsonData.ProfileDocuments = [jsonData.ProfileDocuments];
+                }
+                $scope.$apply(function() {
+                  mergeProfileDocumentsData(jsonData);
+                });
+              } else if ($scope.activeTab === 'database' && jsonData.ProfileDatabase) {
+                if (!Array.isArray(jsonData.ProfileDatabase)) {
+                  jsonData.ProfileDatabase = [jsonData.ProfileDatabase];
+                }
+                $scope.$apply(function() {
+                  mergeProfileDatabaseData(jsonData);
+                });
+              } else {
+                alert("Invalid JSON structure for the current tab.");
+              }
+            } catch (err) {
+              alert("Error parsing JSON file.");
+            }
+          };
+          reader.readAsText(file);
+        } else {
+          alert("Please select a valid JSON file.");
+        }
+        element.value = "";
+      };
+
+      $scope.exportCurrentTab = function() {
+        var filename, exportData;
+        if ($scope.activeTab === 'compliance') {
+          filename = "ProfileRules.json";
+          exportData = { ProfileRules: $scope.profileRules };
+        } else if ($scope.activeTab === 'documents') {
+          filename = "ProfileDocuments.json";
+          exportData = { ProfileDocuments: $scope.profileDocuments };
+        } else if ($scope.activeTab === 'database') {
+          filename = "ProfileDatabase.json";
+          exportData = { ProfileDatabase: $scope.profileDatabases };
+        }
+        downloadFile(filename, JSON.stringify(exportData, null, 2));
+      };
+
+      $scope.saveCurrentTab = function() {
+	     $scope.inProgressVisible = true;
+        if ($scope.activeTab === 'compliance') {
+          $http.post(window.ENV.API_BASE_URL + "/tenant/" + localStorage.getItem("tenant") + '/packages.ComplianceCheck.dashboard.services.api.POST.importRules.main?UUID=' + $scope.selectedProfileUUID + "&access_token=" + encodeURIComponent(localStorage.getItem("AuthToken")), { ProfileRules: $scope.profileRules },{headers: { 'Content-Type': 'application/json' }})
+		  .then(function(response) {
+			if(response)
+				$scope.inProgressVisible = false;
+		  });
+        } else if ($scope.activeTab === 'documents') {
+          $http.post(window.ENV.API_BASE_URL + "/tenant/" + localStorage.getItem("tenant") + '/documents?UUID=' + $scope.selectedProfileUUID + "&access_token=" + encodeURIComponent(localStorage.getItem("AuthToken")), { ProfileDocuments: $scope.profileDocuments });
+        } else if ($scope.activeTab === 'database') {
+          $http.post(window.ENV.API_BASE_URL + "/tenant/" + localStorage.getItem("tenant") + '/database?UUID=' + $scope.selectedProfileUUID + "&access_token=" + encodeURIComponent(localStorage.getItem("AuthToken")), { ProfileDatabase: $scope.profileDatabases });
+        }
+
+      };
+
+/*	  $scope.validateRule = function(rule) {
+        //$scope.inProgressVisible = inprogress;
+		//$scope.selectedProfile.inProgress=inprogress;
+		rule.inProgress=true;
+		var url = '/packages.ComplianceCheck.dashboard.services.api.AssessRule.main?access_token=' + encodeURIComponent(localStorage.getItem("AuthToken"));
+        $http.post(url,
+		{
+			UUID:rule.UUID,
+			description: $scope.decodeBase64(rule.description),
+			article_reference:$scope.decodeBase64(rule.articleReference),
+			rule:$scope.decodeBase64(rule.rule),
+			action:$scope.decodeBase64(rule.action),
+			additional_criteria:$scope.decodeBase64(rule.additionalCriteria),
+			condition: $scope.decodeBase64(rule.condition)
+		},{headers: { 'Content-Type': 'application/json' }})
+		.then(function(response) {
+          if(response.data.prompt){
+			  $scope.report=response.data.report;
+			  $scope.prompt=response.data.prompt;
+			  rule.report=$scope.encodeBase64($scope.report);
+			  rule.status='success';
+			  //alert("Validation Report: " + response.data.report + "\nStatus: " + response.data.status);
+			  //$scope.showReprotModal = true;
+			  $scope.inProgressVisible = false;
+			  rule.status="success";
+			  rule.inProgress=false;
+			  $scope.validationCounter=$scope.validationCounter-1;
+			  $scope.validationThreadCount=$scope.validationThreadCount-1;
+			  if($scope.validationCounter<=0){
+				$scope.selectedProfile.inProgress=false;
+				$scope.validationThreadCount=0;
+			  }
+		  }
+        });
+      };*/
+
+$scope.validateRule = function(rule) {
+  // Set in-progress flags and clear logs
+  rule.inProgress = true;
+  rule.logs = []; // assuming rule.logs is a textarea or string that collects logs
+
+  // WebSocket URL (note: must use ws:// or wss://)
+  var wsUrl = window.ENV.WS_BASE_URL + '/ws/tenant/' + localStorage.getItem("tenant") + '/packages.ComplianceCheck.dashboard.services.api.AssessRule.main'
+          + "?access_token=" + encodeURIComponent(encodeURIComponent(localStorage.getItem("AuthToken")));
+  var socket = new WebSocket(wsUrl);
+  $scope.currentRule.logs=[];
+  // Build the JSON payload, decoding values as before
+  var payload = {"*payload":{
+    UUID: rule.UUID,
+    description: $scope.decodeBase64(rule.description),
+    article_reference: $scope.decodeBase64(rule.articleReference),
+    rule: $scope.decodeBase64(rule.rule),
+    action: $scope.decodeBase64(rule.action),
+    additional_criteria: $scope.decodeBase64(rule.additionalCriteria),
+    condition: $scope.decodeBase64(rule.condition)
+  }};
+
+  // When the connection opens, send the JSON payload
+  socket.onopen = function() {
+    socket.send(JSON.stringify(payload));
+  };
+
+  // Listen for incoming messages
+  socket.onmessage = function(event) {
+    var message;
+	//console.log(event.data);
+    try {
+//      message = JSON.parse(event.data);
+        var endIndex=50;
+		if(event.data.length<endIndex)
+		 endIndex=event.data.length;
+		var log=event.data;
+		var labl=log.substring(0,endIndex);
+		labl=getTextBetweenStrings(labl,"#","]:");//+"]";
+		var logLine="";
+		if(labl)
+		   labl=labl+"]";
+		else
+			labl="";
+		logLine=log.substring(labl.length+2,log.length);
+		logLine=$sce.trustAsHtml(formatToHtmlBox(logLine, "User", 0, ""));
+		if(rule.logs || rule.logs.lenght==0){
+		   rule.logs.logs=[];
+		   $scope.currentRule.logs=[];
+		}
+		//$scope.currentRule.logs.push({ label: labl, text: logLine });
+		//console.log(log);
+
+	  $scope.currentRule.logs.push({ label: labl, text: logLine });
+	  rule.logs.push({ label: labl, text: logLine });
+	  $scope.$apply();
+	  message = JSON.parse(event.data);
+    } catch (e) {
+	  console.log(e);
+      return;
+    }
+	//alert("Incomming Data...");
+
+    // Check if the message signals the end of the processing.
+    if (message.report || message.error) {
+      if (message.report) {
+        $scope.report = message.report;
+        $scope.prompt = message.prompt;
+        rule.report = $scope.encodeBase64(message.report);
+		$scope.currentRule.report=rule.report;
+        rule.status = 'success';
+		$scope.$apply();
+      } else {
+        rule.status = 'error';
+      }
+      rule.inProgress = false;
+
+      // Update counters as in the original function
+      $scope.validationCounter = $scope.validationCounter - 1;
+      $scope.validationThreadCount = $scope.validationThreadCount - 1;
+      if ($scope.validationCounter <= 0) {
+        $scope.selectedProfile.inProgress = false;
+        $scope.validationThreadCount = 0;
+      }
+
+      // Close the WebSocket since we've received the final report or error
+      socket.close();
+    }
+    $scope.$apply();
+  };
+
+  // Handle any errors that occur on the WebSocket connection
+  socket.onerror = function(error) {
+    console.error("WebSocket error:", error);
+    //rule.logs += "WebSocket error occurred.\n";
+    rule.status = 'error';
+    rule.inProgress = false;
+    $scope.currentRule.inProgress=false;
+    // Update counters if needed
+    $scope.validationCounter = $scope.validationCounter - 1;
+    $scope.validationThreadCount = $scope.validationThreadCount - 1;
+    if ($scope.validationCounter <= 0) {
+      $scope.selectedProfile.inProgress = false;
+      $scope.validationThreadCount = 0;
+    }
+
+    socket.close();
+    $scope.$apply();
+  };
+
+  // Optionally, handle the connection closing
+  socket.onclose = function(event) {
+    $scope.loadLogs(rule);
+    console.log("WebSocket connection closed:", event);
+    rule.inProgress = false;
+	$scope.currentRule.inProgress=false;
+    $scope.$apply();
+  };
+};
+
+
+	  $scope.validationCounter=0;
+	  $scope.validationThreadCount=0;
+	  $scope.validateAllRules = async function(){
+		var size=$scope.profileRules.length;
+		$scope.validationCounter=size;
+		$scope.selectedProfile.inProgress=true;
+		$scope.selectedProfile.progress=1;
+		for(i=0;i<size;i++){
+		    rule=$scope.profileRules[i];
+			$scope.validationThreadCount=$scope.validationThreadCount+1;
+			$scope.validateRule(rule);
+			if($scope.validationThreadCount>5){
+				while($scope.validationThreadCount>0)
+					await $scope.sleep(500);
+				await $scope.sleep(2000);
+				$scope.selectedProfile.progress=(i+1)*(100/(size+5));
+			}
+		}
+	  };
+
+	  $scope.sleep=function(ms) {
+		  return new Promise(resolve => setTimeout(resolve, ms));
+	  }
+
+
+      // Document functions for ProfileDocuments
+      $scope.createDocument = function() {
+        var newDoc = {
+          UUID: generateUUID(),
+          user: getLoggedInUser(),
+          description: $scope.encodeBase64(""),
+          location: "",
+          status: false,
+          createdDateTime: Date.now(),
+          modifiedDateTime: Date.now()
+        };
+        $scope.profileDocuments.push(newDoc);
+        $http.post(window.ENV.API_BASE_URL + "/tenant/" + localStorage.getItem("tenant") + '/document' + "?access_token=" + encodeURIComponent(localStorage.getItem("AuthToken")), newDoc);
+      };
+
+      $scope.uploadDocument = function(doc) {
+        var newLoc = prompt("Enter document location or link", doc.location);
+        if (newLoc !== null) {
+          doc.location = newLoc;
+          doc.modifiedDateTime = Date.now();
+          $http.post(window.ENV.API_BASE_URL + "/tenant/" + localStorage.getItem("tenant") + '/document?UUID=' + doc.UUID + "&access_token=" + encodeURIComponent(localStorage.getItem("AuthToken")), doc);
+        }
+      };
+
+      $scope.deleteDocument = function(doc) {
+        if (confirm("Are you sure to delete this document?")) {
+          $scope.profileDocuments = $scope.profileDocuments.filter(function(d) {
+            return d.UUID !== doc.UUID;
+          });
+          $http.delete(window.ENV.API_BASE_URL + "/tenant/" + localStorage.getItem("tenant") + '/document?UUID=' + doc.UUID + "&access_token=" + encodeURIComponent(localStorage.getItem("AuthToken")));
+        }
+      };
+
+      // Functions for ProfileDatabase
+      $scope.openDatabaseDialog = function(db) {
+        if (db) {
+          $scope.databaseModalTitle = "Edit Database";
+          $scope.currentDatabase = angular.copy(db);
+          $scope.currentDatabase.jdbcURL = $scope.decodeBase64(db.jdbcURL);
+          $scope.currentDatabase.user = $scope.decodeBase64(db.user);
+          $scope.currentDatabase.password = $scope.decodeBase64(db.password);
+          $scope.currentDatabase.properties = $scope.decodeBase64(db.properties);
+          $scope.currentDatabase.description = $scope.decodeBase64(db.description);
+          $scope.currentDatabase.details = $scope.decodeBase64(db.details);
+        } else {
+          $scope.databaseModalTitle = "Add Database";
+          $scope.currentDatabase = {
+            UUID: generateUUID(),
+            jdbcURL: "",
+            user: "",
+            password: "",
+            properties: "",
+            description: "",
+            details: "",
+            active: true,
+            createdDateTime: Date.now(),
+            modifiedDateTime: Date.now()
+          };
+        }
+        $scope.showDatabaseModal = true;
+      };
+
+      $scope.closeDatabaseDialog = function() {
+        $scope.showDatabaseModal = false;
+      };
+
+      $scope.saveDatabase = function() {
+        $scope.currentDatabase.jdbcURL = $scope.encodeBase64($scope.currentDatabase.jdbcURL || "");
+        $scope.currentDatabase.user = $scope.encodeBase64($scope.currentDatabase.user || "");
+        $scope.currentDatabase.password = $scope.encodeBase64($scope.currentDatabase.password || "");
+        $scope.currentDatabase.properties = $scope.encodeBase64($scope.currentDatabase.properties || "");
+        $scope.currentDatabase.description = $scope.encodeBase64($scope.currentDatabase.description || "");
+        $scope.currentDatabase.details = $scope.encodeBase64($scope.currentDatabase.details || "");
+        $scope.currentDatabase.modifiedDateTime = Date.now();
+
+        var idx = $scope.profileDatabases.findIndex(function(db) { return db.UUID === $scope.currentDatabase.UUID; });
+        if(idx >= 0) {
+          $scope.profileDatabases[idx] = angular.copy($scope.currentDatabase);
+          $http.post(window.ENV.API_BASE_URL + "/tenant/" + localStorage.getItem("tenant") + '/database?UUID=' + $scope.currentDatabase.UUID + "&access_token=" + encodeURIComponent(localStorage.getItem("AuthToken")), $scope.currentDatabase);
+        } else {
+          $scope.profileDatabases.push(angular.copy($scope.currentDatabase));
+          $http.post(window.ENV.API_BASE_URL + "/tenant/" + localStorage.getItem("tenant") + '/database' + "?access_token=" + encodeURIComponent(localStorage.getItem("AuthToken")), $scope.currentDatabase);
+        }
+        $scope.closeDatabaseDialog();
+      };
+
+      $scope.deleteDatabase = function(db) {
+        if(confirm("Are you sure to delete this database entry?")) {
+          $scope.profileDatabases = $scope.profileDatabases.filter(function(d) {
+            return d.UUID !== db.UUID;
+          });
+          $http.delete(window.ENV.API_BASE_URL + "/tenant/" + localStorage.getItem("tenant") + '/database?UUID=' + db.UUID + "&access_token=" + encodeURIComponent(localStorage.getItem("AuthToken")));
+        }
+      };
+
+      // Comments and Examples functions for ProfileRules
+      $scope.startEditComment = function(comment) {
+        comment.isEditing = true;
+        comment.editText = $scope.decodeBase64(comment.comment);
+      };
+
+      $scope.saveEditComment = function(rule, comment) {
+        comment.comment = $scope.encodeBase64(comment.editText || "");
+        comment.modifiedDateTime = Date.now();
+        comment.isEditing = false;
+		comment.ruleUUID=rule.UUID;
+		  $http.post(window.ENV.API_BASE_URL + "/tenant/" + localStorage.getItem("tenant") + '/packages.ComplianceCheck.dashboard.services.api.POST.wrapper.upsertComments.main' + "?access_token=" + encodeURIComponent(localStorage.getItem("AuthToken")), comment,{headers: { 'Content-Type': 'application/json' }})
+		  .then(function(response) {
+			if(response)
+				$scope.inProgressVisible = false;
+		  });
+      };
+
+      $scope.deleteComment = function(rule, comment) {
+        if (comment.User === getLoggedInUser()) {
+          rule.comments = rule.comments.filter(function(c) {
+            return c.UUID !== comment.UUID;
+          });
+        }
+      };
+
+      $scope.addComment = function(rule) {
+        if (rule.newComment && rule.newComment.trim() !== "") {
+          var newComment = {
+            UUID: generateUUID(),
+            User: getLoggedInUser(),
+            comment: $scope.encodeBase64(rule.newComment),
+            createdDateTime: Date.now(),
+            modifiedDateTime: Date.now()
+          };
+          if (!rule.comments) { rule.comments = []; }
+          rule.comments.push(newComment);
+		  newComment.ruleUUID=rule.UUID;
+		  $http.post(window.ENV.API_BASE_URL + "/tenant/" + localStorage.getItem("tenant") + '/packages.ComplianceCheck.dashboard.services.api.POST.wrapper.upsertComments.main' + "?access_token=" + encodeURIComponent(localStorage.getItem("AuthToken")), newComment,{headers: { 'Content-Type': 'application/json' }})
+		  .then(function(response) {
+			if(response)
+				$scope.inProgressVisible = false;
+		  });
+		  rule.newComment = "";
+        }
+      };
+
+      $scope.startEditExample = function(example) {
+        example.isEditing = true;
+        example.editText = $scope.decodeBase64(example.example);
+      };
+
+      $scope.saveEditExample = function(rule, example) {
+        example.example = $scope.encodeBase64(example.editText || "");
+        example.modifiedDateTime = Date.now();
+        example.isEditing = false;
+		example.ruleUUID=rule.UUID;
+		$http.post(window.ENV.API_BASE_URL + "/tenant/" + localStorage.getItem("tenant") + '/packages.ComplianceCheck.dashboard.services.api.POST.wrapper.upsertRuleExamples.main' + "?access_token=" + encodeURIComponent(localStorage.getItem("AuthToken")), example,{headers: { 'Content-Type': 'application/json' }})
+		  .then(function(response) {
+			if(response)
+				$scope.inProgressVisible = false;
+		  });
+
+      };
+
+      $scope.deleteExample = function(rule, example) {
+        rule.examples = rule.examples.filter(function(e) {
+          return e.UUID !== example.UUID;
+        });
+      };
+
+      $scope.addExample = function(rule) {
+        if (rule.newExample && rule.newExample.trim() !== "") {
+          var newExample = {
+            UUID: generateUUID(),
+            User: getLoggedInUser(),
+            example: $scope.encodeBase64(rule.newExample),
+            createdDateTime: Date.now(),
+            modifiedDateTime: Date.now()
+          };
+          if (!rule.examples) { rule.examples = []; }
+          rule.examples.push(newExample);
+          rule.newExample = "";
+		  $scope.inProgressVisible = true;
+		  newExample.ruleUUID=rule.UUID;
+		  $http.post(window.ENV.API_BASE_URL + "/tenant/" + localStorage.getItem("tenant") + '/packages.ComplianceCheck.dashboard.services.api.POST.wrapper.upsertRuleExamples.main' + "?access_token=" + encodeURIComponent(localStorage.getItem("AuthToken")), newExample,{headers: { 'Content-Type': 'application/json' }})
+		  .then(function(response) {
+			if(response)
+				$scope.inProgressVisible = false;
+		  });
+		  rule.newExample="";
+        }
+      };
+
+      $scope.toggleComments = function(rule) {
+	    $scope.inProgressVisible = true;
+		$http.get(window.ENV.API_BASE_URL + "/tenant/" + localStorage.getItem("tenant") + '/packages.ComplianceCheck.dashboard.services.api.GET.getComments.main?UUID=' + rule.UUID + "&access_token=" + encodeURIComponent(localStorage.getItem("AuthToken"))).then(function(response) {
+          //console.log(response.data);
+		  if (response.data && response.data.comments) {
+			rule.comments=response.data.comments;
+
+          }
+			$scope.profileRules.forEach(function(r) {
+			  if (r.UUID !== rule.UUID) {
+				r.showComments = false;
+				r.showExamples = false;
+			  }
+			});
+			rule.showExamples = false;
+			rule.showComments = !rule.showComments;
+			$scope.inProgressVisible = false;
+		});
+      };
+
+      $scope.toggleExamples = function(rule) {
+	    $scope.inProgressVisible = true;
+		$http.get(window.ENV.API_BASE_URL + "/tenant/" + localStorage.getItem("tenant") + '/packages.ComplianceCheck.dashboard.services.api.GET.getExamples.main?UUID=' + rule.UUID + "&access_token=" + encodeURIComponent(localStorage.getItem("AuthToken"))).then(function(response) {
+          //console.log(response.data);
+		  if (response.data && response.data.examples) {
+			rule.examples=response.data.examples;
+
+          }
+		  $scope.inProgressVisible = false;
+
+			$scope.profileRules.forEach(function(r) {
+			  if (r.UUID !== rule.UUID) {
+				r.showComments = false;
+				r.showExamples = false;
+			  }
+			});
+			rule.showComments = false;
+			rule.showExamples = !rule.showExamples;
+        });
+      };
+
+      // Helper for file download
+      function downloadFile(filename, text) {
+        var blob = new Blob([text], {type: "application/json"});
+        var link = document.createElement("a");
+        link.href = window.URL.createObjectURL(blob);
+        link.download = filename;
+        link.click();
+      }
+
+      function mergeProfileRulesData(importData) {
+        importData.ProfileRules.forEach(function(rule) {
+          rule.articleReference = rule.articleReference || "No Article Reference";
+          rule.description = $scope.encodeBase64(rule.description || "");
+          rule.rule = $scope.encodeBase64(rule.rule || "");
+          rule.action = $scope.encodeBase64(rule.action || "");
+          rule.condition = $scope.encodeBase64(rule.condition || "");
+          rule.additionalCriteria = $scope.encodeBase64(rule.additionalCriteria || "");
+          rule.report = $scope.encodeBase64(rule.report || "");
+          if (!rule.UUID) { rule.UUID = generateUUID(); }
+          delete rule.approvedBy;
+          delete rule.reviewedBy;
+          rule.locked = rule.locked || {status: false, lockedBy: ""};
+          var idx = $scope.profileRules.findIndex(function(r) {
+            return r.UUID === rule.UUID;
+          });
+          if (idx >= 0) {
+            $scope.profileRules[idx] = rule;
+          } else {
+            $scope.profileRules.push(rule);
+          }
+        });
+      }
+
+      function mergeProfileDocumentsData(importData) {
+        importData.ProfileDocuments.forEach(function(doc) {
+          doc.description = $scope.encodeBase64(doc.description || "");
+          if (!doc.UUID) { doc.UUID = generateUUID(); }
+          var idx = $scope.profileDocuments.findIndex(function(d) {
+            return d.UUID === doc.UUID;
+          });
+          if (idx >= 0) {
+            $scope.profileDocuments[idx] = doc;
+          } else {
+            $scope.profileDocuments.push(doc);
+          }
+        });
+      }
+
+      function mergeProfileDatabaseData(importData) {
+        importData.ProfileDatabase.forEach(function(db) {
+          db.jdbcURL = $scope.encodeBase64(db.jdbcURL || "");
+          db.user = $scope.encodeBase64(db.user || "");
+          db.password = $scope.encodeBase64(db.password || "");
+          db.properties = $scope.encodeBase64(db.properties || "");
+          db.description = $scope.encodeBase64(db.description || "");
+          db.details = $scope.encodeBase64(db.details || "");
+          if (!db.UUID) { db.UUID = generateUUID(); }
+          var idx = $scope.profileDatabases.findIndex(function(d) {
+            return d.UUID === db.UUID;
+          });
+          if (idx >= 0) {
+            $scope.profileDatabases[idx] = db;
+          } else {
+            $scope.profileDatabases.push(db);
+          }
+        });
+      }
+
+      function mergeProfilesData(importData) {
+        importData.Profiles.forEach(function(item) {
+          if (!item.UUID) { item.UUID = generateUUID(); }
+          var idx = $scope.profiles.findIndex(function(i) {
+            return i.UUID === item.UUID;
+          });
+          if (idx >= 0) {
+            $scope.profiles[idx] = item;
+          } else {
+            $scope.profiles.push(item);
+          }
+        });
+      }
+
+	  function getQueryStringValue(key) {
+			const urlParams = new URLSearchParams(window.location.search);
+			return urlParams.get(key);
+      };
+
+	  $scope.entityUUID=null;
+	  $scope.entityName=null;
+
+	  $scope.loadProfiles = function() {
+        //$scope.selectedProfileUUID = UUID;
+		$scope.inProgressVisible = true;
+		$scope.profiles=[];
+		var UUID=getQueryStringValue('entityUUID');
+		if(!UUID)
+			UUID="e96031b0-a1cf-4708-8bfb-b3437f6c55a6";
+		$scope.entityUUID=UUID;
+        $http.get(window.ENV.API_BASE_URL + "/tenant/" + localStorage.getItem("tenant") + '/packages.ComplianceCheck.dashboard.services.api.GET.getProfiles.main?entityUUID='+UUID + "&access_token=" + encodeURIComponent(localStorage.getItem("AuthToken"))).then(function(response) {
+          if (response.data && response.data.resultSet) {
+			$scope.profiles=response.data.resultSet;
+			$scope.selectedProfile = $scope.profiles[0];
+			$scope.selectedProfileUUID = $scope.profiles[0].UUID;
+			$scope.loadPair($scope.selectedProfile);
+			$scope.entityName = response.data.entity.name;
+			$scope.inProgressVisible = false;
+          }else
+		    $scope.inProgressVisible = false;
+        });
+      };
+
+      // On initialization, load the first profile by default.
+      //$scope.loadPair($scope.profiles[0].UUID);
+	  $scope.loadProfiles();
+
+    }]);
+  </script>
+</body>
+</html>

@@ -1,0 +1,204 @@
+{
+  "latest" : {
+    "createdTS" : "",
+    "input" : [ {
+      "id" : "j2_1",
+      "text" : "LLMKey",
+      "li_attr" : {
+        "id" : "j2_1"
+      },
+      "a_attr" : {
+        "href" : "#",
+        "id" : "j2_1_anchor"
+      },
+      "state" : {
+        "loaded" : true,
+        "opened" : false,
+        "selected" : false,
+        "disabled" : false,
+        "hidden" : false
+      },
+      "data" : {
+        "guid" : "0f96733a-710a-4935-86e9-6047b5655503",
+        "columnType" : "-1"
+      },
+      "children" : [ ],
+      "type" : "string"
+    } ],
+    "output" : [ {
+      "id" : "j3_1",
+      "text" : "status",
+      "li_attr" : {
+        "id" : "j3_1"
+      },
+      "a_attr" : {
+        "href" : "#",
+        "id" : "j3_1_anchor"
+      },
+      "state" : {
+        "loaded" : true,
+        "opened" : false,
+        "selected" : false,
+        "disabled" : false,
+        "hidden" : false
+      },
+      "data" : { },
+      "children" : [ ],
+      "type" : "string"
+    }, {
+      "id" : "j3_2",
+      "text" : "error",
+      "li_attr" : {
+        "id" : "j3_2"
+      },
+      "a_attr" : {
+        "href" : "#",
+        "id" : "j3_2_anchor"
+      },
+      "state" : {
+        "loaded" : true,
+        "opened" : false,
+        "selected" : false,
+        "disabled" : false,
+        "hidden" : false
+      },
+      "data" : { },
+      "children" : [ ],
+      "type" : "string"
+    } ],
+    "api" : [ {
+      "id" : "j1_1",
+      "text" : "Invoke",
+      "li_attr" : {
+        "id" : "j1_1"
+      },
+      "a_attr" : {
+        "href" : "javascript:void(0)",
+        "id" : "j1_1_anchor"
+      },
+      "state" : {
+        "loaded" : true,
+        "opened" : false,
+        "selected" : false,
+        "disabled" : false,
+        "hidden" : false
+      },
+      "data" : {
+        "guid" : "7e5673e2-31e9-4037-acc0-b36c967b183f",
+        "columnType" : "-1",
+        "transformers" : [ {
+          "op" : "copy",
+          "from" : "/LLMKey",
+          "to" : "/LLMKey",
+          "inTypePath" : "string",
+          "outTypePath" : "string",
+          "direction" : "in"
+        }, {
+          "op" : "copy",
+          "from" : "/status",
+          "to" : "/status",
+          "inTypePath" : "string",
+          "outTypePath" : "string",
+          "direction" : "out"
+        }, {
+          "op" : "copy",
+          "from" : "/error",
+          "to" : "/error",
+          "inTypePath" : "string",
+          "outTypePath" : "string",
+          "direction" : "out"
+        } ],
+        "lines" : [ {
+          "inputPath" : "LLMKey",
+          "outputPath" : "LLMKey",
+          "inpJsTree" : "#launching_arrow_jsTree",
+          "outpJsTree" : "#landing_arrow_jsTree_function",
+          "INPath" : "LLMKey",
+          "OUTPath" : "LLMKey",
+          "direction" : "in",
+          "op" : "copy",
+          "line" : 0,
+          "dashedLine" : false,
+          "inType" : "string",
+          "outType" : "string",
+          "inTypePath" : "string",
+          "outTypePath" : "string"
+        }, {
+          "inputPath" : "status",
+          "outputPath" : "status",
+          "inpJsTree" : "#launching_arrow_jsTree_function",
+          "outpJsTree" : "#landing_arrow_jsTree",
+          "INPath" : "status",
+          "OUTPath" : "status",
+          "direction" : "out",
+          "op" : "copy",
+          "line" : 0,
+          "dashedLine" : false,
+          "inType" : "string",
+          "outType" : "string",
+          "inTypePath" : "string",
+          "outTypePath" : "string"
+        }, {
+          "inputPath" : "error",
+          "outputPath" : "error",
+          "inpJsTree" : "#launching_arrow_jsTree_function",
+          "outpJsTree" : "#landing_arrow_jsTree",
+          "INPath" : "error",
+          "OUTPath" : "error",
+          "direction" : "out",
+          "op" : "copy",
+          "line" : 0,
+          "dashedLine" : false,
+          "inType" : "string",
+          "outType" : "string",
+          "inTypePath" : "string",
+          "outTypePath" : "string"
+        } ],
+        "dropList" : [ ],
+        "createList" : [ ],
+        "initiateList" : [ ],
+        "fqn" : "packages/Awareness/dashboard/services/java/deleteLLMSpec",
+        "serviceType" : "service"
+      },
+      "children" : [ ],
+      "type" : "invoke"
+    }, {
+      "id" : "j1_2",
+      "text" : "Invoke",
+      "li_attr" : {
+        "id" : "j1_2"
+      },
+      "a_attr" : {
+        "href" : "#",
+        "id" : "j1_2_anchor"
+      },
+      "state" : {
+        "loaded" : true,
+        "opened" : false,
+        "selected" : true,
+        "disabled" : false
+      },
+      "data" : {
+        "guid" : "a56ac613-12ba-49d3-badc-e9c54bf8cad7",
+        "columnType" : "-1",
+        "dropList" : [ ],
+        "createList" : [ ],
+        "initiateList" : [ ],
+        "fqn" : "packages/Awareness/dashboard/services/api/initialize",
+        "serviceType" : "api"
+      },
+      "children" : [ ],
+      "type" : "invoke"
+    } ],
+    "api_info" : {
+      "title" : "",
+      "description" : ""
+    },
+    "lockedByUser" : "anoop.gupta2812@gmail.com"
+  },
+  "consumers" : "",
+  "developers" : "developers",
+  "enableServiceDocumentValidation" : false,
+  "created_on" : "1781017488527",
+  "modified_on" : 1781017488527
+}

@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>400 | Bad Request</title>
+
+    <style>
+        * {
+            box-sizing: border-box;
+            font-family: Inter, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+        }
+
+        body {
+            margin: 0;
+            background: linear-gradient(90deg, #ffffff 55%, #EAF7FB 45%);
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .container {
+            width: 100%;
+            max-width: 1200px;
+            padding: 40px;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            align-items: center;
+            gap: 40px;
+        }
+
+        .content {
+            max-width: 460px;
+        }
+
+        .badge {
+            display: inline-block;
+            background: #FEE2E2;
+            color: #991B1B;
+            padding: 6px 12px;
+            border-radius: 999px;
+            font-size: 13px;
+            font-weight: 500;
+            margin-bottom: 16px;
+        }
+
+        .content h1 {
+            font-size: 64px;
+            margin: 0;
+            color: #DC2626;
+            line-height: 1;
+        }
+
+        .content h2 {
+            font-size: 26px;
+            margin: 16px 0 10px;
+            color: #1F2937;
+        }
+
+        .content p {
+            font-size: 16px;
+            color: #6B7280;
+            line-height: 1.6;
+            margin-bottom: 24px;
+        }
+
+        .actions {
+            display: flex;
+            gap: 12px;
+            flex-wrap: wrap;
+        }
+
+        .btn {
+            padding: 12px 20px;
+            border-radius: 6px;
+            font-size: 14px;
+            font-weight: 500;
+            text-decoration: none;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+            transition: all 0.2s ease;
+        }
+
+        .btn-primary {
+            background: #0B5ED7;
+            color: #ffffff;
+        }
+
+        .btn-primary:hover {
+            background: #094BB5;
+        }
+
+        .btn-outline {
+            border: 1px solid #D1D5DB;
+            color: #1F2937;
+            background: #ffffff;
+        }
+
+        .btn-outline:hover {
+            background: #F3F4F6;
+        }
+
+        .illustration {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        svg {
+            max-width: 380px;
+            width: 100%;
+        }
+
+        @media (max-width: 900px) {
+            body {
+                background: #ffffff;
+            }
+
+            .container {
+                grid-template-columns: 1fr;
+                text-align: center;
+            }
+
+            .content {
+                margin: 0 auto;
+            }
+
+            .actions {
+                justify-content: center;
+            }
+        }
+    </style>
+    <script type="syncloop/analytics"></script>
+</head>
+<body>
+<script type="syncloop/body-analytics"></script>
+<div class="container">
+    <!-- LEFT CONTENT -->
+    <div class="content">
+        <!-- Logo placeholder -->
+        <!-- <img src="logo.svg" alt="Syncloop Logo" /> -->
+
+        <span class="badge">Request Error</span>
+
+        <h1>400</h1>
+        <h2>Bad Request</h2>
+        <p>
+            Something in the request didn’t look quite right.
+            This can happen due to invalid input, missing parameters,
+            or a malformed request.
+        </p>
+
+        <div class="actions">
+            <a href="/" class="btn btn-primary">Go to Dashboard</a>
+            <a href="javascript:history.back()" class="btn btn-outline">Go Back</a>
+        </div>
+    </div>
+
+    <!-- RIGHT ILLUSTRATION -->
+    <div class="illustration">
+        <!-- Inline SVG – Broken data / misaligned blocks -->
+        <svg viewBox="0 0 320 300" xmlns="http://www.w3.org/2000/svg">
+            <circle cx="160" cy="150" r="140" fill="#EAF7FB"/>
+
+            <!-- Blocks -->
+            <rect x="110" y="80" width="60" height="40" rx="8" fill="#93C5FD"/>
+            <rect x="170" y="130" width="60" height="40" rx="8" fill="#60A5FA"/>
+            <rect x="100" y="170" width="60" height="40" rx="8" fill="#3B82F6"/>
+
+            <!-- Warning icon -->
+            <circle cx="220" cy="90" r="18" fill="#FEE2E2"/>
+            <line x1="220" y1="82" x2="220" y2="98" stroke="#DC2626" stroke-width="3"/>
+            <circle cx="220" cy="104" r="2.5" fill="#DC2626"/>
+
+            <!-- Connector lines -->
+            <line x1="140" y1="120" x2="200" y2="150" stroke="#CBD5E1" stroke-width="2" stroke-dasharray="4"/>
+            <line x1="140" y1="190" x2="200" y2="150" stroke="#CBD5E1" stroke-width="2" stroke-dasharray="4"/>
+        </svg>
+    </div>
+</div>
+
+</body>
+</html>

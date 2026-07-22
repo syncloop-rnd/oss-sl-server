@@ -1,0 +1,34 @@
+{
+  "input" : [ ],
+  "output" : [ {
+    "id" : "j2_1",
+    "text" : "uuid",
+    "li_attr" : {
+      "id" : "j2_1"
+    },
+    "a_attr" : {
+      "href" : "#",
+      "id" : "j2_1_anchor"
+    },
+    "state" : {
+      "loaded" : true,
+      "opened" : false,
+      "selected" : true,
+      "disabled" : false
+    },
+    "data" : {
+      "guid" : "1cae6e74-ede1-42b2-9ee6-6e82589c9c74",
+      "columnType" : "-1"
+    },
+    "children" : [ ],
+    "type" : "string"
+  } ],
+  "package" : "cGFja2FnZSBwYWNrYWdlcy5taWRkbGV3YXJlLnB1Yi51dGlsOw==",
+  "imports" : "aW1wb3J0IGNvbS5la2EubWlkZGxld2FyZS5zZXJ2aWNlLkRhdGFQaXBlbGluZTsKaW1wb3J0IGNvbS5la2EubWlkZGxld2FyZS5zZXJ2aWNlLlNlcnZpY2VVdGlsczsKaW1wb3J0IGNvbS5la2EubWlkZGxld2FyZS50ZW1wbGF0ZS5TbmlwcGV0RXhjZXB0aW9uOwppbXBvcnQgamF2YS51dGlsLlVVSUQ7",
+  "main" : "ZGF0YVBpcGVsaW5lLnB1dCgidXVpZCIsIFVVSUQucmFuZG9tVVVJRCgpLnRvU3RyaW5nKCkpOw==",
+  "staticWorkspace" : "",
+  "version" : "v1",
+  "consumers" : "",
+  "developers" : "administrators",
+  "lockedByUser" : "admin"
+}

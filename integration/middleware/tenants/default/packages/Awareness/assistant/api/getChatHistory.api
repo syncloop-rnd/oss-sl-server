@@ -1,0 +1,468 @@
+{
+  "latest" : {
+    "createdTS" : "",
+    "input" : [ {
+      "id" : "j2_1",
+      "text" : "agentID",
+      "li_attr" : {
+        "id" : "j2_1"
+      },
+      "a_attr" : {
+        "href" : "#",
+        "id" : "j2_1_anchor"
+      },
+      "state" : {
+        "loaded" : true,
+        "opened" : false,
+        "selected" : false,
+        "disabled" : false,
+        "hidden" : false
+      },
+      "data" : { },
+      "children" : [ ],
+      "type" : "string"
+    }, {
+      "id" : "j2_2",
+      "text" : "chatID",
+      "li_attr" : {
+        "id" : "j2_2"
+      },
+      "a_attr" : {
+        "href" : "#",
+        "id" : "j2_2_anchor"
+      },
+      "state" : {
+        "loaded" : true,
+        "opened" : false,
+        "selected" : false,
+        "disabled" : false,
+        "hidden" : false
+      },
+      "data" : {
+        "assignList" : [ {
+          "path" : "chatID",
+          "value" : "default",
+          "typePath" : "string"
+        } ]
+      },
+      "children" : [ ],
+      "type" : "string"
+    } ],
+    "output" : [ {
+      "id" : "j3_2",
+      "text" : "chatHistory",
+      "li_attr" : {
+        "id" : "j3_2"
+      },
+      "a_attr" : {
+        "href" : "#",
+        "id" : "j3_2_anchor"
+      },
+      "state" : {
+        "loaded" : true,
+        "opened" : true,
+        "selected" : false,
+        "disabled" : false,
+        "hidden" : false
+      },
+      "data" : { },
+      "children" : [ {
+        "id" : "j3_12",
+        "text" : "response",
+        "li_attr" : {
+          "id" : "j3_12"
+        },
+        "a_attr" : {
+          "href" : "#",
+          "id" : "j3_12_anchor"
+        },
+        "state" : {
+          "loaded" : true,
+          "opened" : false,
+          "selected" : true,
+          "disabled" : false
+        },
+        "data" : {
+          "guid" : "90c2bdb0-08fa-44bf-a7e3-ebd4b3a13d18",
+          "columnType" : "-1"
+        },
+        "children" : [ ],
+        "type" : "string"
+      }, {
+        "id" : "j3_13",
+        "text" : "user",
+        "li_attr" : {
+          "id" : "j3_13"
+        },
+        "a_attr" : {
+          "href" : "#",
+          "id" : "j3_13_anchor"
+        },
+        "state" : {
+          "loaded" : true,
+          "opened" : false,
+          "selected" : false,
+          "disabled" : false
+        },
+        "data" : {
+          "guid" : "8ac358f9-68ba-4e06-951c-b30b224ef706",
+          "columnType" : "-1"
+        },
+        "children" : [ ],
+        "type" : "string"
+      }, {
+        "id" : "j3_14",
+        "text" : "uuid",
+        "li_attr" : {
+          "id" : "j3_14"
+        },
+        "a_attr" : {
+          "href" : "#",
+          "id" : "j3_14_anchor"
+        },
+        "state" : {
+          "loaded" : true,
+          "opened" : false,
+          "selected" : false,
+          "disabled" : false
+        },
+        "data" : { },
+        "children" : [ ],
+        "type" : "string"
+      }, {
+        "id" : "j3_15",
+        "text" : "prompt",
+        "li_attr" : {
+          "id" : "j3_15"
+        },
+        "a_attr" : {
+          "href" : "#",
+          "id" : "j3_15_anchor"
+        },
+        "state" : {
+          "loaded" : true,
+          "opened" : false,
+          "selected" : false,
+          "disabled" : false
+        },
+        "data" : {
+          "guid" : "e6eeeb13-4fe7-473a-8cde-b0b03744cd4e",
+          "columnType" : "-1"
+        },
+        "children" : [ ],
+        "type" : "string"
+      }, {
+        "id" : "j3_6",
+        "text" : "unliked",
+        "li_attr" : {
+          "id" : "j3_6"
+        },
+        "a_attr" : {
+          "href" : "#",
+          "id" : "j3_6_anchor"
+        },
+        "state" : {
+          "loaded" : true,
+          "opened" : false,
+          "selected" : false,
+          "disabled" : false
+        },
+        "data" : { },
+        "children" : [ ],
+        "type" : "string"
+      }, {
+        "id" : "j3_7",
+        "text" : "liked",
+        "li_attr" : {
+          "id" : "j3_7"
+        },
+        "a_attr" : {
+          "href" : "#",
+          "id" : "j3_7_anchor"
+        },
+        "state" : {
+          "loaded" : true,
+          "opened" : false,
+          "selected" : false,
+          "disabled" : false
+        },
+        "data" : {
+          "guid" : "fcfd598c-eebb-421b-adc4-6f5788d961e4",
+          "columnType" : "-1"
+        },
+        "children" : [ ],
+        "type" : "string"
+      } ],
+      "type" : "documentList"
+    } ],
+    "api" : [ {
+      "id" : "j1_1",
+      "text" : "Invoke",
+      "li_attr" : {
+        "id" : "j1_1"
+      },
+      "a_attr" : {
+        "href" : "javascript:void(0)",
+        "id" : "j1_1_anchor"
+      },
+      "state" : {
+        "loaded" : true,
+        "opened" : false,
+        "selected" : true,
+        "disabled" : false,
+        "hidden" : false
+      },
+      "data" : {
+        "guid" : "ca10f7e4-226e-4cbb-9c31-998e9fc0406d",
+        "columnType" : "-1",
+        "transformers" : [ {
+          "op" : "copy",
+          "from" : "/agentID",
+          "to" : "/agentID",
+          "inTypePath" : "string",
+          "outTypePath" : "string",
+          "direction" : "in"
+        }, {
+          "op" : "copy",
+          "from" : "/chatID",
+          "to" : "/chatID",
+          "inTypePath" : "string",
+          "outTypePath" : "string",
+          "direction" : "in"
+        }, {
+          "op" : "loop",
+          "from" : "/chatHistory/#{loop_id_-1397361124}",
+          "to" : "/chatHistory/#{loop_id_-1397361124}",
+          "loop_Id" : "loop_id_-1397361124",
+          "inTypePath" : "documentList",
+          "outTypePath" : "documentList",
+          "direction" : "out"
+        }, {
+          "op" : "add",
+          "from" : "/chatHistory/#{loop_id_-1397361124}/UUID",
+          "to" : "/chatHistory/#{loop_id_-1397361124}/uuid",
+          "follow" : "loop_id_-1397361124",
+          "inTypePath" : "documentList/string",
+          "outTypePath" : "documentList/string",
+          "direction" : "out"
+        }, {
+          "op" : "add",
+          "from" : "/chatHistory/#{loop_id_-1397361124}/SL_USER",
+          "to" : "/chatHistory/#{loop_id_-1397361124}/user",
+          "follow" : "loop_id_-1397361124",
+          "inTypePath" : "documentList/string",
+          "outTypePath" : "documentList/string",
+          "direction" : "out"
+        }, {
+          "op" : "add",
+          "from" : "/chatHistory/#{loop_id_-1397361124}/PROMPT",
+          "to" : "/chatHistory/#{loop_id_-1397361124}/prompt",
+          "follow" : "loop_id_-1397361124",
+          "inTypePath" : "documentList/string",
+          "outTypePath" : "documentList/string",
+          "direction" : "out"
+        }, {
+          "op" : "add",
+          "from" : "/chatHistory/#{loop_id_-1397361124}/UNLIKED",
+          "to" : "/chatHistory/#{loop_id_-1397361124}/unliked",
+          "follow" : "loop_id_-1397361124",
+          "inTypePath" : "documentList/string",
+          "outTypePath" : "documentList/string",
+          "direction" : "out"
+        }, {
+          "op" : "add",
+          "from" : "/chatHistory/#{loop_id_-1397361124}/LIKED",
+          "to" : "/chatHistory/#{loop_id_-1397361124}/liked",
+          "follow" : "loop_id_-1397361124",
+          "inTypePath" : "documentList/string",
+          "outTypePath" : "documentList/string",
+          "direction" : "out"
+        }, {
+          "op" : "add",
+          "from" : "/chatHistory/#{loop_id_-1397361124}/RESPONSE",
+          "to" : "/chatHistory/#{loop_id_-1397361124}/response",
+          "follow" : "loop_id_-1397361124",
+          "inTypePath" : "documentList/string",
+          "outTypePath" : "documentList/string",
+          "direction" : "out"
+        } ],
+        "lines" : [ {
+          "inputPath" : "agentID",
+          "outputPath" : "agentID",
+          "inpJsTree" : "#launching_arrow_jsTree",
+          "outpJsTree" : "#landing_arrow_jsTree_function",
+          "INPath" : "agentID",
+          "OUTPath" : "agentID",
+          "direction" : "in",
+          "op" : "copy",
+          "line" : 0,
+          "dashedLine" : false,
+          "inType" : "string",
+          "outType" : "string",
+          "inTypePath" : "string",
+          "outTypePath" : "string"
+        }, {
+          "inputPath" : "chatID",
+          "outputPath" : "chatID",
+          "inpJsTree" : "#launching_arrow_jsTree",
+          "outpJsTree" : "#landing_arrow_jsTree_function",
+          "INPath" : "chatID",
+          "OUTPath" : "chatID",
+          "direction" : "in",
+          "op" : "copy",
+          "line" : 0,
+          "dashedLine" : false,
+          "inType" : "string",
+          "outType" : "string",
+          "inTypePath" : "string",
+          "outTypePath" : "string"
+        }, {
+          "loop_Id" : "loop_id_-1397361124",
+          "inputPath" : "chatHistory",
+          "outputPath" : "chatHistory",
+          "inpJsTree" : "#launching_arrow_jsTree_function",
+          "outpJsTree" : "#landing_arrow_jsTree",
+          "INPath" : "chatHistory/#{loop_id_-1397361124}",
+          "OUTPath" : "chatHistory/#{loop_id_-1397361124}",
+          "direction" : "out",
+          "line" : 0,
+          "dashedLine" : true,
+          "op" : "loop",
+          "inType" : "documentList",
+          "outType" : "documentList",
+          "inTypePath" : "documentList",
+          "outTypePath" : "documentList"
+        }, {
+          "inputPath" : "chatHistory/UUID",
+          "outputPath" : "chatHistory/uuid",
+          "inpJsTree" : "#launching_arrow_jsTree_function",
+          "outpJsTree" : "#landing_arrow_jsTree",
+          "INPath" : "chatHistory/#{loop_id_-1397361124}/UUID",
+          "OUTPath" : "chatHistory/#{loop_id_-1397361124}/uuid",
+          "direction" : "out",
+          "follow" : "loop_id_-1397361124",
+          "op" : "add",
+          "line" : 0,
+          "dashedLine" : false,
+          "inType" : "string",
+          "outType" : "string",
+          "inTypePath" : "documentList/string",
+          "outTypePath" : "documentList/string"
+        }, {
+          "inputPath" : "chatHistory/SL_USER",
+          "outputPath" : "chatHistory/user",
+          "inpJsTree" : "#launching_arrow_jsTree_function",
+          "outpJsTree" : "#landing_arrow_jsTree",
+          "INPath" : "chatHistory/#{loop_id_-1397361124}/SL_USER",
+          "OUTPath" : "chatHistory/#{loop_id_-1397361124}/user",
+          "direction" : "out",
+          "follow" : "loop_id_-1397361124",
+          "op" : "add",
+          "line" : 0,
+          "dashedLine" : false,
+          "inType" : "string",
+          "outType" : "string",
+          "inTypePath" : "documentList/string",
+          "outTypePath" : "documentList/string"
+        }, {
+          "inputPath" : "chatHistory/PROMPT",
+          "outputPath" : "chatHistory/prompt",
+          "inpJsTree" : "#launching_arrow_jsTree_function",
+          "outpJsTree" : "#landing_arrow_jsTree",
+          "INPath" : "chatHistory/#{loop_id_-1397361124}/PROMPT",
+          "OUTPath" : "chatHistory/#{loop_id_-1397361124}/prompt",
+          "direction" : "out",
+          "follow" : "loop_id_-1397361124",
+          "op" : "add",
+          "line" : 0,
+          "dashedLine" : false,
+          "inType" : "string",
+          "outType" : "string",
+          "inTypePath" : "documentList/string",
+          "outTypePath" : "documentList/string"
+        }, {
+          "inputPath" : "chatHistory/UNLIKED",
+          "outputPath" : "chatHistory/unliked",
+          "inpJsTree" : "#launching_arrow_jsTree_function",
+          "outpJsTree" : "#landing_arrow_jsTree",
+          "INPath" : "chatHistory/#{loop_id_-1397361124}/UNLIKED",
+          "OUTPath" : "chatHistory/#{loop_id_-1397361124}/unliked",
+          "direction" : "out",
+          "follow" : "loop_id_-1397361124",
+          "op" : "add",
+          "line" : 0,
+          "dashedLine" : false,
+          "inType" : "string",
+          "outType" : "string",
+          "inTypePath" : "documentList/string",
+          "outTypePath" : "documentList/string"
+        }, {
+          "inputPath" : "chatHistory/LIKED",
+          "outputPath" : "chatHistory/liked",
+          "inpJsTree" : "#launching_arrow_jsTree_function",
+          "outpJsTree" : "#landing_arrow_jsTree",
+          "INPath" : "chatHistory/#{loop_id_-1397361124}/LIKED",
+          "OUTPath" : "chatHistory/#{loop_id_-1397361124}/liked",
+          "direction" : "out",
+          "follow" : "loop_id_-1397361124",
+          "op" : "add",
+          "line" : 0,
+          "dashedLine" : false,
+          "inType" : "string",
+          "outType" : "string",
+          "inTypePath" : "documentList/string",
+          "outTypePath" : "documentList/string"
+        }, {
+          "inputPath" : "chatHistory/RESPONSE",
+          "outputPath" : "chatHistory/response",
+          "inpJsTree" : "#launching_arrow_jsTree_function",
+          "outpJsTree" : "#landing_arrow_jsTree",
+          "INPath" : "chatHistory/#{loop_id_-1397361124}/RESPONSE",
+          "OUTPath" : "chatHistory/#{loop_id_-1397361124}/response",
+          "direction" : "out",
+          "follow" : "loop_id_-1397361124",
+          "op" : "add",
+          "line" : 0,
+          "dashedLine" : false,
+          "inType" : "string",
+          "outType" : "string",
+          "inTypePath" : "documentList/string",
+          "outTypePath" : "documentList/string"
+        } ],
+        "dropList" : [ ],
+        "createList" : [ ],
+        "initiateList" : [ {
+          "path" : "chatHistory/mesg",
+          "id" : "387d95b4-af93-4848-ad16-236aa3984170",
+          "typePath" : "documentList/string"
+        }, {
+          "path" : "chatHistory/user",
+          "id" : "32c371c7-75f9-4e9a-9041-0b79f55f2709",
+          "typePath" : "documentList/string"
+        }, {
+          "path" : "chatHistory/uuid",
+          "id" : "abcbc0c5-b125-4cee-8b48-dcb1eaaa7ecb",
+          "typePath" : "documentList/string"
+        }, {
+          "path" : "chatHistory/prompt",
+          "id" : "9b8f467a-f71a-470c-afff-39347597cae6",
+          "typePath" : "documentList/string"
+        } ],
+        "fqn" : "packages/Awareness/assistant/utils/getChatHistory",
+        "serviceType" : "service"
+      },
+      "children" : [ ],
+      "type" : "invoke"
+    } ],
+    "api_info" : {
+      "title" : "",
+      "description" : ""
+    },
+    "lockedByUser" : "admin"
+  },
+  "consumers" : "",
+  "developers" : "developers",
+  "enableServiceDocumentValidation" : false,
+  "created_on" : "1764429330032",
+  "modified_on" : 1764429330032
+}

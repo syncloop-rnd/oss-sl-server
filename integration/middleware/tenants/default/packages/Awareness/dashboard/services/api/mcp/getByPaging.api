@@ -1,0 +1,264 @@
+{
+  "latest" : {
+    "createdTS" : "",
+    "input" : [ {
+      "id" : "j2_1",
+      "text" : "page",
+      "li_attr" : {
+        "id" : "j2_1"
+      },
+      "a_attr" : {
+        "href" : "#",
+        "id" : "j2_1_anchor"
+      },
+      "state" : {
+        "loaded" : true,
+        "opened" : false,
+        "selected" : false,
+        "disabled" : false,
+        "hidden" : false
+      },
+      "data" : { },
+      "children" : [ ],
+      "type" : "string"
+    }, {
+      "id" : "j2_2",
+      "text" : "pageSize",
+      "li_attr" : {
+        "id" : "j2_2"
+      },
+      "a_attr" : {
+        "href" : "#",
+        "id" : "j2_2_anchor"
+      },
+      "state" : {
+        "loaded" : true,
+        "opened" : false,
+        "selected" : true,
+        "disabled" : false,
+        "hidden" : false
+      },
+      "data" : {
+        "assignList" : [ {
+          "path" : "pageSize",
+          "value" : "1000",
+          "typePath" : "string"
+        } ]
+      },
+      "children" : [ ],
+      "type" : "string"
+    } ],
+    "output" : [ {
+      "id" : "j3_1",
+      "text" : "error",
+      "li_attr" : {
+        "id" : "j3_1"
+      },
+      "a_attr" : {
+        "href" : "#",
+        "id" : "j3_1_anchor"
+      },
+      "state" : {
+        "loaded" : true,
+        "opened" : false,
+        "selected" : false,
+        "disabled" : false,
+        "hidden" : false
+      },
+      "data" : { },
+      "children" : [ ],
+      "type" : "string"
+    }, {
+      "id" : "j3_2",
+      "text" : "status",
+      "li_attr" : {
+        "id" : "j3_2"
+      },
+      "a_attr" : {
+        "href" : "#",
+        "id" : "j3_2_anchor"
+      },
+      "state" : {
+        "loaded" : true,
+        "opened" : false,
+        "selected" : false,
+        "disabled" : false,
+        "hidden" : false
+      },
+      "data" : { },
+      "children" : [ ],
+      "type" : "string"
+    }, {
+      "id" : "j3_3",
+      "text" : "mcps",
+      "li_attr" : {
+        "id" : "j3_3"
+      },
+      "a_attr" : {
+        "href" : "#",
+        "id" : "j3_3_anchor"
+      },
+      "state" : {
+        "loaded" : true,
+        "opened" : false,
+        "selected" : false,
+        "disabled" : false,
+        "hidden" : false
+      },
+      "data" : { },
+      "children" : [ ],
+      "type" : "documentList"
+    } ],
+    "api" : [ {
+      "id" : "j1_1",
+      "text" : "Invoke",
+      "li_attr" : {
+        "id" : "j1_1"
+      },
+      "a_attr" : {
+        "href" : "javascript:void(0)",
+        "id" : "j1_1_anchor"
+      },
+      "state" : {
+        "loaded" : true,
+        "opened" : false,
+        "selected" : false,
+        "disabled" : false,
+        "hidden" : false
+      },
+      "data" : {
+        "guid" : "19f1590b-4c00-47ab-888a-50f64b83eb46",
+        "columnType" : "-1",
+        "dropList" : [ ],
+        "createList" : [ ],
+        "initiateList" : [ ],
+        "fqn" : "packages/Awareness/dashboard/services/java/mcp/getByPaging",
+        "serviceType" : "service",
+        "transformers" : [ {
+          "op" : "copy",
+          "from" : "/page",
+          "to" : "/page",
+          "inTypePath" : "string",
+          "outTypePath" : "string",
+          "direction" : "in"
+        }, {
+          "op" : "copy",
+          "from" : "/pageSize",
+          "to" : "/pageSize",
+          "inTypePath" : "string",
+          "outTypePath" : "string",
+          "direction" : "in"
+        }, {
+          "op" : "copy",
+          "from" : "/error",
+          "to" : "/error",
+          "inTypePath" : "string",
+          "outTypePath" : "string",
+          "direction" : "out"
+        }, {
+          "op" : "copy",
+          "from" : "/status",
+          "to" : "/status",
+          "inTypePath" : "string",
+          "outTypePath" : "string",
+          "direction" : "out"
+        }, {
+          "op" : "copy",
+          "from" : "/mcps",
+          "to" : "/mcps",
+          "inTypePath" : "documentList",
+          "outTypePath" : "documentList",
+          "direction" : "out"
+        } ],
+        "lines" : [ {
+          "inputPath" : "page",
+          "outputPath" : "page",
+          "inpJsTree" : "#launching_arrow_jsTree",
+          "outpJsTree" : "#landing_arrow_jsTree_function",
+          "INPath" : "page",
+          "OUTPath" : "page",
+          "direction" : "in",
+          "op" : "copy",
+          "line" : 0,
+          "dashedLine" : false,
+          "inType" : "string",
+          "outType" : "string",
+          "inTypePath" : "string",
+          "outTypePath" : "string"
+        }, {
+          "inputPath" : "pageSize",
+          "outputPath" : "pageSize",
+          "inpJsTree" : "#launching_arrow_jsTree",
+          "outpJsTree" : "#landing_arrow_jsTree_function",
+          "INPath" : "pageSize",
+          "OUTPath" : "pageSize",
+          "direction" : "in",
+          "op" : "copy",
+          "line" : 0,
+          "dashedLine" : false,
+          "inType" : "string",
+          "outType" : "string",
+          "inTypePath" : "string",
+          "outTypePath" : "string"
+        }, {
+          "inputPath" : "error",
+          "outputPath" : "error",
+          "inpJsTree" : "#launching_arrow_jsTree_function",
+          "outpJsTree" : "#landing_arrow_jsTree",
+          "INPath" : "error",
+          "OUTPath" : "error",
+          "direction" : "out",
+          "op" : "copy",
+          "line" : 0,
+          "dashedLine" : false,
+          "inType" : "string",
+          "outType" : "string",
+          "inTypePath" : "string",
+          "outTypePath" : "string"
+        }, {
+          "inputPath" : "status",
+          "outputPath" : "status",
+          "inpJsTree" : "#launching_arrow_jsTree_function",
+          "outpJsTree" : "#landing_arrow_jsTree",
+          "INPath" : "status",
+          "OUTPath" : "status",
+          "direction" : "out",
+          "op" : "copy",
+          "line" : 0,
+          "dashedLine" : false,
+          "inType" : "string",
+          "outType" : "string",
+          "inTypePath" : "string",
+          "outTypePath" : "string"
+        }, {
+          "inputPath" : "mcps",
+          "outputPath" : "mcps",
+          "inpJsTree" : "#launching_arrow_jsTree_function",
+          "outpJsTree" : "#landing_arrow_jsTree",
+          "INPath" : "mcps",
+          "OUTPath" : "mcps",
+          "direction" : "out",
+          "op" : "copy",
+          "line" : 0,
+          "dashedLine" : false,
+          "inType" : "documentList",
+          "outType" : "documentList",
+          "inTypePath" : "documentList",
+          "outTypePath" : "documentList"
+        } ]
+      },
+      "children" : [ ],
+      "type" : "invoke"
+    } ],
+    "api_info" : {
+      "title" : "",
+      "description" : ""
+    },
+    "lockedByUser" : "vaishna.nature9@gmail.com"
+  },
+  "consumers" : "",
+  "developers" : "administrators",
+  "enableServiceDocumentValidation" : false,
+  "created_on" : "1780933531601",
+  "modified_on" : 1780933531601
+}

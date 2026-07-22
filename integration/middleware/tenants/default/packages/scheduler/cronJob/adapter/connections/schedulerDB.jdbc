@@ -1,0 +1,3 @@
+driver=org.h2.Driver
+url=jdbc:h2:async:#{PackageConfig}/database/h2;AUTO_SERVER=TRUE
+pool=20

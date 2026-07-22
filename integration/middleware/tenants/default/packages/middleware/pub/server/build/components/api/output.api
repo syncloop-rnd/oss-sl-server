@@ -1,0 +1,216 @@
+{
+  "latest" : {
+    "createdTS" : "",
+    "input" : [ {
+      "id" : "j2_1",
+      "text" : "input",
+      "li_attr" : {
+        "id" : "j2_1"
+      },
+      "a_attr" : {
+        "href" : "#",
+        "id" : "j2_1_anchor"
+      },
+      "state" : {
+        "loaded" : true,
+        "opened" : false,
+        "selected" : false,
+        "disabled" : false,
+        "hidden" : false
+      },
+      "data" : {
+        "guid" : "3555ceb3-2bbd-4f9c-b75e-4a2312a8ad5a",
+        "columnType" : "-1",
+        "assignList" : [ {
+          "path" : "input",
+          "value" : "",
+          "typePath" : "documentList"
+        } ]
+      },
+      "children" : [ ],
+      "type" : "documentList"
+    } ],
+    "output" : [ {
+      "id" : "j3_1",
+      "text" : "serviceOutput",
+      "li_attr" : {
+        "id" : "j3_1"
+      },
+      "a_attr" : {
+        "href" : "#",
+        "id" : "j3_1_anchor"
+      },
+      "state" : {
+        "loaded" : true,
+        "opened" : false,
+        "selected" : false,
+        "disabled" : false,
+        "hidden" : false
+      },
+      "data" : {
+        "guid" : "42211f9b-95e2-42ae-8f41-8d895f84e252",
+        "columnType" : "-1"
+      },
+      "children" : [ ],
+      "type" : "documentList"
+    } ],
+    "api" : [ {
+      "id" : "j1_4",
+      "text" : "Invoke",
+      "li_attr" : {
+        "id" : "j1_4"
+      },
+      "a_attr" : {
+        "href" : "#",
+        "id" : "j1_4_anchor"
+      },
+      "state" : {
+        "loaded" : true,
+        "opened" : false,
+        "selected" : true,
+        "disabled" : false
+      },
+      "data" : {
+        "guid" : "6db9dba2-0843-46d8-8dca-a256c29f6e3c",
+        "columnType" : "-1",
+        "transformers" : [ {
+          "op" : "copy",
+          "from" : "/input",
+          "to" : "/root",
+          "inTypePath" : "javaObject",
+          "outTypePath" : "javaObject",
+          "direction" : "in"
+        }, {
+          "op" : "copy",
+          "from" : "/jsonString",
+          "to" : "/jsonString",
+          "inTypePath" : "string",
+          "outTypePath" : "string",
+          "direction" : "out"
+        } ],
+        "lines" : [ {
+          "inputPath" : "input",
+          "outputPath" : "root",
+          "inpJsTree" : "#launching_arrow_jsTree",
+          "outpJsTree" : "#landing_arrow_jsTree_function",
+          "INPath" : "input",
+          "OUTPath" : "root",
+          "direction" : "in",
+          "op" : "copy",
+          "line" : 0,
+          "dashedLine" : false,
+          "inType" : "javaObject",
+          "outType" : "javaObject",
+          "inTypePath" : "javaObject",
+          "outTypePath" : "javaObject"
+        }, {
+          "inputPath" : "jsonString",
+          "outputPath" : "jsonString",
+          "inpJsTree" : "#launching_arrow_jsTree_function",
+          "outpJsTree" : "#landing_arrow_jsTree",
+          "INPath" : "jsonString",
+          "OUTPath" : "jsonString",
+          "direction" : "out",
+          "op" : "copy",
+          "line" : 0,
+          "dashedLine" : false,
+          "inType" : "string",
+          "outType" : "string",
+          "inTypePath" : "string",
+          "outTypePath" : "string"
+        } ],
+        "dropList" : [ ],
+        "createList" : [ ],
+        "initiateList" : [ ],
+        "fqn" : "packages/middleware/pub/json/toString",
+        "serviceType" : "service"
+      },
+      "children" : [ ],
+      "type" : "invoke"
+    }, {
+      "id" : "j1_1",
+      "text" : "Invoke",
+      "li_attr" : {
+        "id" : "j1_1"
+      },
+      "a_attr" : {
+        "href" : "javascript:void(0)",
+        "id" : "j1_1_anchor"
+      },
+      "state" : {
+        "loaded" : true,
+        "opened" : false,
+        "selected" : false,
+        "disabled" : false,
+        "hidden" : false
+      },
+      "data" : {
+        "guid" : "059b6d5b-a13a-4dd2-ba03-f187ef5cc18e",
+        "columnType" : "-1",
+        "transformers" : [ {
+          "op" : "copy",
+          "from" : "/jsonString",
+          "to" : "/input",
+          "inTypePath" : "string",
+          "outTypePath" : "string",
+          "direction" : "in"
+        }, {
+          "op" : "copy",
+          "from" : "/output",
+          "to" : "/serviceOutput",
+          "inTypePath" : "documentList",
+          "outTypePath" : "documentList",
+          "direction" : "out"
+        } ],
+        "lines" : [ {
+          "inputPath" : "jsonString",
+          "outputPath" : "input",
+          "inpJsTree" : "#launching_arrow_jsTree",
+          "outpJsTree" : "#landing_arrow_jsTree_function",
+          "INPath" : "jsonString",
+          "OUTPath" : "input",
+          "direction" : "in",
+          "op" : "copy",
+          "line" : 0,
+          "dashedLine" : false,
+          "inType" : "string",
+          "outType" : "string",
+          "inTypePath" : "string",
+          "outTypePath" : "string"
+        }, {
+          "inputPath" : "output",
+          "outputPath" : "serviceOutput",
+          "inpJsTree" : "#launching_arrow_jsTree_function",
+          "outpJsTree" : "#landing_arrow_jsTree",
+          "INPath" : "output",
+          "OUTPath" : "serviceOutput",
+          "direction" : "out",
+          "op" : "copy",
+          "line" : 0,
+          "dashedLine" : false,
+          "inType" : "documentList",
+          "outType" : "documentList",
+          "inTypePath" : "documentList",
+          "outTypePath" : "documentList"
+        } ],
+        "dropList" : [ ],
+        "createList" : [ ],
+        "initiateList" : [ ],
+        "fqn" : "packages/middleware/pub/server/build/components/services/output",
+        "serviceType" : "service"
+      },
+      "children" : [ ],
+      "type" : "invoke"
+    } ],
+    "api_info" : {
+      "title" : "Output",
+      "description" : "This is the sturcture of input\n[\n    {\n        \"var\": \"\",\n        \"type\": \"\",\n        \"child\": [\n            {\n                \"var\": \"\",\n                \"type\": \"\",\n                \"child\": []\n            }\n        ]\n    }\n]"
+    },
+    "lockedByUser" : "rupeshgupta@syncloop.com"
+  },
+  "consumers" : "",
+  "developers" : "developers",
+  "enableServiceDocumentValidation" : false,
+  "created_on" : "1778569855009",
+  "modified_on" : 1778569855009
+}

@@ -1,0 +1,849 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<title>Syncloop | Export</title>
+	<base href="/"><script src="env.js"></script>
+	<script>
+		window.ENV = window.env || {};
+	</script>
+	<link href="middleware/pub/server/ui/assets/css/bootstrap.min.css" rel="stylesheet">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+	<link href="https://unpkg.com/tabulator-tables@5.2.1/dist/css/tabulator.min.css" rel="stylesheet">
+	<link rel="shortcut icon" href="middleware/pub/server/ui/assets/img/favicon.ico" type="image/x-icon" />
+	<link rel="stylesheet" href="index.css" />
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600&display=swap" rel="stylesheet">
+	<!-- Custom styles for this template -->
+	<link href="middleware/pub/server/ui/assets/css/sidebars.css" rel="stylesheet">
+	<link href="middleware/pub/server/ui/assets/css/custom.css" rel="stylesheet">
+	<link href="middleware/pub/server/ui/assets/css/custom-tree.css" rel="stylesheet">
+	<link href="middleware/pub/server/ui/assets/css/skeleton.css" rel="stylesheet">
+	<script	src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
+	<script src="middleware/pub/server/ui/javascript/middleware.js"></script>
+	<script src="middleware/pub/server/ui/javascript/workspace-profile-header.js"></script>
+	<script src="middleware/pub/server/ui/javascript/sweetalert.min.js"></script>
+	<script src="middleware/pub/server/ui/javascript/sweetalert.init.js"></script>
+	<link rel="stylesheet" href="middleware/pub/server/ui/css/sweetalert.css" />
+
+	<script type="syncloop/analytics"></script>
+
+	<style>
+		.modal-header {
+			display: inline-block;
+		}
+		.modal-body li.nav-link.active.in {
+			border-color: transparent;
+		}
+		.modal-body .nav-link{
+			padding: 0;
+			border: none;
+		}
+		cron-expression-input .nav-tabs>li>a{margin-right: 0px !important;}
+		#aPiTable_filter {
+			display: none;
+		}
+	</style>
+</head>
+<body>
+<header class="navbar custom_head sticky-top flex-md-nowrap bg-gray">
+	<div id="mostRecentlyOpened">
+	<a class="eka_logo" href="dashboard.html">
+		<img class="ekalogos" src="middleware/pub/server/ui/assets/img/syncloop-logo.svg">
+	</a>
+	<a href="middleware/pub/server/ui/workspace/web/dashboard.html?utm_source=Workspace&utm_medium=dashboard-page"class="header_home">
+				<img src="middleware/pub/server/ui/assets/img/header_nav.svg">
+	</a>
+</div>
+	<div class="navbar-nav tp_m">
+		<div class="nav-item text-nowrap">
+        <!--
+        <a href="https://www.syncloop.ai/training.html" target="_blank" class="dropbtn"><img class="hvc" src="middleware/pub/server/ui/icons/play_icon.svg">&nbsp; Watch Tutorials</a>
+		<button type="button" onclick="clearCacheExceptAuth()" class="dropbtn"><span><img class="hvc" src="middleware/pub/server/ui/icons/clear_cache.svg"></span>&nbsp; Clear Cache</button>
+		<button type="button" class="dropbtn" onclick="doLogout()"><img class="hvc" src="middleware/pub/server/ui/icons/icn_logout.svg">&nbsp; Logout</button>
+        -->
+        <div class="workspace-profile-header-host"></div>
+		</div>
+	</div>
+</header>
+<main>
+	<div class="container-fluid ">
+		<div class="row">
+			<div class="col-lg-1 d-flex flex-column flex-shrink-0 eka-side p-0" data-match-height="groupName">
+				<ul class="nav nav-pills nav-flush flex-column mb-auto text-center left-m-bar">
+
+					<li>
+						<a href="middleware/pub/server/ui/workspace/web/api.html?utm_source=Workspace&utm_medium=api-page" class="nav-link py-3" title="API" data-bs-toggle="tooltip" data-bs-placement="right">
+							<svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 32 32">
+								<defs>
+									<style>
+										.cls-1 {
+											fill: #999;
+											fill-rule: evenodd;
+										}
+									</style>
+								</defs>
+								<g id="icn_api">
+									<path class="cls-1" d="M296.949,47.179l0.306-2.2a0.172,0.172,0,0,0-.168-0.2h-0.074a3.16,3.16,0,0,1-2.33-5.3,1.2,1.2,0,0,0,.234-1.256,6.274,6.274,0,0,1-.439-2.307,6.325,6.325,0,0,1,12.172-2.425,1.191,1.191,0,0,0,1.816.5,3.635,3.635,0,0,1,2.2-.737,3.675,3.675,0,0,1,3.672,3.675,1.3,1.3,0,0,0,.924,1.593,3.163,3.163,0,0,1-.672,6.253h0a0.236,0.236,0,0,0-.233.269l0.266,1.921a0.244,0.244,0,0,0,.252.211,5.578,5.578,0,0,0,1.84-10.718,6.081,6.081,0,0,0-6.049-5.622,5.978,5.978,0,0,0-2.424.507,8.715,8.715,0,0,0-16.155,4.566,8.536,8.536,0,0,0,.376,2.513,5.566,5.566,0,0,0,4.485,8.76m5.387-1.02,0.023,0.064,0.352,1.009h1.622L302.1,40.853h-1.738l-2.217,6.379h1.7l0.355-1.073h2.138Zm-1.088-3.105,0.558,1.591h-1.09Zm7.961,1.58a2.232,2.232,0,0,0,0-3.141,2.165,2.165,0,0,0-1.582-.639h-2.414v6.379h1.58v-1.96h0.834A2.165,2.165,0,0,0,309.209,44.634Zm-2.416-2.266h0.834a0.615,0.615,0,0,1,.469.193,0.759,0.759,0,0,1,0,1,0.606,0.606,0,0,1-.467.2h-0.834V42.368Zm4.162-1.514v6.379h1.579V40.853h-1.579Z" transform="translate(-290 -21)"/>
+								</g>
+							</svg>
+						</a>
+					</li>
+					<li>
+						<a href="middleware/pub/server/ui/workspace/web/workspace.html?utm_source=Workspace&utm_medium=workspace-page" class="nav-link py-3 " title="Workspace" data-bs-toggle="tooltip" data-bs-placement="right">
+							<svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 32 32">
+								<defs>
+									<style>
+										.cls-1 {
+											fill: #175cff;
+											fill-rule: evenodd;
+										}
+									</style>
+								</defs>
+								<g id="icn_dashboard">
+									<path class="cls-1" d="M50.5,25.84h-17.8a3.815,3.815,0,0,0-3.816,3.816V39.83a3.815,3.815,0,0,0,3.816,3.815h7.63v2.544H35.235a1.272,1.272,0,1,0,0,2.543H47.953a1.272,1.272,0,1,0,0-2.543H42.865V43.645H50.5a3.815,3.815,0,0,0,3.815-3.815V29.656A3.815,3.815,0,0,0,50.5,25.84Zm1.272,13.99A1.272,1.272,0,0,1,50.5,41.1h-17.8a1.272,1.272,0,0,1-1.272-1.272V29.656a1.272,1.272,0,0,1,1.272-1.272H50.5a1.272,1.272,0,0,1,1.272,1.272V39.83Z" transform="translate(-26 -21)"/>
+								</g>
+							</svg>
+						</a>
+					</li>
+					<li>
+						<a href="scheduler/manager/web/scheduler-new.html?utm_source=Workspace&utm_medium=scheduler-page" class="nav-link py-3 " title="Scheduler" data-bs-toggle="tooltip"
+						   data-bs-placement="right">
+							<svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 32 32">
+								<defs>
+									<style>
+										.cls-1 {
+											fill: #999;
+											fill-rule: evenodd;
+										}
+									</style>
+								</defs>
+								<g id="icn_schedular">
+									<path class="cls-1" d="M185.91,34.019h0a1.146,1.146,0,0,0-1.35-.888,1.168,1.168,0,0,0-.234.074,1.145,1.145,0,0,0-.66,1.269,10.389,10.389,0,1,1-2.531-4.942,1.139,1.139,0,0,0-.15,2.267l2.7,0.381,0.048-.349,0.044,0.355a1.148,1.148,0,0,0,1.132-.977l0.378-2.613a1.145,1.145,0,0,0-1.819-1.074,1.126,1.126,0,0,0-.439.7,12.731,12.731,0,0,0-22.182,6.4,12.616,12.616,0,0,0,10.638,14.442,13.255,13.255,0,0,0,1.991.152A12.678,12.678,0,0,0,185.91,34.019Zm-12.671-5.355A1.143,1.143,0,0,0,172.1,29.8v5.823a2.309,2.309,0,1,0,3.158,3.144h2.483a1.139,1.139,0,1,0,0-2.278h-2.483a2.3,2.3,0,0,0-.87-0.866V29.8A1.143,1.143,0,0,0,173.239,28.664Z" transform="translate(-158 -21)"/>
+								</g>
+							</svg>
+						</a>
+					</li>
+
+
+					<li>
+                        <a href="middleware/pub/server/ui/workspace/web/export.html?utm_source=Workspace&utm_medium=export-page" id="createBuildExport" class="nav-link active py-3" title="Export/Promote" data-bs-toggle="tooltip"
+                           data-bs-placement="right">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 32 32">
+                                <defs>
+                                    <style>
+                                        .cls-1 {
+                                            fill: #999;
+                                            fill-rule: evenodd;
+                                        }
+                                    </style>
+                                </defs>
+                                <g id="icn_build_export">
+                                    <path id="export" class="cls-1" d="M709.8,40.377c4.909-6,4.91-16.126,4.906-16.229a1.013,1.013,0,0,0-.3-0.737,1,1,0,0,0-.73-0.3l-0.082,0c-2.705.074-11.926,0.715-17.025,5.831a13.543,13.543,0,0,0-1.381,1.624,0.213,0.213,0,0,1-.115.058,8.388,8.388,0,0,0-6.158,2.471l-1.7,1.7a1.027,1.027,0,0,0,0,1.463,1.039,1.039,0,0,0,1.458,0l1.7-1.7a6.531,6.531,0,0,1,3.178-1.739,0.136,0.136,0,0,1,.141.05,0.143,0.143,0,0,1,.015.15,22.59,22.59,0,0,0-1.325,3.3,1.021,1.021,0,0,0,.269,1.054l3.11,3.119a0.14,0.14,0,0,1,0,.2l-2.21,2.216A1.033,1.033,0,0,0,695,44.37l2.21-2.216a0.14,0.14,0,0,1,.2,0l0.969,0.972,0.532,0.534a2.075,2.075,0,0,1,.892-2.031l-0.033-.033-0.922-.925a0.139,0.139,0,0,1,0-.2l2.209-2.217a1.033,1.033,0,0,0-1.458-1.463l-2.21,2.217a0.144,0.144,0,0,1-.2,0l-2.585-2.593a0.141,0.141,0,0,1-.032-0.146,18.448,18.448,0,0,1,1.873-3.878,0.794,0.794,0,0,0,.131-0.2,12.305,12.305,0,0,1,1.441-1.783c4.025-4.036,11.417-4.957,14.409-5.165a0.127,0.127,0,0,1,.108.04,0.139,0.139,0,0,1,.04.108,29.908,29.908,0,0,1-2.746,11.162C709.8,38.211,709.8,38.861,709.8,40.377Zm-3.614-5.836a2.122,2.122,0,0,0,.336-0.272,2.028,2.028,0,1,0-3.158-.374,2.053,2.053,0,0,0,.987.833A1.944,1.944,0,0,0,706.181,34.541ZM711.5,51.907H699.554a0.95,0.95,0,0,1-.948-0.951v-3.2a0.949,0.949,0,1,1,1.9,0v2.245H710.55V47.761a0.948,0.948,0,1,1,1.9,0v3.2A0.95,0.95,0,0,1,711.5,51.907Zm-5.972-3.978c-0.03,0-.059,0-0.088,0l-0.149-.026c-0.048-.013-0.062-0.018-0.076-0.023l-0.041-.016-0.042-.019a0.381,0.381,0,0,1-.06-0.03l-0.039-.022-0.106-.075c-0.024-.02-0.047-0.041-0.069-0.063l-2.729-2.736a0.951,0.951,0,0,1,0-1.344,0.969,0.969,0,0,1,1.341,0l1.11,1.113v-5.55a0.949,0.949,0,1,1,1.9,0v5.55l1.109-1.113a0.969,0.969,0,0,1,1.341,0,0.949,0.949,0,0,1,0,1.344L706.2,47.651c-0.027.026-.048,0.045-0.069,0.063l-0.164.106h0l-0.349.1C705.584,47.928,705.554,47.929,705.526,47.929Z" transform="translate(-686 -21)"/>
+                                </g>
+                            </svg>
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="javascript:importBuildV2()" class="nav-link py-3" title="Import" data-bs-toggle="tooltip"
+                           data-bs-placement="right">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 32 32">
+                                <defs>
+                                    <style>
+                                        .cls-1 {
+                                            fill: #999;
+                                            fill-rule: evenodd;
+                                        }
+                                    </style>
+                                </defs>
+                                <g id="icn_export">
+                                    <path id="import_arrow_up" data-name="import_arrow up" class="cls-1" d="M975.528,50.308H957.183a3.883,3.883,0,0,1-3.878-3.878V28.085a3.883,3.883,0,0,1,3.878-3.878h6.155a1.056,1.056,0,1,1,0,2.112h-6.155a1.768,1.768,0,0,0-1.766,1.766V41.14h7.411a1.057,1.057,0,0,1,1.056,1.056,1.768,1.768,0,0,0,1.766,1.767h1.411a1.768,1.768,0,0,0,1.766-1.767,1.057,1.057,0,0,1,1.056-1.056h7.411V32.319a1.056,1.056,0,0,1,2.112,0V46.43A3.883,3.883,0,0,1,975.528,50.308Zm-20.111-7.056V46.43a1.768,1.768,0,0,0,1.766,1.766h18.345a1.768,1.768,0,0,0,1.766-1.766V43.252h-6.5a3.89,3.89,0,0,1-3.732,2.822H965.65a3.89,3.89,0,0,1-3.732-2.822h-6.5ZM971.294,24.2a1.051,1.051,0,0,0-.747.309l-2.821,2.822a1.056,1.056,0,0,0,1.493,1.493l1.019-1.02v7.329a1.056,1.056,0,0,0,2.112,0V27.8l1.02,1.02a1.056,1.056,0,1,0,1.493-1.493l-2.822-2.822A1.051,1.051,0,0,0,971.294,24.2Z" transform="translate(-950 -21)"/>
+                                </g>
+                            </svg>
+                        </a>
+                    </li>
+					<li>
+						<a href="middleware/pub/server/ui/workspace/web/server-logs.html?utm_source=Workspace&utm_medium=server-logs-page" class="nav-link py-3" title="Server Logs" data-bs-toggle="tooltip"
+						   data-bs-placement="right">
+							<svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 32 32">
+								<defs>
+									<style>
+										.cls-1 {
+											fill: #999;
+											fill-rule: evenodd;
+										}
+									</style>
+								</defs>
+								<g id="icn_logs">
+									<path id="log" class="cls-1" d="M842.434,47.41v1.042h0a1.882,1.882,0,0,1-1.878,1.879h-15.79a1.883,1.883,0,0,1-1.879-1.879V24.975a1.879,1.879,0,0,1,1.879-1.879H835.9v2.726a3.567,3.567,0,0,0,3.56,3.561h2.976v7.912l1.681-.053V28.87a1.673,1.673,0,0,0-.13-0.632,1.615,1.615,0,0,0-.365-0.531l-6.076-5.846a1.6,1.6,0,0,0-.512-0.334h0a1.6,1.6,0,0,0-.6-0.12H824.766a3.558,3.558,0,0,0-3.56,3.561V48.446a3.558,3.558,0,0,0,3.56,3.561h15.79a3.557,3.557,0,0,0,3.559-3.561V47.4m-3.47-13.9h0a0.844,0.844,0,0,0-.841-0.841H825.666a0.844,0.844,0,0,0-.841.841h0a0.844,0.844,0,0,0,.841.841H839.8A0.849,0.849,0,0,0,840.645,33.493Zm-6.321-4.758a0.844,0.844,0,0,0-.841-0.841h-7.889a0.841,0.841,0,0,0,0,1.683h7.884A0.845,0.845,0,0,0,834.324,28.735Zm12.082,9.814H831.822a1.8,1.8,0,0,0-1.8,1.8v4.144a1.8,1.8,0,0,0,1.8,1.8h14.584a1.8,1.8,0,0,0,1.8-1.8V40.349A1.8,1.8,0,0,0,846.406,38.549ZM835.53,44.619h-2.81V40.158H833.8v3.523h1.727v0.939Zm4.907-1.282a2.2,2.2,0,0,1-.506.75,2.26,2.26,0,0,1-.772.482,2.713,2.713,0,0,1-.971.17,2.684,2.684,0,0,1-.967-0.17,2.252,2.252,0,0,1-.768-0.482,2.21,2.21,0,0,1-.508-0.75,2.663,2.663,0,0,1,0-1.935,2.132,2.132,0,0,1,.508-0.734,2.257,2.257,0,0,1,.768-0.466,2.783,2.783,0,0,1,.967-0.164,2.814,2.814,0,0,1,.971.164,2.266,2.266,0,0,1,.772.466,2.127,2.127,0,0,1,.506.734A2.649,2.649,0,0,1,840.437,43.337Zm4.984,1.012a3.451,3.451,0,0,1-.765.277,4.025,4.025,0,0,1-.955.108,2.777,2.777,0,0,1-.986-0.17,2.276,2.276,0,0,1-.774-0.479,2.159,2.159,0,0,1-.508-0.74,2.62,2.62,0,0,1,0-1.931,2.171,2.171,0,0,1,.513-0.74,2.276,2.276,0,0,1,.769-0.47,2.717,2.717,0,0,1,.951-0.164,2.933,2.933,0,0,1,.983.16,2.019,2.019,0,0,1,.737.432l-0.679.775a1.2,1.2,0,0,0-.416-0.3,1.411,1.411,0,0,0-.587-0.117,1.3,1.3,0,0,0-.523.1,1.28,1.28,0,0,0-.416.29,1.322,1.322,0,0,0-.274.442,1.569,1.569,0,0,0-.1.557,1.74,1.74,0,0,0,.089.567,1.221,1.221,0,0,0,.261.445,1.185,1.185,0,0,0,.429.289,1.524,1.524,0,0,0,.582.1,2.114,2.114,0,0,0,.359-0.029,1.3,1.3,0,0,0,.315-0.091V42.855h-0.851v-0.87h1.84v2.363ZM839.112,41.4a1.224,1.224,0,0,0-.4-0.283,1.275,1.275,0,0,0-.52-0.1,1.223,1.223,0,0,0-1.181.819,1.581,1.581,0,0,0-.091.542,1.614,1.614,0,0,0,.094.557,1.316,1.316,0,0,0,.262.438,1.159,1.159,0,0,0,.4.287,1.328,1.328,0,0,0,1.033,0,1.21,1.21,0,0,0,.4-0.287,1.29,1.29,0,0,0,.265-0.438,1.591,1.591,0,0,0,.094-0.557,1.536,1.536,0,0,0-.094-0.542A1.321,1.321,0,0,0,839.112,41.4Z" transform="translate(-818 -21)"/>
+								</g>
+							</svg>
+						</a>
+					</li>
+					<li>
+						<a href="javascript:openJWTPopup()" class="nav-link py-3" title="API Token" data-bs-toggle="tooltip" data-bs-placement="right">
+							<svg class="ic8" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+								<ellipse cx="7" cy="16.3848" rx="6" ry="6" stroke="#434550" stroke-width="1.6"/>
+								<path d="M10.9219 11.2308L18.3834 3.76923M21.1526 1L18.3834 3.76923M18.3834 3.76923L22.9988 8.38462" stroke="#434550" stroke-width="1.6" stroke-linecap="round"/>
+								<path d="M16.5391 7.46191L19.3083 10.2311" stroke="#434550" stroke-width="1.6" stroke-linecap="round"/>
+								</svg>
+						</a>
+					</li>
+					<li>
+						<a href="middleware/pub/server/ui/workspace/web/setting.html?utm_source=Workspace&utm_medium=setting-page" class="nav-link py-3" title="Settings" data-bs-toggle="tooltip" data-bs-placement="right">
+							<svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 32 32">
+								<defs>
+									<style>
+										.cls-1 {
+											fill: #999;
+											fill-rule: evenodd;
+										}
+									</style>
+								</defs>
+								<g id="icn_setting">
+									<path class="cls-1" d="M571.317,22.862a0.967,0.967,0,0,1,.911.635l0.98,2.719c0.352,0.088.654,0.176,0.909,0.268,0.279,0.1.639,0.252,1.084,0.459l2.283-1.209a0.972,0.972,0,0,1,1.154.183l2.008,2.078a0.95,0.95,0,0,1,.192,1.033l-1.072,2.513c0.179,0.326.322,0.6,0.429,0.839,0.116,0.255.26,0.606,0.433,1.056l2.5,1.07a0.959,0.959,0,0,1,.582.938l-0.183,2.884a0.959,0.959,0,0,1-.639.841l-2.364.84a8.422,8.422,0,0,1-.213.844c-0.087.277-.226,0.633-0.415,1.075l1.188,2.629a0.95,0.95,0,0,1-.234,1.1l-2.257,2.018a0.975,0.975,0,0,1-1.105.134l-2.327-1.234a10.079,10.079,0,0,1-1.125.51l-1.017.38-0.9,2.5a0.965,0.965,0,0,1-.889.635l-2.638.059a0.967,0.967,0,0,1-.928-0.622l-1.064-2.817c-0.489-.171-0.846-0.3-1.077-0.4s-0.506-.229-0.86-0.409l-2.636,1.129a0.973,0.973,0,0,1-1.049-.185l-1.952-1.834a0.951,0.951,0,0,1-.214-1.089l1.134-2.474q-0.256-.5-0.419-0.895c-0.115-.275-0.253-0.649-0.418-1.127l-2.483-.756a0.955,0.955,0,0,1-.682-0.95l0.1-2.67a0.959,0.959,0,0,1,.545-0.826l2.607-1.253c0.121-.443.227-0.788,0.32-1.041s0.239-.577.436-0.989l-1.132-2.393a0.952,0.952,0,0,1,.207-1.1l1.951-1.844a0.976,0.976,0,0,1,1.041-.191l2.636,1.089q0.436-.289.794-0.477a8.891,8.891,0,0,1,1.145-.481L567.5,23.5a0.968,0.968,0,0,1,.912-0.637h2.907Zm-0.681,1.914h-1.543l-0.843,2.355a0.959,0.959,0,0,1-.6.588,9.4,9.4,0,0,0-1.3.509,9.869,9.869,0,0,0-1.028.653,0.976,0.976,0,0,1-.935.1l-2.54-1.049-0.991.937,1.034,2.183a0.95,0.95,0,0,1-.009.829c-0.278.558-.466,0.969-0.56,1.221s-0.221.684-.375,1.281a0.956,0.956,0,0,1-.515.626l-2.485,1.194-0.05,1.361,2.248,0.684a0.959,0.959,0,0,1,.634.615c0.224,0.668.4,1.16,0.529,1.468s0.314,0.687.561,1.15a0.944,0.944,0,0,1,.026.843L560.849,44.6l0.989,0.928,2.474-1.059a0.976,0.976,0,0,1,.837.033c0.507,0.267.885,0.452,1.123,0.553s0.709,0.272,1.383.5a0.961,0.961,0,0,1,.589.57l0.983,2.6,1.287-.029,0.828-2.3a0.965,0.965,0,0,1,.568-0.573q0.815-.306,1.441-0.539a9.652,9.652,0,0,0,1.32-.639,0.978,0.978,0,0,1,.936-0.012L577.8,45.8l1.231-1.1-1.075-2.379a0.941,0.941,0,0,1,0-.777c0.252-.568.423-0.994,0.51-1.266a9.4,9.4,0,0,0,.256-1.147,0.958,0.958,0,0,1,.627-0.74l2.287-.813,0.1-1.585-2.25-.964a0.956,0.956,0,0,1-.522-0.547c-0.224-.6-0.4-1.04-0.525-1.312s-0.319-.638-0.583-1.1a0.949,0.949,0,0,1-.049-0.842l1.008-2.362-1.061-1.1-2.067,1.095a0.976,0.976,0,0,1-.879.017c-0.6-.29-1.054-0.488-1.344-0.592a9.974,9.974,0,0,0-1.191-.319,0.964,0.964,0,0,1-.7-0.613ZM569.854,30.7a6.062,6.062,0,1,1-6.125,6.061A6.092,6.092,0,0,1,569.854,30.7Zm0,1.914a4.147,4.147,0,1,0,4.19,4.147A4.169,4.169,0,0,0,569.854,32.618Z" transform="translate(-554 -21)"/>
+								</g>
+							</svg>
+						</a>
+					</li>
+					<li>
+						<a href="middleware/pub/server/ui/workspace/web/documentation.html?utm_source=Workspace&utm_medium=documentation-page" class="nav-link py-3" title="Documentation" data-bs-toggle="tooltip"
+						   data-bs-placement="right">
+							<svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 32 32">
+								<defs>
+									<style>
+										.cls-1 {
+											fill: #999;
+											fill-rule: evenodd;
+										}
+									</style>
+								</defs>
+								<g id="icn_documentation">
+									<path class="cls-1" d="M446.585,23.229H436.037a2.592,2.592,0,0,0-2.623,2.555v2.679a0.494,0.494,0,0,0,.5.488h1.068a0.494,0.494,0,0,0,.5-0.488V25.784a0.548,0.548,0,0,1,.555-0.54h10.548a0.548,0.548,0,0,1,.554.54V41.641a0.548,0.548,0,0,1-.554.54h-2.152a0.494,0.494,0,0,0-.5.488v1.04a0.5,0.5,0,0,0,.5.488h2.152a2.592,2.592,0,0,0,2.623-2.555V25.784A2.592,2.592,0,0,0,446.585,23.229Zm-6.333,6.546H429.705a2.592,2.592,0,0,0-2.623,2.555V48.187a2.593,2.593,0,0,0,2.623,2.556h10.547a2.594,2.594,0,0,0,2.624-2.556V32.33A2.593,2.593,0,0,0,440.252,29.775Zm-11.1,2.555a0.548,0.548,0,0,1,.555-0.54h10.547a0.547,0.547,0,0,1,.554.54V48.187a0.546,0.546,0,0,1-.554.539H429.705a0.548,0.548,0,0,1-.555-0.539V32.33Z" transform="translate(-422 -21)"/>
+								</g>
+							</svg>
+						</a>
+					</li>
+				</ul>
+			</div>
+			<div class="col-lg-11 px-5 pr-0 p-3" data-match-height="groupName">
+				<!-- MultiStep Form -->
+				<div class="row">
+					<div class="col-md-12">
+						<form id="msform">
+							<!-- progressbar -->
+							<ul id="progressbar">
+								<li class="active">Select package</li>
+								<li>Export as</li>
+							</ul>
+							<!-- fieldsets -->
+							<fieldset>
+							    <div class="main-wrap">
+								  <div class="export_grid">
+										<div class="top_head">
+											<h4>Export packages</h4>
+											<p>Packages are ready to be migrated</p>
+										</div>
+										<div class="srch_bar">
+											<h6>Select packages</h6>
+											<input class="form-control" type="text" placeholder="Search" value="" style="display: none;" />
+										</div>
+									</div>
+
+									  <div class="main-body-wrap">
+										<div class="vertical-tree">
+										  <ul class="tree-step1">
+											  <li>
+												  <span class="plus-minus-icon"></span>
+												  <input type="checkbox" name="packages" id="packages">
+												  <label class="custom-unchecked">packages</label>
+
+												  <ul class="tree-step2"  style="display: block;">
+													  <li>
+														<span class="plus-minus-icon"></span>
+														<input type="checkbox" name="global" id="global">
+														<label class="custom-unchecked">global</label>
+														<ul class="tree-step3" style="display: none;" >
+															<li>
+															  <span class="plus-minus-icon"></span>
+															  <input type="checkbox" name="dependency" id="dependency">
+															  <label class="custom-unchecked">dependency</label>
+															  <ul class="tree-step4" style="display: none;" >
+																  <li>
+																	<span class="plus-minus-icon"></span>
+																	<input type="checkbox" name="config" id="config">
+																	<label class="custom-unchecked">config</label>
+																	<ul class="tree-step5" style="display: none;" >
+																		  <li>
+																			<input type="checkbox" name="global" id="global">
+																			<label class="custom-unchecked">global</label>
+																		  </li>
+																	  </ul>
+																  </li>
+															  </ul>
+															</li>
+														</ul>
+													  </li>
+													  <li>
+														<span class="plus-minus-icon"></span>
+														<input type="checkbox" name="demo" id="demo">
+														<label class="custom-unchecked">demo</label>
+														<ul class="tree-step3" style="display: none;" >
+															<li>
+															  <span class="plus-minus-icon"></span>
+															  <input type="checkbox" name="weatherInfo" id="weatherInfo">
+															  <label class="custom-unchecked">weatherInfo</label>
+															  <ul class="tree-step4" style="display: none;" >
+																  <li>
+																	<input type="checkbox" name="weatherInfo" id="weatherInfo">
+																	<label class="custom-unchecked">weatherInfo</label>
+																  </li>
+																  <li>
+																	<input type="checkbox" name="testE2" id="testE2">
+																	<label class="custom-unchecked">testE2</label>
+																  </li>
+																  <li>
+																	<input type="checkbox" name="testE" id="testE">
+																	<label class="custom-unchecked">testE</label>
+																  </li>
+																  <li>
+																	<input type="checkbox" name="simpleRest" id="simpleRest">
+																	<label class="custom-unchecked">simpleRest</label>
+																  </li>
+															  </ul>
+															</li>
+															<li>
+															  <span class="plus-minus-icon"></span>
+															  <input type="checkbox" name="crypto" id="crypto">
+															  <label class="custom-unchecked">crypto</label>
+															  <ul class="tree-step4" style="display: none;" >
+																  <li>
+																	<input type="checkbox" name="abc" id="abc">
+																	<label class="custom-unchecked">abc</label>
+																  </li>
+																  <li>
+																	<input type="checkbox" name="cryptoCompare" id="cryptoCompare">
+																	<label class="custom-unchecked">cryptoCompare</label>
+																  </li>
+																  <li>
+																	<input type="checkbox" name="silentTest" id="silentTest">
+																	<label class="custom-unchecked">silentTest</label>
+																  </li>
+																  <li>
+																	<input type="checkbox" name="asd" id="asd">
+																	<label class="custom-unchecked">asd</label>
+																  </li>
+															  </ul>
+															</li>
+															<li>
+															  <span class="plus-minus-icon"></span>
+															  <input type="checkbox" name="dependency" id="dependency">
+															  <label class="custom-unchecked">dependency</label>
+															  <ul class="tree-step4" style="display: none;" >
+																  <li>
+																	<span class="plus-minus-icon"></span>
+																	<span></span><input type="checkbox" name="config" id="config">
+																	<label class="custom-unchecked">config</label>
+																	<ul class="tree-step5" style="display: none;" >
+																		<li>
+																		  <input type="checkbox" name="packages.demo.weatherInfo.weatherInfo" id="packages.demo.weatherInfo.weatherInfo">
+																		  <label class="custom-unchecked">packages.demo.weatherInfo.weatherInfo</label>
+																		</li>
+																		<li>
+																		  <input type="checkbox" name="packages.demo.s3.updateS3Files" id="packages.demo.s3.updateS3Files">
+																		  <label class="custom-unchecked">packages.demo.s3.updateS3Files</label>
+																		</li>
+																	</ul>
+																  </li>
+															  </ul>
+															</li>
+														</ul>
+													  </li>
+												  </ul>
+											  </li>
+										  </ul>
+									  </div>
+									  </div>
+									  <!--------tree end------>
+					            </div>
+
+								<input type="button" style="display: none;" name="next" class="next action-button" id="select-packages-next-btn" value="Next" />
+								<input type="button" name="next" class="action-button" value="Next" onclick="exportItems()" />
+							</fieldset>
+
+							<fieldset>
+								<div class="export_grid">
+									<div class="top_head">
+										<h4>Export packages</h4>
+										<p>Packages are ready to be migrated</p>
+									</div>
+									<div class="down_promote">
+										<div class="row">
+											<div class="col-md-4 offset-2">
+												<div class="dwn_grid">
+													<a href="javascript:downloadBuild()">
+														<img src="middleware/pub/server/ui/assets/img/export_download_icon.svg">
+														<h6>Download</h6>
+														<p>Download the package to the local computer</p>
+													</a>
+												</div>
+											</div>
+											<div class="col-md-4">
+												<div class="dwn_grid">
+													<a href="javascript:openPromote()">
+														<img src="middleware/pub/server/ui/assets/img/export_promote_icon.svg">
+														<h6 class="promote_instruction">Promote to</h6>
+														<p class="promote_instruction">Migrate the package to a different environment</p>
+													</a>
+												</div>
+											</div>
+										</div>
+										<!-- Modal -->
+										<div class="modal fade nw_popup" id="promoteModal" tabindex="-1" aria-labelledby="envrModalLabel" aria-hidden="true">
+											<div class="modal-dialog">
+												<div class="modal-content" style="width:950px;height:auto;">
+													<div class="modal-header">
+														<h5 class="modal-title" id="envrModalLabel">Select environment</h5>
+														<span data-bs-dismiss="modal" id="promotion_modal_dismiss"></span>
+														<button type="button" class="btn-close envr_close" aria-label="Close" onclick="promotion_modal_dismiss()"></button>
+													</div>
+													<div class="modal-body">
+														<div class="al_pnl_grid">
+															<div class="row" id="promote_environments"></div>
+														</div>
+													</div>
+													<!--<div class="bt_center"><button data-bs-toggle="modal" data-bs-target="#percentageModal" type="button" class="btn btn-primary">Promote</div>-->
+													<div class="bt_center"><button type="button" class="btn btn-primary" onclick="promoteBuild()">Promote</div>
+													</button>
+												</div>
+											</div>
+										</div>
+										<!-- Modal -->
+										<div class="modal fade nw_popup" id="percentageModal" tabindex="-1" aria-labelledby="envrModalLabel" aria-hidden="true">
+											<div class="modal-dialog">
+												<div class="modal-content" style="width:400px;height:auto;">
+													<div class="progress-upload blue">
+                                             <span class="progress-left">
+                                             <span class="progress-bar"></span>
+                                             </span>
+														<span class="progress-right">
+                                             <span class="progress-bar"></span>
+                                             </span>
+														<div class="progress-value">50%</div>
+													</div>
+													<h6>Please wait</h6>
+													<p>Setting up packges with<br> selected environment...</p>
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
+								<!-- <input type="button" name="previous" class="previous action-button-previous" value="Previous"/>
+                                   <input type="button" name="next" class="next action-button" value="Next"/> -->
+							</fieldset>
+						</form>
+
+					</div>
+				</div>
+				<!-- /.MultiStep Form -->
+			</div>
+
+
+			<div id="jwtModelDialog" class="modal">
+				<!-- Modal content -->
+				<div class="modal-content" style="width:650px;height:auto;">
+					<span id="closejwtModelDialog" class="close">&times;</span>
+					<h3>API token</h3>
+
+					<div class="row exp_alg">
+						<div class="col-md-3"><label>Expiration in:</label></div>
+						<div class="col-md-4">
+							<select id="jwt_expiration_in" class="form-control">
+								<option value="2">2 Hours</option>
+								<option value="4">4 Hours</option>
+								<option value="6">6 Hours</option>
+								<option value="8">8 Hours</option>
+								<option value="expir_custom">Custom</option>
+							</select>
+						</div>
+						<div id="expir_custom" class="col-md-3 cs_opt">
+							<input placeholder="Custom Value" class="form-control" type="number" min="2" max="800"
+								   id="expir_custom_hours" value="8"/>
+							<span class="h_title">hours</span>
+						</div>
+					</div>
+
+					<div class="row exp_alg">
+						<div class="col-md-3"><label>Api Endpoint:</label></div>
+						<div class="col-md-9">
+							<input id="api-endpoint-gt" class="form-control" readonly="readonly" />
+						</div>
+					</div>
+
+					<div class="row exp_alg" style="margin-top:10px; margin-bottom:15px;">
+						<div class="col-md-3"><label for="jwt_token_key">Token key:</label></div>
+						<div class="col-md-9"><input id="jwt_token_key" type="text" class="form-control" value="" /></div>
+					</div>
+
+					<div class="copy-text3" id="jwtNameDiv" style="margin-top:0; margin-bottom:15px;">
+						<a class="copy_icon" href="javascript:void(0)" id="button-copy"><img
+								src="middleware/pub/server/ui/icons/copy-svgrepo-com.svg"></a>
+						<label for="jwtInput">Bearer Token: </label>
+						<textarea id="jwtInput" name="jwtInput" value="" class="form-control"
+								  readonly="readonly"></textarea>
+					</div>
+
+					<div class="anc_kbtn">
+						<button type="button" class="btn btn-primary2" onclick="openJWTPopupTime()">Generate token
+						</button> &nbsp;
+						<button type="button" id="JWTOKButton" class="btn btn-primary">OK</button>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<script src="middleware/pub/server/ui/assets/js/bootstrap.bundle.min.js"></script>
+	<script src="middleware/pub/server/ui/assets/js/sidebars.js"></script>
+	<script src="middleware/pub/server/ui/assets/js/custom-script-tree.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.3/jquery.easing.min.js"></script>
+	<script src="middleware/pub/server/ui/javascript/datatables/datatables.min.js"></script>
+	<script src="middleware/pub/server/ui/javascript/datatables/cdn.datatables.net/buttons/1.2.2/js/dataTables.buttons.min.js"></script>
+	<script src="middleware/pub/server/ui/javascript/datatables/cdn.datatables.net/buttons/1.2.2/js/buttons.flash.min.js"></script>
+	<script src="middleware/pub/server/ui/javascript/datatables/cdnjs.cloudflare.com/ajax/libs/jszip/2.5.0/jszip.min.js"></script>
+	<script src="middleware/pub/server/ui/javascript/datatables/cdn.rawgit.com/bpampuch/pdfmake/0.1.18/build/pdfmake.min.js"></script>
+	<script src="middleware/pub/server/ui/javascript/datatables/cdn.rawgit.com/bpampuch/pdfmake/0.1.18/build/vfs_fonts.js"></script>
+	<script src="middleware/pub/server/ui/javascript/datatables/cdn.datatables.net/buttons/1.2.2/js/buttons.html5.min.js"></script>
+	<script src="middleware/pub/server/ui/javascript/datatables/cdn.datatables.net/buttons/1.2.2/js/buttons.print.min.js"></script>
+	<script src="middleware/pub/server/ui/javascript/datatables/datatables-init.js"></script>
+
+	<select src="https://cdn.jsdelivr.net/npm/js-cookie@2.2.1/src/js.cookie.js"></select>
+<script src="https://cdn.jsdelivr.net/npm/js-cookie@2/src/js.cookie.min.js"></script>
+
+<script>
+$(function() {
+  $('#jwt_expiration_in').change(function(){
+    $('.cs_opt').hide();
+    $('#' + $(this).val()).show();
+  });
+});
+</script>
+	<script>
+
+		//jQuery time
+		var current_fs, next_fs, previous_fs; //fieldsets
+		var left, opacity, scale; //fieldset properties which we will animate
+		var animating; //flag to prevent quick multi-click glitches
+
+		$(".next").click(function(){
+			if(animating) return false;
+			animating = true;
+
+			current_fs = $(this).parent();
+			next_fs = $(this).parent().next();
+
+			//activate next step on progressbar using the index of next_fs
+			$("#progressbar li").eq($("fieldset").index(next_fs)).addClass("active");
+
+			//show the next fieldset
+			next_fs.show();
+			//hide the current fieldset with style
+			current_fs.animate({opacity: 0}, {
+				step: function(now, mx) {
+					//as the opacity of current_fs reduces to 0 - stored in "now"
+					//1. scale current_fs down to 80%
+					scale = 1 - (1 - now) * 0.2;
+					//2. bring next_fs from the right(50%)
+					left = (now * 50)+"%";
+					//3. increase opacity of next_fs to 1 as it moves in
+					opacity = 1 - now;
+					current_fs.css({
+						'transform': 'scale('+scale+')',
+						'position': 'absolute'
+					});
+					next_fs.css({'left': left, 'opacity': opacity});
+				},
+				duration: 800,
+				complete: function(){
+					current_fs.hide();
+					animating = false;
+				},
+				//this comes from the custom easing plugin
+				easing: 'easeInOutBack'
+			});
+		});
+
+		$(".previous").click(function(){
+			if(animating) return false;
+			animating = true;
+
+			current_fs = $(this).parent();
+			previous_fs = $(this).parent().prev();
+
+			//de-activate current step on progressbar
+			$("#progressbar li").eq($("fieldset").index(current_fs)).removeClass("active");
+
+			//show the previous fieldset
+			previous_fs.show();
+			//hide the current fieldset with style
+			current_fs.animate({opacity: 0}, {
+				step: function(now, mx) {
+					//as the opacity of current_fs reduces to 0 - stored in "now"
+					//1. scale previous_fs from 80% to 100%
+					scale = 0.8 + (1 - now) * 0.2;
+					//2. take current_fs to the right(50%) - from 0%
+					left = ((1-now) * 50)+"%";
+					//3. increase opacity of previous_fs to 1 as it moves in
+					opacity = 1 - now;
+					current_fs.css({'left': left});
+					previous_fs.css({'transform': 'scale('+scale+')', 'opacity': opacity});
+				},
+				duration: 800,
+				complete: function(){
+					current_fs.hide();
+					animating = false;
+				},
+				//this comes from the custom easing plugin
+				easing: 'easeInOutBack'
+			});
+		});
+
+		$(".submit").click(function(){
+			return false;
+		})
+
+	</script>
+	<script>
+		var selectAllItems = "#select-all";
+		var checkboxItem = ":checkbox";
+
+		$(selectAllItems).click(function() {
+
+			if (this.checked) {
+				$(checkboxItem).each(function() {
+					this.checked = true;
+				});
+			} else {
+				$(checkboxItem).each(function() {
+					this.checked = false;
+				});
+			}
+
+		});
+	</script>
+	<script>
+		let copyText3 = document.querySelector(".copy-text3");
+    document.querySelector("#button-copy").onclick = function () {
+        document.querySelector("#jwtInput").select();
+        document.execCommand("copy");
+        copyText3.classList.add("active");
+        window.getSelection().removeAllRanges();
+        setTimeout(function () {
+        copyText3.classList.remove("active");
+    }, 2500);
+    };
+
+	</script>
+	<script>
+		//	Equal height //
+
+		var matchHeight = function () {
+
+			function init() {
+				eventListeners();
+				matchHeight();
+			}
+
+			function eventListeners(){
+				$(window).on('resize', function() {
+					matchHeight();
+				});
+			}
+
+			function matchHeight(){
+				var groupName = $('[data-match-height]');
+				var groupHeights = [];
+
+				groupName.css('min-height', 'auto');
+
+				groupName.each(function() {
+					groupHeights.push($(this).outerHeight());
+				});
+
+				var maxHeight = Math.max.apply(null, groupHeights);
+				groupName.css('min-height', maxHeight);
+			};
+
+			return {
+				init: init
+			};
+
+		} ();
+
+		$(document).ready(function() {
+			matchHeight.init();
+			getAllEnvironments();
+		});
+
+		function loadPackages() {
+			var response=syncRestRequest("/packages.middleware.pub.server.browse.getPackagesAsTree.main", "GET", "");
+			if(response.status == 200 && response.payload){
+				response=response.payload;
+				let packages = JSON.parse(response);
+				HTML = "<li><input class='styled-checkbox exporting-members' type='checkbox' data-type='package' value='packages' name='API1' id='API1'><label for='API1'>packages</label>";
+				HTML += processChildren(packages.children, "1", "packages/");
+				HTML += "</li>";
+				$(".slect_all_check").html(HTML);
+			}
+		}
+		getLoggedInUser();
+		loadPackages();
+
+		function processChildren(children, prefix, parent) {
+			let HTML = "<ul>";
+			for (let i = 0 ; i < children.length ; i++) {
+				if (!USER_PROFILE.groups.includes("SY_RND") && (children[i].text == "middleware" || children[i].text == "ekaScheduler" || children[i].text == "snowflake1" ||
+						children[i].text == "Wrapper") ) {
+					continue;
+				}
+				HTML += "<li><input class='styled-checkbox exporting-members' type='checkbox' data-type='" + children[i].type + "' value='" + parent + children[i].text + "' name='API" + prefix + i + "' id='API" + prefix + i + "'><label for='API" + prefix +i + "'>" + children[i].text + "</label>";
+				if (null != children[i].children) {
+					HTML += processChildren(children[i].children, prefix + i, parent + children[i].text + "/");
+				}
+				HTML += "</li>";
+			}
+			HTML += "</ul>";
+			return HTML;
+		}
+
+		$(function () {
+			$("input[type='checkbox']").change(function () {
+				$(this).siblings('ul')
+						.find("input[type='checkbox']")
+						.prop('checked', this.checked);
+			});
+		});
+
+		let exporting_items = [];
+
+		$(".exporting-members:checked").each(function() {
+			exporting_items.push({
+				asset: $(this).val(),
+				type: $(this).attr('data-type')
+			});
+		});
+
+		function exportItems() {
+			if ($(".exporting-members:checked").length == 0) {
+				swal({
+					title: "Warning",
+					text: "Please select at-least one item",
+					type: "error",
+					confirmButtonColor: "#f2533e"
+					});
+
+				return ;
+			}
+			$(".exporting-members:checked").each(function() {
+				exporting_items.push({
+					asset: $(this).val(),
+					type: $(this).attr('data-type')
+				});
+			});
+			location.href="#";
+			$("#select-packages-next-btn").trigger('click');
+		}
+
+		function downloadBuild() {
+			var content=JSON.stringify(exporting_items);
+			var qp="buildName="+ new Date().getTime() +"&includeDependencies="+false+"&includeGlobalProperties="+false
+					+"&includeLocalProperties="+false+"&includeEndpoints="+false;
+			var response = syncRestRequest("/build?"+qp, "POST", content,"application/json","application/json");
+			if(response.status==200){
+				var jObj=JSON.parse(response.payload);
+
+				if(jObj.msg=="Success"){
+					//alert(jObj.msg);
+					var element = document.createElement('a');
+					var responseUrl = JSON.parse(response.payload).url
+					element.setAttribute('href', window.ENV.API_BASE_URL + "/tenant/" + localStorage.getItem("tenant") + responseUrl);
+					element.setAttribute('target', "_blank");
+					document.body.appendChild(element);
+					element.click();
+				} else {
+					swal({
+						title: jObj.msg,
+						text: "",
+						type: "error",
+						confirmButtonColor: "#f2533e"
+						});
+
+				}
+			}
+		}
+
+		function promoteBuild() {
+
+			if ($(".promoting-servers:checked").length == 0) {
+				swal({
+					title: "Warning",
+					text: "Please select at-least one environment",
+					type: "error",
+					confirmButtonColor: "#f2533e"
+					});
+
+				return ;
+			}
+
+			let total = $(".promoting-servers:checked").length;
+			let imported = 0;
+			$(".promoting-servers:checked").each(function () {
+				let blockValue = $(this).val();
+				$("#env-up-" + blockValue).html("<i><span class='fa fa-spinner fa-spin '></span></i>");
+				var content=JSON.stringify(exporting_items);
+				var qp="buildName="+ new Date().getTime() +"&includeDependencies="+false+"&includeGlobalProperties="+false
+						+"&includeLocalProperties="+false+"&includeEndpoints="+false;
+
+				asyncRestRequest("/packages.middleware.pub.server.build.api.promoteBuild.main?"+qp + "&environment_id=" + blockValue, content, "POST", function (response) {
+					if(response.status == "200") {
+						imported++;
+						$("#env-up-" + blockValue).html("<i><span class='fa fa-check'></span></i>");
+					} else {
+						$("#env-up-" + blockValue).html("<i><span class='fa fa-times'></span></i>");
+					}
+				});
+
+			});
+		}
+		function promotion_modal_dismiss() {
+			$(".promoting-servers:checked").prop('checked', false);
+			$("#promotion_modal_dismiss").trigger('click');
+		}
+
+		function openPromote() {
+			if (ENV_SIZE == 0) {
+				return ;
+			}
+			$("#promoteModal").modal('toggle');
+		}
+
+	</script>
+
+
+	<script>
+		let copyText4 = document.querySelector(".copy-text4");
+		document.querySelector("#path-copy").onclick = function () {
+			document.querySelector("#full_path").select();
+			document.execCommand("copy");
+			copyText4.classList.add("active");
+			window.getSelection().removeAllRanges();
+			setTimeout(function () {
+			copyText4.classList.remove("active");
+		}, 2500);
+		};
+    </script>
+</body>
+</html>

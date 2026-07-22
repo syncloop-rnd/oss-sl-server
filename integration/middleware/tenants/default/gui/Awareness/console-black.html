@@ -1,0 +1,2349 @@
+<!DOCTYPE html>
+<html ng-app="jsonEditorApp">
+<head>
+    <meta charset="UTF-8">
+    <title>SL Awareness Configurator - Enhanced v2</title>
+    <!-- AngularJS, jQuery, and Font Awesome via CDN -->
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.8.2/angular.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/js/all.min.js"></script>
+    <style>
+        /* --- CSS Variables for Theming --- */
+        :root {
+            --font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+            --font-size-base: 14px;
+            --font-size-large: 16px;
+            --border-radius: 4px;
+            --transition-speed: 0.3s;
+
+            /* Scrollbar Variables (used in specific theme styles) */
+            --scrollbar-width: 8px; /* Thin scrollbar */
+        }
+
+        /* --- Dark Theme (Default) --- */
+        body.dark-theme {
+            --primary-bg: #1e1e1e;
+            --secondary-bg: #252526;
+            --tertiary-bg: #333333;
+            --input-bg: #3c3c3c;
+            --text-color: #d4d4d4;
+            --text-muted: #a0a0a0;
+            --border-color: #3c3c3c;
+            --border-hover-color: #555555;
+            --accent-color: #007acc;
+            --accent-text-color: #ffffff;
+            --danger-color: #f44336;
+            --danger-text-color: #ffffff;
+            --success-color: #4CAF50;
+            --success-text-color: #ffffff;
+            --info-color: #2196F3;
+            --info-text-color: #ffffff;
+            --modal-overlay-bg: rgba(0, 0, 0, 0.8);
+            --shadow-color: rgba(0, 0, 0, 0.5);
+            --scrollbar-track-bg: var(--tertiary-bg);
+            --scrollbar-thumb-bg: #686868;
+            --scrollbar-thumb-hover-bg: #888888;
+        }
+
+        /* --- Light Theme --- */
+        body.light-theme {
+            --primary-bg: #ffffff;
+            --secondary-bg: #f0f0f0;
+            --tertiary-bg: #e0e0e0;
+            --input-bg: #ffffff;
+            --text-color: #333333;
+            --text-muted: #666666;
+            --border-color: #cccccc;
+            --border-hover-color: #bbbbbb;
+            --accent-color: #005a9e;
+            --accent-text-color: #ffffff;
+            --danger-color: #d32f2f;
+            --danger-text-color: #ffffff;
+            --success-color: #388E3C;
+            --success-text-color: #ffffff;
+            --info-color: #1976D2;
+            --info-text-color: #ffffff;
+            --modal-overlay-bg: rgba(0, 0, 0, 0.5);
+            --shadow-color: rgba(0, 0, 0, 0.2);
+            --scrollbar-track-bg: var(--tertiary-bg);
+            --scrollbar-thumb-bg: #a0a0a0;
+            --scrollbar-thumb-hover-bg: #888888;
+        }
+
+        /* --- Base Styles --- */
+        body {
+            background-color: var(--primary-bg);
+            color: var(--text-color);
+            font-family: var(--font-family);
+            font-size: var(--font-size-base);
+            margin: 0;
+            padding: 20px;
+            transition: background-color var(--transition-speed), color var(--transition-speed);
+        }
+
+        h2, h3 {
+            color: var(--text-color);
+            margin-top: 0;
+            margin-bottom: 15px;
+            font-weight: 600;
+        }
+
+        /* --- Custom Scrollbars --- */
+        /* Works on Firefox */
+        * {
+            scrollbar-width: thin;
+            scrollbar-color: var(--scrollbar-thumb-bg) var(--scrollbar-track-bg);
+        }
+        /* Works on Chrome, Edge, and Safari */
+        ::-webkit-scrollbar {
+            width: var(--scrollbar-width);
+            height: var(--scrollbar-width); /* For horizontal scrollbars */
+        }
+        ::-webkit-scrollbar-track {
+            background: var(--scrollbar-track-bg);
+            border-radius: calc(var(--scrollbar-width) / 2);
+        }
+        ::-webkit-scrollbar-thumb {
+            background-color: var(--scrollbar-thumb-bg);
+            border-radius: calc(var(--scrollbar-width) / 2);
+            border: 2px solid var(--scrollbar-track-bg); /* Creates padding around thumb */
+        }
+         ::-webkit-scrollbar-thumb:hover {
+            background-color: var(--scrollbar-thumb-hover-bg);
+        }
+         ::-webkit-scrollbar-corner {
+            background: transparent; /* Hide bottom corner grip */
+        }
+
+
+        /* --- Header & Tabs --- */
+        .header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+            margin-bottom: 25px;
+            padding-bottom: 15px;
+            border-bottom: 1px solid var(--border-color);
+            gap: 15px;
+        }
+
+        .tabs button {
+            background: var(--tertiary-bg);
+            border: 1px solid var(--border-color);
+            color: var(--text-color);
+            padding: 10px 20px;
+            cursor: pointer;
+            margin-right: 5px;
+            border-radius: var(--border-radius);
+            outline: none;
+            transition: background-color var(--transition-speed), border-color var(--transition-speed);
+        }
+
+        .tabs button:hover {
+            background-color: var(--input-bg);
+            border-color: var(--border-hover-color);
+        }
+
+        .tabs button.active {
+            background: var(--accent-color);
+            color: var(--accent-text-color);
+            border-color: var(--accent-color);
+        }
+        .tabs button .fa, .tabs button .fas { margin-right: 8px; }
+
+        .top-right-buttons {
+            display: flex;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 10px; /* Spacing between buttons */
+        }
+
+        /* --- Buttons --- */
+        button, .button {
+            background: var(--tertiary-bg);
+            border: 1px solid var(--border-color);
+            color: var(--text-color);
+            padding: 8px 15px;
+            cursor: pointer;
+            border-radius: var(--border-radius);
+            outline: none;
+            transition: background-color var(--transition-speed), border-color var(--transition-speed), box-shadow var(--transition-speed);
+            font-size: var(--font-size-base);
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            text-decoration: none;
+            vertical-align: middle; /* Ensure alignment with text */
+        }
+        button:hover, .button:hover {
+            background-color: var(--input-bg);
+            border-color: var(--border-hover-color);
+            box-shadow: 0 2px 4px var(--shadow-color);
+        }
+        button .fa, button .fas, button .far, .button .fa, .button .fas, .button .far {
+            margin-right: 6px;
+        }
+        button:disabled {
+            cursor: not-allowed;
+            opacity: 0.6;
+        }
+
+        /* Specific Button Styles */
+        .btn-primary {
+            background-color: var(--accent-color);
+            color: var(--accent-text-color);
+            border-color: var(--accent-color);
+        }
+        .btn-primary:hover {
+            background-color: color-mix(in srgb, var(--accent-color) 90%, black);
+            border-color: color-mix(in srgb, var(--accent-color) 90%, black);
+        }
+        .btn-danger {
+            background-color: var(--danger-color);
+            color: var(--danger-text-color);
+            border-color: var(--danger-color);
+        }
+        .btn-danger:hover {
+            background-color: color-mix(in srgb, var(--danger-color) 90%, black);
+            border-color: color-mix(in srgb, var(--danger-color) 90%, black);
+        }
+        .btn-icon {
+            background: none;
+            border: none;
+            padding: 5px;
+            color: var(--text-muted);
+            box-shadow: none;
+        }
+        .btn-icon:hover {
+            color: var(--accent-color);
+            background: none;
+        }
+        .btn-icon.danger:hover { color: var(--danger-color); }
+        .btn-icon.success:hover { color: var(--success-color); }
+        .btn-icon .fa, .btn-icon .fas, .btn-icon .far { margin-right: 0; }
+
+        .top-right-buttons label {
+            margin-left: 10px;
+            font-size: 0.9em;
+            display: flex;
+            align-items: center;
+            gap: 5px;
+            color: var(--text-muted);
+        }
+        .top-right-buttons input[type="checkbox"] {
+            accent-color: var(--accent-color);
+            cursor: pointer;
+            vertical-align: middle;
+        }
+        #theme-toggle-button {
+            font-size: 1.1em;
+        }
+
+        /* --- Content Area --- */
+        .tab-content {
+            background: var(--secondary-bg);
+            padding: 25px;
+            border-radius: var(--border-radius);
+            margin-bottom: 25px;
+            box-shadow: 0 3px 6px var(--shadow-color);
+            overflow-x: auto;
+        }
+
+        /* --- Tables --- */
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-bottom: 20px;
+        }
+        th, td {
+            border: 1px solid var(--border-color);
+            padding: 10px 12px;
+            text-align: left;
+            vertical-align: middle;
+        }
+        th {
+            background-color: var(--tertiary-bg);
+            font-weight: 600;
+            white-space: nowrap;
+        }
+        tbody tr:hover {
+            background-color: var(--input-bg);
+        }
+        td .fa, td .fas, td .far {
+            margin: 0 4px;
+            cursor: pointer;
+            color: var(--text-muted);
+            transition: color var(--transition-speed);
+            vertical-align: middle;
+        }
+        td .fa:hover, td .fas:hover, td .far:hover {
+            color: var(--accent-color);
+        }
+        td .fa-trash:hover { color: var(--danger-color); }
+        td .fa-chevron-down, td .fa-chevron-up {
+            color: var(--accent-color);
+            width: 20px;
+            text-align: center;
+        }
+        td .actions { /* Class for action cells */
+           text-align: center;
+           white-space: nowrap;
+        }
+        td span.display-value { /* Class for non-editing spans */
+            display: inline-block;
+            max-width: 250px; /* Limit width of display values */
+            overflow: hidden;
+            text-overflow: ellipsis;
+            white-space: nowrap;
+            vertical-align: middle;
+        }
+        td span.display-value.full-width { /* Allow some values to take full width */
+            max-width: none;
+            white-space: normal;
+        }
+
+        /* --- Form Inputs --- */
+        input[type="text"],
+        input[type="number"],
+        select,
+        textarea {
+            background: var(--input-bg);
+            color: var(--text-color);
+            border: 1px solid var(--border-color);
+            border-radius: var(--border-radius);
+            padding: 8px 10px;
+            width: 100%;
+            box-sizing: border-box;
+            transition: border-color var(--transition-speed), box-shadow var(--transition-speed);
+            font-size: var(--font-size-base);
+        }
+        input[type="text"]:focus,
+        input[type="number"]:focus,
+        select:focus,
+        textarea:focus {
+            border-color: var(--accent-color);
+            box-shadow: 0 0 0 2px color-mix(in srgb, var(--accent-color) 30%, transparent);
+            outline: none;
+        }
+        input[type="checkbox"] {
+            width: auto;
+            margin-right: 5px;
+            vertical-align: middle;
+        }
+        textarea {
+            resize: vertical;
+            min-height: 80px; /* Slightly taller default */
+        }
+
+        /* Inputs during inline editing */
+        input.editing-input,
+        select.editing-input,
+        textarea.editing-input {
+            background-color: var(--primary-bg);
+            border: 1px solid var(--accent-color);
+        }
+        .input-with-icon { /* Container for input + icon button */
+            display: flex;
+            align-items: center;
+            gap: 5px;
+        }
+        .input-with-icon input {
+            flex-grow: 1;
+        }
+        .input-with-icon button {
+            flex-shrink: 0; /* Prevent button from shrinking */
+        }
+
+        /* --- Sub-sections (Tools/RAGs in expanded view) --- */
+        .sub-section {
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+            padding: 15px;
+            background-color: var(--primary-bg);
+            border: 1px solid var(--border-color);
+            border-radius: var(--border-radius);
+            margin-top: 10px;
+        }
+        .sub-table {
+            width: 100%;
+            padding: 15px;
+            border: 1px solid var(--border-color);
+            border-radius: var(--border-radius);
+            background: var(--secondary-bg);
+        }
+        .sub-table h3 {
+            margin-bottom: 10px;
+            font-size: 1.1em;
+            color: var(--text-muted);
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+        .sub-table h3 .fa, .sub-table h3 .fas {
+            color: var(--accent-color);
+        }
+
+        /* --- Modals --- */
+        .modal {
+            position: fixed;
+            z-index: 1000;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            overflow: hidden; /* Prevent body scroll when modal is open */
+            background-color: var(--modal-overlay-bg);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 20px;
+            opacity: 0;
+            visibility: hidden;
+            transition: opacity var(--transition-speed) ease, visibility 0s var(--transition-speed);
+        }
+        .modal.visible {
+            opacity: 1;
+            visibility: visible;
+            transition-delay: 0s;
+            overflow-y: auto; /* Allow modal itself to scroll if content is too tall */
+        }
+
+        .modal-content {
+            background-color: var(--secondary-bg);
+            padding: 0; /* Remove padding, handle in header/body/footer */
+            border: 1px solid var(--border-color);
+            border-radius: var(--border-radius);
+            width: auto;
+            max-width: 90%;
+            max-height: 90vh; /* Max height relative to viewport */
+            box-shadow: 0 5px 15px var(--shadow-color);
+            position: relative;
+            display: flex;
+            flex-direction: column;
+            overflow: hidden; /* Children will handle scrolling */
+            margin: auto; /* Ensure centering */
+        }
+        .modal-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            border-bottom: 1px solid var(--border-color);
+            padding: 15px 25px; /* Consistent padding */
+            flex-shrink: 0; /* Prevent header from shrinking */
+        }
+        .modal-header h3 {
+            margin: 0;
+            font-size: 1.3em;
+        }
+        .modal-body {
+            padding: 20px 25px; /* Consistent padding */
+            overflow-y: auto; /* Scroll only the body */
+            flex-grow: 1; /* Allow body to take up space */
+             min-height: 100px; /* Ensure some minimum height */
+        }
+        .modal-footer {
+            border-top: 1px solid var(--border-color);
+            padding: 15px 25px; /* Consistent padding */
+            display: flex;
+            justify-content: flex-end;
+            gap: 10px;
+            flex-shrink: 0; /* Prevent footer from shrinking */
+        }
+        .close-button {
+            color: var(--text-muted);
+            background: none;
+            border: none;
+            font-size: 1.8em;
+            line-height: 1;
+            cursor: pointer;
+            padding: 0 5px;
+            transition: color var(--transition-speed);
+        }
+        .close-button:hover {
+            color: var(--text-color);
+        }
+
+        /* FQN Selector List */
+        .fqn-list {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+            max-height: 400px; /* Limit list height */
+            overflow-y: auto;
+        }
+        .fqn-list li {
+            padding: 10px 15px;
+            cursor: pointer;
+            border-bottom: 1px solid var(--border-color);
+            transition: background-color var(--transition-speed);
+        }
+        .fqn-list li:last-child { border-bottom: none; }
+        .fqn-list li:hover {
+            background-color: var(--accent-color);
+            color: var(--accent-text-color);
+        }
+
+        /* JSON Editor / Role Description Modal Textarea*/
+        .large-textarea {
+             width: 100%;
+             height: 100%; /* Fill modal body */
+             min-height: 300px; /* Ensure decent editing space */
+             background: var(--primary-bg);
+             color: var(--text-color);
+             border: 1px solid var(--border-color);
+             border-radius: var(--border-radius);
+             resize: none; /* Usually disable resize in modals */
+             font-family: monospace; /* Good for code/JSON */
+             font-size: 0.9em;
+        }
+        .json-modal-content {
+             width: 80vw !important;
+             max-width: 900px !important;
+             height: 80vh !important;
+        }
+        .role-desc-modal-content {
+             width: 70vw !important;
+             max-width: 800px !important;
+             height: 70vh !important;
+        }
+        .modal-body.no-padding { padding: 0; } /* For modals where textarea fills body */
+        .modal-body .json-error-display { /* Error display styling */
+             color: var(--danger-color);
+             margin-top: 10px;
+             font-size: 0.9em;
+             padding: 0 25px; /* Match modal body padding if used outside */
+        }
+        .modal-footer.json-editor-buttons { /* Specific footer adjustments if needed */ }
+
+
+        /* Chat Test Modal */
+        .chat-modal-content {
+            width: 70vw;
+            max-width: 800px;
+            height: 85vh;
+        }
+        #chatWindow {
+            /* height: 100%; Removed fixed height */
+            background: var(--primary-bg);
+            color: var(--text-color);
+            border: 1px solid var(--border-color);
+            padding: 10px 15px;
+            overflow-y: auto; /* Let content dictate scroll */
+            border-radius: var(--border-radius);
+            flex-grow: 1; /* Take available space in modal body */
+            display: flex; /* Use flex column for messages */
+            flex-direction: column;
+            gap: 10px; /* Space between messages */
+        }
+        .chat-message {
+            padding: 8px 12px;
+            border-radius: var(--border-radius);
+            max-width: 80%; /* Limit message width */
+            word-wrap: break-word; /* Break long words */
+        }
+        .chat-message strong { /* Style the User/Agent label */
+            display: block;
+            font-size: 0.85em;
+            margin-bottom: 3px;
+            color: var(--text-muted);
+        }
+        .chat-message-user {
+            background-color: var(--accent-color);
+            color: var(--accent-text-color);
+            margin-left: auto; /* Align user messages to the right */
+            border-bottom-right-radius: 0; /* Bubble effect */
+        }
+        .chat-message-agent {
+            background-color: var(--tertiary-bg);
+            color: var(--text-color);
+            margin-right: auto; /* Align agent messages to the left */
+            border-bottom-left-radius: 0; /* Bubble effect */
+        }
+        .chat-thinking-indicator {
+             text-align: center;
+             padding: 10px;
+             color: var(--text-muted);
+             font-style: italic;
+        }
+         .chat-thinking-indicator .spinner { font-size: 1em; margin-right: 5px; }
+
+        .chat-input-area { /* Footer area */
+            display: flex;
+            gap: 10px;
+            align-items: center;
+        }
+        .chat-input-area input[type="text"] {
+            flex-grow: 1;
+        }
+
+        /* KB Search Modal */
+        .kb-search-modal-content {
+            width: 80vw;
+            max-width: 900px;
+            height: 80vh;
+        }
+         /* Make modal body flex column for layout */
+        .kb-search-modal-content .modal-body {
+             display: flex;
+             flex-direction: column;
+             gap: 15px;
+         }
+        .kb-search-input-area {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 15px;
+            align-items: center;
+             flex-shrink: 0; /* Prevent shrinking */
+        }
+        .kb-search-input-area input[type="text"] { flex-grow: 1; }
+        .kb-search-input-area label {
+            display: flex;
+            align-items: center;
+            gap: 5px;
+            color: var(--text-muted);
+        }
+        #kbSearchResults {
+            background: var(--primary-bg);
+            color: var(--text-color);
+            border: 1px solid var(--border-color);
+            padding: 15px;
+            overflow-y: auto;
+            border-radius: var(--border-radius);
+            flex-grow: 1; /* Fill remaining space */
+            min-height: 200px;
+        }
+        #kbSearchResults pre {
+            white-space: pre-wrap;
+            word-wrap: break-word;
+            margin: 0;
+            font-size: 0.9em;
+        }
+        .kb-search-placeholder {
+            color: var(--text-muted);
+            text-align: center;
+            padding-top: 20px;
+            flex-grow: 1; /* Center vertically if results area is empty */
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+
+        /* --- Loading / Spinner --- */
+        .spinner-overlay {
+            position: fixed;
+            z-index: 1050;
+            left: 0; top: 0; width: 100%; height: 100%;
+            background-color: rgba(0, 0, 0, 0.5);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        .spinner {
+            color: var(--accent-color);
+            font-size: 3em;
+            animation: spin 1.5s linear infinite;
+        }
+        @keyframes spin {
+            0% { transform: rotate(0deg); }
+            100% { transform: rotate(360deg); }
+        }
+        .inline-spinner {
+            animation: spin 1.5s linear infinite;
+            margin-left: 8px;
+            font-size: 1em; /* Make inline spinner smaller */
+            vertical-align: middle;
+        }
+
+
+        /* --- Notifications --- */
+        .notification-container {
+            position: fixed;
+            top: 20px;
+            right: 20px;
+            z-index: 1060;
+            width: 350px;
+        }
+        .notification {
+            padding: 15px 20px;
+            border-radius: var(--border-radius);
+            margin-bottom: 10px;
+            color: var(--accent-text-color);
+            box-shadow: 0 3px 6px var(--shadow-color);
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            opacity: 0.95;
+            transition: opacity 0.5s, transform 0.5s;
+            word-break: break-word;
+        }
+        .notification.ng-enter,
+        .notification.ng-leave.ng-leave-active {
+            opacity: 0;
+            transform: translateX(100%); /* Slide in from right */
+        }
+        .notification.ng-leave,
+        .notification.ng-enter.ng-enter-active {
+            opacity: 0.95;
+            transform: translateX(0);
+        }
+        .notification span { flex-grow: 1; } /* Allow text to take space */
+        .notification span .fa, .notification span .fas { margin-right: 8px; }
+        .notification button.close-notif {
+            background: none;
+            border: none;
+            color: inherit;
+            opacity: 0.7;
+            font-size: 1.2em;
+            padding: 0 5px;
+            margin-left: 15px;
+            flex-shrink: 0; /* Prevent shrinking */
+        }
+        .notification button.close-notif:hover { opacity: 1; }
+        .notification-success { background-color: var(--success-color); color: var(--success-text-color); }
+        .notification-error { background-color: var(--danger-color); color: var(--danger-text-color); }
+        .notification-info { background-color: var(--info-color); color: var(--info-text-color); }
+
+
+        /* --- Touchscreen/Coarse Pointer Adjustments --- */
+        @media (pointer: coarse) {
+            :root { --scrollbar-width: 12px; } /* Wider scrollbars */
+            .tabs button,
+            .top-right-buttons button,
+            button, .button {
+                padding: 12px 18px;
+                font-size: var(--font-size-large);
+            }
+            input, select, textarea {
+                padding: 12px;
+                font-size: var(--font-size-large);
+            }
+            th, td { padding: 12px 14px; }
+            .btn-icon { padding: 8px; }
+            .modal-content { max-width: 95%; max-height: 95vh; } /* Allow larger modals */
+            .modal-header, .modal-body, .modal-footer { padding: 20px 30px; }
+        }
+
+    </style>
+</head>
+<body ng-controller="MainCtrl" ng-class="theme + '-theme'">
+
+    <!-- Loading Spinner Overlay -->
+    <div class="spinner-overlay" ng-show="showSpinner">
+        <i class="fas fa-spinner spinner"></i>
+    </div>
+
+    <!-- Notification Area -->
+    <div class="notification-container">
+        <div ng-repeat="notif in notifications track by notif.id" class="notification {{ 'notification-' + notif.type }}" ng-class="{'ng-enter': !notif.show, 'ng-leave': notif.hide}">
+            <span><i class="fa {{ getNotificationIcon(notif.type) }}"></i> {{ notif.message }}</span>
+            <button class="close-notif" ng-click="dismissNotification(notif.id)">&times;</button>
+        </div>
+    </div>
+
+    <!-- Confirmation Modal -->
+    <div class="modal" ng-class="{visible: confirmModal.visible}">
+        <div class="modal-content" style="max-width: 450px;">
+            <div class="modal-header">
+                <h3>{{ confirmModal.title }}</h3>
+                <button class="close-button" ng-click="closeConfirmation(false)">&times;</button>
+            </div>
+            <div class="modal-body">
+                <p>{{ confirmModal.message }}</p>
+            </div>
+            <div class="modal-footer">
+                <button class="button" ng-click="closeConfirmation(false)">Cancel</button>
+                <button class="button btn-danger" ng-click="closeConfirmation(true)">
+                    <i class="fas fa-check"></i> Confirm
+                </button>
+            </div>
+        </div>
+    </div>
+
+     <!-- Agent Role Description Editor Modal -->
+    <div class="modal" ng-class="{visible: roleDescModal.visible}">
+        <div class="modal-content role-desc-modal-content">
+            <div class="modal-header">
+                <h3>Edit Role Description</h3>
+                <button class="close-button" ng-click="cancelRoleDescEditor()">&times;</button>
+            </div>
+            <div class="modal-body no-padding"> <!-- Use full body for textarea -->
+                 <textarea class="large-textarea" ng-model="roleDescModal.tempDescription" placeholder="Enter agent role description..."></textarea>
+            </div>
+            <div class="modal-footer">
+                <button class="button" ng-click="cancelRoleDescEditor()">Cancel</button>
+                <button class="button btn-primary" ng-click="saveRoleDescription()">
+                    <i class="fas fa-save"></i> Save Description
+                </button>
+            </div>
+        </div>
+    </div>
+
+
+    <!-- Header -->
+    <div class="header">
+        <div class="tabs">
+            <button ng-class="{active: activeTab==='llms'}" ng-click="setActiveTab('llms')">
+                <i class="fa fa-robot"></i> LLMs
+            </button>
+            <button ng-class="{active: activeTab==='agents'}" ng-click="setActiveTab('agents')">
+                <i class="fa fa-user-secret"></i> Agents
+            </button>
+            <button ng-class="{active: activeTab==='kbs'}" ng-click="setActiveTab('kbs')">
+                <i class="fa fa-book-open"></i> Knowledge Base
+            </button>
+        </div>
+        <div class="top-right-buttons">
+            <button class="button btn-primary" ng-click="applyChanges()" ng-disabled="isLoading" title="Apply Changes">
+                <i class="fa fa-save"></i> Apply
+                <i ng-show="isLoading" class="fas fa-spinner inline-spinner"></i>
+            </button>
+            <button class="button" ng-click="triggerImport()" title="Import JSON">
+                <i class="fa fa-upload"></i> Import
+            </button>
+            <button class="button" ng-click="exportJSON()" title="Export JSON">
+                <i class="fa fa-download"></i> Export
+            </button>
+            <label title="Disable confirmation dialogs before deleting items">
+                <input type="checkbox" ng-model="disableConfirmDelete"> Disable Delete Confirm
+            </label>
+            <button id="theme-toggle-button" class="button btn-icon" ng-click="toggleTheme()" title="Toggle Light/Dark Theme">
+                <i class="fas" ng-class="{'fa-sun': theme === 'dark', 'fa-moon': theme === 'light'}"></i>
+            </button>
+        </div>
+    </div>
+
+    <!-- Hidden file input -->
+    <input type="file" id="jsonImport" style="display:none" accept=".json" file-reader="handleFile" />
+
+    <!-- LLMs Tab -->
+    <div ng-show="activeTab==='llms'" class="tab-content">
+        <h2><i class="fa fa-robot"></i> LLM Configuration</h2>
+        <table>
+            <thead>
+                <tr>
+                    <th>Model Name</th>
+					<th>API Impl</th>
+                    <th style="display:none;">LLM Key</th>
+                    <th>Base URL</th>
+                    <th>API Key</th>
+                    <th>Temp</th>
+                    <th title="Value must be smaller than the maximum tokens allowed by the model">Max Tokens</th>
+                    <th title="Enable Parallel Function calling">Enable PFC</th>
+                    <th>Name</th>
+                    <th style="width: 100px;">Actions</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr ng-repeat="llm in spec.LLMs">
+                    <td>
+                        <span ng-hide="llm.editing" class="display-value">{{llm.modelName}}</span>
+                        <input ng-show="llm.editing" type="text" ng-model="llm.modelName" placeholder="Model Name" class="editing-input">
+                    </td>
+					<td>
+                        <span ng-hide="llm.editing" class="display-value">{{llm.provider}}</span>
+                        <select ng-show="llm.editing" ng-model="llm.provider" class="editing-input" ng-options="provider as provider for provider in properties.providers">
+                            <option value="">-- Select Provider --</option>
+                        </select>
+                    </td>
+                    <td style="display:none;">{{llm.LLMkey}}</td>
+                    <td>
+                        <span ng-hide="llm.editing" class="display-value">{{llm.baseUrl}}</span>
+                        <input ng-show="llm.editing" type="text" ng-model="llm.baseUrl" placeholder="https://api.example.com" class="editing-input">
+                    </td>
+                    <td>
+                        <span ng-hide="llm.editing" title="{{llm.apiKey}}" class="display-value">{{mask(llm.apiKey)}}</span>
+                        <input ng-show="llm.editing" type="text" ng-model="llm.apiKey" placeholder="API Key" class="editing-input">
+                    </td>
+                    <td>
+                        <span ng-hide="llm.editing">{{llm.temperature}}</span>
+                        <input ng-show="llm.editing" type="number" step="0.1" ng-model="llm.temperature" class="editing-input" style="width: 80px;">
+                    </td>
+                    <td>
+                        <span ng-hide="llm.editing">{{llm.maxTokens}}</span>
+                        <input ng-show="llm.editing" type="number" ng-model="llm.maxTokens" class="editing-input" style="width: 100px;">
+                    </td>
+                    <td style="text-align: center;">
+                         <span ng-hide="llm.editing">{{llm.enableParallelToolCalling}}</span>
+                        <input ng-show="llm.editing" type="checkbox" ng-model="llm.enableParallelToolCalling" class="editing-input">
+                    </td>
+                    <td>
+                        <span ng-hide="llm.editing" class="display-value">{{llm.name}}</span>
+                        <input ng-show="llm.editing" type="text" ng-model="llm.name" placeholder="Optional Friendly Name" class="editing-input">
+                    </td>
+                    <td class="actions">
+                        <span ng-hide="llm.editing">
+                            <button class="btn-icon" ng-click="editLLM(llm)" title="Edit"><i class="fa fa-edit"></i></button>
+                            <button class="btn-icon danger" ng-click="deleteLLM(llm)" title="Delete"><i class="fa fa-trash"></i></button>
+                        </span>
+                        <span ng-show="llm.editing">
+                            <button class="btn-icon success" ng-click="doneEditLLM(llm)" title="Done"><i class="fa fa-check"></i></button>
+                            <button class="btn-icon" ng-click="cancelEditLLM(llm)" title="Cancel"><i class="fa fa-times"></i></button>
+                        </span>
+                    </td>
+                </tr>
+                <tr ng-if="!spec.LLMs || spec.LLMs.length === 0">
+                    <td colspan="8" style="text-align: center; color: var(--text-muted); padding: 20px;">No LLMs configured yet. Click 'Add LLM' below.</td>
+                </tr>
+            </tbody>
+        </table>
+        <button class="button" ng-click="addLLM()" title="Add LLM">
+            <i class="fa fa-plus"></i> Add LLM
+        </button>
+    </div>
+
+    <!-- Agents Tab -->
+    <div ng-show="activeTab==='agents'" class="tab-content">
+        <h2><i class="fa fa-user-secret"></i> Agent Configuration</h2>
+        <table>
+            <thead>
+                <tr>
+                    <th style="width:40px;"></th> <!-- Expand/Collapse -->
+                    <th>Agent ID</th>
+                    <th>Name</th>
+                    <th>Title</th>
+                    <th>LLM</th>
+                    <th>Role Description</th> <!-- Button now -->
+                    <th style="width: 120px;">Actions</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr ng-repeat-start="agent in spec.Agents">
+                    <td style="text-align:center;">
+                        <button class="btn-icon" ng-click="toggleAgent(agent)" title="Expand/Collapse">
+                            <i class="fa" ng-class="{'fa-chevron-down': !agent.expanded, 'fa-chevron-up': agent.expanded}"></i>
+                        </button>
+                    </td>
+                    <td>
+                        <span title="{{agent.identifier}}" class="display-value">{{ agent.identifier | limitTo:8 }}...</span>
+                    </td>
+                    <td>
+                        <span ng-hide="agent.editing" class="display-value">{{agent.name}}</span>
+                        <input ng-show="agent.editing" type="text" ng-model="agent.name" placeholder="Agent Name" class="editing-input">
+                    </td>
+                    <td>
+                        <span ng-hide="agent.editing" class="display-value">{{agent.title}}</span>
+                        <input ng-show="agent.editing" type="text" ng-model="agent.title" placeholder="Title" class="editing-input">
+                    </td>
+                    <td>
+                        <span ng-hide="agent.editing">{{ getLLMName(agent.LLMkey) }}</span>
+                        <select ng-show="agent.editing" ng-model="agent.LLMkey" class="editing-input" ng-options="llm.LLMkey as (llm.name || llm.modelName) for llm in spec.LLMs">
+                            <option value="">-- Select LLM --</option>
+                        </select>
+                    </td>
+                    <td>
+                        <!-- Button to open Role Description Editor -->
+                        <button class="button" ng-click="openRoleDescEditor(agent)">
+                            <i class="fas fa-file-alt"></i> Edit Description...
+                        </button>
+                    </td>
+                    <td class="actions">
+                        <span ng-hide="agent.editing">
+                            <button class="btn-icon" ng-click="editAgent(agent)" title="Edit"><i class="fa fa-edit"></i></button>
+                            <button class="btn-icon danger" ng-click="deleteAgent(agent)" title="Delete"><i class="fa fa-trash"></i></button>
+                            <button class="btn-icon" ng-click="openChatTest(agent)" title="Test Chat"><i class="fa fa-comment"></i></button>
+                        </span>
+                        <span ng-show="agent.editing">
+                            <button class="btn-icon success" ng-click="doneEditAgent(agent)" title="Done"><i class="fa fa-check"></i></button>
+                            <button class="btn-icon" ng-click="cancelEditAgent(agent)" title="Cancel"><i class="fa fa-times"></i></button>
+                        </span>
+                    </td>
+                </tr>
+                <!-- Expanded row -->
+                <tr ng-if="agent.expanded" class="expanded-row" ng-repeat-end>
+                    <td colspan="7">
+                        <div class="sub-section">
+                            <!-- Tools Sub-Table -->
+                            <div class="sub-table">
+                                <h3><i class="fa fa-wrench"></i> Tools</h3>
+                                <table>
+                                    <thead>
+                                        <tr>
+                                            <th style="width: 25%;">FQN</th>
+                                            <th style="width: 30%;">Function Description</th>
+                                            <th>Input JSON Schema</th>
+                                            <th>Static JSON Payload</th>
+                                            <th style="width: 100px;">Actions</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr ng-repeat="tool in spec.Tools | filter:{identifier: agent.identifier}">
+                                            <td>
+                                                <span ng-hide="tool.editing" class="display-value">{{tool.fqn}}</span>
+                                                <div ng-show="tool.editing" class="input-with-icon">
+                                                    <input type="text" ng-model="tool.fqn" placeholder="FQN" class="editing-input">
+                                                    <button class="btn-icon" ng-click="openFQNPopup(tool)" title="Select FQN"><i class="fa fa-search"></i></button>
+                                                </div>
+                                            </td>
+                                            <td>
+                                                 <span ng-hide="tool.editing" class="display-value full-width" style="white-space: pre-wrap; max-height: 60px; overflow-y: auto;">{{ decodeBase64(tool.functionDescription) }}</span>
+                                                 <textarea ng-show="tool.editing" ng-model="tool.functionDescriptionDecoded" placeholder="Function Description" class="editing-input" rows="2"></textarea>
+                                            </td>
+                                            <td style="text-align: center;">
+                                                <button class="button" ng-click="openInputJsonEditor(tool)" title="Edit Input JSON Schema">
+                                                    <i class="fa fa-file-code"></i> Schema
+                                                </button>
+                                            </td>
+                                            <td style="text-align: center;">
+                                                <button class="button" ng-click="openStaticJsonEditor(tool)" title="Edit Static JSON Payload">
+                                                    <i class="fa fa-file-alt"></i> Payload
+                                                </button>
+                                            </td>
+                                            <td class="actions">
+                                                <span ng-hide="tool.editing">
+                                                    <button class="btn-icon" ng-click="editTool(tool)" title="Edit"><i class="fa fa-edit"></i></button>
+                                                    <button class="btn-icon danger" ng-click="deleteTool(tool)" title="Delete"><i class="fa fa-trash"></i></button>
+                                                </span>
+                                                <span ng-show="tool.editing">
+                                                    <button class="btn-icon success" ng-click="doneEditTool(tool)" title="Done"><i class="fa fa-check"></i></button>
+                                                    <button class="btn-icon" ng-click="cancelEditTool(tool)" title="Cancel"><i class="fa fa-times"></i></button>
+                                                </span>
+                                            </td>
+                                        </tr>
+                                        <tr ng-if="!(spec.Tools | filter:{identifier: agent.identifier}).length">
+                                            <td colspan="5" style="text-align: center; color: var(--text-muted);">No tools added for this agent.</td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                                <button class="button" ng-click="addTool(agent)" title="Add Tool">
+                                    <i class="fa fa-plus"></i> Add Tool
+                                </button>
+                            </div>
+                            <!-- RAGs Sub-Table -->
+                            <div class="sub-table">
+                                <h3><i class="fa fa-database"></i> RAG Configurations (Agent Specific)</h3>
+                                <table>
+                                     <thead>
+                                         <tr>
+                                             <th>Path</th>
+                                             <th>File Pattern</th>
+                                             <th>Max Segment (chars)</th>
+                                             <th>Max Overlap (chars)</th>
+                                             <th>Max Search Results</th>
+                                             <th style="width: 100px;">Actions</th>
+                                         </tr>
+                                     </thead>
+                                     <tbody>
+                                         <tr ng-repeat="rag in spec.RAGs | filter:{ESKey: agent.identifier}">
+                                             <td>
+                                                 <span ng-hide="rag.editing" class="display-value">{{rag.path}}</span>
+                                                 <div ng-show="rag.editing" class="input-with-icon">
+                                                     <input type="text" ng-model="rag.path" placeholder="Directory Path" class="editing-input">
+                                                     <input type="file" webkitdirectory directory multiple style="display:none" id="dirPicker{{agent.identifier}}{{$index}}" onchange="angular.element(this).scope().setRAGPath(agent, $event, rag)">
+                                                     <button class="btn-icon" ng-click="triggerDirPicker(agent.identifier, $index)" title="Browse Directory"><i class="fa fa-folder-open"></i></button>
+                                                 </div>
+                                             </td>
+                                             <td>
+                                                 <span ng-hide="rag.editing" class="display-value">{{rag.filePattern}}</span>
+                                                 <input ng-show="rag.editing" type="text" ng-model="rag.filePattern" placeholder="e.g., *.txt, *.pdf" class="editing-input">
+                                             </td>
+                                             <td>
+                                                 <span ng-hide="rag.editing">{{rag.maxSegmentSizeInChars}}</span>
+                                                 <input ng-show="rag.editing" type="number" ng-model="rag.maxSegmentSizeInChars" class="editing-input" style="width: 100px;">
+                                             </td>
+                                             <td>
+                                                 <span ng-hide="rag.editing">{{rag.maxOverlapSizeInChars}}</span>
+                                                 <input ng-show="rag.editing" type="number" ng-model="rag.maxOverlapSizeInChars" class="editing-input" style="width: 100px;">
+                                             </td>
+                                             <td>
+                                                 <span ng-hide="rag.editing">{{rag.maxSearchResults}}</span>
+                                                 <input ng-show="rag.editing" type="number" ng-model="rag.maxSearchResults" class="editing-input" style="width: 100px;">
+                                             </td>
+                                             <td class="actions">
+                                                 <span ng-hide="rag.editing">
+                                                     <button class="btn-icon" ng-click="editRAG(rag)" title="Edit"><i class="fa fa-edit"></i></button>
+                                                     <button class="btn-icon danger" ng-click="deleteRAG(rag)" title="Delete"><i class="fa fa-trash"></i></button>
+                                                 </span>
+                                                 <span ng-show="rag.editing">
+                                                     <button class="btn-icon success" ng-click="doneEditRAG(rag)" title="Done"><i class="fa fa-check"></i></button>
+                                                     <button class="btn-icon" ng-click="cancelEditRAG(rag)" title="Cancel"><i class="fa fa-times"></i></button>
+                                                 </span>
+                                             </td>
+                                         </tr>
+                                         <tr ng-if="!(spec.RAGs | filter:{ESKey: agent.identifier}).length">
+                                             <td colspan="6" style="text-align: center; color: var(--text-muted);">No RAGs configured for this agent.</td>
+                                         </tr>
+                                     </tbody>
+                                </table>
+                                <button class="button" ng-click="addRAG(agent)" title="Add RAG">
+                                    <i class="fa fa-plus"></i> Add RAG
+                                </button>
+                            </div>
+                        </div>
+                    </td>
+                </tr>
+                <tr ng-if="!spec.Agents || spec.Agents.length === 0">
+                    <td colspan="7" style="text-align: center; color: var(--text-muted); padding: 20px;">No Agents configured yet. Click 'Add Agent' below.</td>
+                </tr>
+            </tbody>
+        </table>
+        <button class="button" ng-click="addAgent()" title="Add Agent">
+            <i class="fa fa-plus"></i> Add Agent
+        </button>
+    </div>
+
+    <!-- Knowledge Base Tab -->
+    <div ng-show="activeTab==='kbs'" class="tab-content">
+         <h2><i class="fa fa-book-open"></i> Knowledge Base Configuration</h2>
+         <table>
+             <thead>
+                 <tr>
+                     <th style="width:40px;"></th> <!-- Expand/Collapse -->
+                     <th>KB ID</th>
+                     <th>Name</th>
+                     <th style="width: 120px;">Actions</th>
+                 </tr>
+             </thead>
+             <tbody>
+                 <tr ng-repeat-start="kb in spec.KBs">
+                     <td style="text-align:center;">
+                         <button class="btn-icon" ng-click="toggleKB(kb)" title="Expand/Collapse">
+                             <i class="fa" ng-class="{'fa-chevron-down': !kb.expanded, 'fa-chevron-up': kb.expanded}"></i>
+                         </button>
+                     </td>
+                     <td>
+                         <span ng-hide="kb.editing" title="{{kb.ragID}}" class="display-value">{{ kb.ragID | limitTo:8 }}...</span>
+                         <input ng-show="kb.editing" type="text" ng-model="kb.ragID" class="editing-input" disabled>
+                     </td>
+                     <td>
+                         <span ng-hide="kb.editing" class="display-value">{{kb.name}}</span>
+                         <input ng-show="kb.editing" type="text" ng-model="kb.name" placeholder="Knowledge Base Name" class="editing-input">
+                     </td>
+                     <td class="actions">
+                         <span ng-hide="kb.editing">
+                             <button class="btn-icon" ng-click="editKB(kb)" title="Edit"><i class="fa fa-edit"></i></button>
+                             <button class="btn-icon danger" ng-click="deleteKB(kb)" title="Delete"><i class="fa fa-trash"></i></button>
+                             <button class="btn-icon" ng-click="openKBSearchTest(kb)" title="Test Search"><i class="fa fa-search-plus"></i></button>
+                         </span>
+                         <span ng-show="kb.editing">
+                             <button class="btn-icon success" ng-click="doneEditKB(kb)" title="Done"><i class="fa fa-check"></i></button>
+                             <button class="btn-icon" ng-click="cancelEditKB(kb)" title="Cancel"><i class="fa fa-times"></i></button>
+                         </span>
+                     </td>
+                 </tr>
+                 <!-- Expanded Row for KB RAGs -->
+                 <tr ng-if="kb.expanded" class="expanded-row" ng-repeat-end>
+                     <td colspan="4">
+                         <div class="sub-section">
+                             <div class="sub-table">
+                                  <h3><i class="fa fa-database"></i> RAG Configurations (Knowledge Base Specific)</h3>
+                                  <table>
+                                      <thead>
+                                          <tr>
+                                              <th>Path</th>
+                                              <th>File Pattern</th>
+                                              <th>Max Segment (chars)</th>
+                                              <th>Max Overlap (chars)</th>
+                                              <th>Max Search Results</th>
+                                              <th style="width: 100px;">Actions</th>
+                                          </tr>
+                                      </thead>
+                                      <tbody>
+                                          <tr ng-repeat="rag in spec.RAGs | filter:{ragID: kb.ragID}">
+                                               <td>
+                                                   <span ng-hide="rag.editing" class="display-value">{{rag.path}}</span>
+                                                   <div ng-show="rag.editing" class="input-with-icon">
+                                                       <input type="text" ng-model="rag.path" placeholder="Directory Path" class="editing-input">
+                                                       <input type="file" webkitdirectory directory multiple style="display:none" id="kbDirPicker{{kb.ragID}}{{$index}}" onchange="angular.element(this).scope().setRAGPathKB(kb, $event, rag)">
+                                                       <button class="btn-icon" ng-click="triggerKBDirPicker(kb.ragID, $index)" title="Browse Directory"><i class="fa fa-folder-open"></i></button>
+                                                   </div>
+                                               </td>
+                                               <td>
+                                                   <span ng-hide="rag.editing" class="display-value">{{rag.filePattern}}</span>
+                                                   <input ng-show="rag.editing" type="text" ng-model="rag.filePattern" placeholder="e.g., *.txt, *.pdf" class="editing-input">
+                                               </td>
+                                               <td>
+                                                   <span ng-hide="rag.editing">{{rag.maxSegmentSizeInChars}}</span>
+                                                   <input ng-show="rag.editing" type="number" ng-model="rag.maxSegmentSizeInChars" class="editing-input" style="width: 100px;">
+                                               </td>
+                                               <td>
+                                                   <span ng-hide="rag.editing">{{rag.maxOverlapSizeInChars}}</span>
+                                                   <input ng-show="rag.editing" type="number" ng-model="rag.maxOverlapSizeInChars" class="editing-input" style="width: 100px;">
+                                               </td>
+                                               <td>
+                                                   <span ng-hide="rag.editing">{{rag.maxSearchResults}}</span>
+                                                   <input ng-show="rag.editing" type="number" ng-model="rag.maxSearchResults" class="editing-input" style="width: 100px;">
+                                               </td>
+                                               <td class="actions">
+                                                   <span ng-hide="rag.editing">
+                                                       <button class="btn-icon" ng-click="editKBRAG(rag)" title="Edit"><i class="fa fa-edit"></i></button>
+                                                       <button class="btn-icon danger" ng-click="deleteKBRAG(rag)" title="Delete"><i class="fa fa-trash"></i></button>
+                                                   </span>
+                                                   <span ng-show="rag.editing">
+                                                       <button class="btn-icon success" ng-click="doneEditKBRAG(rag)" title="Done"><i class="fa fa-check"></i></button>
+                                                       <button class="btn-icon" ng-click="cancelEditKBRAG(rag)" title="Cancel"><i class="fa fa-times"></i></button>
+                                                   </span>
+                                               </td>
+                                          </tr>
+                                          <tr ng-if="!(spec.RAGs | filter:{ragID: kb.ragID}).length">
+                                              <td colspan="6" style="text-align: center; color: var(--text-muted);">No RAGs configured for this knowledge base.</td>
+                                          </tr>
+                                      </tbody>
+                                  </table>
+                                  <button class="button" ng-click="addKBRAG(kb)" title="Add RAG">
+                                      <i class="fa fa-plus"></i> Add RAG
+                                  </button>
+                             </div>
+                         </div>
+                     </td>
+                 </tr>
+                  <tr ng-if="!spec.KBs || spec.KBs.length === 0">
+                    <td colspan="4" style="text-align: center; color: var(--text-muted); padding: 20px;">No Knowledge Bases configured yet. Click 'Add Knowledge Base' below.</td>
+                 </tr>
+             </tbody>
+         </table>
+         <button class="button" ng-click="addKB()" title="Add Knowledge Base">
+             <i class="fa fa-plus"></i> Add Knowledge Base
+         </button>
+    </div>
+
+    <!-- Modals -->
+    <!-- FQN Popup Modal -->
+    <div class="modal" ng-class="{visible: fqnPopupVisible}">
+        <div class="modal-content" style="max-width: 600px;">
+            <div class="modal-header">
+                <h3>Select FQN</h3>
+                <button class="close-button" ng-click="closeFQNPopup()" title="Close">&times;</button>
+            </div>
+            <div class="modal-body">
+                <div ng-show="fqnListLoading" style="text-align: center; padding: 20px;">
+                    <i class="fas fa-spinner spinner fa-2x"></i> Loading FQNs...
+                </div>
+                <ul class="fqn-list" ng-hide="fqnListLoading">
+                    <li ng-repeat="item in fqnList" ng-click="selectFQN(item.fqn)">{{item.fqn}}</li>
+                    <li ng-if="!fqnList || fqnList.length === 0" style="color: var(--text-muted); text-align:center; cursor: default;">No FQNs found or available.</li>
+                </ul>
+            </div>
+            <div class="modal-footer">
+                <button class="button" ng-click="closeFQNPopup()">Cancel</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Chat Test Modal -->
+    <div class="modal" ng-class="{visible: chatModalVisible}">
+        <div class="modal-content chat-modal-content">
+            <div class="modal-header">
+                <h3>Chat Test - {{ currentChatAgent.name || currentChatAgent.identifier }}</h3>
+                <button class="close-button" ng-click="closeChatTest()" title="Close Chat">&times;</button>
+            </div>
+            <!-- Use flex column for body -->
+            <div class="modal-body" style="display: flex; flex-direction: column; padding: 15px;">
+                 <div id="chatWindow"> <!-- Chat history area -->
+                    <div ng-if="chatHistoryLoading" class="chat-thinking-indicator">
+                        <i class="fas fa-spinner spinner fa-lg"></i> Loading history...
+                    </div>
+                     <!-- Messages will be added here by ng-repeat -->
+                     <div ng-repeat="chat in chatHistory track by $index" class="chat-message" ng-class="{'chat-message-user': chat.user === 'User', 'chat-message-agent': chat.user === 'Agent'}">
+                         <strong>{{chat.user}}</strong>
+                         <span style="white-space: pre-wrap;">{{chat.text}}</span>
+                     </div>
+                    <!-- Thinking indicator appears dynamically at the end -->
+                     <div ng-if="chatWaitVisible" class="chat-thinking-indicator chat-message-agent" style="margin-right: auto;">
+                         <i class="fas fa-spinner spinner"></i> Agent is thinking...
+                     </div>
+                     <div ng-if="!chatHistoryLoading && chatHistory.length === 0" class="chat-thinking-indicator">
+                         No chat history yet. Start by sending a message.
+                     </div>
+                </div>
+            </div>
+            <div class="modal-footer chat-input-area">
+                <input type="text" ng-model="newChatMessage" placeholder="Type your message here..." ng-keypress="$event.which === 13 && sendChatMessage()" ng-disabled="chatWaitVisible"/>
+                <button class="button btn-primary" ng-click="sendChatMessage()" ng-disabled="!newChatMessage || chatWaitVisible">
+                    <i class="fas fa-paper-plane"></i> Send
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <!-- KB Search Test Modal -->
+    <div class="modal" ng-class="{visible: kbSearchModalVisible}">
+        <div class="modal-content kb-search-modal-content">
+            <div class="modal-header">
+                <h3>Knowledge Base Search Test - {{ currentKB.name || currentKB.ragID }}</h3>
+                <button class="close-button" ng-click="closeKBSearchTest()" title="Close Search">&times;</button>
+            </div>
+            <div class="modal-body"> <!-- Already uses flex column -->
+                <div class="kb-search-input-area">
+                    <input type="text" ng-model="kbSearchText" placeholder="Enter search text..." ng-keypress="$event.which === 13 && sendKBSearchRequest()" ng-disabled="kbSearchWaitVisible"/>
+                    <label>
+                        <input type="checkbox" ng-model="enableQueryExpander" ng-disabled="kbSearchWaitVisible"/> Enable Query Expander
+                    </label>
+                    <button class="button btn-primary" ng-click="sendKBSearchRequest()" ng-disabled="!kbSearchText || kbSearchWaitVisible">
+                        <i class="fas fa-search"></i> Search
+                        <i ng-show="kbSearchWaitVisible" class="fas fa-spinner inline-spinner"></i>
+                    </button>
+                </div>
+                <div id="kbSearchResults">
+                     <div ng-if="kbSearchWaitVisible" class="kb-search-placeholder">
+                         <i class="fas fa-spinner spinner"></i> Searching...
+                     </div>
+                     <pre ng-if="!kbSearchWaitVisible && kbSearchResults !== null">{{ kbSearchResults | json }}</pre>
+                     <div ng-if="!kbSearchWaitVisible && kbSearchResults === null" class="kb-search-placeholder">
+                         Enter text and click Search to see results.
+                     </div>
+                     <div ng-if="!kbSearchWaitVisible && kbSearchResults !== null && (kbSearchResults | json) === '{}' || (kbSearchResults | json) === '[]'" class="kb-search-placeholder">
+                         No results found for your query.
+                    </div>
+                </div>
+            </div>
+            <div class="modal-footer">
+                <button class="button" ng-click="closeKBSearchTest()">Close</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Static JSON Payload Editor Modal -->
+    <div class="modal" ng-class="{visible: staticJsonEditorVisible}">
+        <div class="modal-content json-modal-content">
+            <div class="modal-header">
+                <h3>Edit Static JSON Payload</h3>
+                <button class="close-button" ng-click="cancelStaticJsonEditor()" title="Close">&times;</button>
+            </div>
+            <div class="modal-body no-padding">
+                <textarea class="large-textarea" ng-model="tempStaticJsonPayloadDecoded" placeholder="Enter valid JSON or leave empty"></textarea>
+            </div>
+             <div ng-show="jsonError" class="json-error-display">
+                 <i class="fas fa-exclamation-triangle"></i> {{ jsonError }}
+             </div>
+            <div class="modal-footer json-editor-buttons">
+                <button class="button" ng-click="beautifyStaticJson()">
+                    <i class="fas fa-align-left"></i> Beautify
+                </button>
+                <button class="button" ng-click="cancelStaticJsonEditor()">Cancel</button>
+                <button class="button btn-primary" ng-click="saveStaticJsonPayload()">
+                    <i class="fas fa-check"></i> Done
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Input JSON Schema Editor Modal -->
+    <div class="modal" ng-class="{visible: inputJsonEditorVisible}">
+        <div class="modal-content json-modal-content">
+            <div class="modal-header">
+                <h3>Edit Input JSON Schema</h3>
+                <button class="close-button" ng-click="cancelInputJsonEditor()" title="Close">&times;</button>
+            </div>
+            <div class="modal-body no-padding">
+                <textarea class="large-textarea" ng-model="tempInputJsonSchemaDecoded" placeholder="Enter valid JSON Schema or leave empty"></textarea>
+            </div>
+             <div ng-show="jsonError" class="json-error-display">
+                <i class="fas fa-exclamation-triangle"></i> {{ jsonError }}
+             </div>
+            <div class="modal-footer json-editor-buttons">
+                <button class="button" ng-click="beautifyInputJson()">
+                    <i class="fas fa-align-left"></i> Beautify
+                </button>
+                <button class="button" ng-click="cancelInputJsonEditor()">Cancel</button>
+                <button class="button btn-primary" ng-click="saveInputJsonSchema()">
+                    <i class="fas fa-check"></i> Done
+                </button>
+            </div>
+        </div>
+    </div>
+
+
+    <script>
+        var app = angular.module('jsonEditorApp', []);
+
+        // Directive to read files from file input
+        app.directive('fileReader', function () {
+            // ... (no changes needed here)
+             return {
+                scope: {
+                fileReader: "="
+                },
+                link: function(scope, element, attrs) {
+                element.bind('change', function(changeEvent) {
+                    var file = changeEvent.target.files[0];
+                    if (file) {
+                    var reader = new FileReader();
+                    reader.onload = function(e) {
+                        scope.$apply(function() {
+                        scope.fileReader(e.target.result);
+                        });
+                    };
+                    reader.onerror = function(e) {
+                        scope.$apply(function() {
+                            scope.showNotification('error', 'Error reading file: ' + file.name);
+                        });
+                    };
+                    reader.readAsText(file);
+                    }
+                    // Reset input value to allow selecting the same file again
+                    element.val(null);
+                });
+                }
+            };
+        });
+
+        app.controller('MainCtrl', ['$scope', '$http', '$timeout', '$window', function ($scope, $http, $timeout, $window) {
+            $scope.activeTab = 'llms';
+            $scope.disableConfirmDelete = false;
+            $scope.isLoading = false; // For Apply button loading state
+            $scope.showSpinner = false; // Global loading spinner
+
+            // Theme Management
+            $scope.theme = localStorage.getItem('configuratorTheme') || 'dark'; // Default to dark
+            $scope.toggleTheme = function () {
+                $scope.theme = ($scope.theme === 'dark' ? 'light' : 'dark');
+                localStorage.setItem('configuratorTheme', $scope.theme);
+            };
+
+            // Notification System
+            $scope.notifications = [];
+            let notificationIdCounter = 0;
+            $scope.showNotification = function (type, message, duration = 5000) {
+                const id = notificationIdCounter++;
+                const notification = { id: id, type: type, message: message, show: true };
+                $scope.notifications.push(notification);
+
+                // Auto-dismiss
+                $timeout(() => {
+                    $scope.dismissNotification(id);
+                }, duration);
+            };
+            $scope.dismissNotification = function (id) {
+                const index = $scope.notifications.findIndex(n => n.id === id);
+                if (index > -1) {
+                    $scope.notifications[index].hide = true; // Trigger leave animation
+                    $timeout(() => {
+                         const removeIndex = $scope.notifications.findIndex(n => n.id === id);
+                         if (removeIndex > -1) {
+                             $scope.notifications.splice(removeIndex, 1);
+                         }
+                    }, 500); // Match CSS transition duration
+                }
+            };
+            $scope.getNotificationIcon = function (type) {
+                switch (type) {
+                    case 'success': return 'fa-check-circle';
+                    case 'error': return 'fa-exclamation-triangle';
+                    case 'info': return 'fa-info-circle';
+                    default: return 'fa-bell';
+                }
+            };
+
+            // Confirmation Modal
+            $scope.confirmModal = { visible: false, title: '', message: '', onConfirm: null };
+            $scope.showConfirmation = function (title, message, onConfirmCallback) {
+                $scope.confirmModal.title = title;
+                $scope.confirmModal.message = message;
+                $scope.confirmModal.onConfirm = onConfirmCallback;
+                $scope.confirmModal.visible = true;
+            };
+            $scope.closeConfirmation = function (confirmed) {
+                if (confirmed && typeof $scope.confirmModal.onConfirm === 'function') {
+                    $scope.confirmModal.onConfirm();
+                }
+                $scope.confirmModal.visible = false;
+                // Delay clearing to prevent potential race conditions if onConfirm triggers another modal
+                $timeout(() => {
+                     $scope.confirmModal.title = '';
+                     $scope.confirmModal.message = '';
+                     $scope.confirmModal.onConfirm = null;
+                }, 300); // Slightly longer than transition
+            };
+
+             // Agent Role Description Modal
+            $scope.roleDescModal = { visible: false, currentAgent: null, tempDescription: '' };
+            $scope.openRoleDescEditor = function(agent) {
+                $scope.roleDescModal.currentAgent = agent;
+                $scope.roleDescModal.tempDescription = $scope.decodeBase64(agent.roleDescription || "");
+                $scope.roleDescModal.visible = true;
+            };
+            $scope.saveRoleDescription = function() {
+                if ($scope.roleDescModal.currentAgent) {
+                    $scope.roleDescModal.currentAgent.roleDescription = $scope.encodeBase64($scope.roleDescModal.tempDescription || "");
+                    $scope.showNotification('info', `Role description for agent '${$scope.roleDescModal.currentAgent.name || $scope.roleDescModal.currentAgent.identifier}' updated.`);
+                }
+                $scope.roleDescModal.visible = false;
+                $scope.roleDescModal.currentAgent = null;
+                $scope.roleDescModal.tempDescription = '';
+            };
+            $scope.cancelRoleDescEditor = function() {
+                 $scope.roleDescModal.visible = false;
+                 $scope.roleDescModal.currentAgent = null;
+                 $scope.roleDescModal.tempDescription = '';
+            };
+
+            // Chat Test enhancement variables
+            $scope.chatModalVisible = false;
+            $scope.chatHistory = [];
+            $scope.currentChatAgent = null;
+            $scope.newChatMessage = "";
+            $scope.chatWaitVisible = false;
+            $scope.chatHistoryLoading = false;
+
+            // KB Search Test enhancement variables
+            $scope.kbSearchModalVisible = false;
+            $scope.currentKB = null;
+            $scope.kbSearchText = "";
+            $scope.kbSearchResults = null; // Use null initially
+            $scope.enableQueryExpander = false;
+            $scope.kbSearchWaitVisible = false;
+
+            // JSON Editor Common Variables
+            $scope.staticJsonEditorVisible = false;
+            $scope.tempStaticJsonPayloadDecoded = "";
+            $scope.currentToolForJson = null;
+            $scope.inputJsonEditorVisible = false;
+            $scope.tempInputJsonSchemaDecoded = "";
+            $scope.currentToolForInputJson = null;
+            $scope.jsonError = null;
+
+            // FQN Popup
+            $scope.fqnPopupVisible = false;
+            $scope.fqnList = [];
+            $scope.currentTool = null;
+            $scope.fqnListLoading = false;
+
+            // Initial JSON spec data
+            $scope.spec = {};
+			$scope.properties={"providers":["openAI","Google"]};
+
+            // Ensure arrays exist after load
+            function initializeSpecArrays() {
+                $scope.spec.LLMs = $scope.spec.LLMs || [];
+                $scope.spec.Agents = $scope.spec.Agents || [];
+                $scope.spec.Tools = $scope.spec.Tools || [];
+                $scope.spec.RAGs = $scope.spec.RAGs || [];
+                $scope.spec.KBs = $scope.spec.KBs || [];
+                $scope.spec.LLMs.map(LLM => {
+                    LLM["$$hashKey"] = null;
+                });
+                 // Add _original state for existing items loaded from server
+                 // This helps with the cancel logic if edit is pressed then cancelled
+                 const addOriginalState = (item) => { item._original = angular.copy(item); };
+                 $scope.spec.LLMs.forEach(addOriginalState);
+                 $scope.spec.Agents.forEach(addOriginalState);
+                 $scope.spec.Tools.forEach(addOriginalState);
+                 $scope.spec.RAGs.forEach(addOriginalState);
+                 $scope.spec.KBs.forEach(addOriginalState);
+            }
+            // initializeSpecArrays(); // Call after data load
+
+            // Base64 utility functions
+            $scope.decodeBase64 = function (str) {
+                if (!str) return "";
+                try {
+                    return decodeURIComponent(atob(str).split('').map(function (c) {
+                        return '%' + ('00' + c.charCodeAt(0).toString(16)).slice(-2);
+                    }).join(''));
+                } catch (e) {
+                    console.warn("Base64 decoding failed:", e, "Input:", str);
+                    return "!!DECODE_ERROR!!"; // Indicate error in UI
+                }
+            };
+            $scope.encodeBase64 = function (str) {
+                if (!str) return "";
+                try {
+                    return btoa(encodeURIComponent(str).replace(/%([0-9A-F]{2})/g, function (match, p1) {
+                        return String.fromCharCode('0x' + p1);
+                    }));
+                } catch (e) {
+                    console.error("Base64 encoding failed:", e);
+                    return "!!ENCODE_ERROR!!";
+                }
+            };
+
+            // UUID generator
+            function generateUUID() {
+                return ([1e7] + -1e3 + -4e3 + -8e3 + -1e11).replace(/[018]/g, c =>
+                    (c ^ crypto.getRandomValues(new Uint8Array(1))[0] & 15 >> c / 4).toString(16)
+                );
+            }
+
+            // **UPDATED Mask Function**
+            $scope.mask = function (input) {
+                if (!input || typeof input !== 'string' || input.length <= 8) return input;
+
+                const visibleChars = 4; // Show 4 chars at start and end
+                const maxTotalLength = 24; // Approx max length with ellipsis
+                const maxMaskLength = maxTotalLength - (visibleChars * 2); // Max asterisks
+
+                let maskLength;
+                if (input.length > 20) {
+                     // If original is long, use maxMaskLength
+                     maskLength = maxMaskLength;
+                } else {
+                     // Otherwise, mask the middle part
+                     maskLength = input.length - (visibleChars * 2);
+                }
+                maskLength = Math.max(3, maskLength); // Ensure at least 3 asterisks
+
+                return input.slice(0, visibleChars) + '*'.repeat(maskLength) + input.slice(-visibleChars);
+            };
+
+
+            // --- Entity Management Functions (LLM, Agent, KB, Tool, RAG) ---
+            // ... (Add/Edit/Done/Cancel/Delete functions for LLM, Agent, KB, Tool, RAG) ...
+            // Important: Ensure _original copy is handled correctly in add/edit/cancel
+             // LLM functions
+            $scope.addLLM = function() {
+                var newLLM = {
+                modelName: "", LLMkey: generateUUID(), baseUrl: "", apiKey: "",
+                temperature: 0.5, maxTokens: 4096, enableParallelToolCalling: false,
+                name: "", editing: true, _original: null
+                };
+                newLLM._original = { modelName: "", LLMkey: newLLM.LLMkey }; // Store minimal original for 'isNew' check
+                $scope.spec.LLMs.push(newLLM);
+            };
+            $scope.editLLM = function(llm) {
+                if (!llm._original) llm._original = angular.copy(llm); // Store state if not already stored
+                llm.editing = true;
+            };
+            $scope.doneEditLLM = function(llm) {
+                llm.editing = false;
+                // Don't delete _original here, keep it until save or load
+            };
+            $scope.cancelEditLLM = function(llm) {
+                if (llm._original && llm._original.modelName === "") { // Check if it was a new, unsaved item
+                    var index = $scope.spec.LLMs.indexOf(llm);
+                    if (index > -1) $scope.spec.LLMs.splice(index, 1);
+                } else if (llm._original) {
+                    // Restore original values
+                    Object.assign(llm, llm._original);
+                    llm.editing = false;
+                } else {
+                     // If no original, just stop editing (shouldn't happen often)
+                     llm.editing = false;
+                }
+            };
+             $scope.deleteLLM = function(llm) {
+                var performDelete = () => {
+                        var index = $scope.spec.LLMs.findIndex(item => item.LLMkey === llm.LLMkey); // Use findIndex for safety
+                        if (index > -1) {
+                            $scope.spec.LLMs.splice(index, 1);
+                            $scope.showNotification('info', `LLM '${llm.name || llm.modelName}' deleted.`);
+                        }
+                    };
+
+                var inUse = $scope.spec.Agents.some(agent => agent.LLMkey === llm.LLMkey);
+                if (inUse) {
+                    $scope.showNotification('error', "Cannot delete: LLM is used by one or more Agents.");
+                    return;
+                }
+
+                if ($scope.disableConfirmDelete) {
+                    performDelete();
+                } else {
+                    $scope.showConfirmation('Delete LLM?', `Are you sure you want to delete the LLM '${llm.name || llm.modelName}'? This cannot be undone.`, performDelete);
+                }
+            };
+            $scope.getLLMName = function(LLMkey) {
+                var found = $scope.spec.LLMs.find(llm => llm.LLMkey === LLMkey);
+                return found ? (found.name || found.modelName) : "N/A";
+            };
+
+            // Agent functions
+            $scope.addAgent = function() {
+                if ($scope.spec.LLMs.length === 0) {
+                $scope.showNotification('error', "Please create at least one LLM before adding an Agent.");
+                return;
+                }
+                var newAgent = {
+                LLMkey: $scope.spec.LLMs[0].LLMkey, identifier: generateUUID(),
+                name: "", title: "", roleDescription: "", tn: "",
+                editing: true, expanded: false, _original: null
+                };
+                newAgent._original = { name: "", identifier: newAgent.identifier }; // Minimal original
+                $scope.spec.Agents.push(newAgent);
+            };
+            $scope.editAgent = function(agent) {
+                if (!agent._original) agent._original = angular.copy(agent);
+                 // Role description editing is now handled by the modal
+                agent.editing = true;
+            };
+            $scope.doneEditAgent = function(agent) {
+                // Role description is saved via its own modal now
+                agent.editing = false;
+            };
+            $scope.cancelEditAgent = function(agent) {
+                if (agent._original && agent._original.name === "") {
+                    var index = $scope.spec.Agents.findIndex(item => item.identifier === agent.identifier);
+                    if (index > -1) $scope.spec.Agents.splice(index, 1);
+                } else if(agent._original) {
+                     // Only restore fields edited inline (name, title, LLMKey)
+                     // RoleDescription is handled separately
+                     agent.name = agent._original.name;
+                     agent.title = agent._original.title;
+                     agent.LLMkey = agent._original.LLMkey;
+                     agent.editing = false;
+                } else {
+                     agent.editing = false;
+                }
+            };
+            $scope.deleteAgent = function(agent) {
+                var performDelete = () => {
+                        var index = $scope.spec.Agents.findIndex(item => item.identifier === agent.identifier);
+                        if (index > -1) {
+                            const agentId = agent.identifier;
+                            const agentName = agent.name || agentId;
+                            $scope.spec.Agents.splice(index, 1);
+                            // Remove associated Tools and Agent-specific RAGs
+                            $scope.spec.Tools = $scope.spec.Tools.filter(tool => tool.identifier !== agentId);
+                            $scope.spec.RAGs = $scope.spec.RAGs.filter(rag => !(rag.ESKey === agentId && !rag.ragID)); // Remove if ESKey matches and no ragID
+                            $scope.showNotification('info', `Agent '${agentName}' and associated items deleted.`);
+                        }
+                    };
+
+                if ($scope.disableConfirmDelete) {
+                    performDelete();
+                } else {
+                    $scope.showConfirmation('Delete Agent?', `Are you sure you want to delete Agent '${agent.name || agent.identifier}' and all its Tools and agent-specific RAGs? This cannot be undone.`, performDelete);
+                }
+            };
+            $scope.toggleAgent = function(agent) {
+                agent.expanded = !agent.expanded;
+            };
+
+            // Tool functions
+            $scope.addTool = function(agent) {
+                var newTool = {
+                inputJSONSchema: "", fqn: "", identifier: agent.identifier, functionDescription: "",
+                staticJsonPayload: "",
+                editing: true, functionDescriptionDecoded: "", _original: null // Keep decoded for inline edit
+                };
+                newTool._original = { fqn: "", identifier: newTool.identifier }; // Minimal
+                $scope.spec.Tools.push(newTool);
+            };
+            $scope.editTool = function(tool) {
+                if (!tool._original) tool._original = angular.copy(tool);
+                // Keep decoding here for the inline textarea edit
+                tool.functionDescriptionDecoded = $scope.decodeBase64(tool.functionDescription);
+                tool.editing = true;
+            };
+            $scope.doneEditTool = function(tool) {
+                // Save inline edited description
+                tool.functionDescription = $scope.encodeBase64(tool.functionDescriptionDecoded || "");
+                // JSON Schema/Payload saved via modals
+                tool.editing = false;
+            };
+            $scope.cancelEditTool = function(tool) {
+                if (tool._original && tool._original.fqn === "") {
+                    var index = $scope.spec.Tools.findIndex(item => item.identifier === tool.identifier && item.fqn === ""); // Find the new one
+                    if (index > -1) $scope.spec.Tools.splice(index, 1);
+                } else if (tool._original) {
+                    // Restore inline fields
+                    tool.fqn = tool._original.fqn;
+                    tool.functionDescription = tool._original.functionDescription;
+                    // Re-decode for display consistency if needed immediately
+                    tool.functionDescriptionDecoded = $scope.decodeBase64(tool.functionDescription);
+                    // JSON fields are handled by their modals' cancel
+                    tool.editing = false;
+                } else {
+                    tool.editing = false;
+                }
+            };
+            $scope.deleteTool = function(tool) {
+                var performDelete = () => {
+                        // Find using identifier and FQN
+                        var index = $scope.spec.Tools.findIndex(item => item.identifier === tool.identifier && item.fqn === tool.fqn);
+                        if (index > -1) {
+                            $scope.spec.Tools.splice(index, 1);
+                            $scope.showNotification('info', `Tool '${tool.fqn}' deleted.`);
+                        }
+                    };
+
+                if ($scope.disableConfirmDelete) {
+                    performDelete();
+                } else {
+                    $scope.showConfirmation('Delete Tool?', `Are you sure you want to delete the Tool '${tool.fqn}'?`, performDelete);
+                }
+            };
+
+             // --- RAG Functions (Shared Logic for Agent & KB) ---
+            function addRAGBase(owner, type) {
+                var newRAG = {
+                    path: "", filePattern: "*.txt", // Sensible default pattern
+                    maxSegmentSizeInChars: 1000,
+                    maxOverlapSizeInChars: 100,
+                    maxSearchResults: 5,
+                    editing: true, _original: null
+                };
+                if (type === 'agent') {
+                    newRAG.ESKey = owner.identifier;
+                    newRAG.personalityId = owner.identifier;
+                    newRAG._original = { path: "", ESKey: newRAG.ESKey };
+                } else { // kb
+                    newRAG.ragID = owner.ragID;
+                    newRAG.ESKey = owner.ragID; // Maybe KB specific RAGs also use ESKey? Check API requirements. If not, remove this line for KBs.
+                     newRAG._original = { path: "", ragID: newRAG.ragID };
+                }
+                $scope.spec.RAGs.push(newRAG);
+            }
+             function editRAGBase(rag) {
+                if(!rag._original) rag._original = angular.copy(rag);
+                rag.editing = true;
+            }
+            function doneEditRAGBase(rag) {
+                rag.editing = false;
+            }
+             function cancelEditRAGBase(rag) {
+                // Check if it was a new, unsaved RAG
+                 const isNew = rag._original && rag._original.path === "";
+                 const findCondition = (item) => {
+                    if (isNew) {
+                        return rag.ESKey ? (item.ESKey === rag.ESKey && item.path === "") : (item.ragID === rag.ragID && item.path === "");
+                    } else if (rag._original) {
+                        // Use original key for finding if not new (key might have changed during edit)
+                         return rag._original.ESKey ? (item.ESKey === rag._original.ESKey && item.path === rag._original.path) : (item.ragID === rag._original.ragID && item.path === rag._original.path);
+                    }
+                    return false; // Cannot determine index if no original
+                 };
+
+                var index = $scope.spec.RAGs.findIndex(findCondition);
+
+                if (isNew && index > -1) {
+                    $scope.spec.RAGs.splice(index, 1);
+                } else if (rag._original) {
+                    Object.assign(rag, rag._original); // Restore all fields
+                    rag.editing = false;
+                } else {
+                     rag.editing = false; // Should ideally not happen without _original
+                }
+            }
+
+            function deleteRAGBase(rag) {
+                var performDelete = () => {
+                    // Find the specific RAG to delete
+                     var index = $scope.spec.RAGs.findIndex(item =>
+                        item.path === rag.path &&
+                        ((item.ESKey && item.ESKey === rag.ESKey) || (item.ragID && item.ragID === rag.ragID))
+                     );
+                    if (index > -1) {
+                        $scope.spec.RAGs.splice(index, 1);
+                        $scope.showNotification('info', `RAG configuration for path '${rag.path || 'Unnamed'}' deleted.`);
+                    }
+                };
+                if ($scope.disableConfirmDelete) {
+                    performDelete();
+                } else {
+                    $scope.showConfirmation('Delete RAG Configuration?', `Are you sure you want to delete the RAG configuration for path '${rag.path || 'Unnamed'}'?`, performDelete);
+                }
+            }
+
+            // RAG functions (for Agents) - Use Base functions
+            $scope.addRAG = (agent) => addRAGBase(agent, 'agent');
+            $scope.editRAG = (rag) => editRAGBase(rag);
+            $scope.doneEditRAG = (rag) => doneEditRAGBase(rag);
+            $scope.cancelEditRAG = (rag) => cancelEditRAGBase(rag);
+            $scope.deleteRAG = (rag) => deleteRAGBase(rag);
+
+             // KB functions
+            $scope.addKB = function() {
+                var newKB = {
+                ragID: generateUUID(), name: "",
+                editing: true, expanded: false, _original: null
+                };
+                newKB._original = { name: "", ragID: newKB.ragID }; // Minimal
+                $scope.spec.KBs.push(newKB);
+            };
+            $scope.editKB = function(kb) {
+                if(!kb._original) kb._original = angular.copy(kb);
+                kb.editing = true;
+            };
+            $scope.doneEditKB = function(kb) {
+                kb.editing = false;
+            };
+            $scope.cancelEditKB = function(kb) {
+                 if (kb._original && kb._original.name === "") {
+                    var index = $scope.spec.KBs.findIndex(item => item.ragID === kb.ragID);
+                    if (index > -1) $scope.spec.KBs.splice(index, 1);
+                } else if (kb._original) {
+                    Object.assign(kb, kb._original);
+                    kb.editing = false;
+                } else {
+                    kb.editing = false;
+                }
+            };
+            $scope.deleteKB = function(kb) {
+                var performDelete = () => {
+                    var index = $scope.spec.KBs.findIndex(item => item.ragID === kb.ragID);
+                    if (index > -1) {
+                        const kbId = kb.ragID;
+                        const kbName = kb.name || kbId;
+                        $scope.spec.KBs.splice(index, 1);
+                        // Remove associated KB-specific RAGs
+                         $scope.spec.RAGs = $scope.spec.RAGs.filter(rag => !(rag.ragID === kbId && !rag.ESKey)); // Remove if ragID matches and no ESKey
+                        $scope.showNotification('info', `Knowledge Base '${kbName}' and its RAG configurations deleted.`);
+                    }
+                };
+                if ($scope.disableConfirmDelete) {
+                    performDelete();
+                } else {
+                    $scope.showConfirmation('Delete Knowledge Base?', `Are you sure you want to delete Knowledge Base '${kb.name || kb.ragID}' and all its RAG configurations? This cannot be undone.`, performDelete);
+                }
+            };
+            $scope.toggleKB = function(kb) {
+                kb.expanded = !kb.expanded;
+            };
+
+             // KB RAG functions - Use Base functions
+            $scope.addKBRAG = (kb) => addRAGBase(kb, 'kb');
+            $scope.editKBRAG = (rag) => editRAGBase(rag);
+            $scope.doneEditKBRAG = (rag) => doneEditRAGBase(rag);
+            $scope.cancelEditKBRAG = (rag) => cancelEditRAGBase(rag);
+            $scope.deleteKBRAG = (rag) => deleteRAGBase(rag);
+
+            // Directory picker for RAGs (Agents)
+             $scope.triggerDirPicker = function(ownerId, index) {
+                 $("#dirPicker" + ownerId + index).click();
+             };
+             $scope.setRAGPath = function(owner, event, rag) { // owner not really needed here
+                var files = event.target.files;
+                if (files && files.length > 0 && files[0].webkitRelativePath) {
+                    const pathParts = files[0].webkitRelativePath.split('/');
+                    $scope.$apply(() => {
+                        // Heuristic: Take the part before the first file name found
+                        let dirPath = files[0].webkitRelativePath;
+                        let fileNameIndex = dirPath.lastIndexOf(files[0].name);
+                        if(fileNameIndex > 0) {
+                             dirPath = dirPath.substring(0, fileNameIndex);
+                             // Remove trailing slash if present
+                             if(dirPath.endsWith('/')) dirPath = dirPath.slice(0, -1);
+                        }
+                        rag.path = dirPath || pathParts[0]; // Fallback to first part
+                    });
+                } else if (files && files.length > 0) {
+                    // Fallback if webkitRelativePath is not useful/available
+                     $scope.$apply(() => { rag.path = "Selected Folder"; }); // Placeholder
+                      $scope.showNotification('info', "Could not determine full folder path, please verify manually.");
+                }
+             };
+
+             // Directory picker for KB RAGs
+             $scope.triggerKBDirPicker = function(ownerId, index) {
+                  $("#kbDirPicker" + ownerId + index).click();
+             };
+             $scope.setRAGPathKB = function(kb, event, rag) {
+                 $scope.setRAGPath(kb, event, rag); // Reuse agent logic
+             };
+
+
+            // --- Modal Functions ---
+
+            // Shared JSON Beautify and Validate
+            function beautifyAndValidateJson(jsonString) {
+                $scope.jsonError = null;
+                try {
+                    if (!jsonString || jsonString.trim() === '') return '';
+                    var obj = JSON.parse(jsonString);
+                    return JSON.stringify(obj, null, 2);
+                } catch (e) {
+                    $scope.jsonError = "Invalid JSON: " + e.message;
+                    return jsonString;
+                }
+            }
+
+            // Static JSON Payload Editor Modal
+            $scope.openStaticJsonEditor = function (tool) {
+                $scope.currentToolForJson = tool;
+                $scope.tempStaticJsonPayloadDecoded = $scope.decodeBase64(tool.staticJsonPayload || "");
+                $scope.jsonError = null;
+                $scope.staticJsonEditorVisible = true;
+            };
+            $scope.beautifyStaticJson = function () {
+                $scope.tempStaticJsonPayloadDecoded = beautifyAndValidateJson($scope.tempStaticJsonPayloadDecoded);
+            };
+            $scope.saveStaticJsonPayload = function () {
+                if (!$scope.currentToolForJson) return;
+                $scope.beautifyStaticJson(); // Validate
+                if ($scope.jsonError) {
+                    $scope.showNotification('error', 'Cannot save: Invalid JSON detected.');
+                    return;
+                }
+                $scope.currentToolForJson.staticJsonPayload = $scope.encodeBase64($scope.tempStaticJsonPayloadDecoded);
+                $scope.staticJsonEditorVisible = false;
+                 $scope.currentToolForJson = null; // Clear context
+                 $scope.tempStaticJsonPayloadDecoded = "";
+                 $scope.jsonError = null;
+            };
+            $scope.cancelStaticJsonEditor = function () {
+                $scope.staticJsonEditorVisible = false;
+                $scope.currentToolForJson = null;
+                $scope.tempStaticJsonPayloadDecoded = "";
+                $scope.jsonError = null;
+            };
+
+            // Input JSON Schema Editor Modal
+            $scope.openInputJsonEditor = function (tool) {
+                $scope.currentToolForInputJson = tool;
+                $scope.tempInputJsonSchemaDecoded = $scope.decodeBase64(tool.inputJSONSchema || "");
+                $scope.jsonError = null;
+                $scope.inputJsonEditorVisible = true;
+            };
+            $scope.beautifyInputJson = function () {
+                $scope.tempInputJsonSchemaDecoded = beautifyAndValidateJson($scope.tempInputJsonSchemaDecoded);
+            };
+            $scope.saveInputJsonSchema = function () {
+                if (!$scope.currentToolForInputJson) return;
+                $scope.beautifyInputJson(); // Validate
+                if ($scope.jsonError) {
+                    $scope.showNotification('error', 'Cannot save: Invalid JSON Schema detected.');
+                    return;
+                }
+                $scope.currentToolForInputJson.inputJSONSchema = $scope.encodeBase64($scope.tempInputJsonSchemaDecoded);
+                $scope.inputJsonEditorVisible = false;
+                 $scope.currentToolForInputJson = null; // Clear context
+                 $scope.tempInputJsonSchemaDecoded = "";
+                 $scope.jsonError = null;
+            };
+            $scope.cancelInputJsonEditor = function () {
+                $scope.inputJsonEditorVisible = false;
+                $scope.currentToolForInputJson = null;
+                $scope.tempInputJsonSchemaDecoded = "";
+                $scope.jsonError = null;
+            };
+
+            // FQN Popup functions
+            $scope.openFQNPopup = function (tool) {
+                $scope.currentTool = tool;
+                $scope.fqnList = [];
+                $scope.fqnListLoading = true;
+                $scope.fqnPopupVisible = true;
+
+                $http.get("/tools")
+                    .then(function (response) {
+                        if (response.data && response.data.tools && Array.isArray(response.data.tools)) {
+                            $scope.fqnList = response.data.tools;
+                        } else {
+                            console.warn("Unexpected FQN response format:", response.data);
+                            $scope.fqnList = [];
+                        }
+                        $scope.fqnListLoading = false;
+                    }, function (error) {
+                        console.error("Failed to fetch FQN list:", error);
+                        $scope.fqnList = [ {"fqn": "example.FallbackTool1"}, {"fqn": "example.FallbackTool2"} ];
+                        $scope.showNotification('error', 'Failed to load FQN list. Using fallback data.');
+                        $scope.fqnListLoading = false;
+                    });
+            };
+            $scope.closeFQNPopup = function () {
+                $scope.fqnPopupVisible = false;
+                $scope.currentTool = null;
+                $scope.fqnList = [];
+                $scope.fqnListLoading = false;
+            };
+            $scope.selectFQN = function (fqn) {
+                if ($scope.currentTool) { $scope.currentTool.fqn = fqn; }
+                $scope.closeFQNPopup();
+            };
+
+            // Chat Test Enhancement functions
+            function scrollChatToBottom() {
+                $timeout(() => { // Use $timeout to ensure DOM is updated
+                    var chatWindow = document.getElementById('chatWindow');
+                    if (chatWindow) {
+                        chatWindow.scrollTop = chatWindow.scrollHeight;
+                    }
+                 }, 0, false); // Execute after current digest cycle
+            }
+
+            $scope.openChatTest = function (agent) {
+                $scope.currentChatAgent = agent;
+                $scope.chatModalVisible = true;
+                $scope.chatHistory = [];
+                $scope.newChatMessage = "";
+                $scope.chatHistoryLoading = true;
+                $scope.chatWaitVisible = false; // Reset thinking state
+
+                $http.get("/packages.Awareness.assistant.api.getChatHistory.main?agentID=" + agent.identifier)
+                    .then(function (response) {
+                        $scope.chatHistoryLoading = false;
+                        if (response.data && response.data.chatHistory && Array.isArray(response.data.chatHistory)) {
+                            $scope.chatHistory = response.data.chatHistory;
+                            scrollChatToBottom();
+                        } else {
+                            $scope.showNotification('info', "No chat history found or unexpected format.");
+                        }
+                    }, function (error) {
+                        $scope.chatHistoryLoading = false;
+                        $scope.showNotification('error', "Failed to load chat history: " + (error.data?.error || error.statusText));
+                    });
+            };
+            $scope.closeChatTest = function () {
+                $scope.chatModalVisible = false;
+                // No need to clear context here, handled by openChatTest
+            };
+            $scope.sendChatMessage = function () {
+                if (!$scope.newChatMessage || $scope.chatWaitVisible) return;
+
+                var userMessage = $scope.newChatMessage;
+                $scope.chatHistory.push({ user: "User", text: userMessage });
+                $scope.newChatMessage = "";
+                scrollChatToBottom(); // Scroll after adding user message
+
+                var payload = { agentID: $scope.currentChatAgent.identifier, prompt: userMessage };
+                $scope.chatWaitVisible = true; // Show thinking indicator
+
+                $http.post("/packages.Awareness.assistant.api.chat.main", payload, { headers: { 'Content-Type': 'application/json' } })
+                    .then(function (response) {
+                        $scope.chatWaitVisible = false;
+                        if (response.data && response.data.resp) {
+                            $scope.chatHistory.push({ user: "Agent", text: response.data.resp });
+                            scrollChatToBottom(); // Scroll after adding agent response
+                        } else {
+                            $scope.showNotification('error', "Received an unexpected response from the chat API.");
+                        }
+                    }, function (error) {
+                        $scope.chatWaitVisible = false;
+                        $scope.showNotification('error', "Failed to send chat message: " + (error.data?.error || error.statusText));
+                         // Optionally add an error message to the chat history
+                         $scope.chatHistory.push({ user: "System", text: "Error sending message."});
+                         scrollChatToBottom();
+                    });
+            };
+
+            // KB Search Test functions
+            $scope.openKBSearchTest = function (kb) {
+                $scope.currentKB = kb;
+                $scope.kbSearchModalVisible = true;
+                $scope.kbSearchText = "";
+                $scope.kbSearchResults = null; // Reset results
+                $scope.kbSearchWaitVisible = false;
+                $scope.enableQueryExpander = false;
+            };
+            $scope.closeKBSearchTest = function () {
+                $scope.kbSearchModalVisible = false;
+                 // No need to clear context here
+            };
+            $scope.sendKBSearchRequest = function () {
+                if (!$scope.kbSearchText || $scope.kbSearchWaitVisible) return;
+                $scope.kbSearchWaitVisible = true;
+                $scope.kbSearchResults = null; // Clear previous results
+
+                var url = "/packages.Awareness.assistant.tools.searchKnowledgeBase.main?ragID=" + $scope.currentKB.ragID +
+                    "&searchText=" + encodeURIComponent($scope.kbSearchText) +
+                    "&enableQueryExpander=" + ($scope.enableQueryExpander ? "true" : "false");
+
+                $http.get(url)
+                    .then(function (response) {
+                        $scope.kbSearchWaitVisible = false;
+                        if (response.data && response.data.result !== undefined) {
+                            $scope.kbSearchResults = response.data.result;
+                            // Check for empty results after assignment
+                            if (angular.equals({}, $scope.kbSearchResults) || (Array.isArray($scope.kbSearchResults) && $scope.kbSearchResults.length === 0)) {
+                               $scope.showNotification('info', 'Search completed, but no results found.');
+                            }
+                        } else {
+                            $scope.showNotification('error', 'Received an unexpected response format from KB search.');
+                            $scope.kbSearchResults = { error: "Unexpected response format" };
+                        }
+                    }, function (error) {
+                        $scope.kbSearchWaitVisible = false;
+                        $scope.showNotification('error', "Failed KB search: " + (error.data?.error || error.statusText));
+                        $scope.kbSearchResults = { error: "Search failed", details: error.data || error.statusText };
+                    });
+            };
+
+
+            // --- Data Persistence ---
+
+            // Clean spec before saving or exporting
+            function cleanSpecForPersistence(spec) {
+                let specCopy = angular.copy(spec); // Work on a copy
+                const cleanItem = (item) => {
+                    delete item.editing;
+                    delete item._original;
+                    delete item.expanded; // Ensure expanded state isn't saved
+                    // Remove temporary decoded fields if they exist on the item
+                    delete item.roleDescriptionDecoded;
+                    delete item.functionDescriptionDecoded;
+                    delete item.inputJSONSchemaDecoded;
+                    // Add any other transient UI properties here
+                };
+
+                (specCopy.LLMs || []).forEach(cleanItem);
+                (specCopy.Agents || []).forEach(cleanItem);
+                (specCopy.Tools || []).forEach(cleanItem);
+                (specCopy.RAGs || []).forEach(cleanItem);
+                (specCopy.KBs || []).forEach(cleanItem);
+
+                return specCopy;
+            }
+
+
+            // Apply Changes
+            $scope.applyChanges = function () {
+                const agentsWithoutLLM = $scope.spec.Agents.filter(a => !a.LLMkey);
+                if (agentsWithoutLLM.length > 0) {
+                    $scope.showNotification('error', `Cannot apply: Agent(s) '${agentsWithoutLLM.map(a => a.name || a.identifier.substring(0,8)).join(', ')}...' missing LLM selection.`);
+                    return;
+                }
+                // Add more pre-save validation as needed
+
+                $scope.isLoading = true;
+                $scope.showSpinner = true;
+
+                let specToSend = cleanSpecForPersistence($scope.spec);
+
+                $http.post("/packages.Awareness.dashboard.services.api.importAll.main", JSON.stringify(specToSend), { headers: { 'Content-Type': 'application/json' } })
+                    .then(function (response) {
+                        $scope.isLoading = false;
+                        $scope.showSpinner = false;
+                        if (response.data && response.data.status === "success") {
+                            $scope.showNotification('success', "Changes applied successfully!");
+                            // Crucially, update the _original state after successful save
+                            initializeSpecArrays(); // This re-applies _original based on current state
+                        } else {
+                            $scope.showNotification('error', "Apply request sent, but server reported an issue: " + (JSON.stringify(response.data) || "Unknown issue"));
+                        }
+                    }, function (error) {
+                        $scope.isLoading = false;
+                        $scope.showSpinner = false;
+                        $scope.showNotification('error', "Failed to apply changes: " + (error.data?.error || error.statusText || "Server communication error"));
+                    });
+            };
+
+            // Load initial/updated spec from server
+            $scope.loadChanges = function () {
+                $scope.showSpinner = true;
+                $http.get("/packages.Awareness.dashboard.services.api.exportAll.main")
+                    .then(function (response) {
+                        if (response.data && response.data.status === "success" && response.data.spec) {
+
+                            $scope.spec = response.data.spec;
+                            initializeSpecArrays(); // Ensure arrays exist AND set initial _original state
+                            $scope.showNotification('info', 'Configuration loaded.');
+                        } else {
+                            $scope.showNotification('error', "Failed to load configuration: " + (JSON.stringify(response.data) || "Invalid response format"));
+                            $scope.spec = {}; // Reset spec on load failure
+                            initializeSpecArrays(); // Ensure arrays exist even on failure
+                        }
+                        $scope.showSpinner = false;
+                    }, function (error) {
+                        $scope.showSpinner = false;
+                        $scope.showNotification('error', "Failed to load configuration: " + (error.data?.error || error.statusText));
+                         $scope.spec = {}; // Reset spec on load failure
+                        initializeSpecArrays(); // Ensure arrays exist even on HTTP failure
+                    });
+            };
+
+            // Export JSON
+            $scope.exportJSON = function () {
+                let specToExport = cleanSpecForPersistence($scope.spec);
+                try {
+                    var dataStr = "data:text/json;charset=utf-8," + encodeURIComponent(JSON.stringify(specToExport, null, 2));
+                    var downloadAnchorNode = document.createElement('a');
+                    downloadAnchorNode.setAttribute("href", dataStr);
+                    downloadAnchorNode.setAttribute("download", "sl_awareness_config.json");
+                    document.body.appendChild(downloadAnchorNode);
+                    downloadAnchorNode.click();
+                    downloadAnchorNode.remove();
+                    $scope.showNotification('success', 'Configuration exported successfully.');
+                } catch (e) {
+                    $scope.showNotification('error', 'Failed to create export file: ' + e.message);
+                }
+            };
+
+            // Import JSON
+            $scope.triggerImport = function () {
+                document.getElementById('jsonImport').click();
+            };
+            $scope.handleFile = function (fileContent) {
+                try {
+                    var imported = JSON.parse(fileContent);
+                    if (typeof imported !== 'object' || imported === null) {
+                        throw new Error("Imported file does not contain a valid JSON object.");
+                    }
+                     // Merge will overwrite/add items. Consider prompting user first?
+                    mergeImportedSpec(imported); // Merges into $scope.spec
+                     initializeSpecArrays(); // Re-initialize arrays and _original state after merge
+                    $scope.showNotification('success', "JSON imported and merged successfully.");
+                    // Force digest cycle if needed after merge modifies scope outside Angular context sometimes
+                     $scope.$applyAsync();
+                } catch (err) {
+                    $scope.showNotification('error', "Failed to import JSON: " + err.message);
+                }
+            };
+
+            // Merge imported spec (overwrites existing items by key)
+            function mergeImportedSpec(importedSpec) {
+                const mergeArray = (targetArray, sourceArray, keyField) => {
+                    if (!Array.isArray(sourceArray)) return;
+
+                     // Create a map of existing items for faster lookup
+                     const targetMap = new Map();
+                     targetArray.forEach((item, index) => {
+                         if(item && item.hasOwnProperty(keyField)) {
+                            targetMap.set(item[keyField], index);
+                         }
+                     });
+
+                    sourceArray.forEach(sourceItem => {
+                        if (typeof sourceItem !== 'object' || sourceItem === null || !sourceItem.hasOwnProperty(keyField)) {
+                            console.warn(`Skipping invalid item during import (missing key '${keyField}'):`, sourceItem);
+                            return;
+                        }
+                        const key = sourceItem[keyField];
+                        const existingIndex = targetMap.get(key);
+
+                        if (existingIndex !== undefined) {
+                            // Overwrite existing item completely
+                             targetArray[existingIndex] = sourceItem;
+                        } else {
+                            // Add new item
+                            targetArray.push(sourceItem);
+                        }
+                    });
+                };
+
+                // Define complex keys for Tools and RAGs if simple key isn't enough
+                const toolKey = (tool) => `${tool.identifier || ''}::${tool.fqn || ''}`;
+                const ragKey = (rag) => `${rag.path || ''}::${rag.ESKey || rag.ragID || ''}`;
+
+                const mergeComplexArray = (targetArray, sourceArray, keyFunction) => {
+                     if (!Array.isArray(sourceArray)) return;
+
+                     const targetMap = new Map();
+                     targetArray.forEach((item, index) => {
+                         targetMap.set(keyFunction(item), index);
+                     });
+
+                     sourceArray.forEach(sourceItem => {
+                         if (typeof sourceItem !== 'object' || sourceItem === null) {
+                            console.warn(`Skipping invalid item during import:`, sourceItem); return;
+                         }
+                         const key = keyFunction(sourceItem);
+                         const existingIndex = targetMap.get(key);
+                         if (existingIndex !== undefined) {
+                             targetArray[existingIndex] = sourceItem;
+                         } else {
+                             targetArray.push(sourceItem);
+                         }
+                     });
+                };
+
+
+                 // Ensure target arrays exist before merging
+                 initializeSpecArrays(); // Call it here to ensure arrays are present
+
+                mergeArray($scope.spec.LLMs, importedSpec.LLMs, 'LLMkey');
+                mergeArray($scope.spec.Agents, importedSpec.Agents, 'identifier');
+                mergeArray($scope.spec.KBs, importedSpec.KBs, 'ragID');
+                mergeComplexArray($scope.spec.Tools, importedSpec.Tools, toolKey);
+                mergeComplexArray($scope.spec.RAGs, importedSpec.RAGs, ragKey);
+
+                 // Re-initialize again AFTER merge to set _original state for the merged data
+                 initializeSpecArrays();
+            }
+
+
+            // --- Initialization ---
+            $scope.loadChanges(); // Load data when the controller initializes
+
+            // Set active tab safely
+            $scope.setActiveTab = function (tabName) {
+                $scope.activeTab = tabName;
+            }
+
+        }]);
+
+    </script>
+</body>
+</html>

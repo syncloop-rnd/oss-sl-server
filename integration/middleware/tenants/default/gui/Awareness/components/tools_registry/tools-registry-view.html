@@ -1,0 +1,361 @@
+<div class="title_add">
+    <h2>Tools</h2>
+<div class="d-flex gap-10 align-items-center" ng-if="!isDataLoading && (spec.ToolsRegistry && spec.ToolsRegistry.length > 0)">
+
+    <div class="search_expand cursor-pointer" ng-class="{'search_expands': isToolsExpanded || (searchText.tools || '').trim().length > 0}">
+
+        <input id="toolsRegistrySearch"
+               class="search_expandinput"
+               type="text"
+               placeholder="Search"
+               ng-model="searchText.tools"
+               ng-focus="isToolsExpanded = true"
+               ng-blur="isToolsExpanded = (searchText.tools || '').trim().length > 0"
+               ng-keydown="$event.key === 'Escape' ? (isToolsExpanded = false, searchText.tools = '') : null" />
+
+        <label for="toolsRegistrySearch"
+               class="search_expandsearch"
+               aria-label="Open search"
+               ng-hide="(searchText.tools || '').trim().length > 0">
+            <img src="Awareness/pub/images/chat-search.svg" alt="Search">
+        </label>
+
+        <button type="button"
+                class="fa fa-close searchbarcloseicon"
+                aria-label="Clear search"
+                ng-show="isToolsExpanded && (searchText.tools || '').trim().length > 0"
+                ng-mousedown="$event.preventDefault()"
+                ng-click="searchText.tools=''; isToolsExpanded=false">
+        </button>
+    </div>
+
+    <a href="javascript:void(0)" class="btn btn-primary" ng-click="openToolAdd()">
+        + Add
+    </a>
+
+</div>
+</div>
+<!-- Empty -->
+<div class="n_apps" ng-if="!isDataLoading && !isSearchingTools &&
+   (!spec.Tools || spec.ToolsRegistry.length === 0)">
+    <img src="Awareness/pub/images/tools-placeholder-icon.svg">
+    <h5>No Tools found</h5>
+    <p>You haven't created any tools yet.</p>
+    <a href="javascript:void(0)" ng-click="openToolAdd()">Create your first Tool</a>
+</div>
+<!-- Loader -->
+<table class="loader_table" ng-if="isDataLoading || isSearchingTools">
+    <tbody>
+        <tr>
+            <td>
+                <div class="skeleton-wrapper">
+                    <div class="skeleton-image"></div>
+                </div>
+            </td>
+            <td>
+                <div class="skeleton-wrapper">
+                    <div class="skeleton-image"></div>
+                </div>
+            </td>
+            <td>
+                <div class="skeleton-wrapper">
+                    <div class="skeleton-image"></div>
+                </div>
+            </td>
+            <td>
+                <div class="skeleton-wrapper">
+                    <div class="skeleton-image"></div>
+                </div>
+            </td>
+            <td>
+                <div class="skeleton-wrapper">
+                    <div class="skeleton-image"></div>
+                </div>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <div class="skeleton-wrapper">
+                    <div class="skeleton-image"></div>
+                </div>
+            </td>
+            <td>
+                <div class="skeleton-wrapper">
+                    <div class="skeleton-image"></div>
+                </div>
+            </td>
+            <td>
+                <div class="skeleton-wrapper">
+                    <div class="skeleton-image"></div>
+                </div>
+            </td>
+            <td>
+                <div class="skeleton-wrapper">
+                    <div class="skeleton-image"></div>
+                </div>
+            </td>
+            <td>
+                <div class="skeleton-wrapper">
+                    <div class="skeleton-image"></div>
+                </div>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <div class="skeleton-wrapper">
+                    <div class="skeleton-image"></div>
+                </div>
+            </td>
+            <td>
+                <div class="skeleton-wrapper">
+                    <div class="skeleton-image"></div>
+                </div>
+            </td>
+            <td>
+                <div class="skeleton-wrapper">
+                    <div class="skeleton-image"></div>
+                </div>
+            </td>
+            <td>
+                <div class="skeleton-wrapper">
+                    <div class="skeleton-image"></div>
+                </div>
+            </td>
+            <td>
+                <div class="skeleton-wrapper">
+                    <div class="skeleton-image"></div>
+                </div>
+            </td>
+        </tr>
+    </tbody>
+</table>
+<!-- Table -->
+<table class="custom-bordered animation-fade"
+    ng-if="!isDataLoading && !isSearchingTools && spec.ToolsRegistry.length > 0">
+    <thead>
+        <tr>
+            <th>Tools Name</th>
+            <th>FQN/MCP</th>
+            <th>Description</th>
+            <th>Type</th>
+            <th>Actions</th>
+        </tr>
+    </thead>
+    <tbody>
+        <!-- Using ng-repeat-start/ng-repeat-end to insert an extra row for expanded details -->
+        <tr ng-if="ToolsRegistry.length == 0">
+            <td colspan="5" align="center">No Matching Tools Found Found</td>
+        </tr>
+        <tr ng-repeat="tool in spec.ToolsRegistry | filter: searchText.tools" ng-if="spec.ToolsRegistry.length > 0">
+            <td>
+                <span ng-if="hasSLApi(tool)">
+                     <a
+                        ng-href="middleware/pub/server/ui/workspace/web/workspace.html?r=files/{{ getFqnPath(tool) }}.api"
+                        target="_blank">{{ tool.NAME }}</a>
+                </span>
+                <span ng-if="!hasSLApi(tool)">
+                    {{ tool.NAME }}
+                </span>
+
+            </td>
+            <td>
+                <div class="multi_agent_l">
+                    <!--<span ng-if="hasSLApi(tool)" class="ng-binding"> -->
+                    <span class="ng-binding">
+                    {{ getToolSource(tool) === 'MCP' && (tool.mcp && tool.mcp.MCP_NAME) ? tool.mcp.MCP_NAME : tool.FQN }}
+                </span>
+                </div>
+            </td>
+            <td>
+               <div class="table-describtion mx-txt"> {{ tool.DESCRIPTION }}</div>
+            </td>
+            <td>
+                <div class="multi_agent_l">
+                    <!-- <span>{{getToolAgent(tool)}}</span> -->
+                    <span>{{getToolSource(tool)}}</span>
+                </div>
+            </td>
+            <td class="action_icons">
+                <a href="javascript:void(0)" class="tooltip payload_icon" ng-click="addRegistryPayloadEdit(tool)">
+                    <img src="Awareness/pub/images/payload.svg">
+                    <span class="tooltiptext">Payload</span>
+                </a>
+                <a href="javascript:void(0)" class="tooltip schema_icon" ng-click="addRegistrySchemaEdit(tool)">
+                    <img src="Awareness/pub/images/schema.svg">
+                    <span class="tooltiptext">Schema</span>
+                </a>
+                <a href="javascript:void(0)" class="tooltip edit_icon" ng-click="openToolEdit(tool)">
+                    <img src="Awareness/pub/images/edit_icon.svg" alt="">
+                    <span class="tooltiptext">Edit</span>
+                </a>
+                <a href="javascript:void(0)" class="tooltip delete_icon" ng-click="deleteRegistry(tool)">
+                    <img src="Awareness/pub/images/delete.svg" alt="">
+                    <span class="tooltiptext">Delete</span>
+                </a>
+            </td>
+        </tr>
+        <!-- Expanded row appears immediately below the agent row -->
+        <tr ng-if="agent.expanded" ng-repeat-end>
+            <td colspan="6">
+                <div class="sub-section">
+                    <!-- Tools Sub-Table -->
+                    <div class="sub-table">
+                        <h3><i class="fa fa-wrench"></i> Tools</h3>
+                        <table class="custom-bordered">
+                            <thead>
+                                <tr>
+                                    <th>FQN</th>
+                                    <th>Function Description</th>
+                                    <th style="display: none;">Input JSON Schema</th>
+                                    <th>Actions</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr ng-repeat="tool in spec.Tools | filter:{identifier: agent.identifier}">
+                                    <td>
+                                        <span ng-hide="tool.editing">{{tool.fqn}}</span>
+                                        <span ng-show="tool.editing">
+                                            <input style="width: 90%;" type="text" ng-model="tool.fqn" placeholder="FQN"
+                                                class="editing-input" />
+                                            <i class="fa fa-search" ng-click="openFQNPopup(tool)"
+                                                title="Select FQN"></i>
+                                        </span>
+                                    </td>
+                                    <td>
+                                        <span ng-hide="tool.editing">{{ decodeBase64(tool.functionDescription) }}</span>
+                                        <span ng-show="tool.editing">
+                                            <input type="text" ng-model="tool.functionDescriptionDecoded"
+                                                placeholder="Function Description" class="editing-input" />
+                                        </span>
+                                    </td>
+                                    <td style="display: none;">
+                                        <span ng-hide="tool.editing">{{ decodeBase64(tool.inputJSONSchema) }}</span>
+                                        <span ng-show="tool.editing">
+                                            <input type="text" ng-model="tool.inputJSONSchemaDecoded"
+                                                placeholder="Input JSON Schema" class="editing-input" />
+                                        </span>
+                                    </td>
+                                    <td>
+                                        <span ng-hide="tool.editing">
+                                            <!--<i class="fa fa-edit" ng-click="editTool(tool)" title="Edit"></i>-->
+                                            <i class="fa fa-trash" ng-click="deleteTool(tool)" title="Delete"></i>
+                                        </span>
+                                        <span ng-show="tool.editing">
+                                            <i class="fa fa-check" ng-click="doneEditTool(tool)" title="Done"></i>
+                                            <i class="fa fa-times" ng-click="cancelEditTool(tool)" title="Cancel"></i>
+                                        </span>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                        <button ng-click="addTool(agent)" title="Add Tool">
+                            <i class="fa fa-plus"></i>
+                        </button>
+                    </div>
+                    <!-- RAGs Sub-Table -->
+                    <div class="sub-table" style="margin-top: 15px;">
+                        <h3><i class="fa fa-database"></i> RAGs</h3>
+                        <table class="custom-bordered">
+                            <thead>
+                                <tr>
+                                    <th>Path</th>
+                                    <th>File Pattern</th>
+                                    <th>Max Segment Size</th>
+                                    <th>Max Overlap Size</th>
+                                    <th>Max Search Results</th>
+                                    <th>Actions</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr ng-repeat="rag in spec.RAGs | filter:filterRAGs">
+                                    <td>
+                                        <span ng-hide="rag.editing">{{rag.path}}</span>
+                                        <span ng-show="rag.editing">
+                                            <input type="text" ng-model="rag.path" placeholder="Select Directory"
+                                                class="editing-input" />
+                                            <input type="file" webkitdirectory style="display: none;"
+                                                id="dirPicker{{$index}}"
+                                                onchange="angular.element(this).scope().setRAGPath(agent, $event, rag)" />
+                                            <i class="fa fa-folder-open" ng-click="triggerDirPicker($index)"
+                                                title="Browse"></i>
+                                        </span>
+                                    </td>
+                                    <td>
+                                        <span ng-hide="rag.editing">{{rag.filePattern}}</span>
+                                        <span ng-show="rag.editing">
+                                            <input type="text" ng-model="rag.filePattern" placeholder="File Pattern"
+                                                class="editing-input" />
+                                        </span>
+                                    </td>
+                                    <td>
+                                        <span ng-hide="rag.editing">{{rag.maxSegmentSizeInChars}}</span>
+                                        <span ng-show="rag.editing">
+                                            <input type="number" ng-model="rag.maxSegmentSizeInChars"
+                                                class="editing-input" />
+                                        </span>
+                                    </td>
+                                    <td>
+                                        <span ng-hide="rag.editing">{{rag.maxOverlapSizeInChars}}</span>
+                                        <span ng-show="rag.editing">
+                                            <input type="number" ng-model="rag.maxOverlapSizeInChars"
+                                                class="editing-input" />
+                                        </span>
+                                    </td>
+                                    <td>
+                                        <span ng-hide="rag.editing">{{rag.maxSearchResults}}</span>
+                                        <span ng-show="rag.editing">
+                                            <input type="number" ng-model="rag.maxSearchResults"
+                                                class="editing-input" />
+                                        </span>
+                                    </td>
+                                    <td>
+                                        <span ng-hide="rag.editing">
+                                            <i class="fa fa-edit" ng-click="editRAG(rag)" title="Edit"></i>
+                                            <i class="fa fa-trash" ng-click="deleteRAG(rag)" title="Delete"></i>
+                                        </span>
+                                        <span ng-show="rag.editing">
+                                            <i class="fa fa-check" ng-click="doneEditRAG(rag)" title="Done"></i>
+                                            <i class="fa fa-times" ng-click="cancelEditRAG(rag)" title="Cancel"></i>
+                                        </span>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                        <button ng-click="addRAG(agent)" title="Add RAG">
+                            <i class="fa fa-plus"></i>
+                        </button>
+                    </div>
+                </div>
+            </td>
+        </tr>
+    </tbody>
+</table>
+<!-- No Result -->
+<!-- <div class="notresult-found" ng-if="!isDataLoading && !isSearchingTools
+   && (spec.Tools && spec.ToolsRegistry.length > 0)
+   && (searchText.tools && searchText.ToolsRegistry.trim().length > 0)
+   && !((spec.Tools | filter:filterTools).length)">
+    <img src="Awareness/pub/images/search_no_result.svg">
+    <div class="notresult-foundtitle">No result found</div>
+    <div class="notresult-foundtext">Please try again using different keywords.</div>
+</div> -->
+    <!-- <div class="notresult-found text-center mt-4"
+     ng-if="!isDataLoading && spec.ToolsRegistry && (spec.ToolsRegistry | filter: searchText.tools).length === 0">
+
+        <img src="Awareness/pub/images/agent-placeholder-icon.svg" alt="No tools found">
+
+        <div class="notresult-foundtitle mt-2">No Tools Found</div>
+
+        <div class="notresult-foundtext" ng-if="searchText.tools">
+            No tools match your search for <strong>"{{ searchText.tools }}"</strong>.
+        </div>
+
+        <div class="notresult-foundtext" ng-if="!searchText.tools">
+            No tools are currently available in the registry.
+        </div>
+
+    </div> -->
+
+<button ng-click="addAgent()" title="Add Agent" style="display: none;">
+    <i class="fa fa-plus"></i>
+</button>

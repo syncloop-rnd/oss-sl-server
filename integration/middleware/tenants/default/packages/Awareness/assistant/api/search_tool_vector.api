@@ -1,0 +1,177 @@
+{
+  "latest" : {
+    "createdTS" : "",
+    "input" : [ {
+      "id" : "j2_2",
+      "text" : "searchText",
+      "li_attr" : {
+        "id" : "j2_2"
+      },
+      "a_attr" : {
+        "href" : "#",
+        "id" : "j2_2_anchor"
+      },
+      "state" : {
+        "loaded" : true,
+        "opened" : false,
+        "selected" : false,
+        "disabled" : false,
+        "hidden" : false
+      },
+      "data" : {
+        "guid" : "3687c8ed-9161-46e3-b1d5-b157d0918311",
+        "columnType" : "-1"
+      },
+      "children" : [ ],
+      "type" : "string"
+    } ],
+    "output" : [ {
+      "id" : "j3_1",
+      "text" : "Tool_Registry",
+      "li_attr" : {
+        "id" : "j3_1"
+      },
+      "a_attr" : {
+        "href" : "#",
+        "id" : "j3_1_anchor"
+      },
+      "state" : {
+        "loaded" : true,
+        "opened" : false,
+        "selected" : false,
+        "disabled" : false,
+        "hidden" : false
+      },
+      "data" : { },
+      "children" : [ ],
+      "type" : "documentList"
+    }, {
+      "id" : "j3_2",
+      "text" : "status",
+      "li_attr" : {
+        "id" : "j3_2"
+      },
+      "a_attr" : {
+        "href" : "#",
+        "id" : "j3_2_anchor"
+      },
+      "state" : {
+        "loaded" : true,
+        "opened" : false,
+        "selected" : false,
+        "disabled" : false,
+        "hidden" : false
+      },
+      "data" : { },
+      "children" : [ ],
+      "type" : "string"
+    } ],
+    "api" : [ {
+      "id" : "j1_1",
+      "text" : "Invoke",
+      "li_attr" : {
+        "id" : "j1_1"
+      },
+      "a_attr" : {
+        "href" : "javascript:void(0)",
+        "id" : "j1_1_anchor"
+      },
+      "state" : {
+        "loaded" : true,
+        "opened" : false,
+        "selected" : true,
+        "disabled" : false,
+        "hidden" : false
+      },
+      "data" : {
+        "guid" : "686bd357-3040-47ea-afb7-d4add87a6239",
+        "columnType" : "-1",
+        "transformers" : [ {
+          "op" : "copy",
+          "from" : "/status",
+          "to" : "/status",
+          "inTypePath" : "string",
+          "outTypePath" : "string",
+          "direction" : "out"
+        }, {
+          "op" : "copy",
+          "from" : "/Tool_Registry",
+          "to" : "/Tool_Registry",
+          "inTypePath" : "documentList",
+          "outTypePath" : "documentList",
+          "direction" : "out"
+        }, {
+          "op" : "copy",
+          "from" : "/searchText",
+          "to" : "/searchText",
+          "inTypePath" : "string",
+          "outTypePath" : "string",
+          "direction" : "in"
+        } ],
+        "lines" : [ {
+          "inputPath" : "status",
+          "outputPath" : "status",
+          "inpJsTree" : "#launching_arrow_jsTree_function",
+          "outpJsTree" : "#landing_arrow_jsTree",
+          "INPath" : "status",
+          "OUTPath" : "status",
+          "direction" : "out",
+          "op" : "copy",
+          "line" : 0,
+          "dashedLine" : false,
+          "inType" : "string",
+          "outType" : "string",
+          "inTypePath" : "string",
+          "outTypePath" : "string"
+        }, {
+          "inputPath" : "Tool_Registry",
+          "outputPath" : "Tool_Registry",
+          "inpJsTree" : "#launching_arrow_jsTree_function",
+          "outpJsTree" : "#landing_arrow_jsTree",
+          "INPath" : "Tool_Registry",
+          "OUTPath" : "Tool_Registry",
+          "direction" : "out",
+          "op" : "copy",
+          "line" : 0,
+          "dashedLine" : false,
+          "inType" : "documentList",
+          "outType" : "documentList",
+          "inTypePath" : "documentList",
+          "outTypePath" : "documentList"
+        }, {
+          "inputPath" : "searchText",
+          "outputPath" : "searchText",
+          "inpJsTree" : "#launching_arrow_jsTree",
+          "outpJsTree" : "#landing_arrow_jsTree_function",
+          "INPath" : "searchText",
+          "OUTPath" : "searchText",
+          "direction" : "in",
+          "op" : "copy",
+          "line" : 0,
+          "dashedLine" : false,
+          "inType" : "string",
+          "outType" : "string",
+          "inTypePath" : "string",
+          "outTypePath" : "string"
+        } ],
+        "dropList" : [ ],
+        "createList" : [ ],
+        "initiateList" : [ ],
+        "fqn" : "packages/Awareness/assistant/service/search_tool_vector",
+        "serviceType" : "service"
+      },
+      "children" : [ ],
+      "type" : "invoke"
+    } ],
+    "api_info" : {
+      "title" : "",
+      "description" : ""
+    },
+    "lockedByUser" : "admin"
+  },
+  "consumers" : "",
+  "developers" : "developers,administrators",
+  "enableServiceDocumentValidation" : false,
+  "created_on" : "1779698035318",
+  "modified_on" : 1779698035318
+}

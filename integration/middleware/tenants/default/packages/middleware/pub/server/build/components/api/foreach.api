@@ -1,0 +1,248 @@
+{
+  "latest" : {
+    "createdTS" : "",
+    "input" : [ {
+      "id" : "j2_3",
+      "text" : "input",
+      "li_attr" : {
+        "id" : "j2_3"
+      },
+      "a_attr" : {
+        "href" : "#",
+        "id" : "j2_3_anchor"
+      },
+      "state" : {
+        "loaded" : true,
+        "opened" : true,
+        "selected" : false,
+        "disabled" : false,
+        "hidden" : false
+      },
+      "data" : {
+        "guid" : "f80297ce-dafc-40c6-a9ce-279cdd3eefd1",
+        "columnType" : "-1"
+      },
+      "children" : [ {
+        "id" : "j2_4",
+        "text" : "inputList",
+        "li_attr" : {
+          "id" : "j2_4"
+        },
+        "a_attr" : {
+          "href" : "#",
+          "id" : "j2_4_anchor"
+        },
+        "state" : {
+          "loaded" : true,
+          "opened" : false,
+          "selected" : false,
+          "disabled" : false
+        },
+        "data" : {
+          "guid" : "ca9562b6-8054-4dd2-b4d5-f7842f174d6e",
+          "columnType" : "-1"
+        },
+        "children" : [ ],
+        "type" : "string"
+      }, {
+        "id" : "j2_5",
+        "text" : "outputList",
+        "li_attr" : {
+          "id" : "j2_5"
+        },
+        "a_attr" : {
+          "href" : "#",
+          "id" : "j2_5_anchor"
+        },
+        "state" : {
+          "loaded" : true,
+          "opened" : false,
+          "selected" : false,
+          "disabled" : false
+        },
+        "data" : {
+          "guid" : "64c2a7c4-56b5-49e1-a5f2-c4e8fc9a47fe",
+          "columnType" : "-1"
+        },
+        "children" : [ ],
+        "type" : "string"
+      }, {
+        "id" : "j2_6",
+        "text" : "comment",
+        "li_attr" : {
+          "id" : "j2_6"
+        },
+        "a_attr" : {
+          "href" : "#",
+          "id" : "j2_6_anchor"
+        },
+        "state" : {
+          "loaded" : true,
+          "opened" : false,
+          "selected" : false,
+          "disabled" : false
+        },
+        "data" : {
+          "guid" : "b9eeba01-9a6f-4416-862c-f0161fe607c3",
+          "columnType" : "-1"
+        },
+        "children" : [ ],
+        "type" : "string"
+      } ],
+      "type" : "document"
+    } ],
+    "output" : [ {
+      "id" : "j3_1",
+      "text" : "serviceForeach",
+      "li_attr" : {
+        "id" : "j3_1"
+      },
+      "a_attr" : {
+        "href" : "#",
+        "id" : "j3_1_anchor"
+      },
+      "state" : {
+        "loaded" : true,
+        "opened" : false,
+        "selected" : false,
+        "disabled" : false,
+        "hidden" : false
+      },
+      "data" : {
+        "guid" : "5c43cb28-7087-42f6-8a37-9347c45d555d",
+        "columnType" : "-1"
+      },
+      "children" : [ ],
+      "type" : "documentList"
+    } ],
+    "api" : [ {
+      "id" : "j1_2",
+      "text" : "Invoke",
+      "li_attr" : {
+        "id" : "j1_2"
+      },
+      "a_attr" : {
+        "href" : "javascript:void(0)",
+        "id" : "j1_2_anchor"
+      },
+      "state" : {
+        "loaded" : true,
+        "opened" : false,
+        "selected" : true,
+        "disabled" : false,
+        "hidden" : false
+      },
+      "data" : {
+        "guid" : "fe31e3f6-e782-41b2-86f0-e44cfa343635",
+        "columnType" : "-1",
+        "transformers" : [ {
+          "op" : "copy",
+          "from" : "/input/inputList",
+          "to" : "/inputList",
+          "inTypePath" : "document/string",
+          "outTypePath" : "string",
+          "direction" : "in"
+        }, {
+          "op" : "copy",
+          "from" : "/input/outputList",
+          "to" : "/outputList",
+          "inTypePath" : "document/string",
+          "outTypePath" : "string",
+          "direction" : "in"
+        }, {
+          "op" : "copy",
+          "from" : "/input/comment",
+          "to" : "/comment",
+          "inTypePath" : "document/string",
+          "outTypePath" : "string",
+          "direction" : "in"
+        }, {
+          "op" : "copy",
+          "from" : "/map",
+          "to" : "/serviceForeach/#0",
+          "inTypePath" : "document",
+          "outTypePath" : "documentList",
+          "direction" : "out"
+        } ],
+        "lines" : [ {
+          "inputPath" : "input/inputList",
+          "outputPath" : "inputList",
+          "inpJsTree" : "#launching_arrow_jsTree",
+          "outpJsTree" : "#landing_arrow_jsTree_function",
+          "INPath" : "input/inputList",
+          "OUTPath" : "inputList",
+          "direction" : "in",
+          "op" : "copy",
+          "line" : 0,
+          "dashedLine" : false,
+          "inType" : "string",
+          "outType" : "string",
+          "inTypePath" : "document/string",
+          "outTypePath" : "string"
+        }, {
+          "inputPath" : "input/outputList",
+          "outputPath" : "outputList",
+          "inpJsTree" : "#launching_arrow_jsTree",
+          "outpJsTree" : "#landing_arrow_jsTree_function",
+          "INPath" : "input/outputList",
+          "OUTPath" : "outputList",
+          "direction" : "in",
+          "op" : "copy",
+          "line" : 0,
+          "dashedLine" : false,
+          "inType" : "string",
+          "outType" : "string",
+          "inTypePath" : "document/string",
+          "outTypePath" : "string"
+        }, {
+          "inputPath" : "input/comment",
+          "outputPath" : "comment",
+          "inpJsTree" : "#launching_arrow_jsTree",
+          "outpJsTree" : "#landing_arrow_jsTree_function",
+          "INPath" : "input/comment",
+          "OUTPath" : "comment",
+          "direction" : "in",
+          "op" : "copy",
+          "line" : 0,
+          "dashedLine" : false,
+          "inType" : "string",
+          "outType" : "string",
+          "inTypePath" : "document/string",
+          "outTypePath" : "string"
+        }, {
+          "inputPath" : "map",
+          "outputPath" : "serviceForeach",
+          "inpJsTree" : "#launching_arrow_jsTree_function",
+          "outpJsTree" : "#landing_arrow_jsTree",
+          "INPath" : "map",
+          "OUTPath" : "serviceForeach/#0",
+          "direction" : "out",
+          "op" : "copy",
+          "line" : 0,
+          "dashedLine" : false,
+          "inType" : "document",
+          "outType" : "documentList",
+          "inTypePath" : "document",
+          "outTypePath" : "documentList"
+        } ],
+        "dropList" : [ ],
+        "createList" : [ ],
+        "initiateList" : [ ],
+        "fqn" : "packages/middleware/pub/server/build/components/services/foreach",
+        "serviceType" : "service"
+      },
+      "children" : [ ],
+      "type" : "invoke"
+    } ],
+    "api_info" : {
+      "title" : "",
+      "description" : ""
+    },
+    "lockedByUser" : "anoop.gupta2812@gmail.com"
+  },
+  "consumers" : "",
+  "developers" : "developers",
+  "enableServiceDocumentValidation" : false,
+  "created_on" : "1777526484549",
+  "modified_on" : 1777526484549
+}

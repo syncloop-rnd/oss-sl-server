@@ -1,0 +1,1092 @@
+{
+  "latest" : {
+    "createdTS" : "",
+    "input" : [ {
+      "id" : "j2_1",
+      "text" : "*payload",
+      "li_attr" : {
+        "id" : "j2_1"
+      },
+      "a_attr" : {
+        "href" : "#",
+        "id" : "j2_1_anchor"
+      },
+      "state" : {
+        "loaded" : true,
+        "opened" : true,
+        "selected" : false,
+        "disabled" : false,
+        "hidden" : false
+      },
+      "data" : { },
+      "children" : [ {
+        "id" : "j2_2",
+        "text" : "role",
+        "li_attr" : {
+          "id" : "j2_2"
+        },
+        "a_attr" : {
+          "href" : "#",
+          "id" : "j2_2_anchor"
+        },
+        "state" : {
+          "loaded" : true,
+          "opened" : false,
+          "selected" : false,
+          "disabled" : false
+        },
+        "data" : { },
+        "children" : [ ],
+        "type" : "string"
+      }, {
+        "id" : "j2_3",
+        "text" : "content",
+        "li_attr" : {
+          "id" : "j2_3"
+        },
+        "a_attr" : {
+          "href" : "#",
+          "id" : "j2_3_anchor"
+        },
+        "state" : {
+          "loaded" : true,
+          "opened" : false,
+          "selected" : false,
+          "disabled" : false
+        },
+        "data" : { },
+        "children" : [ ],
+        "type" : "string"
+      } ],
+      "type" : "document"
+    }, {
+      "id" : "j2_4",
+      "text" : "assistantID",
+      "li_attr" : {
+        "id" : "j2_4"
+      },
+      "a_attr" : {
+        "href" : "#",
+        "id" : "j2_4_anchor"
+      },
+      "state" : {
+        "loaded" : true,
+        "opened" : false,
+        "selected" : false,
+        "disabled" : false,
+        "hidden" : false
+      },
+      "data" : {
+        "guid" : "9f762fe3-eb3d-44bc-a773-f33d7bfc5a66",
+        "columnType" : "-1",
+        "assignList" : [ {
+          "path" : "assistantID",
+          "value" : "",
+          "typePath" : "string"
+        } ]
+      },
+      "children" : [ ],
+      "type" : "string"
+    }, {
+      "id" : "j2_5",
+      "text" : "thread_id",
+      "li_attr" : {
+        "id" : "j2_5"
+      },
+      "a_attr" : {
+        "href" : "#",
+        "id" : "j2_5_anchor"
+      },
+      "state" : {
+        "loaded" : true,
+        "opened" : false,
+        "selected" : false,
+        "disabled" : false,
+        "hidden" : false
+      },
+      "data" : { },
+      "children" : [ ],
+      "type" : "string"
+    }, {
+      "id" : "j2_6",
+      "text" : "chatgptToken",
+      "li_attr" : {
+        "id" : "j2_6"
+      },
+      "a_attr" : {
+        "href" : "#",
+        "id" : "j2_6_anchor"
+      },
+      "state" : {
+        "loaded" : true,
+        "opened" : false,
+        "selected" : true,
+        "disabled" : false,
+        "hidden" : false
+      },
+      "data" : {
+        "guid" : "a0a35b9e-184f-4363-b936-d164588cc2a4",
+        "columnType" : "-1",
+        "assignList" : [ {
+          "path" : "chatgptToken",
+          "value" : "#{chatgptToken}",
+          "evaluate" : "EPV",
+          "typePath" : "string"
+        } ]
+      },
+      "children" : [ ],
+      "type" : "string"
+    }, {
+      "id" : "j2_7",
+      "text" : "serviceType",
+      "li_attr" : {
+        "id" : "j2_7"
+      },
+      "a_attr" : {
+        "href" : "#",
+        "id" : "j2_7_anchor"
+      },
+      "state" : {
+        "loaded" : true,
+        "opened" : false,
+        "selected" : false,
+        "disabled" : false,
+        "hidden" : false
+      },
+      "data" : {
+        "guid" : "d5c8fa95-b04f-43e9-b2a9-6ab095eb27b3",
+        "columnType" : "-1"
+      },
+      "children" : [ ],
+      "type" : "string"
+    } ],
+    "output" : [ {
+      "id" : "j3_42",
+      "text" : "response",
+      "li_attr" : {
+        "id" : "j3_42"
+      },
+      "a_attr" : {
+        "href" : "#",
+        "id" : "j3_42_anchor"
+      },
+      "state" : {
+        "loaded" : true,
+        "opened" : false,
+        "selected" : false,
+        "disabled" : false,
+        "hidden" : false
+      },
+      "data" : { },
+      "children" : [ ],
+      "type" : "string"
+    }, {
+      "id" : "j3_44",
+      "text" : "thread_id",
+      "li_attr" : {
+        "id" : "j3_44"
+      },
+      "a_attr" : {
+        "href" : "#",
+        "id" : "j3_44_anchor"
+      },
+      "state" : {
+        "loaded" : true,
+        "opened" : false,
+        "selected" : false,
+        "disabled" : false,
+        "hidden" : false
+      },
+      "data" : { },
+      "children" : [ ],
+      "type" : "string"
+    }, {
+      "id" : "j3_4",
+      "text" : "assistantID",
+      "li_attr" : {
+        "id" : "j3_4"
+      },
+      "a_attr" : {
+        "href" : "#",
+        "id" : "j3_4_anchor"
+      },
+      "state" : {
+        "loaded" : true,
+        "opened" : false,
+        "selected" : false,
+        "disabled" : false,
+        "hidden" : false
+      },
+      "data" : { },
+      "children" : [ ],
+      "type" : "string"
+    }, {
+      "id" : "j3_5",
+      "text" : "checkToken",
+      "li_attr" : {
+        "id" : "j3_5"
+      },
+      "a_attr" : {
+        "href" : "#",
+        "id" : "j3_5_anchor"
+      },
+      "state" : {
+        "loaded" : true,
+        "opened" : false,
+        "selected" : false,
+        "disabled" : false,
+        "hidden" : false
+      },
+      "data" : { },
+      "children" : [ ],
+      "type" : "boolean"
+    } ],
+    "api" : [ {
+      "id" : "j1_15",
+      "text" : "Transformer",
+      "li_attr" : {
+        "id" : "j1_15"
+      },
+      "a_attr" : {
+        "href" : "javascript:void(0)",
+        "id" : "j1_15_anchor"
+      },
+      "state" : {
+        "loaded" : true,
+        "opened" : false,
+        "selected" : true,
+        "disabled" : false,
+        "hidden" : false
+      },
+      "data" : {
+        "guid" : "ddda26d0-b37d-47e1-b903-cc135abda616",
+        "columnType" : "-1",
+        "transformers" : [ ],
+        "lines" : [ ],
+        "dropList" : [ ],
+        "createList" : [ {
+          "path" : "checkThread",
+          "value" : "\"null\" == \"#{thread_id}\" || \"\" == \"#{thread_id}\".trim()",
+          "id" : "e2952c60-0c8d-4957-835f-0a41f3dee7f7",
+          "evaluate" : "EEV",
+          "typePath" : "boolean"
+        }, {
+          "path" : "checkToken",
+          "value" : "\"null\" == \"#{chatgptToken}\" || \"\" == \"#{chatgptToken}\".trim()",
+          "id" : "e8b1a88e-f939-446c-84a7-02f191be0358",
+          "typePath" : "boolean",
+          "evaluate" : "EEV"
+        } ],
+        "initiateList" : [ {
+          "path" : "checkThread",
+          "id" : "4957c059-c640-468c-bc47-b6e3a286e64c",
+          "typePath" : "boolean"
+        }, {
+          "path" : "checkToken",
+          "id" : "b928228c-b487-4c4b-8277-922b4536093e",
+          "typePath" : "boolean"
+        } ],
+        "snap" : "enabled"
+      },
+      "children" : [ ],
+      "type" : "transformer"
+    }, {
+      "id" : "j1_16",
+      "text" : "Ifelse",
+      "li_attr" : {
+        "id" : "j1_16"
+      },
+      "a_attr" : {
+        "href" : "javascript:void(0)",
+        "id" : "j1_16_anchor"
+      },
+      "state" : {
+        "loaded" : true,
+        "opened" : true,
+        "selected" : false,
+        "disabled" : false,
+        "hidden" : false
+      },
+      "data" : {
+        "guid" : "eb7e6b21-49e9-4fff-9e4d-95b58ff9d753",
+        "columnType" : "-1",
+        "comment" : "Check If Chatgpt Token Exists in the package Configuration",
+        "snap" : "enabled",
+        "status" : "enabled"
+      },
+      "children" : [ {
+        "id" : "j1_17",
+        "text" : "CONDITION",
+        "li_attr" : {
+          "id" : "j1_17"
+        },
+        "a_attr" : {
+          "href" : "#",
+          "id" : "j1_17_anchor"
+        },
+        "state" : {
+          "loaded" : true,
+          "opened" : true,
+          "selected" : false,
+          "disabled" : false
+        },
+        "data" : {
+          "guid" : "efe36f80-4575-4f83-9abd-8f8561bde5e4",
+          "columnType" : "-1",
+          "ifcondition" : "#{checkToken}"
+        },
+        "children" : [ {
+          "id" : "j1_18",
+          "text" : "Transformer",
+          "li_attr" : {
+            "id" : "j1_18"
+          },
+          "a_attr" : {
+            "href" : "#",
+            "id" : "j1_18_anchor"
+          },
+          "state" : {
+            "loaded" : true,
+            "opened" : false,
+            "selected" : false,
+            "disabled" : false
+          },
+          "data" : {
+            "guid" : "921742d7-30fa-4eab-a5c2-b778e61b9366",
+            "columnType" : "-1",
+            "transformers" : [ ],
+            "lines" : [ ],
+            "dropList" : [ ],
+            "createList" : [ {
+              "path" : "response",
+              "value" : "NO_TOKEN",
+              "id" : "f6fffe88-a9aa-48be-b3e9-071621f60bee",
+              "typePath" : "string"
+            } ],
+            "initiateList" : [ {
+              "path" : "response",
+              "id" : "24b175df-7804-4852-890d-6f248f0c06b7",
+              "typePath" : "string"
+            } ],
+            "comment" : "Ask user to enter token details"
+          },
+          "children" : [ ],
+          "type" : "transformer"
+        } ],
+        "type" : "sequence"
+      }, {
+        "id" : "j1_19",
+        "text" : "CONDITION",
+        "li_attr" : {
+          "id" : "j1_19"
+        },
+        "a_attr" : {
+          "href" : "#",
+          "id" : "j1_19_anchor"
+        },
+        "state" : {
+          "loaded" : true,
+          "opened" : true,
+          "selected" : false,
+          "disabled" : false
+        },
+        "data" : {
+          "guid" : "1154b1c4-9590-4b4b-bacb-3e445b297773",
+          "columnType" : "-1",
+          "ifcondition" : "#else",
+          "status" : "enabled"
+        },
+        "children" : [ {
+          "id" : "j1_13",
+          "text" : "Ifelse",
+          "li_attr" : {
+            "id" : "j1_13"
+          },
+          "a_attr" : {
+            "href" : "javascript:void(0)",
+            "id" : "j1_13_anchor"
+          },
+          "state" : {
+            "loaded" : true,
+            "opened" : false,
+            "selected" : false,
+            "disabled" : false,
+            "hidden" : false
+          },
+          "data" : {
+            "guid" : "d7f280b5-1265-4622-9010-45cdffd61a62",
+            "columnType" : "-1",
+            "status" : "enabled",
+            "comment" : "Check If thread_Id exists, If no, then create new one"
+          },
+          "children" : [ {
+            "id" : "j1_14",
+            "text" : "CONDITION",
+            "li_attr" : {
+              "id" : "j1_14"
+            },
+            "a_attr" : {
+              "href" : "#",
+              "id" : "j1_14_anchor"
+            },
+            "state" : {
+              "loaded" : true,
+              "opened" : false,
+              "selected" : false,
+              "disabled" : false
+            },
+            "data" : {
+              "guid" : "6d43dc61-6263-4ecc-b6e2-3605a3f6a28c",
+              "columnType" : "-1",
+              "ifcondition" : "#{checkThread}",
+              "status" : "enabled"
+            },
+            "children" : [ {
+              "id" : "j1_1",
+              "text" : "Invoke",
+              "li_attr" : {
+                "id" : "j1_1"
+              },
+              "a_attr" : {
+                "href" : "javascript:void(0)",
+                "id" : "j1_1_anchor"
+              },
+              "state" : {
+                "loaded" : true,
+                "opened" : false,
+                "selected" : false,
+                "disabled" : false,
+                "hidden" : false
+              },
+              "data" : {
+                "guid" : "f93a007b-be42-43fc-84ce-8e3941f34a6a",
+                "columnType" : "-1",
+                "transformers" : [ {
+                  "op" : "copy",
+                  "from" : "/*200/id",
+                  "to" : "/thread_id",
+                  "inTypePath" : "document/string",
+                  "outTypePath" : "string",
+                  "direction" : "out"
+                } ],
+                "lines" : [ {
+                  "inputPath" : "*200/id",
+                  "outputPath" : "thread_id",
+                  "inpJsTree" : "#launching_arrow_jsTree_function",
+                  "outpJsTree" : "#landing_arrow_jsTree",
+                  "INPath" : "*200/id",
+                  "OUTPath" : "thread_id",
+                  "direction" : "out",
+                  "op" : "copy",
+                  "line" : 0,
+                  "dashedLine" : false,
+                  "inType" : "string",
+                  "outType" : "string",
+                  "inTypePath" : "document/string",
+                  "outTypePath" : "string"
+                } ],
+                "dropList" : [ ],
+                "createList" : [ ],
+                "initiateList" : [ {
+                  "path" : "thread_id",
+                  "id" : "e53d9717-7169-481c-8eac-4424c8d6d392",
+                  "typePath" : "string"
+                } ],
+                "fqn" : "packages/middleware/pub/syncloopGPT/create_thread",
+                "serviceType" : "api",
+                "status" : "enabled"
+              },
+              "children" : [ ],
+              "type" : "invoke"
+            } ],
+            "type" : "sequence"
+          } ],
+          "type" : "ifelse"
+        }, {
+          "id" : "j1_2",
+          "text" : "Invoke",
+          "li_attr" : {
+            "id" : "j1_2"
+          },
+          "a_attr" : {
+            "href" : "javascript:void(0)",
+            "id" : "j1_2_anchor"
+          },
+          "state" : {
+            "loaded" : true,
+            "opened" : false,
+            "selected" : false,
+            "disabled" : false,
+            "hidden" : false
+          },
+          "data" : {
+            "guid" : "b0dd7eb9-cf81-45da-8222-990fbcd0fd06",
+            "columnType" : "-1",
+            "transformers" : [ {
+              "op" : "copy",
+              "from" : "/thread_id",
+              "to" : "/*pathParameters/thread_id",
+              "inTypePath" : "string",
+              "outTypePath" : "document/string",
+              "direction" : "in"
+            }, {
+              "op" : "copy",
+              "from" : "/*payload",
+              "to" : "/*payload",
+              "inTypePath" : "document",
+              "outTypePath" : "document",
+              "direction" : "in"
+            } ],
+            "lines" : [ {
+              "inputPath" : "thread_id",
+              "outputPath" : "*pathParameters/thread_id",
+              "inpJsTree" : "#launching_arrow_jsTree",
+              "outpJsTree" : "#landing_arrow_jsTree_function",
+              "INPath" : "thread_id",
+              "OUTPath" : "*pathParameters/thread_id",
+              "direction" : "in",
+              "op" : "copy",
+              "line" : 0,
+              "dashedLine" : false,
+              "inType" : "string",
+              "outType" : "string",
+              "inTypePath" : "string",
+              "outTypePath" : "document/string"
+            }, {
+              "inputPath" : "*payload",
+              "outputPath" : "*payload",
+              "inpJsTree" : "#launching_arrow_jsTree",
+              "outpJsTree" : "#landing_arrow_jsTree_function",
+              "INPath" : "*payload",
+              "OUTPath" : "*payload",
+              "direction" : "in",
+              "op" : "copy",
+              "line" : 0,
+              "dashedLine" : false,
+              "inType" : "document",
+              "outType" : "document",
+              "inTypePath" : "document",
+              "outTypePath" : "document"
+            } ],
+            "dropList" : [ ],
+            "createList" : [ ],
+            "initiateList" : [ ],
+            "fqn" : "packages/middleware/pub/syncloopGPT/add_message",
+            "serviceType" : "api",
+            "status" : "enabled",
+            "comment" : "Add message to chatgpt assistant "
+          },
+          "children" : [ ],
+          "type" : "invoke"
+        }, {
+          "id" : "j1_20",
+          "text" : "Transformer",
+          "li_attr" : {
+            "id" : "j1_20"
+          },
+          "a_attr" : {
+            "href" : "#",
+            "id" : "j1_20_anchor"
+          },
+          "state" : {
+            "loaded" : true,
+            "opened" : false,
+            "selected" : false,
+            "disabled" : false
+          },
+          "data" : {
+            "guid" : "4dace2e7-a25a-4d42-b685-7d29615e4f1e",
+            "columnType" : "-1",
+            "transformers" : [ ],
+            "lines" : [ ],
+            "dropList" : [ ],
+            "createList" : [ {
+              "path" : "role",
+              "value" : "r",
+              "id" : "f6db634e-786f-4973-8480-5a21d24f82a8",
+              "typePath" : "string"
+            }, {
+              "path" : "size",
+              "value" : "0",
+              "id" : "e96dbc7f-5a86-423a-89b1-3cca554a487b",
+              "typePath" : "integer"
+            }, {
+              "path" : "statusCodeOK",
+              "value" : "200",
+              "id" : "ec1d9eea-56e5-4403-b45e-30289f53a7d9",
+              "typePath" : "string"
+            } ],
+            "initiateList" : [ {
+              "path" : "size",
+              "id" : "e60310ad-32c6-4755-817e-8dd8e84c9182",
+              "typePath" : "integer"
+            }, {
+              "path" : "role",
+              "id" : "4b299187-8480-437c-af77-9fb113c498ad",
+              "typePath" : "string"
+            }, {
+              "path" : "statusCodeOK",
+              "id" : "0abb32a1-b25c-4803-9695-0853845143a6",
+              "typePath" : "string"
+            } ]
+          },
+          "children" : [ ],
+          "type" : "transformer"
+        }, {
+          "id" : "j1_3",
+          "text" : "Invoke",
+          "li_attr" : {
+            "id" : "j1_3"
+          },
+          "a_attr" : {
+            "href" : "javascript:void(0)",
+            "id" : "j1_3_anchor"
+          },
+          "state" : {
+            "loaded" : true,
+            "opened" : false,
+            "selected" : false,
+            "disabled" : false,
+            "hidden" : false
+          },
+          "data" : {
+            "guid" : "9dc6c440-b6e6-4678-b066-e1794df2d3a3",
+            "columnType" : "-1",
+            "transformers" : [ {
+              "op" : "copy",
+              "from" : "/assistantID",
+              "to" : "/*payload/assistant_id",
+              "inTypePath" : "string",
+              "outTypePath" : "document/string",
+              "direction" : "in"
+            }, {
+              "op" : "copy",
+              "from" : "/thread_id",
+              "to" : "/*pathParameters/thread_id",
+              "inTypePath" : "string",
+              "outTypePath" : "document/string",
+              "direction" : "in"
+            }, {
+              "op" : "copy",
+              "from" : "/serviceType",
+              "to" : "/serviceType",
+              "inTypePath" : "string",
+              "outTypePath" : "string",
+              "direction" : "in"
+            }, {
+              "op" : "copy",
+              "from" : "/statusCode",
+              "to" : "/statusCodeOK",
+              "inTypePath" : "string",
+              "outTypePath" : "string",
+              "direction" : "out"
+            }, {
+              "op" : "copy",
+              "from" : "/respHeaders",
+              "to" : "/respHeaders",
+              "inTypePath" : "document",
+              "outTypePath" : "document",
+              "direction" : "out"
+            } ],
+            "lines" : [ {
+              "inputPath" : "assistantID",
+              "outputPath" : "*payload/assistant_id",
+              "inpJsTree" : "#launching_arrow_jsTree",
+              "outpJsTree" : "#landing_arrow_jsTree_function",
+              "INPath" : "assistantID",
+              "OUTPath" : "*payload/assistant_id",
+              "direction" : "in",
+              "op" : "copy",
+              "line" : 0,
+              "dashedLine" : false,
+              "inType" : "string",
+              "outType" : "string",
+              "inTypePath" : "string",
+              "outTypePath" : "document/string"
+            }, {
+              "inputPath" : "thread_id",
+              "outputPath" : "*pathParameters/thread_id",
+              "inpJsTree" : "#launching_arrow_jsTree",
+              "outpJsTree" : "#landing_arrow_jsTree_function",
+              "INPath" : "thread_id",
+              "OUTPath" : "*pathParameters/thread_id",
+              "direction" : "in",
+              "op" : "copy",
+              "line" : 0,
+              "dashedLine" : false,
+              "inType" : "string",
+              "outType" : "string",
+              "inTypePath" : "string",
+              "outTypePath" : "document/string"
+            }, {
+              "inputPath" : "serviceType",
+              "outputPath" : "serviceType",
+              "inpJsTree" : "#launching_arrow_jsTree",
+              "outpJsTree" : "#landing_arrow_jsTree_function",
+              "INPath" : "serviceType",
+              "OUTPath" : "serviceType",
+              "direction" : "in",
+              "op" : "copy",
+              "line" : 0,
+              "dashedLine" : false,
+              "inType" : "string",
+              "outType" : "string",
+              "inTypePath" : "string",
+              "outTypePath" : "string"
+            }, {
+              "inputPath" : "statusCode",
+              "outputPath" : "statusCodeOK",
+              "inpJsTree" : "#launching_arrow_jsTree_function",
+              "outpJsTree" : "#landing_arrow_jsTree",
+              "INPath" : "statusCode",
+              "OUTPath" : "statusCodeOK",
+              "direction" : "out",
+              "op" : "copy",
+              "line" : 0,
+              "dashedLine" : false,
+              "inType" : "string",
+              "outType" : "string",
+              "inTypePath" : "string",
+              "outTypePath" : "string"
+            }, {
+              "inputPath" : "respHeaders",
+              "outputPath" : "respHeaders",
+              "inpJsTree" : "#launching_arrow_jsTree_function",
+              "outpJsTree" : "#landing_arrow_jsTree",
+              "INPath" : "respHeaders",
+              "OUTPath" : "respHeaders",
+              "direction" : "out",
+              "op" : "copy",
+              "line" : 0,
+              "dashedLine" : false,
+              "inType" : "document",
+              "outType" : "document",
+              "inTypePath" : "document",
+              "outTypePath" : "document"
+            } ],
+            "dropList" : [ ],
+            "createList" : [ ],
+            "initiateList" : [ ],
+            "fqn" : "packages/middleware/pub/syncloopGPT/create_run",
+            "serviceType" : "api",
+            "snap" : "disabled",
+            "status" : "disabled",
+            "comment" : "Run message using chatgpt api"
+          },
+          "children" : [ ],
+          "type" : "invoke"
+        }, {
+          "id" : "j1_10",
+          "text" : "Redo",
+          "li_attr" : {
+            "id" : "j1_10"
+          },
+          "a_attr" : {
+            "href" : "javascript:void(0)",
+            "id" : "j1_10_anchor"
+          },
+          "state" : {
+            "loaded" : true,
+            "opened" : false,
+            "selected" : false,
+            "disabled" : false,
+            "hidden" : false
+          },
+          "data" : {
+            "guid" : "a7826274-8fd0-4a0d-a0e3-41694970aeac",
+            "indexVar" : "*index0",
+            "columnType" : "-1",
+            "redo" : "-1",
+            "condition" : "\"#{role}\" != \"assistant\" &&  #{size} == 0 && #{statusCodeOK} == 200",
+            "interval" : "2000",
+            "status" : "disabled",
+            "repeatOn" : "success",
+            "snap" : "disabled",
+            "comment" : "Wait for response from Chatgpt API"
+          },
+          "children" : [ {
+            "id" : "j1_4",
+            "text" : "Invoke",
+            "li_attr" : {
+              "id" : "j1_4"
+            },
+            "a_attr" : {
+              "href" : "javascript:void(0)",
+              "id" : "j1_4_anchor"
+            },
+            "state" : {
+              "loaded" : true,
+              "opened" : false,
+              "selected" : false,
+              "disabled" : false,
+              "hidden" : false
+            },
+            "data" : {
+              "guid" : "4abfcbd5-fbf8-46aa-b176-fc5328b1f007",
+              "columnType" : "-1",
+              "transformers" : [ {
+                "op" : "copy",
+                "from" : "/thread_id",
+                "to" : "/*pathParameters/thread_id",
+                "inTypePath" : "string",
+                "outTypePath" : "document/string",
+                "direction" : "in"
+              }, {
+                "op" : "copy",
+                "from" : "/*200/data",
+                "to" : "/data",
+                "inTypePath" : "document/documentList",
+                "outTypePath" : "documentList",
+                "direction" : "out"
+              }, {
+                "op" : "copy",
+                "from" : "/statusCode",
+                "to" : "/statusCodeOK",
+                "inTypePath" : "string",
+                "outTypePath" : "string",
+                "direction" : "out"
+              } ],
+              "lines" : [ {
+                "inputPath" : "thread_id",
+                "outputPath" : "*pathParameters/thread_id",
+                "inpJsTree" : "#launching_arrow_jsTree",
+                "outpJsTree" : "#landing_arrow_jsTree_function",
+                "INPath" : "thread_id",
+                "OUTPath" : "*pathParameters/thread_id",
+                "direction" : "in",
+                "op" : "copy",
+                "line" : 0,
+                "dashedLine" : false,
+                "inType" : "string",
+                "outType" : "string",
+                "inTypePath" : "string",
+                "outTypePath" : "document/string"
+              }, {
+                "inputPath" : "*200/data",
+                "outputPath" : "data",
+                "inpJsTree" : "#launching_arrow_jsTree_function",
+                "outpJsTree" : "#landing_arrow_jsTree",
+                "INPath" : "*200/data",
+                "OUTPath" : "data",
+                "direction" : "out",
+                "op" : "copy",
+                "line" : 0,
+                "dashedLine" : false,
+                "inType" : "documentList",
+                "outType" : "documentList",
+                "inTypePath" : "document/documentList",
+                "outTypePath" : "documentList"
+              }, {
+                "inputPath" : "statusCode",
+                "outputPath" : "statusCodeOK",
+                "inpJsTree" : "#launching_arrow_jsTree_function",
+                "outpJsTree" : "#landing_arrow_jsTree",
+                "INPath" : "statusCode",
+                "OUTPath" : "statusCodeOK",
+                "direction" : "out",
+                "op" : "copy",
+                "line" : 0,
+                "dashedLine" : false,
+                "inType" : "string",
+                "outType" : "string",
+                "inTypePath" : "string",
+                "outTypePath" : "string"
+              } ],
+              "dropList" : [ ],
+              "createList" : [ ],
+              "initiateList" : [ ],
+              "fqn" : "packages/middleware/pub/syncloopGPT/list_messages",
+              "serviceType" : "api",
+              "snap" : "disabled",
+              "comment" : "Check the response"
+            },
+            "children" : [ ],
+            "type" : "invoke"
+          }, {
+            "id" : "j1_11",
+            "text" : "Invoke",
+            "li_attr" : {
+              "id" : "j1_11"
+            },
+            "a_attr" : {
+              "href" : "#",
+              "id" : "j1_11_anchor"
+            },
+            "state" : {
+              "loaded" : true,
+              "opened" : false,
+              "selected" : false,
+              "disabled" : false
+            },
+            "data" : {
+              "guid" : "d4d647ba-5281-4c09-8506-37f4c5fce5db",
+              "columnType" : "-1",
+              "transformers" : [ {
+                "op" : "copy",
+                "from" : "/dataList/data/content/#0",
+                "to" : "/docList",
+                "inTypePath" : "document/documentList/documentList",
+                "outTypePath" : "documentList",
+                "direction" : "in"
+              }, {
+                "op" : "copy",
+                "from" : "/size",
+                "to" : "/size",
+                "inTypePath" : "integer",
+                "outTypePath" : "string",
+                "direction" : "out"
+              } ],
+              "lines" : [ {
+                "inputPath" : "dataList/data/content",
+                "outputPath" : "docList",
+                "inpJsTree" : "#launching_arrow_jsTree",
+                "outpJsTree" : "#landing_arrow_jsTree_function",
+                "INPath" : "dataList/data/content/#0",
+                "OUTPath" : "docList",
+                "direction" : "in",
+                "op" : "copy",
+                "line" : 0,
+                "dashedLine" : false,
+                "inType" : "documentList",
+                "outType" : "documentList",
+                "inTypePath" : "document/documentList/documentList",
+                "outTypePath" : "documentList"
+              }, {
+                "inputPath" : "size",
+                "outputPath" : "size",
+                "inpJsTree" : "#launching_arrow_jsTree_function",
+                "outpJsTree" : "#landing_arrow_jsTree",
+                "INPath" : "size",
+                "OUTPath" : "size",
+                "direction" : "out",
+                "op" : "copy",
+                "line" : 0,
+                "dashedLine" : false,
+                "inType" : "integer",
+                "outType" : "integer",
+                "inTypePath" : "integer",
+                "outTypePath" : "string"
+              } ],
+              "dropList" : [ ],
+              "createList" : [ ],
+              "initiateList" : [ ],
+              "fqn" : "packages/middleware/pub/collection/List/Size",
+              "serviceType" : "service"
+            },
+            "children" : [ ],
+            "type" : "invoke"
+          }, {
+            "id" : "j1_9",
+            "text" : "Invoke",
+            "li_attr" : {
+              "id" : "j1_9"
+            },
+            "a_attr" : {
+              "href" : "#",
+              "id" : "j1_9_anchor"
+            },
+            "state" : {
+              "loaded" : true,
+              "opened" : false,
+              "selected" : false,
+              "disabled" : false
+            },
+            "data" : {
+              "guid" : "456391b4-f4c1-4608-9091-5f8e9e9827d5",
+              "columnType" : "-1",
+              "transformers" : [ {
+                "op" : "copy",
+                "from" : "/role",
+                "to" : "/role",
+                "inTypePath" : "string",
+                "outTypePath" : "string",
+                "direction" : "out"
+              }, {
+                "op" : "copy",
+                "from" : "/data",
+                "to" : "/dataList",
+                "inTypePath" : "documentList",
+                "outTypePath" : "documentList",
+                "direction" : "in"
+              }, {
+                "op" : "copy",
+                "from" : "/response",
+                "to" : "/response",
+                "inTypePath" : "string",
+                "outTypePath" : "string",
+                "direction" : "out"
+              } ],
+              "lines" : [ {
+                "inputPath" : "role",
+                "outputPath" : "role",
+                "inpJsTree" : "#launching_arrow_jsTree_function",
+                "outpJsTree" : "#landing_arrow_jsTree",
+                "INPath" : "role",
+                "OUTPath" : "role",
+                "direction" : "out",
+                "op" : "copy",
+                "line" : 0,
+                "dashedLine" : false,
+                "inType" : "string",
+                "outType" : "string",
+                "inTypePath" : "string",
+                "outTypePath" : "string"
+              }, {
+                "inputPath" : "data",
+                "outputPath" : "dataList",
+                "inpJsTree" : "#launching_arrow_jsTree",
+                "outpJsTree" : "#landing_arrow_jsTree_function",
+                "INPath" : "data",
+                "OUTPath" : "dataList",
+                "direction" : "in",
+                "op" : "copy",
+                "line" : 0,
+                "dashedLine" : false,
+                "inType" : "documentList",
+                "outType" : "documentList",
+                "inTypePath" : "documentList",
+                "outTypePath" : "documentList"
+              }, {
+                "inputPath" : "response",
+                "outputPath" : "response",
+                "inpJsTree" : "#launching_arrow_jsTree_function",
+                "outpJsTree" : "#landing_arrow_jsTree",
+                "INPath" : "response",
+                "OUTPath" : "response",
+                "direction" : "out",
+                "op" : "copy",
+                "line" : 0,
+                "dashedLine" : false,
+                "inType" : "string",
+                "outType" : "string",
+                "inTypePath" : "string",
+                "outTypePath" : "string"
+              } ],
+              "dropList" : [ ],
+              "createList" : [ ],
+              "initiateList" : [ ],
+              "fqn" : "packages/middleware/pub/syncloopGPT/fetchResultByPolling",
+              "serviceType" : "service",
+              "status" : "enabled"
+            },
+            "children" : [ ],
+            "type" : "invoke"
+          } ],
+          "type" : "redo"
+        } ],
+        "type" : "sequence"
+      } ],
+      "type" : "ifelse"
+    } ],
+    "api_info" : {
+      "title" : "",
+      "description" : ""
+    },
+    "lockedByUser" : "admin"
+  },
+  "consumers" : "",
+  "developers" : "developers",
+  "enableServiceDocumentValidation" : false,
+  "created_on" : "1764687934470",
+  "modified_on" : 1764687934470
+}

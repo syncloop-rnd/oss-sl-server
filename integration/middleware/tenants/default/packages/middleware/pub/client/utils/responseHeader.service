@@ -1,0 +1,52 @@
+{
+  "input" : [ {
+    "id" : "j1_1",
+    "text" : "statusCode",
+    "icon" : null,
+    "li_attr" : {
+      "id" : "j1_1"
+    },
+    "a_attr" : {
+      "href" : "#",
+      "id" : "j1_1_anchor"
+    },
+    "state" : {
+      "loaded" : true,
+      "opened" : false,
+      "selected" : false,
+      "disabled" : false
+    },
+    "data" : { },
+    "children" : [ ],
+    "type" : "string"
+  }, {
+    "id" : "j1_2",
+    "text" : "headers",
+    "icon" : null,
+    "li_attr" : {
+      "id" : "j1_2"
+    },
+    "a_attr" : {
+      "href" : "#",
+      "id" : "j1_2_anchor"
+    },
+    "state" : {
+      "loaded" : true,
+      "opened" : false,
+      "selected" : false,
+      "disabled" : false
+    },
+    "data" : { },
+    "children" : [ ],
+    "type" : "document"
+  } ],
+  "output" : [ ],
+  "package" : "cGFja2FnZSBwYWNrYWdlcy5taWRkbGV3YXJlLnB1Yi5jbGllbnQudXRpbHM7",
+  "imports" : "aW1wb3J0IGNvbS5la2EubWlkZGxld2FyZS5zZXJ2aWNlLkRhdGFQaXBlbGluZTsKaW1wb3J0IGNvbS5la2EubWlkZGxld2FyZS5zZXJ2aWNlLlNlcnZpY2VVdGlsczsKaW1wb3J0IGNvbS5la2EubWlkZGxld2FyZS50ZW1wbGF0ZS5TbmlwcGV0RXhjZXB0aW9uOwppbXBvcnQgb3JnLmFwYWNoZS5jb21tb25zLmxhbmczLlN0cmluZ1V0aWxzOwppbXBvcnQgaW8udW5kZXJ0b3cudXRpbC5IZWFkZXJzOwppbXBvcnQgamF2YS51dGlsLk1hcDsKaW1wb3J0IGlvLnVuZGVydG93LnV0aWwuSHR0cFN0cmluZzsK",
+  "main" : "dHJ5IHsKIFN0cmluZyBzdGF0dXNDb2RlID0gZGF0YVBpcGVsaW5lLmdldFN0cmluZygic3RhdHVzQ29kZSIpOwpNYXA8U3RyaW5nLCBTdHJpbmc+IHJlcUhlYWRlcnMgPSBkYXRhUGlwZWxpbmUuZ2V0QXNNYXAoImhlYWRlcnMiKTsKaWYgKFN0cmluZ1V0aWxzLmlzTm90Qmxhbmsoc3RhdHVzQ29kZSkpIHsKICBkYXRhUGlwZWxpbmUuc2V0UmVzcG9uc2VTdGF0dXMoSW50ZWdlci5wYXJzZUludChzdGF0dXNDb2RlKSk7Cn0KCiAgCmlmIChudWxsICE9IHJlcUhlYWRlcnMgJiYgZGF0YVBpcGVsaW5lLnJwLmlzRXhjaGFuZ2VJbml0aWFsaXplZCgpKSB7CiAgICAgICAgICAgICAgICBmb3IoTWFwLkVudHJ5PFN0cmluZywgU3RyaW5nPiBtIDogcmVxSGVhZGVycy5lbnRyeVNldCgpKSB7CiAgICAgICAgICAgICAgICAgICAgZGF0YVBpcGVsaW5lLnJwLmdldEV4Y2hhbmdlKCkuZ2V0UmVzcG9uc2VIZWFkZXJzKCkucHV0KG5ldyBIdHRwU3RyaW5nKG0uZ2V0S2V5KCkpLCBtLmdldFZhbHVlKCkpOwogICAgICAgICAgICAgICAgfQoKICAgICAgICAgICAgfQogIAp9IGNhdGNoIChUaHJvd2FibGUgZSkgewoJZGF0YVBpcGVsaW5lLmNsZWFyKCk7CglkYXRhUGlwZWxpbmUucHV0KCJlcnJvciIsIGUuZ2V0TWVzc2FnZSgpKTsKCWUucHJpbnRTdGFja1RyYWNlKCk7Cn0KICAK",
+  "staticWorkspace" : "",
+  "version" : "v1",
+  "consumers" : "",
+  "developers" : "",
+  "lockedByUser" : "admin"
+}

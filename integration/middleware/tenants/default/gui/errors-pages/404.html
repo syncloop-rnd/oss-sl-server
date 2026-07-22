@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>404 | Page Not Found</title>
+
+    <style>
+        * {
+            box-sizing: border-box;
+            font-family: Inter, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+        }
+
+        body {
+            margin: 0;
+            background: linear-gradient(90deg, #ffffff 55%, #EAF7FB 45%);
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .container {
+            width: 100%;
+            max-width: 1200px;
+            padding: 40px;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            align-items: center;
+            gap: 40px;
+        }
+
+        .content {
+            max-width: 420px;
+        }
+
+        .content h1 {
+            font-size: 72px;
+            margin: 0;
+            color: #0B5ED7;
+            line-height: 1;
+        }
+
+        .content h2 {
+            font-size: 28px;
+            margin: 16px 0 8px;
+            color: #1F2937;
+        }
+
+        .content p {
+            font-size: 16px;
+            color: #6B7280;
+            line-height: 1.6;
+            margin-bottom: 24px;
+        }
+
+        .actions {
+            display: flex;
+            gap: 12px;
+            flex-wrap: wrap;
+        }
+
+        .btn {
+            padding: 12px 20px;
+            border-radius: 6px;
+            font-size: 14px;
+            font-weight: 500;
+            text-decoration: none;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+            transition: all 0.2s ease;
+        }
+
+        .btn-primary {
+            background: #0B5ED7;
+            color: #ffffff;
+        }
+
+        .btn-primary:hover {
+            background: #094BB5;
+        }
+
+        .btn-outline {
+            border: 1px solid #D1D5DB;
+            color: #1F2937;
+            background: #ffffff;
+        }
+
+        .btn-outline:hover {
+            background: #F3F4F6;
+        }
+
+        .illustration {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        svg {
+            max-width: 360px;
+            width: 100%;
+        }
+
+        @media (max-width: 900px) {
+            body {
+                background: #ffffff;
+            }
+
+            .container {
+                grid-template-columns: 1fr;
+                text-align: center;
+            }
+
+            .content {
+                margin: 0 auto;
+            }
+
+            .actions {
+                justify-content: center;
+            }
+        }
+    </style>
+    <script type="syncloop/analytics"></script>
+</head>
+<body>
+<script type="syncloop/body-analytics"></script>
+<div class="container">
+    <!-- LEFT CONTENT -->
+    <div class="content">
+        <!-- Logo can be placed here -->
+        <!-- <img src="logo.svg" alt="Syncloop Logo" /> -->
+
+        <h1>404</h1>
+        <h2>Page not found</h2>
+        <p>
+            Looks like this page took a wrong turn and drifted off course.
+            Don’t worry — your journey doesn’t end here.
+        </p>
+
+        <div class="actions">
+            <a href="/" class="btn btn-primary">Go to Dashboard</a>
+            <a href="javascript:history.back()" class="btn btn-outline">Go Back</a>
+        </div>
+    </div>
+
+    <!-- RIGHT ILLUSTRATION -->
+    <div class="illustration">
+        <!-- Inline SVG – Lost Rocket -->
+        <svg viewBox="0 0 300 300" xmlns="http://www.w3.org/2000/svg">
+            <circle cx="150" cy="150" r="140" fill="#EAF7FB"/>
+
+            <!-- Rocket body -->
+            <ellipse cx="150" cy="140" rx="30" ry="70" fill="#FFFFFF" stroke="#CBD5E1" stroke-width="2"/>
+            <polygon points="150,40 120,90 180,90" fill="#EF4444"/>
+
+            <!-- Windows -->
+            <circle cx="150" cy="120" r="8" fill="#2563EB"/>
+            <circle cx="150" cy="145" r="6" fill="#2563EB"/>
+
+            <!-- Flames -->
+            <polygon points="150,210 135,250 165,250" fill="#F59E0B"/>
+            <polygon points="150,210 142,235 158,235" fill="#FDBA74"/>
+
+            <!-- Smoke -->
+            <circle cx="110" cy="260" r="18" fill="#E5E7EB"/>
+            <circle cx="150" cy="270" r="22" fill="#E5E7EB"/>
+            <circle cx="190" cy="260" r="18" fill="#E5E7EB"/>
+
+            <!-- Stars -->
+            <circle cx="60" cy="70" r="3" fill="#93C5FD"/>
+            <circle cx="240" cy="90" r="3" fill="#93C5FD"/>
+            <circle cx="210" cy="50" r="2" fill="#93C5FD"/>
+        </svg>
+    </div>
+</div>
+
+</body>
+</html>

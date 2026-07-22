@@ -1,0 +1,852 @@
+{
+  "input" : [ {
+    "id" : "j1_17",
+    "text" : "request",
+    "li_attr" : {
+      "id" : "j1_17"
+    },
+    "a_attr" : {
+      "href" : "#",
+      "id" : "j1_17_anchor"
+    },
+    "state" : {
+      "loaded" : true,
+      "opened" : true,
+      "selected" : false,
+      "disabled" : false,
+      "hidden" : false
+    },
+    "data" : { },
+    "children" : [ {
+      "id" : "j1_1",
+      "text" : "uniqueName",
+      "li_attr" : {
+        "id" : "j1_1"
+      },
+      "a_attr" : {
+        "href" : "#",
+        "id" : "j1_1_anchor"
+      },
+      "state" : {
+        "loaded" : true,
+        "opened" : false,
+        "selected" : false,
+        "disabled" : false,
+        "hidden" : false
+      },
+      "data" : { },
+      "children" : [ ],
+      "type" : "string"
+    }, {
+      "id" : "j1_2",
+      "text" : "providerName",
+      "li_attr" : {
+        "id" : "j1_2"
+      },
+      "a_attr" : {
+        "href" : "#",
+        "id" : "j1_2_anchor"
+      },
+      "state" : {
+        "loaded" : true,
+        "opened" : false,
+        "selected" : false,
+        "disabled" : false,
+        "hidden" : false
+      },
+      "data" : { },
+      "children" : [ ],
+      "type" : "string"
+    }, {
+      "id" : "j1_3",
+      "text" : "appName",
+      "li_attr" : {
+        "id" : "j1_3"
+      },
+      "a_attr" : {
+        "href" : "#",
+        "id" : "j1_3_anchor"
+      },
+      "state" : {
+        "loaded" : true,
+        "opened" : false,
+        "selected" : false,
+        "disabled" : false,
+        "hidden" : false
+      },
+      "data" : { },
+      "children" : [ ],
+      "type" : "string"
+    }, {
+      "id" : "j1_4",
+      "text" : "appLogo",
+      "li_attr" : {
+        "id" : "j1_4"
+      },
+      "a_attr" : {
+        "href" : "#",
+        "id" : "j1_4_anchor"
+      },
+      "state" : {
+        "loaded" : true,
+        "opened" : false,
+        "selected" : false,
+        "disabled" : false,
+        "hidden" : false
+      },
+      "data" : { },
+      "children" : [ ],
+      "type" : "string"
+    }, {
+      "id" : "j1_5",
+      "text" : "privacyPolicyUrl",
+      "li_attr" : {
+        "id" : "j1_5"
+      },
+      "a_attr" : {
+        "href" : "#",
+        "id" : "j1_5_anchor"
+      },
+      "state" : {
+        "loaded" : true,
+        "opened" : false,
+        "selected" : false,
+        "disabled" : false,
+        "hidden" : false
+      },
+      "data" : { },
+      "children" : [ ],
+      "type" : "string"
+    }, {
+      "id" : "j1_6",
+      "text" : "baseEndpoint",
+      "li_attr" : {
+        "id" : "j1_6"
+      },
+      "a_attr" : {
+        "href" : "#",
+        "id" : "j1_6_anchor"
+      },
+      "state" : {
+        "loaded" : true,
+        "opened" : false,
+        "selected" : false,
+        "disabled" : false,
+        "hidden" : false
+      },
+      "data" : { },
+      "children" : [ ],
+      "type" : "string"
+    }, {
+      "id" : "j1_7",
+      "text" : "wellKnownUrl",
+      "li_attr" : {
+        "id" : "j1_7"
+      },
+      "a_attr" : {
+        "href" : "#",
+        "id" : "j1_7_anchor"
+      },
+      "state" : {
+        "loaded" : true,
+        "opened" : false,
+        "selected" : false,
+        "disabled" : false,
+        "hidden" : false
+      },
+      "data" : { },
+      "children" : [ ],
+      "type" : "string"
+    }, {
+      "id" : "j1_8",
+      "text" : "clientId",
+      "li_attr" : {
+        "id" : "j1_8"
+      },
+      "a_attr" : {
+        "href" : "#",
+        "id" : "j1_8_anchor"
+      },
+      "state" : {
+        "loaded" : true,
+        "opened" : false,
+        "selected" : false,
+        "disabled" : false,
+        "hidden" : false
+      },
+      "data" : { },
+      "children" : [ ],
+      "type" : "string"
+    }, {
+      "id" : "j1_9",
+      "text" : "clientSecret",
+      "li_attr" : {
+        "id" : "j1_9"
+      },
+      "a_attr" : {
+        "href" : "#",
+        "id" : "j1_9_anchor"
+      },
+      "state" : {
+        "loaded" : true,
+        "opened" : false,
+        "selected" : false,
+        "disabled" : false,
+        "hidden" : false
+      },
+      "data" : { },
+      "children" : [ ],
+      "type" : "string"
+    }, {
+      "id" : "j1_10",
+      "text" : "authorizationUrl",
+      "li_attr" : {
+        "id" : "j1_10"
+      },
+      "a_attr" : {
+        "href" : "#",
+        "id" : "j1_10_anchor"
+      },
+      "state" : {
+        "loaded" : true,
+        "opened" : false,
+        "selected" : false,
+        "disabled" : false,
+        "hidden" : false
+      },
+      "data" : { },
+      "children" : [ ],
+      "type" : "string"
+    }, {
+      "id" : "j1_11",
+      "text" : "tokenUrl",
+      "li_attr" : {
+        "id" : "j1_11"
+      },
+      "a_attr" : {
+        "href" : "#",
+        "id" : "j1_11_anchor"
+      },
+      "state" : {
+        "loaded" : true,
+        "opened" : false,
+        "selected" : false,
+        "disabled" : false,
+        "hidden" : false
+      },
+      "data" : { },
+      "children" : [ ],
+      "type" : "string"
+    }, {
+      "id" : "j1_12",
+      "text" : "redirectUri",
+      "li_attr" : {
+        "id" : "j1_12"
+      },
+      "a_attr" : {
+        "href" : "#",
+        "id" : "j1_12_anchor"
+      },
+      "state" : {
+        "loaded" : true,
+        "opened" : false,
+        "selected" : false,
+        "disabled" : false,
+        "hidden" : false
+      },
+      "data" : { },
+      "children" : [ ],
+      "type" : "string"
+    }, {
+      "id" : "j1_13",
+      "text" : "scopes",
+      "li_attr" : {
+        "id" : "j1_13"
+      },
+      "a_attr" : {
+        "href" : "#",
+        "id" : "j1_13_anchor"
+      },
+      "state" : {
+        "loaded" : true,
+        "opened" : false,
+        "selected" : false,
+        "disabled" : false,
+        "hidden" : false
+      },
+      "data" : { },
+      "children" : [ ],
+      "type" : "stringList"
+    }, {
+      "id" : "j1_14",
+      "text" : "grantTypes",
+      "li_attr" : {
+        "id" : "j1_14"
+      },
+      "a_attr" : {
+        "href" : "#",
+        "id" : "j1_14_anchor"
+      },
+      "state" : {
+        "loaded" : true,
+        "opened" : false,
+        "selected" : false,
+        "disabled" : false,
+        "hidden" : false
+      },
+      "data" : { },
+      "children" : [ ],
+      "type" : "stringList"
+    }, {
+      "id" : "j1_15",
+      "text" : "status",
+      "li_attr" : {
+        "id" : "j1_15"
+      },
+      "a_attr" : {
+        "href" : "#",
+        "id" : "j1_15_anchor"
+      },
+      "state" : {
+        "loaded" : true,
+        "opened" : false,
+        "selected" : false,
+        "disabled" : false,
+        "hidden" : false
+      },
+      "data" : { },
+      "children" : [ ],
+      "type" : "string"
+    }, {
+      "id" : "j1_16",
+      "text" : "extraAuthParams",
+      "li_attr" : {
+        "id" : "j1_16"
+      },
+      "a_attr" : {
+        "href" : "#",
+        "id" : "j1_16_anchor"
+      },
+      "state" : {
+        "loaded" : true,
+        "opened" : false,
+        "selected" : false,
+        "disabled" : false,
+        "hidden" : false
+      },
+      "data" : { },
+      "children" : [ ],
+      "type" : "document"
+    } ],
+    "type" : "document"
+  } ],
+  "output" : [ {
+    "id" : "j2_1",
+    "text" : "status",
+    "li_attr" : {
+      "id" : "j2_1"
+    },
+    "a_attr" : {
+      "href" : "#",
+      "id" : "j2_1_anchor"
+    },
+    "state" : {
+      "loaded" : true,
+      "opened" : false,
+      "selected" : false,
+      "disabled" : false,
+      "hidden" : false
+    },
+    "data" : { },
+    "children" : [ ],
+    "type" : "string"
+  }, {
+    "id" : "j2_2",
+    "text" : "error",
+    "li_attr" : {
+      "id" : "j2_2"
+    },
+    "a_attr" : {
+      "href" : "#",
+      "id" : "j2_2_anchor"
+    },
+    "state" : {
+      "loaded" : true,
+      "opened" : false,
+      "selected" : false,
+      "disabled" : false,
+      "hidden" : false
+    },
+    "data" : { },
+    "children" : [ ],
+    "type" : "string"
+  }, {
+    "id" : "j2_25",
+    "text" : "result",
+    "li_attr" : {
+      "id" : "j2_25"
+    },
+    "a_attr" : {
+      "href" : "#",
+      "id" : "j2_25_anchor"
+    },
+    "state" : {
+      "loaded" : true,
+      "opened" : true,
+      "selected" : false,
+      "disabled" : false,
+      "hidden" : false
+    },
+    "data" : { },
+    "children" : [ {
+      "id" : "j2_3",
+      "text" : "success",
+      "li_attr" : {
+        "id" : "j2_3"
+      },
+      "a_attr" : {
+        "href" : "#",
+        "id" : "j2_3_anchor"
+      },
+      "state" : {
+        "loaded" : true,
+        "opened" : false,
+        "selected" : false,
+        "disabled" : false,
+        "hidden" : false
+      },
+      "data" : { },
+      "children" : [ ],
+      "type" : "boolean"
+    }, {
+      "id" : "j2_4",
+      "text" : "message",
+      "li_attr" : {
+        "id" : "j2_4"
+      },
+      "a_attr" : {
+        "href" : "#",
+        "id" : "j2_4_anchor"
+      },
+      "state" : {
+        "loaded" : true,
+        "opened" : false,
+        "selected" : false,
+        "disabled" : false,
+        "hidden" : false
+      },
+      "data" : { },
+      "children" : [ ],
+      "type" : "string"
+    }, {
+      "id" : "j2_5",
+      "text" : "oauthId",
+      "li_attr" : {
+        "id" : "j2_5"
+      },
+      "a_attr" : {
+        "href" : "#",
+        "id" : "j2_5_anchor"
+      },
+      "state" : {
+        "loaded" : true,
+        "opened" : false,
+        "selected" : false,
+        "disabled" : false,
+        "hidden" : false
+      },
+      "data" : { },
+      "children" : [ ],
+      "type" : "string"
+    }, {
+      "id" : "j2_6",
+      "text" : "uniqueName",
+      "li_attr" : {
+        "id" : "j2_6"
+      },
+      "a_attr" : {
+        "href" : "#",
+        "id" : "j2_6_anchor"
+      },
+      "state" : {
+        "loaded" : true,
+        "opened" : false,
+        "selected" : false,
+        "disabled" : false,
+        "hidden" : false
+      },
+      "data" : { },
+      "children" : [ ],
+      "type" : "string"
+    }, {
+      "id" : "j2_24",
+      "text" : "setup",
+      "li_attr" : {
+        "id" : "j2_24"
+      },
+      "a_attr" : {
+        "href" : "#",
+        "id" : "j2_24_anchor"
+      },
+      "state" : {
+        "loaded" : true,
+        "opened" : true,
+        "selected" : false,
+        "disabled" : false,
+        "hidden" : false
+      },
+      "data" : { },
+      "children" : [ {
+        "id" : "j2_7",
+        "text" : "uniqueName",
+        "li_attr" : {
+          "id" : "j2_7"
+        },
+        "a_attr" : {
+          "href" : "#",
+          "id" : "j2_7_anchor"
+        },
+        "state" : {
+          "loaded" : true,
+          "opened" : false,
+          "selected" : false,
+          "disabled" : false,
+          "hidden" : false
+        },
+        "data" : { },
+        "children" : [ ],
+        "type" : "string"
+      }, {
+        "id" : "j2_8",
+        "text" : "providerName",
+        "li_attr" : {
+          "id" : "j2_8"
+        },
+        "a_attr" : {
+          "href" : "#",
+          "id" : "j2_8_anchor"
+        },
+        "state" : {
+          "loaded" : true,
+          "opened" : false,
+          "selected" : false,
+          "disabled" : false,
+          "hidden" : false
+        },
+        "data" : { },
+        "children" : [ ],
+        "type" : "string"
+      }, {
+        "id" : "j2_9",
+        "text" : "appName",
+        "li_attr" : {
+          "id" : "j2_9"
+        },
+        "a_attr" : {
+          "href" : "#",
+          "id" : "j2_9_anchor"
+        },
+        "state" : {
+          "loaded" : true,
+          "opened" : false,
+          "selected" : false,
+          "disabled" : false,
+          "hidden" : false
+        },
+        "data" : { },
+        "children" : [ ],
+        "type" : "string"
+      }, {
+        "id" : "j2_10",
+        "text" : "appLogo",
+        "li_attr" : {
+          "id" : "j2_10"
+        },
+        "a_attr" : {
+          "href" : "#",
+          "id" : "j2_10_anchor"
+        },
+        "state" : {
+          "loaded" : true,
+          "opened" : false,
+          "selected" : false,
+          "disabled" : false,
+          "hidden" : false
+        },
+        "data" : { },
+        "children" : [ ],
+        "type" : "string"
+      }, {
+        "id" : "j2_11",
+        "text" : "privacyPolicyUrl",
+        "li_attr" : {
+          "id" : "j2_11"
+        },
+        "a_attr" : {
+          "href" : "#",
+          "id" : "j2_11_anchor"
+        },
+        "state" : {
+          "loaded" : true,
+          "opened" : false,
+          "selected" : false,
+          "disabled" : false,
+          "hidden" : false
+        },
+        "data" : { },
+        "children" : [ ],
+        "type" : "string"
+      }, {
+        "id" : "j2_12",
+        "text" : "baseEndpoint",
+        "li_attr" : {
+          "id" : "j2_12"
+        },
+        "a_attr" : {
+          "href" : "#",
+          "id" : "j2_12_anchor"
+        },
+        "state" : {
+          "loaded" : true,
+          "opened" : false,
+          "selected" : false,
+          "disabled" : false,
+          "hidden" : false
+        },
+        "data" : { },
+        "children" : [ ],
+        "type" : "string"
+      }, {
+        "id" : "j2_13",
+        "text" : "wellKnownUrl",
+        "li_attr" : {
+          "id" : "j2_13"
+        },
+        "a_attr" : {
+          "href" : "#",
+          "id" : "j2_13_anchor"
+        },
+        "state" : {
+          "loaded" : true,
+          "opened" : false,
+          "selected" : false,
+          "disabled" : false,
+          "hidden" : false
+        },
+        "data" : { },
+        "children" : [ ],
+        "type" : "string"
+      }, {
+        "id" : "j2_14",
+        "text" : "clientId",
+        "li_attr" : {
+          "id" : "j2_14"
+        },
+        "a_attr" : {
+          "href" : "#",
+          "id" : "j2_14_anchor"
+        },
+        "state" : {
+          "loaded" : true,
+          "opened" : false,
+          "selected" : false,
+          "disabled" : false,
+          "hidden" : false
+        },
+        "data" : { },
+        "children" : [ ],
+        "type" : "string"
+      }, {
+        "id" : "j2_15",
+        "text" : "clientSecret",
+        "li_attr" : {
+          "id" : "j2_15"
+        },
+        "a_attr" : {
+          "href" : "#",
+          "id" : "j2_15_anchor"
+        },
+        "state" : {
+          "loaded" : true,
+          "opened" : false,
+          "selected" : false,
+          "disabled" : false,
+          "hidden" : false
+        },
+        "data" : { },
+        "children" : [ ],
+        "type" : "string"
+      }, {
+        "id" : "j2_16",
+        "text" : "authorizationUrl",
+        "li_attr" : {
+          "id" : "j2_16"
+        },
+        "a_attr" : {
+          "href" : "#",
+          "id" : "j2_16_anchor"
+        },
+        "state" : {
+          "loaded" : true,
+          "opened" : false,
+          "selected" : false,
+          "disabled" : false,
+          "hidden" : false
+        },
+        "data" : { },
+        "children" : [ ],
+        "type" : "string"
+      }, {
+        "id" : "j2_17",
+        "text" : "tokenUrl",
+        "li_attr" : {
+          "id" : "j2_17"
+        },
+        "a_attr" : {
+          "href" : "#",
+          "id" : "j2_17_anchor"
+        },
+        "state" : {
+          "loaded" : true,
+          "opened" : false,
+          "selected" : false,
+          "disabled" : false,
+          "hidden" : false
+        },
+        "data" : { },
+        "children" : [ ],
+        "type" : "string"
+      }, {
+        "id" : "j2_18",
+        "text" : "redirectUri",
+        "li_attr" : {
+          "id" : "j2_18"
+        },
+        "a_attr" : {
+          "href" : "#",
+          "id" : "j2_18_anchor"
+        },
+        "state" : {
+          "loaded" : true,
+          "opened" : false,
+          "selected" : false,
+          "disabled" : false,
+          "hidden" : false
+        },
+        "data" : { },
+        "children" : [ ],
+        "type" : "string"
+      }, {
+        "id" : "j2_19",
+        "text" : "scopes",
+        "li_attr" : {
+          "id" : "j2_19"
+        },
+        "a_attr" : {
+          "href" : "#",
+          "id" : "j2_19_anchor"
+        },
+        "state" : {
+          "loaded" : true,
+          "opened" : false,
+          "selected" : false,
+          "disabled" : false,
+          "hidden" : false
+        },
+        "data" : { },
+        "children" : [ ],
+        "type" : "stringList"
+      }, {
+        "id" : "j2_20",
+        "text" : "grantTypes",
+        "li_attr" : {
+          "id" : "j2_20"
+        },
+        "a_attr" : {
+          "href" : "#",
+          "id" : "j2_20_anchor"
+        },
+        "state" : {
+          "loaded" : true,
+          "opened" : false,
+          "selected" : false,
+          "disabled" : false,
+          "hidden" : false
+        },
+        "data" : { },
+        "children" : [ ],
+        "type" : "stringList"
+      }, {
+        "id" : "j2_21",
+        "text" : "status",
+        "li_attr" : {
+          "id" : "j2_21"
+        },
+        "a_attr" : {
+          "href" : "#",
+          "id" : "j2_21_anchor"
+        },
+        "state" : {
+          "loaded" : true,
+          "opened" : false,
+          "selected" : false,
+          "disabled" : false,
+          "hidden" : false
+        },
+        "data" : { },
+        "children" : [ ],
+        "type" : "string"
+      }, {
+        "id" : "j2_22",
+        "text" : "extraAuthParams",
+        "li_attr" : {
+          "id" : "j2_22"
+        },
+        "a_attr" : {
+          "href" : "#",
+          "id" : "j2_22_anchor"
+        },
+        "state" : {
+          "loaded" : true,
+          "opened" : false,
+          "selected" : false,
+          "disabled" : false,
+          "hidden" : false
+        },
+        "data" : { },
+        "children" : [ ],
+        "type" : "document"
+      }, {
+        "id" : "j2_23",
+        "text" : "authorizeUrl",
+        "li_attr" : {
+          "id" : "j2_23"
+        },
+        "a_attr" : {
+          "href" : "#",
+          "id" : "j2_23_anchor"
+        },
+        "state" : {
+          "loaded" : true,
+          "opened" : false,
+          "selected" : false,
+          "disabled" : false,
+          "hidden" : false
+        },
+        "data" : { },
+        "children" : [ ],
+        "type" : "string"
+      } ],
+      "type" : "document"
+    } ],
+    "type" : "document"
+  } ],
+  "package" : "cGFja2FnZSBwYWNrYWdlcy5NQ1BOZXN0LnNlcnZpY2VzLmphdmEub2F1dGg7",
+  "imports" : "aW1wb3J0IG1jcG5lc3QuY29yZS50b29scy5hcGkuTUNQR2F0ZXdheTsKaW1wb3J0IGNvbS5la2EubWlkZGxld2FyZS5zZXJ2aWNlLkRhdGFQaXBlbGluZTsKaW1wb3J0IGNvbS5la2EubWlkZGxld2FyZS50ZW1wbGF0ZS5TbmlwcGV0RXhjZXB0aW9uOw==",
+  "main" : "dHJ5IHsKICAgIGRhdGFQaXBlbGluZS5wdXQoInJlc3VsdCIsIE1DUEdhdGV3YXkuYWRkT0F1dGhTZXR1cChkYXRhUGlwZWxpbmUuZ2V0QXNNYXAoInJlcXVlc3QiKSkpOwogICAgZGF0YVBpcGVsaW5lLnB1dCgic3RhdHVzIiwgInN1Y2Nlc3MiKTsKfSBjYXRjaCAoRXhjZXB0aW9uIGUpIHsKICAgIGRhdGFQaXBlbGluZS5jbGVhcigpOwogICAgZGF0YVBpcGVsaW5lLnB1dCgic3RhdHVzIiwgImZhaWxlZCIpOwogICAgZGF0YVBpcGVsaW5lLnB1dCgiZXJyb3IiLCBlLmdldE1lc3NhZ2UoKSk7Cn0=",
+  "staticWorkspace" : "",
+  "version" : "v1",
+  "consumers" : "",
+  "developers" : "",
+  "lockedByUser" : "admin"
+}

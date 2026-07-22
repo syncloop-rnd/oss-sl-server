@@ -1,0 +1,78 @@
+<html style="min-height: 100% !important;">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <link rel="shortcut icon" href="middleware/pub/server/ui/assets/img/favicon.ico" type="image/x-icon" />
+    <!-- Bootstrap CSS -->
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="/tenant/default/middleware/pub/server/ui/welcome/assets/css/bootstrap.min.css">
+    <!-- Style -->
+    <link rel="stylesheet" href="/tenant/default/middleware/pub/server/ui/welcome/assets/css/login.css">
+
+    <title>Welcome to Syncloop</title>
+  </head>
+<script>
+	function getTenant(){
+		var pathName=window.location.pathname;
+		var pathTokens = pathName.split("/");
+		if(pathTokens[0]=="tenant")
+			return pathTokens[1];
+		return "default";
+	}
+	function openWorkspace(authServer){
+		window.open('/tenant/'+getTenant()+'/'+authServer+'/login','Workspace','height=720,width=1280,left=100,top=100,location=0,directories=0,resizable=yes,scrollbars=no,toolbar=no,menubar=no,location=no,directories=no, status=no');
+	}
+	</script>
+  <body>
+
+
+
+  <div class="d-lg-flex half">
+    <div class="bg order-1 order-md-2 eka_img"></div>
+    <div class="contents order-2 order-md-1">
+
+      <div class="container login-style">
+         <div class="login_logo"><img src="/tenant/default/middleware/pub/server/ui/welcome/assets/img/syncloop-blue-logo.svg" alt="Image"></div>
+		<div class="row align-items-center justify-content-center">
+          <div class="col-md-9">
+            <h3>Log in with</h3>
+
+			  <ul class="login_gl">
+			    <!-- <li><a href="javascript:void(0)"><img src="/tenant/default/middleware/pub/server/ui/welcome/icons/icon_apple.png"></a><span>Apple</span></li> -->
+				<li><a href="javascript:openWorkspace('google')"><img src="/tenant/default/middleware/pub/server/ui/welcome/icon_google.png"></a><span>Google</span></li>
+				<!-- <li><a href="javascript:void(0)"><img src="/tenant/default/middleware/pub/server/ui/welcome/icons/icon_keyclock.png"></a><span>Keycloak</span></li>
+				<li><a href="javascript:void(0)"><img src="/tenant/default/middleware/pub/server/ui/welcome/icons/icon_microsoft.png"></a><span>Microsoft</span></li>
+				<li><a href="javascript:void(0)"><img src="/tenant/default/middleware/pub/server/ui/welcome/icons/icon_okta.png"></a><span>Okta</span></li>-->
+			  </ul>
+
+
+
+          </div>
+        </div>
+      </div>
+    </div>
+
+
+  </div>
+
+
+  <script>
+        const togglePassword = document.querySelector("#togglePassword");
+        const password = document.querySelector("#password");
+
+        togglePassword.addEventListener("click", function () {
+            // toggle the type attribute
+            const type = password.getAttribute("type") === "password" ? "text" : "password";
+            password.setAttribute("type", type);
+
+            // toggle the icon
+            this.classList.toggle("bi-eye");
+        });
+
+
+    </script>
+
+  </body>
+</html>

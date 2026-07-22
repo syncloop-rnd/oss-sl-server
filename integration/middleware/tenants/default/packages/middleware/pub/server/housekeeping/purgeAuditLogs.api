@@ -1,0 +1,193 @@
+{
+  "latest" : {
+    "createdTS" : "",
+    "input" : [ {
+      "id" : "j2_1",
+      "text" : "olderThan_Days",
+      "li_attr" : {
+        "id" : "j2_1"
+      },
+      "a_attr" : {
+        "href" : "#",
+        "id" : "j2_1_anchor"
+      },
+      "state" : {
+        "loaded" : true,
+        "opened" : false,
+        "selected" : false,
+        "disabled" : false,
+        "hidden" : false
+      },
+      "data" : {
+        "guid" : "1d589d14-9676-423a-b029-9afd26b63a4d",
+        "columnType" : "-1",
+        "assignList" : [ {
+          "path" : "olderThan_Days",
+          "value" : "90",
+          "typePath" : "string"
+        } ]
+      },
+      "children" : [ ],
+      "type" : "string"
+    } ],
+    "output" : [ ],
+    "api" : [ {
+      "id" : "j1_2",
+      "text" : "Transformer",
+      "li_attr" : {
+        "id" : "j1_2"
+      },
+      "a_attr" : {
+        "href" : "javascript:void(0)",
+        "id" : "j1_2_anchor"
+      },
+      "state" : {
+        "loaded" : true,
+        "opened" : false,
+        "selected" : false,
+        "disabled" : false,
+        "hidden" : false
+      },
+      "data" : {
+        "guid" : "5e2686d4-8701-46d4-bc5f-a1d72e652031",
+        "columnType" : "-1",
+        "transformers" : [ ],
+        "lines" : [ ],
+        "dropList" : [ ],
+        "createList" : [ ],
+        "initiateList" : [ ]
+      },
+      "children" : [ ],
+      "type" : "transformer"
+    }, {
+      "id" : "j1_1",
+      "text" : "Invoke",
+      "li_attr" : {
+        "id" : "j1_1"
+      },
+      "a_attr" : {
+        "href" : "javascript:void(0)",
+        "id" : "j1_1_anchor"
+      },
+      "state" : {
+        "loaded" : true,
+        "opened" : false,
+        "selected" : false,
+        "disabled" : false,
+        "hidden" : false
+      },
+      "data" : {
+        "guid" : "13fbe2b5-12a5-4dc4-b08d-ad364b5bb6f3",
+        "columnType" : "-1",
+        "transformers" : [ {
+          "op" : "copy",
+          "from" : "/rows",
+          "to" : "/rows",
+          "inTypePath" : "integer",
+          "outTypePath" : "integer",
+          "direction" : "out"
+        }, {
+          "op" : "copy",
+          "from" : "/success",
+          "to" : "/success",
+          "inTypePath" : "boolean",
+          "outTypePath" : "boolean",
+          "direction" : "out"
+        }, {
+          "op" : "copy",
+          "from" : "/error",
+          "to" : "/error",
+          "inTypePath" : "string",
+          "outTypePath" : "string",
+          "direction" : "out"
+        }, {
+          "op" : "copy",
+          "from" : "/olderThan_Days",
+          "to" : "/substitute/olderThan_Days",
+          "inTypePath" : "string",
+          "outTypePath" : "document/string",
+          "direction" : "in"
+        } ],
+        "lines" : [ {
+          "inputPath" : "rows",
+          "outputPath" : "rows",
+          "inpJsTree" : "#launching_arrow_jsTree_function",
+          "outpJsTree" : "#landing_arrow_jsTree",
+          "INPath" : "rows",
+          "OUTPath" : "rows",
+          "direction" : "out",
+          "op" : "copy",
+          "line" : 0,
+          "dashedLine" : false,
+          "inType" : "integer",
+          "outType" : "integer",
+          "inTypePath" : "integer",
+          "outTypePath" : "integer"
+        }, {
+          "inputPath" : "success",
+          "outputPath" : "success",
+          "inpJsTree" : "#launching_arrow_jsTree_function",
+          "outpJsTree" : "#landing_arrow_jsTree",
+          "INPath" : "success",
+          "OUTPath" : "success",
+          "direction" : "out",
+          "op" : "copy",
+          "line" : 0,
+          "dashedLine" : false,
+          "inType" : "boolean",
+          "outType" : "boolean",
+          "inTypePath" : "boolean",
+          "outTypePath" : "boolean"
+        }, {
+          "inputPath" : "error",
+          "outputPath" : "error",
+          "inpJsTree" : "#launching_arrow_jsTree_function",
+          "outpJsTree" : "#landing_arrow_jsTree",
+          "INPath" : "error",
+          "OUTPath" : "error",
+          "direction" : "out",
+          "op" : "copy",
+          "line" : 0,
+          "dashedLine" : false,
+          "inType" : "string",
+          "outType" : "string",
+          "inTypePath" : "string",
+          "outTypePath" : "string"
+        }, {
+          "inputPath" : "olderThan_Days",
+          "outputPath" : "substitute/olderThan_Days",
+          "inpJsTree" : "#launching_arrow_jsTree",
+          "outpJsTree" : "#landing_arrow_jsTree_function",
+          "INPath" : "olderThan_Days",
+          "OUTPath" : "substitute/olderThan_Days",
+          "direction" : "in",
+          "op" : "copy",
+          "line" : 0,
+          "dashedLine" : false,
+          "inType" : "string",
+          "outType" : "string",
+          "inTypePath" : "string",
+          "outTypePath" : "document/string"
+        } ],
+        "dropList" : [ ],
+        "createList" : [ ],
+        "initiateList" : [ ],
+        "fqn" : "packages/middleware/pub/adapter/services/DML/purgeAuditLogs",
+        "serviceType" : "sql",
+        "snap" : "disabled"
+      },
+      "children" : [ ],
+      "type" : "invoke"
+    } ],
+    "api_info" : {
+      "title" : "",
+      "description" : ""
+    },
+    "lockedByUser" : "admin"
+  },
+  "consumers" : "",
+  "developers" : "developers",
+  "enableServiceDocumentValidation" : false,
+  "created_on" : "1754025393482",
+  "modified_on" : 1754025393482
+}

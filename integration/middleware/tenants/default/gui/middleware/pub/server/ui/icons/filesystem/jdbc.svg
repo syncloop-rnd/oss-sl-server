@@ -1,0 +1,47 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="20" height="20" viewBox="0 0 20 20">
+  <defs>
+    <style>
+      .cls-1 {
+        filter: url(#filter);
+      }
+
+      .cls-2 {
+        fill-rule: evenodd;
+      }
+    </style>
+    <filter id="filter" filterUnits="userSpaceOnUse">
+      <feFlood result="flood" flood-color="#7b7b7b"/>
+      <feComposite result="composite" operator="in" in2="SourceGraphic"/>
+      <feBlend result="blend" in2="SourceGraphic"/>
+    </filter>
+  </defs>
+  <g id="JDBC">
+    <g class="cls-1">
+      <g id="connecters">
+        <path class="cls-2" d="M266.773,6.878h5.215V7.336h-5.215V6.878h0Z" transform="translate(-259)"/>
+        <path class="cls-2" d="M263.421,10.356l2.98,4.027V13.651l-2.421-3.295h-0.559Z" transform="translate(-259)"/>
+        <path id="Shape_3_copy" data-name="Shape 3 copy" class="cls-2" d="M275.34,10.356l-2.98,4.027V13.651l2.422-3.295h0.558Z" transform="translate(-259)"/>
+      </g>
+      <g id="db1-2">
+        <g id="db1">
+          <path class="cls-2" d="M261.372,5.963a6.4,6.4,0,0,0,5.215,0V6.512a8.71,8.71,0,0,1-5.215,0V5.963Z" transform="translate(-259)"/>
+          <path id="Shape_2_copy" data-name="Shape 2 copy" class="cls-2" d="M261.372,7.61a6.4,6.4,0,0,0,5.215,0V8.159a8.71,8.71,0,0,1-5.215,0V7.61Z" transform="translate(-259)"/>
+          <path class="cls-2" d="M261,3.95V9.441a5.866,5.866,0,0,0,6.146,0L266.96,3.95H266.4V9.258a6.455,6.455,0,0,1-4.842,0V3.95H261Z" transform="translate(-259)"/>
+          <path id="Ellipse_1_copy" data-name="Ellipse 1 copy" class="cls-2" d="M263.98,3c1.645,0,2.98.465,2.98,1.039s-1.335,1.039-2.98,1.039S261,4.615,261,4.041,262.334,3,263.98,3Zm0,0.445c1.231,0,2.042.165,2.042,0.594s-0.811.594-2.042,0.594-2.043-.165-2.043-0.594S262.749,3.447,263.98,3.447Z" transform="translate(-259)"/>
+        </g>
+        <g id="db2">
+          <path class="cls-2" d="M272.174,5.963a6.4,6.4,0,0,0,5.215,0V6.512a8.71,8.71,0,0,1-5.215,0V5.963Z" transform="translate(-259)"/>
+          <path id="Shape_2_copy-2" data-name="Shape 2 copy" class="cls-2" d="M272.174,7.61a6.4,6.4,0,0,0,5.215,0V8.159a8.71,8.71,0,0,1-5.215,0V7.61Z" transform="translate(-259)"/>
+          <path class="cls-2" d="M271.8,3.95V9.441a5.866,5.866,0,0,0,6.146,0L277.761,3.95H277.2V9.258a6.457,6.457,0,0,1-4.843,0V3.95H271.8Z" transform="translate(-259)"/>
+          <path id="Ellipse_1_copy-2" data-name="Ellipse 1 copy" class="cls-2" d="M274.782,3c1.645,0,2.979.465,2.979,1.039s-1.334,1.039-2.979,1.039-2.98-.465-2.98-1.039S273.136,3,274.782,3Zm0,0.445c1.23,0,2.042.165,2.042,0.594s-0.812.594-2.042,0.594-2.043-.165-2.043-0.594S273.551,3.447,274.782,3.447Z" transform="translate(-259)"/>
+        </g>
+      </g>
+      <g id="db3">
+        <path class="cls-2" d="M266.773,13.834a6.4,6.4,0,0,0,5.215,0v0.549a8.71,8.71,0,0,1-5.215,0V13.834Z" transform="translate(-259)"/>
+        <path id="Shape_2_copy-3" data-name="Shape 2 copy" class="cls-2" d="M266.773,15.481a6.4,6.4,0,0,0,5.215,0V16.03a8.71,8.71,0,0,1-5.215,0V15.481Z" transform="translate(-259)"/>
+        <path class="cls-2" d="M266.4,11.82v5.491a5.866,5.866,0,0,0,6.146,0L272.36,11.82H271.8v5.308a6.456,6.456,0,0,1-4.842,0V11.82H266.4Z" transform="translate(-259)"/>
+        <path id="Ellipse_1_copy-3" data-name="Ellipse 1 copy" class="cls-2" d="M269.381,10.873c1.645,0,2.979.465,2.979,1.039s-1.334,1.039-2.979,1.039-2.98-.465-2.98-1.039S267.735,10.873,269.381,10.873Zm0,0.445c1.231,0,2.042.165,2.042,0.594s-0.811.594-2.042,0.594-2.043-.165-2.043-0.594S268.15,11.318,269.381,11.318Z" transform="translate(-259)"/>
+      </g>
+    </g>
+  </g>
+</svg>

@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>GraphiQL</title>
+    <style>
+      body {
+        height: 100%;
+        margin: 0;
+        width: 100%;
+        overflow: hidden;
+      }
+
+      #graphiql {
+        height: 100vh;
+      }
+    </style>
+    <base href="/"><script src="env.js"></script>
+    <script>
+      window.ENV = window.env || {};
+    </script>
+
+    <script
+      src="https://unpkg.com/react@17/umd/react.development.js"
+    ></script>
+    <script
+      src="https://unpkg.com/react-dom@17/umd/react-dom.development.js"
+    ></script>
+    <link rel="stylesheet" href="middleware/pub/server/ui/graphQL/graphiql.min.css" />
+  </head>
+
+  <body>
+    <div id="graphiql">Loading...</div>
+    <script src="middleware/pub/server/ui/graphQL/graphiql.min.js"></script>
+    <script>
+
+	function getUrlParam(name) {
+    var results = new RegExp('[\?&]' + name + '=([^&#]*)')
+        .exec(window.location.search);
+
+    return (results !== null) ? results[1] || 0 : false;
+	}
+  var endpoint = window.ENV.API_BASE_URL + "/tenant/" + localStorage.getItem("tenant") + getUrlParam("endpoint");
+  if(endpoint){
+
+      ReactDOM.render(
+        React.createElement(GraphiQL, {
+          fetcher: GraphiQL.createFetcher({
+            url: endpoint + "?access_token=" +
+                    encodeURIComponent(localStorage.getItem("AuthToken")),
+          }),
+          defaultEditorToolsVisibility: true,
+        }),
+        document.getElementById('graphiql'),
+      );
+	  }else
+	  alert("endpoint required");
+    </script>
+  </body>
+</html>

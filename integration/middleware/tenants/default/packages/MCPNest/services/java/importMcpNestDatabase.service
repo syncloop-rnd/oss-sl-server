@@ -1,0 +1,1472 @@
+{
+  "input" : [ {
+    "id" : "j1_40",
+    "text" : "request",
+    "li_attr" : {
+      "id" : "j1_40"
+    },
+    "a_attr" : {
+      "href" : "#",
+      "id" : "j1_40_anchor"
+    },
+    "state" : {
+      "loaded" : true,
+      "opened" : true,
+      "selected" : false,
+      "disabled" : false,
+      "hidden" : false
+    },
+    "data" : { },
+    "children" : [ {
+      "id" : "j1_1",
+      "text" : "includeDefaultTerminal",
+      "li_attr" : {
+        "id" : "j1_1"
+      },
+      "a_attr" : {
+        "href" : "#",
+        "id" : "j1_1_anchor"
+      },
+      "state" : {
+        "loaded" : true,
+        "opened" : false,
+        "selected" : false,
+        "disabled" : false,
+        "hidden" : false
+      },
+      "data" : { },
+      "children" : [ ],
+      "type" : "boolean"
+    }, {
+      "id" : "j1_2",
+      "text" : "defaultTerminalRoot",
+      "li_attr" : {
+        "id" : "j1_2"
+      },
+      "a_attr" : {
+        "href" : "#",
+        "id" : "j1_2_anchor"
+      },
+      "state" : {
+        "loaded" : true,
+        "opened" : false,
+        "selected" : false,
+        "disabled" : false,
+        "hidden" : false
+      },
+      "data" : { },
+      "children" : [ ],
+      "type" : "string"
+    }, {
+      "id" : "j1_39",
+      "text" : "tables",
+      "li_attr" : {
+        "id" : "j1_39"
+      },
+      "a_attr" : {
+        "href" : "#",
+        "id" : "j1_39_anchor"
+      },
+      "state" : {
+        "loaded" : true,
+        "opened" : true,
+        "selected" : false,
+        "disabled" : false,
+        "hidden" : false
+      },
+      "data" : { },
+      "children" : [ {
+        "id" : "j1_14",
+        "text" : "MCPNEST_MCP",
+        "li_attr" : {
+          "id" : "j1_14"
+        },
+        "a_attr" : {
+          "href" : "#",
+          "id" : "j1_14_anchor"
+        },
+        "state" : {
+          "loaded" : true,
+          "opened" : true,
+          "selected" : false,
+          "disabled" : false,
+          "hidden" : false
+        },
+        "data" : { },
+        "children" : [ {
+          "id" : "j1_3",
+          "text" : "UUID",
+          "li_attr" : {
+            "id" : "j1_3"
+          },
+          "a_attr" : {
+            "href" : "#",
+            "id" : "j1_3_anchor"
+          },
+          "state" : {
+            "loaded" : true,
+            "opened" : false,
+            "selected" : false,
+            "disabled" : false,
+            "hidden" : false
+          },
+          "data" : { },
+          "children" : [ ],
+          "type" : "string"
+        }, {
+          "id" : "j1_4",
+          "text" : "MCP_ALIAS",
+          "li_attr" : {
+            "id" : "j1_4"
+          },
+          "a_attr" : {
+            "href" : "#",
+            "id" : "j1_4_anchor"
+          },
+          "state" : {
+            "loaded" : true,
+            "opened" : false,
+            "selected" : false,
+            "disabled" : false,
+            "hidden" : false
+          },
+          "data" : { },
+          "children" : [ ],
+          "type" : "string"
+        }, {
+          "id" : "j1_5",
+          "text" : "MCP_ENDPOINT",
+          "li_attr" : {
+            "id" : "j1_5"
+          },
+          "a_attr" : {
+            "href" : "#",
+            "id" : "j1_5_anchor"
+          },
+          "state" : {
+            "loaded" : true,
+            "opened" : false,
+            "selected" : false,
+            "disabled" : false,
+            "hidden" : false
+          },
+          "data" : { },
+          "children" : [ ],
+          "type" : "string"
+        }, {
+          "id" : "j1_6",
+          "text" : "MCP_NAME",
+          "li_attr" : {
+            "id" : "j1_6"
+          },
+          "a_attr" : {
+            "href" : "#",
+            "id" : "j1_6_anchor"
+          },
+          "state" : {
+            "loaded" : true,
+            "opened" : false,
+            "selected" : false,
+            "disabled" : false,
+            "hidden" : false
+          },
+          "data" : { },
+          "children" : [ ],
+          "type" : "string"
+        }, {
+          "id" : "j1_7",
+          "text" : "DESCRIPTION",
+          "li_attr" : {
+            "id" : "j1_7"
+          },
+          "a_attr" : {
+            "href" : "#",
+            "id" : "j1_7_anchor"
+          },
+          "state" : {
+            "loaded" : true,
+            "opened" : false,
+            "selected" : false,
+            "disabled" : false,
+            "hidden" : false
+          },
+          "data" : { },
+          "children" : [ ],
+          "type" : "string"
+        }, {
+          "id" : "j1_8",
+          "text" : "ENDPOINT_TYPE",
+          "li_attr" : {
+            "id" : "j1_8"
+          },
+          "a_attr" : {
+            "href" : "#",
+            "id" : "j1_8_anchor"
+          },
+          "state" : {
+            "loaded" : true,
+            "opened" : false,
+            "selected" : false,
+            "disabled" : false,
+            "hidden" : false
+          },
+          "data" : { },
+          "children" : [ ],
+          "type" : "string"
+        }, {
+          "id" : "j1_9",
+          "text" : "AUTH_TYPE",
+          "li_attr" : {
+            "id" : "j1_9"
+          },
+          "a_attr" : {
+            "href" : "#",
+            "id" : "j1_9_anchor"
+          },
+          "state" : {
+            "loaded" : true,
+            "opened" : false,
+            "selected" : false,
+            "disabled" : false,
+            "hidden" : false
+          },
+          "data" : { },
+          "children" : [ ],
+          "type" : "string"
+        }, {
+          "id" : "j1_10",
+          "text" : "AUTH_INFO",
+          "li_attr" : {
+            "id" : "j1_10"
+          },
+          "a_attr" : {
+            "href" : "#",
+            "id" : "j1_10_anchor"
+          },
+          "state" : {
+            "loaded" : true,
+            "opened" : false,
+            "selected" : false,
+            "disabled" : false,
+            "hidden" : false
+          },
+          "data" : { },
+          "children" : [ ],
+          "type" : "string"
+        }, {
+          "id" : "j1_11",
+          "text" : "ENABLED",
+          "li_attr" : {
+            "id" : "j1_11"
+          },
+          "a_attr" : {
+            "href" : "#",
+            "id" : "j1_11_anchor"
+          },
+          "state" : {
+            "loaded" : true,
+            "opened" : false,
+            "selected" : false,
+            "disabled" : false,
+            "hidden" : false
+          },
+          "data" : { },
+          "children" : [ ],
+          "type" : "boolean"
+        }, {
+          "id" : "j1_12",
+          "text" : "CREATED_AT",
+          "li_attr" : {
+            "id" : "j1_12"
+          },
+          "a_attr" : {
+            "href" : "#",
+            "id" : "j1_12_anchor"
+          },
+          "state" : {
+            "loaded" : true,
+            "opened" : false,
+            "selected" : false,
+            "disabled" : false,
+            "hidden" : false
+          },
+          "data" : { },
+          "children" : [ ],
+          "type" : "string"
+        }, {
+          "id" : "j1_13",
+          "text" : "UPDATED_AT",
+          "li_attr" : {
+            "id" : "j1_13"
+          },
+          "a_attr" : {
+            "href" : "#",
+            "id" : "j1_13_anchor"
+          },
+          "state" : {
+            "loaded" : true,
+            "opened" : false,
+            "selected" : false,
+            "disabled" : false,
+            "hidden" : false
+          },
+          "data" : { },
+          "children" : [ ],
+          "type" : "string"
+        } ],
+        "type" : "documentList"
+      }, {
+        "id" : "j1_24",
+        "text" : "MCPNEST_MCP_TOOL",
+        "li_attr" : {
+          "id" : "j1_24"
+        },
+        "a_attr" : {
+          "href" : "#",
+          "id" : "j1_24_anchor"
+        },
+        "state" : {
+          "loaded" : true,
+          "opened" : true,
+          "selected" : false,
+          "disabled" : false,
+          "hidden" : false
+        },
+        "data" : { },
+        "children" : [ {
+          "id" : "j1_15",
+          "text" : "UUID",
+          "li_attr" : {
+            "id" : "j1_15"
+          },
+          "a_attr" : {
+            "href" : "#",
+            "id" : "j1_15_anchor"
+          },
+          "state" : {
+            "loaded" : true,
+            "opened" : false,
+            "selected" : false,
+            "disabled" : false,
+            "hidden" : false
+          },
+          "data" : { },
+          "children" : [ ],
+          "type" : "string"
+        }, {
+          "id" : "j1_16",
+          "text" : "MCP_UUID",
+          "li_attr" : {
+            "id" : "j1_16"
+          },
+          "a_attr" : {
+            "href" : "#",
+            "id" : "j1_16_anchor"
+          },
+          "state" : {
+            "loaded" : true,
+            "opened" : false,
+            "selected" : false,
+            "disabled" : false,
+            "hidden" : false
+          },
+          "data" : { },
+          "children" : [ ],
+          "type" : "string"
+        }, {
+          "id" : "j1_17",
+          "text" : "TOOL_NAME",
+          "li_attr" : {
+            "id" : "j1_17"
+          },
+          "a_attr" : {
+            "href" : "#",
+            "id" : "j1_17_anchor"
+          },
+          "state" : {
+            "loaded" : true,
+            "opened" : false,
+            "selected" : false,
+            "disabled" : false,
+            "hidden" : false
+          },
+          "data" : { },
+          "children" : [ ],
+          "type" : "string"
+        }, {
+          "id" : "j1_18",
+          "text" : "DESCRIPTION",
+          "li_attr" : {
+            "id" : "j1_18"
+          },
+          "a_attr" : {
+            "href" : "#",
+            "id" : "j1_18_anchor"
+          },
+          "state" : {
+            "loaded" : true,
+            "opened" : false,
+            "selected" : false,
+            "disabled" : false,
+            "hidden" : false
+          },
+          "data" : { },
+          "children" : [ ],
+          "type" : "string"
+        }, {
+          "id" : "j1_19",
+          "text" : "INPUT_SCHEMA",
+          "li_attr" : {
+            "id" : "j1_19"
+          },
+          "a_attr" : {
+            "href" : "#",
+            "id" : "j1_19_anchor"
+          },
+          "state" : {
+            "loaded" : true,
+            "opened" : false,
+            "selected" : false,
+            "disabled" : false,
+            "hidden" : false
+          },
+          "data" : { },
+          "children" : [ ],
+          "type" : "string"
+        }, {
+          "id" : "j1_20",
+          "text" : "USAGE_DETAILS",
+          "li_attr" : {
+            "id" : "j1_20"
+          },
+          "a_attr" : {
+            "href" : "#",
+            "id" : "j1_20_anchor"
+          },
+          "state" : {
+            "loaded" : true,
+            "opened" : false,
+            "selected" : false,
+            "disabled" : false,
+            "hidden" : false
+          },
+          "data" : { },
+          "children" : [ ],
+          "type" : "string"
+        }, {
+          "id" : "j1_21",
+          "text" : "ENABLED",
+          "li_attr" : {
+            "id" : "j1_21"
+          },
+          "a_attr" : {
+            "href" : "#",
+            "id" : "j1_21_anchor"
+          },
+          "state" : {
+            "loaded" : true,
+            "opened" : false,
+            "selected" : false,
+            "disabled" : false,
+            "hidden" : false
+          },
+          "data" : { },
+          "children" : [ ],
+          "type" : "boolean"
+        }, {
+          "id" : "j1_22",
+          "text" : "CREATED_AT",
+          "li_attr" : {
+            "id" : "j1_22"
+          },
+          "a_attr" : {
+            "href" : "#",
+            "id" : "j1_22_anchor"
+          },
+          "state" : {
+            "loaded" : true,
+            "opened" : false,
+            "selected" : false,
+            "disabled" : false,
+            "hidden" : false
+          },
+          "data" : { },
+          "children" : [ ],
+          "type" : "string"
+        }, {
+          "id" : "j1_23",
+          "text" : "UPDATED_AT",
+          "li_attr" : {
+            "id" : "j1_23"
+          },
+          "a_attr" : {
+            "href" : "#",
+            "id" : "j1_23_anchor"
+          },
+          "state" : {
+            "loaded" : true,
+            "opened" : false,
+            "selected" : false,
+            "disabled" : false,
+            "hidden" : false
+          },
+          "data" : { },
+          "children" : [ ],
+          "type" : "string"
+        } ],
+        "type" : "documentList"
+      }, {
+        "id" : "j1_31",
+        "text" : "MCPNEST_MCP_TOOL_COLLECTION",
+        "li_attr" : {
+          "id" : "j1_31"
+        },
+        "a_attr" : {
+          "href" : "#",
+          "id" : "j1_31_anchor"
+        },
+        "state" : {
+          "loaded" : true,
+          "opened" : true,
+          "selected" : false,
+          "disabled" : false,
+          "hidden" : false
+        },
+        "data" : { },
+        "children" : [ {
+          "id" : "j1_25",
+          "text" : "UUID",
+          "li_attr" : {
+            "id" : "j1_25"
+          },
+          "a_attr" : {
+            "href" : "#",
+            "id" : "j1_25_anchor"
+          },
+          "state" : {
+            "loaded" : true,
+            "opened" : false,
+            "selected" : false,
+            "disabled" : false,
+            "hidden" : false
+          },
+          "data" : { },
+          "children" : [ ],
+          "type" : "string"
+        }, {
+          "id" : "j1_26",
+          "text" : "COLLECTION_NAME",
+          "li_attr" : {
+            "id" : "j1_26"
+          },
+          "a_attr" : {
+            "href" : "#",
+            "id" : "j1_26_anchor"
+          },
+          "state" : {
+            "loaded" : true,
+            "opened" : false,
+            "selected" : false,
+            "disabled" : false,
+            "hidden" : false
+          },
+          "data" : { },
+          "children" : [ ],
+          "type" : "string"
+        }, {
+          "id" : "j1_27",
+          "text" : "DESCRIPTION",
+          "li_attr" : {
+            "id" : "j1_27"
+          },
+          "a_attr" : {
+            "href" : "#",
+            "id" : "j1_27_anchor"
+          },
+          "state" : {
+            "loaded" : true,
+            "opened" : false,
+            "selected" : false,
+            "disabled" : false,
+            "hidden" : false
+          },
+          "data" : { },
+          "children" : [ ],
+          "type" : "string"
+        }, {
+          "id" : "j1_28",
+          "text" : "ENABLED",
+          "li_attr" : {
+            "id" : "j1_28"
+          },
+          "a_attr" : {
+            "href" : "#",
+            "id" : "j1_28_anchor"
+          },
+          "state" : {
+            "loaded" : true,
+            "opened" : false,
+            "selected" : false,
+            "disabled" : false,
+            "hidden" : false
+          },
+          "data" : { },
+          "children" : [ ],
+          "type" : "boolean"
+        }, {
+          "id" : "j1_29",
+          "text" : "CREATED_AT",
+          "li_attr" : {
+            "id" : "j1_29"
+          },
+          "a_attr" : {
+            "href" : "#",
+            "id" : "j1_29_anchor"
+          },
+          "state" : {
+            "loaded" : true,
+            "opened" : false,
+            "selected" : false,
+            "disabled" : false,
+            "hidden" : false
+          },
+          "data" : { },
+          "children" : [ ],
+          "type" : "string"
+        }, {
+          "id" : "j1_30",
+          "text" : "UPDATED_AT",
+          "li_attr" : {
+            "id" : "j1_30"
+          },
+          "a_attr" : {
+            "href" : "#",
+            "id" : "j1_30_anchor"
+          },
+          "state" : {
+            "loaded" : true,
+            "opened" : false,
+            "selected" : false,
+            "disabled" : false,
+            "hidden" : false
+          },
+          "data" : { },
+          "children" : [ ],
+          "type" : "string"
+        } ],
+        "type" : "documentList"
+      }, {
+        "id" : "j1_38",
+        "text" : "MCPNEST_MCP_TOOL_COLLECTION_MAP",
+        "li_attr" : {
+          "id" : "j1_38"
+        },
+        "a_attr" : {
+          "href" : "#",
+          "id" : "j1_38_anchor"
+        },
+        "state" : {
+          "loaded" : true,
+          "opened" : true,
+          "selected" : false,
+          "disabled" : false,
+          "hidden" : false
+        },
+        "data" : { },
+        "children" : [ {
+          "id" : "j1_32",
+          "text" : "UUID",
+          "li_attr" : {
+            "id" : "j1_32"
+          },
+          "a_attr" : {
+            "href" : "#",
+            "id" : "j1_32_anchor"
+          },
+          "state" : {
+            "loaded" : true,
+            "opened" : false,
+            "selected" : false,
+            "disabled" : false,
+            "hidden" : false
+          },
+          "data" : { },
+          "children" : [ ],
+          "type" : "string"
+        }, {
+          "id" : "j1_33",
+          "text" : "COLLECTION_UUID",
+          "li_attr" : {
+            "id" : "j1_33"
+          },
+          "a_attr" : {
+            "href" : "#",
+            "id" : "j1_33_anchor"
+          },
+          "state" : {
+            "loaded" : true,
+            "opened" : false,
+            "selected" : false,
+            "disabled" : false,
+            "hidden" : false
+          },
+          "data" : { },
+          "children" : [ ],
+          "type" : "string"
+        }, {
+          "id" : "j1_34",
+          "text" : "TOOL_UUID",
+          "li_attr" : {
+            "id" : "j1_34"
+          },
+          "a_attr" : {
+            "href" : "#",
+            "id" : "j1_34_anchor"
+          },
+          "state" : {
+            "loaded" : true,
+            "opened" : false,
+            "selected" : false,
+            "disabled" : false,
+            "hidden" : false
+          },
+          "data" : { },
+          "children" : [ ],
+          "type" : "string"
+        }, {
+          "id" : "j1_35",
+          "text" : "ENABLED",
+          "li_attr" : {
+            "id" : "j1_35"
+          },
+          "a_attr" : {
+            "href" : "#",
+            "id" : "j1_35_anchor"
+          },
+          "state" : {
+            "loaded" : true,
+            "opened" : false,
+            "selected" : false,
+            "disabled" : false,
+            "hidden" : false
+          },
+          "data" : { },
+          "children" : [ ],
+          "type" : "boolean"
+        }, {
+          "id" : "j1_36",
+          "text" : "CREATED_AT",
+          "li_attr" : {
+            "id" : "j1_36"
+          },
+          "a_attr" : {
+            "href" : "#",
+            "id" : "j1_36_anchor"
+          },
+          "state" : {
+            "loaded" : true,
+            "opened" : false,
+            "selected" : false,
+            "disabled" : false,
+            "hidden" : false
+          },
+          "data" : { },
+          "children" : [ ],
+          "type" : "string"
+        }, {
+          "id" : "j1_37",
+          "text" : "UPDATED_AT",
+          "li_attr" : {
+            "id" : "j1_37"
+          },
+          "a_attr" : {
+            "href" : "#",
+            "id" : "j1_37_anchor"
+          },
+          "state" : {
+            "loaded" : true,
+            "opened" : false,
+            "selected" : false,
+            "disabled" : false,
+            "hidden" : false
+          },
+          "data" : { },
+          "children" : [ ],
+          "type" : "string"
+        }, {
+          "id" : "j1_38_802130186",
+          "text" : "ALIAS",
+          "li_attr" : {
+            "id" : "j1_38_802130186"
+          },
+          "a_attr" : {
+            "href" : "#",
+            "id" : "j1_38_802130186_anchor"
+          },
+          "state" : {
+            "loaded" : true,
+            "opened" : false,
+            "selected" : false,
+            "disabled" : false,
+            "hidden" : false
+          },
+          "data" : { },
+          "children" : [ ],
+          "type" : "string"
+        }, {
+          "id" : "j1_38_505650171",
+          "text" : "DESCRIPTION",
+          "li_attr" : {
+            "id" : "j1_38_505650171"
+          },
+          "a_attr" : {
+            "href" : "#",
+            "id" : "j1_38_505650171_anchor"
+          },
+          "state" : {
+            "loaded" : true,
+            "opened" : false,
+            "selected" : false,
+            "disabled" : false,
+            "hidden" : false
+          },
+          "data" : { },
+          "children" : [ ],
+          "type" : "string"
+        }, {
+          "id" : "j1_38_259340888",
+          "text" : "MANAGED_PAYLOAD",
+          "li_attr" : {
+            "id" : "j1_38_259340888"
+          },
+          "a_attr" : {
+            "href" : "#",
+            "id" : "j1_38_259340888_anchor"
+          },
+          "state" : {
+            "loaded" : true,
+            "opened" : false,
+            "selected" : false,
+            "disabled" : false,
+            "hidden" : false
+          },
+          "data" : { },
+          "children" : [ ],
+          "type" : "string"
+        } ],
+        "type" : "documentList"
+      }, {
+        "id" : "j1_39_MCPNEST_MCP_TOOL_CALL_LOG",
+        "text" : "MCPNEST_MCP_TOOL_CALL_LOG",
+        "li_attr" : {
+          "id" : "j1_39_MCPNEST_MCP_TOOL_CALL_LOG"
+        },
+        "a_attr" : {
+          "href" : "#",
+          "id" : "j1_39_MCPNEST_MCP_TOOL_CALL_LOG_anchor"
+        },
+        "state" : {
+          "loaded" : true,
+          "opened" : true,
+          "selected" : false,
+          "disabled" : false,
+          "hidden" : false
+        },
+        "data" : { },
+        "children" : [ {
+          "id" : "j1_39_MCPNEST_MCP_TOOL_CALL_LOG_UUID",
+          "text" : "UUID",
+          "li_attr" : {
+            "id" : "j1_39_MCPNEST_MCP_TOOL_CALL_LOG_UUID"
+          },
+          "a_attr" : {
+            "href" : "#",
+            "id" : "j1_39_MCPNEST_MCP_TOOL_CALL_LOG_UUID_anchor"
+          },
+          "state" : {
+            "loaded" : true,
+            "opened" : false,
+            "selected" : false,
+            "disabled" : false,
+            "hidden" : false
+          },
+          "data" : { },
+          "children" : [ ],
+          "type" : "string"
+        }, {
+          "id" : "j1_39_MCPNEST_MCP_TOOL_CALL_LOG_USER_ID",
+          "text" : "USER_ID",
+          "li_attr" : {
+            "id" : "j1_39_MCPNEST_MCP_TOOL_CALL_LOG_USER_ID"
+          },
+          "a_attr" : {
+            "href" : "#",
+            "id" : "j1_39_MCPNEST_MCP_TOOL_CALL_LOG_USER_ID_anchor"
+          },
+          "state" : {
+            "loaded" : true,
+            "opened" : false,
+            "selected" : false,
+            "disabled" : false,
+            "hidden" : false
+          },
+          "data" : { },
+          "children" : [ ],
+          "type" : "string"
+        }, {
+          "id" : "j1_39_MCPNEST_MCP_TOOL_CALL_LOG_TENANT_NAME",
+          "text" : "TENANT_NAME",
+          "li_attr" : {
+            "id" : "j1_39_MCPNEST_MCP_TOOL_CALL_LOG_TENANT_NAME"
+          },
+          "a_attr" : {
+            "href" : "#",
+            "id" : "j1_39_MCPNEST_MCP_TOOL_CALL_LOG_TENANT_NAME_anchor"
+          },
+          "state" : {
+            "loaded" : true,
+            "opened" : false,
+            "selected" : false,
+            "disabled" : false,
+            "hidden" : false
+          },
+          "data" : { },
+          "children" : [ ],
+          "type" : "string"
+        }, {
+          "id" : "j1_39_MCPNEST_MCP_TOOL_CALL_LOG_MCP_ALIAS",
+          "text" : "MCP_ALIAS",
+          "li_attr" : {
+            "id" : "j1_39_MCPNEST_MCP_TOOL_CALL_LOG_MCP_ALIAS"
+          },
+          "a_attr" : {
+            "href" : "#",
+            "id" : "j1_39_MCPNEST_MCP_TOOL_CALL_LOG_MCP_ALIAS_anchor"
+          },
+          "state" : {
+            "loaded" : true,
+            "opened" : false,
+            "selected" : false,
+            "disabled" : false,
+            "hidden" : false
+          },
+          "data" : { },
+          "children" : [ ],
+          "type" : "string"
+        }, {
+          "id" : "j1_39_MCPNEST_MCP_TOOL_CALL_LOG_COLLECTION_ALIAS",
+          "text" : "COLLECTION_ALIAS",
+          "li_attr" : {
+            "id" : "j1_39_MCPNEST_MCP_TOOL_CALL_LOG_COLLECTION_ALIAS"
+          },
+          "a_attr" : {
+            "href" : "#",
+            "id" : "j1_39_MCPNEST_MCP_TOOL_CALL_LOG_COLLECTION_ALIAS_anchor"
+          },
+          "state" : {
+            "loaded" : true,
+            "opened" : false,
+            "selected" : false,
+            "disabled" : false,
+            "hidden" : false
+          },
+          "data" : { },
+          "children" : [ ],
+          "type" : "string"
+        }, {
+          "id" : "j1_39_MCPNEST_MCP_TOOL_CALL_LOG_MCP_TOOL_ID",
+          "text" : "MCP_TOOL_ID",
+          "li_attr" : {
+            "id" : "j1_39_MCPNEST_MCP_TOOL_CALL_LOG_MCP_TOOL_ID"
+          },
+          "a_attr" : {
+            "href" : "#",
+            "id" : "j1_39_MCPNEST_MCP_TOOL_CALL_LOG_MCP_TOOL_ID_anchor"
+          },
+          "state" : {
+            "loaded" : true,
+            "opened" : false,
+            "selected" : false,
+            "disabled" : false,
+            "hidden" : false
+          },
+          "data" : { },
+          "children" : [ ],
+          "type" : "string"
+        }, {
+          "id" : "j1_39_MCPNEST_MCP_TOOL_CALL_LOG_COLLECTION_TOOL_UUID",
+          "text" : "COLLECTION_TOOL_UUID",
+          "li_attr" : {
+            "id" : "j1_39_MCPNEST_MCP_TOOL_CALL_LOG_COLLECTION_TOOL_UUID"
+          },
+          "a_attr" : {
+            "href" : "#",
+            "id" : "j1_39_MCPNEST_MCP_TOOL_CALL_LOG_COLLECTION_TOOL_UUID_anchor"
+          },
+          "state" : {
+            "loaded" : true,
+            "opened" : false,
+            "selected" : false,
+            "disabled" : false,
+            "hidden" : false
+          },
+          "data" : { },
+          "children" : [ ],
+          "type" : "string"
+        }, {
+          "id" : "j1_39_MCPNEST_MCP_TOOL_CALL_LOG_REQUEST_START_TIME",
+          "text" : "REQUEST_START_TIME",
+          "li_attr" : {
+            "id" : "j1_39_MCPNEST_MCP_TOOL_CALL_LOG_REQUEST_START_TIME"
+          },
+          "a_attr" : {
+            "href" : "#",
+            "id" : "j1_39_MCPNEST_MCP_TOOL_CALL_LOG_REQUEST_START_TIME_anchor"
+          },
+          "state" : {
+            "loaded" : true,
+            "opened" : false,
+            "selected" : false,
+            "disabled" : false,
+            "hidden" : false
+          },
+          "data" : { },
+          "children" : [ ],
+          "type" : "string"
+        }, {
+          "id" : "j1_39_MCPNEST_MCP_TOOL_CALL_LOG_RESPONSE_RECEIVED_TIME",
+          "text" : "RESPONSE_RECEIVED_TIME",
+          "li_attr" : {
+            "id" : "j1_39_MCPNEST_MCP_TOOL_CALL_LOG_RESPONSE_RECEIVED_TIME"
+          },
+          "a_attr" : {
+            "href" : "#",
+            "id" : "j1_39_MCPNEST_MCP_TOOL_CALL_LOG_RESPONSE_RECEIVED_TIME_anchor"
+          },
+          "state" : {
+            "loaded" : true,
+            "opened" : false,
+            "selected" : false,
+            "disabled" : false,
+            "hidden" : false
+          },
+          "data" : { },
+          "children" : [ ],
+          "type" : "string"
+        }, {
+          "id" : "j1_39_MCPNEST_MCP_TOOL_CALL_LOG_STATUS",
+          "text" : "STATUS",
+          "li_attr" : {
+            "id" : "j1_39_MCPNEST_MCP_TOOL_CALL_LOG_STATUS"
+          },
+          "a_attr" : {
+            "href" : "#",
+            "id" : "j1_39_MCPNEST_MCP_TOOL_CALL_LOG_STATUS_anchor"
+          },
+          "state" : {
+            "loaded" : true,
+            "opened" : false,
+            "selected" : false,
+            "disabled" : false,
+            "hidden" : false
+          },
+          "data" : { },
+          "children" : [ ],
+          "type" : "string"
+        }, {
+          "id" : "j1_39_MCPNEST_MCP_TOOL_CALL_LOG_ERROR",
+          "text" : "ERROR",
+          "li_attr" : {
+            "id" : "j1_39_MCPNEST_MCP_TOOL_CALL_LOG_ERROR"
+          },
+          "a_attr" : {
+            "href" : "#",
+            "id" : "j1_39_MCPNEST_MCP_TOOL_CALL_LOG_ERROR_anchor"
+          },
+          "state" : {
+            "loaded" : true,
+            "opened" : false,
+            "selected" : false,
+            "disabled" : false,
+            "hidden" : false
+          },
+          "data" : { },
+          "children" : [ ],
+          "type" : "string"
+        }, {
+          "id" : "j1_39_MCPNEST_MCP_TOOL_CALL_LOG_FAILED_REQUEST_PAYLOAD",
+          "text" : "FAILED_REQUEST_PAYLOAD",
+          "li_attr" : {
+            "id" : "j1_39_MCPNEST_MCP_TOOL_CALL_LOG_FAILED_REQUEST_PAYLOAD"
+          },
+          "a_attr" : {
+            "href" : "#",
+            "id" : "j1_39_MCPNEST_MCP_TOOL_CALL_LOG_FAILED_REQUEST_PAYLOAD_anchor"
+          },
+          "state" : {
+            "loaded" : true,
+            "opened" : false,
+            "selected" : false,
+            "disabled" : false,
+            "hidden" : false
+          },
+          "data" : { },
+          "children" : [ ],
+          "type" : "string"
+        }, {
+          "id" : "j1_39_MCPNEST_MCP_TOOL_CALL_LOG_CREATED_AT",
+          "text" : "CREATED_AT",
+          "li_attr" : {
+            "id" : "j1_39_MCPNEST_MCP_TOOL_CALL_LOG_CREATED_AT"
+          },
+          "a_attr" : {
+            "href" : "#",
+            "id" : "j1_39_MCPNEST_MCP_TOOL_CALL_LOG_CREATED_AT_anchor"
+          },
+          "state" : {
+            "loaded" : true,
+            "opened" : false,
+            "selected" : false,
+            "disabled" : false,
+            "hidden" : false
+          },
+          "data" : { },
+          "children" : [ ],
+          "type" : "string"
+        }, {
+          "id" : "j1_39_MCPNEST_MCP_TOOL_CALL_LOG_UPDATED_AT",
+          "text" : "UPDATED_AT",
+          "li_attr" : {
+            "id" : "j1_39_MCPNEST_MCP_TOOL_CALL_LOG_UPDATED_AT"
+          },
+          "a_attr" : {
+            "href" : "#",
+            "id" : "j1_39_MCPNEST_MCP_TOOL_CALL_LOG_UPDATED_AT_anchor"
+          },
+          "state" : {
+            "loaded" : true,
+            "opened" : false,
+            "selected" : false,
+            "disabled" : false,
+            "hidden" : false
+          },
+          "data" : { },
+          "children" : [ ],
+          "type" : "string"
+        } ],
+        "type" : "documentList"
+      } ],
+      "type" : "document"
+    } ],
+    "type" : "document"
+  } ],
+  "output" : [ {
+    "id" : "j2_1",
+    "text" : "status",
+    "li_attr" : {
+      "id" : "j2_1"
+    },
+    "a_attr" : {
+      "href" : "#",
+      "id" : "j2_1_anchor"
+    },
+    "state" : {
+      "loaded" : true,
+      "opened" : false,
+      "selected" : false,
+      "disabled" : false,
+      "hidden" : false
+    },
+    "data" : { },
+    "children" : [ ],
+    "type" : "string"
+  }, {
+    "id" : "j2_2",
+    "text" : "error",
+    "li_attr" : {
+      "id" : "j2_2"
+    },
+    "a_attr" : {
+      "href" : "#",
+      "id" : "j2_2_anchor"
+    },
+    "state" : {
+      "loaded" : true,
+      "opened" : false,
+      "selected" : false,
+      "disabled" : false,
+      "hidden" : false
+    },
+    "data" : { },
+    "children" : [ ],
+    "type" : "string"
+  }, {
+    "id" : "j2_11",
+    "text" : "result",
+    "li_attr" : {
+      "id" : "j2_11"
+    },
+    "a_attr" : {
+      "href" : "#",
+      "id" : "j2_11_anchor"
+    },
+    "state" : {
+      "loaded" : true,
+      "opened" : true,
+      "selected" : false,
+      "disabled" : false,
+      "hidden" : false
+    },
+    "data" : { },
+    "children" : [ {
+      "id" : "j2_3",
+      "text" : "success",
+      "li_attr" : {
+        "id" : "j2_3"
+      },
+      "a_attr" : {
+        "href" : "#",
+        "id" : "j2_3_anchor"
+      },
+      "state" : {
+        "loaded" : true,
+        "opened" : false,
+        "selected" : false,
+        "disabled" : false,
+        "hidden" : false
+      },
+      "data" : { },
+      "children" : [ ],
+      "type" : "boolean"
+    }, {
+      "id" : "j2_4",
+      "text" : "message",
+      "li_attr" : {
+        "id" : "j2_4"
+      },
+      "a_attr" : {
+        "href" : "#",
+        "id" : "j2_4_anchor"
+      },
+      "state" : {
+        "loaded" : true,
+        "opened" : false,
+        "selected" : false,
+        "disabled" : false,
+        "hidden" : false
+      },
+      "data" : { },
+      "children" : [ ],
+      "type" : "string"
+    }, {
+      "id" : "j2_5",
+      "text" : "importedAt",
+      "li_attr" : {
+        "id" : "j2_5"
+      },
+      "a_attr" : {
+        "href" : "#",
+        "id" : "j2_5_anchor"
+      },
+      "state" : {
+        "loaded" : true,
+        "opened" : false,
+        "selected" : false,
+        "disabled" : false,
+        "hidden" : false
+      },
+      "data" : { },
+      "children" : [ ],
+      "type" : "string"
+    }, {
+      "id" : "j2_10",
+      "text" : "counts",
+      "li_attr" : {
+        "id" : "j2_10"
+      },
+      "a_attr" : {
+        "href" : "#",
+        "id" : "j2_10_anchor"
+      },
+      "state" : {
+        "loaded" : true,
+        "opened" : true,
+        "selected" : false,
+        "disabled" : false,
+        "hidden" : false
+      },
+      "data" : { },
+      "children" : [ {
+        "id" : "j2_6",
+        "text" : "MCPNEST_MCP",
+        "li_attr" : {
+          "id" : "j2_6"
+        },
+        "a_attr" : {
+          "href" : "#",
+          "id" : "j2_6_anchor"
+        },
+        "state" : {
+          "loaded" : true,
+          "opened" : false,
+          "selected" : false,
+          "disabled" : false,
+          "hidden" : false
+        },
+        "data" : { },
+        "children" : [ ],
+        "type" : "integer"
+      }, {
+        "id" : "j2_7",
+        "text" : "MCPNEST_MCP_TOOL",
+        "li_attr" : {
+          "id" : "j2_7"
+        },
+        "a_attr" : {
+          "href" : "#",
+          "id" : "j2_7_anchor"
+        },
+        "state" : {
+          "loaded" : true,
+          "opened" : false,
+          "selected" : false,
+          "disabled" : false,
+          "hidden" : false
+        },
+        "data" : { },
+        "children" : [ ],
+        "type" : "integer"
+      }, {
+        "id" : "j2_8",
+        "text" : "MCPNEST_MCP_TOOL_COLLECTION",
+        "li_attr" : {
+          "id" : "j2_8"
+        },
+        "a_attr" : {
+          "href" : "#",
+          "id" : "j2_8_anchor"
+        },
+        "state" : {
+          "loaded" : true,
+          "opened" : false,
+          "selected" : false,
+          "disabled" : false,
+          "hidden" : false
+        },
+        "data" : { },
+        "children" : [ ],
+        "type" : "integer"
+      }, {
+        "id" : "j2_9",
+        "text" : "MCPNEST_MCP_TOOL_COLLECTION_MAP",
+        "li_attr" : {
+          "id" : "j2_9"
+        },
+        "a_attr" : {
+          "href" : "#",
+          "id" : "j2_9_anchor"
+        },
+        "state" : {
+          "loaded" : true,
+          "opened" : true,
+          "selected" : false,
+          "disabled" : false,
+          "hidden" : false
+        },
+        "data" : { },
+        "children" : [ {
+          "id" : "j2_9_418142993",
+          "text" : "ALIAS",
+          "li_attr" : {
+            "id" : "j2_9_418142993"
+          },
+          "a_attr" : {
+            "href" : "#",
+            "id" : "j2_9_418142993_anchor"
+          },
+          "state" : {
+            "loaded" : true,
+            "opened" : false,
+            "selected" : false,
+            "disabled" : false,
+            "hidden" : false
+          },
+          "data" : { },
+          "children" : [ ],
+          "type" : "string"
+        }, {
+          "id" : "j2_9_597843848",
+          "text" : "DESCRIPTION",
+          "li_attr" : {
+            "id" : "j2_9_597843848"
+          },
+          "a_attr" : {
+            "href" : "#",
+            "id" : "j2_9_597843848_anchor"
+          },
+          "state" : {
+            "loaded" : true,
+            "opened" : false,
+            "selected" : false,
+            "disabled" : false,
+            "hidden" : false
+          },
+          "data" : { },
+          "children" : [ ],
+          "type" : "string"
+        }, {
+          "id" : "j2_9_335992889",
+          "text" : "MANAGED_PAYLOAD",
+          "li_attr" : {
+            "id" : "j2_9_335992889"
+          },
+          "a_attr" : {
+            "href" : "#",
+            "id" : "j2_9_335992889_anchor"
+          },
+          "state" : {
+            "loaded" : true,
+            "opened" : false,
+            "selected" : false,
+            "disabled" : false,
+            "hidden" : false
+          },
+          "data" : { },
+          "children" : [ ],
+          "type" : "string"
+        } ],
+        "type" : "integer"
+      }, {
+        "id" : "j2_10_MCPNEST_MCP_TOOL_CALL_LOG",
+        "text" : "MCPNEST_MCP_TOOL_CALL_LOG",
+        "li_attr" : {
+          "id" : "j2_10_MCPNEST_MCP_TOOL_CALL_LOG"
+        },
+        "a_attr" : {
+          "href" : "#",
+          "id" : "j2_10_MCPNEST_MCP_TOOL_CALL_LOG_anchor"
+        },
+        "state" : {
+          "loaded" : true,
+          "opened" : false,
+          "selected" : false,
+          "disabled" : false,
+          "hidden" : false
+        },
+        "data" : { },
+        "children" : [ ],
+        "type" : "integer"
+      } ],
+      "type" : "document"
+    } ],
+    "type" : "document"
+  } ],
+  "package" : "cGFja2FnZSBwYWNrYWdlcy5NQ1BOZXN0LnNlcnZpY2VzLmphdmE7",
+  "imports" : "aW1wb3J0IG1jcG5lc3QuY29yZS50b29scy5hcGkuTUNQR2F0ZXdheTsKaW1wb3J0IGNvbS5la2EubWlkZGxld2FyZS5zZXJ2aWNlLkRhdGFQaXBlbGluZTsKaW1wb3J0IGNvbS5la2EubWlkZGxld2FyZS50ZW1wbGF0ZS5TbmlwcGV0RXhjZXB0aW9uOwppbXBvcnQgamF2YS51dGlsLkhhc2hNYXA7CmltcG9ydCBqYXZhLnV0aWwuTWFwOw==",
+  "main" : "dHJ5IHsKICAgIGRhdGFQaXBlbGluZS5wdXQoInJlc3VsdCIsIE1DUEdhdGV3YXkuaW1wb3J0TWNwTmVzdERhdGFiYXNlKGFzTWFwKGRhdGFQaXBlbGluZS5nZXQoInJlcXVlc3QiKSkpKTsKICAgIGRhdGFQaXBlbGluZS5wdXQoInN0YXR1cyIsICJzdWNjZXNzIik7Cn0gY2F0Y2ggKEV4Y2VwdGlvbiBlKSB7CiAgICBkYXRhUGlwZWxpbmUuY2xlYXIoKTsKICAgIGRhdGFQaXBlbGluZS5wdXQoInN0YXR1cyIsICJmYWlsZWQiKTsKICAgIGRhdGFQaXBlbGluZS5wdXQoImVycm9yIiwgZS5nZXRNZXNzYWdlKCkpOwogICAgdGhyb3cgbmV3IFNuaXBwZXRFeGNlcHRpb24oZGF0YVBpcGVsaW5lLCAiaW1wb3J0TWNwTmVzdERhdGFiYXNlIGZhaWxlZCIsIGUpOwp9",
+  "staticWorkspace" : "cHJpdmF0ZSBzdGF0aWMgTWFwPFN0cmluZywgT2JqZWN0PiBhc01hcChPYmplY3QgdmFsdWUpIHsKICAgIGlmICh2YWx1ZSA9PSBudWxsKSB7CiAgICAgICAgcmV0dXJuIG5ldyBIYXNoTWFwPD4oKTsKICAgIH0KICAgIGlmICh2YWx1ZSBpbnN0YW5jZW9mIE1hcDw/LCA/PiBtYXApIHsKICAgICAgICBNYXA8U3RyaW5nLCBPYmplY3Q+IHJlc3VsdCA9IG5ldyBIYXNoTWFwPD4oKTsKICAgICAgICBtYXAuZm9yRWFjaCgoa2V5LCBpdGVtKSAtPiByZXN1bHQucHV0KFN0cmluZy52YWx1ZU9mKGtleSksIGl0ZW0pKTsKICAgICAgICByZXR1cm4gcmVzdWx0OwogICAgfQogICAgdGhyb3cgbmV3IElsbGVnYWxBcmd1bWVudEV4Y2VwdGlvbigicmVxdWVzdCBtdXN0IGJlIGEgbWFwIik7Cn0=",
+  "version" : "v1",
+  "consumers" : "",
+  "developers" : "",
+  "lockedByUser" : "admin"
+}

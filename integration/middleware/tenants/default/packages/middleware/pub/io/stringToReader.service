@@ -1,0 +1,52 @@
+{
+  "input" : [ {
+    "id" : "j1_1",
+    "text" : "content",
+    "icon" : null,
+    "li_attr" : {
+      "id" : "j1_1"
+    },
+    "a_attr" : {
+      "href" : "#",
+      "id" : "j1_1_anchor"
+    },
+    "state" : {
+      "loaded" : true,
+      "opened" : false,
+      "selected" : false,
+      "disabled" : false
+    },
+    "data" : { },
+    "children" : [ ],
+    "type" : "string"
+  } ],
+  "output" : [ {
+    "id" : "j2_1",
+    "text" : "reader",
+    "icon" : null,
+    "li_attr" : {
+      "id" : "j2_1"
+    },
+    "a_attr" : {
+      "href" : "#",
+      "id" : "j2_1_anchor"
+    },
+    "state" : {
+      "loaded" : true,
+      "opened" : false,
+      "selected" : true,
+      "disabled" : false
+    },
+    "data" : { },
+    "children" : [ ],
+    "type" : "javaObject"
+  } ],
+  "package" : "cGFja2FnZSBwYWNrYWdlcy5taWRkbGV3YXJlLnB1Yi5pbzs=",
+  "imports" : "aW1wb3J0IGNvbS5la2EubWlkZGxld2FyZS5zZXJ2aWNlLkRhdGFQaXBlbGluZTsKaW1wb3J0IGNvbS5la2EubWlkZGxld2FyZS50ZW1wbGF0ZS5TbmlwcGV0RXhjZXB0aW9uOwoKaW1wb3J0IGphdmEuaW8uUmVhZGVyOwppbXBvcnQgamF2YS5pby5TdHJpbmdSZWFkZXI7",
+  "main" : "dHJ5IHsKCiAgICAgICAgICAgIFN0cmluZyBjb250ZW50ID0gZGF0YVBpcGVsaW5lLmdldFN0cmluZygiY29udGVudCIpOwogICAgICAgICAgICBSZWFkZXIgcmVhZGVyID0gbmV3IFN0cmluZ1JlYWRlcihjb250ZW50KTsKICAgICAgICAgICAgZGF0YVBpcGVsaW5lLnB1dCgicmVhZGVyIiwgcmVhZGVyKTsKICAgICAgICB9IGNhdGNoIChFeGNlcHRpb24gZSkgewogICAgICAgICAgICBkYXRhUGlwZWxpbmUuY2xlYXIoKTsKICAgICAgICAgICAgZGF0YVBpcGVsaW5lLnB1dCgiZXJyb3IiLGUuZ2V0TWVzc2FnZSgpKTsKICAgICAgICAgICAgbmV3IFNuaXBwZXRFeGNlcHRpb24oZGF0YVBpcGVsaW5lLCJTbmlwcGV0RXhjZXB0aW9uIGV4Y2VwdGlvbiIsIGUpOwogICAgICAgIH0=",
+  "staticWorkspace" : "",
+  "version" : "v1",
+  "consumers" : "",
+  "developers" : "",
+  "lockedByUser" : "admin"
+}

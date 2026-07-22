@@ -1,0 +1,212 @@
+{
+  "input" : [ {
+    "id" : "j1_1",
+    "text" : "inputStream",
+    "icon" : null,
+    "li_attr" : {
+      "id" : "j1_1"
+    },
+    "a_attr" : {
+      "href" : "#",
+      "id" : "j1_1_anchor"
+    },
+    "state" : {
+      "loaded" : true,
+      "opened" : false,
+      "selected" : false,
+      "disabled" : false
+    },
+    "data" : { },
+    "children" : [ ],
+    "type" : "javaObject"
+  }, {
+    "id" : "j1_2",
+    "text" : "length",
+    "icon" : null,
+    "li_attr" : {
+      "id" : "j1_2"
+    },
+    "a_attr" : {
+      "href" : "#",
+      "id" : "j1_2_anchor"
+    },
+    "state" : {
+      "loaded" : true,
+      "opened" : false,
+      "selected" : false,
+      "disabled" : false
+    },
+    "data" : { },
+    "children" : [ ],
+    "type" : "integer"
+  }, {
+    "id" : "j1_3",
+    "text" : "STRING",
+    "icon" : null,
+    "li_attr" : {
+      "id" : "j1_3"
+    },
+    "a_attr" : {
+      "href" : "#",
+      "id" : "j1_3_anchor"
+    },
+    "state" : {
+      "loaded" : true,
+      "opened" : false,
+      "selected" : false,
+      "disabled" : false
+    },
+    "data" : { },
+    "children" : [ ],
+    "type" : "string"
+  }, {
+    "id" : "j1_4",
+    "text" : "DOCUMENT",
+    "icon" : null,
+    "li_attr" : {
+      "id" : "j1_4"
+    },
+    "a_attr" : {
+      "href" : "#",
+      "id" : "j1_4_anchor"
+    },
+    "state" : {
+      "loaded" : true,
+      "opened" : false,
+      "selected" : false,
+      "disabled" : false
+    },
+    "data" : { },
+    "children" : [ {
+      "id" : "j1_5",
+      "text" : "JAVAOBJECT",
+      "icon" : null,
+      "li_attr" : {
+        "id" : "j1_5"
+      },
+      "a_attr" : {
+        "href" : "#",
+        "id" : "j1_5_anchor"
+      },
+      "state" : {
+        "loaded" : true,
+        "opened" : false,
+        "selected" : false,
+        "disabled" : false
+      },
+      "data" : { },
+      "children" : [ ],
+      "type" : "javaObject"
+    } ],
+    "type" : "document"
+  }, {
+    "id" : "j1_6",
+    "text" : "reader",
+    "icon" : null,
+    "li_attr" : {
+      "id" : "j1_6"
+    },
+    "a_attr" : {
+      "href" : "#",
+      "id" : "j1_6_anchor"
+    },
+    "state" : {
+      "loaded" : true,
+      "opened" : false,
+      "selected" : false,
+      "disabled" : false
+    },
+    "data" : { },
+    "children" : [ ],
+    "type" : "javaObject"
+  } ],
+  "output" : [ {
+    "id" : "j2_1",
+    "text" : "inputStream",
+    "icon" : null,
+    "li_attr" : {
+      "id" : "j2_1"
+    },
+    "a_attr" : {
+      "href" : "#",
+      "id" : "j2_1_anchor"
+    },
+    "state" : {
+      "loaded" : true,
+      "opened" : false,
+      "selected" : false,
+      "disabled" : false
+    },
+    "data" : { },
+    "children" : [ ],
+    "type" : "javaObject"
+  }, {
+    "id" : "j2_2",
+    "text" : "bytesSkipped",
+    "icon" : null,
+    "li_attr" : {
+      "id" : "j2_2"
+    },
+    "a_attr" : {
+      "href" : "#",
+      "id" : "j2_2_anchor"
+    },
+    "state" : {
+      "loaded" : true,
+      "opened" : false,
+      "selected" : false,
+      "disabled" : false
+    },
+    "data" : { },
+    "children" : [ ],
+    "type" : "number"
+  }, {
+    "id" : "j2_3",
+    "text" : "charsSkipped",
+    "icon" : null,
+    "li_attr" : {
+      "id" : "j2_3"
+    },
+    "a_attr" : {
+      "href" : "#",
+      "id" : "j2_3_anchor"
+    },
+    "state" : {
+      "loaded" : true,
+      "opened" : false,
+      "selected" : false,
+      "disabled" : false
+    },
+    "data" : { },
+    "children" : [ ],
+    "type" : "number"
+  }, {
+    "id" : "j2_4",
+    "text" : "reader",
+    "icon" : null,
+    "li_attr" : {
+      "id" : "j2_4"
+    },
+    "a_attr" : {
+      "href" : "#",
+      "id" : "j2_4_anchor"
+    },
+    "state" : {
+      "loaded" : true,
+      "opened" : false,
+      "selected" : true,
+      "disabled" : false
+    },
+    "data" : { },
+    "children" : [ ],
+    "type" : "javaObject"
+  } ],
+  "package" : "cGFja2FnZSBwYWNrYWdlcy5taWRkbGV3YXJlLnB1Yi5pbzs=",
+  "imports" : "aW1wb3J0IGNvbS5la2EubWlkZGxld2FyZS5zZXJ2aWNlLkRhdGFQaXBlbGluZTsKaW1wb3J0IGNvbS5la2EubWlkZGxld2FyZS5zZXJ2aWNlLlNlcnZpY2VVdGlsczsKaW1wb3J0IGNvbS5la2EubWlkZGxld2FyZS50ZW1wbGF0ZS5TbmlwcGV0RXhjZXB0aW9uOwppbXBvcnQgb3JnLmFwYWNoZS5jb21tb25zLmlvLklPVXRpbHM7CmltcG9ydCBvcmcuYXBhY2hlLmNvbW1vbnMuaW8uaW5wdXQuQ2hhclNlcXVlbmNlUmVhZGVyOwppbXBvcnQgamF2YS5pby5JbnB1dFN0cmVhbTsKaW1wb3J0IGphdmEuaW8uUmVhZGVyOw==",
+  "main" : "dHJ5IHsKICAJCUlucHV0U3RyZWFtIGlucHV0U3RyZWFtID0gKElucHV0U3RyZWFtKSBkYXRhUGlwZWxpbmUuZ2V0KCJpbnB1dFN0cmVhbSIpOwogIAkJUmVhZGVyIHJlYWRlciA9IChSZWFkZXIpZGF0YVBpcGVsaW5lLmdldCgicmVhZGVyIik7CQogIAkKICAJCUludGVnZXIgbGVuZ3RoID0gZGF0YVBpcGVsaW5lLmdldEFzSW50ZWdlcigibGVuZ3RoIik7CiAgCiAgCQlpZiggaW5wdXRTdHJlYW0gIT1udWxsKXsKICAgICAgICAgIAlsb25nIGJ5dGVzU2tpcHBlZCA9IGlucHV0U3RyZWFtLnNraXAobGVuZ3RoKTsKICAgIAkgCWRhdGFQaXBlbGluZS5wdXQoImJ5dGVzU2tpcHBlZCIsIGJ5dGVzU2tpcHBlZCk7CiAgICAgICAgIAogICAgICAgIH0JCQogIAkJZWxzZSBpZihyZWFkZXIgIT1udWxsKXsKICAgICAgICAgICAgbG9uZyBjaGFyc1NraXBwZWQgPSByZWFkZXIuc2tpcChsZW5ndGgpOwogICAgICAgICAgCWRhdGFQaXBlbGluZS5wdXQoImNoYXJzU2tpcHBlZCIsIGNoYXJzU2tpcHBlZCk7CiAgICAgICAgfQogIAoKICAgICAgICB9IGNhdGNoIChFeGNlcHRpb24gZSkgewogICAgICAgICAgICBkYXRhUGlwZWxpbmUuY2xlYXIoKTsKICAgICAgICAgICAgZGF0YVBpcGVsaW5lLnB1dCgiZXJyb3IiLGUuZ2V0TWVzc2FnZSgpKTsKICAgICAgICAgICAgbmV3IFNuaXBwZXRFeGNlcHRpb24oZGF0YVBpcGVsaW5lLCJTbmlwcGV0RXhjZXB0aW9uIGV4Y2VwdGlvbiIsIGUpOwogICAgICAgIH0=",
+  "staticWorkspace" : "",
+  "version" : "v1",
+  "consumers" : "",
+  "developers" : "developers",
+  "lockedByUser" : "ascorp.adarsh@gmail.com"
+}

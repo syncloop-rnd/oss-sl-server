@@ -1,0 +1,212 @@
+{
+  "input" : [ {
+    "id" : "j1_1",
+    "text" : "sessions",
+    "icon" : null,
+    "li_attr" : {
+      "id" : "j1_1"
+    },
+    "a_attr" : {
+      "href" : "#",
+      "id" : "j1_1_anchor"
+    },
+    "state" : {
+      "loaded" : true,
+      "opened" : true,
+      "selected" : false,
+      "disabled" : false
+    },
+    "data" : { },
+    "children" : [ {
+      "id" : "j1_2",
+      "text" : "sshClient",
+      "icon" : null,
+      "li_attr" : {
+        "id" : "j1_2"
+      },
+      "a_attr" : {
+        "href" : "#",
+        "id" : "j1_2_anchor"
+      },
+      "state" : {
+        "loaded" : true,
+        "opened" : false,
+        "selected" : false,
+        "disabled" : false
+      },
+      "data" : { },
+      "children" : [ ],
+      "type" : "javaObject"
+    }, {
+      "id" : "j1_3",
+      "text" : "sftpClient",
+      "icon" : null,
+      "li_attr" : {
+        "id" : "j1_3"
+      },
+      "a_attr" : {
+        "href" : "#",
+        "id" : "j1_3_anchor"
+      },
+      "state" : {
+        "loaded" : true,
+        "opened" : false,
+        "selected" : false,
+        "disabled" : false
+      },
+      "data" : { },
+      "children" : [ ],
+      "type" : "javaObject"
+    }, {
+      "id" : "j1_4",
+      "text" : "session",
+      "icon" : null,
+      "li_attr" : {
+        "id" : "j1_4"
+      },
+      "a_attr" : {
+        "href" : "#",
+        "id" : "j1_4_anchor"
+      },
+      "state" : {
+        "loaded" : true,
+        "opened" : false,
+        "selected" : false,
+        "disabled" : false
+      },
+      "data" : { },
+      "children" : [ ],
+      "type" : "javaObject"
+    }, {
+      "id" : "j1_6",
+      "text" : "remoteFileInputStream",
+      "icon" : null,
+      "li_attr" : {
+        "id" : "j1_6"
+      },
+      "a_attr" : {
+        "href" : "#",
+        "id" : "j1_6_anchor"
+      },
+      "state" : {
+        "loaded" : true,
+        "opened" : false,
+        "selected" : false,
+        "disabled" : false
+      },
+      "data" : { },
+      "children" : [ ],
+      "type" : "javaObject"
+    }, {
+      "id" : "j1_5",
+      "text" : "remoteFileReader",
+      "icon" : null,
+      "li_attr" : {
+        "id" : "j1_5"
+      },
+      "a_attr" : {
+        "href" : "#",
+        "id" : "j1_5_anchor"
+      },
+      "state" : {
+        "loaded" : true,
+        "opened" : false,
+        "selected" : false,
+        "disabled" : false
+      },
+      "data" : { },
+      "children" : [ ],
+      "type" : "javaObject"
+    }, {
+      "id" : "j1_7",
+      "text" : "remoteFileOutputStream",
+      "icon" : null,
+      "li_attr" : {
+        "id" : "j1_7"
+      },
+      "a_attr" : {
+        "href" : "#",
+        "id" : "j1_7_anchor"
+      },
+      "state" : {
+        "loaded" : true,
+        "opened" : false,
+        "selected" : false,
+        "disabled" : false
+      },
+      "data" : { },
+      "children" : [ ],
+      "type" : "javaObject"
+    }, {
+      "id" : "j1_8",
+      "text" : "remoteFileWriter",
+      "icon" : null,
+      "li_attr" : {
+        "id" : "j1_8"
+      },
+      "a_attr" : {
+        "href" : "#",
+        "id" : "j1_8_anchor"
+      },
+      "state" : {
+        "loaded" : true,
+        "opened" : false,
+        "selected" : false,
+        "disabled" : false
+      },
+      "data" : { },
+      "children" : [ ],
+      "type" : "javaObject"
+    } ],
+    "type" : "document"
+  } ],
+  "output" : [ {
+    "id" : "j2_1",
+    "text" : "status",
+    "icon" : null,
+    "li_attr" : {
+      "id" : "j2_1"
+    },
+    "a_attr" : {
+      "href" : "#",
+      "id" : "j2_1_anchor"
+    },
+    "state" : {
+      "loaded" : true,
+      "opened" : false,
+      "selected" : false,
+      "disabled" : false
+    },
+    "data" : { },
+    "children" : [ ],
+    "type" : "string"
+  }, {
+    "id" : "j2_2",
+    "text" : "error",
+    "icon" : null,
+    "li_attr" : {
+      "id" : "j2_2"
+    },
+    "a_attr" : {
+      "href" : "#",
+      "id" : "j2_2_anchor"
+    },
+    "state" : {
+      "loaded" : true,
+      "opened" : false,
+      "selected" : true,
+      "disabled" : false
+    },
+    "data" : { },
+    "children" : [ ],
+    "type" : "string"
+  } ],
+  "package" : "cGFja2FnZSBwYWNrYWdlcy5taWRkbGV3YXJlLnB1Yi5jbGllbnQuc2Z0cC5jb21tYW5kczs=",
+  "imports" : "aW1wb3J0IGNvbS5la2EubWlkZGxld2FyZS5zZXJ2aWNlLkRhdGFQaXBlbGluZTsKaW1wb3J0IGNvbS5la2EubWlkZGxld2FyZS5zZXJ2aWNlLlNlcnZpY2VVdGlsczsKaW1wb3J0IGNvbS5la2EubWlkZGxld2FyZS50ZW1wbGF0ZS5TbmlwcGV0RXhjZXB0aW9uOwppbXBvcnQgbmV0LnNjaG1penouc3Noai5jb25uZWN0aW9uLmNoYW5uZWwuZGlyZWN0LlNlc3Npb247CmltcG9ydCBuZXQuc2NobWl6ei5zc2hqLnNmdHAuU0ZUUENsaWVudDsKaW1wb3J0IG5ldC5zY2htaXp6LnNzaGouc2Z0cC5SZW1vdGVGaWxlOwppbXBvcnQgbmV0LnNjaG1penouc3Noai5TU0hDbGllbnQ7",
+  "main" : "CnRyeXsKICAgIFJlbW90ZUZpbGUuUmVtb3RlRmlsZU91dHB1dFN0cmVhbSByZm9zPShSZW1vdGVGaWxlLlJlbW90ZUZpbGVPdXRwdXRTdHJlYW0pZGF0YVBpcGVsaW5lLmdldCgicmVtb3RlRmlsZU91dHB1dFN0cmVhbSIpOwogICAgaWYocmZvcyE9bnVsbCkKICAJCXRyeXtyZm9zLmZsdXNoKCk7cmZvcy5jbG9zZSgpO31jYXRjaChFeGNlcHRpb24gZSl7fQoJUmVtb3RlRmlsZS5SZW1vdGVGaWxlSW5wdXRTdHJlYW0gcmZpcz0oUmVtb3RlRmlsZS5SZW1vdGVGaWxlSW5wdXRTdHJlYW0pZGF0YVBpcGVsaW5lLmdldCgicmVtb3RlRmlsZUlucHV0U3RyZWFtIik7CiAgICBpZihyZmlzIT1udWxsKQogICAgICB0cnl7cmZpcy5jbG9zZSgpO31jYXRjaChFeGNlcHRpb24gZSl7fQogICAgUmVtb3RlRmlsZSByZnI9KFJlbW90ZUZpbGUpZGF0YVBpcGVsaW5lLmdldCgicmVtb3RlRmlsZVJlYWRlciIpOwogICAgaWYocmZyIT1udWxsKQogICAgICB0cnl7cmZyLmNsb3NlKCk7fWNhdGNoKEV4Y2VwdGlvbiBlKXt9CglSZW1vdGVGaWxlIHJmdz0oUmVtb3RlRmlsZSlkYXRhUGlwZWxpbmUuZ2V0KCJyZW1vdGVGaWxlV3JpdGVyIik7CiAgICBpZihyZnchPW51bGwpCiAgICAgIHRyeXtyZncuY2xvc2UoKTt9Y2F0Y2goRXhjZXB0aW9uIGUpe30KICAgIFNGVFBDbGllbnQgc2Z0cD0oU0ZUUENsaWVudClkYXRhUGlwZWxpbmUuZ2V0KCJzZnRwQ2xpZW50Iik7CiAgICBpZihzZnRwIT1udWxsKQogICAgICB0cnl7c2Z0cC5jbG9zZSgpO31jYXRjaChFeGNlcHRpb24gZSl7fQogICAgU2Vzc2lvbiBzZXNzaW9uPShTZXNzaW9uKWRhdGFQaXBlbGluZS5nZXQoInNlc3Npb24iKTsKICAJaWYoc2Vzc2lvbiE9bnVsbCkKICAgICAgdHJ5e3Nlc3Npb24uY2xvc2UoKTt9Y2F0Y2goRXhjZXB0aW9uIGUpe30KCVNTSENsaWVudCBzc2g9KFNTSENsaWVudClkYXRhUGlwZWxpbmUuZ2V0KCJzc2hDbGllbnQiKTsKICAgIGlmKHNzaCE9bnVsbCkKICAgICAgdHJ5e3NzaC5jbG9zZSgpO31jYXRjaChFeGNlcHRpb24gZSl7fQogICAgZGF0YVBpcGVsaW5lLnB1dCgic3RhdHVzIiwic3VjY2VzcyIpOwogIH1jYXRjaChFeGNlcHRpb24gZSl7CiAgICBkYXRhUGlwZWxpbmUuY2xlYXIoKTsKICAJZGF0YVBpcGVsaW5lLnB1dCgic3RhdHVzIiwiZmFpbGVkIik7CiAgICBkYXRhUGlwZWxpbmUucHV0KCJlcnJvciIsZS5nZXRNZXNzYWdlKCkpOwogICAgdGhyb3cgbmV3IFNuaXBwZXRFeGNlcHRpb24oZGF0YVBpcGVsaW5lLCJTbmVwcGV0IGV4Y2VwdGlvbiIsIG5ldyBFeGNlcHRpb24oZSkpOwogIH0=",
+  "staticWorkspace" : "",
+  "version" : "v1",
+  "consumers" : "",
+  "developers" : "",
+  "lockedByUser" : "admin"
+}

@@ -1,0 +1,31 @@
+{
+  "input" : [ {
+    "id" : "j1_1",
+    "text" : "properties",
+    "li_attr" : {
+      "id" : "j1_1"
+    },
+    "a_attr" : {
+      "href" : "#",
+      "id" : "j1_1_anchor"
+    },
+    "state" : {
+      "loaded" : true,
+      "opened" : false,
+      "selected" : false,
+      "disabled" : false
+    },
+    "data" : { },
+    "children" : [ ],
+    "type" : "document"
+  } ],
+  "output" : [ ],
+  "package" : "cGFja2FnZSBwYWNrYWdlcy5taWRkbGV3YXJlLnB1Yi51dGlsOw==",
+  "imports" : "aW1wb3J0IGNvbS5la2EubWlkZGxld2FyZS5zZXJ2aWNlLkRhdGFQaXBlbGluZTsKaW1wb3J0IGNvbS5la2EubWlkZGxld2FyZS5zZXJ2aWNlLlByb3BlcnR5TWFuYWdlcjsKaW1wb3J0IGNvbS5la2EubWlkZGxld2FyZS50ZW1wbGF0ZS5TbmlwcGV0RXhjZXB0aW9uOwppbXBvcnQgb3JnLmFwYWNoZS5jb21tb25zLmxhbmczLlN0cmluZ1V0aWxzOwppbXBvcnQgY29tLmVrYS5taWRkbGV3YXJlLnNlcnZpY2UuU2VydmljZVV0aWxzOwoKaW1wb3J0IGphdmEuaW8uRmlsZUlucHV0U3RyZWFtOwppbXBvcnQgamF2YS5pby5GaWxlT3V0cHV0U3RyZWFtOwppbXBvcnQgamF2YS51dGlsLlByb3BlcnRpZXM7CmltcG9ydCBqYXZhLnV0aWwuTWFwOw==",
+  "main" : "dHJ5IHsKICAJCQlkYXRhUGlwZWxpbmUuYXBwTG9nKCJPUEVSQVRJT04iLCAic2F2ZVVybE1hcHBpbmdQcm9wZXJ0aWVzIik7CiAgICAgICAgICAgCVNlcnZpY2VVdGlscy5zYXZlVXJsTWFwcGluZ1Byb3BlcnRpZXMoZGF0YVBpcGVsaW5lKTsKICAJCQlkYXRhUGlwZWxpbmUuYXBwTG9nKCJTQVZFRF9VcmxNYXBwaW5nX1BST1BFUlRJRVMiLCAiU2VydmVyIHByb3BlcnRpZXMgc2F2ZWQgc3VjY2Vzc2Z1bGx5LiIpOwogICAgfSAKY2F0Y2ggKEV4Y2VwdGlvbiBlKSB7CiAgICAgICAgICAgIGRhdGFQaXBlbGluZS5jbGVhcigpOwogICAgICAgICAgICBkYXRhUGlwZWxpbmUucHV0KCJlcnJvciIsIGUuZ2V0TWVzc2FnZSgpKTsKICAJCQlkYXRhUGlwZWxpbmUuYXBwTG9nKCJTRVJWSUNFX0VSUk9SIiwgZS5nZXRNZXNzYWdlKCkpOwogICAgICAgICAgICB0aHJvdyBuZXcgU25pcHBldEV4Y2VwdGlvbihkYXRhUGlwZWxpbmUsICJTbmlwcGV0IGV4Y2VwdGlvbiIsIG5ldyBFeGNlcHRpb24oZSkpOwogICAgICAgIH0=",
+  "staticWorkspace" : "",
+  "version" : "v1",
+  "consumers" : "",
+  "developers" : "developers",
+  "lockedByUser" : "admin"
+}

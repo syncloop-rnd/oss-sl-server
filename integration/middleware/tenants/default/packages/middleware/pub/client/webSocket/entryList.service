@@ -1,0 +1,56 @@
+{
+  "input" : [ ],
+  "output" : [ {
+    "id" : "j2_2",
+    "text" : "terminalName",
+    "li_attr" : {
+      "id" : "j2_2"
+    },
+    "a_attr" : {
+      "href" : "#",
+      "id" : "j2_2_anchor"
+    },
+    "state" : {
+      "loaded" : true,
+      "opened" : false,
+      "selected" : false,
+      "disabled" : false
+    },
+    "data" : {
+      "guid" : "2392e48a-7241-4a7e-bb3f-7de64d1bf3e0",
+      "columnType" : "-1"
+    },
+    "children" : [ ],
+    "type" : "stringList"
+  }, {
+    "id" : "j2_3",
+    "text" : "error",
+    "li_attr" : {
+      "id" : "j2_3"
+    },
+    "a_attr" : {
+      "href" : "#",
+      "id" : "j2_3_anchor"
+    },
+    "state" : {
+      "loaded" : true,
+      "opened" : false,
+      "selected" : true,
+      "disabled" : false
+    },
+    "data" : {
+      "guid" : "56ea1780-33f5-464d-9e78-c23e426dea9c",
+      "columnType" : "-1"
+    },
+    "children" : [ ],
+    "type" : "string"
+  } ],
+  "package" : "cGFja2FnZSBwYWNrYWdlcy5taWRkbGV3YXJlLnB1Yi5jbGllbnQud2ViU29ja2V0Ow==",
+  "imports" : "aW1wb3J0IGNvbS5la2EubWlkZGxld2FyZS5zZXJ2aWNlLkRhdGFQaXBlbGluZTsKaW1wb3J0IGNvbS5la2EubWlkZGxld2FyZS5zZXJ2aWNlLlNlcnZpY2VVdGlsczsKaW1wb3J0IGNvbS5la2EubWlkZGxld2FyZS50ZW1wbGF0ZS5TbmlwcGV0RXhjZXB0aW9uOwppbXBvcnQgY29tLmVrYS5taWRkbGV3YXJlLnRlbXBsYXRlLldlYlNvY2tldEFjY2VzczsKaW1wb3J0IGphdmEudXRpbC4qOw==",
+  "main" : "CSAgICB0cnkgewogICAgICAgICAgICBMaXN0PFN0cmluZz4gbGlzdD1XZWJTb2NrZXRBY2Nlc3MubGlzdFdTQSgpOwogICAJCQlkYXRhUGlwZWxpbmUucHV0KCJ0ZXJtaW5hbE5hbWUiLCBsaXN0KTsKICAgICAgICB9IGNhdGNoIChUaHJvd2FibGUgZSkgewogICAgICAgICAgICBkYXRhUGlwZWxpbmUuY2xlYXIoKTsKICAgICAgICAgICAgZGF0YVBpcGVsaW5lLnB1dCgiZXJyb3IiLCBlLmdldE1lc3NhZ2UoKSk7CiAgICAgICAgICAgIGUucHJpbnRTdGFja1RyYWNlKCk7CiAgICAgICAgfQ==",
+  "staticWorkspace" : "",
+  "version" : "v1",
+  "consumers" : "",
+  "developers" : "",
+  "lockedByUser" : "admin"
+}

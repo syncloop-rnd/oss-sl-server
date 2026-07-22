@@ -1,0 +1,1344 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Syncloop | Scheduler Configurations</title>
+    <base href="/"><script src="env.js"></script>
+    <script>
+        window.ENV = window.env || {};
+    </script>
+    <link href="middleware/pub/server/ui/assets/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="shortcut icon" href="middleware/pub/server/ui/assets/img/favicon.ico" type="image/x-icon" />
+    <link rel="stylesheet" href="index.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600&display=swap" rel="stylesheet">
+    <!-- Custom styles for this template -->
+    <link href="middleware/pub/server/ui/assets/css/sidebars.css" rel="stylesheet">
+    <link href="middleware/pub/server/ui/assets/css/custom.css" rel="stylesheet">
+    <link href="middleware/pub/server/ui/css/style.min.css" rel="stylesheet">
+    <link href="middleware/pub/server/ui/assets/css/preload.css" rel="stylesheet">
+    <script type="text/javascript">
+        var SDK_EMBEDDED = false;
+    </script>
+    <script	src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script	src="middleware/pub/server/ui/javascript/jstree.min.js"></script>
+    <script src="middleware/pub/server/ui/javascript/jstreetable.js"></script>
+    <script src="middleware/pub/server/ui/javascript/showdown.min.js"></script>
+    <script src="middleware/pub/server/ui/javascript/middleware.js"></script>
+    <script src="middleware/pub/server/ui/javascript/workspace-profile-header.js"></script>
+    <script src="middleware/pub/server/ui/javascript/sweetalert.min.js"></script>
+    <script src="middleware/pub/server/ui/javascript/sweetalert.init.js"></script>
+    <link rel="stylesheet" href="middleware/pub/server/ui/css/sweetalert.css" />
+    <script type="syncloop/analytics"></script>
+    <style>
+        .modal-header {
+            display: inline-block;
+        }
+        .modal-body li.nav-link.active.in {
+            border-color: transparent;
+        }
+        .modal-body .nav-link{
+            padding: 0;
+            border: none;
+        }
+        cron-expression-input .nav-tabs>li>a{margin-right: 0px !important;}
+    </style>
+</head>
+<body>
+<div class="preload">
+    <div class="pre-wrap">
+        <div class="pre-top">
+            <div class="pre-brand">
+                <div class="pre-logo placeholder-content">
+                </div>
+            </div>
+
+            <div class="pre-menu">
+                <div class="pre-switch">
+                    <div class="pre-large placeholder-content"></div>
+                </div>
+
+                <div class="pre-switch">
+                    <div class="pre-large placeholder-content"></div>
+                </div>
+
+                <div class="pre-switch">
+                    <div class="pre-large placeholder-content"></div>
+                </div>
+            </div>
+        </div>
+
+
+        <div class="pre-wrapper">
+            <div class="pre-sidebar work">
+                <div class="pre-switch pre-menu">
+                    <div class="pre-dot placeholder-content"></div>
+                </div>
+
+                <div class="pre-switch pre-menu">
+                    <div class="pre-dot placeholder-content"></div>
+                </div>
+
+                <div class="pre-switch pre-menu">
+                    <div class="pre-dot placeholder-content"></div>
+                </div>
+
+                <div class="pre-switch pre-menu">
+                    <div class="pre-dot placeholder-content"></div>
+                </div>
+
+                <div class="pre-switch pre-menu">
+                    <div class="pre-dot placeholder-content"></div>
+                </div>
+
+                <div class="pre-switch pre-menu">
+                    <div class="pre-dot placeholder-content"></div>
+                </div>
+
+                <div class="pre-switch pre-menu">
+                    <div class="pre-dot placeholder-content"></div>
+                </div>
+
+                <div class="pre-switch pre-menu">
+                    <div class="pre-dot placeholder-content"></div>
+                </div>
+
+                <div class="pre-switch pre-menu">
+                    <div class="pre-dot placeholder-content"></div>
+                </div>
+
+                <div class="pre-switch pre-menu">
+                    <div class="pre-dot placeholder-content"></div>
+                </div>
+            </div>
+
+            <div class="pre-content work">
+                <div class="pre-head-sche">
+                    <div class="pre-subhead pre-subhead3 placeholder-content"></div>
+                    <div class="pre-subhead pre-subhead3 placeholder-content wd-sr"></div>
+                </div>
+
+                <table class="pre-table">
+                    <tr>
+                        <th>
+                            <div class="line line1 placeholder-content"></div>
+                        </th>
+                        <th>
+                            <div class="line line2 placeholder-content"></div>
+                        </th>
+                        <th>
+                            <div class="line line2 placeholder-content"></div>
+                        </th>
+                        <th>
+                            <div class="line line2 placeholder-content"></div>
+                        </th>
+                        <th>
+                            <div class="line line2 placeholder-content"></div>
+                        </th>
+                    </tr>
+                    <tr>
+                        <td>
+                            <div class="line line1 placeholder-content"></div>
+                        </td>
+                        <td>
+                            <div class="line line2 placeholder-content"></div>
+                        </td>
+                        <td>
+                            <div class="line line2 placeholder-content"></div>
+                        </td>
+                        <td>
+                            <div class="line line2 placeholder-content"></div>
+                        </td>
+                        <td>
+                            <div class="line line2 placeholder-content"></div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <div class="line line1 placeholder-content"></div>
+                        </td>
+                        <td>
+                            <div class="line line2 placeholder-content"></div>
+                        </td>
+                        <td>
+                            <div class="line line2 placeholder-content"></div>
+                        </td>
+                        <td>
+                            <div class="line line2 placeholder-content"></div>
+                        </td>
+                        <td>
+                            <div class="line line2 placeholder-content"></div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <div class="line line1 placeholder-content"></div>
+                        </td>
+                        <td>
+                            <div class="line line2 placeholder-content"></div>
+                        </td>
+                        <td>
+                            <div class="line line2 placeholder-content"></div>
+                        </td>
+                        <td>
+                            <div class="line line2 placeholder-content"></div>
+                        </td>
+                        <td>
+                            <div class="line line2 placeholder-content"></div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <div class="line line1 placeholder-content"></div>
+                        </td>
+                        <td>
+                            <div class="line line2 placeholder-content"></div>
+                        </td>
+                        <td>
+                            <div class="line line2 placeholder-content"></div>
+                        </td>
+                        <td>
+                            <div class="line line2 placeholder-content"></div>
+                        </td>
+                        <td>
+                            <div class="line line2 placeholder-content"></div>
+                        </td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<header class="navbar custom_head sticky-top flex-md-nowrap bg-gray">
+    <div id="license_warning" class="toast-warning" style="display: none;">
+        <div class="toast-content">
+          <i class="toast-check"><svg xmlns="http://www.w3.org/2000/svg" width="24px" height="24px" viewBox="0 0 24 24" fill="#000000">
+            <g id="SVGRepo_bgCarrier" stroke-width="0"/>
+            <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"/>
+            <g id="SVGRepo_iconCarrier"> <path fill="none" stroke="#ffffff" stroke-linejoin="round" stroke-width="2" d="M12,3 L22,21 L2,21 L12,3 Z M12,9 L12,15 M12,16 L12,18"/> </g>
+            </svg></i>
+          <div class="message">
+            <h5>Warning</h5>
+            <p>Maximum two users are allowed on community version. <a target="_blank" href="https://www.syncloop.com/terms-conditions.html?utm_source=Website&utm_medium=click&utm_id=terms-conditions&utm_content=footer-link">Click here</a> to view the community usage terms and conditions.</p>
+          </div>
+        </div>
+        <i onclick="$(this).parent().hide();" class="toast-close"><svg xmlns="http://www.w3.org/2000/svg" width="14px" height="14px" viewBox="0 0 24 24" fill="none">
+            <g id="SVGRepo_bgCarrier" stroke-width="0"/>
+            <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"/>
+            <g id="SVGRepo_iconCarrier"> <path fill-rule="evenodd" clip-rule="evenodd" d="M5.29289 5.29289C5.68342 4.90237 6.31658 4.90237 6.70711 5.29289L12 10.5858L17.2929 5.29289C17.6834 4.90237 18.3166 4.90237 18.7071 5.29289C19.0976 5.68342 19.0976 6.31658 18.7071 6.70711L13.4142 12L18.7071 17.2929C19.0976 17.6834 19.0976 18.3166 18.7071 18.7071C18.3166 19.0976 17.6834 19.0976 17.2929 18.7071L12 13.4142L6.70711 18.7071C6.31658 19.0976 5.68342 19.0976 5.29289 18.7071C4.90237 18.3166 4.90237 17.6834 5.29289 17.2929L10.5858 12L5.29289 6.70711C4.90237 6.31658 4.90237 5.68342 5.29289 5.29289Z" fill="#040d21"/> </g>
+            </svg></i>
+      </div>
+      <div id="mostRecentlyOpened">
+	<a class="eka_logo" href="middleware/pub/server/ui/workspace/web/dashboard.html?utm_source=Workspace&utm_medium=dashboard-page">
+		<img class="ekalogos" src="middleware/pub/server/ui/assets/img/syncloop-logo.svg">
+	</a>
+	<a href="middleware/pub/server/ui/workspace/web/dashboard.html?utm_source=Workspace&utm_medium=dashboard-page"class="header_home">
+				<img src="middleware/pub/server/ui/assets/img/header_nav.svg">
+	</a>
+</div>
+
+    <div class="navbar-nav tp_m">
+        <div class="nav-item text-nowrap">
+            <!--
+            <a href="https://www.udemy.com/course/syncloop-ai/?referralCode=FE8BC4DE6B60DD9509C7" target="_blank" class="dropbtn"><img class="hvc" src="middleware/pub/server/ui/icons/play_icon.svg">&nbsp; Watch Tutorials</a>
+            <button type="button" onclick="clearCacheExceptAuth()" class="dropbtn"><span><img class="hvc" src="middleware/pub/server/ui/icons/clear_cache.svg"></span>&nbsp; Clear Cache</button>
+            <button type="button" class="dropbtn" onclick="doLogout()"><img class="hvc" src="middleware/pub/server/ui/icons/icn_logout.svg">&nbsp; Logout</button>
+            -->
+            <div class="workspace-profile-header-host"></div>
+        </div>
+    </div>
+</header>
+<main class="rg_br">
+    <div class="container-fluid ">
+        <div class="row">
+            <div class="col-lg-1 d-flex flex-column flex-shrink-0 eka-side p-0" data-match-height="groupName">
+                <ul class="nav nav-pills nav-flush flex-column mb-auto text-center left-m-bar">
+
+                    <li>
+                        <a href="middleware/pub/server/ui/workspace/web/api.html?utm_source=Workspace&utm_medium=api-page" class="nav-link py-3" title="API" data-bs-toggle="tooltip" data-bs-placement="right">
+                            <svg class="ic2" xmlns="http://www.w3.org/2000/svg" width="26" height="25" viewBox="0 0 26 25" fill="none">
+								<path d="M5.82142 19C3.15863 19 1 16.8668 1 14.2353C1 11.6038 3.15863 9.47057 5.82142 9.47057C6.14106 9.47057 6.45344 9.50129 6.75568 9.56001M6.75568 9.56001C6.49794 8.87253 6.35714 8.12898 6.35714 7.35294C6.35714 3.8443 9.23532 1 12.7857 1C16.0929 1 18.8167 3.46792 19.1745 6.64185M6.75568 9.56001C7.39066 9.6832 7.98094 9.92958 8.5 10.2729M14.9286 6.65561C15.5988 6.4215 16.32 6.29412 17.0714 6.29412C17.8079 6.29412 18.5155 6.41652 19.1745 6.64185M19.1745 6.64185C19.9429 6.9046 20.6451 7.30729 21.25 7.81909" stroke="#434550" stroke-width="1.6" stroke-linecap="round"/>
+								<path class="appi" class="aapi" d="M15.0244 20L12.0214 12.3H13.2974L16.3774 20H15.0244ZM8.87543 20L11.9444 12.3H13.2314L10.2284 20H8.87543ZM10.3164 18.108V16.975H14.9254V18.108H10.3164ZM18.0958 17.338V16.161H19.8008C20.1675 16.161 20.4682 16.0363 20.7028 15.787C20.9375 15.5377 21.0548 15.215 21.0548 14.819C21.0548 14.5477 20.9925 14.313 20.8678 14.115C20.7505 13.9097 20.5855 13.7483 20.3728 13.631C20.1602 13.5137 19.9145 13.4587 19.6358 13.466H18.0958V12.3L19.6578 12.289C20.1858 12.289 20.6515 12.399 21.0548 12.619C21.4582 12.8317 21.7735 13.1287 22.0008 13.51C22.2282 13.884 22.3418 14.3203 22.3418 14.819C22.3418 15.303 22.2355 15.7357 22.0228 16.117C21.8102 16.4983 21.5132 16.799 21.1318 17.019C20.7578 17.2317 20.3215 17.338 19.8228 17.338H18.0958ZM16.9408 20V12.3H18.2168V20H16.9408ZM23.0321 20V12.3H24.3081V20H23.0321Z" fill="#434550"/>
+								</svg>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="middleware/pub/server/ui/workspace/web/workspace.html?utm_source=Workspace&utm_medium=workspace-page" class="nav-link py-3 " title="Workspace" data-bs-toggle="tooltip" data-bs-placement="right">
+                            <svg class="ic" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" id="Layer_1" x="0px" y="0px" viewBox="0 0 46 46" style="enable-background:new 0 0 46 46;" xml:space="preserve">
+                                <style type="text/css">
+                                    .st0{fill:none;stroke:#434550;stroke-width:2.4;}
+                                </style>
+                                <path class="st0" d="M39.9,27.5V10.6c0-1.9,0-2.8-0.6-3.4c-0.6-0.6-1.5-0.6-3.4-0.6H18.5h-2.9h-5.3c-1.9,0-2.8,0-3.4,0.6  c-0.6,0.6-0.6,1.5-0.6,3.4v16.9c0,1.9,0,2.8,0.6,3.4c0.6,0.6,1.5,0.6,3.4,0.6h25.6c1.9,0,2.8,0,3.4-0.6  C39.9,30.3,39.9,29.4,39.9,27.5z"/>
+                                <path class="st0" d="M31.9,38.9H14.2"/>
+                                </svg>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="scheduler/manager/web/scheduler-new.html?utm_source=Workspace&utm_medium=scheduler-page" class="nav-link active py-3 " title="Scheduler" data-bs-toggle="tooltip"
+                           data-bs-placement="right">
+                           <svg class="ic4" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" id="Layer_1" x="0px" y="0px" viewBox="0 0 46 46" style="enable-background:new 0 0 46 46;" xml:space="preserve">
+                            <style type="text/css">
+                                .st0{fill:none;stroke:#434550;stroke-width:2.4;}
+                                .st1{fill:none;stroke:#434550;stroke-width:2.4;stroke-linecap:round;}
+                            </style>
+                            <ellipse class="st0" cx="23.4" cy="27.2" rx="16.9" ry="16.9"/>
+                            <path class="st1" d="M23.4,27.2v-6.3"/>
+                            <path class="st1" d="M35,13.5l3.2-3.2"/>
+                            <path class="st1" d="M19.3,2.6c0.2-0.2,0.8-0.4,1.5-0.6c0.7-0.1,1.6-0.2,2.6-0.2s1.8,0.1,2.6,0.2s1.3,0.3,1.5,0.6"/>
+                            </svg>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="middleware/pub/server/ui/workspace/web/export.html?utm_source=Workspace&utm_medium=export-page" id="createBuildExport" class="nav-link py-3" title="Export/Promote" data-bs-toggle="tooltip"
+                           data-bs-placement="right">
+                           <svg class="ic5" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" id="Layer_1" x="0px" y="0px" viewBox="0 0 46 46" style="enable-background:new 0 0 46 46;" xml:space="preserve">
+                            <style type="text/css">
+                                .st0{fill:none;stroke:#434550;stroke-width:2.4;stroke-linecap:round;stroke-miterlimit:10;}
+                                .st1{fill:#434550;}
+                            </style>
+                            <path class="st0" d="M35.3,23.9c5.3-8.7,5.1-16.8,5-18.4c0-0.2-0.2-0.3-0.3-0.3C25.5,5.2,19,11,16.1,15.4c-1.3,2.1-2,4.1-2.3,5  c-0.1,0.3,0,0.7,0.2,1l7.2,7.3"/>
+                            <path class="st0" d="M5.6,19.6c0.8-1.2,5.1-7.5,11-5.8"/>
+                            <path class="st0" d="M14.7,30.6l8.5-8.5"/>
+                            <path class="st0" d="M25.9,31.9l3.6,4.1c0,0,0.2,0.1,0.2,0l4-4.1"/>
+                            <path class="st0" d="M29.8,25.2v10.5"/>
+                            <path class="st0" d="M21.8,36.5v4.3c0,0.1,0.1,0.2,0.2,0.2h15.3c0.1,0,0.2-0.1,0.2-0.2v-4.3"/>
+                            <path class="st1" d="M29.1,18.8c1.5,0,2.7-1.2,2.7-2.7c0-1.5-1.2-2.7-2.7-2.7c-1.5,0-2.7,1.2-2.7,2.7C26.4,17.6,27.6,18.8,29.1,18.8  z"/>
+                            </svg>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="javascript:importBuildV2()" class="nav-link py-3" title="Import" data-bs-toggle="tooltip"
+                           data-bs-placement="right">
+                           <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" id="Layer_1" x="0px" y="0px" viewBox="0 0 46 46" style="enable-background:new 0 0 46 46;" xml:space="preserve">
+                            <style type="text/css">
+                                .st0{fill:none;stroke:#434550;stroke-width:2.4;}
+                            </style>
+                            <path class="st0" d="M6.2,21.3v1.6c0,1.9,0,2.8,0.6,3.4s1.5,0.6,3.4,0.6h3.9c0.7,0,1,0,1.3,0.2s0.4,0.5,0.6,1.2l1,2.9  c0.2,0.7,0.3,1,0.6,1.2c0.3,0.2,0.6,0.2,1.3,0.2h8.3c0.7,0,1,0,1.3-0.2s0.4-0.5,0.6-1.2l1-2.9c0.2-0.7,0.3-1,0.6-1.2  c0.3-0.2,0.6-0.2,1.3-0.2h3.9c1.9,0,2.8,0,3.4-0.6c0.6-0.6,0.6-1.5,0.6-3.4v-1.6"/>
+                            <path class="st0" d="M23.1,3.5l-7.5,5.6 M30.6,9.1l-7.5-5.6 M23.1,22.2V3.5"/>
+                            <path class="st0" d="M30.5,14.1h5.3c1.9,0,2.8,0,3.4,0.6c0.6,0.6,0.6,1.5,0.6,3.4V36c0,1.9,0,2.8-0.6,3.4C38.7,40,37.8,40,35.9,40  H10.2c-1.9,0-2.8,0-3.4-0.6S6.2,37.9,6.2,36V18.1c0-1.9,0-2.8,0.6-3.4c0.6-0.6,1.5-0.6,3.4-0.6h5.3"/>
+                            </svg>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="middleware/pub/server/ui/workspace/web/server-logs.html?utm_source=Workspace&utm_medium=server-logs-page" class="nav-link py-3" title="Server Logs" data-bs-toggle="tooltip"
+                           data-bs-placement="right">
+                           <svg class="ic7" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" id="Layer_1" x="0px" y="0px" viewBox="0 0 46 46" style="enable-background:new 0 0 46 46;" xml:space="preserve">
+                            <style type="text/css">
+                                .st0{fill:none;stroke:#434550;stroke-width:2.4;stroke-linecap:round;}
+                                .st1{fill:none;stroke:#434550;stroke-width:2.4;}
+                            </style>
+                            <path class="st0" d="M15.5,24.5h15.1"/>
+                            <path class="st0" d="M15.5,30.9h8.6"/>
+                            <path class="st1" d="M9,5.9c0-0.8,0-1.3,0.2-1.6C9.3,4,9.5,3.8,9.8,3.7c0.3-0.2,0.7-0.2,1.6-0.2h13.9c0.4,0,0.6,0,0.7,0  c0.2,0,0.3,0.1,0.4,0.2c0.2,0.1,0.3,0.2,0.5,0.5l9.4,9.4c0.3,0.3,0.4,0.4,0.5,0.5c0.1,0.1,0.1,0.3,0.2,0.4c0,0.2,0,0.4,0,0.7v25.6  c0,0.8,0,1.3-0.2,1.6c-0.1,0.3-0.4,0.5-0.7,0.7c-0.3,0.2-0.7,0.2-1.6,0.2H11.4c-0.8,0-1.3,0-1.6-0.2c-0.3-0.1-0.5-0.4-0.7-0.7  C9,42.1,9,41.7,9,40.9V5.9z"/>
+                            <path class="st1" d="M24.1,3.5v10.6c0,0.8,0,1.3,0.2,1.6c0.1,0.3,0.4,0.5,0.7,0.7c0.3,0.2,0.7,0.2,1.6,0.2h10.6"/>
+                            </svg>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="javascript:openJWTPopup()" class="nav-link py-3" title="API Token" data-bs-toggle="tooltip" data-bs-placement="right">
+                            <svg class="ic8" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+                                <ellipse cx="7" cy="16.3848" rx="6" ry="6" stroke="#434550" stroke-width="1.6"/>
+                                <path d="M10.9219 11.2308L18.3834 3.76923M21.1526 1L18.3834 3.76923M18.3834 3.76923L22.9988 8.38462" stroke="#434550" stroke-width="1.6" stroke-linecap="round"/>
+                                <path d="M16.5391 7.46191L19.3083 10.2311" stroke="#434550" stroke-width="1.6" stroke-linecap="round"/>
+                                </svg>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="middleware/pub/server/ui/workspace/web/setting.html?utm_source=Workspace&utm_medium=setting-page" class="nav-link py-3" title="Settings" data-bs-toggle="tooltip" data-bs-placement="right">
+                            <svg class="ic9" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" id="Layer_1" x="0px" y="0px" viewBox="0 0 46 46" style="enable-background:new 0 0 46 46;" xml:space="preserve">
+                                <style type="text/css">
+                                    .st0{fill:none;stroke:#434550;stroke-width:2.4;stroke-linecap:round;stroke-linejoin:round;}
+                                    .st1{fill:none;stroke:#434550;stroke-width:2;stroke-linecap:round;stroke-linejoin:round;}
+                                </style>
+                                <path class="st0" d="M4,30v-2.5c0-1.5,1.2-2.7,2.7-2.7c2.6,0,3.6-1.8,2.3-4.1c-0.7-1.3-0.3-3,1-3.7l2.5-1.4c1.1-0.7,2.6-0.3,3.3,0.9  l0.2,0.3c1.3,2.2,3.4,2.2,4.7,0l0.2-0.3c0.7-1.1,2.1-1.5,3.3-0.9l2.5,1.4c1.3,0.7,1.7,2.4,1,3.7c-1.3,2.2-0.2,4.1,2.3,4.1  c1.5,0,2.7,1.2,2.7,2.7V30c0,1.5-1.2,2.7-2.7,2.7c-2.6,0-3.6,1.8-2.3,4.1c0.7,1.3,0.3,3-1,3.7l-2.5,1.4c-1.1,0.7-2.6,0.3-3.3-0.9  l-0.2-0.3c-1.3-2.2-3.4-2.2-4.7,0l-0.2,0.3c-0.7,1.1-2.1,1.5-3.3,0.9l-2.5-1.4c-1.3-0.7-1.7-2.4-1-3.7c1.3-2.2,0.2-4.1-2.3-4.1  C5.2,32.7,4,31.5,4,30z"/>
+                                <path class="st0" d="M18.3,34.6c3.3,0,5.9-2.7,5.9-5.9c0-3.3-2.7-5.9-5.9-5.9c-3.3,0-5.9,2.7-5.9,5.9C12.4,32,15.1,34.6,18.3,34.6z"/>
+                                <path class="st1" d="M19.5,15.6v-2.1c0-1.2,1-2.2,2.2-2.2c2.1,0,3-1.5,1.9-3.3c-0.6-1.1-0.2-2.4,0.8-3l2-1.2  c0.9-0.5,2.1-0.2,2.7,0.7l0.1,0.2c1.1,1.8,2.8,1.8,3.8,0l0.1-0.2C33.8,3.5,35,3.2,36,3.8l2,1.2c1.1,0.6,1.4,2,0.8,3  c-1.1,1.8-0.2,3.3,1.9,3.3c1.2,0,2.2,1,2.2,2.2v2.1c0,1.2-1,2.2-2.2,2.2c-2.1,0-3,1.5-1.9,3.3c0.6,1.1,0.2,2.4-0.8,3l-2,1.2  c-0.9,0.6-2.1,0.2-2.7-0.7l-0.1-0.2"/>
+                                <path class="st1" d="M31,19.4c2.1,0,3.9-1.7,3.9-3.9s-1.7-3.9-3.9-3.9s-3.9,1.7-3.9,3.9S28.9,19.4,31,19.4z"/>
+                                </svg>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="https://docs.syncloop.ai" class="nav-link py-3" title="Documentation" data-bs-toggle="tooltip"
+                           data-bs-placement="right" target="_blank">
+                           <svg class="ic10" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" id="Layer_1" x="0px" y="0px" viewBox="0 0 46 46" style="enable-background:new 0 0 46 46;" xml:space="preserve">
+                            <style type="text/css">
+                                .st0{fill:none;stroke:#434550;stroke-width:2.4;}
+                            </style>
+                            <path class="st0" d="M7,34h10c2.8,0,4.2,0,5.1,0.9S23,37.2,23,40V14c0-2.8,0-4.2-0.9-5.1S19.8,8,17,8H7C6.1,8,5.6,8,5.3,8.3  C5,8.6,5,9.1,5,10v22c0,0.9,0,1.4,0.3,1.7C5.6,34,6.1,34,7,34z"/>
+                            <path class="st0" d="M39,34H29c-2.8,0-4.2,0-5.1,0.9S23,37.2,23,40V14c0-2.8,0-4.2,0.9-5.1S26.2,8,29,8h10c0.9,0,1.4,0,1.7,0.3  C41,8.6,41,9.1,41,10v22c0,0.9,0,1.4-0.3,1.7S39.9,34,39,34z"/>
+                            </svg>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="middleware/pub/server/ui/workspace/web/marketplace.html?utm_source=Workspace&amp;utm_medium=marketplace-page" class="nav-link py-3" title="Marketplace" data-bs-toggle="tooltip"
+                          data-bs-placement="right">
+                          <svg class="ic11" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" id="Layer_1" x="0px" y="0px" viewBox="0 0 46 46" style="enable-background:new 0 0 46 46;" xml:space="preserve">
+                            <style type="text/css">
+                                .st0{fill:none;stroke:#434550;stroke-width:2.4;stroke-linecap:round;}
+                                .st1{fill:none;stroke:#434550;stroke-width:2.4;stroke-linejoin:round;}
+                            </style>
+                            <path class="st0" d="M40,40H6"/>
+                            <path class="st0" d="M36.6,40V21.3"/>
+                            <path class="st0" d="M9.4,40V21.3"/>
+                            <path class="st1" d="M30.7,6H15.3c-2,0-3.1,0-3.9,0.5C10.6,7,10.2,7.9,9.2,9.8l-2.4,6c-0.6,1.4-1,3-0.1,4.2c0.6,0.8,1.6,1.3,2.7,1.3  c1.9,0,3.4-1.5,3.4-3.4c0,1.9,1.5,3.4,3.4,3.4c1.9,0,3.4-1.5,3.4-3.4c0,1.9,1.5,3.4,3.4,3.4c1.9,0,3.4-1.5,3.4-3.4  c0,1.9,1.5,3.4,3.4,3.4c1.9,0,3.4-1.5,3.4-3.4c0,1.9,1.5,3.4,3.4,3.4c1.1,0,2-0.5,2.7-1.3c0.9-1.2,0.4-2.8-0.1-4.2l-2.4-6  c-0.9-1.8-1.4-2.7-2.2-3.3C33.8,6,32.8,6,30.7,6z"/>
+                            <path class="st0" d="M18.8,39.2v-5.1c0-1.6,0-2.4,0.3-3c0.2-0.4,0.5-0.7,0.9-0.9c0.6-0.3,1.4-0.3,3-0.3s2.4,0,3,0.3  c0.4,0.2,0.7,0.5,0.9,0.9c0.3,0.6,0.3,1.4,0.3,3v5.1"/>
+                            </svg>
+                        </a>
+                      </li>
+                      <li>
+                        <a href="middleware/pub/server/ui/workspace/web/monitor-services.html" class="nav-link py-3" title="Monitor Services" data-bs-toggle="tooltip"
+                          data-bs-placement="right">
+                          <svg xmlns="http://www.w3.org/2000/svg" width="35" height="24" viewBox="0 0 35 24" fill="none">
+                            <path d="M1 13.042H4.34245L6.47755 11.1321L8.70005 17.1883L10.4422 6.27131L13.4882 16L16.6336 1L18.6504 13.7381L20 22.5L21.1277 15.655L23.119 2.53163L25.5994 13.042H27.0211C27.1564 13.042 29.2322 17.6097 29.2322 17.6097C29.2322 17.6097 30.1888 13.042 30.3298 13.042H34" stroke="#434550" stroke-width="1.7" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+                            </svg>
+                        </a>
+                      </li>
+                </ul>
+                <!-- <ul class="nav nav-pills nav-flush flex-column mb-auto text-center left-m-bar">
+                    <li>
+                        <a href="middleware/pub/server/ui/workspace/web/dashboard.html?utm_source=Workspace&utm_medium=dashboard-page" class="nav-link py-3 " title="Home" data-bs-toggle="tooltip" data-bs-placement="right">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 26 26">
+                                <defs>
+                                    <style>
+                                        .cls-1 {
+                                            fill: #175cff;
+                                            fill-rule: evenodd;
+                                        }
+                                    </style>
+                                </defs>
+                                <g id="icon_home">
+                                    <path id="Shape_896_copy" data-name="Shape 896 copy" class="cls-1" d="M159.82,38.045v3.966A2.983,2.983,0,0,1,156.846,45h-9.911a2.982,2.982,0,0,1-2.974-2.985V38.045l-0.006-.592-0.285.286a0.993,0.993,0,1,1-1.4-1.407l8.921-8.956a0.988,0.988,0,0,1,1.4,0l8.921,8.956a1,1,0,0,1,0,1.407,0.988,0.988,0,0,1-1.4,0l-0.261-.262Zm-2-2.6-5.932-5.955L146,35.4a0.891,0.891,0,0,0-.054.643v5.966a0.994,0.994,0,0,0,.992,1h9.911a0.994,0.994,0,0,0,.991-1V36.045S157.836,35.444,157.822,35.441Z" transform="translate(-139 -23)"/>
+                                </g>
+                            </svg>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="middleware/pub/server/ui/workspace/web/api.html?utm_source=Workspace&utm_medium=api-page" class="nav-link py-3" title="API" data-bs-toggle="tooltip" data-bs-placement="right">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 32 32">
+                                <defs>
+                                    <style>
+                                        .cls-1 {
+                                            fill: #999;
+                                            fill-rule: evenodd;
+                                        }
+                                    </style>
+                                </defs>
+                                <g id="icn_api">
+                                    <path class="cls-1" d="M296.949,47.179l0.306-2.2a0.172,0.172,0,0,0-.168-0.2h-0.074a3.16,3.16,0,0,1-2.33-5.3,1.2,1.2,0,0,0,.234-1.256,6.274,6.274,0,0,1-.439-2.307,6.325,6.325,0,0,1,12.172-2.425,1.191,1.191,0,0,0,1.816.5,3.635,3.635,0,0,1,2.2-.737,3.675,3.675,0,0,1,3.672,3.675,1.3,1.3,0,0,0,.924,1.593,3.163,3.163,0,0,1-.672,6.253h0a0.236,0.236,0,0,0-.233.269l0.266,1.921a0.244,0.244,0,0,0,.252.211,5.578,5.578,0,0,0,1.84-10.718,6.081,6.081,0,0,0-6.049-5.622,5.978,5.978,0,0,0-2.424.507,8.715,8.715,0,0,0-16.155,4.566,8.536,8.536,0,0,0,.376,2.513,5.566,5.566,0,0,0,4.485,8.76m5.387-1.02,0.023,0.064,0.352,1.009h1.622L302.1,40.853h-1.738l-2.217,6.379h1.7l0.355-1.073h2.138Zm-1.088-3.105,0.558,1.591h-1.09Zm7.961,1.58a2.232,2.232,0,0,0,0-3.141,2.165,2.165,0,0,0-1.582-.639h-2.414v6.379h1.58v-1.96h0.834A2.165,2.165,0,0,0,309.209,44.634Zm-2.416-2.266h0.834a0.615,0.615,0,0,1,.469.193,0.759,0.759,0,0,1,0,1,0.606,0.606,0,0,1-.467.2h-0.834V42.368Zm4.162-1.514v6.379h1.579V40.853h-1.579Z" transform="translate(-290 -21)"/>
+                                </g>
+                            </svg>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="middleware/pub/server/ui/workspace/web/workspace.html?utm_source=Workspace&utm_medium=workspace-page" class="nav-link py-3 " title="Workspace" data-bs-toggle="tooltip" data-bs-placement="right">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 32 32">
+                                <defs>
+                                    <style>
+                                        .cls-1 {
+                                            fill: #175cff;
+                                            fill-rule: evenodd;
+                                        }
+                                    </style>
+                                </defs>
+                                <g id="icn_dashboard">
+                                    <path class="cls-1" d="M50.5,25.84h-17.8a3.815,3.815,0,0,0-3.816,3.816V39.83a3.815,3.815,0,0,0,3.816,3.815h7.63v2.544H35.235a1.272,1.272,0,1,0,0,2.543H47.953a1.272,1.272,0,1,0,0-2.543H42.865V43.645H50.5a3.815,3.815,0,0,0,3.815-3.815V29.656A3.815,3.815,0,0,0,50.5,25.84Zm1.272,13.99A1.272,1.272,0,0,1,50.5,41.1h-17.8a1.272,1.272,0,0,1-1.272-1.272V29.656a1.272,1.272,0,0,1,1.272-1.272H50.5a1.272,1.272,0,0,1,1.272,1.272V39.83Z" transform="translate(-26 -21)"/>
+                                </g>
+                            </svg>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="scheduler/manager/web/scheduler-new.html?utm_source=Workspace&utm_medium=scheduler-page" class="nav-link active py-3 " title="Scheduler" data-bs-toggle="tooltip"
+                           data-bs-placement="right">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 32 32">
+                                <defs>
+                                    <style>
+                                        .cls-1 {
+                                            fill: #999;
+                                            fill-rule: evenodd;
+                                        }
+                                    </style>
+                                </defs>
+                                <g id="icn_schedular">
+                                    <path class="cls-1" d="M185.91,34.019h0a1.146,1.146,0,0,0-1.35-.888,1.168,1.168,0,0,0-.234.074,1.145,1.145,0,0,0-.66,1.269,10.389,10.389,0,1,1-2.531-4.942,1.139,1.139,0,0,0-.15,2.267l2.7,0.381,0.048-.349,0.044,0.355a1.148,1.148,0,0,0,1.132-.977l0.378-2.613a1.145,1.145,0,0,0-1.819-1.074,1.126,1.126,0,0,0-.439.7,12.731,12.731,0,0,0-22.182,6.4,12.616,12.616,0,0,0,10.638,14.442,13.255,13.255,0,0,0,1.991.152A12.678,12.678,0,0,0,185.91,34.019Zm-12.671-5.355A1.143,1.143,0,0,0,172.1,29.8v5.823a2.309,2.309,0,1,0,3.158,3.144h2.483a1.139,1.139,0,1,0,0-2.278h-2.483a2.3,2.3,0,0,0-.87-0.866V29.8A1.143,1.143,0,0,0,173.239,28.664Z" transform="translate(-158 -21)"/>
+                                </g>
+                            </svg>
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="middleware/pub/server/ui/workspace/web/export.html?utm_source=Workspace&utm_medium=export-page" id="createBuildExport" class="nav-link py-3" title="Export/Promote" data-bs-toggle="tooltip"
+                           data-bs-placement="right">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 32 32">
+                                <defs>
+                                    <style>
+                                        .cls-1 {
+                                            fill: #999;
+                                            fill-rule: evenodd;
+                                        }
+                                    </style>
+                                </defs>
+                                <g id="icn_build_export">
+                                    <path id="export" class="cls-1" d="M709.8,40.377c4.909-6,4.91-16.126,4.906-16.229a1.013,1.013,0,0,0-.3-0.737,1,1,0,0,0-.73-0.3l-0.082,0c-2.705.074-11.926,0.715-17.025,5.831a13.543,13.543,0,0,0-1.381,1.624,0.213,0.213,0,0,1-.115.058,8.388,8.388,0,0,0-6.158,2.471l-1.7,1.7a1.027,1.027,0,0,0,0,1.463,1.039,1.039,0,0,0,1.458,0l1.7-1.7a6.531,6.531,0,0,1,3.178-1.739,0.136,0.136,0,0,1,.141.05,0.143,0.143,0,0,1,.015.15,22.59,22.59,0,0,0-1.325,3.3,1.021,1.021,0,0,0,.269,1.054l3.11,3.119a0.14,0.14,0,0,1,0,.2l-2.21,2.216A1.033,1.033,0,0,0,695,44.37l2.21-2.216a0.14,0.14,0,0,1,.2,0l0.969,0.972,0.532,0.534a2.075,2.075,0,0,1,.892-2.031l-0.033-.033-0.922-.925a0.139,0.139,0,0,1,0-.2l2.209-2.217a1.033,1.033,0,0,0-1.458-1.463l-2.21,2.217a0.144,0.144,0,0,1-.2,0l-2.585-2.593a0.141,0.141,0,0,1-.032-0.146,18.448,18.448,0,0,1,1.873-3.878,0.794,0.794,0,0,0,.131-0.2,12.305,12.305,0,0,1,1.441-1.783c4.025-4.036,11.417-4.957,14.409-5.165a0.127,0.127,0,0,1,.108.04,0.139,0.139,0,0,1,.04.108,29.908,29.908,0,0,1-2.746,11.162C709.8,38.211,709.8,38.861,709.8,40.377Zm-3.614-5.836a2.122,2.122,0,0,0,.336-0.272,2.028,2.028,0,1,0-3.158-.374,2.053,2.053,0,0,0,.987.833A1.944,1.944,0,0,0,706.181,34.541ZM711.5,51.907H699.554a0.95,0.95,0,0,1-.948-0.951v-3.2a0.949,0.949,0,1,1,1.9,0v2.245H710.55V47.761a0.948,0.948,0,1,1,1.9,0v3.2A0.95,0.95,0,0,1,711.5,51.907Zm-5.972-3.978c-0.03,0-.059,0-0.088,0l-0.149-.026c-0.048-.013-0.062-0.018-0.076-0.023l-0.041-.016-0.042-.019a0.381,0.381,0,0,1-.06-0.03l-0.039-.022-0.106-.075c-0.024-.02-0.047-0.041-0.069-0.063l-2.729-2.736a0.951,0.951,0,0,1,0-1.344,0.969,0.969,0,0,1,1.341,0l1.11,1.113v-5.55a0.949,0.949,0,1,1,1.9,0v5.55l1.109-1.113a0.969,0.969,0,0,1,1.341,0,0.949,0.949,0,0,1,0,1.344L706.2,47.651c-0.027.026-.048,0.045-0.069,0.063l-0.164.106h0l-0.349.1C705.584,47.928,705.554,47.929,705.526,47.929Z" transform="translate(-686 -21)"/>
+                                </g>
+                            </svg>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="javascript:importBuildV2()" class="nav-link py-3" title="Import" data-bs-toggle="tooltip"
+                           data-bs-placement="right">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 32 32">
+                                <defs>
+                                    <style>
+                                        .cls-1 {
+                                            fill: #999;
+                                            fill-rule: evenodd;
+                                        }
+                                    </style>
+                                </defs>
+                                <g id="icn_export">
+                                    <path id="import_arrow_up" data-name="import_arrow up" class="cls-1" d="M975.528,50.308H957.183a3.883,3.883,0,0,1-3.878-3.878V28.085a3.883,3.883,0,0,1,3.878-3.878h6.155a1.056,1.056,0,1,1,0,2.112h-6.155a1.768,1.768,0,0,0-1.766,1.766V41.14h7.411a1.057,1.057,0,0,1,1.056,1.056,1.768,1.768,0,0,0,1.766,1.767h1.411a1.768,1.768,0,0,0,1.766-1.767,1.057,1.057,0,0,1,1.056-1.056h7.411V32.319a1.056,1.056,0,0,1,2.112,0V46.43A3.883,3.883,0,0,1,975.528,50.308Zm-20.111-7.056V46.43a1.768,1.768,0,0,0,1.766,1.766h18.345a1.768,1.768,0,0,0,1.766-1.766V43.252h-6.5a3.89,3.89,0,0,1-3.732,2.822H965.65a3.89,3.89,0,0,1-3.732-2.822h-6.5ZM971.294,24.2a1.051,1.051,0,0,0-.747.309l-2.821,2.822a1.056,1.056,0,0,0,1.493,1.493l1.019-1.02v7.329a1.056,1.056,0,0,0,2.112,0V27.8l1.02,1.02a1.056,1.056,0,1,0,1.493-1.493l-2.822-2.822A1.051,1.051,0,0,0,971.294,24.2Z" transform="translate(-950 -21)"/>
+                                </g>
+                            </svg>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="middleware/pub/server/ui/workspace/web/server-logs.html?utm_source=Workspace&utm_medium=server-logs-page" class="nav-link py-3" title="Server Logs" data-bs-toggle="tooltip"
+                           data-bs-placement="right">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 32 32">
+                                <defs>
+                                    <style>
+                                        .cls-1 {
+                                            fill: #999;
+                                            fill-rule: evenodd;
+                                        }
+                                    </style>
+                                </defs>
+                                <g id="icn_logs">
+                                    <path id="log" class="cls-1" d="M842.434,47.41v1.042h0a1.882,1.882,0,0,1-1.878,1.879h-15.79a1.883,1.883,0,0,1-1.879-1.879V24.975a1.879,1.879,0,0,1,1.879-1.879H835.9v2.726a3.567,3.567,0,0,0,3.56,3.561h2.976v7.912l1.681-.053V28.87a1.673,1.673,0,0,0-.13-0.632,1.615,1.615,0,0,0-.365-0.531l-6.076-5.846a1.6,1.6,0,0,0-.512-0.334h0a1.6,1.6,0,0,0-.6-0.12H824.766a3.558,3.558,0,0,0-3.56,3.561V48.446a3.558,3.558,0,0,0,3.56,3.561h15.79a3.557,3.557,0,0,0,3.559-3.561V47.4m-3.47-13.9h0a0.844,0.844,0,0,0-.841-0.841H825.666a0.844,0.844,0,0,0-.841.841h0a0.844,0.844,0,0,0,.841.841H839.8A0.849,0.849,0,0,0,840.645,33.493Zm-6.321-4.758a0.844,0.844,0,0,0-.841-0.841h-7.889a0.841,0.841,0,0,0,0,1.683h7.884A0.845,0.845,0,0,0,834.324,28.735Zm12.082,9.814H831.822a1.8,1.8,0,0,0-1.8,1.8v4.144a1.8,1.8,0,0,0,1.8,1.8h14.584a1.8,1.8,0,0,0,1.8-1.8V40.349A1.8,1.8,0,0,0,846.406,38.549ZM835.53,44.619h-2.81V40.158H833.8v3.523h1.727v0.939Zm4.907-1.282a2.2,2.2,0,0,1-.506.75,2.26,2.26,0,0,1-.772.482,2.713,2.713,0,0,1-.971.17,2.684,2.684,0,0,1-.967-0.17,2.252,2.252,0,0,1-.768-0.482,2.21,2.21,0,0,1-.508-0.75,2.663,2.663,0,0,1,0-1.935,2.132,2.132,0,0,1,.508-0.734,2.257,2.257,0,0,1,.768-0.466,2.783,2.783,0,0,1,.967-0.164,2.814,2.814,0,0,1,.971.164,2.266,2.266,0,0,1,.772.466,2.127,2.127,0,0,1,.506.734A2.649,2.649,0,0,1,840.437,43.337Zm4.984,1.012a3.451,3.451,0,0,1-.765.277,4.025,4.025,0,0,1-.955.108,2.777,2.777,0,0,1-.986-0.17,2.276,2.276,0,0,1-.774-0.479,2.159,2.159,0,0,1-.508-0.74,2.62,2.62,0,0,1,0-1.931,2.171,2.171,0,0,1,.513-0.74,2.276,2.276,0,0,1,.769-0.47,2.717,2.717,0,0,1,.951-0.164,2.933,2.933,0,0,1,.983.16,2.019,2.019,0,0,1,.737.432l-0.679.775a1.2,1.2,0,0,0-.416-0.3,1.411,1.411,0,0,0-.587-0.117,1.3,1.3,0,0,0-.523.1,1.28,1.28,0,0,0-.416.29,1.322,1.322,0,0,0-.274.442,1.569,1.569,0,0,0-.1.557,1.74,1.74,0,0,0,.089.567,1.221,1.221,0,0,0,.261.445,1.185,1.185,0,0,0,.429.289,1.524,1.524,0,0,0,.582.1,2.114,2.114,0,0,0,.359-0.029,1.3,1.3,0,0,0,.315-0.091V42.855h-0.851v-0.87h1.84v2.363ZM839.112,41.4a1.224,1.224,0,0,0-.4-0.283,1.275,1.275,0,0,0-.52-0.1,1.223,1.223,0,0,0-1.181.819,1.581,1.581,0,0,0-.091.542,1.614,1.614,0,0,0,.094.557,1.316,1.316,0,0,0,.262.438,1.159,1.159,0,0,0,.4.287,1.328,1.328,0,0,0,1.033,0,1.21,1.21,0,0,0,.4-0.287,1.29,1.29,0,0,0,.265-0.438,1.591,1.591,0,0,0,.094-0.557,1.536,1.536,0,0,0-.094-0.542A1.321,1.321,0,0,0,839.112,41.4Z" transform="translate(-818 -21)"/>
+                                </g>
+                            </svg>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="javascript:openJWTPopup()" class="nav-link py-3" title="API Token" data-bs-toggle="tooltip" data-bs-placement="right">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 32 32">
+                                <defs>
+                                    <style>
+                                        .cls-1 {
+                                            fill: #999;
+                                            fill-rule: evenodd;
+                                        }
+                                    </style>
+                                </defs>
+                                <g id="icn_key">
+                                    <path class="cls-1" d="M1103.14,32.636a1.171,1.171,0,0,0,1.58.163,1.1,1.1,0,0,0,.17-1.536l-0.79-.989a1.221,1.221,0,0,0-1.58-.163,1.1,1.1,0,0,0-.16,1.536Zm0.88,0.545a1.346,1.346,0,0,1-.99-0.446l-0.01-.008-0.78-.989a1.236,1.236,0,0,1,.18-1.737,1.371,1.371,0,0,1,1.79.168l0.8,1a1.247,1.247,0,0,1-.19,1.737A1.314,1.314,0,0,1,1104.02,33.181Zm-0.76-.64a1.018,1.018,0,0,0,1.37.14,0.957,0.957,0,0,0,.14-1.328l-0.79-.989a1.046,1.046,0,0,0-1.38-.127,0.942,0.942,0,0,0-.12,1.318Zm-18.95,13.528,2.69,3.345a1.178,1.178,0,0,0,1.58.163,1.1,1.1,0,0,0,.17-1.536l-2-2.477,1.83-1.4,2.02,2.509a1.177,1.177,0,0,0,1.58.163,1.1,1.1,0,0,0,.16-1.536l-2-2.483,6.75-5.17a9.3,9.3,0,0,0,11.22-.131,5.079,5.079,0,0,0,2.14-4.823,10.44,10.44,0,0,0-2.48-4.823c-2.08-2.525-4.05-3.782-6.07-3.782a5.279,5.279,0,0,0-3.38,1.315c-1.97,1.2-5.12,6.28-2.77,10.5l-11.28,8.636a1.123,1.123,0,0,0-.41.847A0.967,0.967,0,0,0,1084.31,46.069Zm15.57-19.082a3.49,3.49,0,0,1,2.08-.82c1.24,0,2.76,1.041,4.33,3.014a8.915,8.915,0,0,1,2.03,3.782,2.874,2.874,0,0,1-1.35,2.851c-2.47,1.8-6.76,2.3-8.88-.384C1095.78,32.757,1097.95,28.507,1099.88,26.987Zm-11.97,22.973c-0.03,0-.05,0-0.08,0a1.379,1.379,0,0,1-.94-0.445l-2.7-3.349a1.159,1.159,0,0,1-.28-0.773,1.259,1.259,0,0,1,.46-0.958l11.18-8.565c-2.3-4.342,1.01-9.444,2.89-10.589a5.42,5.42,0,0,1,3.46-1.338c2.04,0,4.06,1.255,6.19,3.837a10.512,10.512,0,0,1,2.51,4.895,5.23,5.23,0,0,1-2.19,4.959,9.562,9.562,0,0,1-11.33.21l-6.53,5,1.91,2.366a1.081,1.081,0,0,1,.27.821,1.308,1.308,0,0,1-.46.917,1.171,1.171,0,0,1-.84.27,1.361,1.361,0,0,1-.94-0.446l-1.94-2.4-1.59,1.215,1.9,2.36a1.09,1.09,0,0,1,.28.822,1.346,1.346,0,0,1-.46.916A1.186,1.186,0,0,1,1087.91,49.961Zm13.99-25.723a5.133,5.133,0,0,0-3.28,1.28c-1.85,1.125-5.07,6.114-2.74,10.319l0.06,0.11-11.38,8.714a1.034,1.034,0,0,0-.35.732,0.88,0.88,0,0,0,.21.577l0.01,0.007,2.69,3.346a1.113,1.113,0,0,0,.73.339,0.921,0.921,0,0,0,.63-0.2,1.068,1.068,0,0,0,.35-0.712,0.785,0.785,0,0,0-.2-0.613l-2.09-2.6,2.06-1.583,2.12,2.625a1.083,1.083,0,0,0,.73.339,0.837,0.837,0,0,0,.62-0.2,1.037,1.037,0,0,0,.36-0.713,0.863,0.863,0,0,0-.2-0.612l-2.11-2.607,6.97-5.338,0.1,0.082a9.2,9.2,0,0,0,11.03-.14,4.951,4.951,0,0,0,2.08-4.682,10.277,10.277,0,0,0-2.45-4.754C1105.79,25.456,1103.84,24.238,1101.9,24.238Zm0.46,13.227a5.448,5.448,0,0,1-4.4-1.945,4.416,4.416,0,0,1-.99-3.427,8.255,8.255,0,0,1,2.82-5.221v0a3.659,3.659,0,0,1,2.17-.851c1.31,0,2.85,1.062,4.45,3.071a9.037,9.037,0,0,1,2.06,3.849,3.026,3.026,0,0,1-1.41,2.991A8.168,8.168,0,0,1,1102.36,37.464Zm-2.38-10.36a7.921,7.921,0,0,0-2.71,5.016,4.1,4.1,0,0,0,.93,3.213c1.98,2.506,6.16,2.2,8.68.361a2.74,2.74,0,0,0,1.29-2.711,8.861,8.861,0,0,0-2-3.712c-1.52-1.906-3.01-2.955-4.21-2.955A3.351,3.351,0,0,0,1099.98,27.1Z" transform="translate(-1082 -21)"/>
+                                </g>
+                            </svg>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="middleware/pub/server/ui/workspace/web/setting.html?utm_source=Workspace&utm_medium=setting-page" class="nav-link py-3" title="Settings" data-bs-toggle="tooltip" data-bs-placement="right">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 32 32">
+                                <defs>
+                                    <style>
+                                        .cls-1 {
+                                            fill: #999;
+                                            fill-rule: evenodd;
+                                        }
+                                    </style>
+                                </defs>
+                                <g id="icn_setting">
+                                    <path class="cls-1" d="M571.317,22.862a0.967,0.967,0,0,1,.911.635l0.98,2.719c0.352,0.088.654,0.176,0.909,0.268,0.279,0.1.639,0.252,1.084,0.459l2.283-1.209a0.972,0.972,0,0,1,1.154.183l2.008,2.078a0.95,0.95,0,0,1,.192,1.033l-1.072,2.513c0.179,0.326.322,0.6,0.429,0.839,0.116,0.255.26,0.606,0.433,1.056l2.5,1.07a0.959,0.959,0,0,1,.582.938l-0.183,2.884a0.959,0.959,0,0,1-.639.841l-2.364.84a8.422,8.422,0,0,1-.213.844c-0.087.277-.226,0.633-0.415,1.075l1.188,2.629a0.95,0.95,0,0,1-.234,1.1l-2.257,2.018a0.975,0.975,0,0,1-1.105.134l-2.327-1.234a10.079,10.079,0,0,1-1.125.51l-1.017.38-0.9,2.5a0.965,0.965,0,0,1-.889.635l-2.638.059a0.967,0.967,0,0,1-.928-0.622l-1.064-2.817c-0.489-.171-0.846-0.3-1.077-0.4s-0.506-.229-0.86-0.409l-2.636,1.129a0.973,0.973,0,0,1-1.049-.185l-1.952-1.834a0.951,0.951,0,0,1-.214-1.089l1.134-2.474q-0.256-.5-0.419-0.895c-0.115-.275-0.253-0.649-0.418-1.127l-2.483-.756a0.955,0.955,0,0,1-.682-0.95l0.1-2.67a0.959,0.959,0,0,1,.545-0.826l2.607-1.253c0.121-.443.227-0.788,0.32-1.041s0.239-.577.436-0.989l-1.132-2.393a0.952,0.952,0,0,1,.207-1.1l1.951-1.844a0.976,0.976,0,0,1,1.041-.191l2.636,1.089q0.436-.289.794-0.477a8.891,8.891,0,0,1,1.145-.481L567.5,23.5a0.968,0.968,0,0,1,.912-0.637h2.907Zm-0.681,1.914h-1.543l-0.843,2.355a0.959,0.959,0,0,1-.6.588,9.4,9.4,0,0,0-1.3.509,9.869,9.869,0,0,0-1.028.653,0.976,0.976,0,0,1-.935.1l-2.54-1.049-0.991.937,1.034,2.183a0.95,0.95,0,0,1-.009.829c-0.278.558-.466,0.969-0.56,1.221s-0.221.684-.375,1.281a0.956,0.956,0,0,1-.515.626l-2.485,1.194-0.05,1.361,2.248,0.684a0.959,0.959,0,0,1,.634.615c0.224,0.668.4,1.16,0.529,1.468s0.314,0.687.561,1.15a0.944,0.944,0,0,1,.026.843L560.849,44.6l0.989,0.928,2.474-1.059a0.976,0.976,0,0,1,.837.033c0.507,0.267.885,0.452,1.123,0.553s0.709,0.272,1.383.5a0.961,0.961,0,0,1,.589.57l0.983,2.6,1.287-.029,0.828-2.3a0.965,0.965,0,0,1,.568-0.573q0.815-.306,1.441-0.539a9.652,9.652,0,0,0,1.32-.639,0.978,0.978,0,0,1,.936-0.012L577.8,45.8l1.231-1.1-1.075-2.379a0.941,0.941,0,0,1,0-.777c0.252-.568.423-0.994,0.51-1.266a9.4,9.4,0,0,0,.256-1.147,0.958,0.958,0,0,1,.627-0.74l2.287-.813,0.1-1.585-2.25-.964a0.956,0.956,0,0,1-.522-0.547c-0.224-.6-0.4-1.04-0.525-1.312s-0.319-.638-0.583-1.1a0.949,0.949,0,0,1-.049-0.842l1.008-2.362-1.061-1.1-2.067,1.095a0.976,0.976,0,0,1-.879.017c-0.6-.29-1.054-0.488-1.344-0.592a9.974,9.974,0,0,0-1.191-.319,0.964,0.964,0,0,1-.7-0.613ZM569.854,30.7a6.062,6.062,0,1,1-6.125,6.061A6.092,6.092,0,0,1,569.854,30.7Zm0,1.914a4.147,4.147,0,1,0,4.19,4.147A4.169,4.169,0,0,0,569.854,32.618Z" transform="translate(-554 -21)"/>
+                                </g>
+                            </svg>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="middleware/pub/server/ui/workspace/web/documentation.html?utm_source=Workspace&utm_medium=documentation-page" class="nav-link py-3" title="Documentation" data-bs-toggle="tooltip"
+                           data-bs-placement="right">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 32 32">
+                                <defs>
+                                    <style>
+                                        .cls-1 {
+                                            fill: #999;
+                                            fill-rule: evenodd;
+                                        }
+                                    </style>
+                                </defs>
+                                <g id="icn_documentation">
+                                    <path class="cls-1" d="M446.585,23.229H436.037a2.592,2.592,0,0,0-2.623,2.555v2.679a0.494,0.494,0,0,0,.5.488h1.068a0.494,0.494,0,0,0,.5-0.488V25.784a0.548,0.548,0,0,1,.555-0.54h10.548a0.548,0.548,0,0,1,.554.54V41.641a0.548,0.548,0,0,1-.554.54h-2.152a0.494,0.494,0,0,0-.5.488v1.04a0.5,0.5,0,0,0,.5.488h2.152a2.592,2.592,0,0,0,2.623-2.555V25.784A2.592,2.592,0,0,0,446.585,23.229Zm-6.333,6.546H429.705a2.592,2.592,0,0,0-2.623,2.555V48.187a2.593,2.593,0,0,0,2.623,2.556h10.547a2.594,2.594,0,0,0,2.624-2.556V32.33A2.593,2.593,0,0,0,440.252,29.775Zm-11.1,2.555a0.548,0.548,0,0,1,.555-0.54h10.547a0.547,0.547,0,0,1,.554.54V48.187a0.546,0.546,0,0,1-.554.539H429.705a0.548,0.548,0,0,1-.555-0.539V32.33Z" transform="translate(-422 -21)"/>
+                                </g>
+                            </svg>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="middleware/pub/server/ui/workspace/web/marketplace.html?utm_source=Workspace&amp;utm_medium=marketplace-page" class="nav-link py-3" title="Marketplace" data-bs-toggle="tooltip"
+                          data-bs-placement="right">
+                          <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none">
+                            <g clip-path="url(#clip0_1270_15400)">
+                            <path d="M23 23H1" stroke="#999999" stroke-width="1.8" stroke-linecap="round"/>
+                            <path d="M20.8 23V10.9" stroke="#999999" stroke-width="1.8" stroke-linecap="round"/>
+                            <path d="M3.19995 23V10.9" stroke="#999999" stroke-width="1.8" stroke-linecap="round"/>
+                            <path d="M16.9805 1H7.01931C5.69621 1 5.03466 1 4.50303 1.32857C3.97139 1.65714 3.67553 2.24884 3.08383 3.43225L1.53985 7.33522C1.18313 8.23695 0.871024 9.29977 1.47149 10.0612C1.87433 10.5721 2.49878 10.9 3.19986 10.9C4.41488 10.9 5.39986 9.91506 5.39986 8.7C5.39986 9.91506 6.38483 10.9 7.59986 10.9C8.81488 10.9 9.79986 9.91506 9.79986 8.7C9.79986 9.91506 10.7848 10.9 11.9998 10.9C13.2149 10.9 14.1998 9.91506 14.1998 8.7C14.1998 9.91506 15.1848 10.9 16.3998 10.9C17.6149 10.9 18.5998 9.91506 18.5998 8.7C18.5998 9.91506 19.5848 10.9 20.7998 10.9C21.501 10.9 22.1255 10.5721 22.5283 10.0612C23.1288 9.29977 22.8167 8.23695 22.46 7.33522L20.916 3.43225C20.3243 2.24884 20.0284 1.65714 19.4968 1.32857C18.9652 1 18.3036 1 16.9805 1Z" stroke="#999999" stroke-width="1.8" stroke-linejoin="round"/>
+                            <path d="M9.25 22.45V19.15C9.25 18.1219 9.25 17.6079 9.47106 17.225C9.61587 16.9742 9.8242 16.7659 10.075 16.6211C10.4579 16.4 10.9719 16.4 12 16.4C13.0281 16.4 13.5421 16.4 13.925 16.6211C14.1758 16.7659 14.3841 16.9742 14.5289 17.225C14.75 17.6079 14.75 18.1219 14.75 19.15V22.45" stroke="#999999" stroke-width="1.8" stroke-linecap="round"/>
+                            </g>
+                            <defs>
+                            <clipPath id="clip0_1270_15400">
+                            <rect width="24" height="24" fill="white"/>
+                            </clipPath>
+                            </defs>
+                            </svg>
+                        </a>
+                      </li>
+                </ul> -->
+            </div>
+            <div class="col-lg-11 px-5 pr-0 p-3 rg_pnl" data-match-height="groupName">
+                <div class="tabl_outer">
+                    <h3><span id="active-status">---</span></h3>
+                    <div class="refresh_at">
+                        <div class="act_dec">
+                            <a id="activatebtn" href="javascript:enableScheduler()">Activate Scheduler</a>
+                            <a id="deactivatebtn" href="javascript:disableScheduler()">Deactivate Scheduler</a>
+                        </div>
+                        <select class="auto_refresh_dropdown" name="">
+                            <option value="-1">Auto Refresh (Manually)</option>
+                            <option value="5000">5 Seconds</option>
+                            <option value="10000">10 Seconds</option>
+                        </select>
+                        <a class="refresh_btn" id="refresh_btn" href="javascript:void(0)" onclick="getData()"><i class="fa fa-refresh" aria-hidden="true"></i> &nbsp; Refresh</a>
+                    </div>
+                    <div class="table-responsive">
+                        <table id="cronMakerTable" class="table table-bordered table-striped-">
+                            <thead>
+                            <tr>
+                                <th>S.No</th>
+                                <th>Job Name</th>
+                                <th>Cron expression</th>
+                                <th>Enabled/Disabled</th>
+                                <th>Run status</th>
+                                <th>Action</th>
+                            </tr>
+                            </thead>
+                            <tbody id="cronDataRecords">
+                            </tbody>
+                        </table>
+                    </div>
+                    <div class="sch_action">
+                        <button type="button" onclick="openCreateSchedulerJobBox();" class="btn btn-primary">New</button>
+                        <!--<button type="button" onclick="reloadScheduledJobs();" class="btn btn-secondary">Reload Scheduled Jobs</button>-->
+                    </div>
+                </div>
+            </div>
+            <!-- <div id="ekaSchedulerTable" style="width:1162px; margin-top:55px;"></div>
+               <button type="button" onclick="openCreateSchedulerJobBox();" class="btn btn-primary">New</button>
+               <button type="button" onclick="reloadScheduledJobs();" class="btn btn-primary">Reload Scheduled Jobs</button>  -->
+            <div id="createSchedulerJobModelDialog" class="modal" aria-hidden="true" aria-labelledby="exampleModalToggleLabel" tabindex="-1">
+                <div class="modal-dialog modal-dialog-centered">
+                    <!-- Modal content -->
+                    <div class="modal-content" style="width:500px;height:auto;align:left; padding: 35px;">
+                        <span id="closeSchedulerJobModelDialog" class="close" >&times;</span>
+                        <h3>Configure Scheduler Job</h3>
+                        <input type="hidden" id="schedulerJobID">
+                        <div class="fq_grid">
+                            <label class="l_nm">Enter Job Name</label>
+                            <input type="text" class="form-control" id="schedulerJobName" name="schedulerJobName" placeholder="Job Name" >
+                        </div>
+                        <div class="fq_grid">
+                            <label class="l_nm">Service FQN</label>
+                            <input type="text" class="form-control" id="schedulerJobService" name="schedulerJobService" placeholder="Service FQN">
+                        </div>
+                        <div class="fq_grid">
+                            <label class="l_nm">Cron expression</label>
+                            <fieldset id="cronExpressionFieldset">
+                                <cron-expression-input id="schedulerCronExp" height="40px" color="#d58512" required="false" hotValidate="true" value="* * * * *"></cron-expression-input>
+                            </fieldset>
+                        </div>
+                        <div class="modal-footer-en">
+                            <!-- <input type="checkbox" id="enableScheduler" name="enableScheduler" value="true">
+                               <label style="min-width: 50px; margin-right:15px" for="enableScheduler"> Enable </label> -->
+                            <input class="styled-checkbox" id="enableScheduler" name="enableScheduler" type="checkbox" value="true">
+                            <label for="enableScheduler">Enable</label>
+                            <input style="display: none;" type="checkbox" onchange="enableCronExpressionSelector(this)" id="filePoller" name="filePoller" value="false">
+                            <label style="min-width: 100px;display: none;" for="filePoller" > Poller(1 ms interval) </label>
+                        </div>
+                        <div class="modal-footer" style="padding: 0px 0px; border:none;">
+                            <button type="button" id="saveSchedulerJob" style="display:none;float:right;" class="btn btn-primary">Create</button>
+                            <button type="button" id="updateSchedulerJob" style="display:none;float:right;" class="btn btn-primary">Update</button>
+                            <!--<button type="button" id="deleteSchedulerJob" style="display:none;float:right;" class="btn btn-danger">Delete</button>-->
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="modal fade" id="exampleModalToggle" aria-hidden="true" aria-labelledby="exampleModalToggleLabel" tabindex="-1">
+                <div class="modal-dialog modal-dialog-centered">
+                    <div class="modal-content" style="width: 85%;">
+                        <div class="modal-body mdlpadding">
+                            <div class="mdltitle mb-3">
+                     <span class="svgspan">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="21.34" height="18.88" viewBox="0 0 21.34 18.88">
+                           <defs>
+                              <style>
+                                 .cls-1 {
+                                     fill-rule: evenodd;
+                                 }
+                              </style>
+                           </defs>
+                           <path class="cls-1" d="M1533.06,1512.38a0.149,0.149,0,0,1,.09-0.02,0.12,0.12,0,0,1,.08.02,0.158,0.158,0,0,1,.07.07l9.15,15.72a0.231,0.231,0,0,1,.01.24,0.218,0.218,0,0,1-.07.09,0.292,0.292,0,0,1-.09.02H1524a0.2,0.2,0,0,1-.09-0.02,0.16,0.16,0,0,1-.07-0.09,0.211,0.211,0,0,1,0-.24l9.15-15.72A0.234,0.234,0,0,1,1533.06,1512.38Zm1.39-.61a1.487,1.487,0,0,0-2.05-.56,1.436,1.436,0,0,0-.56.56l-9.15,15.72a1.572,1.572,0,0,0,1.3,2.38h18.31a1.577,1.577,0,0,0,1.31-2.38Zm-2.64,14.05a1.335,1.335,0,1,1,1.34,1.35A1.34,1.34,0,0,1,1531.81,1525.82Zm0.13-8.08a1.215,1.215,0,0,1,1.08-1.34,1.2,1.2,0,0,1,1.32,1.08,1.13,1.13,0,0,1,0,.26l-0.46,4.72a0.747,0.747,0,0,1-.8.68,0.738,0.738,0,0,1-.67-0.68Z" transform="translate(-1522.47 -1511)"/>
+                        </svg>
+                     </span>
+                                <span class="mdltitlespan">Permanently Delete</span>
+                            </div>
+                            <div class="mdlbodytext">
+                                Are you sure you want to delete this job?
+                            </div>
+                            <div class="mdlactions text-right">
+                                <a href="" class="btnclose" data-bs-dismiss="modal" >Cancel</a>
+                                <button class="btn btn-secondary btnok" onclick="deletePreparedJob()">OK</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div id="jwtModelDialog" class="modal">
+                <!-- Modal content -->
+                <div class="modal-content" style="width:650px;height:auto;">
+                    <span id="closejwtModelDialog" class="close">&times;</span>
+                    <h3>API token</h3>
+
+                    <div class="row exp_alg">
+                        <div class="col-md-3"><label>Expiration in:</label></div>
+                        <div class="col-md-4">
+                            <select id="jwt_expiration_in" class="form-control">
+                                <option value="2">2 Hours</option>
+                                <option value="4">4 Hours</option>
+                                <option value="6">6 Hours</option>
+                                <option value="8">8 Hours</option>
+                                <option value="expir_custom">Custom</option>
+                            </select>
+                        </div>
+                        <div id="expir_custom" class="col-md-3 cs_opt">
+                            <input placeholder="Custom Value" class="form-control" type="number" min="2" max="800"
+                                   id="expir_custom_hours" value="8"/>
+                            <span class="h_title">hours</span>
+                        </div>
+                    </div>
+
+                    <div class="row exp_alg">
+                        <div class="col-md-3"><label>Api Endpoint:</label></div>
+                        <div class="col-md-9">
+                            <input id="api-endpoint-gt" class="form-control" readonly="readonly" />
+                        </div>
+                    </div>
+
+                    <div class="row exp_alg" style="margin-top:10px; margin-bottom:15px;">
+                        <div class="col-md-3"><label for="jwt_token_key">Token key:</label></div>
+                        <div class="col-md-9"><input id="jwt_token_key" type="text" class="form-control" value="" /></div>
+                    </div>
+
+                    <div class="copy-text3" id="jwtNameDiv" style="margin-top:0; margin-bottom:15px;">
+                        <a class="copy_icon" href="javascript:void(0)" id="button-copy"><img
+                                src="middleware/pub/server/ui/icons/copy-svgrepo-com.svg"></a>
+                        <label for="jwtInput">Bearer Token: </label>
+                        <textarea id="jwtInput" name="jwtInput" value="" class="form-control"
+                                  readonly="readonly"></textarea>
+                    </div>
+
+                    <div class="anc_kbtn">
+                        <button type="button" class="btn btn-primary2" onclick="openJWTPopupTime()">Generate token
+                        </button> &nbsp;
+                        <button type="button" id="JWTOKButton" class="btn btn-primary">OK</button>
+                    </div>
+                </div>
+            </div>
+
+            <div id="serviceImportedModelDialog" class="modal">
+                <!-- Modal content -->
+                <div class="modal-content" style="width:950px;height:auto;">
+                    <span id="closeServiceImportedModelDialog" class="close" >&times;</span>
+                    <!-- <h3>Service</h3> -->
+                    <div class="service_hd">
+                        <div class="exl_icon"><img src="middleware/pub/server/ui/icons/import-fl.svg"></div>
+                        <div class="sv_heading">
+                            <h2>List of Imported files</h2>
+                        </div>
+                    </div>
+                    <div class="service_tree_v_Imported" id="service_tree_v_Imported">
+                    </div>
+                    <div class="anc_kbtn"><button class="btn btn-primary" onclick='$("#closeServiceImportedModelDialog").trigger("click")'>Okay</button></div>
+                </div>
+            </div>
+
+            <!-- environment update popup -->
+    <div id="newUpdateModelDialog" class="modal">
+        <!-- Modal content -->
+        <div class="modal-content" style="width:650px;height:auto;">
+            <span id="closenewUpdateModelDialog" class="close hide" style="display: none;" >&times;</span>
+            <div class="env_latest_update">
+                <h3 id="update_popup_title">Updating environment</h3>
+                <p id="updating_popup_description">Please wait... your environment is getting updated.</p>
+                <div class="progress_outer">
+                    <progress id="progressBar" max="100" value="0"></progress>
+                    <span id="percentage">0%</span>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- environment update popup -->
+
+            <link rel="stylesheet" href="middleware/pub/server/ui/assets/css/cron-expression-input.min.css">
+            <script src="/scheduler/manager/web/cultures/langs/en-US.js"></script> <!-- Languague (Optional) -->
+            <script src="middleware/pub/server/ui/assets/js/cron-expression-input.min.js"></script>
+            <script src="middleware/pub/server/ui/assets/js/bootstrap.bundle.min.js"></script>
+            <script src="middleware/pub/server/ui/assets/js/sidebars.js"></script>
+            <script src="middleware/pub/server/ui/javascript/datatables/datatables.min.js"></script>
+            <script src="middleware/pub/server/ui/javascript/datatables/cdn.datatables.net/buttons/1.2.2/js/dataTables.buttons.min.js"></script>
+            <script src="middleware/pub/server/ui/javascript/datatables/cdn.datatables.net/buttons/1.2.2/js/buttons.flash.min.js"></script>
+            <script src="middleware/pub/server/ui/javascript/datatables/cdnjs.cloudflare.com/ajax/libs/jszip/2.5.0/jszip.min.js"></script>
+            <script src="middleware/pub/server/ui/javascript/datatables/cdn.rawgit.com/bpampuch/pdfmake/0.1.18/build/pdfmake.min.js"></script>
+            <script src="middleware/pub/server/ui/javascript/datatables/cdn.rawgit.com/bpampuch/pdfmake/0.1.18/build/vfs_fonts.js"></script>
+            <script src="middleware/pub/server/ui/javascript/datatables/cdn.datatables.net/buttons/1.2.2/js/buttons.html5.min.js"></script>
+            <script src="middleware/pub/server/ui/javascript/datatables/cdn.datatables.net/buttons/1.2.2/js/buttons.print.min.js"></script>
+            <script src="middleware/pub/server/ui/javascript/datatables/datatables-init.js"></script>
+            <script src="https://cdn.jsdelivr.net/npm/js-cookie@2.2.1/src/js.cookie.js"></script>
+            <script src="https://cdn.jsdelivr.net/npm/js-cookie@2/src/js.cookie.min.js"></script>
+            <script>
+                $(window).ready(function () {
+                    $(".preload").delay(0).fadeOut(80);
+                });
+            </script>
+
+            <script>
+                $(function() {
+                    $('#jwt_expiration_in').change(function(){
+                        $('.cs_opt').hide();
+                        $('#' + $(this).val()).show();
+                    });
+                });
+            </script>
+            <script>
+                let copyText3 = document.querySelector(".copy-text3");
+                document.querySelector("#button-copy").onclick = function () {
+                    document.querySelector("#jwtInput").select();
+                    document.execCommand("copy");
+                    copyText3.classList.add("active");
+                    window.getSelection().removeAllRanges();
+                    setTimeout(function () {
+                        copyText3.classList.remove("active");
+                    }, 2500);
+                };
+
+            </script>
+            <script type="text/javascript">
+                var SchedulerRecords = null;
+                $(document).ready(function () {
+                    $('[data-toggle=tooltip]').tooltip();
+
+                    var interval = null;
+
+                    $(".auto_refresh_dropdown").change(function () {
+
+                        clearInterval(interval);
+                        if (parseInt($(this).val()) > 1000) {
+                            interval = setInterval(function () {
+                                getData();
+                            }, parseInt($(this).val()));
+                        }
+                    });
+
+                    findSchedulerStatus();
+                });
+
+                function findSchedulerStatus() {
+                    asyncRestRequest("/scheduler/status", null,  "GET", function (response) {
+                        $("#active-status").html(response.msg);
+                        if (response.msg == "Scheduler is active") {
+                            $("#activatebtn").addClass("btn-is-disabled");
+                        } else {
+                            $("#deactivatebtn").addClass("btn-is-disabled");
+                        }
+                    });
+                }
+
+                function reloadScheduledJobs() {
+                    syncRestRequest("/scheduler/reload", "GET", "");
+                }
+
+                function enableScheduler() {
+                    swal({
+                        title: 'Processing!',
+                        text: "Activating scheduler",
+                        showCancelButton: false,
+                        allowOutsideClick: false,
+                        showConfirmButton: false
+                    });
+                    asyncRestRequest("/scheduler/activate", null,  "POST", function (response) {
+                        if (response.status) {
+                            swal({
+                                title: "Activated",
+                                text: "Scheduler is activated now!",
+                                type: "success",
+                                confirmButtonColor: "#2C61F5" // or any color you prefer
+                                });
+
+                            $("#activatebtn").addClass("btn-is-disabled");
+                            $("#deactivatebtn").removeClass("btn-is-disabled");
+                            findSchedulerStatus();
+                        } else {
+                           swal({
+                                title: "Activated",
+                                text: "Error in activating the scheduler",
+                                type: "error",
+                                confirmButtonColor: "#f2533e"
+                                });
+
+                        }
+                    });
+                }
+
+                function disableScheduler() {
+                    swal({
+                        title: 'Processing!',
+                        text: "Deactivating scheduler",
+                        showCancelButton: false,
+                        type: "error",
+                        confirmButtonColor: "#f2533e",
+                        allowOutsideClick: false,
+                        showConfirmButton: false
+                    });
+                    asyncRestRequest("/scheduler/deactivate", null,  "POST", function (response) {
+                        if (response.status) {
+                            swal({
+                                title: "De-Activated",
+                                text: "Scheduler is de-activated now!",
+                                type: "success",
+                                confirmButtonColor: "#2C61F5" // or any color you prefer
+                                });
+
+                            $("#activatebtn").removeClass("btn-is-disabled");
+                            $("#deactivatebtn").addClass("btn-is-disabled");
+                            findSchedulerStatus();
+                        } else {
+                            swal({
+                                title: "Activated",
+                                text: "Error in de-activating the scheduler",
+                                type: "error",
+                                confirmButtonColor: "#f2533e"  // Custom red button color
+                                });
+
+                        }
+                    });
+                }
+
+                function enableCronExpressionSelector(checkBox) {
+                    if (checkBox.checked == true)
+                        $("#cronExpressionFieldset").prop("disabled", true);
+                    else
+                        $("#cronExpressionFieldset").prop("disabled", false);
+                }
+
+                function openCreateSchedulerJobBox() {
+                    var modal = document.getElementById("createSchedulerJobModelDialog");
+                    var span = document.getElementById("closeSchedulerJobModelDialog");
+                    var saveSchedulerJob = document.getElementById("saveSchedulerJob");
+
+                    modal.style.display = "block";
+                    saveSchedulerJob.style.display = "block";
+
+
+                    $("#schedulerJobID").val("");
+                    $("#schedulerJobName").val("");
+                    $(".cronInsideInput").val("* * * * *");
+                    $(".cronInsideInput").attr("readonly", "readonly");
+                    $("#enableScheduler").prop('checked', false);
+                    $("#schedulerJobService").val("");
+                    $("#filePoller").prop('checked', false);
+                    $("#cronExpressionFieldset").prop("disabled", false);
+
+                    span.onclick = function () {
+                        saveSchedulerJob.style.display = "none";
+                        modal.style.display = "none";
+                    }
+
+                    saveSchedulerJob.onclick = function () {
+
+                  if ($("#schedulerJobName").val().trim() == "") {
+                            swal({
+                                title: 'Error',
+                                text: 'Invalid Job Name',
+                                type: 'error',
+                                confirmButtonColor: '#f2533e',
+                            });
+
+
+
+                            return;
+
+                        } else if ($("#schedulerJobService").val().trim() == "") {
+                            swal({
+                                title: 'Error',
+                                text: 'Invalid Service FQN',
+                                type: 'error',
+                                confirmButtonColor: '#f2533e',
+                            });
+
+
+
+                            return;
+                        }
+
+
+
+
+                        $(this).attr("disabled", "disabled");
+                        $(this).html("...");
+
+                        var cronExp = $(".cronInsideInput").val();
+                        var enableJob = $("#enableScheduler").prop('checked');
+                        if (enableJob == true)
+                            enableJob = "Y";
+                        else
+                            enableJob = "N";
+                        var filePoller = $("#filePoller").prop('checked');
+                        if (filePoller == true)
+                            cronExp = "0";
+
+                        var serviceFqn = $("#schedulerJobService").val();
+                        var url = "/scheduler?cronExpression=" + cronExp + "&enabled=" + enableJob + "&serviceFqn=" + serviceFqn + "&status=new" +
+                            "&job_name=" + $("#schedulerJobName").val();
+                        //alert(url);
+                        var response = syncRestRequest(url, "POST", "");
+                        if (response.status == 200 && response.payload && null == JSON.parse(response.payload).error) {
+                            response = response.payload;
+                            swal({
+                                title: 'Saved',
+                                text: "Job '" + $("#schedulerJobName").val() + "' has been created successfully!",
+                                type: 'success',
+                                confirmButtonColor: '#2C61F5'
+                                });
+
+                            getData();
+                            saveSchedulerJob.style.display = "none";
+                            modal.style.display = "none";
+                        } else {
+                            swal({
+                                title: 'Error',
+                                text: JSON.parse(response.payload).error,
+                                type: 'error',
+                                confirmButtonColor: '#f2533e'
+                                });
+
+                        }
+                        $(this).removeAttr("disabled");
+                        $(this).html("Create");
+                    }
+                }
+
+                function openViewSchedulerJobBox() {
+                    var modal = document.getElementById("createSchedulerJobModelDialog");
+                    var span = document.getElementById("closeSchedulerJobModelDialog");
+                    var updateSchedulerJob = document.getElementById("updateSchedulerJob");
+                    var deleteSchedulerJob = document.getElementById("deleteSchedulerJob");
+                    var jobName = document.getElementById("schedulerJobName");
+                    var jobFQN = document.getElementById("schedulerJobService");
+                    var jobEnable = document.getElementById("enableScheduler");
+                    var cronButton = document.getElementsByClassName("cronButtonUI btn btn-custom nw");
+                    var cronInput = document.getElementsByClassName("cronInsideInput");
+                    modal.style.display = "block";
+                    updateSchedulerJob.style.display = "none";
+                    jobName.setAttribute('readonly', true);
+                    jobFQN.setAttribute('readonly', true);
+                    cronInput[0].setAttribute('readonly', true);
+                    jobEnable.setAttribute('disabled', true);
+                    cronButton[0].setAttribute('disabled', true);
+                    //deleteSchedulerJob.style.display = "block";
+                    span.onclick = function () {
+                    	modal.style.display = "none";
+	                    jobName.removeAttribute('readonly');
+	                    jobFQN.removeAttribute('readonly');
+	                    cronInput[0].removeAttribute('readonly');
+	                    jobEnable.removeAttribute('disabled');
+	                    cronButton[0].removeAttribute('disabled');
+	                    updateSchedulerJob.style.display = "none";
+                        //deleteSchedulerJob.style.display = "none";
+                    }
+                }
+
+                function openUpdateSchedulerJobBox() {
+                    var modal = document.getElementById("createSchedulerJobModelDialog");
+                    var span = document.getElementById("closeSchedulerJobModelDialog");
+                    var updateSchedulerJob = document.getElementById("updateSchedulerJob");
+                    var deleteSchedulerJob = document.getElementById("deleteSchedulerJob");
+                    var cronInput = document.getElementsByClassName("cronInsideInput");
+                    cronInput[0].setAttribute('readonly', true);
+                    //deleteSchedulerJob.style.display = "block";
+                    modal.style.display = "block";
+                    updateSchedulerJob.style.display = "block";
+                    span.onclick = function () {
+                        updateSchedulerJob.style.display = "none";
+                        modal.style.display = "none";
+                        //deleteSchedulerJob.style.display = "none";
+                    }
+                    /*deleteSchedulerJob.onclick = function() {
+                                 var schedulerJobId = $("#schedulerJobID").val();
+                                 deleteJob(schedulerJobId);
+                             }*/
+
+
+                    updateSchedulerJob.onclick = function () {
+                        var schedulerJobId = $("#schedulerJobID").val();
+                        var cronExp = $(".cronInsideInput").val();
+                        var enableJob = $("#enableScheduler").prop('checked');
+                        if (enableJob == true)
+                            enableJob = "Y";
+                        else
+                            enableJob = "N";
+                        var serviceFqn = $("#schedulerJobService").val();
+                        var filePoller = $("#filePoller").prop('checked');
+                        if (filePoller == true)
+                            cronExp = "0";
+                        var url = "/scheduler/" + schedulerJobId + "?cronExpression=" + cronExp + "&enabled=" + enableJob + "&serviceFqn=" + serviceFqn + "&status=new" +
+                            "&job_name=" + $("#schedulerJobName").val();
+                        //alert(url);
+                        var response = syncRestRequest(url, "POST", "");
+                        if (response.status == 200 && response.payload) {
+                            response = response.payload;
+                            getData();
+                        }
+                        updateSchedulerJob.style.display = "none";
+                        modal.style.display = "none";
+                        deleteSchedulerJob.style.display = "none";
+                    }
+                }
+
+                var PREPARE_schedulerJobId = 0;
+
+                function prepareDeleteJob(schedulerJobId) {
+                    PREPARE_schedulerJobId = schedulerJobId;
+                    $("#exampleModalToggle").modal('toggle');
+                }
+
+                function deletePreparedJob() {
+                    deleteJob(PREPARE_schedulerJobId);
+                    $("#exampleModalToggle").modal('toggle');
+
+                }
+
+                function deleteJob(schedulerJobId) {
+                    var url = "/scheduler/" + schedulerJobId;
+                    var response = syncRestRequest(url, "DELETE", "");
+                    if (response.status == 200 && response.payload) {
+                        response = response.payload;
+                        getData();
+                    }
+                }
+
+                function getData() {
+                    $("#refresh_btn").addClass("disabled");
+                    $("#refresh_btn").html("refreshing...");
+                    asyncRestRequest("/scheduler", null, "GET", function (payload) {
+                        if (null == payload.output) {
+                            $("#refresh_btn").removeClass("disabled");
+                            $("#refresh_btn").html("Refresh");
+                            SchedulerRecords = [];
+                            loadDataTable();
+                            return ;
+                        }
+                        var length = payload.output.length;
+                        for (i = 0; i < length; i++) {
+                            if (payload.output[i].enabled == "Y") {
+                                payload.output[i].enabled = true;
+                            }
+                        }
+                        SchedulerRecords = payload.output;
+                        loadDataTable();
+                        $("#refresh_btn").removeClass("disabled");
+                        $("#refresh_btn").html("Refresh");
+                    });
+
+
+                }
+
+
+                var AUTO_REFRESH = false;
+                var tableCronJobs = $('#cronMakerTable').DataTable({});
+                getData();
+
+                function renderData(schedulerID) {
+                    var data = getDataByID(schedulerID);
+                    openViewSchedulerJobBox();
+                    $("#schedulerJobID").val(data.id);
+                    $(".cronInsideInput").val(data.cron);
+                    if (data.cron == "0") {
+                        $("#filePoller").prop('checked', true);
+                        $("#cronExpressionFieldset").prop("disabled", true);
+                    } else {
+                        $("#filePoller").prop('checked', false);
+                        $("#cronExpressionFieldset").prop("disabled", false);
+                    }
+
+                    $("#schedulerJobName").val(data.job_name);
+
+                    var enableJob = data.enabled;
+                    //alert(enableJob);
+                    if (enableJob == true)
+                        $("#enableScheduler").prop('checked', true);
+                    else
+                        $("#enableScheduler").prop('checked', false);
+                    $("#schedulerJobService").val(data.serviceFqn);
+                }
+
+                function renderDataView(schedulerID, inputFlag) {
+                    var data = getDataByID(schedulerID);
+                    if(inputFlag=='view')
+                    {
+                    	openViewSchedulerJobBox();
+                	}
+                	else
+                	{
+                	 	openUpdateSchedulerJobBox();
+                	}
+                    $("#schedulerJobID").val(data.id);
+                    $(".cronInsideInput").val(data.cron);
+                    if (data.cron == "0") {
+                        $("#filePoller").prop('checked', true);
+                        $("#cronExpressionFieldset").prop("disabled", true);
+                    } else {
+                        $("#filePoller").prop('checked', false);
+                        $("#cronExpressionFieldset").prop("disabled", false);
+                    }
+
+                    $("#schedulerJobName").val(data.job_name);
+
+                    var enableJob = data.enabled;
+                    //alert(enableJob);
+                    if (enableJob == true)
+                        $("#enableScheduler").prop('checked', true);
+                    else
+                        $("#enableScheduler").prop('checked', false);
+                    $("#schedulerJobService").val(data.serviceFqn);
+                }
+
+                function trimCron(cron) {
+                    if (cron.length <= 20) {
+                        return cron;
+                    }
+
+                    return cron.substring(0, 20) + "...";
+                }
+
+
+                function loadDataTable() {
+
+                    if (null != tableCronJobs) {
+                        tableCronJobs.destroy();
+                    }
+
+                    var HTMLData = "";
+                    var view="view";
+                    var edit="edit";
+
+                    if (null != SchedulerRecords) {
+                        for (var i = 0; i < SchedulerRecords.length; i++) {
+                            HTMLData += "<tr><td>" + (i + 1) + "</td><td><a title='" + SchedulerRecords[i].serviceFqn + "' href='scheduler/manager/web/scheduler-details.html?id=" + SchedulerRecords[i].id + "'>" + SchedulerRecords[i].job_name + "</a></td><td title='" + SchedulerRecords[i].cron + "'>" + trimCron(SchedulerRecords[i].cron) + "</td>";
+
+                            if (SchedulerRecords[i].enabled == true) {
+                                HTMLData += "<td><div class=\"form-check form-switch\"><input class=\"form-check-input jobState\" type=\"checkbox\" role=\"switch\" checked value='" + SchedulerRecords[i].id + "' /></div></td>";
+                            } else {
+                                HTMLData += "<td><div class=\"form-check form-switch\"><input class=\"form-check-input jobState\" type=\"checkbox\" role=\"switch\" value='" + SchedulerRecords[i].id + "' /></div></td>";
+                            }
+                            HTMLData += "<td>";
+                            if (null == SchedulerRecords[i].job_history) {
+                                SchedulerRecords[i].job_history = [];
+                            }
+                            for (var j = 0; j < SchedulerRecords[i].job_history.length; j++) {
+                                if (SchedulerRecords[i].job_history[j].end_time != null && SchedulerRecords[i].job_history[j].end_time != "") {
+                                    let tStatus = "success";
+                                    if (SchedulerRecords[i].job_history[j].status == "failed") {
+                                        tStatus = "danger";
+                                    }
+                                    HTMLData += "<div class=\"ekatooltipdefault\"><a href='scheduler/manager/web/scheduler-details.html?id=" + SchedulerRecords[i].id + "&run_id=" + SchedulerRecords[i].job_history[j].id + "#run_history_highlights'><span class=\"status st-" + tStatus + "\"></span></a><span class=\"ekatooltipdefaulttext\">" + new Date(SchedulerRecords[i].job_history[j].start_time /*+ " UTC"*/).toLocaleString("en-US") + "</span></div>";
+                                } else {
+                                    HTMLData += "<div class=\"ekatooltipdefault\"><span class=\"status st-success\"></span></div>";
+                                }
+                            }
+                            HTMLData += "</td>";
+                            HTMLData += "<td><span class=\"actionicons\"><a class=\"view_ic\" href=\"javascript:renderDataView(" + SchedulerRecords[i].id + ", '" + view +"');\"><img src=\"middleware/pub/server/ui/assets/img/view-ico.png\"></a><a class=\"view_ic\" href=\"javascript:renderDataView(" + SchedulerRecords[i].id + ", '"+ edit + "');\"><img src=\"middleware/pub/server/ui/assets/img/edit_icon.svg\"></a><a class=\"dlt_ic\" href=\"javascript:prepareDeleteJob(" + SchedulerRecords[i].id + ")\"><img src=\"middleware/pub/server/ui/assets/img/deleteico.png\"></a></span></td></tr>";
+                        }
+                    }
+
+                    $("#cronDataRecords").html(HTMLData);
+
+                    $(".jobState").unbind();
+                    $(".jobState").click(function () {
+
+                        var SchedulerRecord = getDataByID($(this).val());
+
+                        var url = "/scheduler/" + SchedulerRecord.id + "?cronExpression=" + SchedulerRecord.cron + "&enabled=" + ($(this).is(":checked") ? "Y" : "N") + "&serviceFqn=" + SchedulerRecord.serviceFqn + "&status=new&job_name=" + SchedulerRecord.job_name;
+                        var response = syncRestRequest(url, "POST", "");
+                        if (response.status == 200 && response.payload) {
+                            getData();
+                        }
+                    });
+
+                    tableCronJobs = $('#cronMakerTable').DataTable({});
+
+                }
+
+                function getDataByID(schedulerId) {
+                    var SchedulerRecord = {};
+                    for (var i = 0; i < SchedulerRecords.length; i++) {
+                        if (SchedulerRecords[i].id == schedulerId) {
+                            SchedulerRecord = SchedulerRecords[i];
+                        }
+                    }
+                    return SchedulerRecord;
+                }
+            </script>
+            <script>
+                //	Equal height //
+
+                var matchHeight = function () {
+
+                    function init() {
+                        eventListeners();
+                        matchHeight();
+                    }
+
+                    function eventListeners(){
+                        $(window).on('resize', function() {
+                            matchHeight();
+                        });
+                    }
+
+                    function matchHeight(){
+                        var groupName = $('[data-match-height]');
+                        var groupHeights = [];
+
+                        groupName.css('min-height', 'auto');
+
+                        groupName.each(function() {
+                            groupHeights.push($(this).outerHeight());
+                        });
+
+                        var maxHeight = Math.max.apply(null, groupHeights);
+                        groupName.css('min-height', maxHeight);
+                    };
+
+                    return {
+                        init: init
+                    };
+
+                } ();
+
+                $(document).ready(function() {
+                    matchHeight.init();
+                });
+
+            </script>
+</body>
+</html>

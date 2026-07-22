@@ -1,0 +1,928 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Java Service Editor</title>
+    <meta charset="utf-8"/>
+    <script type="text/javascript">
+        var SDK_EMBEDDED = false;
+    </script>
+    <link rel="stylesheet"	href="middleware/pub/server/ui/bootstrap-3.4.1-dist/css/bootstrap.min.css">
+    <link rel="stylesheet"	href="middleware/pub/server/ui/css/style.min.css">
+    <script	src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script	src="middleware/pub/server/ui/javascript/jstree.min.js"></script>
+    <script src="middleware/pub/server/ui/javascript/middleware.js"></script>
+    <script src="middleware/pub/server/ui/javascript/sweetalert.min.js"></script>
+    <link rel="stylesheet" href="middleware/pub/server/ui/css/middleware.css">
+    <link rel="stylesheet" href="middleware/pub/server/ui/css/sweetalert.css">
+    <link rel="stylesheet" href="middleware/pub/server/ui/css/workspace.css" />
+    <link rel="stylesheet" href="middleware/pub/server/ui/css/tooltip.css" />
+    <link rel="stylesheet" href="middleware/pub/server/ui/css/new-custom.css" />
+    <link rel="stylesheet" href="middleware/pub/server/ui/assets/css/select2.min.css" />
+
+    <link rel="stylesheet" href="vs/editor/editor.main.css" />
+
+
+    <script type="syncloop/analytics"></script>
+    <style>.CodeMirror {height:min-content;}</style>
+</head>
+<body style="width:100%;height:100%;">
+<script type="syncloop/body-analytics"></script>
+<div id="content" style="max-width: 100%; min-height:500px;padding: 0px; margin: 0px;height:96%;">
+    <div class="row" id="demo" style="display: block;padding: 0px; margin: 0px;">
+        <div class="row" style="margin: 0px; padding:0px;">
+            <div class="navbar">
+                <div class="row">
+                    <div class="col-md-12" style="width:14.88%; margin: 0px; padding:0px;">
+                        <input style="float:left;width:90%;" class="srch_sl" placeholder="Search Input Params..." id="input_search_panel" />
+                    </div>
+                    <div class="col-md-12 service_ed_ic">
+                        <div style="margin-left:5px; height:40px;padding-top:18px !important;" id="currentServiceName"></div>
+                        <div style="display: none" id="currentServiceNameNative"></div>
+                        <a id="copy" style="display: none;" class="fa fa-clipboard cpy" href="javascript:void(0)"></a>
+
+                        <div class="srv-icon nw_s_icons">
+
+                            <button type="button" data-bs-toggle="tooltip" data-bs-placement="bottom" title="Save" onclick="save();" href="javascript:void(0)">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="19" viewBox="0 0 16 16" fill="none">
+                                    <path d="M9.75 14.9979V14.1229C9.75 13.5418 9.75 13.2512 9.69006 13.012C9.51075 12.2961 8.95181 11.7372 8.23596 11.5579C7.99668 11.4979 7.70612 11.4979 7.125 11.4979V11.4979C6.54388 11.4979 6.25332 11.4979 6.01404 11.5579C5.29819 11.7372 4.73925 12.2961 4.55994 13.012C4.5 13.2512 4.5 13.5418 4.5 14.1229V14.9979" stroke="#64666D" stroke-width="1.3"/>
+                                    <path d="M4.5 5.37292H8.875" stroke="#64666D" stroke-width="1.3" stroke-linecap="round"/>
+                                    <path d="M1 6.99792C1 4.1695 1 2.75528 1.87868 1.8766C2.75736 0.997925 4.17157 0.997925 7 0.997925H11.0605C11.4692 0.997925 11.6736 0.997925 11.8574 1.07405C12.0411 1.15017 12.1856 1.29468 12.4747 1.58371L14.4142 3.52325C14.7032 3.81228 14.8478 3.9568 14.9239 4.14057C15 4.32434 15 4.52871 15 4.93746V8.99792C15 11.8264 15 13.2406 14.1213 14.1192C13.2426 14.9979 11.8284 14.9979 9 14.9979H7C4.17157 14.9979 2.75736 14.9979 1.87868 14.1192C1 13.2406 1 11.8264 1 8.99792V6.99792Z" stroke="#64666D" stroke-width="1.3"/>
+                                </svg>
+                            </button>
+
+                            <button type="button" data-bs-toggle="tooltip" data-bs-placement="bottom" title="Reload" onclick="reload();" href="javascript:void(0)">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="18" viewBox="0 0 16 18" fill="none">
+                                    <path d="M6.7049 6.71754L10.7541 4.37971L8.41631 0.330472" stroke="#64666D" stroke-width="1.3"/>
+                                    <path d="M13.4509 8.28131C13.8007 9.58689 13.7099 10.9714 13.1927 12.2202C12.6754 13.4689 11.7606 14.5121 10.59 15.1879C9.41949 15.8637 8.05865 16.1344 6.71857 15.958C5.3785 15.7816 4.13408 15.1679 3.17833 14.2122C2.22258 13.2564 1.6089 12.012 1.43248 10.6719C1.25605 9.33184 1.52674 7.971 2.20256 6.80045C2.87838 5.62989 3.92156 4.71505 5.17031 4.1978C6.41906 3.68055 7.8036 3.5898 9.10918 3.93963" stroke="#64666D" stroke-width="1.3" stroke-linecap="round"/>
+                                </svg>
+                            </button>
+
+                            <!--<a title="Test" onclick="swal('Inprogress', '', 'warning')" href="javascript:void(0)"><img src="middleware/pub/server/ui/icons/service/test.svg" alt=""></a>-->
+                            <button type="button" data-bs-toggle="tooltip" data-bs-placement="bottom" title="Configuration" onclick="openConfigurationPropertiesAsync()" href="javascript:void(0)">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="25" height="19" viewBox="0 0 25 19" fill="none">
+                                    <path d="M9.203 6.89771C7.84135 6.89771 6.74219 7.99687 6.74219 9.35851C6.74219 10.7202 7.84135 11.8193 9.203 11.8193" stroke="#64666D" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round"/>
+                                    <path d="M10.6464 16.4211L10.5561 16.2652C9.8179 14.9856 8.6039 14.9856 7.85745 16.2652L7.76722 16.4211C7.3817 17.0691 6.54502 17.2987 5.89701 16.9132L4.47794 16.1011C3.71509 15.6664 3.49362 14.7067 3.92836 13.9356C4.642 12.6642 4.035 11.6389 2.55851 11.6389C1.69723 11.6389 1 10.9334 1 10.0804V8.6367C1 7.78362 1.69723 7.07818 2.55851 7.07818C4.0268 7.07818 4.642 6.04464 3.92836 4.78143C3.50182 4.01858 3.7233 3.05886 4.47794 2.61592L5.89701 1.80385C6.54502 1.41832 7.3817 1.648 7.76722 2.29601L7.85745 2.45186C8.5957 3.73148 9.8097 3.73148 10.5561 2.45186L10.6464 2.29601" stroke="#64666D" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round"/>
+                                    <path d="M17.8347 3.3797C17.7436 3.317 17.6404 3.27415 17.5317 3.25393C17.423 3.23371 17.3113 3.23657 17.2038 3.26233L17.2038 6.19647C17.2064 6.33589 17.1808 6.4744 17.1286 6.60371C17.0765 6.73303 16.9988 6.8505 16.9002 6.9491C16.8015 7.0477 16.6841 7.12541 16.5548 7.17759C16.4255 7.22976 16.2869 7.25533 16.1475 7.25276L15.0912 7.31145C14.8197 7.30873 14.5601 7.19966 14.3681 7.00766C14.1761 6.81565 14.067 6.55602 14.0643 6.2845L14.0643 3.35035C13.9571 3.30719 13.8418 3.2881 13.7264 3.29444C13.6111 3.30078 13.4986 3.33239 13.3968 3.38703C12.7828 3.79683 12.2962 4.37078 11.9925 5.04354C11.6887 5.7163 11.5799 6.46084 11.6785 7.19238C11.7772 7.92393 12.0792 8.61309 12.5502 9.1814C13.0213 9.74972 13.6425 10.1744 14.343 10.407L14.3064 16.3057C14.3048 16.4439 14.3309 16.581 14.383 16.709C14.4352 16.837 14.5124 16.9532 14.6101 17.0509C14.7078 17.1486 14.8241 17.2258 14.9521 17.278C15.08 17.3302 15.2171 17.3562 15.3553 17.3547L15.8835 17.3547C16.0216 17.3562 16.1587 17.3302 16.2867 17.278C16.4147 17.2258 16.5309 17.1486 16.6286 17.0509C16.7263 16.9532 16.8036 16.837 16.8557 16.709C16.9079 16.581 16.934 16.4439 16.9324 16.3057L16.9397 10.3776C17.6288 10.1333 18.2366 9.70259 18.6955 9.13346C19.1544 8.56433 19.4465 7.87907 19.5392 7.15387C19.632 6.42867 19.5218 5.69196 19.2208 5.02566C18.9199 4.35936 18.4401 3.78959 17.8347 3.3797Z" stroke="#64666D" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round"/>
+                                </svg></button>
+
+                            <button type="button" data-bs-toggle="tooltip" data-bs-placement="bottom" title="Lock" onclick="lockArtifact()" href="javascript:void(0)">
+                                <svg xmlns="http://www.w3.org/2000/svg" class="lock" width="20" height="18" viewBox="0 0 15 17" fill="none">
+                                    <path d="M1 9.99731C1 8.1117 1 7.16889 1.58579 6.5831C1.58579 6.5831 1.58579 6.5831 1.58579 6.5831C2.17157 5.99731 3.11438 5.99731 5 5.99731H10.3333C12.219 5.99731 13.1618 5.99731 13.7475 6.5831C13.7475 6.5831 13.7475 6.5831 13.7475 6.5831C14.3333 7.16889 14.3333 8.1117 14.3333 9.99731V9.99731C14.3333 12.8257 14.3333 14.24 13.4547 15.1186C13.4547 15.1186 13.4547 15.1186 13.4547 15.1186C12.576 15.9973 11.1618 15.9973 8.33333 15.9973H6.99999C4.17157 15.9973 2.75736 15.9973 1.87868 15.1186C1.87868 15.1186 1.87868 15.1186 1.87868 15.1186C1 14.24 1 12.8257 1 9.99731V9.99731Z" stroke="#64666D" stroke-width="1.3"/>
+                                    <path d="M11.0002 5.1641V4.33077C11.0002 2.48982 9.50778 0.997437 7.66683 0.997437V0.997437C5.82588 0.997437 4.3335 2.48982 4.3335 4.33077V5.1641" stroke="#64666D" stroke-width="1.3" stroke-linecap="round"/>
+                                    <circle cx="7.58984" cy="11.0175" r="1.5" fill="#64666D"/>
+                                </svg>
+                            </button>
+
+                            <button type="button" data-bs-toggle="tooltip" data-bs-placement="bottom" title="Unlock" onclick="unLockArtifact()" href="javascript:void(0)">
+                                <svg xmlns="http://www.w3.org/2000/svg" class="unlock" width="21" height="19" viewBox="0 0 21 19" fill="none">
+                                    <path d="M1 11.9518C1 10.0464 1 9.09369 1.58579 8.50791C2.17157 7.92212 3.11438 7.92212 5 7.92212H10.4323C12.3179 7.92212 13.2608 7.92212 13.8465 8.50791C14.4323 9.09369 14.4323 10.0464 14.4323 11.9518V11.9518C14.4323 14.8099 14.4323 16.239 13.5537 17.1177C12.675 17.9964 11.2608 17.9964 8.43233 17.9964H6.99999C4.17157 17.9964 2.75736 17.9964 1.87868 17.1177C1 16.239 1 14.8099 1 11.9518V11.9518Z" stroke="#64666D" stroke-width="1.3"/>
+                                    <path d="M11.2675 7.86787L11.1952 7.28943C11.0049 5.76709 11.6899 4.26767 12.9653 3.41493L13.3233 3.17554C14.7227 2.23987 16.588 2.42234 17.7796 3.61145V3.61145C18.521 4.35132 18.9124 5.37174 18.8561 6.41762L18.792 7.60747" stroke="#64666D" stroke-width="1.3" stroke-linecap="round"/>
+                                    <path class="cr" d="M9.08535 13C9.08535 13.8284 8.41378 14.5 7.58535 14.5C6.75693 14.5 6.08535 13.8284 6.08535 13C6.08535 12.1716 6.75693 11.5 7.58535 11.5C8.41378 11.5 9.08535 12.1716 9.08535 13Z" fill="#64666D"/>
+                                </svg>
+                            </button>
+
+                            <button type="button" data-bs-toggle="tooltip" data-bs-placement="bottom" title="Clone" onclick="openCloneConfigurationForm()" href="javascript:void(0)">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="17" viewBox="0 0 20 17" fill="none">
+                                    <g clip-path="url(#clip0_816_4123)">
+                                        <path d="M15.1112 9.9326V12.1993C15.1112 15.2215 13.9023 16.4304 10.8801 16.4304H8.00894C4.98672 16.4304 3.77783 15.2215 3.77783 12.1993V9.32816C3.77783 6.30593 4.98672 5.09705 8.00894 5.09705H10.2756" stroke="#64666D" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round"/>
+                                        <path d="M15.1109 9.9326H12.6932C10.8798 9.9326 10.2754 9.32816 10.2754 7.51482V5.09705L15.1109 9.9326Z" stroke="#64666D" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round"/>
+                                        <path d="M9.06641 2.83039C9.06641 1.57617 10.0789 0.563721 11.3331 0.563721H14.3553" stroke="#64666D" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round"/>
+                                        <path d="M18.8887 5.09705V9.77393C18.8887 10.945 17.9367 11.897 16.7656 11.897" stroke="#64666D" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round"/>
+                                        <path d="M18.8888 5.09705H16.6221C14.9221 5.09705 14.3555 4.53039 14.3555 2.83039V0.563721L18.8888 5.09705Z" stroke="#64666D" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round"/>
+                                        <path d="M0.566895 6.20771C0.566895 3.28371 2.93178 0.918823 5.85578 0.918823L5.06245 2.24105" stroke="#64666D" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round"/>
+                                        <path d="M10.9557 13.786H6.42236" stroke="#C1C2C5" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round"/>
+                                        <path d="M9.44459 11.5193H6.42236" stroke="#C1C2C5" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round"/>
+                                    </g>
+                                    <defs>
+                                        <clipPath id="clip0_816_4123">
+                                            <rect width="19.4556" height="17" fill="white" transform="translate(0 -0.00292969)"/>
+                                        </clipPath>
+                                    </defs>
+                                </svg>
+                            </button>
+
+                            <button type="button" data-bs-toggle="tooltip" data-bs-placement="bottom" title="Promote" onclick="openPromotepopup()" href="javascript:void(0)">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="22" height="18" viewBox="0 0 22 18" fill="none">
+                                    <g clip-path="url(#clip0_1_2)">
+                                        <rect width="22" height="18" fill="white"/>
+                                        <g clip-path="url(#clip1_1_2)">
+                                            <path d="M8.19349 5.52468L15.4469 1.33692C15.908 1.07073 16.4584 1.01639 16.9886 1.19327L20.0165 2.17856C20.6766 2.39023 21.0996 3.12298 20.9529 3.80049L20.2692 7.02744C20.1572 7.57508 19.8267 8.02936 19.3739 8.2908L12.1946 12.4358C11.2478 12.9824 9.97951 12.573 9.37107 11.5192L7.58854 8.43172C6.96711 7.37439 7.24668 6.07132 8.20172 5.51993L8.19349 5.52468Z" stroke="#64666D" stroke-width="1.3"/>
+                                            <path d="M16.3368 7.08033C17.0189 6.68654 17.2526 5.8144 16.8588 5.13234C16.465 4.45029 15.5928 4.2166 14.9108 4.61038C14.2287 5.00417 13.995 5.87631 14.3888 6.55837C14.7826 7.24043 15.6548 7.47412 16.3368 7.08033Z" stroke="#64666D" stroke-width="1.3"/>
+                                            <path d="M7.16773 5.82049C7.16773 5.82049 6.84491 4.55783 5.65726 3.71764C5.45737 3.58057 5.49021 3.27619 5.71251 3.14785L7.36737 2.19241C8.17422 1.72658 9.1662 1.79055 9.83846 2.34649L11.2102 3.48656L7.16773 5.82049Z" stroke="#64666D" stroke-width="1.3"/>
+                                            <path d="M11.4125 13.1727C11.4125 13.1727 12.3446 14.0836 12.4784 15.5322C12.4972 15.7739 12.7772 15.8976 12.9995 15.7693L14.6544 14.8139C15.4612 14.348 15.9018 13.457 15.7565 12.5968L15.455 10.8388L11.4125 13.1727Z" stroke="#64666D" stroke-width="1.3"/>
+                                            <path d="M10.7251 8.67362L8.79852 9.78592" stroke="#64666D" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round"/>
+                                            <path d="M3.92845 8.19567L2.42178 9.06555C2.04306 9.28421 1.56255 9.15545 1.33914 8.7685C1.12049 8.38977 1.24924 7.90927 1.62796 7.69061L1.76793 7.6098" stroke="#64666D" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round"/>
+                                            <path d="M5.98435 9.37984L4.46817 10.2332" stroke="#C1C2C5" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round"/>
+                                            <path d="M7.71204 12.3343L6.19586 13.1877" stroke="#C1C2C5" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round"/>
+                                            <path d="M5.42291 11.7348L3.90674 12.5882" stroke="#64666D" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round"/>
+                                            <path d="M7.72422 14.8082L6.20932 15.6828C5.8306 15.9015 5.70185 16.382 5.9205 16.7607C6.13916 17.1394 6.61966 17.2682 6.99839 17.0495L7.13835 16.9687" stroke="#64666D" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round"/>
+                                        </g>
+                                    </g>
+                                    <defs>
+                                        <clipPath id="clip0_1_2">
+                                            <rect width="22" height="18" fill="white"/>
+                                        </clipPath>
+                                        <clipPath id="clip1_1_2">
+                                            <rect width="21.2763" height="16" fill="white" transform="translate(-1 6.20001) rotate(-30)"/>
+                                        </clipPath>
+                                    </defs>
+                                </svg></button>
+
+                            <button type="button" data-bs-toggle="tooltip" data-bs-placement="bottom" title="Full Screen" onclick="fullScreen()" target="_blank" id="flowFullScreen">
+                                <svg xmlns="http://www.w3.org/2000/svg" class="full_scrn" width="18" height="17" viewBox="0 0 18 17" fill="none">
+                                    <path d="M2.25 5.45839V4.24872C2.25 2.59186 3.59315 1.24872 5.25 1.24872H13.75C15.4069 1.24872 16.75 2.59186 16.75 4.24872V11.8132C16.75 13.4701 15.4069 14.8132 13.75 14.8132H11.25" stroke="#64666D" stroke-width="1.3" stroke-linecap="round"/>
+                                    <path class="ar" d="M12 5.62769V4.97769H12.65V5.62769H12ZM6.57181 11.6602C6.31109 11.907 5.89969 11.8957 5.65292 11.635C5.40615 11.3743 5.41747 10.9629 5.67819 10.7161L6.57181 11.6602ZM11.35 9.83736V5.62769H12.65V9.83736H11.35ZM12 6.27769H7.5V4.97769H12V6.27769ZM12.4468 6.09977L6.57181 11.6602L5.67819 10.7161L11.5532 5.1556L12.4468 6.09977Z" fill="#64666D"/>
+                                    <rect x="1.25" y="10.8374" width="5.25" height="4.91129" rx="2" stroke="#64666D" stroke-width="1.3" stroke-linecap="round"/>
+                                </svg>
+                            </button>
+
+                        </div>
+
+                    </div>
+                    <div class="col-md-12" style="width:14.8%; margin: 0px; padding:0px;">
+                        <input class="srch_sl" placeholder="Search Output Params..." id="output_search_panel" />
+                    </div>
+
+                </div>
+
+                <!-- <div class="dropdown">
+                   <button class="dropbtn">Service
+                   <i class="fa fa-caret-down"></i>
+                   </button>
+                   <div class="dropdown-content">
+                      <a href="javascript:void(0)" onclick="save();">Save</a>
+                      <a href="javascript:void(0)" onclick="reload();">Reload</a>
+                      <a href="javascript:void(0)" onclick="swal('Inprogress', '', 'warning')">Test</a>
+                      <a href="javascript:void(0)" onclick="openConfigurationProprties()">Configuration</a>
+                      <a href="javascript:void(0)" onclick="lockArtifact()">Lock</a>
+                      <a href="javascript:void(0)" onclick="unLockArtifact()">Unlock</a>
+                   </div>
+                </div> -->
+                <!-- <div class="dropdown">
+                   <button class="dropbtn">Search
+                   <i class="fa fa-caret-down"></i>
+                   </button>
+                   <div class="dropdown-content">
+                      <input type="text" value=""
+                         style="box-shadow: inset 0 0 4px #eee; width: 120px; margin: 2px; padding: 2px; border-radius: 0px; border: 1px solid silver; font-size: .8em;"
+                         id="search_q" placeholder="Search">
+                   </div>
+                </div> -->
+                <!-- <div style="margin-left: 185px; width:100%;height:20px;padding-top:4px;" id="currentServiceName"></div> -->
+            </div>
+        </div>
+    </div>
+    <div class="row" id="demo" style="display: block;padding: 0px; margin: 0px;width:100%;height:100%">
+        <div class="col-md-12" id="input_schema_editor_jsTree_container" style="width:15%; min-height:100%; float: left;min-height:600px;height:100%;margin: 0px; padding:0px;">
+            <div id="input_schema_editor_jsTree"
+                 class="jstree jstree-1 jstree-default"
+                 style="margin: 0px;padding:0px; height: 100%; width: 100%; overflow: scroll;"
+                 role="tree" aria-multiselectable="true" tabindex="0"
+                 aria-activedescendant="j1_1" aria-busy="false"></div>
+        </div>
+        <div class="col-md-12" style="margin: 0px; padding:0px;width:70%;height:100%;position:relative;float:left;overflow:scroll;border-right: solid 1px #eee;">
+            <div id="editor-container" style="height: 100%;width: 100%;"></div>
+        </div>
+        <div class="col-md-12" id="output_schema_editor_jsTree_container" style="width:15%; min-height:100%; float: left;min-height:600px;height:100%;margin: 0px; padding:0px;">
+            <div id="output_schema_editor_jsTree"
+                 class="jstree jstree-1 jstree-default"
+                 style="margin: 0px;padding:0px; height: 100%; width: 100%; overflow: scroll;"
+                 role="tree" aria-multiselectable="true" tabindex="0"
+                 aria-activedescendant="j1_1" aria-busy="false"></div>
+        </div>
+    </div>
+</div>
+<div id="configurePropertiesModelDialog" class="modal">
+    <!-- Modal content -->
+    <div class="modal-content" style="width:650px;height:auto;">
+        <span class="close ok_close">&times;</span>
+        <h3>Configure properties</h3>
+        <div class="row">
+            <div class="col-md-6" style="padding-left: 0px;">
+                <div id="serviceHTTPMethod">
+                    <label style="min-width: 100px;" for="serviceHTTPMethodValue">Method: </label>
+                    <select
+                            name="serviceHTTPMethodValue" id="serviceHTTPMethodValue" class="form-control">
+                        <option value="GET">GET</option>
+                        <option value="POST">POST</option>
+                        <option value="DELETE">DELETE</option>
+                        <option value="PUT">PUT</option>
+                        <option value="PATCH">PATCH</option>
+                    </select>
+
+                </div>
+            </div>
+            <div class="col-md-6" style="padding-right:0px;">
+                <div id="serviceAlias">
+                    <label for="serviceAliasValue">Alias: </label> <input type="text"
+                                                                          id="serviceAliasValue" name="serviceAliasValue" value="" class="form-control">
+                </div>
+            </div>
+        </div>
+
+        <div id="" class="position">
+            <label for="">Service Endpoint: </label>
+            <input type="text" id="full_path" name="" value="/artifact/unlock/*/{location}" class="form-control service_full_path" readOnly />
+            <a class="copy_icon" href="javascript:void(0)" id="path-copy"><img src="middleware/pub/server/ui/icons/copy-svgrepo-com.svg"></a>
+        </div>
+
+        <div class="row">
+            <div class="col-md-6" style="padding-left: 0px;">
+                <div id="serviceConsumersDiv">
+                    <label for="serviceConsumers">Consumers: </label>
+                    <select multiple="" class="form-control multi-options select2-hidden-accessible serviceConsumersGroups" id="serviceConsumers" tabindex="-1" aria-hidden="true"></select>
+                </div>
+            </div>
+
+            <div class="col-md-6" style="padding-right:0px;">
+                <div id="serviceDevelopersDiv">
+                    <label for="serviceDevelopers">Developers: </label>
+                    <select multiple="" class="form-control multi-options select2-hidden-accessible serviceDevelopersGroups" id="serviceDevelopers" tabindex="-1" aria-hidden="true"></select>
+                </div>
+            </div>
+        </div>
+
+
+
+
+        <div id="serviceProperties">
+            <label for="servicePropertiesFile">Configuration Properties: </label> <textarea rows="4" cols="50"
+                                                                                            id="servicePropertiesFile" name="servicePropertiesFile" value="" class="form-control"></textarea>
+        </div>
+
+        <div class="anc_kbtn">
+            <button id="closeConfigurePropertiesModelDialog" type="button" class="btn btn-gry ok_close">OK</button>
+        </div>
+    </div>
+</div>
+<div id="elementPropertyModalDialog" class="modal">
+    <!-- Modal content -->
+    <div class="modal-content" style="width:650px;height:auto;">
+        <span class="close ok_close" id="closePropertyModalDialog">&times;</span>
+        <h3 id="currentNodePath"></h3>
+
+        <div class="row">
+            <div class="col-md-6" style="padding-left:0px;">
+                <label style="min-width: 100px;" for="elementType">Type: </label>
+                <select
+                        name="elementType" id="elementType"
+                        onChange="showProperties(this.value);" class="form-control">
+                    <option value="document">Document</option>
+                    <option value="javaObject">Object</option>
+                    <option value="ref" disabled>#ref</option>
+                    <option value="string">String</option>
+                    <option value="integer">Integer</option>
+                    <option value="boolean">Boolean</option>
+                    <option value="number">Number</option>
+                    <option value="byte">Byte</option>
+                    <option value="date">Date</option>
+                </select>
+            </div>
+
+            <div class="col-md-6" style="padding-right:0px;">
+                <div class="en_ck">
+                    <input class="styled-checkbox" id="isArray" name="isArray" type="checkbox" value="false" onChange="changeCurrentNodeType(this.checked)">
+                    <label class="enble_check" for="isArray">It's an array</label>
+                </div>
+            </div>
+
+
+        </div>
+
+        <div>
+            <label style="padding: 0px 0px; font-weight: bold; margin-top:28px;">Additional properties: </label>
+        </div>
+        <div id="javaObjectProperties" class="elementProperty">
+            <label for="javaObjectWrapper">Java Wrapper: </label> <input type="text"
+                                                                         id="javaObjectWrapper" name="javaObjectWrapper" value="java.lang.Object" class="form-control">
+        </div>
+        <div id="refProperties" class="elementProperty">
+            <label for="reference">Reference: </label> <input type="text"
+                                                              id="reference" name="reference" value="" class="form-control">
+        </div>
+        <div id="stringProperties" class="elementProperty">
+            <label for="stringValidation">Validation: </label>
+            <select
+                    name="stringValidation" id="stringValidation" class="form-control">
+                <option value=""></option>
+                <option value="email">Email</option>
+                <option value="url">URL</option>
+                <option value="secure">secure</option>
+            </select>
+            <label for="minLength">Min size: </label> <input
+                type="text" id="minLength" name="minLength" value="" class="form-control">
+            <label for="maxLength">Max size: </label>
+            <input type="text"
+                   id="maxLength" name="maxLength" value="" class="form-control">
+
+            <!-- <input
+            type="checkbox" id="isMuliline" name="isMuliline"> <label
+            for="isMuliline">Multi-line: </label> -->
+
+            <div class="en_vle">
+                <input class="styled-checkbox" id="isMuliline" name="isMuliline" type="checkbox">
+                <label class="enble_check" for="isMuliline">Multi-line:</label>
+            </div>
+        </div>
+        <div id="intProperties" class="elementProperty">
+            <label for="minimumInteger">Minimum: </label> <input type="text"
+                                                                 id="minimumInteger" name="minimumInteger" value="" class="form-control">
+            <label for="maximumInteger">Maximum: </label> <input type="text"
+                                                                 id="maximumInteger" name="maximumInteger" value="" class="form-control">
+        </div>
+        <div id="numberProperties" class="elementProperty">
+            <label for="minimumNumber">Minimum: </label> <input type="text"
+                                                                id="minimumNumber" name="minimumNumber" value="" class="form-control">
+            <label for="maximumNumber">Maximum: </label> <input type="text"
+                                                                id="maximumNumber" name="maximumNumber" value="" class="form-control">
+        </div>
+        <div id="dateProperties" class="elementProperty">
+            <label for="dateFormat">Date Format: </label> <input type="text"
+                                                                 id="dateFormat" name="dateFormat" value="" class="form-control"> <label
+                for="startDate">Start date: </label> <input type="date"
+                                                            id="endDate" name="startDate" value="" class="form-control"> <label
+                for="endDate">End date: </label> <input type="date" id="endDate"
+                                                        name="endDate" value="" class="form-control">
+        </div>
+
+        <div>
+            <label for="fieldDescription">Description: </label> <textarea class="form-control" rows="5" cols="35" onChange="updateDataField('fieldDescription',this.value);"id="fieldDescription" name="fieldDescription" value="" style="height:80px"></textarea>
+        </div>
+
+        <div class="anc_kbtn">
+            <button id="closeNodeProperties" type="button" class="btn btn-gry">OK</button>
+        </div>
+
+    </div>
+</div>
+
+<div id="cloneModelDialog" class="modal">
+    <!-- Modal content -->
+    <div class="modal-content" style="width:650px;height:auto;">
+        <div class="anc_kbtn"><span id="closeCloneModelDialog" class="close" >&times;</span></div>
+        <h3>Clone</h3>
+        <p>It will overwrite any existing file and It can create entire path including new package.</p>
+        <div id="buildNameDiv" style="margin-top:10px; margin-bottom:0px;">
+            <label for="CloneInput">Flow name: </label>
+            <div class="flx_row"><input class="form-control" type="text" id="CloneInput" name="CloneInput" value=""><span>.service</span></div>
+        </div>
+        <br>
+        <div class="anc_kbtn"><button type="button" id="cloneIt" class="btn btn-gry">Clone</button></div>
+    </div>
+</div>
+
+<!-- promote packages popup -->
+<div id="promoteModelDialog" class="modal">
+    <!-- Modal content -->
+    <div class="modal-content" style="width:950px;height:auto;">
+        <div class="anc_kbtn"><span id="closePromoteModelDialog" class="close" >&times;</span></div>
+        <div class="down_promote pr_mdl_center">
+            <h3>Export packages</h3>
+            <p>Packages are ready to be migrated</p>
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="dwn_grid">
+                        <a href="javascript:downloadBuild()">
+                            <img src="middleware/pub/server/ui/assets/img/export_download_icon.svg">
+                            <h6>Download</h6>
+                            <p>Download the package to the local computer</p>
+                        </a>
+                    </div>
+                </div>
+                <div class="col-md-4 hide">
+                    <div class="dwn_grid">
+                        <a target="_blank" href="middleware/pub/server/ui/workspace/web/setting.html?tab=deployments">
+                            <img src="middleware/pub/server/ui/assets/img/environment.png" alt="environment"/>
+                            <h6 class="promote_instruction">Add/Link New Environment</h6>
+                            <p class="promote_instruction">Migrate your service to a new environment on the go</p>
+                        </a>
+                    </div>
+                </div>
+                <div class="col-md-4 hide">
+                    <div class="dwn_grid">
+                        <a onclick="promoteModal()" href="javascript:void(0)">
+                            <img src="middleware/pub/server/ui/assets/img/export_promote_icon.svg">
+                            <h6 class="promote_instruction">Promote to</h6>
+                            <p class="promote_instruction">Migrate the package to a different environment</p>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- promote packages popup -->
+
+<ul id="schema_editor_jsTree_contextMenu" class="menu dropdown-content">
+    <li class="menu-item menu-heading" id="menu_header_context"></li>
+    <li class="menu-item submenu">
+        <button type="button">New</button>
+        <ul class="menu secondMenuInput">
+            <li class="menu-item" ><button type="button" onclick="createInputSchema('document',currentJstreeRef);">Document</button></li>
+            <li class="menu-item" ><button type="button" onclick="createInputSchema('string',currentJstreeRef);">String</button></li>
+            <li class="menu-item" ><button type="button" onclick="createInputSchema('integer',currentJstreeRef);">Integer</button></li>
+            <li class="menu-item" ><button type="button" onclick="createInputSchema('number',currentJstreeRef);">Number</button></li>
+            <li class="menu-item" ><button type="button" onclick="createInputSchema('date',currentJstreeRef);">Date</button></li>
+            <li class="menu-item" ><button type="button" onclick="createInputSchema('boolean',currentJstreeRef);">Boolean</button></li>
+            <li class="menu-item" ><button type="button" onclick="createInputSchema('byte',currentJstreeRef);">Byte</button></li>
+            <li class="menu-item" ><button type="button" onclick="createInputSchema('javaObject',currentJstreeRef);">Object</button></li>
+        </ul>
+    </li>
+</ul>
+
+<script src="vs/loader.js"></script>
+<script src="vs/editor/editor.main.nls.js"></script>
+<script src="vs/editor/editor.main.js"></script>
+<script type="text/javascript">
+    var editor = monaco.editor.create(document.getElementById('editor-container'), {
+        value: '',
+        language: 'java'
+    });
+
+</script>
+
+<script src="middleware/pub/server/ui/assets/js/select2-init.js"></script>
+<script src="middleware/pub/server/ui/assets/js/select2.full.min.js"></script>
+<script src="middleware/pub/server/ui/assets/js/toast-notification.js"></script>
+<script src="middleware/pub/server/ui/javascript/syncloop-nonenterprise.js"></script>
+<script src="middleware/pub/server/ui/javascript/bootstrap.bundle.min.js"></script>
+<select src="https://cdn.jsdelivr.net/npm/js-cookie@2.2.1/src/js.cookie.js"></select>
+<script src="https://cdn.jsdelivr.net/npm/js-cookie@2/src/js.cookie.min.js"></script>
+
+<script>
+    //Initialize bootstrap tooltips
+    var tooltipTriggerList = [].slice.call(document.querySelectorAll('[data-bs-toggle="tooltip"]'));
+    var tooltipList = tooltipTriggerList.map( function(tooltipTriggerEl) {
+        return new bootstrap.Tooltip(tooltipTriggerEl, {
+            trigger : 'hover'
+        });
+    });
+</script>
+
+<script type="text/javascript">
+    document.querySelector("#path-copy").onclick = function () {
+        document.querySelector("#full_path").select();
+        document.execCommand("copy");
+    };
+
+</script>
+<script>
+    loadGroupsDP();
+    inputJstreeRef = createSchemaJstree('#input_schema_editor_jsTree');
+    outputJstreeRef = createSchemaJstree('#output_schema_editor_jsTree');
+    loadFile = getUrlParam("loadFile");
+    function loadRemoteFile(overwrite) {
+        if (overwrite == null)
+            overwrite = false;
+        javaImports_id = loadFile + "_java-imports";
+        javaMainCode_id = loadFile + "_java-mainCode";
+        javaWorkspace_id = loadFile + "_java-workspace";
+        if (loadFile != false) {
+            var response = syncRestRequest("/" + loadFile, "GET", "");
+            //console.log(response);
+            //alert(response.status);
+            if (response.status == 200) {
+                response = response.payload;
+                response = JSON.parse(response);
+                if (response.consumers)
+                    $("#serviceConsumers").val(response.consumers).trigger('change');
+                if (response.developers)
+                    $("#serviceDevelopers").val(response.developers).trigger('change');
+
+                //   console.log(window.atob(response.imports));
+
+
+                var javaImports_data = localStorage.getItem(javaImports_id);
+                if (javaImports_data == null || javaImports_data.trim().length == 0 || overwrite) {
+                    if (response.imports == null || response.imports.trim().length == 0)
+                        response.imports = window.btoa("import com.eka.middleware.service.DataPipeline;");
+                    var decoded = window.atob(response.imports);
+                    localStorage.setItem(javaImports_id, decoded);
+                }
+
+                var javaMainCode_data = localStorage.getItem(javaMainCode_id);
+                if (javaMainCode_data == null || javaMainCode_data.trim().length == 0 || overwrite) {
+                    if (response.main == null || response.main.trim().length == 0)
+                        localStorage.setItem(javaMainCode_id, "");
+                    else {
+                        var decoded = window.atob(response.main);
+                        localStorage.setItem(javaMainCode_id, decoded);
+                    }
+                }
+
+                var javaWorkspace_data = localStorage.getItem(javaWorkspace_id);
+                if (javaWorkspace_data == null || javaWorkspace_data.trim().length == 0 || overwrite) {
+                    if (response.staticWorkspace == null || response.staticWorkspace.trim().length == 0)
+                        localStorage.setItem(javaWorkspace_id, "");
+                    else {
+                        var decoded = window.atob(response.staticWorkspace);
+                        localStorage.setItem(javaWorkspace_id, decoded);
+                    }
+                }
+
+                removeIcons(response.input);
+                removeIcons(response.output);
+
+                for (let i = 0 ; i < response.input.length ; i++) {
+                    if ( null == response.input[i].state) {
+                        continue;
+                    }
+                    response.input[i].state.hidden = false;
+                }
+
+                for (let i = 0 ; i < response.output.length ; i++) {
+                    if ( null == response.output[i].state) {
+                        continue;
+                    }
+                    response.output[i].state.hidden = false;
+                }
+
+                var inputRef = inputJstreeRef;
+                inputRef.settings.core.data = response.input;
+                inputRef.refresh();
+
+                var outputRef = outputJstreeRef;
+                outputRef.settings.core.data = response.output;
+                outputRef.refresh();
+
+            } else {
+                var classImports_data = "import com.eka.middleware.service.DataPipeline;\nimport com.eka.middleware.service.ServiceUtils;\nimport com.eka.middleware.template.SnippetException;";
+                document.getElementById("java-imports").innerHTML = classImports_data;
+                localStorage.setItem(javaImports_id, classImports_data);
+            }
+        }
+
+
+        var tokenize = loadFile.split("/");
+        var classDef = tokenize[tokenize.length - 1];
+        classDef = classDef.replace(".service", "");
+        document.getElementById("java-class").innerHTML = "public static final class " + classDef + " {";
+
+        var packageName = loadFile.replace("files/", "").replace("/" + classDef + ".service", "");
+        packageName = "package " + packageName.split("/").join(".") + ";";
+        document.getElementById("java-package").innerHTML = packageName;
+
+        loadFromlocalstorage();
+    }
+
+    function loadFromlocalstorage() {
+
+        var decoded = localStorage.getItem(javaImports_id);
+        // alert();
+        $("#java-imports").val(decoded);
+
+        decoded = localStorage.getItem(javaMainCode_id);
+        $("#java-mainCode").val(decoded);
+
+        decoded = localStorage.getItem(javaWorkspace_id);
+        $("#java-workspace").val(decoded);
+        let pathItems =  loadFile.replace("files/", "").split("/");
+
+        let HTML = pathItems[0];
+        let filePath = "";
+        for (let i = 1 ; i < pathItems.length ; i++) {
+            filePath += "/" + pathItems[i - 1];
+
+            HTML += " > " + "<a href='javascript:focusOnElement(\"files" + filePath + "/" + pathItems[i] + "\")'>" + pathItems[i] + "</a>";
+        }
+
+        $("#currentServiceName").html(HTML);
+    }
+
+    function unLockArtifact() {
+        collecta('UNLOCK', '', 'Unlock', 'Unlocking Java Service');
+        var response = syncRestRequest("/" + loadFile.replace("files/", "artifact/unlock/"), "POST");
+        if (response.status == 200) {
+            localStorage.setItem(loadFile, "");
+            if(JSON.parse(response.payload).status=='Access denied.'){
+                var message="You don't have permission to unlock this.\nPlease check with your admin and try again.";
+                swal({
+                    title: 'Access denied.',
+                    text: message,
+                    type: 'error',
+                    confirmButtonColor: '#f2533e' // Optional: Red shade
+                });
+
+            } else {
+                var message=JSON.parse(response.payload).status;
+                swal({
+                    title: 'Accepted.',
+                    text: "You've successfully unlocked this service.",
+                    type: 'success',
+                    confirmButtonColor: '#2C61F5'  // Optional: custom blue color
+                });
+
+            }
+        } else
+           swal({
+                title: 'Rejected',
+                text: JSON.parse(response.payload).error,
+                type: 'error',
+                confirmButtonColor: '#f2533e' // Optional: Red shade
+            });
+
+    }
+
+    function lockArtifact() {
+        collecta('LOCK', '', 'Lock', 'Locking Java Service');
+        var response = syncRestRequest("/" + loadFile.replace("files/", "artifact/lock/"), "POST");
+        if (response.status == 200) {
+            localStorage.setItem(loadFile, "");
+            var message="You've successfully locked this service.";
+           swal({
+                title: 'Success!',
+                text: message,
+                type: 'success',
+                confirmButtonColor: '#2C61F5' // Optional: custom button color (blue)
+            });
+
+        } else
+            swal({
+                title: 'Rejected',
+                text: JSON.parse(response.payload).error,
+                type: 'error',
+                confirmButtonColor: '#f2533e' // Optional: red shade
+            });
+
+    }
+
+    function save() {
+        saveService(loadFile, loadFile);
+    }
+
+    function saveService(loadFile, newServiceLocation) {
+        var dataJson = {
+            "input": [],
+            "output": [],
+            "package": "",
+            "imports": "import com.eka.middleware.service.DataPipeline;",
+            "main": "",
+            "staticWorkspace": ""
+        };
+        javaImports_id = loadFile + "_java-imports";
+        javaMainCode_id = loadFile + "_java-mainCode";
+        javaWorkspace_id = loadFile + "_java-workspace";
+        //alert(classImports_id);
+        var javaImports_data = localStorage.getItem(javaImports_id);
+        if (javaImports_data == null)
+            javaImports_data = "import com.eka.middleware.service.DataPipeline;";
+        //alert(classImports_data);
+        var javaMainCode_data = localStorage.getItem(javaMainCode_id);
+        if (javaMainCode_data == null)
+            javaMainCode_data = "";
+
+        var javaWorkspace_data = localStorage.getItem(javaWorkspace_id);
+        if (javaWorkspace_data == null)
+            javaWorkspace_data = "";
+
+        var tokenize = loadFile.split("/");
+        var classDef = tokenize[tokenize.length - 1];
+        classDef = classDef.replace(".service", "");
+
+        var packageName = loadFile.replace("files/", "").replace("/" + classDef + ".service", "");
+
+        packageName = packageName.split("/").join("."); //replaceALL(packageName,"/",".");
+        dataJson.package = window.btoa("package " + packageName + ";"); //package packages.middleware.pub.server.browse;
+        dataJson.imports = window.btoa(javaImports_data);
+        //alert(dataJson.imports);
+        dataJson.main = window.btoa(javaMainCode_data);
+        dataJson.staticWorkspace = window.btoa(javaWorkspace_data);
+        dataJson.input = inputJstreeRef.get_json('#', {
+            flat: false
+        })
+
+        dataJson.output = outputJstreeRef.get_json('#', {
+            flat: false
+        })
+        removeIcons(dataJson.input);
+        removeIcons(dataJson.output);
+        dataJson.version = "v1";
+        dataJson.consumers = $("#serviceConsumers").val().toString();
+        dataJson.developers = $("#serviceDevelopers").val().toString();
+        var data = JSON.stringify(dataJson);
+
+        collecta('Save', '', 'Java_Service', 'Service : ' + loadFile.replace("files/", "service/"));
+
+        //alert(data);
+        if (data != null && data.trim().length > 0) {
+            var response = syncRestRequest("/" + newServiceLocation.replace("files/", "service/"), "POST", data);
+            if (response.status == 200) {
+                localStorage.setItem(loadFile, "");
+               swal({
+                    title: 'Saved',
+                    text: 'Your changes have been saved successfully',
+                    type: 'success',
+                    confirmButtonColor: '#2C61F5'
+                });
+
+            } else
+                swal({
+                    title: 'Not Saved',
+                    text: JSON.parse(response.payload).error,
+                    type: 'error',
+                    confirmButtonColor: '#f2533e'
+                });
+
+        } else
+           swal({
+                title: 'Rejected',
+                text: "No changes to save",
+                type: 'error',
+                confirmButtonColor: '#f2533e' // Optional: red button
+            });
+
+    }
+
+    function reload() {
+        loadRemoteFile(true);
+        location.reload();
+    }
+
+
+
+    function enableIDE(elemId, readOnly) {
+        if (readOnly != true)
+            readOnly = false;
+        var id = loadFile + "_" + elemId;
+        var javaEditor = CodeMirror.fromTextArea(document.getElementById(elemId), {
+            lineNumbers: 10,
+            matchBrackets: true,
+            readOnly: readOnly,
+            mode: "text/x-java"
+            //  firstLineNumber: 10
+        });
+        javaEditor.on("change", function(cm, change) {
+            var value = cm.getValue();
+            localStorage.setItem(id, value);
+        });
+        return javaEditor;
+    }
+
+
+
+    // enableIDE("java-package", true);
+    // enableIDE("java-imports");
+    // enableIDE("java-class", true);
+    // enableIDE("java-mainSignature", true);
+    // enableIDE("java-mainCode");
+    // enableIDE("java-mainClose", true);
+    // enableIDE("java-workspace");
+    // enableIDE("java-classClose", true);
+
+    // var mac = CodeMirror.keyMap.default == CodeMirror.keyMap.macDefault;
+    // CodeMirror.keyMap.default[(mac ? "Cmd" : "Ctrl") + "-Space"] = "autocomplete";
+
+    menu = null;
+
+    function showMenu(x, y) {
+        menu.style.left = x + 'px';
+        menu.style.top = y + 'px';
+        menu.style.display = "block";
+        menu.classList.add('show-menu');
+        //alert(menu);
+    }
+
+    function hideMenu() {
+        menu.classList.remove('show-menu');
+        menu.style.display = "none";
+    }
+
+    var to_input = false;
+    $('#input_search_panel').keyup(function () {
+        if(to_input) { clearTimeout(to_input); }
+        to_input = setTimeout(function () {
+            var v = $('#input_search_panel').val();
+            $('#input_schema_editor_jsTree').jstree(true).search(v, false, true);
+        }, 250);
+    });
+
+    var output_input = false;
+    $('#output_search_panel').keyup(function () {
+        if(output_input) { clearTimeout(output_input); }
+        output_input = setTimeout(function () {
+            var v = $('#output_search_panel').val();
+            $('#output_schema_editor_jsTree').jstree(true).search(v, false, true);
+        }, 250);
+    });
+
+    var currentJstreeRef = null;
+
+    function onContextMenu(e) {
+        console.log(e.target);
+        console.log(e.target.id);
+        if (menu != null)
+            hideMenu();
+        var contextHeader = document.getElementById('menu_header_context');
+        menu = document.getElementById('schema_editor_jsTree_contextMenu');
+        //alert(e.target.id);
+        if (e.target.id == "input_schema_editor_jsTree" || e.target.parentNode.id=="input_schema_editor_jsTree") {
+            currentJstreeRef = inputJstreeRef;
+            contextHeader.innerHTML = "Input Schema";
+            menu = document.getElementById('schema_editor_jsTree_contextMenu');
+            $("#input_schema_editor_jsTree").jstree().deselect_all(true);
+            $("#output_schema_editor_jsTree").jstree().deselect_all(true);
+        } else if (e.target.id == "output_schema_editor_jsTree" ||  e.target.parentNode.id=="output_schema_editor_jsTree") {
+            currentJstreeRef = outputJstreeRef;
+            contextHeader.innerHTML = "Output Schema";
+            menu = document.getElementById('schema_editor_jsTree_contextMenu');
+            $("#input_schema_editor_jsTree").jstree().deselect_all(true);
+            $("#output_schema_editor_jsTree").jstree().deselect_all(true);
+        } else
+            menu = null;
+        if (menu != null) {
+            e.preventDefault();
+            var yAxis = e.pageY;
+            if ((yAxis + 70) > window.innerHeight) {
+                yAxis = window.innerHeight - 70;
+            }
+            if ((yAxis + 223) > window.innerHeight) {
+                $(".secondMenuInput").addClass("secondMenuXAdjustment");
+                $(".secondMenuInput2").addClass("secondMenuXAdjustment2");
+                $(".thirdMenuInput").addClass("thirdMenuXAdjustment");
+            } else {
+                $(".secondMenuInput").removeClass("secondMenuXAdjustment");
+                $(".thirdMenuInput").removeClass("thirdMenuXAdjustment");
+            }
+            if(window.innerWidth<e.pageX+250) {
+                showMenu(e.pageX-150, yAxis);
+                $(".secondMenuInput").addClass("secondMenuYAdjustment");
+                $(".secondMenuInput2").addClass("secondMenuYAdjustment2");
+            } else {
+                $(".secondMenuInput").removeClass("secondMenuYAdjustment");
+                $(".secondMenuInput2").removeClass("secondMenuYAdjustment2");
+                showMenu(e.pageX, yAxis);
+            }
+            document.addEventListener('click', onClick, false);
+        }
+    }
+
+    function onClick(e) {
+        if (menu)
+            hideMenu();
+        document.removeEventListener('click', onClick);
+    }
+
+    document.addEventListener('contextmenu', onContextMenu, false);
+    var inputSchemaVar = document.getElementById('input_schema_editor_jsTree').firstChild;
+    inputSchemaVar.addEventListener('contextmenu', onContextMenu, false);
+</script>
+
+<script>
+    $(document).ready(function () {
+        $(".ok_close").click(function () {
+            $("#elementPropertyModalDialog, #configurePropertiesModelDialog").hide();
+        });
+        if ("#" != getQueryVariable("developers")) {
+            $("#serviceDevelopers").val(getQueryVariable("developers"));
+        }
+
+        if ("#" != getQueryVariable("consumers")) {
+            $("#serviceConsumers").val(getQueryVariable("consumers"));
+        }
+        if ("true" == getQueryVariable("silentSave")) {
+            SILENT_SAVE_ONCE = true;
+            save();
+        }
+        //focusOnElement(loadFile);
+    });
+    function fullScreen() {
+        collecta('Open', '', 'New Tab', 'Full Screen');
+        window.open("middleware/pub/server/ui/workspace/web/CodeMirror-master/mode/clike/serviceEditor.html?loadFile=" + loadFile, "_blank");
+    }
+    function updateDataType(newType, jsTree){
+        console.log(jsTree);
+        var treeRef = null;
+        if(jsTree == "#landing_arrow_jsTree"){
+            treeRef = landing_arrow_jsTree_ref;
+            var nodeVal = mapperObj.getValue(treeRef);
+            try{
+                mapperObj.setValue(treeRef, nodeVal.value, nodeVal.evaluate);
+            }
+            catch(err){
+            }
+        }
+    }
+</script>
+<script src="middleware/pub/server/ui/workspace/web/CodeMirror-master/mode/clike/serviceEditor.js"></script>
+
+<script> //Functionality to hide fullscreen button while in fullscreen
+function isinIframe() {
+    try {
+        return window.self !== window.top;
+    } catch (e) {
+        return true;
+    }
+}
+
+window.onload = function() {
+    if (!isinIframe()) {
+        var button = document.getElementById('flowFullScreen');
+        button.style.display = 'none';
+    }
+};
+</script>
+
+
+</body>
+</html>

@@ -1,0 +1,12 @@
+{
+  "latest" : {
+    "createdTS" : "",
+    "input" : [ ],
+    "output" : [ ],
+    "lockedByUser" : "admin",
+    "api" : [ ]
+  },
+  "consumers" : "",
+  "developers" : "rnd",
+  "enableServiceDocumentValidation" : false
+}

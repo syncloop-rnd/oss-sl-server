@@ -1,0 +1,34 @@
+{
+  "input" : [ {
+    "id" : "j1_1",
+    "text" : "LLMKey",
+    "li_attr" : {
+      "id" : "j1_1"
+    },
+    "a_attr" : {
+      "href" : "#",
+      "id" : "j1_1_anchor"
+    },
+    "state" : {
+      "loaded" : true,
+      "opened" : false,
+      "selected" : true,
+      "disabled" : false
+    },
+    "data" : {
+      "guid" : "04012195-ba7b-45e1-b8f2-7e8cfb1406c4",
+      "columnType" : "-1"
+    },
+    "children" : [ ],
+    "type" : "string"
+  } ],
+  "output" : [ ],
+  "package" : "cGFja2FnZSBwYWNrYWdlcy5Bd2FyZW5lc3MuZGFzaGJvYXJkLnNlcnZpY2VzLmphdmE7",
+  "imports" : "aW1wb3J0IGNvbS5la2EubWlkZGxld2FyZS5zZXJ2aWNlLkRhdGFQaXBlbGluZTsKaW1wb3J0IGNvbS5la2EubWlkZGxld2FyZS5zZXJ2aWNlLlNlcnZpY2VVdGlsczsKaW1wb3J0IGNvbS5la2EubWlkZGxld2FyZS50ZW1wbGF0ZS5TbmlwcGV0RXhjZXB0aW9uOwppbXBvcnQgYWdlbnRzLm1hbmFnZXIuQ2hhdExhbmd1YWdlTW9kZWxNYW5hZ2VyOw==",
+  "main" : "U3RyaW5nIExMTUtleSA9IGRhdGFQaXBlbGluZS5nZXRTdHJpbmcoIkxMTUtleSIpOwoKQ2hhdExhbmd1YWdlTW9kZWxNYW5hZ2VyLnVwZGF0ZURlZmF1bHRMTE0oTExNS2V5KTs=",
+  "staticWorkspace" : "",
+  "version" : "v1",
+  "consumers" : "",
+  "developers" : "administrators",
+  "lockedByUser" : "admin"
+}

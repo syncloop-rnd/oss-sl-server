@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>CodeMirror: properties mode</title>
+  <base href="/"><script src="env.js"></script>
+  <script>
+    window.ENV = window.env || {};
+  </script>
+<meta charset="utf-8"/>
+<link rel=stylesheet href="middleware/pub/server/ui/workspace/web/CodeMirror-master/doc/docs.css">
+<link rel="stylesheet" href="middleware/pub/server/ui/workspace/web/CodeMirror-master/lib/codemirror.css">
+<script src="middleware/pub/server/ui/workspace/web/CodeMirror-master/lib/codemirror.js"></script>
+<script src="middleware/pub/server/ui/workspace/web/CodeMirror-master/addon/edit/matchbrackets.js"></script>
+<script src="middleware/pub/server/ui/workspace/web/CodeMirror-master/addon/comment/continuecomment.js"></script>
+<script src="middleware/pub/server/ui/workspace/web/CodeMirror-master/addon/comment/comment.js"></script>
+<script src="middleware/pub/server/ui/javascript/sweetalert.min.js"></script>
+<script src="middleware/pub/server/ui/javascript/sweetalert.init.js"></script>
+<script src="middleware/pub/server/ui/workspace/web/CodeMirror-master/mode/properties/properties.js"></script>
+<script	src="middleware/pub/server/ui/javascript/jquery.min.js"></script>
+<script src="middleware/pub/server/ui/javascript/middleware.js"></script>
+<link rel="stylesheet" href="middleware/pub/server/ui/css/middleware.css">
+<link rel="stylesheet" href="middleware/pub/server/ui/css/sweetalert.css" />
+<link rel="stylesheet" href="middleware/pub/server/ui/css/tooltip.css" />
+<style>.CodeMirror {height:96%;width:100%}</style>
+
+  <script type="syncloop/analytics"></script>
+</head>
+<body style="width:100%;height:100%;">
+<script type="syncloop/body-analytics"></script>
+<div class="navbar">
+  <div class="srv-icon nw_s_icons prp">
+      <button type="button" data-bs-toggle="tooltip" data-bs-placement="bottom" title="Save" onclick="save();"><svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 18 18" fill="none">
+        <path d="M12 17V12H6V17M17 6.82843V15C17 16.1046 16.1046 17 15 17H3C1.89543 17 1 16.1046 1 15V3C1 1.89543 1.89543 1 3 1H11.1716C11.702 1 12.2107 1.21071 12.5858 1.58579L16.4142 5.41421C16.7893 5.78929 17 6.29799 17 6.82843Z" stroke="#33363F" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round"/>
+        </svg>
+      </button>
+      <button type="button" data-bs-toggle="tooltip" data-bs-placement="bottom" title="Reload" onclick="location.reload();">
+        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="18" viewBox="0 0 16 18" fill="none">
+					<path d="M6.7049 6.71754L10.7541 4.37971L8.41631 0.330472" stroke="#33363F" stroke-width="1.3"/>
+					<path d="M13.4509 8.28131C13.8007 9.58689 13.7099 10.9714 13.1927 12.2202C12.6754 13.4689 11.7606 14.5121 10.59 15.1879C9.41949 15.8637 8.05865 16.1344 6.71857 15.958C5.3785 15.7816 4.13408 15.1679 3.17833 14.2122C2.22258 13.2564 1.6089 12.012 1.43248 10.6719C1.25605 9.33184 1.52674 7.971 2.20256 6.80045C2.87838 5.62989 3.92156 4.71505 5.17031 4.1978C6.41906 3.68055 7.8036 3.5898 9.10918 3.93963" stroke="#33363F" stroke-width="1.3" stroke-linecap="round"/>
+					</svg>
+      </button>
+  </div>
+</div><div style="margin-left:100px; height:40px;padding-top:4px;" id="currentServiceName"></div>
+<div style="width:100%;height:100%;overflow:hidden;"><textarea id="code" name="code">
+         </textarea>
+</div>
+
+<script src="middleware/pub/server/ui/assets/js/toast-notification.js"></script>
+<script src="middleware/pub/server/ui/javascript/syncloop-nonenterprise.js"></script>
+<script src="middleware/pub/server/ui/javascript/bootstrap.bundle.min.js"></script>
+
+<script>
+//Initialize bootstrap tooltips
+var tooltipTriggerList = [].slice.call(document.querySelectorAll('[data-bs-toggle="tooltip"]'));
+var tooltipList = tooltipTriggerList.map( function(tooltipTriggerEl) {
+  return new bootstrap.Tooltip(tooltipTriggerEl, {
+  trigger : 'hover'
+  });
+});
+</script>
+<script>
+  loadFile = getUrlParam("loadFile");
+  let pathItems =  loadFile.replace("files/", "").split("/");
+
+  let HTML = pathItems[0];
+  let filePath = "";
+  for (let i = 1 ; i < pathItems.length ; i++) {
+    filePath += "/" + pathItems[i - 1];
+
+    HTML += " > " + "<a href='javascript:focusOnElement(\"files" + filePath + "/" + pathItems[i] + "\")'>" + pathItems[i] + "</a>";
+  }
+  $("#currentServiceName").html(HTML);
+  var response = syncRestRequest("/" + loadFile, "GET", "");
+  if (response.status == 200) {
+    response = response.payload;
+    $("#code").val(response);
+  } else {
+    console.log(response.payload);
+  }
+  if (document.getElementById("code").innerHTML.trim() == ""){
+    //document.getElementById("code").value = "driver=\nusername=\npassword=\nurl=jdbc:[database_connector_name]://[connection_url]:[port]/[database_name]?[parameters]\npoll=1\n";
+  }
+  var editor = CodeMirror.fromTextArea(document.getElementById("code"), {
+    lineNumbers: true,
+    matchBrackets: true,
+    continueComments: "Enter",
+    extraKeys: {
+      "Ctrl-Q": "toggleComment"
+    }
+  });
+
+  function save() {
+    collecta('Save', '', 'JDBC', 'Service : ' + loadFile);
+    data = editor.getValue();
+    let trimmedData = data.split('\n')
+      .map(line => line.trim())
+      .join('\n');
+    var response = syncRestRequest("/" + loadFile, "POST", trimmedData, "application/text", "application/text");
+    if (response.status == 200) {
+      //localStorage.setItem(loadFile, "");
+      //alert("Saved");
+      swal({
+        title: "Saved !!",
+        text: "Your changes have been saved successfully",
+        type: "success",
+        confirmButtonColor: "#2C61F5" // optional custom color
+      });
+
+    } else
+      //alert(JSON.parse(response.payload).error);
+      swal({
+        title: 'Error',
+        text: JSON.parse(response.payload).error,
+        icon: 'error',
+        confirmButtonColor: '#f2533e' // Optional red shade
+      });
+
+  }
+  focusOnElement(loadFile);
+</script>
+</body>
+</html>

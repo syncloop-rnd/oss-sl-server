@@ -1,0 +1,1884 @@
+2025-01-23 22:29:55.218986+05:30 jdbc[3]: exception
+java.sql.SQLClientInfoException: Client info name 'ApplicationName' not supported.
+	at org.h2.jdbc.JdbcConnection.setClientInfo(JdbcConnection.java:1624)
+	at org.jkiss.dbeaver.ext.generic.model.GenericDataSource.populateClientAppName(GenericDataSource.java:200)
+	at org.jkiss.dbeaver.ext.generic.model.GenericDataSource.openConnection(GenericDataSource.java:163)
+	at org.jkiss.dbeaver.ext.h2.model.H2DataSource.openConnection(H2DataSource.java:74)
+	at org.jkiss.dbeaver.model.impl.jdbc.JDBCExecutionContext.connect(JDBCExecutionContext.java:124)
+	at org.jkiss.dbeaver.model.impl.jdbc.JDBCRemoteInstance.initializeMainContext(JDBCRemoteInstance.java:102)
+	at org.jkiss.dbeaver.model.impl.jdbc.JDBCRemoteInstance.<init>(JDBCRemoteInstance.java:61)
+	at org.jkiss.dbeaver.model.impl.jdbc.JDBCDataSource.initializeRemoteInstance(JDBCDataSource.java:125)
+	at org.jkiss.dbeaver.ext.generic.model.GenericDataSource.<init>(GenericDataSource.java:125)
+	at org.jkiss.dbeaver.ext.h2.model.H2DataSource.<init>(H2DataSource.java:43)
+	at org.jkiss.dbeaver.ext.h2.model.H2MetaModel.createDataSourceImpl(H2MetaModel.java:56)
+	at org.jkiss.dbeaver.ext.generic.GenericDataSourceProvider.openDataSource(GenericDataSourceProvider.java:57)
+	at org.jkiss.dbeaver.registry.DataSourceDescriptor.openDataSource(DataSourceDescriptor.java:1395)
+	at org.jkiss.dbeaver.registry.DataSourceDescriptor.connect0(DataSourceDescriptor.java:1266)
+	at org.jkiss.dbeaver.registry.DataSourceDescriptor.connect(DataSourceDescriptor.java:1056)
+	at org.jkiss.dbeaver.runtime.jobs.ConnectJob.run(ConnectJob.java:78)
+	at org.jkiss.dbeaver.runtime.jobs.ConnectJob.runSync(ConnectJob.java:109)
+	at org.jkiss.dbeaver.ui.actions.datasource.DataSourceHandler.connectToDataSource(DataSourceHandler.java:123)
+	at org.jkiss.dbeaver.ui.actions.datasource.UIServiceConnectionsImpl.initConnection(UIServiceConnectionsImpl.java:87)
+	at org.jkiss.dbeaver.model.DBUtils.initDataSource(DBUtils.java:2456)
+	at org.jkiss.dbeaver.model.navigator.DBNDataSource.initializeNode(DBNDataSource.java:159)
+	at org.jkiss.dbeaver.model.navigator.DBNDatabaseNode.getChildren(DBNDatabaseNode.java:226)
+	at org.jkiss.dbeaver.model.navigator.DBNDatabaseNode.getChildren(DBNDatabaseNode.java:1)
+	at org.jkiss.dbeaver.model.navigator.DBNUtils.getNodeChildrenFiltered(DBNUtils.java:94)
+	at org.jkiss.dbeaver.ui.navigator.database.load.TreeLoadService.evaluate(TreeLoadService.java:49)
+	at org.jkiss.dbeaver.ui.navigator.database.load.TreeLoadService.evaluate(TreeLoadService.java:1)
+	at org.jkiss.dbeaver.ui.LoadingJob.run(LoadingJob.java:88)
+	at org.jkiss.dbeaver.model.runtime.AbstractJob.run(AbstractJob.java:119)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:63)
+2025-01-23 22:32:59.349935+05:30 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Column "KEY_SEQ" not found [42122-232]
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:514)
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:489)
+	at org.h2.message.DbException.get(DbException.java:223)
+	at org.h2.message.DbException.get(DbException.java:199)
+	at org.h2.jdbc.JdbcResultSet.getColumnIndex(JdbcResultSet.java:3492)
+	at org.h2.jdbc.JdbcResultSet.getInt(JdbcResultSet.java:337)
+	at org.jkiss.dbeaver.model.impl.jdbc.exec.JDBCResultSetImpl.getInt(JDBCResultSetImpl.java:510)
+	at org.jkiss.dbeaver.model.impl.jdbc.JDBCUtils.safeGetInt(JDBCUtils.java:116)
+	at org.jkiss.dbeaver.ext.generic.model.GenericUtils.safeGetInt(GenericUtils.java:84)
+	at org.jkiss.dbeaver.ext.generic.model.meta.GenericMetaModel.createConstraintColumnsImpl(GenericMetaModel.java:949)
+	at org.jkiss.dbeaver.ext.h2.model.H2MetaModel.createConstraintColumnsImpl(H2MetaModel.java:179)
+	at org.jkiss.dbeaver.ext.generic.model.ConstraintKeysCache.fetchObjectRow(ConstraintKeysCache.java:98)
+	at org.jkiss.dbeaver.ext.generic.model.ConstraintKeysCache.fetchObjectRow(ConstraintKeysCache.java:1)
+	at org.jkiss.dbeaver.model.impl.jdbc.cache.JDBCCompositeCache.loadObjects(JDBCCompositeCache.java:365)
+	at org.jkiss.dbeaver.model.impl.jdbc.cache.JDBCCompositeCache.getObjects(JDBCCompositeCache.java:123)
+	at org.jkiss.dbeaver.ext.generic.model.GenericObjectContainer.cacheStructure(GenericObjectContainer.java:264)
+	at org.jkiss.dbeaver.ext.generic.model.GenericObjectContainer.refreshObject(GenericObjectContainer.java:439)
+	at org.jkiss.dbeaver.model.navigator.DBNDatabaseNode.lambda$0(DBNDatabaseNode.java:362)
+	at org.jkiss.dbeaver.model.exec.DBExecUtils.tryExecuteRecover(DBExecUtils.java:192)
+	at org.jkiss.dbeaver.model.navigator.DBNDatabaseNode.refreshNode(DBNDatabaseNode.java:360)
+	at org.jkiss.dbeaver.ui.navigator.actions.NavigatorHandlerRefresh$1.run(NavigatorHandlerRefresh.java:188)
+	at org.jkiss.dbeaver.model.runtime.AbstractJob.run(AbstractJob.java:119)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:63)
+2025-01-23 22:32:59.350935+05:30 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Column "KEY_SEQ" not found [42122-232]
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:514)
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:489)
+	at org.h2.message.DbException.get(DbException.java:223)
+	at org.h2.message.DbException.get(DbException.java:199)
+	at org.h2.jdbc.JdbcResultSet.getColumnIndex(JdbcResultSet.java:3492)
+	at org.h2.jdbc.JdbcResultSet.getInt(JdbcResultSet.java:337)
+	at org.jkiss.dbeaver.model.impl.jdbc.exec.JDBCResultSetImpl.getInt(JDBCResultSetImpl.java:510)
+	at org.jkiss.dbeaver.model.impl.jdbc.JDBCUtils.safeGetInt(JDBCUtils.java:116)
+	at org.jkiss.dbeaver.ext.generic.model.GenericUtils.safeGetInt(GenericUtils.java:84)
+	at org.jkiss.dbeaver.ext.generic.model.meta.GenericMetaModel.createConstraintColumnsImpl(GenericMetaModel.java:949)
+	at org.jkiss.dbeaver.ext.h2.model.H2MetaModel.createConstraintColumnsImpl(H2MetaModel.java:179)
+	at org.jkiss.dbeaver.ext.generic.model.ConstraintKeysCache.fetchObjectRow(ConstraintKeysCache.java:98)
+	at org.jkiss.dbeaver.ext.generic.model.ConstraintKeysCache.fetchObjectRow(ConstraintKeysCache.java:1)
+	at org.jkiss.dbeaver.model.impl.jdbc.cache.JDBCCompositeCache.loadObjects(JDBCCompositeCache.java:365)
+	at org.jkiss.dbeaver.model.impl.jdbc.cache.JDBCCompositeCache.getObjects(JDBCCompositeCache.java:123)
+	at org.jkiss.dbeaver.ext.generic.model.GenericObjectContainer.cacheStructure(GenericObjectContainer.java:264)
+	at org.jkiss.dbeaver.ext.generic.model.GenericObjectContainer.refreshObject(GenericObjectContainer.java:439)
+	at org.jkiss.dbeaver.model.navigator.DBNDatabaseNode.lambda$0(DBNDatabaseNode.java:362)
+	at org.jkiss.dbeaver.model.exec.DBExecUtils.tryExecuteRecover(DBExecUtils.java:192)
+	at org.jkiss.dbeaver.model.navigator.DBNDatabaseNode.refreshNode(DBNDatabaseNode.java:360)
+	at org.jkiss.dbeaver.ui.navigator.actions.NavigatorHandlerRefresh$1.run(NavigatorHandlerRefresh.java:188)
+	at org.jkiss.dbeaver.model.runtime.AbstractJob.run(AbstractJob.java:119)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:63)
+2025-01-24 00:16:49.591130+05:30 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Column "KEY_SEQ" not found [42122-232]
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:514)
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:489)
+	at org.h2.message.DbException.get(DbException.java:223)
+	at org.h2.message.DbException.get(DbException.java:199)
+	at org.h2.jdbc.JdbcResultSet.getColumnIndex(JdbcResultSet.java:3492)
+	at org.h2.jdbc.JdbcResultSet.getInt(JdbcResultSet.java:337)
+	at org.jkiss.dbeaver.model.impl.jdbc.exec.JDBCResultSetImpl.getInt(JDBCResultSetImpl.java:510)
+	at org.jkiss.dbeaver.model.impl.jdbc.JDBCUtils.safeGetInt(JDBCUtils.java:116)
+	at org.jkiss.dbeaver.ext.generic.model.GenericUtils.safeGetInt(GenericUtils.java:84)
+	at org.jkiss.dbeaver.ext.generic.model.meta.GenericMetaModel.createConstraintColumnsImpl(GenericMetaModel.java:949)
+	at org.jkiss.dbeaver.ext.h2.model.H2MetaModel.createConstraintColumnsImpl(H2MetaModel.java:179)
+	at org.jkiss.dbeaver.ext.generic.model.ConstraintKeysCache.fetchObjectRow(ConstraintKeysCache.java:98)
+	at org.jkiss.dbeaver.ext.generic.model.ConstraintKeysCache.fetchObjectRow(ConstraintKeysCache.java:1)
+	at org.jkiss.dbeaver.model.impl.jdbc.cache.JDBCCompositeCache.loadObjects(JDBCCompositeCache.java:365)
+	at org.jkiss.dbeaver.model.impl.jdbc.cache.JDBCCompositeCache.getObjects(JDBCCompositeCache.java:123)
+	at org.jkiss.dbeaver.ext.generic.model.GenericObjectContainer.cacheStructure(GenericObjectContainer.java:264)
+	at org.jkiss.dbeaver.ext.generic.model.GenericObjectContainer.refreshObject(GenericObjectContainer.java:439)
+	at org.jkiss.dbeaver.model.navigator.DBNDatabaseNode.lambda$0(DBNDatabaseNode.java:362)
+	at org.jkiss.dbeaver.model.exec.DBExecUtils.tryExecuteRecover(DBExecUtils.java:192)
+	at org.jkiss.dbeaver.model.navigator.DBNDatabaseNode.refreshNode(DBNDatabaseNode.java:360)
+	at org.jkiss.dbeaver.ui.navigator.actions.NavigatorHandlerRefresh$1.run(NavigatorHandlerRefresh.java:188)
+	at org.jkiss.dbeaver.model.runtime.AbstractJob.run(AbstractJob.java:119)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:63)
+2025-01-24 00:16:49.593131+05:30 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Column "KEY_SEQ" not found [42122-232]
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:514)
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:489)
+	at org.h2.message.DbException.get(DbException.java:223)
+	at org.h2.message.DbException.get(DbException.java:199)
+	at org.h2.jdbc.JdbcResultSet.getColumnIndex(JdbcResultSet.java:3492)
+	at org.h2.jdbc.JdbcResultSet.getInt(JdbcResultSet.java:337)
+	at org.jkiss.dbeaver.model.impl.jdbc.exec.JDBCResultSetImpl.getInt(JDBCResultSetImpl.java:510)
+	at org.jkiss.dbeaver.model.impl.jdbc.JDBCUtils.safeGetInt(JDBCUtils.java:116)
+	at org.jkiss.dbeaver.ext.generic.model.GenericUtils.safeGetInt(GenericUtils.java:84)
+	at org.jkiss.dbeaver.ext.generic.model.meta.GenericMetaModel.createConstraintColumnsImpl(GenericMetaModel.java:949)
+	at org.jkiss.dbeaver.ext.h2.model.H2MetaModel.createConstraintColumnsImpl(H2MetaModel.java:179)
+	at org.jkiss.dbeaver.ext.generic.model.ConstraintKeysCache.fetchObjectRow(ConstraintKeysCache.java:98)
+	at org.jkiss.dbeaver.ext.generic.model.ConstraintKeysCache.fetchObjectRow(ConstraintKeysCache.java:1)
+	at org.jkiss.dbeaver.model.impl.jdbc.cache.JDBCCompositeCache.loadObjects(JDBCCompositeCache.java:365)
+	at org.jkiss.dbeaver.model.impl.jdbc.cache.JDBCCompositeCache.getObjects(JDBCCompositeCache.java:123)
+	at org.jkiss.dbeaver.ext.generic.model.GenericObjectContainer.cacheStructure(GenericObjectContainer.java:264)
+	at org.jkiss.dbeaver.ext.generic.model.GenericObjectContainer.refreshObject(GenericObjectContainer.java:439)
+	at org.jkiss.dbeaver.model.navigator.DBNDatabaseNode.lambda$0(DBNDatabaseNode.java:362)
+	at org.jkiss.dbeaver.model.exec.DBExecUtils.tryExecuteRecover(DBExecUtils.java:192)
+	at org.jkiss.dbeaver.model.navigator.DBNDatabaseNode.refreshNode(DBNDatabaseNode.java:360)
+	at org.jkiss.dbeaver.ui.navigator.actions.NavigatorHandlerRefresh$1.run(NavigatorHandlerRefresh.java:188)
+	at org.jkiss.dbeaver.model.runtime.AbstractJob.run(AbstractJob.java:119)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:63)
+2025-01-24 00:18:04.929262+05:30 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Column "KEY_SEQ" not found [42122-232]
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:514)
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:489)
+	at org.h2.message.DbException.get(DbException.java:223)
+	at org.h2.message.DbException.get(DbException.java:199)
+	at org.h2.jdbc.JdbcResultSet.getColumnIndex(JdbcResultSet.java:3492)
+	at org.h2.jdbc.JdbcResultSet.getInt(JdbcResultSet.java:337)
+	at org.jkiss.dbeaver.model.impl.jdbc.exec.JDBCResultSetImpl.getInt(JDBCResultSetImpl.java:510)
+	at org.jkiss.dbeaver.model.impl.jdbc.JDBCUtils.safeGetInt(JDBCUtils.java:116)
+	at org.jkiss.dbeaver.ext.generic.model.GenericUtils.safeGetInt(GenericUtils.java:84)
+	at org.jkiss.dbeaver.ext.generic.model.meta.GenericMetaModel.createConstraintColumnsImpl(GenericMetaModel.java:949)
+	at org.jkiss.dbeaver.ext.h2.model.H2MetaModel.createConstraintColumnsImpl(H2MetaModel.java:179)
+	at org.jkiss.dbeaver.ext.generic.model.ConstraintKeysCache.fetchObjectRow(ConstraintKeysCache.java:98)
+	at org.jkiss.dbeaver.ext.generic.model.ConstraintKeysCache.fetchObjectRow(ConstraintKeysCache.java:1)
+	at org.jkiss.dbeaver.model.impl.jdbc.cache.JDBCCompositeCache.loadObjects(JDBCCompositeCache.java:365)
+	at org.jkiss.dbeaver.model.impl.jdbc.cache.JDBCCompositeCache.getObjects(JDBCCompositeCache.java:123)
+	at org.jkiss.dbeaver.ext.generic.model.GenericObjectContainer.cacheStructure(GenericObjectContainer.java:264)
+	at org.jkiss.dbeaver.ext.generic.model.GenericObjectContainer.refreshObject(GenericObjectContainer.java:439)
+	at org.jkiss.dbeaver.model.navigator.DBNDatabaseNode.lambda$0(DBNDatabaseNode.java:362)
+	at org.jkiss.dbeaver.model.exec.DBExecUtils.tryExecuteRecover(DBExecUtils.java:192)
+	at org.jkiss.dbeaver.model.navigator.DBNDatabaseNode.refreshNode(DBNDatabaseNode.java:360)
+	at org.jkiss.dbeaver.ui.navigator.actions.NavigatorHandlerRefresh$1.run(NavigatorHandlerRefresh.java:188)
+	at org.jkiss.dbeaver.model.runtime.AbstractJob.run(AbstractJob.java:119)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:63)
+2025-01-24 00:18:04.929262+05:30 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Column "KEY_SEQ" not found [42122-232]
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:514)
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:489)
+	at org.h2.message.DbException.get(DbException.java:223)
+	at org.h2.message.DbException.get(DbException.java:199)
+	at org.h2.jdbc.JdbcResultSet.getColumnIndex(JdbcResultSet.java:3492)
+	at org.h2.jdbc.JdbcResultSet.getInt(JdbcResultSet.java:337)
+	at org.jkiss.dbeaver.model.impl.jdbc.exec.JDBCResultSetImpl.getInt(JDBCResultSetImpl.java:510)
+	at org.jkiss.dbeaver.model.impl.jdbc.JDBCUtils.safeGetInt(JDBCUtils.java:116)
+	at org.jkiss.dbeaver.ext.generic.model.GenericUtils.safeGetInt(GenericUtils.java:84)
+	at org.jkiss.dbeaver.ext.generic.model.meta.GenericMetaModel.createConstraintColumnsImpl(GenericMetaModel.java:949)
+	at org.jkiss.dbeaver.ext.h2.model.H2MetaModel.createConstraintColumnsImpl(H2MetaModel.java:179)
+	at org.jkiss.dbeaver.ext.generic.model.ConstraintKeysCache.fetchObjectRow(ConstraintKeysCache.java:98)
+	at org.jkiss.dbeaver.ext.generic.model.ConstraintKeysCache.fetchObjectRow(ConstraintKeysCache.java:1)
+	at org.jkiss.dbeaver.model.impl.jdbc.cache.JDBCCompositeCache.loadObjects(JDBCCompositeCache.java:365)
+	at org.jkiss.dbeaver.model.impl.jdbc.cache.JDBCCompositeCache.getObjects(JDBCCompositeCache.java:123)
+	at org.jkiss.dbeaver.ext.generic.model.GenericObjectContainer.cacheStructure(GenericObjectContainer.java:264)
+	at org.jkiss.dbeaver.ext.generic.model.GenericObjectContainer.refreshObject(GenericObjectContainer.java:439)
+	at org.jkiss.dbeaver.model.navigator.DBNDatabaseNode.lambda$0(DBNDatabaseNode.java:362)
+	at org.jkiss.dbeaver.model.exec.DBExecUtils.tryExecuteRecover(DBExecUtils.java:192)
+	at org.jkiss.dbeaver.model.navigator.DBNDatabaseNode.refreshNode(DBNDatabaseNode.java:360)
+	at org.jkiss.dbeaver.ui.navigator.actions.NavigatorHandlerRefresh$1.run(NavigatorHandlerRefresh.java:188)
+	at org.jkiss.dbeaver.model.runtime.AbstractJob.run(AbstractJob.java:119)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:63)
+2025-01-24 11:07:19.816728+05:30 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Column "ID" not found; SQL statement:
+SELECT id, "serviceFqn","cron","enabled","job_name"
+FROM "Schedulers" WHERE "enabled" = 'Y'; [42122-232]
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:514)
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:489)
+	at org.h2.message.DbException.get(DbException.java:223)
+	at org.h2.message.DbException.get(DbException.java:199)
+	at org.h2.expression.ExpressionColumn.getColumnException(ExpressionColumn.java:244)
+	at org.h2.expression.ExpressionColumn.optimizeOther(ExpressionColumn.java:226)
+	at org.h2.expression.ExpressionColumn.optimize(ExpressionColumn.java:213)
+	at org.h2.command.query.Select.prepareExpressions(Select.java:1228)
+	at org.h2.command.query.Query.prepare(Query.java:232)
+	at org.h2.command.Parser.prepareCommand(Parser.java:489)
+	at org.h2.engine.SessionLocal.prepareLocal(SessionLocal.java:645)
+	at org.h2.engine.SessionLocal.prepareCommand(SessionLocal.java:561)
+	at org.h2.jdbc.JdbcConnection.prepareCommand(JdbcConnection.java:1164)
+	at org.h2.jdbc.JdbcPreparedStatement.<init>(JdbcPreparedStatement.java:93)
+	at org.h2.jdbc.JdbcConnection.prepareStatement(JdbcConnection.java:315)
+	at org.apache.commons.dbcp2.DelegatingConnection.prepareStatement(DelegatingConnection.java:696)
+	at org.apache.commons.dbcp2.DelegatingConnection.prepareStatement(DelegatingConnection.java:696)
+	at com.eka.middleware.adapter.SQL.DQL(SQL.java:87)
+	at com.eka.middleware.adapter.SqlResolver.execute(SqlResolver.java:102)
+	at packages.scheduler.cronJob.adapter.services.DQL.getSchedulerJobData.main(getSchedulerJobData.java:52)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at com.eka.middleware.server.ServiceManager.invokeJavaMethod(ServiceManager.java:131)
+	at com.eka.middleware.service.ServiceUtils.execute(ServiceUtils.java:380)
+	at com.eka.middleware.service.DataPipeline.apply(DataPipeline.java:718)
+	at com.eka.middleware.flow.Api.process(Api.java:110)
+	at com.eka.middleware.flow.FlowResolver.execute(FlowResolver.java:67)
+	at com.eka.middleware.service.ServiceUtils.beforeServiceExecution(ServiceUtils.java:1826)
+	at packages.scheduler.cronJob.handler.loadJobsAndStartScheduler.main(loadJobsAndStartScheduler.java:37)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at com.eka.middleware.server.ServiceManager.invokeJavaMethod(ServiceManager.java:131)
+	at com.eka.middleware.service.ServiceUtils.execute(ServiceUtils.java:380)
+	at com.eka.middleware.service.DataPipeline.apply(DataPipeline.java:718)
+	at com.eka.middleware.flow.Api.process(Api.java:110)
+	at com.eka.middleware.flow.FlowResolver.execute(FlowResolver.java:67)
+	at com.eka.middleware.service.ServiceUtils.beforeServiceExecution(ServiceUtils.java:1826)
+	at packages.scheduler.cronJob.handler.startSchedulerAndLoadJobs.main(startSchedulerAndLoadJobs.java:37)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at com.eka.middleware.server.ServiceManager.invokeJavaMethod(ServiceManager.java:131)
+	at com.eka.middleware.service.ServiceUtils.execute(ServiceUtils.java:380)
+	at com.eka.middleware.service.DataPipeline.apply(DataPipeline.java:718)
+	at com.eka.middleware.service.DataPipeline.apply(DataPipeline.java:670)
+	at packages.middleware.pub.service.utils.execute.main(execute.java:17)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at com.eka.middleware.server.ServiceManager.invokeJavaMethod(ServiceManager.java:131)
+	at com.eka.middleware.service.DataPipeline.lambda$applyAsync$12(DataPipeline.java:1018)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:317)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1144)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:642)
+	at java.base/java.lang.Thread.run(Thread.java:1583)
+2025-01-24 12:16:16.702682+05:30 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Column "ID" not found; SQL statement:
+SELECT id, "serviceFqn","cron","enabled","job_name"
+FROM "Schedulers" WHERE "enabled" = 'Y'; [42122-232]
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:514)
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:489)
+	at org.h2.message.DbException.get(DbException.java:223)
+	at org.h2.message.DbException.get(DbException.java:199)
+	at org.h2.expression.ExpressionColumn.getColumnException(ExpressionColumn.java:244)
+	at org.h2.expression.ExpressionColumn.optimizeOther(ExpressionColumn.java:226)
+	at org.h2.expression.ExpressionColumn.optimize(ExpressionColumn.java:213)
+	at org.h2.command.query.Select.prepareExpressions(Select.java:1228)
+	at org.h2.command.query.Query.prepare(Query.java:232)
+	at org.h2.command.Parser.prepareCommand(Parser.java:489)
+	at org.h2.engine.SessionLocal.prepareLocal(SessionLocal.java:645)
+	at org.h2.engine.SessionLocal.prepareCommand(SessionLocal.java:561)
+	at org.h2.jdbc.JdbcConnection.prepareCommand(JdbcConnection.java:1164)
+	at org.h2.jdbc.JdbcPreparedStatement.<init>(JdbcPreparedStatement.java:93)
+	at org.h2.jdbc.JdbcConnection.prepareStatement(JdbcConnection.java:315)
+	at org.apache.commons.dbcp2.DelegatingConnection.prepareStatement(DelegatingConnection.java:696)
+	at org.apache.commons.dbcp2.DelegatingConnection.prepareStatement(DelegatingConnection.java:696)
+	at com.eka.middleware.adapter.SQL.DQL(SQL.java:87)
+	at com.eka.middleware.adapter.SqlResolver.execute(SqlResolver.java:144)
+	at packages.scheduler.cronJob.adapter.services.DQL.getSchedulerJobData.main(getSchedulerJobData.java:52)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at com.eka.middleware.server.ServiceManager.invokeJavaMethod(ServiceManager.java:131)
+	at com.eka.middleware.service.ServiceUtils.execute(ServiceUtils.java:380)
+	at com.eka.middleware.service.DataPipeline.apply(DataPipeline.java:718)
+	at com.eka.middleware.flow.Api.process(Api.java:110)
+	at com.eka.middleware.flow.FlowResolver.execute(FlowResolver.java:67)
+	at com.eka.middleware.service.ServiceUtils.beforeServiceExecution(ServiceUtils.java:1826)
+	at packages.scheduler.cronJob.handler.loadJobsAndStartScheduler.main(loadJobsAndStartScheduler.java:37)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at com.eka.middleware.server.ServiceManager.invokeJavaMethod(ServiceManager.java:131)
+	at com.eka.middleware.service.ServiceUtils.execute(ServiceUtils.java:380)
+	at com.eka.middleware.service.DataPipeline.apply(DataPipeline.java:718)
+	at com.eka.middleware.flow.Api.process(Api.java:110)
+	at com.eka.middleware.flow.FlowResolver.execute(FlowResolver.java:67)
+	at com.eka.middleware.service.ServiceUtils.beforeServiceExecution(ServiceUtils.java:1826)
+	at packages.scheduler.cronJob.handler.startSchedulerAndLoadJobs.main(startSchedulerAndLoadJobs.java:37)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at com.eka.middleware.server.ServiceManager.invokeJavaMethod(ServiceManager.java:131)
+	at com.eka.middleware.service.ServiceUtils.execute(ServiceUtils.java:380)
+	at com.eka.middleware.service.DataPipeline.apply(DataPipeline.java:718)
+	at com.eka.middleware.service.DataPipeline.apply(DataPipeline.java:670)
+	at packages.middleware.pub.service.utils.execute.main(execute.java:17)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at com.eka.middleware.server.ServiceManager.invokeJavaMethod(ServiceManager.java:131)
+	at com.eka.middleware.service.DataPipeline.lambda$applyAsync$12(DataPipeline.java:1018)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:317)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1144)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:642)
+	at java.base/java.lang.Thread.run(Thread.java:1583)
+2025-01-24 15:43:57.701513+05:30 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Column "ID" not found; SQL statement:
+SELECT id, "serviceFqn","cron","enabled","job_name"
+FROM "Schedulers" WHERE "enabled" = 'Y'; [42122-232]
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:514)
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:489)
+	at org.h2.message.DbException.get(DbException.java:223)
+	at org.h2.message.DbException.get(DbException.java:199)
+	at org.h2.expression.ExpressionColumn.getColumnException(ExpressionColumn.java:244)
+	at org.h2.expression.ExpressionColumn.optimizeOther(ExpressionColumn.java:226)
+	at org.h2.expression.ExpressionColumn.optimize(ExpressionColumn.java:213)
+	at org.h2.command.query.Select.prepareExpressions(Select.java:1228)
+	at org.h2.command.query.Query.prepare(Query.java:232)
+	at org.h2.command.Parser.prepareCommand(Parser.java:489)
+	at org.h2.engine.SessionLocal.prepareLocal(SessionLocal.java:645)
+	at org.h2.engine.SessionLocal.prepareCommand(SessionLocal.java:561)
+	at org.h2.jdbc.JdbcConnection.prepareCommand(JdbcConnection.java:1164)
+	at org.h2.jdbc.JdbcPreparedStatement.<init>(JdbcPreparedStatement.java:93)
+	at org.h2.jdbc.JdbcConnection.prepareStatement(JdbcConnection.java:315)
+	at org.apache.commons.dbcp2.DelegatingConnection.prepareStatement(DelegatingConnection.java:696)
+	at org.apache.commons.dbcp2.DelegatingConnection.prepareStatement(DelegatingConnection.java:696)
+	at com.eka.middleware.adapter.SQL.DQL(SQL.java:87)
+	at com.eka.middleware.adapter.SqlResolver.execute(SqlResolver.java:144)
+	at packages.scheduler.cronJob.adapter.services.DQL.getSchedulerJobData.main(getSchedulerJobData.java:52)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at com.eka.middleware.server.ServiceManager.invokeJavaMethod(ServiceManager.java:131)
+	at com.eka.middleware.service.ServiceUtils.execute(ServiceUtils.java:380)
+	at com.eka.middleware.service.DataPipeline.apply(DataPipeline.java:718)
+	at com.eka.middleware.flow.Api.process(Api.java:110)
+	at com.eka.middleware.flow.FlowResolver.execute(FlowResolver.java:67)
+	at com.eka.middleware.service.ServiceUtils.beforeServiceExecution(ServiceUtils.java:1826)
+	at packages.scheduler.cronJob.handler.loadJobsAndStartScheduler.main(loadJobsAndStartScheduler.java:37)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at com.eka.middleware.server.ServiceManager.invokeJavaMethod(ServiceManager.java:131)
+	at com.eka.middleware.service.ServiceUtils.execute(ServiceUtils.java:380)
+	at com.eka.middleware.service.DataPipeline.apply(DataPipeline.java:718)
+	at com.eka.middleware.flow.Api.process(Api.java:110)
+	at com.eka.middleware.flow.FlowResolver.execute(FlowResolver.java:67)
+	at com.eka.middleware.service.ServiceUtils.beforeServiceExecution(ServiceUtils.java:1826)
+	at packages.scheduler.cronJob.handler.startSchedulerAndLoadJobs.main(startSchedulerAndLoadJobs.java:37)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at com.eka.middleware.server.ServiceManager.invokeJavaMethod(ServiceManager.java:131)
+	at com.eka.middleware.service.ServiceUtils.execute(ServiceUtils.java:380)
+	at com.eka.middleware.service.DataPipeline.apply(DataPipeline.java:718)
+	at com.eka.middleware.service.DataPipeline.apply(DataPipeline.java:670)
+	at packages.middleware.pub.service.utils.execute.main(execute.java:17)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at com.eka.middleware.server.ServiceManager.invokeJavaMethod(ServiceManager.java:131)
+	at com.eka.middleware.service.DataPipeline.lambda$applyAsync$12(DataPipeline.java:1018)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:317)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1144)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:642)
+	at java.base/java.lang.Thread.run(Thread.java:1583)
+2025-01-24 16:09:17.936569+05:30 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Column "ID" not found; SQL statement:
+SELECT id, "serviceFqn","cron","enabled","job_name"
+FROM "Schedulers" WHERE "enabled" = 'Y'; [42122-232]
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:514)
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:489)
+	at org.h2.message.DbException.get(DbException.java:223)
+	at org.h2.message.DbException.get(DbException.java:199)
+	at org.h2.expression.ExpressionColumn.getColumnException(ExpressionColumn.java:244)
+	at org.h2.expression.ExpressionColumn.optimizeOther(ExpressionColumn.java:226)
+	at org.h2.expression.ExpressionColumn.optimize(ExpressionColumn.java:213)
+	at org.h2.command.query.Select.prepareExpressions(Select.java:1228)
+	at org.h2.command.query.Query.prepare(Query.java:232)
+	at org.h2.command.Parser.prepareCommand(Parser.java:489)
+	at org.h2.engine.SessionLocal.prepareLocal(SessionLocal.java:645)
+	at org.h2.engine.SessionLocal.prepareCommand(SessionLocal.java:561)
+	at org.h2.jdbc.JdbcConnection.prepareCommand(JdbcConnection.java:1164)
+	at org.h2.jdbc.JdbcPreparedStatement.<init>(JdbcPreparedStatement.java:93)
+	at org.h2.jdbc.JdbcConnection.prepareStatement(JdbcConnection.java:315)
+	at org.apache.commons.dbcp2.DelegatingConnection.prepareStatement(DelegatingConnection.java:696)
+	at org.apache.commons.dbcp2.DelegatingConnection.prepareStatement(DelegatingConnection.java:696)
+	at com.eka.middleware.adapter.SQL.DQL(SQL.java:87)
+	at com.eka.middleware.adapter.SqlResolver.execute(SqlResolver.java:144)
+	at packages.scheduler.cronJob.adapter.services.DQL.getSchedulerJobData.main(getSchedulerJobData.java:52)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at com.eka.middleware.server.ServiceManager.invokeJavaMethod(ServiceManager.java:131)
+	at com.eka.middleware.service.ServiceUtils.execute(ServiceUtils.java:380)
+	at com.eka.middleware.service.DataPipeline.apply(DataPipeline.java:718)
+	at com.eka.middleware.flow.Api.process(Api.java:110)
+	at com.eka.middleware.flow.FlowResolver.execute(FlowResolver.java:67)
+	at com.eka.middleware.service.ServiceUtils.beforeServiceExecution(ServiceUtils.java:1826)
+	at packages.scheduler.cronJob.handler.loadJobsAndStartScheduler.main(loadJobsAndStartScheduler.java:37)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at com.eka.middleware.server.ServiceManager.invokeJavaMethod(ServiceManager.java:131)
+	at com.eka.middleware.service.ServiceUtils.execute(ServiceUtils.java:380)
+	at com.eka.middleware.service.DataPipeline.apply(DataPipeline.java:718)
+	at com.eka.middleware.flow.Api.process(Api.java:110)
+	at com.eka.middleware.flow.FlowResolver.execute(FlowResolver.java:67)
+	at com.eka.middleware.service.ServiceUtils.beforeServiceExecution(ServiceUtils.java:1826)
+	at packages.scheduler.cronJob.handler.startSchedulerAndLoadJobs.main(startSchedulerAndLoadJobs.java:37)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at com.eka.middleware.server.ServiceManager.invokeJavaMethod(ServiceManager.java:131)
+	at com.eka.middleware.service.ServiceUtils.execute(ServiceUtils.java:380)
+	at com.eka.middleware.service.DataPipeline.apply(DataPipeline.java:718)
+	at com.eka.middleware.service.DataPipeline.apply(DataPipeline.java:670)
+	at packages.middleware.pub.service.utils.execute.main(execute.java:17)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at com.eka.middleware.server.ServiceManager.invokeJavaMethod(ServiceManager.java:131)
+	at com.eka.middleware.service.DataPipeline.lambda$applyAsync$12(DataPipeline.java:1018)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:317)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1144)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:642)
+	at java.base/java.lang.Thread.run(Thread.java:1583)
+2025-01-29 11:00:19.540773+05:30 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Column "ID" not found; SQL statement:
+SELECT "serviceFqn" FROM "Schedulers" WHERE id = ?; [42122-232]
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:514)
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:489)
+	at org.h2.message.DbException.get(DbException.java:223)
+	at org.h2.message.DbException.get(DbException.java:199)
+	at org.h2.expression.ExpressionColumn.getColumnException(ExpressionColumn.java:244)
+	at org.h2.expression.ExpressionColumn.optimizeOther(ExpressionColumn.java:226)
+	at org.h2.expression.ExpressionColumn.optimize(ExpressionColumn.java:213)
+	at org.h2.expression.condition.Comparison.optimize(Comparison.java:147)
+	at org.h2.expression.Expression.optimizeCondition(Expression.java:148)
+	at org.h2.command.query.Select.prepareExpressions(Select.java:1235)
+	at org.h2.command.query.Query.prepare(Query.java:232)
+	at org.h2.command.Parser.prepareCommand(Parser.java:489)
+	at org.h2.engine.SessionLocal.prepareLocal(SessionLocal.java:645)
+	at org.h2.engine.SessionLocal.prepareCommand(SessionLocal.java:561)
+	at org.h2.jdbc.JdbcConnection.prepareCommand(JdbcConnection.java:1164)
+	at org.h2.jdbc.JdbcPreparedStatement.<init>(JdbcPreparedStatement.java:93)
+	at org.h2.jdbc.JdbcConnection.prepareStatement(JdbcConnection.java:315)
+	at org.apache.commons.dbcp2.DelegatingConnection.prepareStatement(DelegatingConnection.java:696)
+	at org.apache.commons.dbcp2.DelegatingConnection.prepareStatement(DelegatingConnection.java:696)
+	at com.eka.middleware.adapter.SQL.setStatementParameters(SQL.java:106)
+	at com.eka.middleware.adapter.SQL.DQL(SQL.java:59)
+	at com.eka.middleware.adapter.SqlResolver.execute(SqlResolver.java:144)
+	at packages.scheduler.cronJob.adapter.services.DQL.getServiceFqnById.main(getServiceFqnById.java:52)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at com.eka.middleware.server.ServiceManager.invokeJavaMethod(ServiceManager.java:131)
+	at com.eka.middleware.service.ServiceUtils.execute(ServiceUtils.java:380)
+	at com.eka.middleware.service.DataPipeline.apply(DataPipeline.java:723)
+	at com.eka.middleware.flow.Api.process(Api.java:110)
+	at com.eka.middleware.flow.FlowResolver.execute(FlowResolver.java:67)
+	at com.eka.middleware.service.ServiceUtils.beforeServiceExecution(ServiceUtils.java:1830)
+	at packages.scheduler.cronJob.handler.getServiceFqnById.main(getServiceFqnById.java:37)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at com.eka.middleware.server.ServiceManager.invokeJavaMethod(ServiceManager.java:131)
+	at com.eka.middleware.service.ServiceUtils.execute(ServiceUtils.java:380)
+	at com.eka.middleware.service.DataPipeline.apply(DataPipeline.java:723)
+	at com.eka.middleware.flow.Api.process(Api.java:110)
+	at com.eka.middleware.flow.Scope.process(Scope.java:158)
+	at com.eka.middleware.flow.TCFBlock.process(TCFBlock.java:95)
+	at com.eka.middleware.flow.FlowResolver.execute(FlowResolver.java:39)
+	at com.eka.middleware.service.ServiceUtils.beforeServiceExecution(ServiceUtils.java:1830)
+	at packages.scheduler.cronJob.api.post.updateSchedulerJob.main(updateSchedulerJob.java:37)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at com.eka.middleware.server.ServiceManager.invokeJavaMethod(ServiceManager.java:131)
+	at com.eka.middleware.server.ThreadManager.processRequest(ThreadManager.java:408)
+	at com.eka.middleware.auth.pac4j.AuthHandlers$3.handleRequest(AuthHandlers.java:178)
+	at org.pac4j.undertow.handler.SecurityHandler.lambda$handleRequest$1(SecurityHandler.java:84)
+	at org.pac4j.core.engine.DefaultSecurityLogic.perform(DefaultSecurityLogic.java:141)
+	at org.pac4j.undertow.handler.SecurityHandler.handleRequest(SecurityHandler.java:82)
+	at io.undertow.server.Connectors.executeRootHandler(Connectors.java:387)
+	at io.undertow.server.HttpServerExchange$1.run(HttpServerExchange.java:859)
+	at org.jboss.threads.ContextClassLoaderSavingRunnable.run(ContextClassLoaderSavingRunnable.java:35)
+	at org.jboss.threads.EnhancedQueueExecutor.safeRun(EnhancedQueueExecutor.java:2019)
+	at org.jboss.threads.EnhancedQueueExecutor$ThreadBody.doRunTask(EnhancedQueueExecutor.java:1558)
+	at org.jboss.threads.EnhancedQueueExecutor$ThreadBody.run(EnhancedQueueExecutor.java:1449)
+	at org.xnio.XnioWorker$WorkerThreadFactory$1$1.run(XnioWorker.java:1282)
+	at java.base/java.lang.Thread.run(Thread.java:1583)
+2025-01-29 11:00:20.473720+05:30 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Column "ID" not found; SQL statement:
+SELECT "serviceFqn" FROM "Schedulers" WHERE id = ?; [42122-232]
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:514)
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:489)
+	at org.h2.message.DbException.get(DbException.java:223)
+	at org.h2.message.DbException.get(DbException.java:199)
+	at org.h2.expression.ExpressionColumn.getColumnException(ExpressionColumn.java:244)
+	at org.h2.expression.ExpressionColumn.optimizeOther(ExpressionColumn.java:226)
+	at org.h2.expression.ExpressionColumn.optimize(ExpressionColumn.java:213)
+	at org.h2.expression.condition.Comparison.optimize(Comparison.java:147)
+	at org.h2.expression.Expression.optimizeCondition(Expression.java:148)
+	at org.h2.command.query.Select.prepareExpressions(Select.java:1235)
+	at org.h2.command.query.Query.prepare(Query.java:232)
+	at org.h2.command.Parser.prepareCommand(Parser.java:489)
+	at org.h2.engine.SessionLocal.prepareLocal(SessionLocal.java:645)
+	at org.h2.engine.SessionLocal.prepareCommand(SessionLocal.java:561)
+	at org.h2.jdbc.JdbcConnection.prepareCommand(JdbcConnection.java:1164)
+	at org.h2.jdbc.JdbcPreparedStatement.<init>(JdbcPreparedStatement.java:93)
+	at org.h2.jdbc.JdbcConnection.prepareStatement(JdbcConnection.java:315)
+	at org.apache.commons.dbcp2.DelegatingConnection.prepareStatement(DelegatingConnection.java:696)
+	at org.apache.commons.dbcp2.DelegatingConnection.prepareStatement(DelegatingConnection.java:696)
+	at com.eka.middleware.adapter.SQL.setStatementParameters(SQL.java:106)
+	at com.eka.middleware.adapter.SQL.DQL(SQL.java:59)
+	at com.eka.middleware.adapter.SqlResolver.execute(SqlResolver.java:144)
+	at packages.scheduler.cronJob.adapter.services.DQL.getServiceFqnById.main(getServiceFqnById.java:52)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at com.eka.middleware.server.ServiceManager.invokeJavaMethod(ServiceManager.java:131)
+	at com.eka.middleware.service.ServiceUtils.execute(ServiceUtils.java:380)
+	at com.eka.middleware.service.DataPipeline.apply(DataPipeline.java:723)
+	at com.eka.middleware.flow.Api.process(Api.java:110)
+	at com.eka.middleware.flow.FlowResolver.execute(FlowResolver.java:67)
+	at com.eka.middleware.service.ServiceUtils.beforeServiceExecution(ServiceUtils.java:1830)
+	at packages.scheduler.cronJob.handler.getServiceFqnById.main(getServiceFqnById.java:37)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at com.eka.middleware.server.ServiceManager.invokeJavaMethod(ServiceManager.java:131)
+	at com.eka.middleware.service.ServiceUtils.execute(ServiceUtils.java:380)
+	at com.eka.middleware.service.DataPipeline.apply(DataPipeline.java:723)
+	at com.eka.middleware.flow.Api.process(Api.java:110)
+	at com.eka.middleware.flow.Scope.process(Scope.java:158)
+	at com.eka.middleware.flow.TCFBlock.process(TCFBlock.java:95)
+	at com.eka.middleware.flow.FlowResolver.execute(FlowResolver.java:39)
+	at com.eka.middleware.service.ServiceUtils.beforeServiceExecution(ServiceUtils.java:1830)
+	at packages.scheduler.cronJob.api.post.updateSchedulerJob.main(updateSchedulerJob.java:37)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at com.eka.middleware.server.ServiceManager.invokeJavaMethod(ServiceManager.java:131)
+	at com.eka.middleware.server.ThreadManager.processRequest(ThreadManager.java:408)
+	at com.eka.middleware.auth.pac4j.AuthHandlers$3.handleRequest(AuthHandlers.java:178)
+	at org.pac4j.undertow.handler.SecurityHandler.lambda$handleRequest$1(SecurityHandler.java:84)
+	at org.pac4j.core.engine.DefaultSecurityLogic.perform(DefaultSecurityLogic.java:141)
+	at org.pac4j.undertow.handler.SecurityHandler.handleRequest(SecurityHandler.java:82)
+	at io.undertow.server.Connectors.executeRootHandler(Connectors.java:387)
+	at io.undertow.server.HttpServerExchange$1.run(HttpServerExchange.java:859)
+	at org.jboss.threads.ContextClassLoaderSavingRunnable.run(ContextClassLoaderSavingRunnable.java:35)
+	at org.jboss.threads.EnhancedQueueExecutor.safeRun(EnhancedQueueExecutor.java:2019)
+	at org.jboss.threads.EnhancedQueueExecutor$ThreadBody.doRunTask(EnhancedQueueExecutor.java:1558)
+	at org.jboss.threads.EnhancedQueueExecutor$ThreadBody.run(EnhancedQueueExecutor.java:1449)
+	at org.xnio.XnioWorker$WorkerThreadFactory$1$1.run(XnioWorker.java:1282)
+	at java.base/java.lang.Thread.run(Thread.java:1583)
+2025-01-29 11:34:56.075787+05:30 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Column "ID" not found; SQL statement:
+DELETE FROM "Schedulers"
+WHERE id=?; [42122-232]
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:514)
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:489)
+	at org.h2.message.DbException.get(DbException.java:223)
+	at org.h2.message.DbException.get(DbException.java:199)
+	at org.h2.expression.ExpressionColumn.getColumnException(ExpressionColumn.java:244)
+	at org.h2.expression.ExpressionColumn.optimizeOther(ExpressionColumn.java:226)
+	at org.h2.expression.ExpressionColumn.optimize(ExpressionColumn.java:213)
+	at org.h2.expression.condition.Comparison.optimize(Comparison.java:147)
+	at org.h2.expression.Expression.optimizeCondition(Expression.java:148)
+	at org.h2.command.dml.Delete.doPrepare(Delete.java:110)
+	at org.h2.command.dml.DataChangeStatement.prepare(DataChangeStatement.java:37)
+	at org.h2.command.Parser.prepareCommand(Parser.java:489)
+	at org.h2.engine.SessionLocal.prepareLocal(SessionLocal.java:645)
+	at org.h2.engine.SessionLocal.prepareCommand(SessionLocal.java:561)
+	at org.h2.jdbc.JdbcConnection.prepareCommand(JdbcConnection.java:1164)
+	at org.h2.jdbc.JdbcPreparedStatement.<init>(JdbcPreparedStatement.java:93)
+	at org.h2.jdbc.JdbcConnection.prepareStatement(JdbcConnection.java:315)
+	at org.apache.commons.dbcp2.DelegatingConnection.prepareStatement(DelegatingConnection.java:696)
+	at org.apache.commons.dbcp2.DelegatingConnection.prepareStatement(DelegatingConnection.java:696)
+	at com.eka.middleware.adapter.SQL.DML(SQL.java:234)
+	at com.eka.middleware.adapter.SqlResolver.execute(SqlResolver.java:154)
+	at packages.scheduler.cronJob.adapter.services.DML.deleterScheduler.main(deleterScheduler.java:52)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at com.eka.middleware.server.ServiceManager.invokeJavaMethod(ServiceManager.java:131)
+	at com.eka.middleware.service.ServiceUtils.execute(ServiceUtils.java:380)
+	at com.eka.middleware.service.DataPipeline.apply(DataPipeline.java:723)
+	at com.eka.middleware.flow.Api.process(Api.java:110)
+	at com.eka.middleware.flow.FlowResolver.execute(FlowResolver.java:67)
+	at com.eka.middleware.service.ServiceUtils.beforeServiceExecution(ServiceUtils.java:1830)
+	at packages.scheduler.cronJob.api.delete.deleteSchedulerJob.main(deleteSchedulerJob.java:37)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at com.eka.middleware.server.ServiceManager.invokeJavaMethod(ServiceManager.java:131)
+	at com.eka.middleware.server.ThreadManager.processRequest(ThreadManager.java:408)
+	at com.eka.middleware.auth.pac4j.AuthHandlers$3.handleRequest(AuthHandlers.java:178)
+	at org.pac4j.undertow.handler.SecurityHandler.lambda$handleRequest$1(SecurityHandler.java:84)
+	at org.pac4j.core.engine.DefaultSecurityLogic.perform(DefaultSecurityLogic.java:141)
+	at org.pac4j.undertow.handler.SecurityHandler.handleRequest(SecurityHandler.java:82)
+	at io.undertow.server.Connectors.executeRootHandler(Connectors.java:387)
+	at io.undertow.server.HttpServerExchange$1.run(HttpServerExchange.java:859)
+	at org.jboss.threads.ContextClassLoaderSavingRunnable.run(ContextClassLoaderSavingRunnable.java:35)
+	at org.jboss.threads.EnhancedQueueExecutor.safeRun(EnhancedQueueExecutor.java:2019)
+	at org.jboss.threads.EnhancedQueueExecutor$ThreadBody.doRunTask(EnhancedQueueExecutor.java:1558)
+	at org.jboss.threads.EnhancedQueueExecutor$ThreadBody.run(EnhancedQueueExecutor.java:1449)
+	at org.xnio.XnioWorker$WorkerThreadFactory$1$1.run(XnioWorker.java:1282)
+	at java.base/java.lang.Thread.run(Thread.java:1583)
+2025-01-30 12:02:40.437435+05:30 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Column "ID" not found; SQL statement:
+SELECT "serviceFqn" FROM "Schedulers" WHERE id = ?; [42122-232]
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:514)
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:489)
+	at org.h2.message.DbException.get(DbException.java:223)
+	at org.h2.message.DbException.get(DbException.java:199)
+	at org.h2.expression.ExpressionColumn.getColumnException(ExpressionColumn.java:244)
+	at org.h2.expression.ExpressionColumn.optimizeOther(ExpressionColumn.java:226)
+	at org.h2.expression.ExpressionColumn.optimize(ExpressionColumn.java:213)
+	at org.h2.expression.condition.Comparison.optimize(Comparison.java:147)
+	at org.h2.expression.Expression.optimizeCondition(Expression.java:148)
+	at org.h2.command.query.Select.prepareExpressions(Select.java:1235)
+	at org.h2.command.query.Query.prepare(Query.java:232)
+	at org.h2.command.Parser.prepareCommand(Parser.java:489)
+	at org.h2.engine.SessionLocal.prepareLocal(SessionLocal.java:645)
+	at org.h2.engine.SessionLocal.prepareCommand(SessionLocal.java:561)
+	at org.h2.jdbc.JdbcConnection.prepareCommand(JdbcConnection.java:1164)
+	at org.h2.jdbc.JdbcPreparedStatement.<init>(JdbcPreparedStatement.java:93)
+	at org.h2.jdbc.JdbcConnection.prepareStatement(JdbcConnection.java:315)
+	at org.apache.commons.dbcp2.DelegatingConnection.prepareStatement(DelegatingConnection.java:696)
+	at org.apache.commons.dbcp2.DelegatingConnection.prepareStatement(DelegatingConnection.java:696)
+	at com.eka.middleware.adapter.SQL.setStatementParameters(SQL.java:106)
+	at com.eka.middleware.adapter.SQL.DQL(SQL.java:59)
+	at com.eka.middleware.adapter.SqlResolver.execute(SqlResolver.java:144)
+	at packages.scheduler.cronJob.adapter.services.DQL.getServiceFqnById.main(getServiceFqnById.java:52)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at com.eka.middleware.server.ServiceManager.invokeJavaMethod(ServiceManager.java:131)
+	at com.eka.middleware.service.ServiceUtils.execute(ServiceUtils.java:380)
+	at com.eka.middleware.service.DataPipeline.apply(DataPipeline.java:723)
+	at com.eka.middleware.flow.Api.process(Api.java:110)
+	at com.eka.middleware.flow.FlowResolver.execute(FlowResolver.java:67)
+	at com.eka.middleware.service.ServiceUtils.beforeServiceExecution(ServiceUtils.java:1830)
+	at packages.scheduler.cronJob.handler.getServiceFqnById.main(getServiceFqnById.java:37)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at com.eka.middleware.server.ServiceManager.invokeJavaMethod(ServiceManager.java:131)
+	at com.eka.middleware.service.ServiceUtils.execute(ServiceUtils.java:380)
+	at com.eka.middleware.service.DataPipeline.apply(DataPipeline.java:723)
+	at com.eka.middleware.flow.Api.process(Api.java:110)
+	at com.eka.middleware.flow.Scope.process(Scope.java:158)
+	at com.eka.middleware.flow.TCFBlock.process(TCFBlock.java:95)
+	at com.eka.middleware.flow.FlowResolver.execute(FlowResolver.java:39)
+	at com.eka.middleware.service.ServiceUtils.beforeServiceExecution(ServiceUtils.java:1830)
+	at packages.scheduler.cronJob.api.post.updateSchedulerJob.main(updateSchedulerJob.java:37)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at com.eka.middleware.server.ServiceManager.invokeJavaMethod(ServiceManager.java:131)
+	at com.eka.middleware.server.ThreadManager.processRequest(ThreadManager.java:408)
+	at com.eka.middleware.auth.pac4j.AuthHandlers$3.handleRequest(AuthHandlers.java:178)
+	at org.pac4j.undertow.handler.SecurityHandler.lambda$handleRequest$1(SecurityHandler.java:84)
+	at org.pac4j.core.engine.DefaultSecurityLogic.perform(DefaultSecurityLogic.java:141)
+	at org.pac4j.undertow.handler.SecurityHandler.handleRequest(SecurityHandler.java:82)
+	at io.undertow.server.Connectors.executeRootHandler(Connectors.java:387)
+	at io.undertow.server.HttpServerExchange$1.run(HttpServerExchange.java:859)
+	at org.jboss.threads.ContextClassLoaderSavingRunnable.run(ContextClassLoaderSavingRunnable.java:35)
+	at org.jboss.threads.EnhancedQueueExecutor.safeRun(EnhancedQueueExecutor.java:2019)
+	at org.jboss.threads.EnhancedQueueExecutor$ThreadBody.doRunTask(EnhancedQueueExecutor.java:1558)
+	at org.jboss.threads.EnhancedQueueExecutor$ThreadBody.run(EnhancedQueueExecutor.java:1449)
+	at org.xnio.XnioWorker$WorkerThreadFactory$1$1.run(XnioWorker.java:1282)
+	at java.base/java.lang.Thread.run(Thread.java:1583)
+2025-02-06 11:02:16.990328+05:30 jdbc[3]: exception
+java.sql.SQLClientInfoException: Client info name 'ApplicationName' not supported.
+	at org.h2.jdbc.JdbcConnection.setClientInfo(JdbcConnection.java:1624)
+	at org.jkiss.dbeaver.ext.generic.model.GenericDataSource.populateClientAppName(GenericDataSource.java:200)
+	at org.jkiss.dbeaver.ext.generic.model.GenericDataSource.openConnection(GenericDataSource.java:163)
+	at org.jkiss.dbeaver.ext.h2.model.H2DataSource.openConnection(H2DataSource.java:74)
+	at org.jkiss.dbeaver.model.impl.jdbc.JDBCExecutionContext.connect(JDBCExecutionContext.java:124)
+	at org.jkiss.dbeaver.model.impl.jdbc.JDBCRemoteInstance.initializeMainContext(JDBCRemoteInstance.java:102)
+	at org.jkiss.dbeaver.model.impl.jdbc.JDBCRemoteInstance.<init>(JDBCRemoteInstance.java:61)
+	at org.jkiss.dbeaver.model.impl.jdbc.JDBCDataSource.initializeRemoteInstance(JDBCDataSource.java:125)
+	at org.jkiss.dbeaver.ext.generic.model.GenericDataSource.<init>(GenericDataSource.java:125)
+	at org.jkiss.dbeaver.ext.h2.model.H2DataSource.<init>(H2DataSource.java:43)
+	at org.jkiss.dbeaver.ext.h2.model.H2MetaModel.createDataSourceImpl(H2MetaModel.java:56)
+	at org.jkiss.dbeaver.ext.generic.GenericDataSourceProvider.openDataSource(GenericDataSourceProvider.java:57)
+	at org.jkiss.dbeaver.registry.DataSourceDescriptor.openDataSource(DataSourceDescriptor.java:1395)
+	at org.jkiss.dbeaver.registry.DataSourceDescriptor.connect0(DataSourceDescriptor.java:1266)
+	at org.jkiss.dbeaver.registry.DataSourceDescriptor.connect(DataSourceDescriptor.java:1056)
+	at org.jkiss.dbeaver.ui.editors.DatabaseLazyEditorInput.initializeRealInput(DatabaseLazyEditorInput.java:262)
+	at org.jkiss.dbeaver.ui.editors.ProgressEditorPart$InitNodeService.evaluate(ProgressEditorPart.java:171)
+	at org.jkiss.dbeaver.ui.editors.ProgressEditorPart$InitNodeService.evaluate(ProgressEditorPart.java:1)
+	at org.jkiss.dbeaver.ui.LoadingJob.run(LoadingJob.java:88)
+	at org.jkiss.dbeaver.model.runtime.AbstractJob.run(AbstractJob.java:119)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:63)
+2025-02-06 11:02:18.628646+05:30 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Column "KEY_SEQ" not found [42122-232]
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:514)
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:489)
+	at org.h2.message.DbException.get(DbException.java:223)
+	at org.h2.message.DbException.get(DbException.java:199)
+	at org.h2.jdbc.JdbcResultSet.getColumnIndex(JdbcResultSet.java:3492)
+	at org.h2.jdbc.JdbcResultSet.getInt(JdbcResultSet.java:337)
+	at org.jkiss.dbeaver.model.impl.jdbc.exec.JDBCResultSetImpl.getInt(JDBCResultSetImpl.java:510)
+	at org.jkiss.dbeaver.model.impl.jdbc.JDBCUtils.safeGetInt(JDBCUtils.java:116)
+	at org.jkiss.dbeaver.ext.generic.model.GenericUtils.safeGetInt(GenericUtils.java:84)
+	at org.jkiss.dbeaver.ext.generic.model.meta.GenericMetaModel.createConstraintColumnsImpl(GenericMetaModel.java:949)
+	at org.jkiss.dbeaver.ext.h2.model.H2MetaModel.createConstraintColumnsImpl(H2MetaModel.java:179)
+	at org.jkiss.dbeaver.ext.generic.model.ConstraintKeysCache.fetchObjectRow(ConstraintKeysCache.java:98)
+	at org.jkiss.dbeaver.ext.generic.model.ConstraintKeysCache.fetchObjectRow(ConstraintKeysCache.java:1)
+	at org.jkiss.dbeaver.model.impl.jdbc.cache.JDBCCompositeCache.loadObjects(JDBCCompositeCache.java:365)
+	at org.jkiss.dbeaver.model.impl.jdbc.cache.JDBCCompositeCache.getObjects(JDBCCompositeCache.java:123)
+	at org.jkiss.dbeaver.ext.generic.model.GenericTableBase.getConstraints(GenericTableBase.java:252)
+	at org.jkiss.dbeaver.ext.generic.model.GenericTableBase.getConstraints(GenericTableBase.java:1)
+	at org.jkiss.dbeaver.model.exec.DBExecUtils.getBestIdentifier(DBExecUtils.java:541)
+	at org.jkiss.dbeaver.model.exec.DBExecUtils.bindAttributes(DBExecUtils.java:878)
+	at org.jkiss.dbeaver.ui.controls.resultset.ResultSetDataReceiver.fetchEnd(ResultSetDataReceiver.java:166)
+	at org.jkiss.dbeaver.model.impl.jdbc.struct.JDBCTable.readData(JDBCTable.java:219)
+	at org.jkiss.dbeaver.ui.controls.resultset.ResultSetJobDataRead.lambda$0(ResultSetJobDataRead.java:128)
+	at org.jkiss.dbeaver.model.exec.DBExecUtils.tryExecuteRecover(DBExecUtils.java:192)
+	at org.jkiss.dbeaver.ui.controls.resultset.ResultSetJobDataRead.run(ResultSetJobDataRead.java:126)
+	at org.jkiss.dbeaver.ui.controls.resultset.ResultSetViewer$ResultSetDataPumpJob.run(ResultSetViewer.java:5166)
+	at org.jkiss.dbeaver.model.runtime.AbstractJob.run(AbstractJob.java:119)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:63)
+2025-02-06 11:06:19.301553+05:30 jdbc[4]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Table "SCHEDULERS" not found (candidates are: "Schedulers"); SQL statement:
+UPDATE Schedulers
+SET cron=?, enabled='{enabled}', owner_node=?, status=?, 
+lasterror=?, owner_node=?, last_run=?, next_run=?,
+job_name=?
+WHERE id=?; [42103-232]
+2025-02-06 11:06:19.301553+05:30 jdbc[5]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Table "SCHEDULERS" not found (candidates are: "Schedulers"); SQL statement:
+UPDATE Schedulers
+SET cron=?, enabled='{enabled}', owner_node=?, status=?, 
+lasterror=?, owner_node=?, last_run=?, next_run=?,
+job_name=?
+WHERE id=?; [42103-232]
+2025-02-06 11:06:19.301553+05:30 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Table "SCHEDULERS" not found (candidates are: "Schedulers"); SQL statement:
+UPDATE Schedulers
+SET cron=?, enabled='{enabled}', owner_node=?, status=?, 
+lasterror=?, owner_node=?, last_run=?, next_run=?,
+job_name=?
+WHERE id=?; [42103-232]
+2025-02-06 11:06:19.320289+05:30 jdbc[4]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Table "SCHEDULERS" not found (candidates are: "Schedulers"); SQL statement:
+UPDATE Schedulers
+SET cron=?, enabled='{enabled}', owner_node=?, status=?, 
+lasterror=?, owner_node=?, last_run=?, next_run=?,
+job_name=?
+WHERE id=?; [42103-232]
+2025-02-06 11:06:19.322289+05:30 jdbc[5]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Table "SCHEDULERS" not found (candidates are: "Schedulers"); SQL statement:
+UPDATE Schedulers
+SET cron=?, enabled='{enabled}', owner_node=?, status=?, 
+lasterror=?, owner_node=?, last_run=?, next_run=?,
+job_name=?
+WHERE id=?; [42103-232]
+2025-02-06 11:06:19.322289+05:30 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Table "SCHEDULERS" not found (candidates are: "Schedulers"); SQL statement:
+UPDATE Schedulers
+SET cron=?, enabled='{enabled}', owner_node=?, status=?, 
+lasterror=?, owner_node=?, last_run=?, next_run=?,
+job_name=?
+WHERE id=?; [42103-232]
+2025-02-06 11:06:19.338290+05:30 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Table "JOB_HISTORY" not found (candidates are: "job_history"); SQL statement:
+INSERT INTO job_history (job_id,serviceFqn,error,owner_node,start_time,end_time,correlationId,sessionId,status)
+	VALUES (?,?,?,?,?, ?,?
+			,?,?); [42103-232]
+2025-02-06 11:06:19.339296+05:30 jdbc[4]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Table "JOB_HISTORY" not found (candidates are: "job_history"); SQL statement:
+INSERT INTO job_history (job_id,serviceFqn,error,owner_node,start_time,end_time,correlationId,sessionId,status)
+	VALUES (?,?,?,?,?, ?,?
+			,?,?); [42103-232]
+2025-02-06 11:06:19.339296+05:30 jdbc[5]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Table "JOB_HISTORY" not found (candidates are: "job_history"); SQL statement:
+INSERT INTO job_history (job_id,serviceFqn,error,owner_node,start_time,end_time,correlationId,sessionId,status)
+	VALUES (?,?,?,?,?, ?,?
+			,?,?); [42103-232]
+2025-02-06 11:07:00.041724+05:30 jdbc[5]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Table "SCHEDULERS" not found (candidates are: "Schedulers"); SQL statement:
+UPDATE Schedulers
+SET cron=?, enabled='{enabled}', owner_node=?, status=?, 
+lasterror=?, owner_node=?, last_run=?, next_run=?,
+job_name=?
+WHERE id=?; [42103-232]
+2025-02-06 11:07:00.041724+05:30 jdbc[4]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Table "SCHEDULERS" not found (candidates are: "Schedulers"); SQL statement:
+UPDATE Schedulers
+SET cron=?, enabled='{enabled}', owner_node=?, status=?, 
+lasterror=?, owner_node=?, last_run=?, next_run=?,
+job_name=?
+WHERE id=?; [42103-232]
+2025-02-06 11:07:00.042724+05:30 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Table "SCHEDULERS" not found (candidates are: "Schedulers"); SQL statement:
+UPDATE Schedulers
+SET cron=?, enabled='{enabled}', owner_node=?, status=?, 
+lasterror=?, owner_node=?, last_run=?, next_run=?,
+job_name=?
+WHERE id=?; [42103-232]
+2025-02-06 11:07:00.075725+05:30 jdbc[5]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Table "SCHEDULERS" not found (candidates are: "Schedulers"); SQL statement:
+UPDATE Schedulers
+SET cron=?, enabled='{enabled}', owner_node=?, status=?, 
+lasterror=?, owner_node=?, last_run=?, next_run=?,
+job_name=?
+WHERE id=?; [42103-232]
+2025-02-06 11:07:00.075725+05:30 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Table "SCHEDULERS" not found (candidates are: "Schedulers"); SQL statement:
+UPDATE Schedulers
+SET cron=?, enabled='{enabled}', owner_node=?, status=?, 
+lasterror=?, owner_node=?, last_run=?, next_run=?,
+job_name=?
+WHERE id=?; [42103-232]
+2025-02-06 11:07:00.075725+05:30 jdbc[4]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Table "SCHEDULERS" not found (candidates are: "Schedulers"); SQL statement:
+UPDATE Schedulers
+SET cron=?, enabled='{enabled}', owner_node=?, status=?, 
+lasterror=?, owner_node=?, last_run=?, next_run=?,
+job_name=?
+WHERE id=?; [42103-232]
+2025-02-06 11:07:00.104739+05:30 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Table "JOB_HISTORY" not found (candidates are: "job_history"); SQL statement:
+INSERT INTO job_history (job_id,serviceFqn,error,owner_node,start_time,end_time,correlationId,sessionId,status)
+	VALUES (?,?,?,?,?, ?,?
+			,?,?); [42103-232]
+2025-02-06 11:07:00.104739+05:30 jdbc[4]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Table "JOB_HISTORY" not found (candidates are: "job_history"); SQL statement:
+INSERT INTO job_history (job_id,serviceFqn,error,owner_node,start_time,end_time,correlationId,sessionId,status)
+	VALUES (?,?,?,?,?, ?,?
+			,?,?); [42103-232]
+2025-02-06 11:07:00.106726+05:30 jdbc[5]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Table "JOB_HISTORY" not found (candidates are: "job_history"); SQL statement:
+INSERT INTO job_history (job_id,serviceFqn,error,owner_node,start_time,end_time,correlationId,sessionId,status)
+	VALUES (?,?,?,?,?, ?,?
+			,?,?); [42103-232]
+2025-02-06 11:08:00.028625+05:30 jdbc[5]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Table "SCHEDULERS" not found (candidates are: "Schedulers"); SQL statement:
+UPDATE Schedulers
+SET cron=?, enabled='{enabled}', owner_node=?, status=?, 
+lasterror=?, owner_node=?, last_run=?, next_run=?,
+job_name=?
+WHERE id=?; [42103-232]
+2025-02-06 11:08:00.029626+05:30 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Table "SCHEDULERS" not found (candidates are: "Schedulers"); SQL statement:
+UPDATE Schedulers
+SET cron=?, enabled='{enabled}', owner_node=?, status=?, 
+lasterror=?, owner_node=?, last_run=?, next_run=?,
+job_name=?
+WHERE id=?; [42103-232]
+2025-02-06 11:08:00.029626+05:30 jdbc[4]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Table "SCHEDULERS" not found (candidates are: "Schedulers"); SQL statement:
+UPDATE Schedulers
+SET cron=?, enabled='{enabled}', owner_node=?, status=?, 
+lasterror=?, owner_node=?, last_run=?, next_run=?,
+job_name=?
+WHERE id=?; [42103-232]
+2025-02-06 11:08:00.052625+05:30 jdbc[5]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Table "SCHEDULERS" not found (candidates are: "Schedulers"); SQL statement:
+UPDATE Schedulers
+SET cron=?, enabled='{enabled}', owner_node=?, status=?, 
+lasterror=?, owner_node=?, last_run=?, next_run=?,
+job_name=?
+WHERE id=?; [42103-232]
+2025-02-06 11:08:00.052625+05:30 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Table "SCHEDULERS" not found (candidates are: "Schedulers"); SQL statement:
+UPDATE Schedulers
+SET cron=?, enabled='{enabled}', owner_node=?, status=?, 
+lasterror=?, owner_node=?, last_run=?, next_run=?,
+job_name=?
+WHERE id=?; [42103-232]
+2025-02-06 11:08:00.053624+05:30 jdbc[4]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Table "SCHEDULERS" not found (candidates are: "Schedulers"); SQL statement:
+UPDATE Schedulers
+SET cron=?, enabled='{enabled}', owner_node=?, status=?, 
+lasterror=?, owner_node=?, last_run=?, next_run=?,
+job_name=?
+WHERE id=?; [42103-232]
+2025-02-06 11:08:00.075625+05:30 jdbc[4]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Table "JOB_HISTORY" not found (candidates are: "job_history"); SQL statement:
+INSERT INTO job_history (job_id,serviceFqn,error,owner_node,start_time,end_time,correlationId,sessionId,status)
+	VALUES (?,?,?,?,?, ?,?
+			,?,?); [42103-232]
+2025-02-06 11:08:00.076625+05:30 jdbc[5]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Table "JOB_HISTORY" not found (candidates are: "job_history"); SQL statement:
+INSERT INTO job_history (job_id,serviceFqn,error,owner_node,start_time,end_time,correlationId,sessionId,status)
+	VALUES (?,?,?,?,?, ?,?
+			,?,?); [42103-232]
+2025-02-06 11:08:00.076625+05:30 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Table "JOB_HISTORY" not found (candidates are: "job_history"); SQL statement:
+INSERT INTO job_history (job_id,serviceFqn,error,owner_node,start_time,end_time,correlationId,sessionId,status)
+	VALUES (?,?,?,?,?, ?,?
+			,?,?); [42103-232]
+2025-02-06 11:09:00.034756+05:30 jdbc[4]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Table "SCHEDULERS" not found (candidates are: "Schedulers"); SQL statement:
+UPDATE Schedulers
+SET cron=?, enabled='{enabled}', owner_node=?, status=?, 
+lasterror=?, owner_node=?, last_run=?, next_run=?,
+job_name=?
+WHERE id=?; [42103-232]
+2025-02-06 11:09:00.034756+05:30 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Table "SCHEDULERS" not found (candidates are: "Schedulers"); SQL statement:
+UPDATE Schedulers
+SET cron=?, enabled='{enabled}', owner_node=?, status=?, 
+lasterror=?, owner_node=?, last_run=?, next_run=?,
+job_name=?
+WHERE id=?; [42103-232]
+2025-02-06 11:09:00.034756+05:30 jdbc[5]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Table "SCHEDULERS" not found (candidates are: "Schedulers"); SQL statement:
+UPDATE Schedulers
+SET cron=?, enabled='{enabled}', owner_node=?, status=?, 
+lasterror=?, owner_node=?, last_run=?, next_run=?,
+job_name=?
+WHERE id=?; [42103-232]
+2025-02-06 11:09:00.047330+05:30 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Table "SCHEDULERS" not found (candidates are: "Schedulers"); SQL statement:
+UPDATE Schedulers
+SET cron=?, enabled='{enabled}', owner_node=?, status=?, 
+lasterror=?, owner_node=?, last_run=?, next_run=?,
+job_name=?
+WHERE id=?; [42103-232]
+2025-02-06 11:09:00.047330+05:30 jdbc[5]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Table "SCHEDULERS" not found (candidates are: "Schedulers"); SQL statement:
+UPDATE Schedulers
+SET cron=?, enabled='{enabled}', owner_node=?, status=?, 
+lasterror=?, owner_node=?, last_run=?, next_run=?,
+job_name=?
+WHERE id=?; [42103-232]
+2025-02-06 11:09:00.047330+05:30 jdbc[4]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Table "SCHEDULERS" not found (candidates are: "Schedulers"); SQL statement:
+UPDATE Schedulers
+SET cron=?, enabled='{enabled}', owner_node=?, status=?, 
+lasterror=?, owner_node=?, last_run=?, next_run=?,
+job_name=?
+WHERE id=?; [42103-232]
+2025-02-06 11:09:00.058325+05:30 jdbc[4]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Table "JOB_HISTORY" not found (candidates are: "job_history"); SQL statement:
+INSERT INTO job_history (job_id,serviceFqn,error,owner_node,start_time,end_time,correlationId,sessionId,status)
+	VALUES (?,?,?,?,?, ?,?
+			,?,?); [42103-232]
+2025-02-06 11:09:00.058325+05:30 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Table "JOB_HISTORY" not found (candidates are: "job_history"); SQL statement:
+INSERT INTO job_history (job_id,serviceFqn,error,owner_node,start_time,end_time,correlationId,sessionId,status)
+	VALUES (?,?,?,?,?, ?,?
+			,?,?); [42103-232]
+2025-02-06 11:09:00.058325+05:30 jdbc[5]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Table "JOB_HISTORY" not found (candidates are: "job_history"); SQL statement:
+INSERT INTO job_history (job_id,serviceFqn,error,owner_node,start_time,end_time,correlationId,sessionId,status)
+	VALUES (?,?,?,?,?, ?,?
+			,?,?); [42103-232]
+2025-02-06 11:10:00.022829+05:30 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Table "SCHEDULERS" not found (candidates are: "Schedulers"); SQL statement:
+UPDATE Schedulers
+SET cron=?, enabled='{enabled}', owner_node=?, status=?, 
+lasterror=?, owner_node=?, last_run=?, next_run=?,
+job_name=?
+WHERE id=?; [42103-232]
+2025-02-06 11:10:00.022829+05:30 jdbc[4]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Table "SCHEDULERS" not found (candidates are: "Schedulers"); SQL statement:
+UPDATE Schedulers
+SET cron=?, enabled='{enabled}', owner_node=?, status=?, 
+lasterror=?, owner_node=?, last_run=?, next_run=?,
+job_name=?
+WHERE id=?; [42103-232]
+2025-02-06 11:10:00.022829+05:30 jdbc[5]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Table "SCHEDULERS" not found (candidates are: "Schedulers"); SQL statement:
+UPDATE Schedulers
+SET cron=?, enabled='{enabled}', owner_node=?, status=?, 
+lasterror=?, owner_node=?, last_run=?, next_run=?,
+job_name=?
+WHERE id=?; [42103-232]
+2025-02-06 11:10:00.035828+05:30 jdbc[4]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Table "SCHEDULERS" not found (candidates are: "Schedulers"); SQL statement:
+UPDATE Schedulers
+SET cron=?, enabled='{enabled}', owner_node=?, status=?, 
+lasterror=?, owner_node=?, last_run=?, next_run=?,
+job_name=?
+WHERE id=?; [42103-232]
+2025-02-06 11:10:00.035828+05:30 jdbc[5]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Table "SCHEDULERS" not found (candidates are: "Schedulers"); SQL statement:
+UPDATE Schedulers
+SET cron=?, enabled='{enabled}', owner_node=?, status=?, 
+lasterror=?, owner_node=?, last_run=?, next_run=?,
+job_name=?
+WHERE id=?; [42103-232]
+2025-02-06 11:10:00.035828+05:30 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Table "SCHEDULERS" not found (candidates are: "Schedulers"); SQL statement:
+UPDATE Schedulers
+SET cron=?, enabled='{enabled}', owner_node=?, status=?, 
+lasterror=?, owner_node=?, last_run=?, next_run=?,
+job_name=?
+WHERE id=?; [42103-232]
+2025-02-06 11:10:00.047825+05:30 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Table "JOB_HISTORY" not found (candidates are: "job_history"); SQL statement:
+INSERT INTO job_history (job_id,serviceFqn,error,owner_node,start_time,end_time,correlationId,sessionId,status)
+	VALUES (?,?,?,?,?, ?,?
+			,?,?); [42103-232]
+2025-02-06 11:10:00.047825+05:30 jdbc[5]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Table "JOB_HISTORY" not found (candidates are: "job_history"); SQL statement:
+INSERT INTO job_history (job_id,serviceFqn,error,owner_node,start_time,end_time,correlationId,sessionId,status)
+	VALUES (?,?,?,?,?, ?,?
+			,?,?); [42103-232]
+2025-02-06 11:10:00.047825+05:30 jdbc[4]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Table "JOB_HISTORY" not found (candidates are: "job_history"); SQL statement:
+INSERT INTO job_history (job_id,serviceFqn,error,owner_node,start_time,end_time,correlationId,sessionId,status)
+	VALUES (?,?,?,?,?, ?,?
+			,?,?); [42103-232]
+2025-02-06 11:11:00.027474+05:30 jdbc[5]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Table "SCHEDULERS" not found (candidates are: "Schedulers"); SQL statement:
+UPDATE Schedulers
+SET cron=?, enabled='{enabled}', owner_node=?, status=?, 
+lasterror=?, owner_node=?, last_run=?, next_run=?,
+job_name=?
+WHERE id=?; [42103-232]
+2025-02-06 11:11:00.027474+05:30 jdbc[4]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Table "SCHEDULERS" not found (candidates are: "Schedulers"); SQL statement:
+UPDATE Schedulers
+SET cron=?, enabled='{enabled}', owner_node=?, status=?, 
+lasterror=?, owner_node=?, last_run=?, next_run=?,
+job_name=?
+WHERE id=?; [42103-232]
+2025-02-06 11:11:00.027474+05:30 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Table "SCHEDULERS" not found (candidates are: "Schedulers"); SQL statement:
+UPDATE Schedulers
+SET cron=?, enabled='{enabled}', owner_node=?, status=?, 
+lasterror=?, owner_node=?, last_run=?, next_run=?,
+job_name=?
+WHERE id=?; [42103-232]
+2025-02-06 11:11:00.040473+05:30 jdbc[4]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Table "SCHEDULERS" not found (candidates are: "Schedulers"); SQL statement:
+UPDATE Schedulers
+SET cron=?, enabled='{enabled}', owner_node=?, status=?, 
+lasterror=?, owner_node=?, last_run=?, next_run=?,
+job_name=?
+WHERE id=?; [42103-232]
+2025-02-06 11:11:00.040473+05:30 jdbc[5]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Table "SCHEDULERS" not found (candidates are: "Schedulers"); SQL statement:
+UPDATE Schedulers
+SET cron=?, enabled='{enabled}', owner_node=?, status=?, 
+lasterror=?, owner_node=?, last_run=?, next_run=?,
+job_name=?
+WHERE id=?; [42103-232]
+2025-02-06 11:11:00.040473+05:30 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Table "SCHEDULERS" not found (candidates are: "Schedulers"); SQL statement:
+UPDATE Schedulers
+SET cron=?, enabled='{enabled}', owner_node=?, status=?, 
+lasterror=?, owner_node=?, last_run=?, next_run=?,
+job_name=?
+WHERE id=?; [42103-232]
+2025-02-06 11:11:00.051474+05:30 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Table "JOB_HISTORY" not found (candidates are: "job_history"); SQL statement:
+INSERT INTO job_history (job_id,serviceFqn,error,owner_node,start_time,end_time,correlationId,sessionId,status)
+	VALUES (?,?,?,?,?, ?,?
+			,?,?); [42103-232]
+2025-02-06 11:11:00.051474+05:30 jdbc[4]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Table "JOB_HISTORY" not found (candidates are: "job_history"); SQL statement:
+INSERT INTO job_history (job_id,serviceFqn,error,owner_node,start_time,end_time,correlationId,sessionId,status)
+	VALUES (?,?,?,?,?, ?,?
+			,?,?); [42103-232]
+2025-02-06 11:11:00.051474+05:30 jdbc[5]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Table "JOB_HISTORY" not found (candidates are: "job_history"); SQL statement:
+INSERT INTO job_history (job_id,serviceFqn,error,owner_node,start_time,end_time,correlationId,sessionId,status)
+	VALUES (?,?,?,?,?, ?,?
+			,?,?); [42103-232]
+2025-02-06 11:12:00.017312+05:30 jdbc[5]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Table "SCHEDULERS" not found (candidates are: "Schedulers"); SQL statement:
+UPDATE Schedulers
+SET cron=?, enabled='{enabled}', owner_node=?, status=?, 
+lasterror=?, owner_node=?, last_run=?, next_run=?,
+job_name=?
+WHERE id=?; [42103-232]
+2025-02-06 11:12:00.017312+05:30 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Table "SCHEDULERS" not found (candidates are: "Schedulers"); SQL statement:
+UPDATE Schedulers
+SET cron=?, enabled='{enabled}', owner_node=?, status=?, 
+lasterror=?, owner_node=?, last_run=?, next_run=?,
+job_name=?
+WHERE id=?; [42103-232]
+2025-02-06 11:12:00.017312+05:30 jdbc[4]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Table "SCHEDULERS" not found (candidates are: "Schedulers"); SQL statement:
+UPDATE Schedulers
+SET cron=?, enabled='{enabled}', owner_node=?, status=?, 
+lasterror=?, owner_node=?, last_run=?, next_run=?,
+job_name=?
+WHERE id=?; [42103-232]
+2025-02-06 11:12:00.029311+05:30 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Table "SCHEDULERS" not found (candidates are: "Schedulers"); SQL statement:
+UPDATE Schedulers
+SET cron=?, enabled='{enabled}', owner_node=?, status=?, 
+lasterror=?, owner_node=?, last_run=?, next_run=?,
+job_name=?
+WHERE id=?; [42103-232]
+2025-02-06 11:12:00.029311+05:30 jdbc[4]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Table "SCHEDULERS" not found (candidates are: "Schedulers"); SQL statement:
+UPDATE Schedulers
+SET cron=?, enabled='{enabled}', owner_node=?, status=?, 
+lasterror=?, owner_node=?, last_run=?, next_run=?,
+job_name=?
+WHERE id=?; [42103-232]
+2025-02-06 11:12:00.029311+05:30 jdbc[5]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Table "SCHEDULERS" not found (candidates are: "Schedulers"); SQL statement:
+UPDATE Schedulers
+SET cron=?, enabled='{enabled}', owner_node=?, status=?, 
+lasterror=?, owner_node=?, last_run=?, next_run=?,
+job_name=?
+WHERE id=?; [42103-232]
+2025-02-06 11:12:00.040314+05:30 jdbc[4]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Table "JOB_HISTORY" not found (candidates are: "job_history"); SQL statement:
+INSERT INTO job_history (job_id,serviceFqn,error,owner_node,start_time,end_time,correlationId,sessionId,status)
+	VALUES (?,?,?,?,?, ?,?
+			,?,?); [42103-232]
+2025-02-06 11:12:00.040314+05:30 jdbc[5]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Table "JOB_HISTORY" not found (candidates are: "job_history"); SQL statement:
+INSERT INTO job_history (job_id,serviceFqn,error,owner_node,start_time,end_time,correlationId,sessionId,status)
+	VALUES (?,?,?,?,?, ?,?
+			,?,?); [42103-232]
+2025-02-06 11:12:00.041316+05:30 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Table "JOB_HISTORY" not found (candidates are: "job_history"); SQL statement:
+INSERT INTO job_history (job_id,serviceFqn,error,owner_node,start_time,end_time,correlationId,sessionId,status)
+	VALUES (?,?,?,?,?, ?,?
+			,?,?); [42103-232]
+2025-02-06 11:13:00.034140+05:30 jdbc[5]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Table "SCHEDULERS" not found (candidates are: "Schedulers"); SQL statement:
+UPDATE Schedulers
+SET cron=?, enabled='{enabled}', owner_node=?, status=?, 
+lasterror=?, owner_node=?, last_run=?, next_run=?,
+job_name=?
+WHERE id=?; [42103-232]
+2025-02-06 11:13:00.034140+05:30 jdbc[4]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Table "SCHEDULERS" not found (candidates are: "Schedulers"); SQL statement:
+UPDATE Schedulers
+SET cron=?, enabled='{enabled}', owner_node=?, status=?, 
+lasterror=?, owner_node=?, last_run=?, next_run=?,
+job_name=?
+WHERE id=?; [42103-232]
+2025-02-06 11:13:00.034140+05:30 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Table "SCHEDULERS" not found (candidates are: "Schedulers"); SQL statement:
+UPDATE Schedulers
+SET cron=?, enabled='{enabled}', owner_node=?, status=?, 
+lasterror=?, owner_node=?, last_run=?, next_run=?,
+job_name=?
+WHERE id=?; [42103-232]
+2025-02-06 11:13:00.044137+05:30 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Table "SCHEDULERS" not found (candidates are: "Schedulers"); SQL statement:
+UPDATE Schedulers
+SET cron=?, enabled='{enabled}', owner_node=?, status=?, 
+lasterror=?, owner_node=?, last_run=?, next_run=?,
+job_name=?
+WHERE id=?; [42103-232]
+2025-02-06 11:13:00.044137+05:30 jdbc[4]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Table "SCHEDULERS" not found (candidates are: "Schedulers"); SQL statement:
+UPDATE Schedulers
+SET cron=?, enabled='{enabled}', owner_node=?, status=?, 
+lasterror=?, owner_node=?, last_run=?, next_run=?,
+job_name=?
+WHERE id=?; [42103-232]
+2025-02-06 11:13:00.044137+05:30 jdbc[5]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Table "SCHEDULERS" not found (candidates are: "Schedulers"); SQL statement:
+UPDATE Schedulers
+SET cron=?, enabled='{enabled}', owner_node=?, status=?, 
+lasterror=?, owner_node=?, last_run=?, next_run=?,
+job_name=?
+WHERE id=?; [42103-232]
+2025-02-06 11:13:00.054141+05:30 jdbc[5]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Table "JOB_HISTORY" not found (candidates are: "job_history"); SQL statement:
+INSERT INTO job_history (job_id,serviceFqn,error,owner_node,start_time,end_time,correlationId,sessionId,status)
+	VALUES (?,?,?,?,?, ?,?
+			,?,?); [42103-232]
+2025-02-06 11:13:00.054141+05:30 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Table "JOB_HISTORY" not found (candidates are: "job_history"); SQL statement:
+INSERT INTO job_history (job_id,serviceFqn,error,owner_node,start_time,end_time,correlationId,sessionId,status)
+	VALUES (?,?,?,?,?, ?,?
+			,?,?); [42103-232]
+2025-02-06 11:13:00.054141+05:30 jdbc[4]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Table "JOB_HISTORY" not found (candidates are: "job_history"); SQL statement:
+INSERT INTO job_history (job_id,serviceFqn,error,owner_node,start_time,end_time,correlationId,sessionId,status)
+	VALUES (?,?,?,?,?, ?,?
+			,?,?); [42103-232]
+2025-02-06 11:14:00.047377+05:30 jdbc[5]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Table "SCHEDULERS" not found (candidates are: "Schedulers"); SQL statement:
+UPDATE Schedulers
+SET cron=?, enabled='{enabled}', owner_node=?, status=?, 
+lasterror=?, owner_node=?, last_run=?, next_run=?,
+job_name=?
+WHERE id=?; [42103-232]
+2025-02-06 11:14:00.092375+05:30 jdbc[4]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Table "SCHEDULERS" not found (candidates are: "Schedulers"); SQL statement:
+UPDATE Schedulers
+SET cron=?, enabled='{enabled}', owner_node=?, status=?, 
+lasterror=?, owner_node=?, last_run=?, next_run=?,
+job_name=?
+WHERE id=?; [42103-232]
+2025-02-06 11:14:00.100373+05:30 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Table "SCHEDULERS" not found (candidates are: "Schedulers"); SQL statement:
+UPDATE Schedulers
+SET cron=?, enabled='{enabled}', owner_node=?, status=?, 
+lasterror=?, owner_node=?, last_run=?, next_run=?,
+job_name=?
+WHERE id=?; [42103-232]
+2025-02-06 11:14:00.102375+05:30 jdbc[5]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Table "SCHEDULERS" not found (candidates are: "Schedulers"); SQL statement:
+UPDATE Schedulers
+SET cron=?, enabled='{enabled}', owner_node=?, status=?, 
+lasterror=?, owner_node=?, last_run=?, next_run=?,
+job_name=?
+WHERE id=?; [42103-232]
+2025-02-06 11:14:00.122374+05:30 jdbc[5]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Table "SCHEDULERS" not found (candidates are: "Schedulers"); SQL statement:
+UPDATE Schedulers
+SET cron=?, enabled='{enabled}', owner_node=?, status=?, 
+lasterror=?, owner_node=?, last_run=?, next_run=?,
+job_name=?
+WHERE id=?; [42103-232]
+2025-02-06 11:14:00.127376+05:30 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Table "SCHEDULERS" not found (candidates are: "Schedulers"); SQL statement:
+UPDATE Schedulers
+SET cron=?, enabled='{enabled}', owner_node=?, status=?, 
+lasterror=?, owner_node=?, last_run=?, next_run=?,
+job_name=?
+WHERE id=?; [42103-232]
+2025-02-06 11:14:00.127376+05:30 jdbc[4]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Table "JOB_HISTORY" not found (candidates are: "job_history"); SQL statement:
+INSERT INTO job_history (job_id,serviceFqn,error,owner_node,start_time,end_time,correlationId,sessionId,status)
+	VALUES (?,?,?,?,?, ?,?
+			,?,?); [42103-232]
+2025-02-06 11:14:00.149376+05:30 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Table "JOB_HISTORY" not found (candidates are: "job_history"); SQL statement:
+INSERT INTO job_history (job_id,serviceFqn,error,owner_node,start_time,end_time,correlationId,sessionId,status)
+	VALUES (?,?,?,?,?, ?,?
+			,?,?); [42103-232]
+2025-02-06 11:14:00.176377+05:30 jdbc[4]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Table "JOB_HISTORY" not found (candidates are: "job_history"); SQL statement:
+INSERT INTO job_history (job_id,serviceFqn,error,owner_node,start_time,end_time,correlationId,sessionId,status)
+	VALUES (?,?,?,?,?, ?,?
+			,?,?); [42103-232]
+2025-02-06 11:15:00.020293+05:30 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Table "SCHEDULERS" not found (candidates are: "Schedulers"); SQL statement:
+UPDATE Schedulers
+SET cron=?, enabled='{enabled}', owner_node=?, status=?, 
+lasterror=?, owner_node=?, last_run=?, next_run=?,
+job_name=?
+WHERE id=?; [42103-232]
+2025-02-06 11:15:00.020293+05:30 jdbc[4]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Table "SCHEDULERS" not found (candidates are: "Schedulers"); SQL statement:
+UPDATE Schedulers
+SET cron=?, enabled='{enabled}', owner_node=?, status=?, 
+lasterror=?, owner_node=?, last_run=?, next_run=?,
+job_name=?
+WHERE id=?; [42103-232]
+2025-02-06 11:15:00.021298+05:30 jdbc[5]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Table "SCHEDULERS" not found (candidates are: "Schedulers"); SQL statement:
+UPDATE Schedulers
+SET cron=?, enabled='{enabled}', owner_node=?, status=?, 
+lasterror=?, owner_node=?, last_run=?, next_run=?,
+job_name=?
+WHERE id=?; [42103-232]
+2025-02-06 11:15:00.031296+05:30 jdbc[5]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Table "SCHEDULERS" not found (candidates are: "Schedulers"); SQL statement:
+UPDATE Schedulers
+SET cron=?, enabled='{enabled}', owner_node=?, status=?, 
+lasterror=?, owner_node=?, last_run=?, next_run=?,
+job_name=?
+WHERE id=?; [42103-232]
+2025-02-06 11:15:00.032293+05:30 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Table "SCHEDULERS" not found (candidates are: "Schedulers"); SQL statement:
+UPDATE Schedulers
+SET cron=?, enabled='{enabled}', owner_node=?, status=?, 
+lasterror=?, owner_node=?, last_run=?, next_run=?,
+job_name=?
+WHERE id=?; [42103-232]
+2025-02-06 11:15:00.032293+05:30 jdbc[4]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Table "SCHEDULERS" not found (candidates are: "Schedulers"); SQL statement:
+UPDATE Schedulers
+SET cron=?, enabled='{enabled}', owner_node=?, status=?, 
+lasterror=?, owner_node=?, last_run=?, next_run=?,
+job_name=?
+WHERE id=?; [42103-232]
+2025-02-06 11:15:00.041293+05:30 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Table "JOB_HISTORY" not found (candidates are: "job_history"); SQL statement:
+INSERT INTO job_history (job_id,serviceFqn,error,owner_node,start_time,end_time,correlationId,sessionId,status)
+	VALUES (?,?,?,?,?, ?,?
+			,?,?); [42103-232]
+2025-02-06 11:15:00.041293+05:30 jdbc[4]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Table "JOB_HISTORY" not found (candidates are: "job_history"); SQL statement:
+INSERT INTO job_history (job_id,serviceFqn,error,owner_node,start_time,end_time,correlationId,sessionId,status)
+	VALUES (?,?,?,?,?, ?,?
+			,?,?); [42103-232]
+2025-02-06 11:15:00.044297+05:30 jdbc[5]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Table "JOB_HISTORY" not found (candidates are: "job_history"); SQL statement:
+INSERT INTO job_history (job_id,serviceFqn,error,owner_node,start_time,end_time,correlationId,sessionId,status)
+	VALUES (?,?,?,?,?, ?,?
+			,?,?); [42103-232]
+2025-02-06 11:16:00.019221+05:30 jdbc[5]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Table "SCHEDULERS" not found (candidates are: "Schedulers"); SQL statement:
+UPDATE Schedulers
+SET cron=?, enabled='{enabled}', owner_node=?, status=?, 
+lasterror=?, owner_node=?, last_run=?, next_run=?,
+job_name=?
+WHERE id=?; [42103-232]
+2025-02-06 11:16:00.019221+05:30 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Table "SCHEDULERS" not found (candidates are: "Schedulers"); SQL statement:
+UPDATE Schedulers
+SET cron=?, enabled='{enabled}', owner_node=?, status=?, 
+lasterror=?, owner_node=?, last_run=?, next_run=?,
+job_name=?
+WHERE id=?; [42103-232]
+2025-02-06 11:16:00.019221+05:30 jdbc[4]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Table "SCHEDULERS" not found (candidates are: "Schedulers"); SQL statement:
+UPDATE Schedulers
+SET cron=?, enabled='{enabled}', owner_node=?, status=?, 
+lasterror=?, owner_node=?, last_run=?, next_run=?,
+job_name=?
+WHERE id=?; [42103-232]
+2025-02-06 11:16:00.031224+05:30 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Table "SCHEDULERS" not found (candidates are: "Schedulers"); SQL statement:
+UPDATE Schedulers
+SET cron=?, enabled='{enabled}', owner_node=?, status=?, 
+lasterror=?, owner_node=?, last_run=?, next_run=?,
+job_name=?
+WHERE id=?; [42103-232]
+2025-02-06 11:16:00.032220+05:30 jdbc[5]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Table "SCHEDULERS" not found (candidates are: "Schedulers"); SQL statement:
+UPDATE Schedulers
+SET cron=?, enabled='{enabled}', owner_node=?, status=?, 
+lasterror=?, owner_node=?, last_run=?, next_run=?,
+job_name=?
+WHERE id=?; [42103-232]
+2025-02-06 11:16:00.032220+05:30 jdbc[4]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Table "SCHEDULERS" not found (candidates are: "Schedulers"); SQL statement:
+UPDATE Schedulers
+SET cron=?, enabled='{enabled}', owner_node=?, status=?, 
+lasterror=?, owner_node=?, last_run=?, next_run=?,
+job_name=?
+WHERE id=?; [42103-232]
+2025-02-06 11:16:00.043221+05:30 jdbc[4]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Table "JOB_HISTORY" not found (candidates are: "job_history"); SQL statement:
+INSERT INTO job_history (job_id,serviceFqn,error,owner_node,start_time,end_time,correlationId,sessionId,status)
+	VALUES (?,?,?,?,?, ?,?
+			,?,?); [42103-232]
+2025-02-06 11:16:00.043221+05:30 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Table "JOB_HISTORY" not found (candidates are: "job_history"); SQL statement:
+INSERT INTO job_history (job_id,serviceFqn,error,owner_node,start_time,end_time,correlationId,sessionId,status)
+	VALUES (?,?,?,?,?, ?,?
+			,?,?); [42103-232]
+2025-02-06 11:16:00.043221+05:30 jdbc[5]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Table "JOB_HISTORY" not found (candidates are: "job_history"); SQL statement:
+INSERT INTO job_history (job_id,serviceFqn,error,owner_node,start_time,end_time,correlationId,sessionId,status)
+	VALUES (?,?,?,?,?, ?,?
+			,?,?); [42103-232]
+2025-02-06 11:17:00.019673+05:30 jdbc[5]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Table "SCHEDULERS" not found (candidates are: "Schedulers"); SQL statement:
+UPDATE Schedulers
+SET cron=?, enabled='{enabled}', owner_node=?, status=?, 
+lasterror=?, owner_node=?, last_run=?, next_run=?,
+job_name=?
+WHERE id=?; [42103-232]
+2025-02-06 11:17:00.020677+05:30 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Table "SCHEDULERS" not found (candidates are: "Schedulers"); SQL statement:
+UPDATE Schedulers
+SET cron=?, enabled='{enabled}', owner_node=?, status=?, 
+lasterror=?, owner_node=?, last_run=?, next_run=?,
+job_name=?
+WHERE id=?; [42103-232]
+2025-02-06 11:17:00.020677+05:30 jdbc[4]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Table "SCHEDULERS" not found (candidates are: "Schedulers"); SQL statement:
+UPDATE Schedulers
+SET cron=?, enabled='{enabled}', owner_node=?, status=?, 
+lasterror=?, owner_node=?, last_run=?, next_run=?,
+job_name=?
+WHERE id=?; [42103-232]
+2025-02-06 11:17:00.032673+05:30 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Table "SCHEDULERS" not found (candidates are: "Schedulers"); SQL statement:
+UPDATE Schedulers
+SET cron=?, enabled='{enabled}', owner_node=?, status=?, 
+lasterror=?, owner_node=?, last_run=?, next_run=?,
+job_name=?
+WHERE id=?; [42103-232]
+2025-02-06 11:17:00.032673+05:30 jdbc[4]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Table "SCHEDULERS" not found (candidates are: "Schedulers"); SQL statement:
+UPDATE Schedulers
+SET cron=?, enabled='{enabled}', owner_node=?, status=?, 
+lasterror=?, owner_node=?, last_run=?, next_run=?,
+job_name=?
+WHERE id=?; [42103-232]
+2025-02-06 11:17:00.033678+05:30 jdbc[5]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Table "SCHEDULERS" not found (candidates are: "Schedulers"); SQL statement:
+UPDATE Schedulers
+SET cron=?, enabled='{enabled}', owner_node=?, status=?, 
+lasterror=?, owner_node=?, last_run=?, next_run=?,
+job_name=?
+WHERE id=?; [42103-232]
+2025-02-06 11:17:00.045677+05:30 jdbc[5]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Table "JOB_HISTORY" not found (candidates are: "job_history"); SQL statement:
+INSERT INTO job_history (job_id,serviceFqn,error,owner_node,start_time,end_time,correlationId,sessionId,status)
+	VALUES (?,?,?,?,?, ?,?
+			,?,?); [42103-232]
+2025-02-06 11:17:00.046676+05:30 jdbc[4]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Table "JOB_HISTORY" not found (candidates are: "job_history"); SQL statement:
+INSERT INTO job_history (job_id,serviceFqn,error,owner_node,start_time,end_time,correlationId,sessionId,status)
+	VALUES (?,?,?,?,?, ?,?
+			,?,?); [42103-232]
+2025-02-06 11:17:00.046676+05:30 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Table "JOB_HISTORY" not found (candidates are: "job_history"); SQL statement:
+INSERT INTO job_history (job_id,serviceFqn,error,owner_node,start_time,end_time,correlationId,sessionId,status)
+	VALUES (?,?,?,?,?, ?,?
+			,?,?); [42103-232]
+2025-02-06 11:18:00.036781+05:30 jdbc[4]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Table "SCHEDULERS" not found (candidates are: "Schedulers"); SQL statement:
+UPDATE Schedulers
+SET cron=?, enabled='{enabled}', owner_node=?, status=?, 
+lasterror=?, owner_node=?, last_run=?, next_run=?,
+job_name=?
+WHERE id=?; [42103-232]
+2025-02-06 11:18:00.036781+05:30 jdbc[5]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Table "SCHEDULERS" not found (candidates are: "Schedulers"); SQL statement:
+UPDATE Schedulers
+SET cron=?, enabled='{enabled}', owner_node=?, status=?, 
+lasterror=?, owner_node=?, last_run=?, next_run=?,
+job_name=?
+WHERE id=?; [42103-232]
+2025-02-06 11:18:00.036781+05:30 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Table "SCHEDULERS" not found (candidates are: "Schedulers"); SQL statement:
+UPDATE Schedulers
+SET cron=?, enabled='{enabled}', owner_node=?, status=?, 
+lasterror=?, owner_node=?, last_run=?, next_run=?,
+job_name=?
+WHERE id=?; [42103-232]
+2025-02-06 11:18:00.048780+05:30 jdbc[4]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Table "SCHEDULERS" not found (candidates are: "Schedulers"); SQL statement:
+UPDATE Schedulers
+SET cron=?, enabled='{enabled}', owner_node=?, status=?, 
+lasterror=?, owner_node=?, last_run=?, next_run=?,
+job_name=?
+WHERE id=?; [42103-232]
+2025-02-06 11:18:00.048780+05:30 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Table "SCHEDULERS" not found (candidates are: "Schedulers"); SQL statement:
+UPDATE Schedulers
+SET cron=?, enabled='{enabled}', owner_node=?, status=?, 
+lasterror=?, owner_node=?, last_run=?, next_run=?,
+job_name=?
+WHERE id=?; [42103-232]
+2025-02-06 11:18:00.048780+05:30 jdbc[5]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Table "SCHEDULERS" not found (candidates are: "Schedulers"); SQL statement:
+UPDATE Schedulers
+SET cron=?, enabled='{enabled}', owner_node=?, status=?, 
+lasterror=?, owner_node=?, last_run=?, next_run=?,
+job_name=?
+WHERE id=?; [42103-232]
+2025-02-06 11:18:00.056779+05:30 jdbc[4]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Table "JOB_HISTORY" not found (candidates are: "job_history"); SQL statement:
+INSERT INTO job_history (job_id,serviceFqn,error,owner_node,start_time,end_time,correlationId,sessionId,status)
+	VALUES (?,?,?,?,?, ?,?
+			,?,?); [42103-232]
+2025-02-06 11:18:00.056779+05:30 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Table "JOB_HISTORY" not found (candidates are: "job_history"); SQL statement:
+INSERT INTO job_history (job_id,serviceFqn,error,owner_node,start_time,end_time,correlationId,sessionId,status)
+	VALUES (?,?,?,?,?, ?,?
+			,?,?); [42103-232]
+2025-02-06 11:18:00.056779+05:30 jdbc[5]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Table "JOB_HISTORY" not found (candidates are: "job_history"); SQL statement:
+INSERT INTO job_history (job_id,serviceFqn,error,owner_node,start_time,end_time,correlationId,sessionId,status)
+	VALUES (?,?,?,?,?, ?,?
+			,?,?); [42103-232]
+2025-02-06 11:19:00.042248+05:30 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Table "SCHEDULERS" not found (candidates are: "Schedulers"); SQL statement:
+UPDATE Schedulers
+SET cron=?, enabled='{enabled}', owner_node=?, status=?, 
+lasterror=?, owner_node=?, last_run=?, next_run=?,
+job_name=?
+WHERE id=?; [42103-232]
+2025-02-06 11:19:00.043258+05:30 jdbc[5]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Table "SCHEDULERS" not found (candidates are: "Schedulers"); SQL statement:
+UPDATE Schedulers
+SET cron=?, enabled='{enabled}', owner_node=?, status=?, 
+lasterror=?, owner_node=?, last_run=?, next_run=?,
+job_name=?
+WHERE id=?; [42103-232]
+2025-02-06 11:19:00.043258+05:30 jdbc[4]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Table "SCHEDULERS" not found (candidates are: "Schedulers"); SQL statement:
+UPDATE Schedulers
+SET cron=?, enabled='{enabled}', owner_node=?, status=?, 
+lasterror=?, owner_node=?, last_run=?, next_run=?,
+job_name=?
+WHERE id=?; [42103-232]
+2025-02-06 11:19:00.062142+05:30 jdbc[4]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Table "SCHEDULERS" not found (candidates are: "Schedulers"); SQL statement:
+UPDATE Schedulers
+SET cron=?, enabled='{enabled}', owner_node=?, status=?, 
+lasterror=?, owner_node=?, last_run=?, next_run=?,
+job_name=?
+WHERE id=?; [42103-232]
+2025-02-06 11:19:00.062142+05:30 jdbc[5]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Table "SCHEDULERS" not found (candidates are: "Schedulers"); SQL statement:
+UPDATE Schedulers
+SET cron=?, enabled='{enabled}', owner_node=?, status=?, 
+lasterror=?, owner_node=?, last_run=?, next_run=?,
+job_name=?
+WHERE id=?; [42103-232]
+2025-02-06 11:19:00.064164+05:30 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Table "SCHEDULERS" not found (candidates are: "Schedulers"); SQL statement:
+UPDATE Schedulers
+SET cron=?, enabled='{enabled}', owner_node=?, status=?, 
+lasterror=?, owner_node=?, last_run=?, next_run=?,
+job_name=?
+WHERE id=?; [42103-232]
+2025-02-06 11:19:00.073134+05:30 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Table "JOB_HISTORY" not found (candidates are: "job_history"); SQL statement:
+INSERT INTO job_history (job_id,serviceFqn,error,owner_node,start_time,end_time,correlationId,sessionId,status)
+	VALUES (?,?,?,?,?, ?,?
+			,?,?); [42103-232]
+2025-02-06 11:19:00.073134+05:30 jdbc[4]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Table "JOB_HISTORY" not found (candidates are: "job_history"); SQL statement:
+INSERT INTO job_history (job_id,serviceFqn,error,owner_node,start_time,end_time,correlationId,sessionId,status)
+	VALUES (?,?,?,?,?, ?,?
+			,?,?); [42103-232]
+2025-02-06 11:19:00.073134+05:30 jdbc[5]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Table "JOB_HISTORY" not found (candidates are: "job_history"); SQL statement:
+INSERT INTO job_history (job_id,serviceFqn,error,owner_node,start_time,end_time,correlationId,sessionId,status)
+	VALUES (?,?,?,?,?, ?,?
+			,?,?); [42103-232]
+2025-02-06 11:20:00.034520+05:30 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Table "SCHEDULERS" not found (candidates are: "Schedulers"); SQL statement:
+UPDATE Schedulers
+SET cron=?, enabled='{enabled}', owner_node=?, status=?, 
+lasterror=?, owner_node=?, last_run=?, next_run=?,
+job_name=?
+WHERE id=?; [42103-232]
+2025-02-06 11:20:00.034520+05:30 jdbc[5]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Table "SCHEDULERS" not found (candidates are: "Schedulers"); SQL statement:
+UPDATE Schedulers
+SET cron=?, enabled='{enabled}', owner_node=?, status=?, 
+lasterror=?, owner_node=?, last_run=?, next_run=?,
+job_name=?
+WHERE id=?; [42103-232]
+2025-02-06 11:20:00.034520+05:30 jdbc[4]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Table "SCHEDULERS" not found (candidates are: "Schedulers"); SQL statement:
+UPDATE Schedulers
+SET cron=?, enabled='{enabled}', owner_node=?, status=?, 
+lasterror=?, owner_node=?, last_run=?, next_run=?,
+job_name=?
+WHERE id=?; [42103-232]
+2025-02-06 11:20:00.045516+05:30 jdbc[5]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Table "SCHEDULERS" not found (candidates are: "Schedulers"); SQL statement:
+UPDATE Schedulers
+SET cron=?, enabled='{enabled}', owner_node=?, status=?, 
+lasterror=?, owner_node=?, last_run=?, next_run=?,
+job_name=?
+WHERE id=?; [42103-232]
+2025-02-06 11:20:00.045516+05:30 jdbc[4]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Table "SCHEDULERS" not found (candidates are: "Schedulers"); SQL statement:
+UPDATE Schedulers
+SET cron=?, enabled='{enabled}', owner_node=?, status=?, 
+lasterror=?, owner_node=?, last_run=?, next_run=?,
+job_name=?
+WHERE id=?; [42103-232]
+2025-02-06 11:20:00.045516+05:30 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Table "SCHEDULERS" not found (candidates are: "Schedulers"); SQL statement:
+UPDATE Schedulers
+SET cron=?, enabled='{enabled}', owner_node=?, status=?, 
+lasterror=?, owner_node=?, last_run=?, next_run=?,
+job_name=?
+WHERE id=?; [42103-232]
+2025-02-06 11:20:00.055518+05:30 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Table "JOB_HISTORY" not found (candidates are: "job_history"); SQL statement:
+INSERT INTO job_history (job_id,serviceFqn,error,owner_node,start_time,end_time,correlationId,sessionId,status)
+	VALUES (?,?,?,?,?, ?,?
+			,?,?); [42103-232]
+2025-02-06 11:20:00.056519+05:30 jdbc[5]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Table "JOB_HISTORY" not found (candidates are: "job_history"); SQL statement:
+INSERT INTO job_history (job_id,serviceFqn,error,owner_node,start_time,end_time,correlationId,sessionId,status)
+	VALUES (?,?,?,?,?, ?,?
+			,?,?); [42103-232]
+2025-02-06 11:20:00.056519+05:30 jdbc[4]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Table "JOB_HISTORY" not found (candidates are: "job_history"); SQL statement:
+INSERT INTO job_history (job_id,serviceFqn,error,owner_node,start_time,end_time,correlationId,sessionId,status)
+	VALUES (?,?,?,?,?, ?,?
+			,?,?); [42103-232]
+2025-02-06 11:20:30.142894+05:30 jdbc[4]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Table "SCHEDULERS" not found (candidates are: "Schedulers"); SQL statement:
+UPDATE Schedulers
+SET cron=?, enabled=?, owner_node=?, status=?, 
+lasterror=?, owner_node=?, last_run=?, next_run=?,
+job_name=?
+WHERE id=?; [42103-232]
+2025-02-06 11:20:30.169894+05:30 jdbc[4]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Table "SCHEDULERS" not found (candidates are: "Schedulers"); SQL statement:
+SELECT cast(id as text) id, serviceFqn, cron, status, lasterror, enabled, owner_node, last_run, next_run,job_name,created_time
+FROM Schedulers ORDER BY created_time DESC; [42103-232]
+2025-02-06 11:20:31.606120+05:30 jdbc[4]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Table "SCHEDULERS" not found (candidates are: "Schedulers"); SQL statement:
+UPDATE Schedulers
+SET cron=?, enabled=?, owner_node=?, status=?, 
+lasterror=?, owner_node=?, last_run=?, next_run=?,
+job_name=?
+WHERE id=?; [42103-232]
+2025-02-06 11:20:31.625129+05:30 jdbc[4]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Table "SCHEDULERS" not found (candidates are: "Schedulers"); SQL statement:
+SELECT cast(id as text) id, serviceFqn, cron, status, lasterror, enabled, owner_node, last_run, next_run,job_name,created_time
+FROM Schedulers ORDER BY created_time DESC; [42103-232]
+2025-02-06 11:21:00.016867+05:30 jdbc[4]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Table "SCHEDULERS" not found (candidates are: "Schedulers"); SQL statement:
+UPDATE Schedulers
+SET cron=?, enabled='{enabled}', owner_node=?, status=?, 
+lasterror=?, owner_node=?, last_run=?, next_run=?,
+job_name=?
+WHERE id=?; [42103-232]
+2025-02-06 11:21:00.016867+05:30 jdbc[5]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Table "SCHEDULERS" not found (candidates are: "Schedulers"); SQL statement:
+UPDATE Schedulers
+SET cron=?, enabled='{enabled}', owner_node=?, status=?, 
+lasterror=?, owner_node=?, last_run=?, next_run=?,
+job_name=?
+WHERE id=?; [42103-232]
+2025-02-06 11:21:00.017867+05:30 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Table "SCHEDULERS" not found (candidates are: "Schedulers"); SQL statement:
+UPDATE Schedulers
+SET cron=?, enabled='{enabled}', owner_node=?, status=?, 
+lasterror=?, owner_node=?, last_run=?, next_run=?,
+job_name=?
+WHERE id=?; [42103-232]
+2025-02-06 11:21:00.027866+05:30 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Table "SCHEDULERS" not found (candidates are: "Schedulers"); SQL statement:
+UPDATE Schedulers
+SET cron=?, enabled='{enabled}', owner_node=?, status=?, 
+lasterror=?, owner_node=?, last_run=?, next_run=?,
+job_name=?
+WHERE id=?; [42103-232]
+2025-02-06 11:21:00.027866+05:30 jdbc[4]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Table "SCHEDULERS" not found (candidates are: "Schedulers"); SQL statement:
+UPDATE Schedulers
+SET cron=?, enabled='{enabled}', owner_node=?, status=?, 
+lasterror=?, owner_node=?, last_run=?, next_run=?,
+job_name=?
+WHERE id=?; [42103-232]
+2025-02-06 11:21:00.027866+05:30 jdbc[5]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Table "SCHEDULERS" not found (candidates are: "Schedulers"); SQL statement:
+UPDATE Schedulers
+SET cron=?, enabled='{enabled}', owner_node=?, status=?, 
+lasterror=?, owner_node=?, last_run=?, next_run=?,
+job_name=?
+WHERE id=?; [42103-232]
+2025-02-06 11:21:00.037870+05:30 jdbc[4]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Table "JOB_HISTORY" not found (candidates are: "job_history"); SQL statement:
+INSERT INTO job_history (job_id,serviceFqn,error,owner_node,start_time,end_time,correlationId,sessionId,status)
+	VALUES (?,?,?,?,?, ?,?
+			,?,?); [42103-232]
+2025-02-06 11:21:00.038871+05:30 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Table "JOB_HISTORY" not found (candidates are: "job_history"); SQL statement:
+INSERT INTO job_history (job_id,serviceFqn,error,owner_node,start_time,end_time,correlationId,sessionId,status)
+	VALUES (?,?,?,?,?, ?,?
+			,?,?); [42103-232]
+2025-02-06 11:21:00.038871+05:30 jdbc[5]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Table "JOB_HISTORY" not found (candidates are: "job_history"); SQL statement:
+INSERT INTO job_history (job_id,serviceFqn,error,owner_node,start_time,end_time,correlationId,sessionId,status)
+	VALUES (?,?,?,?,?, ?,?
+			,?,?); [42103-232]
+2025-02-06 11:22:00.021303+05:30 jdbc[4]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Table "SCHEDULERS" not found (candidates are: "Schedulers"); SQL statement:
+UPDATE Schedulers
+SET cron=?, enabled='{enabled}', owner_node=?, status=?, 
+lasterror=?, owner_node=?, last_run=?, next_run=?,
+job_name=?
+WHERE id=?; [42103-232]
+2025-02-06 11:22:00.021303+05:30 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Table "SCHEDULERS" not found (candidates are: "Schedulers"); SQL statement:
+UPDATE Schedulers
+SET cron=?, enabled='{enabled}', owner_node=?, status=?, 
+lasterror=?, owner_node=?, last_run=?, next_run=?,
+job_name=?
+WHERE id=?; [42103-232]
+2025-02-06 11:22:00.021303+05:30 jdbc[5]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Table "SCHEDULERS" not found (candidates are: "Schedulers"); SQL statement:
+UPDATE Schedulers
+SET cron=?, enabled='{enabled}', owner_node=?, status=?, 
+lasterror=?, owner_node=?, last_run=?, next_run=?,
+job_name=?
+WHERE id=?; [42103-232]
+2025-02-06 11:22:00.034302+05:30 jdbc[5]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Table "SCHEDULERS" not found (candidates are: "Schedulers"); SQL statement:
+UPDATE Schedulers
+SET cron=?, enabled='{enabled}', owner_node=?, status=?, 
+lasterror=?, owner_node=?, last_run=?, next_run=?,
+job_name=?
+WHERE id=?; [42103-232]
+2025-02-06 11:22:00.034302+05:30 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Table "SCHEDULERS" not found (candidates are: "Schedulers"); SQL statement:
+UPDATE Schedulers
+SET cron=?, enabled='{enabled}', owner_node=?, status=?, 
+lasterror=?, owner_node=?, last_run=?, next_run=?,
+job_name=?
+WHERE id=?; [42103-232]
+2025-02-06 11:22:00.034302+05:30 jdbc[4]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Table "SCHEDULERS" not found (candidates are: "Schedulers"); SQL statement:
+UPDATE Schedulers
+SET cron=?, enabled='{enabled}', owner_node=?, status=?, 
+lasterror=?, owner_node=?, last_run=?, next_run=?,
+job_name=?
+WHERE id=?; [42103-232]
+2025-02-06 11:22:00.059303+05:30 jdbc[4]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Table "JOB_HISTORY" not found (candidates are: "job_history"); SQL statement:
+INSERT INTO job_history (job_id,serviceFqn,error,owner_node,start_time,end_time,correlationId,sessionId,status)
+	VALUES (?,?,?,?,?, ?,?
+			,?,?); [42103-232]
+2025-02-06 11:22:00.060304+05:30 jdbc[5]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Table "JOB_HISTORY" not found (candidates are: "job_history"); SQL statement:
+INSERT INTO job_history (job_id,serviceFqn,error,owner_node,start_time,end_time,correlationId,sessionId,status)
+	VALUES (?,?,?,?,?, ?,?
+			,?,?); [42103-232]
+2025-02-06 11:22:00.060304+05:30 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Table "JOB_HISTORY" not found (candidates are: "job_history"); SQL statement:
+INSERT INTO job_history (job_id,serviceFqn,error,owner_node,start_time,end_time,correlationId,sessionId,status)
+	VALUES (?,?,?,?,?, ?,?
+			,?,?); [42103-232]
+2025-02-06 11:23:00.028907+05:30 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Table "SCHEDULERS" not found (candidates are: "Schedulers"); SQL statement:
+UPDATE Schedulers
+SET cron=?, enabled='{enabled}', owner_node=?, status=?, 
+lasterror=?, owner_node=?, last_run=?, next_run=?,
+job_name=?
+WHERE id=?; [42103-232]
+2025-02-06 11:23:00.028907+05:30 jdbc[5]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Table "SCHEDULERS" not found (candidates are: "Schedulers"); SQL statement:
+UPDATE Schedulers
+SET cron=?, enabled='{enabled}', owner_node=?, status=?, 
+lasterror=?, owner_node=?, last_run=?, next_run=?,
+job_name=?
+WHERE id=?; [42103-232]
+2025-02-06 11:23:00.028907+05:30 jdbc[4]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Table "SCHEDULERS" not found (candidates are: "Schedulers"); SQL statement:
+UPDATE Schedulers
+SET cron=?, enabled='{enabled}', owner_node=?, status=?, 
+lasterror=?, owner_node=?, last_run=?, next_run=?,
+job_name=?
+WHERE id=?; [42103-232]
+2025-02-06 11:23:00.040906+05:30 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Table "SCHEDULERS" not found (candidates are: "Schedulers"); SQL statement:
+UPDATE Schedulers
+SET cron=?, enabled='{enabled}', owner_node=?, status=?, 
+lasterror=?, owner_node=?, last_run=?, next_run=?,
+job_name=?
+WHERE id=?; [42103-232]
+2025-02-06 11:23:00.040906+05:30 jdbc[5]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Table "SCHEDULERS" not found (candidates are: "Schedulers"); SQL statement:
+UPDATE Schedulers
+SET cron=?, enabled='{enabled}', owner_node=?, status=?, 
+lasterror=?, owner_node=?, last_run=?, next_run=?,
+job_name=?
+WHERE id=?; [42103-232]
+2025-02-06 11:23:00.040906+05:30 jdbc[4]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Table "SCHEDULERS" not found (candidates are: "Schedulers"); SQL statement:
+UPDATE Schedulers
+SET cron=?, enabled='{enabled}', owner_node=?, status=?, 
+lasterror=?, owner_node=?, last_run=?, next_run=?,
+job_name=?
+WHERE id=?; [42103-232]
+2025-02-06 11:23:00.051909+05:30 jdbc[5]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Table "JOB_HISTORY" not found (candidates are: "job_history"); SQL statement:
+INSERT INTO job_history (job_id,serviceFqn,error,owner_node,start_time,end_time,correlationId,sessionId,status)
+	VALUES (?,?,?,?,?, ?,?
+			,?,?); [42103-232]
+2025-02-06 11:23:00.051909+05:30 jdbc[4]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Table "JOB_HISTORY" not found (candidates are: "job_history"); SQL statement:
+INSERT INTO job_history (job_id,serviceFqn,error,owner_node,start_time,end_time,correlationId,sessionId,status)
+	VALUES (?,?,?,?,?, ?,?
+			,?,?); [42103-232]
+2025-02-06 11:23:00.052905+05:30 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Table "JOB_HISTORY" not found (candidates are: "job_history"); SQL statement:
+INSERT INTO job_history (job_id,serviceFqn,error,owner_node,start_time,end_time,correlationId,sessionId,status)
+	VALUES (?,?,?,?,?, ?,?
+			,?,?); [42103-232]
+2025-02-06 11:24:00.025599+05:30 jdbc[4]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Table "SCHEDULERS" not found (candidates are: "Schedulers"); SQL statement:
+UPDATE Schedulers
+SET cron=?, enabled='{enabled}', owner_node=?, status=?, 
+lasterror=?, owner_node=?, last_run=?, next_run=?,
+job_name=?
+WHERE id=?; [42103-232]
+2025-02-06 11:24:00.025599+05:30 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Table "SCHEDULERS" not found (candidates are: "Schedulers"); SQL statement:
+UPDATE Schedulers
+SET cron=?, enabled='{enabled}', owner_node=?, status=?, 
+lasterror=?, owner_node=?, last_run=?, next_run=?,
+job_name=?
+WHERE id=?; [42103-232]
+2025-02-06 11:24:00.025599+05:30 jdbc[5]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Table "SCHEDULERS" not found (candidates are: "Schedulers"); SQL statement:
+UPDATE Schedulers
+SET cron=?, enabled='{enabled}', owner_node=?, status=?, 
+lasterror=?, owner_node=?, last_run=?, next_run=?,
+job_name=?
+WHERE id=?; [42103-232]
+2025-02-06 11:24:00.035593+05:30 jdbc[5]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Table "SCHEDULERS" not found (candidates are: "Schedulers"); SQL statement:
+UPDATE Schedulers
+SET cron=?, enabled='{enabled}', owner_node=?, status=?, 
+lasterror=?, owner_node=?, last_run=?, next_run=?,
+job_name=?
+WHERE id=?; [42103-232]
+2025-02-06 11:24:00.035593+05:30 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Table "SCHEDULERS" not found (candidates are: "Schedulers"); SQL statement:
+UPDATE Schedulers
+SET cron=?, enabled='{enabled}', owner_node=?, status=?, 
+lasterror=?, owner_node=?, last_run=?, next_run=?,
+job_name=?
+WHERE id=?; [42103-232]
+2025-02-06 11:24:00.036595+05:30 jdbc[4]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Table "SCHEDULERS" not found (candidates are: "Schedulers"); SQL statement:
+UPDATE Schedulers
+SET cron=?, enabled='{enabled}', owner_node=?, status=?, 
+lasterror=?, owner_node=?, last_run=?, next_run=?,
+job_name=?
+WHERE id=?; [42103-232]
+2025-02-06 11:24:00.044597+05:30 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Table "JOB_HISTORY" not found (candidates are: "job_history"); SQL statement:
+INSERT INTO job_history (job_id,serviceFqn,error,owner_node,start_time,end_time,correlationId,sessionId,status)
+	VALUES (?,?,?,?,?, ?,?
+			,?,?); [42103-232]
+2025-02-06 11:24:00.044597+05:30 jdbc[4]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Table "JOB_HISTORY" not found (candidates are: "job_history"); SQL statement:
+INSERT INTO job_history (job_id,serviceFqn,error,owner_node,start_time,end_time,correlationId,sessionId,status)
+	VALUES (?,?,?,?,?, ?,?
+			,?,?); [42103-232]
+2025-02-06 11:24:00.045595+05:30 jdbc[5]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Table "JOB_HISTORY" not found (candidates are: "job_history"); SQL statement:
+INSERT INTO job_history (job_id,serviceFqn,error,owner_node,start_time,end_time,correlationId,sessionId,status)
+	VALUES (?,?,?,?,?, ?,?
+			,?,?); [42103-232]
+2025-02-08 19:50:38.163078+05:30 jdbc[3]: exception
+java.sql.SQLClientInfoException: Client info name 'ApplicationName' not supported.
+	at org.h2.jdbc.JdbcConnection.setClientInfo(JdbcConnection.java:1624)
+	at org.jkiss.dbeaver.ext.generic.model.GenericDataSource.populateClientAppName(GenericDataSource.java:200)
+	at org.jkiss.dbeaver.ext.generic.model.GenericDataSource.openConnection(GenericDataSource.java:163)
+	at org.jkiss.dbeaver.ext.h2.model.H2DataSource.openConnection(H2DataSource.java:74)
+	at org.jkiss.dbeaver.model.impl.jdbc.JDBCExecutionContext.connect(JDBCExecutionContext.java:124)
+	at org.jkiss.dbeaver.model.impl.jdbc.JDBCRemoteInstance.initializeMainContext(JDBCRemoteInstance.java:102)
+	at org.jkiss.dbeaver.model.impl.jdbc.JDBCRemoteInstance.<init>(JDBCRemoteInstance.java:61)
+	at org.jkiss.dbeaver.model.impl.jdbc.JDBCDataSource.initializeRemoteInstance(JDBCDataSource.java:125)
+	at org.jkiss.dbeaver.ext.generic.model.GenericDataSource.<init>(GenericDataSource.java:125)
+	at org.jkiss.dbeaver.ext.h2.model.H2DataSource.<init>(H2DataSource.java:43)
+	at org.jkiss.dbeaver.ext.h2.model.H2MetaModel.createDataSourceImpl(H2MetaModel.java:56)
+	at org.jkiss.dbeaver.ext.generic.GenericDataSourceProvider.openDataSource(GenericDataSourceProvider.java:57)
+	at org.jkiss.dbeaver.registry.DataSourceDescriptor.openDataSource(DataSourceDescriptor.java:1395)
+	at org.jkiss.dbeaver.registry.DataSourceDescriptor.connect0(DataSourceDescriptor.java:1266)
+	at org.jkiss.dbeaver.registry.DataSourceDescriptor.connect(DataSourceDescriptor.java:1056)
+	at org.jkiss.dbeaver.ui.editors.DatabaseLazyEditorInput.initializeRealInput(DatabaseLazyEditorInput.java:262)
+	at org.jkiss.dbeaver.ui.editors.ProgressEditorPart$InitNodeService.evaluate(ProgressEditorPart.java:171)
+	at org.jkiss.dbeaver.ui.editors.ProgressEditorPart$InitNodeService.evaluate(ProgressEditorPart.java:1)
+	at org.jkiss.dbeaver.ui.LoadingJob.run(LoadingJob.java:88)
+	at org.jkiss.dbeaver.model.runtime.AbstractJob.run(AbstractJob.java:119)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:63)
+2025-02-08 19:50:39.248717+05:30 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Column "KEY_SEQ" not found [42122-232]
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:514)
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:489)
+	at org.h2.message.DbException.get(DbException.java:223)
+	at org.h2.message.DbException.get(DbException.java:199)
+	at org.h2.jdbc.JdbcResultSet.getColumnIndex(JdbcResultSet.java:3492)
+	at org.h2.jdbc.JdbcResultSet.getInt(JdbcResultSet.java:337)
+	at org.jkiss.dbeaver.model.impl.jdbc.exec.JDBCResultSetImpl.getInt(JDBCResultSetImpl.java:510)
+	at org.jkiss.dbeaver.model.impl.jdbc.JDBCUtils.safeGetInt(JDBCUtils.java:116)
+	at org.jkiss.dbeaver.ext.generic.model.GenericUtils.safeGetInt(GenericUtils.java:84)
+	at org.jkiss.dbeaver.ext.generic.model.meta.GenericMetaModel.createConstraintColumnsImpl(GenericMetaModel.java:949)
+	at org.jkiss.dbeaver.ext.h2.model.H2MetaModel.createConstraintColumnsImpl(H2MetaModel.java:179)
+	at org.jkiss.dbeaver.ext.generic.model.ConstraintKeysCache.fetchObjectRow(ConstraintKeysCache.java:98)
+	at org.jkiss.dbeaver.ext.generic.model.ConstraintKeysCache.fetchObjectRow(ConstraintKeysCache.java:1)
+	at org.jkiss.dbeaver.model.impl.jdbc.cache.JDBCCompositeCache.loadObjects(JDBCCompositeCache.java:365)
+	at org.jkiss.dbeaver.model.impl.jdbc.cache.JDBCCompositeCache.getObjects(JDBCCompositeCache.java:123)
+	at org.jkiss.dbeaver.ext.generic.model.GenericTableBase.getConstraints(GenericTableBase.java:252)
+	at org.jkiss.dbeaver.ext.generic.model.GenericTableBase.getConstraints(GenericTableBase.java:1)
+	at org.jkiss.dbeaver.model.exec.DBExecUtils.getBestIdentifier(DBExecUtils.java:541)
+	at org.jkiss.dbeaver.model.exec.DBExecUtils.bindAttributes(DBExecUtils.java:878)
+	at org.jkiss.dbeaver.ui.controls.resultset.ResultSetDataReceiver.fetchEnd(ResultSetDataReceiver.java:166)
+	at org.jkiss.dbeaver.model.impl.jdbc.struct.JDBCTable.readData(JDBCTable.java:219)
+	at org.jkiss.dbeaver.ui.controls.resultset.ResultSetJobDataRead.lambda$0(ResultSetJobDataRead.java:128)
+	at org.jkiss.dbeaver.model.exec.DBExecUtils.tryExecuteRecover(DBExecUtils.java:192)
+	at org.jkiss.dbeaver.ui.controls.resultset.ResultSetJobDataRead.run(ResultSetJobDataRead.java:126)
+	at org.jkiss.dbeaver.ui.controls.resultset.ResultSetViewer$ResultSetDataPumpJob.run(ResultSetViewer.java:5166)
+	at org.jkiss.dbeaver.model.runtime.AbstractJob.run(AbstractJob.java:119)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:63)
+2025-02-08 19:51:43.685277+05:30 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Column "KEY_SEQ" not found [42122-232]
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:514)
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:489)
+	at org.h2.message.DbException.get(DbException.java:223)
+	at org.h2.message.DbException.get(DbException.java:199)
+	at org.h2.jdbc.JdbcResultSet.getColumnIndex(JdbcResultSet.java:3492)
+	at org.h2.jdbc.JdbcResultSet.getInt(JdbcResultSet.java:337)
+	at org.jkiss.dbeaver.model.impl.jdbc.exec.JDBCResultSetImpl.getInt(JDBCResultSetImpl.java:510)
+	at org.jkiss.dbeaver.model.impl.jdbc.JDBCUtils.safeGetInt(JDBCUtils.java:116)
+	at org.jkiss.dbeaver.ext.generic.model.GenericUtils.safeGetInt(GenericUtils.java:84)
+	at org.jkiss.dbeaver.ext.generic.model.meta.GenericMetaModel.createConstraintColumnsImpl(GenericMetaModel.java:949)
+	at org.jkiss.dbeaver.ext.h2.model.H2MetaModel.createConstraintColumnsImpl(H2MetaModel.java:179)
+	at org.jkiss.dbeaver.ext.generic.model.ConstraintKeysCache.fetchObjectRow(ConstraintKeysCache.java:98)
+	at org.jkiss.dbeaver.ext.generic.model.ConstraintKeysCache.fetchObjectRow(ConstraintKeysCache.java:1)
+	at org.jkiss.dbeaver.model.impl.jdbc.cache.JDBCCompositeCache.loadObjects(JDBCCompositeCache.java:365)
+	at org.jkiss.dbeaver.model.impl.jdbc.cache.JDBCCompositeCache.getObjects(JDBCCompositeCache.java:123)
+	at org.jkiss.dbeaver.ext.generic.model.GenericTableBase.getConstraints(GenericTableBase.java:252)
+	at org.jkiss.dbeaver.ext.generic.model.GenericTableBase.getConstraints(GenericTableBase.java:1)
+	at org.jkiss.dbeaver.model.exec.DBExecUtils.getBestIdentifier(DBExecUtils.java:541)
+	at org.jkiss.dbeaver.model.exec.DBExecUtils.bindAttributes(DBExecUtils.java:878)
+	at org.jkiss.dbeaver.ui.controls.resultset.ResultSetDataReceiver.fetchEnd(ResultSetDataReceiver.java:166)
+	at org.jkiss.dbeaver.model.impl.jdbc.struct.JDBCTable.readData(JDBCTable.java:219)
+	at org.jkiss.dbeaver.ui.controls.resultset.ResultSetJobDataRead.lambda$0(ResultSetJobDataRead.java:128)
+	at org.jkiss.dbeaver.model.exec.DBExecUtils.tryExecuteRecover(DBExecUtils.java:192)
+	at org.jkiss.dbeaver.ui.controls.resultset.ResultSetJobDataRead.run(ResultSetJobDataRead.java:126)
+	at org.jkiss.dbeaver.ui.controls.resultset.ResultSetViewer$ResultSetDataPumpJob.run(ResultSetViewer.java:5166)
+	at org.jkiss.dbeaver.model.runtime.AbstractJob.run(AbstractJob.java:119)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:63)

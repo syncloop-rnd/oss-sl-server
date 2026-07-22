@@ -1,0 +1,372 @@
+{
+  "input" : [ {
+    "id" : "j2_2",
+    "text" : "request",
+    "li_attr" : {
+      "id" : "j2_2"
+    },
+    "a_attr" : {
+      "href" : "#",
+      "id" : "j2_2_anchor"
+    },
+    "state" : {
+      "loaded" : true,
+      "opened" : true,
+      "selected" : false,
+      "disabled" : false,
+      "hidden" : false
+    },
+    "data" : { },
+    "children" : [ {
+      "id" : "j2_custom_1",
+      "text" : "tokenId",
+      "li_attr" : {
+        "id" : "j2_custom_1"
+      },
+      "a_attr" : {
+        "href" : "#",
+        "id" : "j2_custom_1_anchor"
+      },
+      "state" : {
+        "loaded" : true,
+        "opened" : false,
+        "selected" : false,
+        "disabled" : false,
+        "hidden" : false
+      },
+      "data" : { },
+      "children" : [ ],
+      "type" : "string"
+    }, {
+      "id" : "j2_custom_2",
+      "text" : "name",
+      "li_attr" : {
+        "id" : "j2_custom_2"
+      },
+      "a_attr" : {
+        "href" : "#",
+        "id" : "j2_custom_2_anchor"
+      },
+      "state" : {
+        "loaded" : true,
+        "opened" : false,
+        "selected" : false,
+        "disabled" : false,
+        "hidden" : false
+      },
+      "data" : { },
+      "children" : [ ],
+      "type" : "string"
+    }, {
+      "id" : "j2_custom_3",
+      "text" : "uniqueName",
+      "li_attr" : {
+        "id" : "j2_custom_3"
+      },
+      "a_attr" : {
+        "href" : "#",
+        "id" : "j2_custom_3_anchor"
+      },
+      "state" : {
+        "loaded" : true,
+        "opened" : false,
+        "selected" : false,
+        "disabled" : false,
+        "hidden" : false
+      },
+      "data" : { },
+      "children" : [ ],
+      "type" : "string"
+    }, {
+      "id" : "j2_custom_4",
+      "text" : "mcpId",
+      "li_attr" : {
+        "id" : "j2_custom_4"
+      },
+      "a_attr" : {
+        "href" : "#",
+        "id" : "j2_custom_4_anchor"
+      },
+      "state" : {
+        "loaded" : true,
+        "opened" : false,
+        "selected" : false,
+        "disabled" : false,
+        "hidden" : false
+      },
+      "data" : { },
+      "children" : [ ],
+      "type" : "string"
+    }, {
+      "id" : "j2_custom_5",
+      "text" : "mappingProfileId",
+      "li_attr" : {
+        "id" : "j2_custom_5"
+      },
+      "a_attr" : {
+        "href" : "#",
+        "id" : "j2_custom_5_anchor"
+      },
+      "state" : {
+        "loaded" : true,
+        "opened" : false,
+        "selected" : false,
+        "disabled" : false,
+        "hidden" : false
+      },
+      "data" : { },
+      "children" : [ ],
+      "type" : "string"
+    } ],
+    "type" : "document"
+  } ],
+  "output" : [ {
+    "id" : "j2_1",
+    "text" : "status",
+    "li_attr" : {
+      "id" : "j2_1"
+    },
+    "a_attr" : {
+      "href" : "#",
+      "id" : "j2_1_anchor"
+    },
+    "state" : {
+      "loaded" : true,
+      "opened" : false,
+      "selected" : false,
+      "disabled" : false,
+      "hidden" : false
+    },
+    "data" : { },
+    "children" : [ ],
+    "type" : "string"
+  }, {
+    "id" : "j2_2",
+    "text" : "error",
+    "li_attr" : {
+      "id" : "j2_2"
+    },
+    "a_attr" : {
+      "href" : "#",
+      "id" : "j2_2_anchor"
+    },
+    "state" : {
+      "loaded" : true,
+      "opened" : false,
+      "selected" : false,
+      "disabled" : false,
+      "hidden" : false
+    },
+    "data" : { },
+    "children" : [ ],
+    "type" : "string"
+  }, {
+    "id" : "j2_12",
+    "text" : "result",
+    "li_attr" : {
+      "id" : "j2_12"
+    },
+    "a_attr" : {
+      "href" : "#",
+      "id" : "j2_12_anchor"
+    },
+    "state" : {
+      "loaded" : true,
+      "opened" : true,
+      "selected" : false,
+      "disabled" : false,
+      "hidden" : false
+    },
+    "data" : { },
+    "children" : [ {
+      "id" : "j2_3",
+      "text" : "tokenId",
+      "li_attr" : {
+        "id" : "j2_3"
+      },
+      "a_attr" : {
+        "href" : "#",
+        "id" : "j2_3_anchor"
+      },
+      "state" : {
+        "loaded" : true,
+        "opened" : false,
+        "selected" : false,
+        "disabled" : false,
+        "hidden" : false
+      },
+      "data" : { },
+      "children" : [ ],
+      "type" : "string"
+    }, {
+      "id" : "j2_4",
+      "text" : "uniqueName",
+      "li_attr" : {
+        "id" : "j2_4"
+      },
+      "a_attr" : {
+        "href" : "#",
+        "id" : "j2_4_anchor"
+      },
+      "state" : {
+        "loaded" : true,
+        "opened" : false,
+        "selected" : false,
+        "disabled" : false,
+        "hidden" : false
+      },
+      "data" : { },
+      "children" : [ ],
+      "type" : "string"
+    }, {
+      "id" : "j2_5",
+      "text" : "mcpId",
+      "li_attr" : {
+        "id" : "j2_5"
+      },
+      "a_attr" : {
+        "href" : "#",
+        "id" : "j2_5_anchor"
+      },
+      "state" : {
+        "loaded" : true,
+        "opened" : false,
+        "selected" : false,
+        "disabled" : false,
+        "hidden" : false
+      },
+      "data" : { },
+      "children" : [ ],
+      "type" : "string"
+    }, {
+      "id" : "j2_6",
+      "text" : "userId",
+      "li_attr" : {
+        "id" : "j2_6"
+      },
+      "a_attr" : {
+        "href" : "#",
+        "id" : "j2_6_anchor"
+      },
+      "state" : {
+        "loaded" : true,
+        "opened" : false,
+        "selected" : false,
+        "disabled" : false,
+        "hidden" : false
+      },
+      "data" : { },
+      "children" : [ ],
+      "type" : "string"
+    }, {
+      "id" : "j2_7",
+      "text" : "visibility",
+      "li_attr" : {
+        "id" : "j2_7"
+      },
+      "a_attr" : {
+        "href" : "#",
+        "id" : "j2_7_anchor"
+      },
+      "state" : {
+        "loaded" : true,
+        "opened" : false,
+        "selected" : false,
+        "disabled" : false,
+        "hidden" : false
+      },
+      "data" : { },
+      "children" : [ ],
+      "type" : "string"
+    }, {
+      "id" : "j2_8",
+      "text" : "status",
+      "li_attr" : {
+        "id" : "j2_8"
+      },
+      "a_attr" : {
+        "href" : "#",
+        "id" : "j2_8_anchor"
+      },
+      "state" : {
+        "loaded" : true,
+        "opened" : false,
+        "selected" : false,
+        "disabled" : false,
+        "hidden" : false
+      },
+      "data" : { },
+      "children" : [ ],
+      "type" : "string"
+    }, {
+      "id" : "j2_9",
+      "text" : "createdAt",
+      "li_attr" : {
+        "id" : "j2_9"
+      },
+      "a_attr" : {
+        "href" : "#",
+        "id" : "j2_9_anchor"
+      },
+      "state" : {
+        "loaded" : true,
+        "opened" : false,
+        "selected" : false,
+        "disabled" : false,
+        "hidden" : false
+      },
+      "data" : { },
+      "children" : [ ],
+      "type" : "string"
+    }, {
+      "id" : "j2_10",
+      "text" : "updatedAt",
+      "li_attr" : {
+        "id" : "j2_10"
+      },
+      "a_attr" : {
+        "href" : "#",
+        "id" : "j2_10_anchor"
+      },
+      "state" : {
+        "loaded" : true,
+        "opened" : false,
+        "selected" : false,
+        "disabled" : false,
+        "hidden" : false
+      },
+      "data" : { },
+      "children" : [ ],
+      "type" : "string"
+    }, {
+      "id" : "j2_11",
+      "text" : "token",
+      "li_attr" : {
+        "id" : "j2_11"
+      },
+      "a_attr" : {
+        "href" : "#",
+        "id" : "j2_11_anchor"
+      },
+      "state" : {
+        "loaded" : true,
+        "opened" : false,
+        "selected" : false,
+        "disabled" : false,
+        "hidden" : false
+      },
+      "data" : { },
+      "children" : [ ],
+      "type" : "document"
+    } ],
+    "type" : "documentList"
+  } ],
+  "package" : "cGFja2FnZSBwYWNrYWdlcy5NQ1BOZXN0LnNlcnZpY2VzLmphdmEub2F1dGg7",
+  "imports" : "aW1wb3J0IG1jcG5lc3QuY29yZS50b29scy5hcGkuTUNQR2F0ZXdheTsKaW1wb3J0IGNvbS5la2EubWlkZGxld2FyZS5zZXJ2aWNlLkRhdGFQaXBlbGluZTsKaW1wb3J0IGNvbS5la2EubWlkZGxld2FyZS50ZW1wbGF0ZS5TbmlwcGV0RXhjZXB0aW9uOw==",
+  "main" : "dHJ5IHsKICAgIGRhdGFQaXBlbGluZS5wdXQoInJlc3VsdCIsIE1DUEdhdGV3YXkubGlzdE9BdXRoVG9rZW5zKGRhdGFQaXBlbGluZS5nZXRBc01hcCgicmVxdWVzdCIpKSk7CiAgICBkYXRhUGlwZWxpbmUucHV0KCJzdGF0dXMiLCAic3VjY2VzcyIpOwp9IGNhdGNoIChFeGNlcHRpb24gZSkgewogICAgZGF0YVBpcGVsaW5lLmNsZWFyKCk7CiAgICBkYXRhUGlwZWxpbmUucHV0KCJzdGF0dXMiLCAiZmFpbGVkIik7CiAgICBkYXRhUGlwZWxpbmUucHV0KCJlcnJvciIsIGUuZ2V0TWVzc2FnZSgpKTsKfQ==",
+  "staticWorkspace" : "",
+  "version" : "v1",
+  "consumers" : "",
+  "developers" : "",
+  "lockedByUser" : "admin"
+}

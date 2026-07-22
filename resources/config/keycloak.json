@@ -1,0 +1,25 @@
+{
+  "realm" : "EkamwAuth",
+  "resource" : "Ekamw-keycloak-internal",
+  "realm-public-key" : "MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEA+TUVXRk7YaPX7Y0Q726nD5JhPa07FtDWKdzj+318CRMkBRhDzn4r4+88QiTG5uucCPzHZCT681XLwO/gbBHlZJ3Bw9YDY2LAMZEKUmiLjdIMbA63tKN7bVCQgNA33RX8SHCLnDIYCppYCyHkFwPF9nCwRfIUVzXYyK6FozGKPSd+uA4okNY9WcS0L1eLpgLHVltgClC27PLc8/HfFjOm8rFoILfeH5Epv1gmZIW720wSvFYINKSgUZk+4E3Zzsv9IMASoMUvo6/saCuCY0z8P7hA2fci1GmFLP9FIo8NQT7p/CQYdFE1e3La7mTthITSPa/2wuZ3dhIVfjQPIrcvYwIDAQAB",
+  "auth-server-url" : "http://localhost:8080",
+  "use-resource-role-mappings" : false,
+  "enable-cors" : true,
+  "cors-max-age" : 1000,
+  "cors-allowed-methods" : "POST, PUT, DELETE, GET",
+  "cors-exposed-headers" : "WWW-Authenticate, My-custom-exposed-Header",
+  "bearer-only" : false,
+  "enable-basic-auth" : false,
+  "expose-token" : true,
+  "verify-token-audience" : true,
+  "credentials" : {
+    "secret" : "4xoYh38vCUoCZ5yaN5qQLO7cwJSzK6nC"
+  },
+
+  "connection-pool-size" : 20,
+  "socket-timeout-millis" : 5000,
+  "connection-timeout-millis" : 6000,
+  "connection-ttl-millis" : 500,
+  "disable-trust-manager" : true,
+  "allow-any-hostname" : true
+}

@@ -1,0 +1,753 @@
+{
+  "latest" : {
+    "createdTS" : "",
+    "input" : [ ],
+    "output" : [ {
+      "id" : "j3_1",
+      "text" : "jobList",
+      "li_attr" : {
+        "id" : "j3_1"
+      },
+      "a_attr" : {
+        "href" : "#",
+        "id" : "j3_1_anchor"
+      },
+      "state" : {
+        "loaded" : true,
+        "opened" : false,
+        "selected" : false,
+        "disabled" : false
+      },
+      "data" : { },
+      "children" : [ ],
+      "type" : "documentList"
+    }, {
+      "id" : "j3_2",
+      "text" : "error",
+      "li_attr" : {
+        "id" : "j3_2"
+      },
+      "a_attr" : {
+        "href" : "#",
+        "id" : "j3_2_anchor"
+      },
+      "state" : {
+        "loaded" : true,
+        "opened" : false,
+        "selected" : false,
+        "disabled" : false
+      },
+      "data" : { },
+      "children" : [ ],
+      "type" : "string"
+    }, {
+      "id" : "j3_3",
+      "text" : "lastErrorDump",
+      "li_attr" : {
+        "id" : "j3_3"
+      },
+      "a_attr" : {
+        "href" : "#",
+        "id" : "j3_3_anchor"
+      },
+      "state" : {
+        "loaded" : true,
+        "opened" : false,
+        "selected" : false,
+        "disabled" : false
+      },
+      "data" : { },
+      "children" : [ ],
+      "type" : "document"
+    } ],
+    "api_info" : {
+      "title" : "",
+      "description" : ""
+    },
+    "lockedByUser" : "admin",
+    "api" : [ {
+      "id" : "j1_1",
+      "text" : "TCF-Block",
+      "li_attr" : {
+        "id" : "j1_1"
+      },
+      "a_attr" : {
+        "href" : "javascript:void(0)",
+        "id" : "j1_1_anchor"
+      },
+      "state" : {
+        "loaded" : true,
+        "opened" : true,
+        "selected" : false,
+        "disabled" : false
+      },
+      "data" : {
+        "comment" : "Main",
+        "guid" : "8c3f9e19-6b0f-4ef6-a4e5-4129e9fd815f"
+      },
+      "children" : [ {
+        "id" : "j1_2",
+        "text" : "TRY",
+        "li_attr" : {
+          "id" : "j1_2"
+        },
+        "a_attr" : {
+          "href" : "javascript:void(0)",
+          "id" : "j1_2_anchor"
+        },
+        "state" : {
+          "loaded" : true,
+          "opened" : true,
+          "selected" : false,
+          "disabled" : false
+        },
+        "data" : {
+          "comment" : "Try block",
+          "guid" : "c50f8cef-3954-407a-9092-da4a5894694a"
+        },
+        "children" : [ {
+          "id" : "j1_11",
+          "text" : "Transformer",
+          "li_attr" : {
+            "id" : "j1_11"
+          },
+          "a_attr" : {
+            "href" : "javascript:void(0)",
+            "id" : "j1_11_anchor"
+          },
+          "state" : {
+            "loaded" : true,
+            "opened" : false,
+            "selected" : false,
+            "disabled" : false
+          },
+          "data" : {
+            "lines" : [ ],
+            "transformers" : [ ],
+            "dropList" : [ ],
+            "createList" : [ {
+              "path" : "msg",
+              "value" : "testing************************************************",
+              "typePath" : "string"
+            } ],
+            "status" : "enabled",
+            "comment" : "Initialize",
+            "guid" : "d7969c0f-307d-48f6-95d3-8a1f63f15dcc"
+          },
+          "children" : [ ],
+          "type" : "transformer"
+        }, {
+          "id" : "j1_18",
+          "text" : "Group",
+          "li_attr" : {
+            "id" : "j1_18"
+          },
+          "a_attr" : {
+            "href" : "javascript:void(0)",
+            "id" : "j1_18_anchor"
+          },
+          "state" : {
+            "loaded" : true,
+            "opened" : true,
+            "selected" : false,
+            "disabled" : false
+          },
+          "data" : {
+            "comment" : "Fetch all schedulers from DB",
+            "guid" : "e0b7c7c2-e908-41de-937c-ac9d4ec295e4"
+          },
+          "children" : [ {
+            "id" : "j1_5",
+            "text" : "Invoke",
+            "li_attr" : {
+              "id" : "j1_5"
+            },
+            "a_attr" : {
+              "href" : "javascript:void(0)",
+              "id" : "j1_5_anchor"
+            },
+            "state" : {
+              "loaded" : true,
+              "opened" : false,
+              "selected" : false,
+              "disabled" : false
+            },
+            "data" : {
+              "lines" : [ {
+                "loop_Id" : "loop_id_-331687499",
+                "inputPath" : "outputDocList",
+                "outputPath" : "jobList",
+                "inpJsTree" : "#launching_arrow_jsTree_function",
+                "outpJsTree" : "#landing_arrow_jsTree",
+                "INPath" : "outputDocList/#{loop_id_-331687499}",
+                "OUTPath" : "jobList/#{loop_id_-331687499}",
+                "line" : 0,
+                "dashedLine" : true,
+                "op" : "loop",
+                "inType" : "documentList",
+                "outType" : "documentList",
+                "inTypePath" : "documentList",
+                "outTypePath" : "documentList"
+              }, {
+                "inputPath" : "outputDocList/serviceFqn",
+                "outputPath" : "jobList/serviceFqn",
+                "inpJsTree" : "#launching_arrow_jsTree_function",
+                "outpJsTree" : "#landing_arrow_jsTree",
+                "INPath" : "outputDocList/#{loop_id_-331687499}/serviceFqn",
+                "OUTPath" : "jobList/#{loop_id_-331687499}/serviceFqn",
+                "follow" : "loop_id_-331687499",
+                "op" : "add",
+                "line" : 0,
+                "dashedLine" : false,
+                "inType" : "string",
+                "outType" : "string",
+                "inTypePath" : "documentList/string",
+                "outTypePath" : "documentList/string"
+              }, {
+                "inputPath" : "outputDocList/status",
+                "outputPath" : "jobList/status",
+                "inpJsTree" : "#launching_arrow_jsTree_function",
+                "outpJsTree" : "#landing_arrow_jsTree",
+                "INPath" : "outputDocList/#{loop_id_-331687499}/status",
+                "OUTPath" : "jobList/#{loop_id_-331687499}/status",
+                "follow" : "loop_id_-331687499",
+                "op" : "add",
+                "line" : 0,
+                "dashedLine" : false,
+                "inType" : "string",
+                "outType" : "string",
+                "inTypePath" : "documentList/string",
+                "outTypePath" : "documentList/string"
+              }, {
+                "inputPath" : "outputDocList/lasterror",
+                "outputPath" : "jobList/lasterror",
+                "inpJsTree" : "#launching_arrow_jsTree_function",
+                "outpJsTree" : "#landing_arrow_jsTree",
+                "INPath" : "outputDocList/#{loop_id_-331687499}/lasterror",
+                "OUTPath" : "jobList/#{loop_id_-331687499}/lasterror",
+                "follow" : "loop_id_-331687499",
+                "op" : "add",
+                "line" : 0,
+                "dashedLine" : false,
+                "inType" : "string",
+                "outType" : "string",
+                "inTypePath" : "documentList/string",
+                "outTypePath" : "documentList/string"
+              }, {
+                "inputPath" : "outputDocList/enabled",
+                "outputPath" : "jobList/enabled",
+                "inpJsTree" : "#launching_arrow_jsTree_function",
+                "outpJsTree" : "#landing_arrow_jsTree",
+                "INPath" : "outputDocList/#{loop_id_-331687499}/enabled",
+                "OUTPath" : "jobList/#{loop_id_-331687499}/enabled",
+                "follow" : "loop_id_-331687499",
+                "op" : "add",
+                "line" : 0,
+                "dashedLine" : false,
+                "inType" : "string",
+                "outType" : "string",
+                "inTypePath" : "documentList/string",
+                "outTypePath" : "documentList/string"
+              }, {
+                "inputPath" : "outputDocList/owner_node",
+                "outputPath" : "jobList/owner_node",
+                "inpJsTree" : "#launching_arrow_jsTree_function",
+                "outpJsTree" : "#landing_arrow_jsTree",
+                "INPath" : "outputDocList/#{loop_id_-331687499}/owner_node",
+                "OUTPath" : "jobList/#{loop_id_-331687499}/owner_node",
+                "follow" : "loop_id_-331687499",
+                "op" : "add",
+                "line" : 0,
+                "dashedLine" : false,
+                "inType" : "string",
+                "outType" : "string",
+                "inTypePath" : "documentList/string",
+                "outTypePath" : "documentList/string"
+              }, {
+                "inputPath" : "outputDocList/last_run",
+                "outputPath" : "jobList/last_run",
+                "inpJsTree" : "#launching_arrow_jsTree_function",
+                "outpJsTree" : "#landing_arrow_jsTree",
+                "INPath" : "outputDocList/#{loop_id_-331687499}/last_run",
+                "OUTPath" : "jobList/#{loop_id_-331687499}/last_run",
+                "follow" : "loop_id_-331687499",
+                "op" : "add",
+                "line" : 0,
+                "dashedLine" : false,
+                "inType" : "string",
+                "outType" : "string",
+                "inTypePath" : "documentList/string",
+                "outTypePath" : "documentList/string"
+              }, {
+                "inputPath" : "outputDocList/next_run",
+                "outputPath" : "jobList/next_run",
+                "inpJsTree" : "#launching_arrow_jsTree_function",
+                "outpJsTree" : "#landing_arrow_jsTree",
+                "INPath" : "outputDocList/#{loop_id_-331687499}/next_run",
+                "OUTPath" : "jobList/#{loop_id_-331687499}/next_run",
+                "follow" : "loop_id_-331687499",
+                "op" : "add",
+                "line" : 0,
+                "dashedLine" : false,
+                "inType" : "string",
+                "outType" : "string",
+                "inTypePath" : "documentList/string",
+                "outTypePath" : "documentList/string"
+              }, {
+                "inputPath" : "outputDocList/cron",
+                "outputPath" : "jobList/cronExpression",
+                "inpJsTree" : "#launching_arrow_jsTree_function",
+                "outpJsTree" : "#landing_arrow_jsTree",
+                "INPath" : "outputDocList/#{loop_id_-331687499}/cron",
+                "OUTPath" : "jobList/#{loop_id_-331687499}/cronExpression",
+                "follow" : "loop_id_-331687499",
+                "op" : "add",
+                "line" : 0,
+                "dashedLine" : false,
+                "inType" : "string",
+                "outType" : "string",
+                "inTypePath" : "documentList/string",
+                "outTypePath" : "documentList/string"
+              }, {
+                "inputPath" : "outputDocList/id",
+                "outputPath" : "jobList/id",
+                "inpJsTree" : "#launching_arrow_jsTree_function",
+                "outpJsTree" : "#landing_arrow_jsTree",
+                "INPath" : "outputDocList/#{loop_id_-331687499}/id",
+                "OUTPath" : "jobList/#{loop_id_-331687499}/id",
+                "follow" : "loop_id_-331687499",
+                "op" : "add",
+                "line" : 0,
+                "dashedLine" : false,
+                "inType" : "string",
+                "outType" : "string",
+                "inTypePath" : "documentList/string",
+                "outTypePath" : "documentList/string"
+              }, {
+                "inputPath" : "outputDocList/job_name",
+                "outputPath" : "jobList/job_name",
+                "inpJsTree" : "#launching_arrow_jsTree_function",
+                "outpJsTree" : "#landing_arrow_jsTree",
+                "INPath" : "outputDocList/#{loop_id_-331687499}/job_name",
+                "OUTPath" : "jobList/#{loop_id_-331687499}/job_name",
+                "follow" : "loop_id_-331687499",
+                "op" : "add",
+                "line" : 0,
+                "dashedLine" : false,
+                "inType" : "string",
+                "outType" : "string",
+                "inTypePath" : "documentList/string",
+                "outTypePath" : "documentList/string"
+              } ],
+              "transformers" : [ {
+                "op" : "loop",
+                "from" : "/outputDocList/#{loop_id_-331687499}",
+                "to" : "/jobList/#{loop_id_-331687499}",
+                "loop_Id" : "loop_id_-331687499",
+                "inTypePath" : "documentList",
+                "outTypePath" : "documentList"
+              }, {
+                "op" : "add",
+                "from" : "/outputDocList/#{loop_id_-331687499}/serviceFqn",
+                "to" : "/jobList/#{loop_id_-331687499}/serviceFqn",
+                "follow" : "loop_id_-331687499",
+                "inTypePath" : "documentList/string",
+                "outTypePath" : "documentList/string"
+              }, {
+                "op" : "add",
+                "from" : "/outputDocList/#{loop_id_-331687499}/status",
+                "to" : "/jobList/#{loop_id_-331687499}/status",
+                "follow" : "loop_id_-331687499",
+                "inTypePath" : "documentList/string",
+                "outTypePath" : "documentList/string"
+              }, {
+                "op" : "add",
+                "from" : "/outputDocList/#{loop_id_-331687499}/lasterror",
+                "to" : "/jobList/#{loop_id_-331687499}/lasterror",
+                "follow" : "loop_id_-331687499",
+                "inTypePath" : "documentList/string",
+                "outTypePath" : "documentList/string"
+              }, {
+                "op" : "add",
+                "from" : "/outputDocList/#{loop_id_-331687499}/enabled",
+                "to" : "/jobList/#{loop_id_-331687499}/enabled",
+                "follow" : "loop_id_-331687499",
+                "inTypePath" : "documentList/string",
+                "outTypePath" : "documentList/string"
+              }, {
+                "op" : "add",
+                "from" : "/outputDocList/#{loop_id_-331687499}/owner_node",
+                "to" : "/jobList/#{loop_id_-331687499}/owner_node",
+                "follow" : "loop_id_-331687499",
+                "inTypePath" : "documentList/string",
+                "outTypePath" : "documentList/string"
+              }, {
+                "op" : "add",
+                "from" : "/outputDocList/#{loop_id_-331687499}/last_run",
+                "to" : "/jobList/#{loop_id_-331687499}/last_run",
+                "follow" : "loop_id_-331687499",
+                "inTypePath" : "documentList/string",
+                "outTypePath" : "documentList/string"
+              }, {
+                "op" : "add",
+                "from" : "/outputDocList/#{loop_id_-331687499}/next_run",
+                "to" : "/jobList/#{loop_id_-331687499}/next_run",
+                "follow" : "loop_id_-331687499",
+                "inTypePath" : "documentList/string",
+                "outTypePath" : "documentList/string"
+              }, {
+                "op" : "add",
+                "from" : "/outputDocList/#{loop_id_-331687499}/cron",
+                "to" : "/jobList/#{loop_id_-331687499}/cronExpression",
+                "follow" : "loop_id_-331687499",
+                "inTypePath" : "documentList/string",
+                "outTypePath" : "documentList/string"
+              }, {
+                "op" : "add",
+                "from" : "/outputDocList/#{loop_id_-331687499}/id",
+                "to" : "/jobList/#{loop_id_-331687499}/id",
+                "follow" : "loop_id_-331687499",
+                "inTypePath" : "documentList/string",
+                "outTypePath" : "documentList/string"
+              }, {
+                "op" : "add",
+                "from" : "/outputDocList/#{loop_id_-331687499}/job_name",
+                "to" : "/jobList/#{loop_id_-331687499}/job_name",
+                "follow" : "loop_id_-331687499",
+                "inTypePath" : "documentList/string",
+                "outTypePath" : "documentList/string"
+              } ],
+              "dropList" : [ {
+                "path" : "outputDocList",
+                "typePath" : "documentList"
+              } ],
+              "createList" : [ ],
+              "serviceType" : "sql",
+              "status" : "enabled",
+              "guid" : "44e03d3a-fd45-4b6f-ae8b-c4484176d9b7",
+              "fqn" : "packages/scheduler/cronJob/adapter/services/DQL/getSchedulers"
+            },
+            "children" : [ ],
+            "type" : "invoke"
+          } ],
+          "type" : "group"
+        }, {
+          "id" : "j1_19",
+          "text" : "Group",
+          "li_attr" : {
+            "id" : "j1_19"
+          },
+          "a_attr" : {
+            "href" : "javascript:void(0)",
+            "id" : "j1_19_anchor"
+          },
+          "state" : {
+            "loaded" : true,
+            "opened" : true,
+            "selected" : false,
+            "disabled" : false
+          },
+          "data" : {
+            "comment" : "Get Scheduled JobThreadData Object",
+            "guid" : "90b744f3-d36f-4fa4-83b6-e3fb5bbdeb76"
+          },
+          "children" : [ {
+            "id" : "j1_9",
+            "text" : "Invoke",
+            "li_attr" : {
+              "id" : "j1_9"
+            },
+            "a_attr" : {
+              "href" : "javascript:void(0)",
+              "id" : "j1_9_anchor"
+            },
+            "state" : {
+              "loaded" : true,
+              "opened" : false,
+              "selected" : false,
+              "disabled" : false
+            },
+            "data" : {
+              "lines" : [ {
+                "inputPath" : "jobMapData",
+                "outputPath" : "jobMapData",
+                "inpJsTree" : "#launching_arrow_jsTree_function",
+                "outpJsTree" : "#landing_arrow_jsTree",
+                "INPath" : "jobMapData",
+                "OUTPath" : "jobMapData",
+                "op" : "copy",
+                "line" : 0,
+                "dashedLine" : false,
+                "inType" : "javaObject",
+                "outType" : "javaObject",
+                "inTypePath" : "javaObject",
+                "outTypePath" : "javaObject"
+              } ],
+              "transformers" : [ {
+                "op" : "copy",
+                "from" : "/jobMapData",
+                "to" : "/jobMapData",
+                "inTypePath" : "javaObject",
+                "outTypePath" : "javaObject"
+              } ],
+              "dropList" : [ ],
+              "createList" : [ ],
+              "serviceType" : "service",
+              "status" : "enabled",
+              "guid" : "87140ba5-f849-4972-a52c-41aa91487373",
+              "fqn" : "packages/scheduler/cronJob/services/java/getSchedulerJobData"
+            },
+            "children" : [ ],
+            "type" : "invoke"
+          } ],
+          "type" : "group"
+        }, {
+          "id" : "j1_20",
+          "text" : "Group",
+          "li_attr" : {
+            "id" : "j1_20"
+          },
+          "a_attr" : {
+            "href" : "javascript:void(0)",
+            "id" : "j1_20_anchor"
+          },
+          "state" : {
+            "loaded" : true,
+            "opened" : false,
+            "selected" : false,
+            "disabled" : false
+          },
+          "data" : {
+            "comment" : "Sync job schedules with database.",
+            "guid" : "bbc892a5-0c19-485e-b43c-87580e76fb48"
+          },
+          "children" : [ {
+            "id" : "j1_10",
+            "text" : "Invoke",
+            "li_attr" : {
+              "id" : "j1_10"
+            },
+            "a_attr" : {
+              "href" : "javascript:void(0)",
+              "id" : "j1_10_anchor"
+            },
+            "state" : {
+              "loaded" : true,
+              "opened" : false,
+              "selected" : false,
+              "disabled" : false
+            },
+            "data" : {
+              "lines" : [ {
+                "inputPath" : "jobList",
+                "outputPath" : "jobList",
+                "inpJsTree" : "#launching_arrow_jsTree",
+                "outpJsTree" : "#landing_arrow_jsTree_function",
+                "INPath" : "jobList",
+                "OUTPath" : "jobList",
+                "op" : "copy",
+                "line" : 0,
+                "dashedLine" : false,
+                "inType" : "documentList",
+                "outType" : "documentList",
+                "inTypePath" : "documentList",
+                "outTypePath" : "documentList"
+              } ],
+              "transformers" : [ {
+                "op" : "copy",
+                "from" : "/jobList",
+                "to" : "/jobList",
+                "inTypePath" : "documentList",
+                "outTypePath" : "documentList"
+              } ],
+              "dropList" : [ ],
+              "createList" : [ ],
+              "serviceType" : "service",
+              "status" : "enabled",
+              "guid" : "9f0721a1-a0ff-45d4-b182-93b2291d41d0",
+              "fqn" : "packages/scheduler/cronJob/services/java/updateSchedulerJobData"
+            },
+            "children" : [ ],
+            "type" : "invoke"
+          } ],
+          "type" : "group"
+        }, {
+          "id" : "j1_12",
+          "text" : "Transformer",
+          "li_attr" : {
+            "id" : "j1_12"
+          },
+          "a_attr" : {
+            "href" : "javascript:void(0)",
+            "id" : "j1_12_anchor"
+          },
+          "state" : {
+            "loaded" : true,
+            "opened" : false,
+            "selected" : false,
+            "disabled" : false
+          },
+          "data" : {
+            "lines" : [ ],
+            "transformers" : [ ],
+            "dropList" : [ {
+              "path" : "msg",
+              "typePath" : "string"
+            }, {
+              "path" : "jobMapData",
+              "typePath" : "javaObject"
+            } ],
+            "createList" : [ ],
+            "comment" : "Dropper",
+            "guid" : "16c42019-897a-4b99-b03d-2e9e6e9d2f81"
+          },
+          "children" : [ ],
+          "type" : "transformer"
+        } ],
+        "type" : "group"
+      }, {
+        "id" : "j1_3",
+        "text" : "CATCH",
+        "li_attr" : {
+          "id" : "j1_3"
+        },
+        "a_attr" : {
+          "href" : "javascript:void(0)",
+          "id" : "j1_3_anchor"
+        },
+        "state" : {
+          "loaded" : true,
+          "opened" : true,
+          "selected" : false,
+          "disabled" : false
+        },
+        "data" : {
+          "comment" : "Catch Block",
+          "guid" : "051bd4ae-f18a-409e-9708-9b1cf36138c4"
+        },
+        "children" : [ {
+          "id" : "j1_7",
+          "text" : "Invoke",
+          "li_attr" : {
+            "id" : "j1_7"
+          },
+          "a_attr" : {
+            "href" : "javascript:void(0)",
+            "id" : "j1_7_anchor"
+          },
+          "state" : {
+            "loaded" : true,
+            "opened" : false,
+            "selected" : false,
+            "disabled" : false
+          },
+          "data" : {
+            "lines" : [ {
+              "inputPath" : "lastErrorDump/message",
+              "outputPath" : "error",
+              "inpJsTree" : "#launching_arrow_jsTree_function",
+              "outpJsTree" : "#landing_arrow_jsTree",
+              "INPath" : "lastErrorDump/message",
+              "OUTPath" : "error",
+              "op" : "copy",
+              "line" : 0,
+              "dashedLine" : false,
+              "inType" : "string",
+              "outType" : "string",
+              "inTypePath" : "document/string",
+              "outTypePath" : "string"
+            } ],
+            "transformers" : [ {
+              "op" : "copy",
+              "from" : "/lastErrorDump/message",
+              "to" : "/error",
+              "inTypePath" : "document/string",
+              "outTypePath" : "string"
+            } ],
+            "dropList" : [ ],
+            "createList" : [ ],
+            "serviceType" : "service",
+            "guid" : "f263951a-2d66-4aa7-b831-33120b133830",
+            "fqn" : "packages/middleware/pub/service/utils/getLastErrorDump"
+          },
+          "children" : [ ],
+          "type" : "invoke"
+        }, {
+          "id" : "j1_8",
+          "text" : "Invoke",
+          "li_attr" : {
+            "id" : "j1_8"
+          },
+          "a_attr" : {
+            "href" : "javascript:void(0)",
+            "id" : "j1_8_anchor"
+          },
+          "state" : {
+            "loaded" : true,
+            "opened" : false,
+            "selected" : false,
+            "disabled" : false
+          },
+          "data" : {
+            "lines" : [ {
+              "inputPath" : "error",
+              "outputPath" : "log",
+              "inpJsTree" : "#launching_arrow_jsTree",
+              "outpJsTree" : "#landing_arrow_jsTree_function",
+              "INPath" : "error",
+              "OUTPath" : "log",
+              "op" : "copy",
+              "line" : 0,
+              "dashedLine" : false,
+              "inType" : "string",
+              "outType" : "string",
+              "inTypePath" : "string",
+              "outTypePath" : "string"
+            } ],
+            "transformers" : [ {
+              "op" : "copy",
+              "from" : "/error",
+              "to" : "/log",
+              "inTypePath" : "string",
+              "outTypePath" : "string"
+            } ],
+            "dropList" : [ ],
+            "createList" : [ ],
+            "serviceType" : "service",
+            "guid" : "719e340b-477f-4d59-ba6a-e24f5a9b26ab",
+            "fqn" : "packages/middleware/pub/service/debugLog"
+          },
+          "children" : [ ],
+          "type" : "invoke"
+        } ],
+        "type" : "group"
+      }, {
+        "id" : "j1_4",
+        "text" : "FINALLY",
+        "li_attr" : {
+          "id" : "j1_4"
+        },
+        "a_attr" : {
+          "href" : "javascript:void(0)",
+          "id" : "j1_4_anchor"
+        },
+        "state" : {
+          "loaded" : true,
+          "opened" : false,
+          "selected" : false,
+          "disabled" : false
+        },
+        "data" : {
+          "comment" : "Finally block is empty for this service",
+          "guid" : "33cf79b8-e217-4184-8558-ff8cc05f180c"
+        },
+        "children" : [ ],
+        "type" : "group"
+      } ],
+      "type" : "try-catch"
+    } ]
+  },
+  "consumers" : "",
+  "developers" : "rnd",
+  "enableServiceDocumentValidation" : false
+}

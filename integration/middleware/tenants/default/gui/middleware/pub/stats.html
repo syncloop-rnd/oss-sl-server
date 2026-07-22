@@ -1,0 +1,833 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="telemetryApp" ng-cloak>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>System Telemetry Dashboard</title>
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.3/css/bootstrap.min.css" rel="stylesheet" />
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&display=swap" rel="stylesheet" />
+  <style>
+    :root { --bg:#0b1220; --bg-2:#0f162a; --card:#111a31; --text:#e7ecf6; --muted:#9fb0cc; --brand1:#7c4dff; --brand2:#00e5ff; --brand3:#00c853; --brand4:#ffab00; --brand5:#ff5252; }
+    [data-theme="light"] { --bg:#f6f8fb; --bg-2:#eef2f8; --card:#fff; --text:#0b1320; --muted:#506079; --brand1:#6c5ce7; --brand2:#00bcd4; --brand3:#00a152; --brand4:#ff9100; --brand5:#e53935; }
+    body{font-family:"Inter",system-ui,-apple-system,Segoe UI,Roboto,"Helvetica Neue",Arial; background:var(--bg); color:var(--text);}
+    .appbar{position:sticky;top:0;z-index:1020;background:linear-gradient(180deg,rgba(0,0,0,.45),rgba(0,0,0,0)),var(--bg-2);backdrop-filter:saturate(130%) blur(6px);border-bottom:1px solid rgba(255,255,255,.06)}
+    .brand-dot{width:.65rem;height:.65rem;border-radius:50%;display:inline-block;margin-right:.5rem;background:var(--brand2);box-shadow:0 0 18px var(--brand2)}
+    .btn-ghost{background:transparent;border:1px solid rgba(255,255,255,.12);color:var(--text)}
+    .btn-brand{background:var(--brand1);border-color:var(--brand1);color:#fff}
+    .cardx{background:var(--card);border:1px solid rgba(255,255,255,.07);border-radius:18px;box-shadow:0 8px 28px rgba(0,0,0,.24)}
+    .chip{border:1px solid rgba(255,255,255,.15);padding:.35rem .6rem;border-radius:999px;font-size:.8rem;color:var(--muted)}
+    .grid{display:grid;grid-template-columns:repeat(12,1fr);gap:1rem}
+    .col-6x{grid-column:span 6}.col-12x{grid-column:span 12}
+    @media (max-width:1200px){.col-6x{grid-column:span 12}}
+    .toast-stack{position:fixed;top:.75rem;left:50%;transform:translateX(-50%);z-index:3000;width:min(680px,92vw)}
+    .toastx{background:var(--card);border:1px solid rgba(255,255,255,.1);color:var(--text);border-radius:14px;padding:.75rem 1rem;margin-bottom:.5rem;box-shadow:0 8px 24px rgba(0,0,0,.35)}
+    .progressline{position:fixed;top:0;left:0;height:3px;background:linear-gradient(90deg,var(--brand2),var(--brand1));width:0;z-index:3001;transition:width .25s ease}
+    canvas{width:100%!important;height:280px!important}
+    canvas.ignite-mini{height:90px!important}
+    .tablex{width:100%;font-size:.95rem}
+    .tablex th,.tablex td{padding:.5rem .6rem;border-bottom:1px dashed rgba(255,255,255,.08)}
+    .nav-pills .nav-link{color:var(--muted);border:1px solid rgba(255,255,255,.1);border-radius:999px;margin-right:.5rem}
+    .nav-pills .nav-link.active{background:var(--brand2);color:#001018;border-color:transparent}
+    .modalx-backdrop{position:fixed;inset:0;background:rgba(0,0,0,.45);display:none;place-items:center;z-index:2050}
+    .modalx{width:min(520px,92vw);background:var(--card);border:1px solid rgba(255,255,255,.1);border-radius:16px;padding:1rem}
+    .modalx-backdrop.show{display:grid}
+    .ignite-dot{display:inline-block;width:10px;height:10px;border-radius:999px;margin-right:.4rem}
+  </style>
+</head>
+<body ng-controller="MainCtrl as vm" data-theme="dark">
+  <div class="progressline" id="progressline"></div>
+  <div class="toast-stack" id="toastStack"></div>
+
+  <div class="appbar py-2 px-3">
+    <div class="d-flex align-items-center justify-content-between">
+      <div class="d-flex align-items-center gap-3">
+        <div class="brand-dot"></div>
+        <div>
+          <div class="fw-bold">System Telemetry</div>
+          <div class="small text-secondary">Live from <span class="fw-semibold" ng-bind="vm.effectiveWsUrl"></span></div>
+        </div>
+        <span class="chip ms-2" ng-class="{'text-success': vm.wsOpen, 'text-warning': !vm.wsOpen}">
+          <i class="fa-solid" ng-class="vm.wsOpen ? 'fa-signal' : 'fa-plug-circle-exclamation'"></i>
+          <span class="ms-1">{{ vm.wsOpen ? 'CONNECTED' : 'DISCONNECTED' }}</span>
+        </span>
+      </div>
+      <div class="d-flex align-items-center gap-2">
+        <button class="btn btn-ghost btn-sm" ng-click="vm.openEndpointModal()" title="Set WebSocket endpoint"><i class="fa-solid fa-plug"></i></button>
+        <button class="btn btn-ghost btn-sm" ng-click="vm.toggleTheme()" title="Toggle theme"><i class="fa-solid fa-circle-half-stroke"></i></button>
+        <button class="btn btn-ghost btn-sm" ng-click="vm.openThemeModal()" title="Customize theme"><i class="fa-solid fa-palette"></i></button>
+      </div>
+    </div>
+  </div>
+
+  <div class="container-fluid py-3">
+    <div class="cardx p-3 mb-3">
+      <div class="d-flex align-items-center justify-content-between mb-2">
+        <div class="fw-semibold">Nodes to compare (top graphs)</div>
+        <div class="d-flex gap-2">
+          <button class="btn btn-ghost btn-sm" ng-click="vm.selectAllNodes(true)">Select All</button>
+          <button class="btn btn-ghost btn-sm" ng-click="vm.selectAllNodes(false)">Clear</button>
+        </div>
+      </div>
+      <div class="d-flex flex-wrap gap-3">
+        <label class="form-check" ng-repeat="n in vm.nodes track by n.NODENAME">
+          <input class="form-check-input me-1" type="checkbox" ng-model="vm.compare.selected[n.NODENAME]" ng-change="vm.refreshAllHistoryCharts()"/>
+          <span class="form-check-label">{{n.NODENAME}}</span>
+        </label>
+      </div>
+    </div>
+
+    <div class="grid">
+      <div class="col-12x">
+        <div class="cardx p-3 mb-3">
+          <div class="d-flex justify-content-between align-items-center mb-2">
+            <div class="fw-semibold">RAM History — ~{{ vm.windowSecs() }}s</div>
+            <span class="text-secondary small">1s sampling • newest at left • slides right</span>
+          </div>
+          <div class="row g-3">
+            <div class="col-lg-6">
+              <div class="fw-semibold small mb-1">JVM Heap Used</div>
+              <canvas id="heapHistChart"></canvas>
+            </div>
+            <div class="col-lg-6">
+              <div class="fw-semibold small mb-1">System Memory Used</div>
+              <canvas id="sysMemHistChart"></canvas>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- CPU history -->
+      <div class="col-6x">
+        <div class="cardx p-3">
+          <div class="d-flex align-items-center gap-3 mb-2">
+            <div class="fw-semibold flex-grow-1">CPU History — ~{{ vm.windowSecs() }}s</div>
+            <div class="form-check form-check-inline">
+              <input class="form-check-input" type="checkbox" id="chkAvg" ng-model="vm.hist.showAvg" ng-change="vm.refreshAllHistoryCharts()"/>
+              <label class="form-check-label" for="chkAvg">Avg (per node)</label>
+            </div>
+            <div class="form-check form-check-inline">
+              <input class="form-check-input" type="checkbox" id="chkAll" ng-model="vm.hist.showAll" ng-change="vm.refreshAllHistoryCharts()"/>
+              <label class="form-check-label" for="chkAll">All CPU (active node)</label>
+            </div>
+          </div>
+          <canvas id="cpuHistoryChart"></canvas>
+        </div>
+      </div>
+
+      <!-- Ignite data regions history (new 4th graph block) -->
+      <div class="col-6x">
+        <div class="cardx p-3">
+          <div class="d-flex align-items-center justify-content-between mb-2">
+            <div class="fw-semibold">Ignite Data Regions — ~{{ vm.windowSecs() }}s</div>
+            <span class="small text-secondary">Active: {{ vm.activeNode || 'n/a' }}</span>
+          </div>
+          <div class="small text-secondary mb-2">Usage % over time (Default / Off-heap / Off-heap persisted)</div>
+          <div class="d-flex flex-column gap-2">
+            <div>
+              <div class="fw-semibold small mb-1">
+                <span class="ignite-dot" style="background:#42a5f5"></span>Default
+              </div>
+              <canvas id="igniteRegionDefaultChart" class="ignite-mini"></canvas>
+            </div>
+            <div>
+              <div class="fw-semibold small mb-1">
+                <span class="ignite-dot" style="background:#66bb6a"></span>Off-heap
+              </div>
+              <canvas id="igniteRegionOffheapChart" class="ignite-mini"></canvas>
+            </div>
+            <div>
+              <div class="fw-semibold small mb-1">
+                <span class="ignite-dot" style="background:#ffb300"></span>Off-heap persisted
+              </div>
+              <canvas id="igniteRegionPersistChart" class="ignite-mini"></canvas>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-12x">
+        <div class="cardx p-3">
+          <ul class="nav nav-pills mb-3 flex-wrap">
+            <li class="nav-item" ng-repeat="n in vm.nodes track by n.NODENAME">
+              <a href class="nav-link" ng-class="{'active': vm.activeNode === n.NODENAME}" ng-click="vm.setActiveNode(n.NODENAME)"><i class="fa-solid fa-server me-1"></i> {{n.NODENAME}}</a>
+            </li>
+          </ul>
+          <div class="row g-3">
+            <div class="col-lg-3">
+              <div class="fw-semibold mb-1">OS</div>
+              <table class="tablex"><tbody>
+                <tr><td class="key">Name</td><td>{{ vm.sel.os.name }} {{ vm.sel.os.version }}</td></tr>
+                <tr><td class="key">Arch</td><td>{{ vm.sel.os.arch }}</td></tr>
+                <tr><td class="key">Host</td><td>{{ vm.sel.os.hostname }}</td></tr>
+                <tr><td class="key">Domain</td><td>{{ vm.sel.os.domainName }}</td></tr>
+                <tr><td class="key">CPU</td><td>{{ vm.sel.os.availableProcessors }} cores</td></tr>
+                <tr><td class="key">Processes</td><td>{{ vm.sel.os.processCount }}</td></tr>
+                <tr><td class="key">Threads</td><td>{{ vm.sel.os.threadCount }}</td></tr>
+                <tr><td class="key">Uptime</td><td>{{ vm.msToHMS(vm.sel.jvm.uptimeMs || 0) }}</td></tr>
+              </tbody></table>
+            </div>
+            <div class="col-lg-3">
+              <div class="fw-semibold mb-1">System</div>
+              <table class="tablex"><tbody>
+                <tr><td class="key">CPU (proc)</td><td>{{ (vm.sel.system.processCpuLoad||0) | number:2 }}%</td></tr>
+                <tr><td class="key">CPU (sys)</td><td>{{ (vm.sel.system.systemCpuLoad||0) | number:2 }}%</td></tr>
+                <tr><td class="key">Mem Used</td><td>{{ vm.prettyBytes(vm.sel.system.usedPhysicalBytes) }} / {{ vm.prettyBytes(vm.sel.system.totalPhysicalBytes) }}</td></tr>
+                <tr><td class="key">Swap Used</td><td>{{ vm.prettyBytes(vm.sel.system.usedSwapBytes) }} / {{ vm.prettyBytes(vm.sel.system.totalSwapBytes) }}</td></tr>
+                <tr><td class="key">Proc CPU Time</td><td>{{ vm.prettyNs(vm.sel.system.processCpuTimeNs) }}</td></tr>
+              </tbody></table>
+            </div>
+            <div class="col-lg-3">
+              <div class="fw-semibold mb-1">JVM</div>
+              <table class="tablex"><tbody>
+                <tr><td class="key">Heap</td><td>{{ vm.prettyBytes(vm.sel.jvm.memory.heapUsed) }} / {{ vm.prettyBytes(vm.sel.jvm.memory.heapMax) }}</td></tr>
+                <tr><td class="key">Non-Heap</td><td>{{ vm.prettyBytes(vm.sel.jvm.memory.nonHeapUsed) }} / {{ vm.sel.jvm.memory.nonHeapMax < 0 ? '∞' : vm.prettyBytes(vm.sel.jvm.memory.nonHeapMax) }}</td></tr>
+                <tr><td class="key">GC</td><td><span ng-repeat="g in vm.sel.jvm.garbageCollectors">{{g.name}}: {{g.collectionCount}} ({{g.collectionTimeMs}}ms){{$last?'':', '}}</span></td></tr>
+                <tr><td class="key">Vendor</td><td>{{ vm.sel.jvm.vmVendor }} • {{ vm.sel.jvm.vmVersion }}</td></tr>
+                <tr><td class="key">Start</td><td>{{ vm.prettyDate(vm.sel.jvm.startTimeMs) }}</td></tr>
+              </tbody></table>
+            </div>
+            <!-- New Ignite details block -->
+            <div class="col-lg-3">
+              <div class="fw-semibold mb-1">Ignite</div>
+              <table class="tablex"><tbody>
+                <tr><td class="key">Enabled</td><td>{{ vm.sel.ignite.enabled ? 'Yes' : 'No' }}</td></tr>
+                <tr><td class="key">Node ID</td><td class="text-truncate" style="max-width:12rem">{{ vm.sel.ignite.nodeId }}</td></tr>
+                <tr><td class="key">Consistent ID</td><td>{{ vm.sel.ignite.consistentId }}</td></tr>
+                <tr><td class="key">Ignite CPU</td><td>{{ (vm.sel.ignite.currentCpuLoadPercent||0) | number:1 }}% cur / {{ (vm.sel.ignite.averageCpuLoadPercent||0) | number:1 }}% avg</td></tr>
+                <tr><td class="key">Ignite Heap</td><td>{{ vm.prettyBytes(vm.sel.ignite.heapMemoryUsed) }} / {{ vm.prettyBytes(vm.sel.ignite.heapMemoryMaximum) }}</td></tr>
+                <tr><td class="key">Ignite Non-Heap</td><td>{{ vm.prettyBytes(vm.sel.ignite.nonHeapMemoryUsed) }} / {{ vm.sel.ignite.nonHeapMemoryMaximum < 0 ? '∞' : vm.prettyBytes(vm.sel.ignite.nonHeapMemoryMaximum) }}</td></tr>
+                <tr><td class="key">Busy / Idle</td><td>{{ (vm.sel.ignite.busyTimePercentage||0) | number:3 }} / {{ (vm.sel.ignite.idleTimePercentage||0) | number:3 }}</td></tr>
+                <tr><td class="key">Topology</td><td>{{ vm.sel.ignite.topologySize || 0 }} nodes</td></tr>
+                <tr>
+                  <td class="key align-top">Jobs</td>
+                  <td>
+                    Active {{ vm.sel.ignite.activeJobs || 0 }},
+                    Wait {{ vm.sel.ignite.waitingJobs || 0 }},
+                    Canceled {{ vm.sel.ignite.canceledJobs || 0 }},
+                    Rejected {{ vm.sel.ignite.rejectedJobs || 0 }}
+                  </td>
+                </tr>
+                <tr>
+                  <td class="key align-top">Data regions</td>
+                  <td>
+                    <div ng-if="!(vm.sel.igniteRegions && vm.sel.igniteRegions.length)">-</div>
+                    <div ng-repeat="r in vm.sel.igniteRegions">
+                      {{r.name}} — {{ (r.usedPercent || 0) | number:2 }}% of
+                      {{ (r.maxAllottedGb || (r.maxSizeBytes/1073741824)) | number:1 }} GB
+                    </div>
+                  </td>
+                </tr>
+              </tbody></table>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- Theme Modal -->
+  <div class="modalx-backdrop" id="themeModal">
+    <div class="modalx">
+      <div class="d-flex justify-content-between align-items-center mb-2">
+        <div class="fw-semibold">Customize Theme (5 colors)</div>
+        <button class="btn btn-ghost btn-sm" onclick="document.getElementById('themeModal').classList.remove('show')"><i class="fa-solid fa-xmark"></i></button>
+      </div>
+      <div class="row g-3">
+        <div class="col-6"><label class="form-label">Primary</label><input class="form-control form-control-color" type="color" id="c1" value="#7c4dff" /></div>
+        <div class="col-6"><label class="form-label">Accent</label><input class="form-control form-control-color" type="color" id="c2" value="#00e5ff" /></div>
+        <div class="col-4"><label class="form-label">Success</label><input class="form-control form-control-color" type="color" id="c3" value="#00c853" /></div>
+        <div class="col-4"><label class="form-label">Warning</label><input class="form-control form-control-color" type="color" id="c4" value="#ffab00" /></div>
+        <div class="col-4"><label class="form-label">Danger</label><input class="form-control form-control-color" type="color" id="c5" value="#ff5252" /></div>
+      </div>
+      <div class="d-flex justify-content-end gap-2 mt-3">
+        <button class="btn btn-ghost" onclick="document.getElementById('themeModal').classList.remove('show')">Close</button>
+        <button class="btn btn-brand" id="saveThemeBtn">Save Theme</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Endpoint Modal -->
+  <div class="modalx-backdrop" id="endpointModal">
+    <div class="modalx">
+      <div class="d-flex justify-content-between align-items-center mb-2">
+        <div class="fw-semibold">WebSocket Endpoint</div>
+        <button class="btn btn-ghost btn-sm" onclick="document.getElementById('endpointModal').classList.remove('show')"><i class="fa-solid fa-xmark"></i></button>
+      </div>
+      <div class="mb-3">
+        <label class="form-label">Absolute URL (e.g., wss://your-host/ws/system-telemetry)</label>
+        <input id="endpointInput" type="text" class="form-control bg-transparent text-light" placeholder="wss://host/ws/system-telemetry" />
+      </div>
+      <div class="d-flex justify-content-end gap-2">
+        <button class="btn btn-ghost" onclick="document.getElementById('endpointModal').classList.remove('show')">Close</button>
+        <button class="btn btn-brand" id="saveEndpointBtn">Save & Reconnect</button>
+      </div>
+    </div>
+  </div>
+
+  <script src="https://cdn.jsdelivr.net/npm/angular@1.8.3/angular.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/angular-sanitize@1.8.3/angular-sanitize.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.3/dist/chart.umd.min.js"></script>
+
+<script>
+(function(){
+  const app = angular.module('telemetryApp', ['ngSanitize']);
+
+  app.controller('MainCtrl', ['$scope', function($scope){
+    const vm = this;
+
+    // --- WS / State ---
+    vm.ws = null;
+    vm.wsOpen = false;
+    vm.wsUrl = '/ws/system-telemetry';
+    vm.effectiveWsUrl = '';
+    vm.nodes = [];
+    vm.activeNode = null; // only for DETAILS tab
+    vm.sel = { os:{}, system:{}, jvm:{}, ignite:{}, igniteRegions:[], cpuPerCore:[], diskIObps:[] };
+
+    // Chart display toggles
+    vm.hist = { showAvg: true, showAll: false };
+
+    // histories per node: arrays of {x,y} with x=0 newest at LEFT; increase to the RIGHT
+    // { [NODENAME]: { cpuAvg:[], heapUsed:[], sysUsed:[], perCore:[[]], igniteDefault:[], igniteOffheap:[], ignitePersist:[], samples: number } }
+    vm.histories = {};
+    vm.compare = { selected: {} };
+
+    // --- UI Helpers (progress + toasts + theme + endpoint modals) ---
+    const progressEl = document.getElementById('progressline');
+    function progressStart(){ progressEl.style.width='35%'; }
+    function progressMid(){ progressEl.style.width='65%'; }
+    function progressDone(){ progressEl.style.width='100%'; setTimeout(()=> progressEl.style.width='0%', 300); }
+    function toast(msg, type='info'){
+      const stack=document.getElementById('toastStack');
+      const el=document.createElement('div');
+      el.className='toastx';
+      el.innerHTML=`<i class="fa-solid ${type==='error'?'fa-triangle-exclamation': type==='success'?'fa-circle-check':'fa-circle-info'} me-2"></i>${msg}`;
+      stack.prepend(el); setTimeout(()=>el.remove(), 3000);
+    }
+    vm.toggleTheme = function(){
+      const b=document.body, isLight=b.getAttribute('data-theme')==='light';
+      b.setAttribute('data-theme', isLight?'dark':'light');
+      localStorage.setItem('telemetry-theme', b.getAttribute('data-theme'));
+      toast('Theme: '+b.getAttribute('data-theme'));
+    };
+    vm.openThemeModal = function(){ document.getElementById('themeModal').classList.add('show'); };
+    vm.openEndpointModal = function(){ document.getElementById('endpointModal').classList.add('show'); };
+
+    // --- Node ordering + selection integrity ---
+    function nodeNumber(name){
+      const m=(name||'').match(/SL-Node-(\d+)/i);
+      if (m) return Math.max(1, parseInt(m[1],10));
+      // fallback: hash name deterministically to [1..50]
+      let h=0; for(let i=0;i<(name||'').length;i++){ h=((h<<5)-h)+(name.charCodeAt(i)|0); h|=0; }
+      return (Math.abs(h)%50)+1;
+    }
+    function sortNodesInPlace(){ (vm.nodes||[]).sort((a,b)=> nodeNumber(a.NODENAME) - nodeNumber(b.NODENAME)); }
+
+    vm.selectAllNodes = function(flag){
+      (vm.nodes||[]).forEach(n=> vm.compare.selected[n.NODENAME]=!!flag);
+      ensureActiveNodeIsSelected();
+      vm.refreshAllHistoryCharts();
+    };
+
+    function firstSelectedNode(){
+      for(const n of (vm.nodes||[])) if(vm.compare.selected[n.NODENAME]) return n.NODENAME;
+      return null;
+    }
+    function ensureActiveNodeIsSelected(){
+      if(!vm.activeNode) { vm.activeNode = firstSelectedNode() || (vm.nodes[0]?.NODENAME); return; }
+      if(!vm.compare.selected[vm.activeNode]) {
+        const nxt = firstSelectedNode();
+        if(nxt) vm.activeNode = nxt;
+      }
+    }
+
+    // --- FIXED NODE COLOR PALETTE (stable across reloads & sessions) ---
+    const PALETTE_KEY = 'telemetry-node-palette-v1';
+    function buildPalette(){
+      const arr=[];
+      let h=17;
+      for(let i=0;i<50;i++){ arr.push({h:(h%360),s:68,l:55}); h+=137.508; }
+      return arr;
+    }
+    function loadPalette(){
+      try{
+        const s = localStorage.getItem(PALETTE_KEY);
+        if(!s) return null;
+        const p = JSON.parse(s);
+        if(Array.isArray(p) && p.length===50) return p;
+      }catch(e){}
+      return null;
+    }
+    function savePalette(p){ try{ localStorage.setItem(PALETTE_KEY, JSON.stringify(p)); }catch(e){} }
+    let NODE_PALETTE = loadPalette() || (savePalette(buildPalette()), loadPalette());
+
+    function hslaStr(h,s,l,a){ return `hsla(${Math.round(h)},${Math.round(s)}%,${Math.round(l)}%,${a})`; }
+    function withAlpha(base, alpha){ return hslaStr(base.h, base.s, base.l, alpha); }
+    function colorForNodeFixed(name, alpha=1){
+      const idx = Math.min(49, Math.max(0, nodeNumber(name)-1));
+      const base = NODE_PALETTE[idx];
+      return withAlpha(base, alpha);
+    }
+    function colorForNodeCoreFixed(nodeName, coreIdx, totalCores, alpha=1){
+      const idx = Math.min(49, Math.max(0, nodeNumber(nodeName)-1));
+      const base = NODE_PALETTE[idx];
+      const spread = totalCores>1 ? coreIdx/(totalCores-1) : 0;
+      const l = 38 + Math.round(spread*28); // 38..66
+      return hslaStr(base.h, base.s, l, alpha);
+    }
+
+    // --- Ignite region colors (fixed) ---
+    const IGNITE_COLOR_DEFAULT_BORDER  = '#42a5f5';
+    const IGNITE_COLOR_DEFAULT_FILL    = 'rgba(66,165,245,0.18)';
+    const IGNITE_COLOR_OFFHEAP_BORDER  = '#66bb6a';
+    const IGNITE_COLOR_OFFHEAP_FILL    = 'rgba(102,187,106,0.18)';
+    const IGNITE_COLOR_PERSIST_BORDER  = '#ffb300';
+    const IGNITE_COLOR_PERSIST_FILL    = 'rgba(255,179,0,0.18)';
+
+    // --- Belt pan state (smooth pan without dataset re-animation) ---
+    let cpuHistChart, heapHistChart, sysMemHistChart;
+    let igniteDefaultChart, igniteOffheapChart, ignitePersistChart;
+    let beltShift = 0;
+    let lastSampleTs = performance.now();
+    let emaTickMs = 1000;
+    const EMA_ALPHA = 0.22;
+    const WARMUP_SAMPLES = 5;
+
+    function currentPanPeriodMs(){
+      return Math.max(900, Math.min(2000, emaTickMs * 1.10));
+    }
+
+    function baseLineOptions(xMax){
+      return {
+        responsive:true,
+        maintainAspectRatio:false,
+        parsing:false,
+        animation:false,
+        transitions:{ active:{ animation:{ duration:0 } } },
+        spanGaps:true,
+        elements:{ line:{ tension:0.4 }, point:{ radius:0, hitRadius:6 } },
+        interaction:{ mode:'nearest', intersect:false },
+        plugins:{ legend:{ display:true, labels:{ usePointStyle:true, boxWidth:8 } } },
+        scales:{
+          x:{ type:'linear', min:-beltShift, max:xMax-beltShift, ticks:{ display:false }, grid:{ display:false } },
+          y:{ beginAtZero:true, grid:{ drawBorder:false } }
+        }
+      };
+    }
+
+    function pointsFromWidth(canvasEl){
+      const w=(canvasEl && canvasEl.getBoundingClientRect ? canvasEl.getBoundingClientRect().width : 0) || 800;
+      return Math.max(30, Math.min(300, Math.floor(w/10)));
+    }
+    function currentXMax(){
+      const ids = ['cpuHistoryChart','heapHistChart','sysMemHistChart','igniteRegionDefaultChart'];
+      let minPts = null;
+      ids.forEach(id=>{
+        const el = document.getElementById(id);
+        if(!el) return;
+        const pts = pointsFromWidth(el);
+        minPts = (minPts==null ? pts : Math.min(minPts, pts));
+      });
+      const base = (minPts==null ? 80 : minPts);
+      return base-1;
+    }
+
+    function ensureCharts(){
+      const xMax=currentXMax();
+      const cpuOpts=baseLineOptions(xMax); cpuOpts.scales.y.max=100;
+      if(!cpuHistChart)
+        cpuHistChart=new Chart(document.getElementById('cpuHistoryChart'),{type:'line',data:{datasets:[]},options:cpuOpts});
+      if(!heapHistChart)
+        heapHistChart=new Chart(document.getElementById('heapHistChart'),{type:'line',data:{datasets:[]},options:baseLineOptions(xMax)});
+      if(!sysMemHistChart)
+        sysMemHistChart=new Chart(document.getElementById('sysMemHistChart'),{type:'line',data:{datasets:[]},options:baseLineOptions(xMax)});
+
+      const igniteOpts = baseLineOptions(xMax); igniteOpts.scales.y.max = 100;
+      if(!igniteDefaultChart)
+        igniteDefaultChart = new Chart(document.getElementById('igniteRegionDefaultChart'), { type:'line', data:{datasets:[]}, options:igniteOpts });
+      if(!igniteOffheapChart)
+        igniteOffheapChart = new Chart(document.getElementById('igniteRegionOffheapChart'), { type:'line', data:{datasets:[]}, options:igniteOpts });
+      if(!ignitePersistChart)
+        ignitePersistChart = new Chart(document.getElementById('igniteRegionPersistChart'), { type:'line', data:{datasets:[]}, options:igniteOpts });
+
+      setScaleWindow(xMax);
+    }
+
+    function setScaleWindow(xMax){
+      const min=-beltShift, max=xMax-beltShift;
+      [cpuHistChart, heapHistChart, sysMemHistChart, igniteDefaultChart, igniteOffheapChart, ignitePersistChart].forEach(ch=>{
+        if(!ch) return;
+        ch.options.scales.x.min = min;
+        ch.options.scales.x.max = max;
+      });
+    }
+
+    // --- Histories ---
+    function ensureNodeHistory(name, coreCount){
+      const H = vm.histories[name] || {
+        cpuAvg:[], heapUsed:[], sysUsed:[],
+        perCore:[],
+        igniteDefault:[], igniteOffheap:[], ignitePersist:[],
+        samples: 0
+      };
+      if(H.perCore.length!==coreCount) H.perCore = Array.from({length: coreCount||0}, ()=>[]);
+      if(!Array.isArray(H.igniteDefault)) H.igniteDefault = [];
+      if(!Array.isArray(H.igniteOffheap)) H.igniteOffheap = [];
+      if(!Array.isArray(H.ignitePersist)) H.ignitePersist = [];
+      vm.histories[name]=H;
+      return H;
+    }
+    function slideAndInsert(arr, y, xMax){
+      for(let i=0;i<arr.length;i++) arr[i].x += 1;
+      for(let j=arr.length-1;j>=0;j--) if(arr[j].x > xMax) arr.splice(j,1);
+      arr.unshift({x:0, y});
+    }
+
+    vm.ingestNodeSample = function(n){
+      const sys=n.system||{}, jvm=n.jvm||{}, cores=n.cpuPerCore||[];
+      const H = ensureNodeHistory(n.NODENAME, cores.length);
+      const xMax=currentXMax();
+
+      const now = performance.now();
+      const dt = Math.max(1, now - lastSampleTs);
+      emaTickMs = emaTickMs*(1-EMA_ALPHA) + dt*EMA_ALPHA;
+
+      const avg = cores.length? cores.reduce((a,b)=>a+Number(b||0),0)/cores.length : 0;
+      slideAndInsert(H.cpuAvg, avg, xMax);
+      slideAndInsert(H.heapUsed, Number(jvm.memory?.heapUsed||0)/1073741824, xMax); // GB
+      slideAndInsert(H.sysUsed, Number(sys.usedPhysicalBytes||0)/1073741824, xMax); // GB
+      cores.forEach((v,i)=> slideAndInsert(H.perCore[i], Number(v||0), xMax));
+
+      // Ignite data regions (by region name)
+      const regions = n['ignite-data-regions'] || n.igniteDataRegions || [];
+      let defPct=0, offPct=0, persPct=0;
+      regions.forEach(r=>{
+        const nm = (r.name || '').toLowerCase();
+        const up = Number(r.usedPercent || 0);
+        if(nm === 'default'){ defPct = up; }
+        else if(nm.indexOf('offheap') >= 0 && nm.indexOf('persisted') === -1){ offPct = up; }
+        else if(nm.indexOf('persisted') >= 0){ persPct = up; }
+      });
+      slideAndInsert(H.igniteDefault, defPct, xMax);
+      slideAndInsert(H.igniteOffheap, offPct, xMax);
+      slideAndInsert(H.ignitePersist, persPct, xMax);
+
+      H.samples++;
+      beltShift = 0;
+      lastSampleTs = now;
+    };
+
+    // --- Formatting ---
+    vm.prettyBytes = function(v){
+      if(v==null) return '-';
+      const u=['B','KB','MB','GB','TB']; let i=0,n=Number(v);
+      while(n>=1024&&i<u.length-1){n/=1024;i++;}
+      return n.toFixed(1)+' '+u[i];
+    };
+    vm.prettyNs = function(ns){
+      if(ns==null) return '-';
+      const ms=ns/1e6;
+      if(ms<1000) return ms.toFixed(0)+' ms';
+      const s=ms/1000;
+      if(s<60) return s.toFixed(1)+' s';
+      const m=s/60;
+      if(m<60) return m.toFixed(1)+' m';
+      const h=m/60;
+      return h.toFixed(1)+' h';
+    };
+    vm.msToHMS = function(ms){
+      const s=Math.floor(ms/1000), h=Math.floor(s/3600), m=Math.floor((s%3600)/60), ss=s%60;
+      return `${h}h ${m}m ${ss}s`;
+    };
+    vm.prettyDate = function(ms){ try{return new Date(ms).toLocaleString();}catch(e){return '-';} };
+    vm.windowSecs = ()=> currentXMax()+1;
+
+    // --- Build datasets ---
+    vm.refreshAllHistoryCharts = function(){
+      ensureActiveNodeIsSelected();
+      ensureCharts();
+      const xMax=currentXMax();
+
+      sortNodesInPlace();
+
+      const cpuSets=[];
+      (vm.nodes||[]).forEach(n=>{
+        if(!vm.compare.selected[n.NODENAME]) return;
+        const H=vm.histories[n.NODENAME]; if(!H) return;
+
+        if(vm.hist.showAvg){
+          cpuSets.push({
+            label: n.NODENAME+' (avg)',
+            data: H.cpuAvg,
+            borderColor: colorForNodeFixed(n.NODENAME,1),
+            backgroundColor: colorForNodeFixed(n.NODENAME,.18),
+            borderWidth:2,
+            fill:false,
+            cubicInterpolationMode:'monotone'
+          });
+        }
+
+        if(vm.hist.showAll && Array.isArray(H.perCore)){
+          const total = H.perCore.length || 0;
+          H.perCore.forEach((series,i)=>{
+            cpuSets.push({
+              label: `${n.NODENAME} CPU${i}`,
+              data: series,
+              borderColor: colorForNodeCoreFixed(n.NODENAME, i, total, 0.95),
+              backgroundColor: colorForNodeCoreFixed(n.NODENAME, i, total, 0.14),
+              borderWidth:1,
+              fill:false,
+              cubicInterpolationMode:'monotone'
+            });
+          });
+        }
+      });
+
+      cpuHistChart.data.datasets = cpuSets;
+
+      const heapSets=[], memSets=[];
+      (vm.nodes||[]).forEach(n=>{
+        if(!vm.compare.selected[n.NODENAME]) return;
+        const H=vm.histories[n.NODENAME]; if(!H) return;
+        const c=colorForNodeFixed(n.NODENAME,1), cb=colorForNodeFixed(n.NODENAME,.18);
+        heapSets.push({ label:n.NODENAME, data:H.heapUsed, borderColor:c, backgroundColor:cb, borderWidth:2, fill:false, cubicInterpolationMode:'monotone' });
+        memSets.push( { label:n.NODENAME, data:H.sysUsed,  borderColor:c, backgroundColor:cb, borderWidth:2, fill:false, cubicInterpolationMode:'monotone' });
+      });
+
+      heapHistChart.data.datasets = heapSets;
+      sysMemHistChart.data.datasets = memSets;
+
+      // Ignite per-region history for ACTIVE node only
+      if(igniteDefaultChart && igniteOffheapChart && ignitePersistChart){
+        const actName = vm.activeNode;
+        const HAct = actName && vm.histories[actName];
+        if(HAct){
+          igniteDefaultChart.data.datasets = [{
+            label: 'default',
+            data: HAct.igniteDefault || [],
+            borderColor: IGNITE_COLOR_DEFAULT_BORDER,
+            backgroundColor: IGNITE_COLOR_DEFAULT_FILL,
+            borderWidth:2,
+            fill:true,
+            cubicInterpolationMode:'monotone'
+          }];
+          igniteOffheapChart.data.datasets = [{
+            label: 'off-heap',
+            data: HAct.igniteOffheap || [],
+            borderColor: IGNITE_COLOR_OFFHEAP_BORDER,
+            backgroundColor: IGNITE_COLOR_OFFHEAP_FILL,
+            borderWidth:2,
+            fill:true,
+            cubicInterpolationMode:'monotone'
+          }];
+          ignitePersistChart.data.datasets = [{
+            label: 'off-heap persisted',
+            data: HAct.ignitePersist || [],
+            borderColor: IGNITE_COLOR_PERSIST_BORDER,
+            backgroundColor: IGNITE_COLOR_PERSIST_FILL,
+            borderWidth:2,
+            fill:true,
+            cubicInterpolationMode:'monotone'
+          }];
+        } else {
+          igniteDefaultChart.data.datasets = [];
+          igniteOffheapChart.data.datasets = [];
+          ignitePersistChart.data.datasets = [];
+        }
+      }
+
+      setScaleWindow(xMax);
+      cpuHistChart.update('none');
+      heapHistChart.update('none');
+      sysMemHistChart.update('none');
+      if(igniteDefaultChart) igniteDefaultChart.update('none');
+      if(igniteOffheapChart) igniteOffheapChart.update('none');
+      if(ignitePersistChart) ignitePersistChart.update('none');
+    };
+
+    // --- Details tab binding ---
+    vm.setActiveNode = function(name){
+      sortNodesInPlace();
+      const node=(vm.nodes||[]).find(x=>x.NODENAME===name) || vm.nodes[0] || {};
+      vm.activeNode = node.NODENAME || name;
+      vm.sel = {
+        os: node.os||{},
+        system: node.system||{},
+        jvm: node.jvm||{},
+        ignite: node.ignite || {},
+        igniteRegions: node['ignite-data-regions'] || [],
+        cpuPerCore: node.cpuPerCore||[],
+        diskIObps: node.diskIObps||[]
+      };
+    };
+
+    // --- Smooth pan loop ---
+    function beltLoop(ts){
+      const anyHistory = Object.values(vm.histories)[0];
+      const warmed = !!anyHistory && (anyHistory.samples >= WARMUP_SAMPLES);
+      const panPeriod = currentPanPeriodMs();
+
+      if (warmed) {
+        const dt = ts - lastSampleTs;
+        const frac = Math.max(0, Math.min(0.999, dt / panPeriod));
+        if (Math.abs(frac - beltShift) > 0.002) {
+          beltShift = frac;
+          setScaleWindow(currentXMax());
+          if(cpuHistChart) cpuHistChart.update('none');
+          if(heapHistChart) heapHistChart.update('none');
+          if(sysMemHistChart) sysMemHistChart.update('none');
+          if(igniteDefaultChart) igniteDefaultChart.update('none');
+          if(igniteOffheapChart) igniteOffheapChart.update('none');
+          if(ignitePersistChart) ignitePersistChart.update('none');
+        }
+      }
+      requestAnimationFrame(beltLoop);
+    }
+    requestAnimationFrame(beltLoop);
+
+    // --- WebSocket lifecycle ---
+    function qp(name){ try{ return new URLSearchParams(location.search).get(name); }catch(e){ return null; } }
+    function resolveWsUrl(){
+      const q=qp('ws'); if(q) return q;
+      const saved=localStorage.getItem('telemetry-ws'); if(saved) return saved;
+      if(location.protocol==='file:'||!location.host) return '';
+      const proto=location.protocol==='https:'?'wss:':'ws:';
+      const base=proto+'//'+location.hostname+(location.port?':'+location.port:'');
+      const path=vm.wsUrl.startsWith('/')? vm.wsUrl : '/'+vm.wsUrl;
+      return base+path;
+    }
+    let reconnectTimer=null;
+    function scheduleReconnect(){
+      if(reconnectTimer) return;
+      reconnectTimer=setTimeout(()=>{ reconnectTimer=null; connect(); }, 5000);
+    }
+
+    function connect(){
+      if(vm.ws){ try{ vm.ws.close(); }catch(e){} vm.ws=null; }
+      progressStart(); vm.wsOpen=false;
+      const url=resolveWsUrl(); vm.effectiveWsUrl=url||'(not set)';
+      if(!url){
+        toast('WebSocket endpoint not set. Click the plug icon to configure.','error');
+        $scope.$applyAsync(); progressDone(); return;
+      }
+
+      let ws;
+      try{ ws=new WebSocket(url);}catch(e){ toast('Invalid WebSocket URL','error'); progressDone(); return; }
+      vm.ws=ws;
+
+      ws.onopen=()=>{ vm.wsOpen=true; $scope.$applyAsync(); progressMid();
+        try{ ws.send(JSON.stringify({duration_seconds:1})); }catch(e){}
+        toast('Subscribed @ 1s','success'); progressDone();
+      };
+
+      ws.onmessage=(ev)=>{
+        let d; try{ d=JSON.parse(ev.data); }catch(e){ return; }
+        if(!d||!Array.isArray(d.nodes)) return;
+
+        vm.nodes = d.nodes;
+        sortNodesInPlace();
+
+        if(!vm.activeNode && vm.nodes.length){ vm.activeNode = vm.nodes[0].NODENAME; }
+
+        vm.nodes.forEach(n=> vm.ingestNodeSample(n));
+
+        if(Object.keys(vm.compare.selected).length===0){
+          vm.selectAllNodes(true);
+        } else {
+          ensureActiveNodeIsSelected();
+          vm.refreshAllHistoryCharts();
+        }
+
+        vm.setActiveNode(vm.activeNode);
+        vm.wsOpen=true;
+        $scope.$applyAsync();
+      };
+
+      ws.onclose=()=>{ vm.wsOpen=false; $scope.$applyAsync(); toast('Disconnected. Will retry in 5s…','error'); scheduleReconnect(); };
+      ws.onerror =()=>{ vm.wsOpen=false; $scope.$applyAsync(); };
+    }
+
+    // --- Theme & endpoint handlers ---
+    document.getElementById('saveThemeBtn').addEventListener('click', async ()=>{
+      const root=document.documentElement.style;
+      root.setProperty('--brand1',document.getElementById('c1').value);
+      root.setProperty('--brand2',document.getElementById('c2').value);
+      root.setProperty('--brand3',document.getElementById('c3').value);
+      root.setProperty('--brand4',document.getElementById('c4').value);
+      root.setProperty('--brand5',document.getElementById('c5').value);
+      localStorage.setItem('telemetry-colors', JSON.stringify({
+        c1:document.getElementById('c1').value,
+        c2:document.getElementById('c2').value,
+        c3:document.getElementById('c3').value,
+        c4:document.getElementById('c4').value,
+        c5:document.getElementById('c5').value
+      }));
+      try{
+        await fetch('/api/theme',{
+          method:'POST',
+          headers:{'Content-Type':'application/json'},
+          body: JSON.stringify({
+            primary:document.getElementById('c1').value,
+            accent:document.getElementById('c2').value,
+            success:document.getElementById('c3').value,
+            warning:document.getElementById('c4').value,
+            danger:document.getElementById('c5').value
+          })
+        });
+      }catch(e){}
+      document.getElementById('themeModal').classList.remove('show');
+      toast('Theme saved','success');
+    });
+
+    document.getElementById('saveEndpointBtn').addEventListener('click', ()=>{
+      const v=(document.getElementById('endpointInput').value||'').trim();
+      if(v){ localStorage.setItem('telemetry-ws', v); vm.effectiveWsUrl=v; toast('Endpoint saved','success'); }
+      else { localStorage.removeItem('telemetry-ws'); }
+      document.getElementById('endpointModal').classList.remove('show');
+      connect();
+    });
+
+    // --- Resize ---
+    window.addEventListener('resize', ()=>{
+      setScaleWindow(currentXMax());
+      vm.refreshAllHistoryCharts();
+    });
+
+    // --- Init ---
+    (function init(){
+      if(!NODE_PALETTE){ NODE_PALETTE = buildPalette(); savePalette(NODE_PALETTE); }
+
+      const pref=localStorage.getItem('telemetry-theme');
+      if(pref){ document.body.setAttribute('data-theme', pref); }
+
+      try{
+        const c=JSON.parse(localStorage.getItem('telemetry-colors')||'{}');
+        const root=document.documentElement.style;
+        if(c.c1){
+          root.setProperty('--brand1',c.c1);
+          root.setProperty('--brand2',c.c2);
+          root.setProperty('--brand3',c.c3);
+          root.setProperty('--brand4',c.c4);
+          root.setProperty('--brand5',c.c5);
+        }
+      }catch(e){}
+
+      const saved=localStorage.getItem('telemetry-ws');
+      if(saved){ try{ document.getElementById('endpointInput').value=saved; }catch(e){} }
+
+      connect();
+      requestAnimationFrame(beltLoop);
+
+      if(location.protocol==='file:' && !localStorage.getItem('telemetry-ws')){
+        document.getElementById('endpointModal').classList.add('show');
+      }
+    })();
+
+  }]);
+})();
+</script>
+
+</body>
+</html>

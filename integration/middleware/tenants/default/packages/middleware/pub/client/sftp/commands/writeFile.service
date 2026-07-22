@@ -1,0 +1,132 @@
+{
+  "input" : [ {
+    "id" : "j1_1",
+    "text" : "sftpClient",
+    "icon" : null,
+    "li_attr" : {
+      "id" : "j1_1"
+    },
+    "a_attr" : {
+      "href" : "#",
+      "id" : "j1_1_anchor"
+    },
+    "state" : {
+      "loaded" : true,
+      "opened" : false,
+      "selected" : false,
+      "disabled" : false
+    },
+    "data" : { },
+    "children" : [ ],
+    "type" : "javaObject"
+  }, {
+    "id" : "j1_2",
+    "text" : "absoluteFilePath",
+    "icon" : null,
+    "li_attr" : {
+      "id" : "j1_2"
+    },
+    "a_attr" : {
+      "href" : "#",
+      "id" : "j1_2_anchor"
+    },
+    "state" : {
+      "loaded" : true,
+      "opened" : false,
+      "selected" : true,
+      "disabled" : false
+    },
+    "data" : { },
+    "children" : [ ],
+    "type" : "string"
+  }, {
+    "id" : "j1_3",
+    "text" : "bytes",
+    "icon" : null,
+    "li_attr" : {
+      "id" : "j1_3"
+    },
+    "a_attr" : {
+      "href" : "#",
+      "id" : "j1_3_anchor"
+    },
+    "state" : {
+      "loaded" : true,
+      "opened" : false,
+      "selected" : false,
+      "disabled" : false
+    },
+    "data" : { },
+    "children" : [ ],
+    "type" : "byteList"
+  }, {
+    "id" : "j1_4",
+    "text" : "data",
+    "icon" : null,
+    "li_attr" : {
+      "id" : "j1_4"
+    },
+    "a_attr" : {
+      "href" : "#",
+      "id" : "j1_4_anchor"
+    },
+    "state" : {
+      "loaded" : true,
+      "opened" : false,
+      "selected" : false,
+      "disabled" : false
+    },
+    "data" : { },
+    "children" : [ ],
+    "type" : "string"
+  } ],
+  "output" : [ {
+    "id" : "j2_1",
+    "text" : "error",
+    "icon" : null,
+    "li_attr" : {
+      "id" : "j2_1"
+    },
+    "a_attr" : {
+      "href" : "#",
+      "id" : "j2_1_anchor"
+    },
+    "state" : {
+      "loaded" : true,
+      "opened" : false,
+      "selected" : false,
+      "disabled" : false
+    },
+    "data" : { },
+    "children" : [ ],
+    "type" : "string"
+  }, {
+    "id" : "j2_2",
+    "text" : "status",
+    "icon" : null,
+    "li_attr" : {
+      "id" : "j2_2"
+    },
+    "a_attr" : {
+      "href" : "#",
+      "id" : "j2_2_anchor"
+    },
+    "state" : {
+      "loaded" : true,
+      "opened" : false,
+      "selected" : false,
+      "disabled" : false
+    },
+    "data" : { },
+    "children" : [ ],
+    "type" : "string"
+  } ],
+  "package" : "cGFja2FnZSBwYWNrYWdlcy5taWRkbGV3YXJlLnB1Yi5jbGllbnQuc2Z0cC5jb21tYW5kczs=",
+  "imports" : "aW1wb3J0IGNvbS5la2EubWlkZGxld2FyZS5zZXJ2aWNlLkRhdGFQaXBlbGluZTsKaW1wb3J0IGNvbS5la2EubWlkZGxld2FyZS5zZXJ2aWNlLlNlcnZpY2VVdGlsczsKaW1wb3J0IGNvbS5la2EubWlkZGxld2FyZS50ZW1wbGF0ZS5TbmlwcGV0RXhjZXB0aW9uOwppbXBvcnQgbmV0LnNjaG1penouc3Noai5zZnRwLlNGVFBDbGllbnQ7CmltcG9ydCBqYXZhLnV0aWwuKjsKaW1wb3J0IG5ldC5zY2htaXp6LnNzaGouc2Z0cC5SZW1vdGVGaWxlOwppbXBvcnQgamF2YS51dGlsLkVudW1TZXQ7CmltcG9ydCBuZXQuc2NobWl6ei5zc2hqLnNmdHAuT3Blbk1vZGU7",
+  "main" : "U0ZUUENsaWVudCBzZnRwPShTRlRQQ2xpZW50KWRhdGFQaXBlbGluZS5nZXQoInNmdHBDbGllbnQiKTsKU3RyaW5nIGZpbGVOYW1lPWRhdGFQaXBlbGluZS5nZXRTdHJpbmcoImFic29sdXRlRmlsZVBhdGgiKTsKU3RyaW5nIGRhdGE9ZGF0YVBpcGVsaW5lLmdldFN0cmluZygiZGF0YSIpOwpCb29sZWFuIGNyZWF0ZT0oQm9vbGVhbilkYXRhUGlwZWxpbmUuZ2V0KCJlbmZvcmNlQ3JlYXRlIik7ClJlbW90ZUZpbGUgcmY9bnVsbDsKUmVtb3RlRmlsZS5SZW1vdGVGaWxlT3V0cHV0U3RyZWFtIHJmb3MgPSBudWxsOwp0cnl7CiAgICBieXRlIGJ5dGVzW109bnVsbDsKICAgIGlmKGRhdGE9PW51bGwpCiAgICAgIGJ5dGVzPShieXRlW10pZGF0YVBpcGVsaW5lLmdldCgiYnl0ZXMiKTsKICAgIHJmPXNmdHAuZ2V0U0ZUUEVuZ2luZSgpLm9wZW4oZmlsZU5hbWUsRW51bVNldC5vZihPcGVuTW9kZS5XUklURSwKICAgICAgICAgICAgICAgICAgICBPcGVuTW9kZS5DUkVBVCwKICAgICAgICAgICAgICAgICAgICBPcGVuTW9kZS5UUlVOQykpOwoJcmZvcyA9IHJmLm5ldyBSZW1vdGVGaWxlT3V0cHV0U3RyZWFtKCk7CglyZm9zLndyaXRlKGJ5dGVzKTsKICAgIGRhdGFQaXBlbGluZS5wdXQoInN0YXR1cyIsInN1Y2Nlc3MiKTsKICB9Y2F0Y2goRXhjZXB0aW9uIGUpewogICAgZGF0YVBpcGVsaW5lLmNsZWFyKCk7CiAgCWRhdGFQaXBlbGluZS5wdXQoInN0YXR1cyIsImZhaWxlZCIpOwogICAgZGF0YVBpcGVsaW5lLnB1dCgiZXJyb3IiLGUuZ2V0TWVzc2FnZSgpKTsKICAgIHRocm93IG5ldyBTbmlwcGV0RXhjZXB0aW9uKGRhdGFQaXBlbGluZSwiU25lcHBldCBleGNlcHRpb24iLCBuZXcgRXhjZXB0aW9uKGUpKTsKICB9ZmluYWxseXsKCXRyeXsKICAgICAgcmYuY2xvc2UoKTsKICAgICAgcmZvcy5jbG9zZSgpOwogICAgfWNhdGNoKEV4Y2VwdGlvbiBleCl7CiAgICB9CiAgfQ==",
+  "staticWorkspace" : "",
+  "version" : "v1",
+  "consumers" : "",
+  "developers" : "",
+  "lockedByUser" : "admin"
+}

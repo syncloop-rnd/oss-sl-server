@@ -1,0 +1,1410 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<title>Syncloop | Dashboard</title>
+	<script src="/env.js"></script>
+	<script>
+		window.ENV = window.env || {};
+	</script>
+	<link href="/middleware/pub/server/ui/assets/css/bootstrap.min.css" rel="stylesheet">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+	<link href="https://unpkg.com/tabulator-tables@5.2.1/dist/css/tabulator.min.css" rel="stylesheet">
+	<link rel="shortcut icon" href="middleware/pub/server/ui/assets/img/favicon.ico" type="image/x-icon" />
+	<link rel="stylesheet" href="index.css" />
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600&display=swap" rel="stylesheet">
+
+	<!-- Custom styles for this template -->
+	<link href="/middleware/pub/server/ui/assets/css/sidebars.css" rel="stylesheet">
+	<link href="/middleware/pub/server/ui/assets/css/custom.css?v=workspace-profile-v2" rel="stylesheet">
+	<link href="/middleware/pub/server/ui/assets/css/dashboard.css" rel="stylesheet">
+	<link rel="stylesheet" href="middleware/pub/server/ui/assets/css/login.css">
+	<link href="/middleware/pub/server/ui/css/style.min.css" rel="stylesheet">
+	<link href="/middleware/pub/server/ui/assets/css/preload.css" rel="stylesheet">
+	<link rel="stylesheet" href="/middleware/pub/server/ui/assets/css/select2.min.css">
+	<link rel="stylesheet" href="/middleware/pub/server/ui/css/sweetalert.css">
+	<link rel="stylesheet" href="middleware/pub/server/ui/assets/css/videopopup.css">
+	<script src="/middleware/pub/server/ui/javascript/workspace-profile-header.js?v=workspace-profile-v2"></script>
+	<script type="text/javascript">
+		var SDK_EMBEDDED = false;
+	</script>
+
+
+
+	<script type="syncloop/analytics"></script>
+
+	<style>
+		.preload .pre-content{left: 80px;}
+		main {
+    display: block !important;
+}
+		.modal-header {
+			display: inline-block;
+		}
+
+		.modal-body li.nav-link.active.in {
+			border-color: transparent;
+		}
+
+		.modal-body .nav-link{
+			padding: 0;
+			border: none;
+		}
+
+
+		cron-expression-input .nav-tabs>li>a{margin-right: 0px !important;}
+		#aPiTable_filter {
+			display: none;
+		}
+
+		header.custom_head {
+			display: flex;
+			align-items: center;
+			justify-content: space-between;
+			width: 100%;
+			padding-right: 12px;
+		}
+
+		header.custom_head #mostRecentlyOpened {
+			display: flex;
+			align-items: center;
+			flex: 0 0 auto;
+		}
+
+		header.custom_head .navbar-nav.tp_m {
+			margin-left: auto;
+			display: flex;
+			align-items: center;
+		}
+
+		header.custom_head .workspace-profile-header-host,
+		header.custom_head .workspace-profile-root,
+		header.custom_head .head_rightpanel {
+			display: flex;
+			align-items: center;
+		}
+
+		header.custom_head .head_rightpanel {
+			gap: 20px;
+			margin-right: 0;
+		}
+
+		.getting_str.quick_start h2 {
+			margin-bottom: 72px !important;
+		}
+
+		.getting_str.quick_start .row {
+			align-items: center;
+		}
+
+		.getting_str.quick_start .v_outer {
+			margin-top: 0;
+		}
+
+		.getting_str.quick_start .trainig_v_icon {
+			display: block;
+			position: relative;
+		}
+
+		.getting_str.quick_start .trainig_v_icon img {
+			width: 100%;
+			display: block;
+		}
+
+		.getting_str.quick_start .training_v {
+			position: absolute;
+			top: 50%;
+			left: 50%;
+			width: 50px;
+			height: 50px;
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			border-radius: 50%;
+			background: #ffffff;
+			color: #121448;
+			font-size: 18px;
+			box-shadow: 0 10px 24px rgba(12, 22, 51, 0.16);
+			transform: translate(-50%, -50%);
+		}
+
+		.getting_str.quick_start .training_v::before {
+			margin-left: 4px;
+		}
+
+		.getting_str.quick_start h3 {
+			margin-bottom: 8px;
+		}
+
+		.getting_str.quick_start p {
+			font-size: 16px;
+			line-height: 28px;
+			color: #000b3f;
+		}
+	</style>
+
+</head>
+<body>
+	<script type="syncloop/body-analytics"></script>
+	<div class="preload">
+		<div class="pre-wrap">
+			<div class="pre-top">
+				<div class="pre-brand">
+					<div class="pre-logo placeholder-content">
+					</div>
+				</div>
+
+				<div class="pre-menu">
+				  <div class="pre-switch">
+				  <div class="pre-large placeholder-content"></div>
+				  </div>
+
+				  <div class="pre-switch">
+					<div class="pre-large placeholder-content"></div>
+				  </div>
+
+				  <div class="pre-switch">
+					<div class="pre-large placeholder-content"></div>
+				  </div>
+				</div>
+			</div>
+
+
+		<div class="pre-wrapper">
+			<div class="pre-sidebar work">
+				<div class="pre-switch pre-menu">
+					<div class="pre-dot placeholder-content"></div>
+				</div>
+
+				<div class="pre-switch pre-menu">
+					<div class="pre-dot placeholder-content"></div>
+				</div>
+
+				<div class="pre-switch pre-menu">
+					<div class="pre-dot placeholder-content"></div>
+				</div>
+
+				<div class="pre-switch pre-menu">
+					<div class="pre-dot placeholder-content"></div>
+				</div>
+
+				<div class="pre-switch pre-menu">
+					<div class="pre-dot placeholder-content"></div>
+				</div>
+
+				<div class="pre-switch pre-menu">
+					<div class="pre-dot placeholder-content"></div>
+				</div>
+
+				<div class="pre-switch pre-menu">
+					<div class="pre-dot placeholder-content"></div>
+				</div>
+
+				<div class="pre-switch pre-menu">
+					<div class="pre-dot placeholder-content"></div>
+				</div>
+
+				<div class="pre-switch pre-menu">
+					<div class="pre-dot placeholder-content"></div>
+				</div>
+
+				<div class="pre-switch pre-menu">
+					<div class="pre-dot placeholder-content"></div>
+				</div>
+			</div>
+
+		  <div class="pre-content">
+			<div class="pre-wrap">
+			  <div class="pre-box-row">
+				<div class="pre-box-col">
+				  <div class="pre-box placeholder-content">
+				  </div>
+				</div>
+				<div class="pre-box-col">
+				  <div class="pre-box placeholder-content">
+				  </div>
+				</div>
+				<div class="pre-box-col">
+				  <div class="pre-box placeholder-content">
+				  </div>
+				</div>
+			  </div>
+
+
+			  <div class="pre-subhead pre-subhead2 placeholder-content">
+			  </div>
+			  <div class="pre-box-row">
+				<div class="pre-box-col">
+				  <div class="pre-box placeholder-content height180">
+				  </div>
+				</div>
+				<div class="pre-box-col">
+				  <div class="pre-box placeholder-content height180">
+				  </div>
+				</div>
+				<div class="pre-box-col">
+				  <div class="pre-box placeholder-content height180">
+				  </div>
+				</div>
+				<div class="pre-box-col">
+				  <div class="pre-box placeholder-content height180">
+				  </div>
+				</div>
+				<div class="pre-box-col">
+				  <div class="pre-box placeholder-content height180">
+				  </div>
+				</div>
+			  </div>
+			</div>
+		  </div>
+		  </div>
+
+		</div>
+	</div>
+
+
+	<div id="toasts"></div>
+
+
+<header class="navbar custom_head sticky-top flex-md-nowrap bg-gray">
+	<div id="license_warning" class="toast-warning" style="display: none;">
+		<div class="toast-content">
+		  <i class="toast-check"><svg xmlns="http://www.w3.org/2000/svg" width="24px" height="24px" viewBox="0 0 24 24" fill="#000000">
+			<g id="SVGRepo_bgCarrier" stroke-width="0"/>
+			<g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"/>
+			<g id="SVGRepo_iconCarrier"> <path fill="none" stroke="#ffffff" stroke-linejoin="round" stroke-width="2" d="M12,3 L22,21 L2,21 L12,3 Z M12,9 L12,15 M12,16 L12,18"/> </g>
+			</svg></i>
+		  <div class="message">
+			<h5>Warning</h5>
+			<p>Maximum two users are allowed on community version. <a target="_blank" href="https://www.syncloop.com/terms-conditions.html?utm_source=Website&utm_medium=click&utm_id=terms-conditions&utm_content=footer-link">Click here</a> to view the community usage terms and conditions.</p>
+		  </div>
+		</div>
+		<i onclick="$(this).parent().hide();" class="toast-close"><svg xmlns="http://www.w3.org/2000/svg" width="14px" height="14px" viewBox="0 0 24 24" fill="none">
+			<g id="SVGRepo_bgCarrier" stroke-width="0"/>
+			<g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"/>
+			<g id="SVGRepo_iconCarrier"> <path fill-rule="evenodd" clip-rule="evenodd" d="M5.29289 5.29289C5.68342 4.90237 6.31658 4.90237 6.70711 5.29289L12 10.5858L17.2929 5.29289C17.6834 4.90237 18.3166 4.90237 18.7071 5.29289C19.0976 5.68342 19.0976 6.31658 18.7071 6.70711L13.4142 12L18.7071 17.2929C19.0976 17.6834 19.0976 18.3166 18.7071 18.7071C18.3166 19.0976 17.6834 19.0976 17.2929 18.7071L12 13.4142L6.70711 18.7071C6.31658 19.0976 5.68342 19.0976 5.29289 18.7071C4.90237 18.3166 4.90237 17.6834 5.29289 17.2929L10.5858 12L5.29289 6.70711C4.90237 6.31658 4.90237 5.68342 5.29289 5.29289Z" fill="#040d21"/> </g>
+			</svg></i>
+	  </div>
+	<div id="mostRecentlyOpened">
+		<a class="eka_logo" href="/middleware/pub/server/ui/workspace/web/dashboard.html?utm_source=Workspace&utm_medium=dashboard-page">
+			<img class="ekalogos" src="/middleware/pub/server/ui/assets/img/syncloop-logo.svg">
+		</a>
+		<a href="/middleware/pub/server/ui/workspace/web/dashboard.html?utm_source=Workspace&utm_medium=dashboard-page" class="header_home">
+			<img src="/middleware/pub/server/ui/assets/img/header_nav.svg">
+		</a>
+	</div>
+	<div class="navbar-nav tp_m">
+		<div class="nav-item text-nowrap">
+			<div class="workspace-profile-header-host">
+				<div class="workspace-profile-root">
+					<div class="head_rightpanel">
+						<div class="tenant-switcher">
+							<button type="button" class="tenant-trigger" id="workspace-tenant-trigger" aria-expanded="false">
+								<span class="head_tenant" id="workspace-header-tenant">default</span>
+								<img class="tenant-trigger-arrow" src="/middleware/pub/server/ui/assets/img/white-dropdown.svg" alt="">
+							</button>
+							<div class="tenant-modal" id="workspace-tenant-modal">
+								<div class="tenant-modal-header">
+									<h2>Available tenants</h2>
+								</div>
+								<div class="tenant-feedback" id="workspace-tenant-feedback"></div>
+								<div class="tenant-list" id="tenant-list">
+									<div class="tenant-empty">Loading tenants...</div>
+								</div>
+							</div>
+						</div>
+						<div class="profile-shell">
+							<span class="head_username" id="workspace-profile-trigger">RU</span>
+							<div class="profile-card" id="workspace-profile-card">
+								<div class="header">
+									<div class="email" id="workspace-profile-email">user@syncloop</div>
+									<div class="close-btn" id="workspace-profile-close"></div>
+								</div>
+								<div class="avatar" id="workspace-profile-avatar">RU</div>
+								<div class="greeting" id="workspace-profile-greeting">Hi, User!</div>
+								<div class="menu-item" data-profile-action="settings"><span class="icon"><img src="/middleware/pub/server/ui/assets/img/setting.svg"></span><span>Settings</span></div>
+								<div class="menu-item" data-profile-action="workspace"><span class="icon"><img src="/middleware/pub/server/ui/assets/img/goto-workspace.svg"></span><span>Go to workspace</span></div>
+								<div class="menu-item" data-profile-action="clear-cache"><span class="icon"><img src="/middleware/pub/server/ui/assets/img/clear_cache.svg"></span><span>Clear cache</span></div>
+								<div class="menu-item" data-profile-action="logout"><span class="icon"><img src="/middleware/pub/server/ui/assets/img/Logout.svg"></span><span class="logout-color">Logout</span></div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</header>
+
+<main class="rg_br">
+	<div class="container-fluid ">
+		<div class="row">
+			<div class="col-lg-1 d-flex flex-column flex-shrink-0 eka-side p-0" data-match-height="groupName">
+				<ul class="nav nav-pills nav-flush flex-column mb-auto text-center left-m-bar">
+                    <li>
+                        <a href="/middleware/pub/server/ui/workspace/web/dashboard.html?utm_source=Workspace&utm_medium=dashboard-page" class="nav-link active py-3 " title="Home" data-bs-toggle="tooltip" data-bs-placement="right">
+                            <svg class="ic1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" id="Layer_1" x="0px" y="0px" viewBox="0 0 46 46" style="enable-background:new 0 0 46 46;" xml:space="preserve">
+                                <style type="text/css">
+                                    .st0{fill:none;stroke:#434550;stroke-width:2.4;stroke-linecap:round;}
+                                    .st1{fill:none;stroke:#434550;stroke-width:2.4;stroke-linecap:round;stroke-linejoin:round;}
+                                </style>
+                                <path class="st0" d="M17,39c-3.8,0-5.6,0-6.8-1.2C9,36.7,9,34.8,9,31v-8.5c0-2.7,0-4.1,0.5-5.3c0.5-1.2,1.6-2.1,3.6-3.8l2-1.7  C18.9,8.6,20.7,7,23,7s4.1,1.6,7.8,4.8l2,1.7c2.1,1.8,3.1,2.6,3.6,3.8c0.5,1.2,0.5,2.5,0.5,5.3V31c0,3.8,0,5.6-1.2,6.8  c-1.2,1.2-3,1.2-6.8,1.2"/>
+                                <path class="st1" d="M27.9,39V28c0-0.6-0.4-1-1-1h-8c-0.6,0-1,0.4-1,1v11"/>
+                                </svg>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="/middleware/pub/server/ui/workspace/web/api.html?utm_source=Workspace&utm_medium=api-page" class="nav-link py-3" title="API" data-bs-toggle="tooltip" data-bs-placement="right">
+                            <svg class="ic2" xmlns="http://www.w3.org/2000/svg" width="26" height="25" viewBox="0 0 26 25" fill="none">
+								<path d="M5.82142 19C3.15863 19 1 16.8668 1 14.2353C1 11.6038 3.15863 9.47057 5.82142 9.47057C6.14106 9.47057 6.45344 9.50129 6.75568 9.56001M6.75568 9.56001C6.49794 8.87253 6.35714 8.12898 6.35714 7.35294C6.35714 3.8443 9.23532 1 12.7857 1C16.0929 1 18.8167 3.46792 19.1745 6.64185M6.75568 9.56001C7.39066 9.6832 7.98094 9.92958 8.5 10.2729M14.9286 6.65561C15.5988 6.4215 16.32 6.29412 17.0714 6.29412C17.8079 6.29412 18.5155 6.41652 19.1745 6.64185M19.1745 6.64185C19.9429 6.9046 20.6451 7.30729 21.25 7.81909" stroke="#434550" stroke-width="1.6" stroke-linecap="round"/>
+								<path class="appi" d="M15.0244 20L12.0214 12.3H13.2974L16.3774 20H15.0244ZM8.87543 20L11.9444 12.3H13.2314L10.2284 20H8.87543ZM10.3164 18.108V16.975H14.9254V18.108H10.3164ZM18.0958 17.338V16.161H19.8008C20.1675 16.161 20.4682 16.0363 20.7028 15.787C20.9375 15.5377 21.0548 15.215 21.0548 14.819C21.0548 14.5477 20.9925 14.313 20.8678 14.115C20.7505 13.9097 20.5855 13.7483 20.3728 13.631C20.1602 13.5137 19.9145 13.4587 19.6358 13.466H18.0958V12.3L19.6578 12.289C20.1858 12.289 20.6515 12.399 21.0548 12.619C21.4582 12.8317 21.7735 13.1287 22.0008 13.51C22.2282 13.884 22.3418 14.3203 22.3418 14.819C22.3418 15.303 22.2355 15.7357 22.0228 16.117C21.8102 16.4983 21.5132 16.799 21.1318 17.019C20.7578 17.2317 20.3215 17.338 19.8228 17.338H18.0958ZM16.9408 20V12.3H18.2168V20H16.9408ZM23.0321 20V12.3H24.3081V20H23.0321Z" fill="#434550"/>
+								</svg>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="/middleware/pub/server/ui/workspace/web/workspace.html?utm_source=Workspace&utm_medium=workspace-page" class="nav-link py-3 " title="Workspace" data-bs-toggle="tooltip" data-bs-placement="right">
+                            <svg class="ic" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" id="Layer_1" x="0px" y="0px" viewBox="0 0 46 46" style="enable-background:new 0 0 46 46;" xml:space="preserve">
+                                <style type="text/css">
+                                    .st0{fill:none;stroke:#434550;stroke-width:2.4;}
+                                </style>
+                                <path class="st0" d="M39.9,27.5V10.6c0-1.9,0-2.8-0.6-3.4c-0.6-0.6-1.5-0.6-3.4-0.6H18.5h-2.9h-5.3c-1.9,0-2.8,0-3.4,0.6  c-0.6,0.6-0.6,1.5-0.6,3.4v16.9c0,1.9,0,2.8,0.6,3.4c0.6,0.6,1.5,0.6,3.4,0.6h25.6c1.9,0,2.8,0,3.4-0.6  C39.9,30.3,39.9,29.4,39.9,27.5z"/>
+                                <path class="st0" d="M31.9,38.9H14.2"/>
+                                </svg>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="/scheduler/manager/web/scheduler-new.html?utm_source=Workspace&utm_medium=scheduler-page" class="nav-link py-3 " title="Scheduler" data-bs-toggle="tooltip"
+                           data-bs-placement="right">
+                           <svg class="ic4" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" id="Layer_1" x="0px" y="0px" viewBox="0 0 46 46" style="enable-background:new 0 0 46 46;" xml:space="preserve">
+                            <style type="text/css">
+                                .st0{fill:none;stroke:#434550;stroke-width:2.4;}
+                                .st1{fill:none;stroke:#434550;stroke-width:2.4;stroke-linecap:round;}
+                            </style>
+                            <ellipse class="st0" cx="23.4" cy="27.2" rx="16.9" ry="16.9"/>
+                            <path class="st1" d="M23.4,27.2v-6.3"/>
+                            <path class="st1" d="M35,13.5l3.2-3.2"/>
+                            <path class="st1" d="M19.3,2.6c0.2-0.2,0.8-0.4,1.5-0.6c0.7-0.1,1.6-0.2,2.6-0.2s1.8,0.1,2.6,0.2s1.3,0.3,1.5,0.6"/>
+                            </svg>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="export.html?utm_source=Workspace&utm_medium=export-page" id="createBuildExport" class="nav-link py-3" title="Export/Promote" data-bs-toggle="tooltip"
+                           data-bs-placement="right">
+                           <svg class="ic5" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" id="Layer_1" x="0px" y="0px" viewBox="0 0 46 46" style="enable-background:new 0 0 46 46;" xml:space="preserve">
+                            <style type="text/css">
+                                .st0{fill:none;stroke:#434550;stroke-width:2.4;stroke-linecap:round;stroke-miterlimit:10;}
+                                .st1{fill:#434550;}
+                            </style>
+                            <path class="st0" d="M35.3,23.9c5.3-8.7,5.1-16.8,5-18.4c0-0.2-0.2-0.3-0.3-0.3C25.5,5.2,19,11,16.1,15.4c-1.3,2.1-2,4.1-2.3,5  c-0.1,0.3,0,0.7,0.2,1l7.2,7.3"/>
+                            <path class="st0" d="M5.6,19.6c0.8-1.2,5.1-7.5,11-5.8"/>
+                            <path class="st0" d="M14.7,30.6l8.5-8.5"/>
+                            <path class="st0" d="M25.9,31.9l3.6,4.1c0,0,0.2,0.1,0.2,0l4-4.1"/>
+                            <path class="st0" d="M29.8,25.2v10.5"/>
+                            <path class="st0" d="M21.8,36.5v4.3c0,0.1,0.1,0.2,0.2,0.2h15.3c0.1,0,0.2-0.1,0.2-0.2v-4.3"/>
+                            <path class="st1" d="M29.1,18.8c1.5,0,2.7-1.2,2.7-2.7c0-1.5-1.2-2.7-2.7-2.7c-1.5,0-2.7,1.2-2.7,2.7C26.4,17.6,27.6,18.8,29.1,18.8  z"/>
+                            </svg>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="javascript:importBuildV2()" class="nav-link py-3" title="Import" data-bs-toggle="tooltip"
+                           data-bs-placement="right">
+                           <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" id="Layer_1" x="0px" y="0px" viewBox="0 0 46 46" style="enable-background:new 0 0 46 46;" xml:space="preserve">
+							<style type="text/css">
+								.st0{fill:none;stroke:#434550;stroke-width:2.4;}
+							</style>
+							<path class="st0" d="M6.2,21.3v1.6c0,1.9,0,2.8,0.6,3.4s1.5,0.6,3.4,0.6h3.9c0.7,0,1,0,1.3,0.2s0.4,0.5,0.6,1.2l1,2.9  c0.2,0.7,0.3,1,0.6,1.2c0.3,0.2,0.6,0.2,1.3,0.2h8.3c0.7,0,1,0,1.3-0.2s0.4-0.5,0.6-1.2l1-2.9c0.2-0.7,0.3-1,0.6-1.2  c0.3-0.2,0.6-0.2,1.3-0.2h3.9c1.9,0,2.8,0,3.4-0.6c0.6-0.6,0.6-1.5,0.6-3.4v-1.6"/>
+							<path class="st0" d="M23.1,3.5l-7.5,5.6 M30.6,9.1l-7.5-5.6 M23.1,22.2V3.5"/>
+							<path class="st0" d="M30.5,14.1h5.3c1.9,0,2.8,0,3.4,0.6c0.6,0.6,0.6,1.5,0.6,3.4V36c0,1.9,0,2.8-0.6,3.4C38.7,40,37.8,40,35.9,40  H10.2c-1.9,0-2.8,0-3.4-0.6S6.2,37.9,6.2,36V18.1c0-1.9,0-2.8,0.6-3.4c0.6-0.6,1.5-0.6,3.4-0.6h5.3"/>
+							</svg>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="/middleware/pub/server/ui/workspace/web/server-logs.html?utm_source=Workspace&utm_medium=server-logs-page" class="nav-link py-3" title="Server Logs" data-bs-toggle="tooltip"
+                           data-bs-placement="right">
+                           <svg class="ic7" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" id="Layer_1" x="0px" y="0px" viewBox="0 0 46 46" style="enable-background:new 0 0 46 46;" xml:space="preserve">
+                            <style type="text/css">
+                                .st0{fill:none;stroke:#434550;stroke-width:2.4;stroke-linecap:round;}
+                                .st1{fill:none;stroke:#434550;stroke-width:2.4;}
+                            </style>
+                            <path class="st0" d="M15.5,24.5h15.1"/>
+                            <path class="st0" d="M15.5,30.9h8.6"/>
+                            <path class="st1" d="M9,5.9c0-0.8,0-1.3,0.2-1.6C9.3,4,9.5,3.8,9.8,3.7c0.3-0.2,0.7-0.2,1.6-0.2h13.9c0.4,0,0.6,0,0.7,0  c0.2,0,0.3,0.1,0.4,0.2c0.2,0.1,0.3,0.2,0.5,0.5l9.4,9.4c0.3,0.3,0.4,0.4,0.5,0.5c0.1,0.1,0.1,0.3,0.2,0.4c0,0.2,0,0.4,0,0.7v25.6  c0,0.8,0,1.3-0.2,1.6c-0.1,0.3-0.4,0.5-0.7,0.7c-0.3,0.2-0.7,0.2-1.6,0.2H11.4c-0.8,0-1.3,0-1.6-0.2c-0.3-0.1-0.5-0.4-0.7-0.7  C9,42.1,9,41.7,9,40.9V5.9z"/>
+                            <path class="st1" d="M24.1,3.5v10.6c0,0.8,0,1.3,0.2,1.6c0.1,0.3,0.4,0.5,0.7,0.7c0.3,0.2,0.7,0.2,1.6,0.2h10.6"/>
+                            </svg>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="javascript:openJWTPopup()" class="nav-link py-3" title="API Token" data-bs-toggle="tooltip" data-bs-placement="right">
+                            <svg class="ic8" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+								<ellipse cx="7" cy="16.3848" rx="6" ry="6" stroke="#434550" stroke-width="1.6"/>
+								<path d="M10.9219 11.2308L18.3834 3.76923M21.1526 1L18.3834 3.76923M18.3834 3.76923L22.9988 8.38462" stroke="#434550" stroke-width="1.6" stroke-linecap="round"/>
+								<path d="M16.5391 7.46191L19.3083 10.2311" stroke="#434550" stroke-width="1.6" stroke-linecap="round"/>
+								</svg>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="setting.html?utm_source=Workspace&utm_medium=setting-page" class="nav-link py-3" title="Settings" data-bs-toggle="tooltip" data-bs-placement="right">
+                            <svg class="ic9" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" id="Layer_1" x="0px" y="0px" viewBox="0 0 46 46" style="enable-background:new 0 0 46 46;" xml:space="preserve">
+                                <style type="text/css">
+                                    .st0{fill:none;stroke:#434550;stroke-width:2.4;stroke-linecap:round;stroke-linejoin:round;}
+                                    .st1{fill:none;stroke:#434550;stroke-width:2;stroke-linecap:round;stroke-linejoin:round;}
+                                </style>
+                                <path class="st0" d="M4,30v-2.5c0-1.5,1.2-2.7,2.7-2.7c2.6,0,3.6-1.8,2.3-4.1c-0.7-1.3-0.3-3,1-3.7l2.5-1.4c1.1-0.7,2.6-0.3,3.3,0.9  l0.2,0.3c1.3,2.2,3.4,2.2,4.7,0l0.2-0.3c0.7-1.1,2.1-1.5,3.3-0.9l2.5,1.4c1.3,0.7,1.7,2.4,1,3.7c-1.3,2.2-0.2,4.1,2.3,4.1  c1.5,0,2.7,1.2,2.7,2.7V30c0,1.5-1.2,2.7-2.7,2.7c-2.6,0-3.6,1.8-2.3,4.1c0.7,1.3,0.3,3-1,3.7l-2.5,1.4c-1.1,0.7-2.6,0.3-3.3-0.9  l-0.2-0.3c-1.3-2.2-3.4-2.2-4.7,0l-0.2,0.3c-0.7,1.1-2.1,1.5-3.3,0.9l-2.5-1.4c-1.3-0.7-1.7-2.4-1-3.7c1.3-2.2,0.2-4.1-2.3-4.1  C5.2,32.7,4,31.5,4,30z"/>
+                                <path class="st0" d="M18.3,34.6c3.3,0,5.9-2.7,5.9-5.9c0-3.3-2.7-5.9-5.9-5.9c-3.3,0-5.9,2.7-5.9,5.9C12.4,32,15.1,34.6,18.3,34.6z"/>
+                                <path class="st1" d="M19.5,15.6v-2.1c0-1.2,1-2.2,2.2-2.2c2.1,0,3-1.5,1.9-3.3c-0.6-1.1-0.2-2.4,0.8-3l2-1.2  c0.9-0.5,2.1-0.2,2.7,0.7l0.1,0.2c1.1,1.8,2.8,1.8,3.8,0l0.1-0.2C33.8,3.5,35,3.2,36,3.8l2,1.2c1.1,0.6,1.4,2,0.8,3  c-1.1,1.8-0.2,3.3,1.9,3.3c1.2,0,2.2,1,2.2,2.2v2.1c0,1.2-1,2.2-2.2,2.2c-2.1,0-3,1.5-1.9,3.3c0.6,1.1,0.2,2.4-0.8,3l-2,1.2  c-0.9,0.6-2.1,0.2-2.7-0.7l-0.1-0.2"/>
+                                <path class="st1" d="M31,19.4c2.1,0,3.9-1.7,3.9-3.9s-1.7-3.9-3.9-3.9s-3.9,1.7-3.9,3.9S28.9,19.4,31,19.4z"/>
+                                </svg>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="/middleware/pub/server/ui/workspace/web/documentation.html?utm_source=Workspace&utm_medium=documentation-page" class="nav-link py-3" title="Documentation" data-bs-toggle="tooltip"
+                           data-bs-placement="right">
+                           <svg class="ic10" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" id="Layer_1" x="0px" y="0px" viewBox="0 0 46 46" style="enable-background:new 0 0 46 46;" xml:space="preserve">
+                            <style type="text/css">
+                                .st0{fill:none;stroke:#434550;stroke-width:2.4;}
+                            </style>
+                            <path class="st0" d="M7,34h10c2.8,0,4.2,0,5.1,0.9S23,37.2,23,40V14c0-2.8,0-4.2-0.9-5.1S19.8,8,17,8H7C6.1,8,5.6,8,5.3,8.3  C5,8.6,5,9.1,5,10v22c0,0.9,0,1.4,0.3,1.7C5.6,34,6.1,34,7,34z"/>
+                            <path class="st0" d="M39,34H29c-2.8,0-4.2,0-5.1,0.9S23,37.2,23,40V14c0-2.8,0-4.2,0.9-5.1S26.2,8,29,8h10c0.9,0,1.4,0,1.7,0.3  C41,8.6,41,9.1,41,10v22c0,0.9,0,1.4-0.3,1.7S39.9,34,39,34z"/>
+                            </svg>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="/middleware/pub/server/ui/workspace/web/marketplace.html?utm_source=Workspace&amp;utm_medium=marketplace-page" class="nav-link py-3" title="Marketplace" data-bs-toggle="tooltip"
+                          data-bs-placement="right">
+                          <svg class="ic11" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" id="Layer_1" x="0px" y="0px" viewBox="0 0 46 46" style="enable-background:new 0 0 46 46;" xml:space="preserve">
+                            <style type="text/css">
+                                .st0{fill:none;stroke:#434550;stroke-width:2.4;stroke-linecap:round;}
+                                .st1{fill:none;stroke:#434550;stroke-width:2.4;stroke-linejoin:round;}
+                            </style>
+                            <path class="st0" d="M40,40H6"/>
+                            <path class="st0" d="M36.6,40V21.3"/>
+                            <path class="st0" d="M9.4,40V21.3"/>
+                            <path class="st1" d="M30.7,6H15.3c-2,0-3.1,0-3.9,0.5C10.6,7,10.2,7.9,9.2,9.8l-2.4,6c-0.6,1.4-1,3-0.1,4.2c0.6,0.8,1.6,1.3,2.7,1.3  c1.9,0,3.4-1.5,3.4-3.4c0,1.9,1.5,3.4,3.4,3.4c1.9,0,3.4-1.5,3.4-3.4c0,1.9,1.5,3.4,3.4,3.4c1.9,0,3.4-1.5,3.4-3.4  c0,1.9,1.5,3.4,3.4,3.4c1.9,0,3.4-1.5,3.4-3.4c0,1.9,1.5,3.4,3.4,3.4c1.1,0,2-0.5,2.7-1.3c0.9-1.2,0.4-2.8-0.1-4.2l-2.4-6  c-0.9-1.8-1.4-2.7-2.2-3.3C33.8,6,32.8,6,30.7,6z"/>
+                            <path class="st0" d="M18.8,39.2v-5.1c0-1.6,0-2.4,0.3-3c0.2-0.4,0.5-0.7,0.9-0.9c0.6-0.3,1.4-0.3,3-0.3s2.4,0,3,0.3  c0.4,0.2,0.7,0.5,0.9,0.9c0.3,0.6,0.3,1.4,0.3,3v5.1"/>
+                            </svg>
+                        </a>
+                      </li>
+					  <li>
+						<a class="uinfo" href="setting.html">
+							<span id="name-icon"></span>
+							<div class="binfo" style="display: none;">
+								<h6 id="loggedin-name">---</h6>
+								<p id="loggedin-email">---</p>
+							</div>
+						</a>
+					</li>
+                </ul>
+			</div>
+
+			<div class="col-lg-11 px-5 pr-0 p-3 rg_pnl" data-match-height="groupName">
+				<main class="dashboard_wrapper">
+					<div class="crte">
+						<!-- <h3>New</h3> -->
+						<div class="dash_options">
+							<h4>Welcome back to Syncloop</h4>
+							<p>Create new project to start from scratch. Open existing projects from the folders.</p>
+						</div>
+
+						<div class="dash_action_tab">
+							<div class="row">
+								<div class="col-sm-6 col-md-6 col-lg-6">
+									<div class="crd-body">
+										<a href="/middleware/pub/server/ui/workspace/web/workspace.html">
+											<div class="grid_in">
+											<i><img src="/middleware/pub/server/ui/assets/img/create_api.svg"></i>
+											<div class="binfo">
+												<h6>Go to workspace</h6>
+												<p>Build, Debug & Promote your APIs</p>
+											</div>
+											</div>
+											<i class="rght_arw"><svg xmlns="http://www.w3.org/2000/svg" width="13" height="24" viewBox="0 0 13 24" fill="none">
+												<path d="M0.852688 24C0.649133 24 0.44082 23.9195 0.284609 23.7631C-0.0278125 23.4504 -0.0278125 22.9387 0.284609 22.626L10.9781 11.9183L0.440821 1.37167C0.128399 1.05894 0.128399 0.547224 0.440821 0.234524C0.753242 -0.0781748 1.26448 -0.0781748 1.57691 0.234524L12.6822 11.3497C12.9946 11.6624 12.9946 12.1741 12.6822 12.4868L1.4207 23.7631C1.26448 23.9194 1.05622 24 0.852664 24L0.852688 24Z" fill="#8996a4"/>
+												</svg></i>
+										</a>
+									</div>
+								</div>
+								<div class="col-sm-6 col-md-6 col-lg-6">
+									<div class="crd-body">
+										<a role="button" data-bs-toggle="modal" data-bs-target="#importSwaggerModal">
+											<div class="grid_in">
+											<i><img src="/middleware/pub/server/ui/assets/img/open-api.svg"></i>
+											<div class="binfo">
+												<h6>Import OpenAPI/Postman Collection</h6>
+												<p>Start with API first approach.</p>
+											</div>
+											</div>
+											<i class="rght_arw"><svg xmlns="http://www.w3.org/2000/svg" width="13" height="24" viewBox="0 0 13 24" fill="none">
+												<path d="M0.852688 24C0.649133 24 0.44082 23.9195 0.284609 23.7631C-0.0278125 23.4504 -0.0278125 22.9387 0.284609 22.626L10.9781 11.9183L0.440821 1.37167C0.128399 1.05894 0.128399 0.547224 0.440821 0.234524C0.753242 -0.0781748 1.26448 -0.0781748 1.57691 0.234524L12.6822 11.3497C12.9946 11.6624 12.9946 12.1741 12.6822 12.4868L1.4207 23.7631C1.26448 23.9194 1.05622 24 0.852664 24L0.852688 24Z" fill="#8996a4"/>
+												</svg></i>
+										</a>
+									</div>
+								</div>
+								<div class="col-sm-6 col-md-6 col-lg-6">
+									<div class="crd-body">
+										<a href="/middleware/pub/server/ui/workspace/web/setting.html?tab=deployments">
+											<div class="grid_in">
+											<i><img src="/middleware/pub/server/ui/assets/img/ready-to-use.svg"></i>
+											<div class="binfo">
+												<h6>Create an Environment</h6>
+												<p>Create a new Syncloop environment or add an existing environment. </p>
+											</div>
+										</div>
+										<i class="rght_arw"><svg xmlns="http://www.w3.org/2000/svg" width="13" height="24" viewBox="0 0 13 24" fill="none">
+											<path d="M0.852688 24C0.649133 24 0.44082 23.9195 0.284609 23.7631C-0.0278125 23.4504 -0.0278125 22.9387 0.284609 22.626L10.9781 11.9183L0.440821 1.37167C0.128399 1.05894 0.128399 0.547224 0.440821 0.234524C0.753242 -0.0781748 1.26448 -0.0781748 1.57691 0.234524L12.6822 11.3497C12.9946 11.6624 12.9946 12.1741 12.6822 12.4868L1.4207 23.7631C1.26448 23.9194 1.05622 24 0.852664 24L0.852688 24Z" fill="#8996a4"/>
+											</svg></i>
+										</a>
+									</div>
+								</div>
+
+								<div class="col-sm-6 col-md-6 col-lg-6">
+									<div class="crd-body">
+										<a href="/middleware/pub/server/ui/workspace/web/marketplace.html?utm_source=Workspace&amp;utm_medium=marketplace-page">
+											<div class="grid_in">
+											<i><img src="/middleware/pub/server/ui/assets/img/Marketplace.svg"></i>
+											<div class="binfo">
+												<h6>Go to Marketplace</h6>
+												<p>Install plugins and integrate with your APIs</p>
+											</div>
+										</div>
+										<i class="rght_arw"><svg xmlns="http://www.w3.org/2000/svg" width="13" height="24" viewBox="0 0 13 24" fill="none">
+											<path d="M0.852688 24C0.649133 24 0.44082 23.9195 0.284609 23.7631C-0.0278125 23.4504 -0.0278125 22.9387 0.284609 22.626L10.9781 11.9183L0.440821 1.37167C0.128399 1.05894 0.128399 0.547224 0.440821 0.234524C0.753242 -0.0781748 1.26448 -0.0781748 1.57691 0.234524L12.6822 11.3497C12.9946 11.6624 12.9946 12.1741 12.6822 12.4868L1.4207 23.7631C1.26448 23.9194 1.05622 24 0.852664 24L0.852688 24Z" fill="#8996a4"/>
+											</svg></i>
+										</a>
+									</div>
+								</div>
+							</div>
+						</div>
+
+						<div class="crte custom_padding">
+
+							<div class="getting_str quick_start">
+								<h2 class="mb-5" style="padding-top: 32px;margin-bottom: 35px !important">Getting Started</h2>
+								<div class="row">
+									<div class="col-sm-6 col-md-6 col-lg-3">
+										<div class="v_outer">
+											<div class="position-relative">
+												<a href="https://www.udemy.com/course/syncloop/?src=sac&kw=syncloop" class="video-icon trainig_v_icon" target="_blank">
+													<img src="/middleware/pub/server/ui/assets/img/training_video-1.png" class="img-fluid rounded-custom shadow-lg" alt="testimonial author">
+													<i class="fa fa-play training_v"></i>
+												</a>
+											</div>
+										</div>
+									</div>
+									<div class="col-sm-6 col-md-6 col-lg-5">
+										<div class="v_outer">
+											<h3>Quick Start with Syncloop</h3>
+											<p>Basic + Advanced Course on Syncloop API Development Platform. This course provides both Basic and Adanced training of API development on Syncloop Platform.</p>
+										</div>
+									</div>
+								</div>
+							</div>
+
+
+
+								<!--<div class="col-sm-6 col-md-6 col-lg-4">
+                                     <div class="v_outer">
+                                        <div class="position-relative">
+                                            <a href="javascript:void(0)" id="video9" class="video-icon trainig_v_icon"><img src="https://www.syncloop.com/assets/img/video/training_video-9.png" class="img-fluid rounded-custom shadow-lg" alt="testimonial author">
+                                                <i class="fa fa-play training_v"></i>
+                                             </a>
+                                         </div>
+                                        <h3>Json Transformation</h3>
+                                        <p>This video tutorial demonstrates how to work on a Complex object and convert it into a more deep complex object using a flow service on the Syncloop Platform.</p>
+                                    </div>
+                                </div>
+                                <div class="col-sm-6 col-md-6 col-lg-4">
+                                     <div class="v_outer">
+                                        <div class="position-relative">
+                                            <a href="javascript:void(0)" id="video10" class="video-icon trainig_v_icon"><img src="https://www.syncloop.com/assets/img/video/training_video-10.png" class="img-fluid rounded-custom shadow-lg" alt="testimonial author">
+                                                <i class="fa fa-play training_v"></i>
+                                             </a>
+                                         </div>
+                                        <h3>XML to CSV Transformation</h3>
+                                        <p>This video tutorial demonstrates how to convert an XML file to a flat file in a .csv format. Here an array is used for temporarily storing the XML values and those values are reflected back onto the flat file.</p>
+                                    </div>
+                                </div>-->
+
+							</div>
+						</div>
+
+						<div class="dash_options" style="display: none;">
+							<h4>Welcome to Syncloop</h4>
+							<p>Create new project to start from scratch. Open existing projects from the folders.</p>
+							<ul class="opt_grid">
+								<li>
+									<a href="/middleware/pub/server/ui/workspace/web/workspace.html">
+										<span><img src="/middleware/pub/server/ui/assets/img/create_api.svg"></span>
+										<p>Go to workspace</p>
+									</a>
+								</li>
+								<li>
+									<a role="button" data-target="#importSwaggerModal" data-toggle="modal">
+										<span><img src="/middleware/pub/server/ui/assets/img/open-api.svg"></span>
+										<p>Import OpenAPI / Postman Collection</p>
+									</a>
+								</li>
+								<li>
+									<a href="/middleware/pub/server/ui/workspace/web/create-new-environment.html">
+										<span><img src="/middleware/pub/server/ui/assets/img/ready-to-use.svg"></span>
+										<p>Create an environment</p>
+									</a>
+								</li>
+								<li>
+									<a href="/middleware/pub/server/ui/workspace/web/marketplace.html?utm_source=Workspace&utm_medium=marketplace-page">
+										<span><img src="/middleware/pub/server/ui/assets/img/Marketplace.svg"></span>
+										<p>Go to marketplace</p>
+									</a>
+								</li>
+							</ul>
+						</div>
+
+
+
+					</div>
+
+					<div class="crte" style="display:none;">
+						<h3>Recent file list</h3>
+						<div class="table-responsive">
+							<table id="recent_file">
+								<tr>
+									<th>API Type</th>
+									<th>Name of API</th>
+									<th>Last Modified by</th>
+									<th>Status</th>
+									<th>Last Modified</th>
+								</tr>
+								<tr>
+									<td>LoginAPIs</td>
+									<td><a href="javascript:void(0)">Type of APIs</a></td>
+									<td>Neerja k</td>
+									<td><span class="green">Published</span></td>
+									<td>5 hours ago</td>
+								</tr>
+								<tr>
+									<td>LoginAPIs</td>
+									<td><a href="javascript:void(0)">Type of APIs</a></td>
+									<td>Neerja k</td>
+									<td>Draft</td>
+									<td>12 hours ago</td>
+								</tr>
+								<tr>
+									<td>LoginAPIs</td>
+									<td><a href="javascript:void(0)">Type of APIs</a></td>
+									<td>Neerja k</td>
+									<td><span class="green">Published</span></td>
+									<td>6 hours ago</td>
+								</tr>
+								<tr>
+									<td>LoginAPIs</td>
+									<td><a href="javascript:void(0)">Type of APIs</a></td>
+									<td>Neerja k</td>
+									<td>Draft</td>
+									<td>2 hours ago</td>
+								</tr>
+							</table>
+						</div>
+					</div>
+					<div class="crte" style="display:none;">
+						<h3>Popular wrappers</h3>
+						<div class="row">
+							<div class="col-sm-6 col-md-6 col-lg-3 pp_wra">
+								<div class="wra_outer">
+									<img src="/middleware/pub/server/ui/assets/img/amazon_web_services.png">
+								</div>
+								<p>Amazon AWS Services</p>
+							</div>
+							<div class="col-sm-6 col-md-6 col-lg-3 pp_wra">
+								<div class="wra_outer">
+									<img src="/middleware/pub/server/ui/assets/img/google-logo.png">
+								</div>
+								<p>Google Services</p>
+							</div>
+							<div class="col-sm-6 col-md-6 col-lg-3 pp_wra">
+								<div class="wra_outer">
+									<img src="/middleware/pub/server/ui/assets/img/amazon_web_services.png">
+								</div>
+								<p>Amazon AWS Services</p>
+							</div>
+							<div class="col-sm-6 col-md-6 col-lg-3 pp_wra">
+								<div class="wra_outer">
+									<img src="/middleware/pub/server/ui/assets/img/amazon_web_services.png">
+								</div>
+								<p>Amazon AWS Services</p>
+							</div>
+						</div>
+					</div>
+					<div id="importSwaggerModal" class="modal" data-easein="slideDownBigIn" tabindex="-1" role="dialog" aria-labelledby="costumModalLabel" aria-hidden="false">
+						<div class="modal-dialog modal-lg modal-dialog-centered custom_style">
+							<div class="modal-content">
+								<div class="modal-header">
+									<button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close" onclick="resetFunction()"></button>
+
+									<h4 class="modal-title" id="costumModalLabel">
+										Import from
+									</h4>
+								</div>
+								<div class="modal-body">
+									<div class="demo">
+										<div role="tabpanel">
+											<!-- Nav tabs -->
+											<ul class="nav nav-tabs nav-justified nav-tabs-dropdown" role="tablist">
+												<li role="presentation"><a class="active" href="#file" aria-controls="file" role="tab" data-bs-toggle="tab">File</a></li>
+												<li role="presentation"><a href="#link" aria-controls="link" role="tab" data-bs-toggle="tab">Link</a></li>
+											</ul>
+											<!-- Tab panes -->
+											<div class="tab-content">
+												<div role="tabpanel" class="tab-pane active" id="file">
+													<form>
+														<label for="file" class="br_dropzone">
+															<img src="/middleware/pub/server/ui/assets/img/import_icon.svg">
+															<button type="button" class="choose_file_btn btn btn-gry">Choose file</button>
+															<input type="file" id="file" name="file" onchange="evaluateFile(this)" required>
+															<input type="text" id="fileName" name="fileName" placeholder="Drag and drop your files here or browse to upload" readonly>
+														</label>
+
+															<input type="reset" name="button" id="resetBtn" style="display: none">
+													</form>
+												</div>
+												<div role="tabpanel" class="tab-pane" id="link">
+													<div class="form-group">
+														<label>Add your link here </label>
+														<input class="form-control" type="text" id="json_file_link" placeholder="e.g. https://petstore3.swagger.io/api/v3/openapi.json" value="">
+													</div>
+													<div class="anc_kbtn">
+														<button type="button" id="" class="btn btn-gry" onclick="evaluateLink(this)">Continue</button>
+													</div>
+												</div>
+											</div>
+										</div>
+									</div>
+									<!-- <a href="javascript:void(0)">Learn more about the different import formats supported</a> -->
+								</div>
+							</div>
+						</div>
+					</div>
+					<div id="importFileModal" class="modal" data-easein="slideDownBigIn" tabindex="-1" role="dialog" aria-labelledby="costumModalLabel" aria-hidden="false">
+						<div class="modal-dialog modal-lg modal-dialog-centered custom_style">
+							<div class="modal-content">
+								<div class="modal-header">
+									<button type="button" class="close" data-bs-dismiss="modal" aria-hidden="true" onclick="resetFunction()">
+										×
+									</button>
+									<h4 class="modal-title" id="costumModalLabel">
+										Select files to import
+									</h4>
+								</div>
+								<div class="modal-body">
+									<div class="select_import sl_imp">
+										<!-- <p>Select files to import</p> -->
+										<div class="row">
+											<div class="col-md-12 mb-15">
+												<label for="">Package Name: </label>
+												<input class="form-control" id="package_name" onkeyup="importAPIInSchemaValidate(this)"/>
+												<p id="info_message"></p>
+											</div>
+
+
+											<div class="col-md-12 mb-15">
+												<label for="">Import as: </label>
+												<div class="im_chk">
+													<input class="styled-checkbox" id="client_lib" name="" type="checkbox" value="">
+													<label class="enble_check" for="client_lib">Client</label> &nbsp;
+
+													<input class="styled-checkbox" id="server_stub" name="" type="checkbox" value="">
+													<label class="enble_check" for="server_stub">Server Stub</label>
+												</div>
+												<!-- <div class=""> -->
+													<!-- <input type="checkbox" id="client_lib" />Client <input type="checkbox" id="server_stub" />Server Stub -->
+												<!-- </div> -->
+											</div>
+										</div>
+
+										<div style="display:none;">
+											<table>
+												<tr>
+													<td>Package Name: </td>
+													<td><input class="form-control" id="package_name" /></td>
+												</tr>
+												<tr>
+													<td>Import as: </td>
+													<td><input type="checkbox" id="client_lib" />Client <input type="checkbox" id="server_stub" />Server Stub </td>
+												</tr>
+											</table>
+										</div>
+										<div class="anc_kbtn imp">
+											<button type="button" class="cn_trs" style="display: none;" data-dismiss="modal" onclick="resetFunction()">Cancel</button>
+											<button type="button" id="button" class="btn btn-gry" onclick="importSwagger(this)">Import</button>
+										</div>
+									</div>
+								</div>
+								<div id="overlay">
+									<div class="cv-spinner">
+										<span class="spinner"></span>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+
+
+
+					<div id="yesNoModal" class="modal" data-easein="slideDownBigIn" tabindex="-1" role="dialog" aria-labelledby="costumModalLabel" aria-hidden="false">
+						<div class="modal-dialog modal-md modal-dialog-centered custom_style">
+							<div class="modal-content">
+								<div class="modal-header">
+									<button type="button" class="close" aria-hidden="true" onclick='$("#yesNoModal").modal("toggle");'>
+										×
+									</button>
+									<h4 class="modal-title" id="costumModalLabel1">
+										Package Confliction!
+									</h4>
+								</div>
+								<div class="modal-body">
+									<p>This package already exists. Do want to override it?</p>
+									<div class="ys_imp">
+										<button type="button" id="overrideButton" class="btn btn-gry" onclick="importAction(true, this)">Yes, Override it</button> &nbsp;
+										<button type="button" id="copyButton" class="cn_trs" onclick="importAction(false, this)">No, Create new copy</button>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div id="jwtModelDialog" class="modal wd_ds">
+						<div class="modal-content" style="width:650px;height:auto;">
+					<span id="closejwtModelDialog" class="close" >&times;</span>
+					<h3>API token</h3>
+
+					<div class="row exp_alg">
+					<div class="col-md-3"><label>Expiration in:</label></div>
+					<div class="col-md-4">
+					<select id="jwt_expiration_in" class="form-control">
+						<option value="2">2 Hours</option>
+						<option value="4">4 Hours</option>
+						<option value="6">6 Hours</option>
+						<option value="8">8 Hours</option>
+						<option value="expir_custom">Custom</option>
+					</select>
+					</div>
+					<div id="expir_custom" class="col-md-3 cs_opt">
+						<input placeholder="Custom Value" class="form-control" type="number" min="2" max="800" id="expir_custom_hours" value="8" />
+						<span class="h_title">hours</span>
+					</div>
+					</div>
+
+					<div class="copy-text3" id="jwtNameDiv" style="margin-top:10px; margin-bottom:15px;">
+						<a class="copy_icon" href="javascript:void(0)" id="button-copy"><img src="/middleware/pub/server/ui/icons/copy-svgrepo-com.svg"></a>
+						<label for="jwtInput">Bearer Token: </label>
+						<textarea id="jwtInput" name="jwtInput" value="" class="form-control" readonly="readonly"></textarea>
+					</div>
+
+					<div class="anc_kbtn"><button type="button" class="btn btn-primary2" onclick="openJWTPopupTime()">Generate token</button> &nbsp; <button type="button" id="JWTOKButton" class="btn btn-primary">OK</button></div>
+				</div>
+					</div>
+
+
+			<div id="vidBox">
+					<div class="videCont">
+						<video id="v1" controls="controls">
+							<source src="https://syncloop.ai/assets/videos/training1/Syncloop-Udemy-Video1-QuickStart.webm" type="video/webm">
+							<source src="https://syncloop.ai/assets/videos/training1/Syncloop-Udemy-Video1-QuickStart.mp4" type="video/mp4">
+						</video>
+					</div>
+				</div>
+
+				<div id="vidBox2">
+					<div class="videCont">
+						<video id="v2" controls="controls">
+							<source src="https://syncloop.ai/assets/videos/training1/Syncloop-Video2-ConditionalLogic.webm" type="video/webm">
+							<source src="https://syncloop.ai/assets/videos/training1/Syncloop-Video2-ConditionalLogic.mp4" type="video/mp4">
+						</video>
+					</div>
+				</div>
+
+				<div id="vidBox3">
+					<div class="videCont">
+						<video id="v3" controls="controls">
+							<source src="https://syncloop.ai/assets/videos/training1/Syncloop-Video3-LoopLogic.webm" type="video/webm">
+							<source src="https://syncloop.ai/assets/videos/training1/Syncloop-Video3-LoopLogic.mp4" type="video/mp4">
+						</video>
+					</div>
+				</div>
+
+				<div id="vidBox4">
+					<div class="videCont">
+						<video id="v4" controls="controls">
+							<source src="https://syncloop.ai/assets/videos/training1/Syncloop-Video5-WeatherAPI.webm" type="video/webm">
+							<source src="https://syncloop.ai/assets/videos/training1/Syncloop-Video5-WeatherAPI.mp4" type="video/mp4">
+						</video>
+					</div>
+				</div>
+
+				<div id="vidBox5">
+					<div class="videCont">
+						<video id="v5" controls="controls">
+							<source src="https://syncloop.ai/assets/videos/training1/Syncloop-Video4-CryptoCompare.webm" type="video/webm">
+							<source src="https://syncloop.ai/assets/videos/training1/Syncloop-Video4-CryptoCompare.mp4" type="video/mp4">
+						</video>
+					</div>
+				</div>
+
+				<div id="vidBox6">
+					<div class="videCont">
+						<video id="v6" controls="controls">
+							<source src="https://syncloop.ai/assets/videos/Create_Flow_Service.webm" type="video/webm">
+							<source src="https://syncloop.ai/assets/videos/Create_Flow_Service.mp4" type="video/mp4">
+						</video>
+					</div>
+				</div>
+
+				<div id="vidBox7">
+					<div class="videCont">
+						<video id="v7" controls="controls">
+							<source src="https://syncloop.ai/assets/videos/training1/Syncloop-Video6-ExceptionHandling.webm" type="video/webm">
+							<source src="https://syncloop.ai/assets/videos/training1/Syncloop-Video6-ExceptionHandling.mp4" type="video/mp4">
+						</video>
+					</div>
+				</div>
+
+				<div id="vidBox8">
+					<div class="videCont">
+						<video id="v8" controls="controls">
+							<source src="https://syncloop.ai/assets/videos/training1/Syncloop-Video8-CommunicateWithSFTPSSH.webm" type="video/webm">
+							<source src="https://syncloop.ai/assets/videos/training1/Syncloop-Video8-CommunicateWithSFTPSSH.mp4" type="video/mp4">
+						</video>
+					</div>
+				</div>
+
+				<div id="vidBox9">
+					<div class="videCont">
+						<video id="v9" controls="controls">
+							<source src="https://syncloop.ai/assets/videos/training/Json_Transformation_R_VP8.webm" type="video/webm">
+							<source src="https://syncloop.ai/assets/videos/training/Json_Transformation_R_VP8.mp4" type="video/mp4">
+						</video>
+					</div>
+				</div>
+
+
+
+
+				<div id="vidBox10">
+					<div class="videCont">
+						<video id="v10" controls="controls">
+							<source src="https://www.syncloop.com/assets/videos/training1/Syncloop-Video7-ReturnCustomHTTP.webm" type="video/webm">
+							<source src="https://www.syncloop.com/assets/videos/training1/Syncloop-Video7-ReturnCustomHTTP.mp4" type="video/mp4">
+						</video>
+					</div>
+				</div>
+
+
+				</main>
+			</div>
+			<!-- environment update popup -->
+			<div id="newUpdateModelDialog" class="modal">
+				<!-- Modal content -->
+				<div class="modal-content" style="width:650px;height:auto;">
+					<span id="closenewUpdateModelDialog" class="close hide" style="display: none;" >&times;</span>
+					<div class="env_latest_update">
+						<h3 id="update_popup_title">Updating environment</h3>
+						<p id="updating_popup_description">Please wait... your environment is getting updated.</p>
+						<div class="progress_outer">
+							<progress id="progressBar" max="100" value="0"></progress>
+							<span id="percentage">0%</span>
+						</div>
+					</div>
+				</div>
+			</div>
+			<!-- environment update popup -->
+<script src="/middleware/pub/server/ui/javascript/showdown.min.js"></script>
+<script	src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<script src="/middleware/pub/server/ui/assets/js/skeleton.js"></script>
+<script	src="/middleware/pub/server/ui/javascript/jstree.min.js"></script>
+<script src="/middleware/pub/server/ui/javascript/jstreetable.js"></script>
+<script src="/middleware/pub/server/ui/javascript/middleware.js"></script>
+<script src="/middleware/pub/server/ui/assets/js/bootstrap.bundle.min.js"></script>
+<script src="/middleware/pub/server/ui/assets/js/sidebars.js"></script>
+<script src="/middleware/pub/server/ui/javascript/sweetalert.min.js"></script>
+<script src="/middleware/pub/server/ui/javascript/sweetalert.init.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/js-cookie@2.2.1/src/js.cookie.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/js-cookie@2/src/js.cookie.min.js"></script>
+
+
+
+<script src="/middleware/pub/server/ui/assets/js/videopopup.js"></script>
+<script src="/middleware/pub/server/ui/javascript/syncloop-nonenterprise.js"></script>
+<script>
+$(window).ready(function () {
+	$(".preload").delay(0).fadeOut(80);
+  });
+</script>
+
+<script>
+$(function() {
+  $('#jwt_expiration_in').change(function(){
+    $('.cs_opt').hide();
+    $('#' + $(this).val()).show();
+  });
+});
+</script>
+
+<script>
+let copyText3 = document.querySelector(".copy-text3");
+    document.querySelector("#button-copy").onclick = function () {
+        document.querySelector("#jwtInput").select();
+        document.execCommand("copy");
+        copyText3.classList.add("active");
+        window.getSelection().removeAllRanges();
+        setTimeout(function () {
+        copyText3.classList.remove("active");
+    }, 2500);
+    };
+</script>
+
+<script type="text/javascript">
+	function getCurrentUser() {
+		var response = syncRestRequest("/packages.middleware.pub.service.getCurrentUserAccount.main", "GET", "");
+		if(response.status == 200 && response.payload) {
+			response = JSON.parse(response.payload);
+			if (null == response.profile.name) {
+				if (null == response.profile.email) {
+					$("#loggedin-name-panel").hide();
+				} else {
+					$("#loggedin-name").html(response.profile.email);
+				}
+			} else if ("" == response.profile.name) {
+				$("#loggedin-name").html("User");
+			} else {
+				$("#loggedin-name").html(response.profile.name);
+			}
+
+			if (null == response.profile.email) {
+				$("#loggedin-email-panel").hide();
+			} else if ("" == response.profile.email) {
+				$("#loggedin-email").html("user@syncloop");
+			} else if ("" != response.profile.email) {
+				$("#loggedin-email").html(response.profile.email);
+			}
+
+			$("#loggedin-userId").html(response.userId);
+			var cookies = document.cookie.split(";");
+			for  (var i = 0 ; i < cookies.length ; i++) {
+				var coo = cookies[i].split("=");
+				if (coo[0].trim() == "tenant") {
+					$("#profile-tenant-name").html(coo[1].replaceAll('"', "").split(" ")[0] );
+				}
+			}
+
+			let HTML = "";
+			for (let i = 0 ; i < response.profile.groups.length ; i++) {
+				HTML += "<span class=\"bubble\">" + response.profile.groups[i] + "</span>";
+			}
+
+			let name = response.userId;
+			name = name.trim() == "" ? response.profile.name : name;
+			name = name.trim() == "" ? response.profile.email : name;
+			name = name.trim() == "" ? "User" : name;
+			$("#name-icon").html(name.substr(0, 1).toUpperCase());
+			$("#loggedin-roles").html(HTML);
+		}
+	}
+
+	$(document).ready(function () {
+		getCurrentUser();
+		loadPackages();
+
+
+//drag drop//
+
+		var onDragEnter = function(event) {
+					$(".br_dropzone").addClass("dragover");
+					console.log("onDragEnter");
+				},
+
+				onDragOver = function(event) {
+					event.preventDefault();
+					if (!$(".br_dropzone").hasClass("dragover"))
+						$(".br_dropzone").addClass("dragover");
+					console.log("onDragOver");
+				},
+
+				onDragLeave = function(event) {
+					event.preventDefault();
+					$(".br_dropzone").removeClass("dragover");
+					console.log("onDragLeave");
+				},
+
+				onDrop = function(event) {
+					$(".br_dropzone").removeClass("dragover");
+					$(".br_dropzone").addClass("dragdrop");
+					validateContent(event.originalEvent.dataTransfer.files[0]);
+					console.log("onDrop");
+				};
+
+		$(".br_dropzone")
+				//.on("dragenter", onDragEnter)
+				//.on("dragover", onDragOver)
+				//.on("dragleave", onDragLeave)
+				//.on("drop", onDrop);
+
+
+	});
+
+	let specsName = null;
+	function validateContent(file) {
+		if (!file.name.endsWith(".json")) {
+			swal("Only Json file is allowed.", "", "error");
+
+			return ;
+		}
+		const reader = new FileReader();
+		reader.addEventListener('load', function() {
+			Uploaded_File_Content = JSON.parse(reader.result);
+			if (null != Uploaded_File_Content.info && null != Uploaded_File_Content.info._postman_id) {
+				specsName = "POSTMAN";
+			} else if (null != Uploaded_File_Content.openapi) {
+				specsName = "OPENAPI";
+			}
+
+			switch (specsName) {
+				case "POSTMAN":
+					if (Uploaded_File_Content.info.schema != "https://schema.getpostman.com/json/collection/v2.1.0/collection.json") {
+						swal("Only Postman Collection version >= 2.0.1 is required.", "", "error");
+						$(ref).html("Continue");
+						$(ref).removeAttr("disabled");
+						return ;
+					}
+					break;
+
+				case "OPENAPI":
+					if (parseFloat(Uploaded_File_Content.openapi) < 3) {
+						swal("Only OpenAPI version >= 3 is required.", "", "error");
+						$(ref).html("Continue");
+						$(ref).removeAttr("disabled");
+						return ;
+					}
+					break;
+
+				default:
+					swal("Only OpenAPI version >= 3 or Postman Collection version >= 2.1 is required.", "", "error");
+					$(ref).html("Continue");
+					$(ref).removeAttr("disabled");
+					return ;
+			}
+			$("#importFileModal").modal('toggle');
+			$("#importSwaggerModal").modal('toggle');
+			$("#package_name").val(file.name.replace(/[^a-zA-Z0-9]/g, "_"));
+			importAPIInSchemaValidate(document.getElementById('package_name'));
+		});
+		reader.readAsText(file);
+	}
+
+	function evaluateFile(ref) {
+		validateContent(ref.files[0]);
+		ref.form.fileName.value = ref.files[0].name;
+		document.getElementById('resetBtn').click();
+	}
+
+	function resetFunction(){
+		$("#json_file_link").val('');
+		$("#client_lib").prop("checked", false);
+		$("#server_stub").prop("checked", false);
+		document.getElementById("resetBtn").click();
+	}
+
+	function evaluateLink(ref) {
+		$(ref).html("...");
+		$(ref).attr("disabled", "disabled");
+		let fileLink = $("#json_file_link").val();
+		fetch(fileLink)
+				.then(response => {
+					let isJson = false;
+					for (const [header, value] of response.headers) {
+						if (header == "content-type" && value == "application/json") {
+							isJson = true;
+						}
+					}
+
+					if (isJson) {
+						return response.json();
+					}
+					swal("Only Json content is allowed.", "", "error");
+					$(ref).html("Continue");
+					$(ref).removeAttr("disabled");
+					return null;
+				})
+				.then(data => {
+					Uploaded_File_Content = data;
+
+					if (null != Uploaded_File_Content.info && null != Uploaded_File_Content.info._postman_id) {
+						specsName = "POSTMAN";
+					} else if (null != Uploaded_File_Content.openapi) {
+						specsName = "OPENAPI";
+					}
+
+					switch (specsName) {
+						case "POSTMAN":
+							if (Uploaded_File_Content.info.schema != "https://schema.getpostman.com/json/collection/v2.1.0/collection.json") {
+								swal("Only Postman Collection version >= 2.0.1 is required.", "", "error");
+								$(ref).html("Continue");
+								$(ref).removeAttr("disabled");
+								return ;
+							}
+							break;
+
+						case "OPENAPI":
+							if (parseFloat(Uploaded_File_Content.openapi) < 3) {
+								swal("Only OpenAPI version >= 3 is required.", "", "error");
+								$(ref).html("Continue");
+								$(ref).removeAttr("disabled");
+								return ;
+							}
+							break;
+
+						default:
+							swal("Only OpenAPI version >= 3 or Postman Collection version >= 2.1 is required.", "", "error");
+							$(ref).html("Continue");
+							$(ref).removeAttr("disabled");
+							return ;
+					}
+
+					if (null != Uploaded_File_Content) {
+						$("#importFileModal").modal('toggle');
+						$("#importSwaggerModal").modal('toggle');
+					}
+
+					var filename = fileLink.substring(fileLink.lastIndexOf('/') + 1);
+					$("#package_name").val(filename.replace(/[^a-zA-Z0-9]/g, "_"));
+
+					$(ref).html("Continue");
+					$(ref).removeAttr("disabled");
+				}).catch(error => {
+					swal("Invalid Link", "", "error");
+					$(ref).html("Continue");
+					$(ref).removeAttr("disabled");
+				});
+	}
+
+	function importSwagger(ref) {
+		if ($("#package_name").val().trim() == "") {
+			swal("Invalid package name", "", "error");
+			return ;
+		} else if (!($("#client_lib").is(":checked") || $("#server_stub").is(":checked"))) {
+			swal("Choose atleast one from import as", "", "error");
+			return ;
+		}
+
+		for (var i = 0; i < keywords.length; i++) {
+			if (keywords[i] == $("#package_name").val().trim()) {
+				swal("Your package name is invalid. Please choose someother name.", "", "error");
+				return;
+			}
+		}
+
+		let isPkgExists = false;
+		for (var i = 0; i < packages.children.length; i++) {
+			if (packages.children[i].text == $("#package_name").val().trim()) {
+				isPkgExists = true;
+				break;
+			}
+		}
+
+		if (isPkgExists) {
+			$("#yesNoModal").modal('toggle');
+		} else {
+			importNow(ref, $("#package_name").val().trim());
+		}
+	}
+
+	function importAction(action, ref) {
+
+		if (action) {
+			importNow(ref, $("#package_name").val().trim());
+		} else {
+			importNow(ref, $("#package_name").val().trim() + "_copy");
+		}
+	}
+
+	function importNow(ref, packageName) {
+		const buttonText = "Import";
+
+		$(ref).html("Importing...");
+		$(ref).attr("disabled", "disabled");
+
+		let url = "/packages.middleware.pub.specs.swagger.v3.SwaggerImport.main";
+		if (specsName == "POSTMAN") {
+			url = "/packages.middleware.pub.specs.postman.v3.PostmanImport.main";
+		}
+
+		collecta('Import', '', specsName, 'Importing API');
+
+		$.ajax({
+			type: "POST",
+			url: url + "?generateClient=" + $("#client_lib").is(":checked")
+					+ "&generateServerStub=" + $("#server_stub").is(":checked") + "&packageName=" + packageName.trim(),
+			data: JSON.stringify(Uploaded_File_Content),
+			contentType: "application/json",
+			success: function(response) {
+				$(ref).html(buttonText);
+				$(ref).removeAttr("disabled");
+
+				swal({
+							title: "Imported successfully",
+							text: "Go to Workspace > Packages",
+							type: "success",
+							showCancelButton: true,
+							confirmButtonColor: "#DD6B55",
+							cancelButtonText: "No, Stay here !!",
+							confirmButtonText: "Let's Go !!",
+							showLoaderOnConfirm : true,
+							closeOnConfirm: true,
+							closeOnCancel: true
+						},
+						function(isConfirm){
+							if (isConfirm) {
+								location.href = "workspace.html?sfocus=files/packages/" + packageName;
+							}
+							else {
+								swal("Cancelled !!", "Redirection Cancelled !!", "success");
+							}
+						});
+				// importSwagger(this)
+				//swal("Imported successfully", "Go to Workspace > Packages", "success");
+				$("#importFileModal").modal('toggle');
+
+				$("#json_file_link").val('');
+				$("#client_lib").prop("checked", false);
+				$("#server_stub").prop("checked", false);
+
+				if ($("#yesNoModal").attr('class').includes("show")) {
+					$("#yesNoModal").modal('toggle');
+				}
+
+			},
+			error: function(xhr, status, error) {
+				swal("Error occurred, Please try later", "", "error");
+				$(ref).html(buttonText);
+				$(ref).removeAttr("disabled");
+			}
+		});
+	}
+
+	$(document).on('show.bs.modal', '#yesNoModal', function () {
+		$("#overrideButton").html("Yes, Override it").removeAttr("disabled");
+		$("#copyButton").html("No, Create new copy").removeAttr("disabled");
+	});
+
+	let Uploaded_File_Content = null;
+	let packages = {};
+
+	function loadPackages() {
+		var response = syncRestRequest("/packages.middleware.pub.server.browse.getPackagesAsTree.main", "GET", "");
+		if(response.status==200 && response.payload) {
+			packages = JSON.parse(response.payload);
+		}
+	}
+
+</script>
+</body>
+</html>

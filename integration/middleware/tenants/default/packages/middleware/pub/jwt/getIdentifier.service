@@ -1,0 +1,50 @@
+{
+  "input" : [ ],
+  "output" : [ {
+    "id" : "j2_1",
+    "text" : "UUID",
+    "li_attr" : {
+      "id" : "j2_1"
+    },
+    "a_attr" : {
+      "href" : "#",
+      "id" : "j2_1_anchor"
+    },
+    "state" : {
+      "loaded" : true,
+      "opened" : false,
+      "selected" : false,
+      "disabled" : false
+    },
+    "data" : { },
+    "children" : [ ],
+    "type" : "string"
+  }, {
+    "id" : "j2_2",
+    "text" : "profiles",
+    "li_attr" : {
+      "id" : "j2_2"
+    },
+    "a_attr" : {
+      "href" : "#",
+      "id" : "j2_2_anchor"
+    },
+    "state" : {
+      "loaded" : true,
+      "opened" : false,
+      "selected" : true,
+      "disabled" : false
+    },
+    "data" : { },
+    "children" : [ ],
+    "type" : "document"
+  } ],
+  "package" : "cGFja2FnZSBwYWNrYWdlcy5taWRkbGV3YXJlLnB1Yi5qd3Q7",
+  "imports" : "aW1wb3J0IGNvbS5la2EubWlkZGxld2FyZS5hdXRoLkF1dGhBY2NvdW50OwppbXBvcnQgY29tLmVrYS5taWRkbGV3YXJlLnNlcnZpY2UuRGF0YVBpcGVsaW5lOwppbXBvcnQgY29tLmVrYS5taWRkbGV3YXJlLnRlbXBsYXRlLlNuaXBwZXRFeGNlcHRpb247CgppbXBvcnQgamF2YS51dGlsLk1hcDs=",
+  "main" : "dHJ5IHsKCiAgICAgICAgICAgIEF1dGhBY2NvdW50IGF1dGhBY2NvdW50ID0gZGF0YVBpcGVsaW5lLmdldEN1cnJlbnRSdW50aW1lQWNjb3VudCgpOwogICAgICAgICAgICBNYXA8U3RyaW5nLCBPYmplY3Q+IHByb2ZpbGVzID0gYXV0aEFjY291bnQuZ2V0QXV0aFByb2ZpbGUoKTsKICAJCQlkYXRhUGlwZWxpbmUucHV0KCJwcm9maWxlcyIsIHByb2ZpbGVzKTsKCiAgICAgICAgICAgIE9iamVjdCBVVUlEID0gcHJvZmlsZXMuZ2V0KCJVVUlEIik7CgogICAgICAgICAgICBpZiAobnVsbCA9PSBVVUlEKSB7CiAgICAgICAgICAgICAgICBkYXRhUGlwZWxpbmUucHV0KCJVVUlEIiwgbnVsbCk7CiAgICAgICAgICAgIH0gZWxzZSB7CiAgICAgICAgICAgICAgICBkYXRhUGlwZWxpbmUucHV0KCJVVUlEIiwgVVVJRC50b1N0cmluZygpKTsKICAgICAgICAgICAgfQogIAogICAgICAgICAgICAKICAgICAgICB9IGNhdGNoIChFeGNlcHRpb24gZSkgewogICAgICAgICAgICBkYXRhUGlwZWxpbmUucHV0KCJzdGF0dXMiLCAiZXJyb3IiKTsKICAgICAgICAgICAgdGhyb3cgbmV3IFNuaXBwZXRFeGNlcHRpb24oZGF0YVBpcGVsaW5lLCAiU25pcHBldCBleGNlcHRpb24gaW4gcmVzZXQgcGFzc3dvcmQiLCBuZXcgRXhjZXB0aW9uKGUpKTsKICAgICAgICB9",
+  "staticWorkspace" : "",
+  "version" : "v1",
+  "consumers" : "",
+  "developers" : "developers",
+  "lockedByUser" : "admin"
+}

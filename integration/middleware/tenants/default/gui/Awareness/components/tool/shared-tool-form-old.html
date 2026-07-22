@@ -1,0 +1,156 @@
+<!-- components/tool/shared-tool-form.html -->
+<form name="toolFormNg" novalidate ng-submit="createToolFromModal(toolFormNg)">
+
+    <!-- Tool Name -->
+    <div class="form-group row">
+        <label class="col-sm-4 entire_toggletitle">Tool Name
+            <a href="javascript:void(0)" class="info_tooltip">
+                <img ng-src="Awareness/pub/images/info.svg"><span class="tooltiptext">Name of the tool</span>
+            </a>
+        </label>
+        <div class="col-sm-8 position-rel">
+            <input type="text" class="input_form" name="name"
+                   ng-model="toolForm.name"
+                   required
+                   placeholder="Tool name or FQN"
+                   ng-class="{'input_formerror': (toolFormNg.name.$touched || toolFormNg.$submitted) && toolFormNg.name.$invalid}">
+            <div class="help-block form_error input_error"
+                 ng-if="(toolFormNg.name.$touched || toolFormNg.$submitted) && toolFormNg.name.$error.required">
+            </div>
+        </div>
+    </div>
+
+    <!-- Select Type -->
+    <div class="form-group row">
+        <label class="col-sm-4 entire_toggletitle">Select Type
+            <a href="javascript:void(0)" class="info_tooltip">
+                <img ng-src="Awareness/pub/images/info.svg"><span class="tooltiptext">Select connection type - API or Knowledgebase.</span>
+            </a>
+        </label>
+        <div class="col-sm-8 position-rel">
+            <select class="input_form"
+                    name="type"
+                    ng-model="toolForm.type"
+                    ng-init="toolForm.type = 'api'"
+                    required
+                    ng-class="{'input_formerror': (toolFormNg.type.$touched || toolFormNg.$submitted) && toolFormNg.type.$invalid}">
+                <option value="" disabled hidden>Select type</option>
+                <option value="api">API</option>
+                <option value="kb">Knowledge base</option>
+            </select>
+            <div class="form_error select_error"
+                 ng-if="(toolFormNg.type.$touched || toolFormNg.$submitted) && toolFormNg.type.$error.required">
+            </div>
+        </div>
+    </div>
+
+    <!-- API List -->
+    <div class="form-group row" ng-if="toolForm.type === 'api'">
+        <label class="col-sm-4 entire_toggletitle">Select API
+            <a href="javascript:void(0)" class="info_tooltip">
+                <img ng-src="Awareness/pub/images/info.svg"><span class="tooltiptext">Select API from available tool list.</span>
+            </a>
+        </label>
+        <div class="col-sm-8 position-rel"
+             ng-class="{'select_formerror': (toolFormNg.apiSel.$touched || toolFormNg.$submitted) && toolFormNg.apiSel.$invalid}">
+            <select id="apiSelect" class="input_form aiToolsAdd"
+                    name="apiSel"
+                    ng-model="toolForm.selected"
+                    ng-options="item.fqn as item.fqn for item in availableApiFqns track by item.fqn"
+                    ng-required="toolForm.type==='api'"
+                    ng-class="{'input_formerror': (toolFormNg.apiSel.$touched || toolFormNg.$submitted) && toolFormNg.apiSel.$invalid}">
+                <option value=""></option>
+            </select>
+            <div class="form_error select_error"
+                 ng-if="(toolFormNg.apiSel.$touched || toolFormNg.$submitted) && toolFormNg.apiSel.$error.required">
+            </div>
+        </div>
+    </div>
+
+    <!-- KB List -->
+    <div class="form-group row" ng-if="toolForm.type === 'kb'">
+        <label class="col-sm-4 entire_toggletitle">Select KB
+            <a href="javascript:void(0)" class="info_tooltip">
+                <img ng-src="Awareness/pub/images/info.svg"><span class="tooltiptext">Select Knowledgebase to provide contextual answers.</span>
+            </a>
+        </label>
+        <div class="col-sm-8 position-rel"
+             ng-class="{'select_formerror': (toolFormNg.kbSel.$touched || toolFormNg.$submitted) && toolFormNg.kbSel.$invalid}">
+            <select id="kbSelect" class="input_form"
+                    name="kbSel"
+                    ng-model="toolForm.selected"
+                    ng-options="kb.ragID as (kb.name || kb.kbName || kb.path) for kb in availableKBs()"
+                    ng-required="toolForm.type==='kb'"
+                    ng-class="{'input_formerror': (toolFormNg.kbSel.$touched || toolFormNg.$submitted) && toolFormNg.kbSel.$invalid}">
+                <option value=""></option>
+            </select>
+            <div class="form_error select_error"
+                 ng-if="(toolFormNg.kbSel.$touched || toolFormNg.$submitted) && toolFormNg.kbSel.$error.required">
+            </div>
+        </div>
+    </div>
+
+    <!-- Agent (Hidden) -->
+    <div class="form-group row" ng-if="false">
+        <label class="col-sm-4 entire_toggletitle">Agent
+            <a href="javascript:void(0)" class="info_tooltip">
+                <img ng-src="Awareness/pub/images/info.svg"><span class="tooltiptext">info</span>
+            </a>
+        </label>
+        <div class="col-sm-8">
+            <input class="input_form" type="text" readonly
+                   ng-value="(currentAgent.name || 'Agent') + (currentAgent.title ? ' - ' + currentAgent.title : '')">
+        </div>
+    </div>
+
+    <!-- Description -->
+    <div class="form-group row">
+        <label class="col-sm-4 entire_toggletitle">Description
+            <a href="javascript:void(0)" class="info_tooltip">
+                <img ng-src="Awareness/pub/images/info.svg"><span class="tooltiptext">Describe this integration or its purpose briefly</span>
+            </a>
+        </label>
+        <div class="col-sm-8 position-rel">
+            <input type="text" class="input_form" name="description"
+                   ng-model="toolForm.description"
+                   required
+                   placeholder="Text description here"
+                   ng-class="{'input_formerror': (toolFormNg.description.$touched || toolFormNg.$submitted) && toolFormNg.description.$invalid}">
+            <div class="help-block form_error input_error"
+                 ng-if="(toolFormNg.description.$touched || toolFormNg.$submitted) && toolFormNg.description.$error.required">
+            </div>
+        </div>
+    </div>
+
+    <!-- Static Payload -->
+    <div class="form-group row" ng-if="toolForm.type === 'api'">
+        <label class="col-sm-4 entire_toggletitle align-self-start pt-2" >Static Payload (JSON)
+            <a href="javascript:void(0)" class="info_tooltip">
+                <img ng-src="Awareness/pub/images/info.svg"><span class="tooltiptext">Attach a constant JSON payload for API calls</span>
+            </a>
+        </label>
+        <div class="col-sm-8">
+            <textarea class="textarea_form"
+                      rows="4"
+                      name="staticPayload"
+                      ng-model="toolForm.staticPayload"
+                      ng-change="toolFormNg.staticPayload.$setValidity('json', isJson(toolForm.staticPayload))"
+                      placeholder='{"key":"value"}'></textarea>
+
+            <div class="invalid-feedback"
+                 ng-show="(toolFormNg.staticPayload.$touched || toolFormNg.$submitted) && toolFormNg.staticPayload.$error.required">
+                This field is required
+            </div>
+            <div class="invalid-feedback"
+                 ng-show="(toolFormNg.staticPayload.$touched || toolFormNg.$submitted) && toolFormNg.staticPayload.$error.json">
+                Invalid JSON
+            </div>
+        </div>
+    </div>
+
+    <!-- Submit -->
+    <div class="text-center mt-4">
+        <button type="submit" class="create_btn">Create</button>
+    </div>
+
+</form>

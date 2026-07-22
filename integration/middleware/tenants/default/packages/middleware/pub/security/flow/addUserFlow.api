@@ -1,0 +1,2244 @@
+{
+  "latest" : {
+    "createdTS" : "",
+    "input" : [ {
+      "id" : "j2_1",
+      "text" : "*payload",
+      "li_attr" : {
+        "id" : "j2_1"
+      },
+      "a_attr" : {
+        "href" : "#",
+        "id" : "j2_1_anchor"
+      },
+      "state" : {
+        "loaded" : true,
+        "opened" : true,
+        "selected" : false,
+        "disabled" : false,
+        "hidden" : false
+      },
+      "data" : { },
+      "children" : [ {
+        "id" : "j2_2",
+        "text" : "userId",
+        "li_attr" : {
+          "id" : "j2_2"
+        },
+        "a_attr" : {
+          "href" : "#",
+          "id" : "j2_2_anchor"
+        },
+        "state" : {
+          "loaded" : true,
+          "opened" : false,
+          "selected" : false,
+          "disabled" : false
+        },
+        "data" : { },
+        "children" : [ ],
+        "type" : "string"
+      }, {
+        "id" : "j2_3",
+        "text" : "password",
+        "li_attr" : {
+          "id" : "j2_3"
+        },
+        "a_attr" : {
+          "href" : "#",
+          "id" : "j2_3_anchor"
+        },
+        "state" : {
+          "loaded" : true,
+          "opened" : false,
+          "selected" : false,
+          "disabled" : false
+        },
+        "data" : { },
+        "children" : [ ],
+        "type" : "string"
+      }, {
+        "id" : "j2_4",
+        "text" : "isAdmin",
+        "li_attr" : {
+          "id" : "j2_4"
+        },
+        "a_attr" : {
+          "href" : "#",
+          "id" : "j2_4_anchor"
+        },
+        "state" : {
+          "loaded" : true,
+          "opened" : false,
+          "selected" : false,
+          "disabled" : false
+        },
+        "data" : { },
+        "children" : [ ],
+        "type" : "boolean"
+      }, {
+        "id" : "j2_5",
+        "text" : "isDeveloper",
+        "li_attr" : {
+          "id" : "j2_5"
+        },
+        "a_attr" : {
+          "href" : "#",
+          "id" : "j2_5_anchor"
+        },
+        "state" : {
+          "loaded" : true,
+          "opened" : false,
+          "selected" : false,
+          "disabled" : false
+        },
+        "data" : { },
+        "children" : [ ],
+        "type" : "boolean"
+      }, {
+        "id" : "j2_6",
+        "text" : "groups",
+        "li_attr" : {
+          "id" : "j2_6"
+        },
+        "a_attr" : {
+          "href" : "#",
+          "id" : "j2_6_anchor"
+        },
+        "state" : {
+          "loaded" : true,
+          "opened" : false,
+          "selected" : false,
+          "disabled" : false
+        },
+        "data" : { },
+        "children" : [ ],
+        "type" : "stringList"
+      }, {
+        "id" : "j2_7",
+        "text" : "email",
+        "li_attr" : {
+          "id" : "j2_7"
+        },
+        "a_attr" : {
+          "href" : "#",
+          "id" : "j2_7_anchor"
+        },
+        "state" : {
+          "loaded" : true,
+          "opened" : false,
+          "selected" : false,
+          "disabled" : false
+        },
+        "data" : { },
+        "children" : [ ],
+        "type" : "string"
+      }, {
+        "id" : "j2_9",
+        "text" : "name",
+        "li_attr" : {
+          "id" : "j2_9"
+        },
+        "a_attr" : {
+          "href" : "#",
+          "id" : "j2_9_anchor"
+        },
+        "state" : {
+          "loaded" : true,
+          "opened" : false,
+          "selected" : false,
+          "disabled" : false
+        },
+        "data" : { },
+        "children" : [ ],
+        "type" : "string"
+      } ],
+      "type" : "document"
+    } ],
+    "output" : [ {
+      "id" : "j3_1",
+      "text" : "status",
+      "li_attr" : {
+        "id" : "j3_1"
+      },
+      "a_attr" : {
+        "href" : "#",
+        "id" : "j3_1_anchor"
+      },
+      "state" : {
+        "loaded" : true,
+        "opened" : false,
+        "selected" : false,
+        "disabled" : false,
+        "hidden" : false
+      },
+      "data" : { },
+      "children" : [ ],
+      "type" : "boolean"
+    }, {
+      "id" : "j3_2",
+      "text" : "respPayload",
+      "li_attr" : {
+        "id" : "j3_2"
+      },
+      "a_attr" : {
+        "href" : "#",
+        "id" : "j3_2_anchor"
+      },
+      "state" : {
+        "loaded" : true,
+        "opened" : false,
+        "selected" : false,
+        "disabled" : false,
+        "hidden" : false
+      },
+      "data" : { },
+      "children" : [ ],
+      "type" : "string"
+    }, {
+      "id" : "j3_3",
+      "text" : "error",
+      "li_attr" : {
+        "id" : "j3_3"
+      },
+      "a_attr" : {
+        "href" : "#",
+        "id" : "j3_3_anchor"
+      },
+      "state" : {
+        "loaded" : true,
+        "opened" : false,
+        "selected" : false,
+        "disabled" : false,
+        "hidden" : false
+      },
+      "data" : { },
+      "children" : [ ],
+      "type" : "string"
+    }, {
+      "id" : "j3_27",
+      "text" : "global_merge_vars",
+      "li_attr" : {
+        "id" : "j3_27"
+      },
+      "a_attr" : {
+        "href" : "#",
+        "id" : "j3_27_anchor"
+      },
+      "state" : {
+        "loaded" : true,
+        "opened" : false,
+        "selected" : false,
+        "disabled" : false,
+        "hidden" : false
+      },
+      "data" : { },
+      "children" : [ {
+        "id" : "j3_28",
+        "text" : "name",
+        "li_attr" : {
+          "id" : "j3_28"
+        },
+        "a_attr" : {
+          "href" : "#"
+        },
+        "state" : {
+          "loaded" : true,
+          "opened" : false,
+          "selected" : false,
+          "disabled" : false
+        },
+        "data" : { },
+        "children" : [ ],
+        "type" : "string"
+      }, {
+        "id" : "j3_29",
+        "text" : "content",
+        "li_attr" : {
+          "id" : "j3_29"
+        },
+        "a_attr" : {
+          "href" : "#"
+        },
+        "state" : {
+          "loaded" : true,
+          "opened" : false,
+          "selected" : false,
+          "disabled" : false
+        },
+        "data" : { },
+        "children" : [ ],
+        "type" : "string"
+      } ],
+      "type" : "documentList"
+    }, {
+      "id" : "j3_30",
+      "text" : "to_list",
+      "li_attr" : {
+        "id" : "j3_30"
+      },
+      "a_attr" : {
+        "href" : "#",
+        "id" : "j3_30_anchor"
+      },
+      "state" : {
+        "loaded" : true,
+        "opened" : false,
+        "selected" : false,
+        "disabled" : false,
+        "hidden" : false
+      },
+      "data" : { },
+      "children" : [ ],
+      "type" : "documentList"
+    } ],
+    "api_info" : {
+      "title" : "",
+      "description" : ""
+    },
+    "lockedByUser" : "admin",
+    "api" : [ {
+      "id" : "j1_1",
+      "text" : "Invoke",
+      "li_attr" : {
+        "id" : "j1_1"
+      },
+      "a_attr" : {
+        "href" : "javascript:void(0)",
+        "id" : "j1_1_anchor"
+      },
+      "state" : {
+        "loaded" : true,
+        "opened" : false,
+        "selected" : true,
+        "disabled" : false,
+        "hidden" : false
+      },
+      "data" : {
+        "transformers" : [ {
+          "op" : "copy",
+          "from" : "/*payload/userId",
+          "to" : "/userId",
+          "inTypePath" : "document/string",
+          "outTypePath" : "string",
+          "direction" : "in"
+        }, {
+          "op" : "copy",
+          "from" : "/*payload/password",
+          "to" : "/password",
+          "inTypePath" : "document/string",
+          "outTypePath" : "string",
+          "direction" : "in"
+        }, {
+          "op" : "copy",
+          "from" : "/*payload/isAdmin",
+          "to" : "/isAdmin",
+          "inTypePath" : "document/boolean",
+          "outTypePath" : "boolean",
+          "direction" : "in"
+        }, {
+          "op" : "copy",
+          "from" : "/*payload/isDeveloper",
+          "to" : "/isDeveloper",
+          "inTypePath" : "document/boolean",
+          "outTypePath" : "boolean",
+          "direction" : "in"
+        }, {
+          "op" : "copy",
+          "from" : "/*payload/groups",
+          "to" : "/groups",
+          "inTypePath" : "document/stringList",
+          "outTypePath" : "stringList",
+          "direction" : "in"
+        }, {
+          "op" : "copy",
+          "from" : "/status",
+          "to" : "/status",
+          "inTypePath" : "boolean",
+          "outTypePath" : "boolean",
+          "direction" : "out"
+        }, {
+          "op" : "copy",
+          "from" : "/*payload/email",
+          "to" : "/email",
+          "inTypePath" : "document/string",
+          "outTypePath" : "string",
+          "direction" : "in"
+        }, {
+          "op" : "copy",
+          "from" : "/*payload/name",
+          "to" : "/name",
+          "inTypePath" : "document/string",
+          "outTypePath" : "string",
+          "direction" : "in"
+        }, {
+          "op" : "copy",
+          "from" : "/error",
+          "to" : "/error",
+          "inTypePath" : "string",
+          "outTypePath" : "string",
+          "direction" : "out"
+        } ],
+        "lines" : [ {
+          "inputPath" : "*payload/userId",
+          "outputPath" : "userId",
+          "inpJsTree" : "#launching_arrow_jsTree",
+          "outpJsTree" : "#landing_arrow_jsTree_function",
+          "INPath" : "*payload/userId",
+          "OUTPath" : "userId",
+          "direction" : "in",
+          "op" : "copy",
+          "line" : 0,
+          "dashedLine" : false,
+          "inType" : "string",
+          "outType" : "string",
+          "inTypePath" : "document/string",
+          "outTypePath" : "string"
+        }, {
+          "inputPath" : "*payload/password",
+          "outputPath" : "password",
+          "inpJsTree" : "#launching_arrow_jsTree",
+          "outpJsTree" : "#landing_arrow_jsTree_function",
+          "INPath" : "*payload/password",
+          "OUTPath" : "password",
+          "direction" : "in",
+          "op" : "copy",
+          "line" : 0,
+          "dashedLine" : false,
+          "inType" : "string",
+          "outType" : "string",
+          "inTypePath" : "document/string",
+          "outTypePath" : "string"
+        }, {
+          "inputPath" : "*payload/isAdmin",
+          "outputPath" : "isAdmin",
+          "inpJsTree" : "#launching_arrow_jsTree",
+          "outpJsTree" : "#landing_arrow_jsTree_function",
+          "INPath" : "*payload/isAdmin",
+          "OUTPath" : "isAdmin",
+          "direction" : "in",
+          "op" : "copy",
+          "line" : 0,
+          "dashedLine" : false,
+          "inType" : "boolean",
+          "outType" : "boolean",
+          "inTypePath" : "document/boolean",
+          "outTypePath" : "boolean"
+        }, {
+          "inputPath" : "*payload/isDeveloper",
+          "outputPath" : "isDeveloper",
+          "inpJsTree" : "#launching_arrow_jsTree",
+          "outpJsTree" : "#landing_arrow_jsTree_function",
+          "INPath" : "*payload/isDeveloper",
+          "OUTPath" : "isDeveloper",
+          "direction" : "in",
+          "op" : "copy",
+          "line" : 0,
+          "dashedLine" : false,
+          "inType" : "boolean",
+          "outType" : "boolean",
+          "inTypePath" : "document/boolean",
+          "outTypePath" : "boolean"
+        }, {
+          "inputPath" : "*payload/groups",
+          "outputPath" : "groups",
+          "inpJsTree" : "#launching_arrow_jsTree",
+          "outpJsTree" : "#landing_arrow_jsTree_function",
+          "INPath" : "*payload/groups",
+          "OUTPath" : "groups",
+          "direction" : "in",
+          "op" : "copy",
+          "line" : 0,
+          "dashedLine" : false,
+          "inType" : "stringList",
+          "outType" : "stringList",
+          "inTypePath" : "document/stringList",
+          "outTypePath" : "stringList"
+        }, {
+          "inputPath" : "status",
+          "outputPath" : "status",
+          "inpJsTree" : "#launching_arrow_jsTree_function",
+          "outpJsTree" : "#landing_arrow_jsTree",
+          "INPath" : "status",
+          "OUTPath" : "status",
+          "direction" : "out",
+          "op" : "copy",
+          "line" : 0,
+          "dashedLine" : false,
+          "inType" : "boolean",
+          "outType" : "boolean",
+          "inTypePath" : "boolean",
+          "outTypePath" : "boolean"
+        }, {
+          "inputPath" : "*payload/email",
+          "outputPath" : "email",
+          "inpJsTree" : "#launching_arrow_jsTree",
+          "outpJsTree" : "#landing_arrow_jsTree_function",
+          "INPath" : "*payload/email",
+          "OUTPath" : "email",
+          "direction" : "in",
+          "op" : "copy",
+          "line" : 0,
+          "dashedLine" : false,
+          "inType" : "string",
+          "outType" : "string",
+          "inTypePath" : "document/string",
+          "outTypePath" : "string"
+        }, {
+          "inputPath" : "*payload/name",
+          "outputPath" : "name",
+          "inpJsTree" : "#launching_arrow_jsTree",
+          "outpJsTree" : "#landing_arrow_jsTree_function",
+          "INPath" : "*payload/name",
+          "OUTPath" : "name",
+          "direction" : "in",
+          "op" : "copy",
+          "line" : 0,
+          "dashedLine" : false,
+          "inType" : "string",
+          "outType" : "string",
+          "inTypePath" : "document/string",
+          "outTypePath" : "string"
+        }, {
+          "inputPath" : "error",
+          "outputPath" : "error",
+          "inpJsTree" : "#launching_arrow_jsTree_function",
+          "outpJsTree" : "#landing_arrow_jsTree",
+          "INPath" : "error",
+          "OUTPath" : "error",
+          "direction" : "out",
+          "op" : "copy",
+          "line" : 0,
+          "dashedLine" : false,
+          "inType" : "string",
+          "outType" : "string",
+          "inTypePath" : "string",
+          "outTypePath" : "string"
+        } ],
+        "dropList" : [ ],
+        "createList" : [ ],
+        "serviceType" : "service",
+        "status" : "enabled",
+        "guid" : "faf9ad61-c3a5-4dbf-8016-72598e5f1816",
+        "initiateList" : [ ],
+        "fqn" : "packages/middleware/pub/security/java/addUser"
+      },
+      "children" : [ ],
+      "type" : "invoke"
+    }, {
+      "id" : "j1_24",
+      "text" : "Switch",
+      "li_attr" : {
+        "id" : "j1_24"
+      },
+      "a_attr" : {
+        "href" : "javascript:void(0)",
+        "id" : "j1_24_anchor"
+      },
+      "state" : {
+        "loaded" : true,
+        "opened" : true,
+        "selected" : false,
+        "disabled" : false,
+        "hidden" : false
+      },
+      "data" : {
+        "guid" : "08c09cd6-a027-4f3a-8fe8-e1b1d36ea5b7",
+        "switch" : "status"
+      },
+      "children" : [ {
+        "id" : "j1_25",
+        "text" : "CASE",
+        "li_attr" : {
+          "id" : "j1_25"
+        },
+        "a_attr" : {
+          "href" : "#",
+          "id" : "j1_25_anchor"
+        },
+        "state" : {
+          "loaded" : true,
+          "opened" : true,
+          "selected" : false,
+          "disabled" : false
+        },
+        "data" : {
+          "guid" : "0134d78b-a823-4a37-8551-25092db261f2",
+          "case" : "true"
+        },
+        "children" : [ {
+          "id" : "j1_2",
+          "text" : "Transformer",
+          "li_attr" : {
+            "id" : "j1_2"
+          },
+          "a_attr" : {
+            "href" : "javascript:void(0)",
+            "id" : "j1_2_anchor"
+          },
+          "state" : {
+            "loaded" : true,
+            "opened" : false,
+            "selected" : false,
+            "disabled" : false
+          },
+          "data" : {
+            "transformers" : [ {
+              "op" : "copy",
+              "from" : "/*payload/password",
+              "to" : "/password_info/content",
+              "inTypePath" : "document/string",
+              "outTypePath" : "document/string"
+            }, {
+              "op" : "copy",
+              "from" : "/*payload/email",
+              "to" : "/email_info/content",
+              "inTypePath" : "document/string",
+              "outTypePath" : "document/string"
+            }, {
+              "op" : "copy",
+              "from" : "/*payload/email",
+              "to" : "/to_info/email",
+              "inTypePath" : "document/string",
+              "outTypePath" : "document/string"
+            }, {
+              "op" : "copy",
+              "from" : "/*payload/name",
+              "to" : "/name_info/content",
+              "inTypePath" : "document/string",
+              "outTypePath" : "document/string"
+            }, {
+              "op" : "copy",
+              "from" : "/*payload/name",
+              "to" : "/to_info/name",
+              "inTypePath" : "document/string",
+              "outTypePath" : "document/string"
+            } ],
+            "lines" : [ {
+              "inputPath" : "*payload/password",
+              "outputPath" : "password_info/content",
+              "inpJsTree" : "#launching_arrow_jsTree",
+              "outpJsTree" : "#landing_arrow_jsTree",
+              "INPath" : "*payload/password",
+              "OUTPath" : "password_info/content",
+              "op" : "copy",
+              "line" : 0,
+              "dashedLine" : false,
+              "inType" : "string",
+              "outType" : "string",
+              "inTypePath" : "document/string",
+              "outTypePath" : "document/string"
+            }, {
+              "inputPath" : "*payload/email",
+              "outputPath" : "email_info/content",
+              "inpJsTree" : "#launching_arrow_jsTree",
+              "outpJsTree" : "#landing_arrow_jsTree",
+              "INPath" : "*payload/email",
+              "OUTPath" : "email_info/content",
+              "op" : "copy",
+              "line" : 0,
+              "dashedLine" : false,
+              "inType" : "string",
+              "outType" : "string",
+              "inTypePath" : "document/string",
+              "outTypePath" : "document/string"
+            }, {
+              "inputPath" : "*payload/email",
+              "outputPath" : "to_info/email",
+              "inpJsTree" : "#launching_arrow_jsTree",
+              "outpJsTree" : "#landing_arrow_jsTree",
+              "INPath" : "*payload/email",
+              "OUTPath" : "to_info/email",
+              "op" : "copy",
+              "line" : 0,
+              "dashedLine" : false,
+              "inType" : "string",
+              "outType" : "string",
+              "inTypePath" : "document/string",
+              "outTypePath" : "document/string"
+            }, {
+              "inputPath" : "*payload/name",
+              "outputPath" : "name_info/content",
+              "inpJsTree" : "#launching_arrow_jsTree",
+              "outpJsTree" : "#landing_arrow_jsTree",
+              "INPath" : "*payload/name",
+              "OUTPath" : "name_info/content",
+              "op" : "copy",
+              "line" : 0,
+              "dashedLine" : false,
+              "inType" : "string",
+              "outType" : "string",
+              "inTypePath" : "document/string",
+              "outTypePath" : "document/string"
+            }, {
+              "inputPath" : "*payload/name",
+              "outputPath" : "to_info/name",
+              "inpJsTree" : "#launching_arrow_jsTree",
+              "outpJsTree" : "#landing_arrow_jsTree",
+              "INPath" : "*payload/name",
+              "OUTPath" : "to_info/name",
+              "op" : "copy",
+              "line" : 0,
+              "dashedLine" : false,
+              "inType" : "string",
+              "outType" : "string",
+              "inTypePath" : "document/string",
+              "outTypePath" : "document/string"
+            } ],
+            "dropList" : [ ],
+            "createList" : [ {
+              "path" : "key",
+              "value" : "EiDG1GlmNMyZO-cT2WvsGA",
+              "typePath" : "string"
+            }, {
+              "path" : "templateName",
+              "value" : "syncloop-add-new-member",
+              "typePath" : "string"
+            }, {
+              "path" : "email_info/name",
+              "value" : "USER_EMAIL",
+              "typePath" : "document/string"
+            }, {
+              "path" : "password_info/name",
+              "value" : "USER_PASSWORD",
+              "typePath" : "document/string"
+            }, {
+              "path" : "inviter_info/name",
+              "value" : "INVITER_NAME",
+              "typePath" : "document/string"
+            }, {
+              "path" : "name_info/name",
+              "value" : "NAME",
+              "typePath" : "document/string"
+            }, {
+              "path" : "subject_info/name",
+              "value" : "SUBJECT",
+              "typePath" : "document/string"
+            }, {
+              "path" : "subject_info/content",
+              "value" : "Welcome to Syncloop",
+              "typePath" : "document/string"
+            }, {
+              "path" : "to_info/type",
+              "value" : "to",
+              "typePath" : "document/string"
+            }, {
+              "path" : "fromEmail",
+              "value" : "noreply@syncloop.com",
+              "typePath" : "string"
+            }, {
+              "path" : "fromName",
+              "value" : "Syncloop",
+              "typePath" : "string"
+            }, {
+              "path" : "inviter_info/content",
+              "value" : "Your project admin",
+              "typePath" : "document/string"
+            }, {
+              "path" : "base_url_info/name",
+              "value" : "BASE_URL",
+              "typePath" : "document/string"
+            }, {
+              "path" : "start_index",
+              "value" : "0",
+              "typePath" : "integer"
+            }, {
+              "path" : "end_index",
+              "value" : "-1",
+              "typePath" : "integer"
+            }, {
+              "path" : "base_path_url",
+              "value" : "#{*middleware.host.name}",
+              "evaluate" : "EEV",
+              "typePath" : "string"
+            } ],
+            "guid" : "43f79769-e05f-4a4d-a250-ce93189b4d40",
+            "comment" : ""
+          },
+          "children" : [ ],
+          "type" : "transformer"
+        }, {
+          "id" : "j1_21",
+          "text" : "Transformer",
+          "li_attr" : {
+            "id" : "j1_21"
+          },
+          "a_attr" : {
+            "href" : "javascript:void(0)",
+            "id" : "j1_21_anchor"
+          },
+          "state" : {
+            "loaded" : true,
+            "opened" : false,
+            "selected" : false,
+            "disabled" : false
+          },
+          "data" : {
+            "guid" : "43d44ce5-2355-4de8-84df-9b9773d57b8b",
+            "transformers" : [ {
+              "op" : "copy",
+              "from" : "/base_path_url",
+              "to" : "/base_url_info/content",
+              "inTypePath" : "string",
+              "outTypePath" : "document/string"
+            } ],
+            "lines" : [ {
+              "inputPath" : "base_path_url",
+              "outputPath" : "base_url_info/content",
+              "inpJsTree" : "#launching_arrow_jsTree",
+              "outpJsTree" : "#landing_arrow_jsTree",
+              "INPath" : "base_path_url",
+              "OUTPath" : "base_url_info/content",
+              "op" : "copy",
+              "line" : 0,
+              "dashedLine" : false,
+              "inType" : "string",
+              "outType" : "string",
+              "inTypePath" : "string",
+              "outTypePath" : "document/string"
+            } ],
+            "dropList" : [ ],
+            "createList" : [ ],
+            "comment" : ""
+          },
+          "children" : [ ],
+          "type" : "transformer"
+        }, {
+          "id" : "j1_15",
+          "text" : "Invoke",
+          "li_attr" : {
+            "id" : "j1_15"
+          },
+          "a_attr" : {
+            "href" : "javascript:void(0)",
+            "id" : "j1_15_anchor"
+          },
+          "state" : {
+            "loaded" : true,
+            "opened" : false,
+            "selected" : false,
+            "disabled" : false
+          },
+          "data" : {
+            "transformers" : [ {
+              "op" : "copy",
+              "from" : "/start_index",
+              "to" : "/start",
+              "inTypePath" : "integer",
+              "outTypePath" : "integer",
+              "direction" : "in"
+            }, {
+              "op" : "copy",
+              "from" : "/end_index",
+              "to" : "/end",
+              "inTypePath" : "integer",
+              "outTypePath" : "integer",
+              "direction" : "in"
+            }, {
+              "op" : "copy",
+              "from" : "/base_path_url",
+              "to" : "/string",
+              "inTypePath" : "string",
+              "outTypePath" : "string",
+              "direction" : "in"
+            }, {
+              "op" : "copy",
+              "from" : "/value",
+              "to" : "/base_url_info/content",
+              "inTypePath" : "string",
+              "outTypePath" : "document/string",
+              "direction" : "out"
+            } ],
+            "lines" : [ {
+              "inputPath" : "start_index",
+              "outputPath" : "start",
+              "inpJsTree" : "#launching_arrow_jsTree",
+              "outpJsTree" : "#landing_arrow_jsTree_function",
+              "INPath" : "start_index",
+              "OUTPath" : "start",
+              "direction" : "in",
+              "op" : "copy",
+              "line" : 0,
+              "dashedLine" : false,
+              "inType" : "integer",
+              "outType" : "integer",
+              "inTypePath" : "integer",
+              "outTypePath" : "integer"
+            }, {
+              "inputPath" : "end_index",
+              "outputPath" : "end",
+              "inpJsTree" : "#launching_arrow_jsTree",
+              "outpJsTree" : "#landing_arrow_jsTree_function",
+              "INPath" : "end_index",
+              "OUTPath" : "end",
+              "direction" : "in",
+              "op" : "copy",
+              "line" : 0,
+              "dashedLine" : false,
+              "inType" : "integer",
+              "outType" : "integer",
+              "inTypePath" : "integer",
+              "outTypePath" : "integer"
+            }, {
+              "inputPath" : "base_path_url",
+              "outputPath" : "string",
+              "inpJsTree" : "#launching_arrow_jsTree",
+              "outpJsTree" : "#landing_arrow_jsTree_function",
+              "INPath" : "base_path_url",
+              "OUTPath" : "string",
+              "direction" : "in",
+              "op" : "copy",
+              "line" : 0,
+              "dashedLine" : false,
+              "inType" : "string",
+              "outType" : "string",
+              "inTypePath" : "string",
+              "outTypePath" : "string"
+            }, {
+              "inputPath" : "value",
+              "outputPath" : "base_url_info/content",
+              "inpJsTree" : "#launching_arrow_jsTree_function",
+              "outpJsTree" : "#landing_arrow_jsTree",
+              "INPath" : "value",
+              "OUTPath" : "base_url_info/content",
+              "direction" : "out",
+              "op" : "copy",
+              "line" : 0,
+              "dashedLine" : false,
+              "inType" : "string",
+              "outType" : "string",
+              "inTypePath" : "string",
+              "outTypePath" : "document/string"
+            } ],
+            "dropList" : [ ],
+            "createList" : [ ],
+            "serviceType" : "service",
+            "guid" : "773c8913-fa79-4879-81c6-316358ade216",
+            "status" : "disabled",
+            "fqn" : "packages/middleware/pub/string/substring"
+          },
+          "children" : [ ],
+          "type" : "invoke"
+        }, {
+          "id" : "j1_4",
+          "text" : "Invoke",
+          "li_attr" : {
+            "id" : "j1_4"
+          },
+          "a_attr" : {
+            "href" : "javascript:void(0)",
+            "id" : "j1_4_anchor"
+          },
+          "state" : {
+            "loaded" : true,
+            "opened" : false,
+            "selected" : false,
+            "disabled" : false
+          },
+          "data" : {
+            "transformers" : [ {
+              "op" : "copy",
+              "from" : "/email_info",
+              "to" : "/addDoc",
+              "inTypePath" : "document",
+              "outTypePath" : "document",
+              "direction" : "in"
+            }, {
+              "op" : "loop",
+              "from" : "/docList/#{loop_id_1827687926}",
+              "to" : "/global_merge_vars/#{loop_id_1827687926}",
+              "loop_Id" : "loop_id_1827687926",
+              "inTypePath" : "documentList",
+              "outTypePath" : "documentList",
+              "direction" : "out"
+            }, {
+              "op" : "add",
+              "from" : "/docList/#{loop_id_1827687926}/name",
+              "to" : "/global_merge_vars/#{loop_id_1827687926}/name",
+              "follow" : "loop_id_1827687926",
+              "inTypePath" : "documentList/string",
+              "outTypePath" : "documentList/string",
+              "direction" : "out"
+            }, {
+              "op" : "add",
+              "from" : "/docList/#{loop_id_1827687926}/content",
+              "to" : "/global_merge_vars/#{loop_id_1827687926}/content",
+              "follow" : "loop_id_1827687926",
+              "inTypePath" : "documentList/string",
+              "outTypePath" : "documentList/string",
+              "direction" : "out"
+            } ],
+            "lines" : [ {
+              "inputPath" : "email_info",
+              "outputPath" : "addDoc",
+              "inpJsTree" : "#launching_arrow_jsTree",
+              "outpJsTree" : "#landing_arrow_jsTree_function",
+              "INPath" : "email_info",
+              "OUTPath" : "addDoc",
+              "direction" : "in",
+              "op" : "copy",
+              "line" : 0,
+              "dashedLine" : false,
+              "inType" : "document",
+              "outType" : "document",
+              "inTypePath" : "document",
+              "outTypePath" : "document"
+            }, {
+              "loop_Id" : "loop_id_1827687926",
+              "inputPath" : "docList",
+              "outputPath" : "global_merge_vars",
+              "inpJsTree" : "#launching_arrow_jsTree_function",
+              "outpJsTree" : "#landing_arrow_jsTree",
+              "INPath" : "docList/#{loop_id_1827687926}",
+              "OUTPath" : "global_merge_vars/#{loop_id_1827687926}",
+              "direction" : "out",
+              "line" : 0,
+              "dashedLine" : true,
+              "op" : "loop",
+              "inType" : "documentList",
+              "outType" : "documentList",
+              "inTypePath" : "documentList",
+              "outTypePath" : "documentList"
+            }, {
+              "inputPath" : "docList/name",
+              "outputPath" : "global_merge_vars/name",
+              "inpJsTree" : "#launching_arrow_jsTree_function",
+              "outpJsTree" : "#landing_arrow_jsTree",
+              "INPath" : "docList/#{loop_id_1827687926}/name",
+              "OUTPath" : "global_merge_vars/#{loop_id_1827687926}/name",
+              "direction" : "out",
+              "follow" : "loop_id_1827687926",
+              "op" : "add",
+              "line" : 0,
+              "dashedLine" : false,
+              "inType" : "string",
+              "outType" : "string",
+              "inTypePath" : "documentList/string",
+              "outTypePath" : "documentList/string"
+            }, {
+              "inputPath" : "docList/content",
+              "outputPath" : "global_merge_vars/content",
+              "inpJsTree" : "#launching_arrow_jsTree_function",
+              "outpJsTree" : "#landing_arrow_jsTree",
+              "INPath" : "docList/#{loop_id_1827687926}/content",
+              "OUTPath" : "global_merge_vars/#{loop_id_1827687926}/content",
+              "direction" : "out",
+              "follow" : "loop_id_1827687926",
+              "op" : "add",
+              "line" : 0,
+              "dashedLine" : false,
+              "inType" : "string",
+              "outType" : "string",
+              "inTypePath" : "documentList/string",
+              "outTypePath" : "documentList/string"
+            } ],
+            "dropList" : [ ],
+            "createList" : [ ],
+            "serviceType" : "service",
+            "guid" : "23c3caee-9eb8-41bc-a373-9cad34b9d24a",
+            "fqn" : "packages/middleware/pub/docList/addDoc"
+          },
+          "children" : [ ],
+          "type" : "invoke"
+        }, {
+          "id" : "j1_5",
+          "text" : "Invoke",
+          "li_attr" : {
+            "id" : "j1_5"
+          },
+          "a_attr" : {
+            "href" : "javascript:void(0)",
+            "id" : "j1_5_anchor"
+          },
+          "state" : {
+            "loaded" : true,
+            "opened" : false,
+            "selected" : false,
+            "disabled" : false
+          },
+          "data" : {
+            "transformers" : [ {
+              "op" : "copy",
+              "from" : "/global_merge_vars",
+              "to" : "/docList",
+              "inTypePath" : "documentList",
+              "outTypePath" : "documentList",
+              "direction" : "in"
+            }, {
+              "op" : "copy",
+              "from" : "/password_info",
+              "to" : "/addDoc",
+              "inTypePath" : "document",
+              "outTypePath" : "document",
+              "direction" : "in"
+            }, {
+              "op" : "loop",
+              "from" : "/docList/#{loop_id_1827687926}",
+              "to" : "/global_merge_vars/#{loop_id_1827687926}",
+              "loop_Id" : "loop_id_1827687926",
+              "inTypePath" : "documentList",
+              "outTypePath" : "documentList",
+              "direction" : "out"
+            }, {
+              "op" : "add",
+              "from" : "/docList/#{loop_id_1827687926}/name",
+              "to" : "/global_merge_vars/#{loop_id_1827687926}/name",
+              "follow" : "loop_id_1827687926",
+              "inTypePath" : "documentList/string",
+              "outTypePath" : "documentList/string",
+              "direction" : "out"
+            }, {
+              "op" : "add",
+              "from" : "/docList/#{loop_id_1827687926}/content",
+              "to" : "/global_merge_vars/#{loop_id_1827687926}/content",
+              "follow" : "loop_id_1827687926",
+              "inTypePath" : "documentList/string",
+              "outTypePath" : "documentList/string",
+              "direction" : "out"
+            } ],
+            "lines" : [ {
+              "inputPath" : "global_merge_vars",
+              "outputPath" : "docList",
+              "inpJsTree" : "#launching_arrow_jsTree",
+              "outpJsTree" : "#landing_arrow_jsTree_function",
+              "INPath" : "global_merge_vars",
+              "OUTPath" : "docList",
+              "direction" : "in",
+              "op" : "copy",
+              "line" : 0,
+              "dashedLine" : false,
+              "inType" : "documentList",
+              "outType" : "documentList",
+              "inTypePath" : "documentList",
+              "outTypePath" : "documentList"
+            }, {
+              "inputPath" : "password_info",
+              "outputPath" : "addDoc",
+              "inpJsTree" : "#launching_arrow_jsTree",
+              "outpJsTree" : "#landing_arrow_jsTree_function",
+              "INPath" : "password_info",
+              "OUTPath" : "addDoc",
+              "direction" : "in",
+              "op" : "copy",
+              "line" : 0,
+              "dashedLine" : false,
+              "inType" : "document",
+              "outType" : "document",
+              "inTypePath" : "document",
+              "outTypePath" : "document"
+            }, {
+              "loop_Id" : "loop_id_1827687926",
+              "inputPath" : "docList",
+              "outputPath" : "global_merge_vars",
+              "inpJsTree" : "#launching_arrow_jsTree_function",
+              "outpJsTree" : "#landing_arrow_jsTree",
+              "INPath" : "docList/#{loop_id_1827687926}",
+              "OUTPath" : "global_merge_vars/#{loop_id_1827687926}",
+              "direction" : "out",
+              "line" : 0,
+              "dashedLine" : true,
+              "op" : "loop",
+              "inType" : "documentList",
+              "outType" : "documentList",
+              "inTypePath" : "documentList",
+              "outTypePath" : "documentList"
+            }, {
+              "inputPath" : "docList/name",
+              "outputPath" : "global_merge_vars/name",
+              "inpJsTree" : "#launching_arrow_jsTree_function",
+              "outpJsTree" : "#landing_arrow_jsTree",
+              "INPath" : "docList/#{loop_id_1827687926}/name",
+              "OUTPath" : "global_merge_vars/#{loop_id_1827687926}/name",
+              "direction" : "out",
+              "follow" : "loop_id_1827687926",
+              "op" : "add",
+              "line" : 0,
+              "dashedLine" : false,
+              "inType" : "string",
+              "outType" : "string",
+              "inTypePath" : "documentList/string",
+              "outTypePath" : "documentList/string"
+            }, {
+              "inputPath" : "docList/content",
+              "outputPath" : "global_merge_vars/content",
+              "inpJsTree" : "#launching_arrow_jsTree_function",
+              "outpJsTree" : "#landing_arrow_jsTree",
+              "INPath" : "docList/#{loop_id_1827687926}/content",
+              "OUTPath" : "global_merge_vars/#{loop_id_1827687926}/content",
+              "direction" : "out",
+              "follow" : "loop_id_1827687926",
+              "op" : "add",
+              "line" : 0,
+              "dashedLine" : false,
+              "inType" : "string",
+              "outType" : "string",
+              "inTypePath" : "documentList/string",
+              "outTypePath" : "documentList/string"
+            } ],
+            "dropList" : [ ],
+            "createList" : [ ],
+            "serviceType" : "service",
+            "guid" : "15cf019c-0cb2-4234-9101-713f71854d72",
+            "status" : "enabled",
+            "fqn" : "packages/middleware/pub/docList/addDoc"
+          },
+          "children" : [ ],
+          "type" : "invoke"
+        }, {
+          "id" : "j1_7",
+          "text" : "Invoke",
+          "li_attr" : {
+            "id" : "j1_7"
+          },
+          "a_attr" : {
+            "href" : "javascript:void(0)",
+            "id" : "j1_7_anchor"
+          },
+          "state" : {
+            "loaded" : true,
+            "opened" : false,
+            "selected" : false,
+            "disabled" : false
+          },
+          "data" : {
+            "transformers" : [ {
+              "op" : "copy",
+              "from" : "/global_merge_vars",
+              "to" : "/docList",
+              "inTypePath" : "documentList",
+              "outTypePath" : "documentList",
+              "direction" : "in"
+            }, {
+              "op" : "copy",
+              "from" : "/inviter_info",
+              "to" : "/addDoc",
+              "inTypePath" : "document",
+              "outTypePath" : "document",
+              "direction" : "in"
+            }, {
+              "op" : "copy",
+              "from" : "/docList",
+              "to" : "/global_merge_vars",
+              "inTypePath" : "documentList",
+              "outTypePath" : "documentList",
+              "direction" : "out"
+            } ],
+            "lines" : [ {
+              "inputPath" : "global_merge_vars",
+              "outputPath" : "docList",
+              "inpJsTree" : "#launching_arrow_jsTree",
+              "outpJsTree" : "#landing_arrow_jsTree_function",
+              "INPath" : "global_merge_vars",
+              "OUTPath" : "docList",
+              "direction" : "in",
+              "op" : "copy",
+              "line" : 0,
+              "dashedLine" : false,
+              "inType" : "documentList",
+              "outType" : "documentList",
+              "inTypePath" : "documentList",
+              "outTypePath" : "documentList"
+            }, {
+              "inputPath" : "inviter_info",
+              "outputPath" : "addDoc",
+              "inpJsTree" : "#launching_arrow_jsTree",
+              "outpJsTree" : "#landing_arrow_jsTree_function",
+              "INPath" : "inviter_info",
+              "OUTPath" : "addDoc",
+              "direction" : "in",
+              "op" : "copy",
+              "line" : 0,
+              "dashedLine" : false,
+              "inType" : "document",
+              "outType" : "document",
+              "inTypePath" : "document",
+              "outTypePath" : "document"
+            }, {
+              "inputPath" : "docList",
+              "outputPath" : "global_merge_vars",
+              "inpJsTree" : "#launching_arrow_jsTree_function",
+              "outpJsTree" : "#landing_arrow_jsTree",
+              "INPath" : "docList",
+              "OUTPath" : "global_merge_vars",
+              "direction" : "out",
+              "op" : "copy",
+              "line" : 0,
+              "dashedLine" : false,
+              "inType" : "documentList",
+              "outType" : "documentList",
+              "inTypePath" : "documentList",
+              "outTypePath" : "documentList"
+            } ],
+            "dropList" : [ ],
+            "createList" : [ ],
+            "serviceType" : "service",
+            "guid" : "3c224e09-835b-463a-aeff-151a325971c9",
+            "status" : "enabled",
+            "fqn" : "packages/middleware/pub/docList/addDoc"
+          },
+          "children" : [ ],
+          "type" : "invoke"
+        }, {
+          "id" : "j1_8",
+          "text" : "Invoke",
+          "li_attr" : {
+            "id" : "j1_8"
+          },
+          "a_attr" : {
+            "href" : "javascript:void(0)",
+            "id" : "j1_8_anchor"
+          },
+          "state" : {
+            "loaded" : true,
+            "opened" : false,
+            "selected" : false,
+            "disabled" : false
+          },
+          "data" : {
+            "transformers" : [ {
+              "op" : "copy",
+              "from" : "/global_merge_vars",
+              "to" : "/docList",
+              "inTypePath" : "documentList",
+              "outTypePath" : "documentList",
+              "direction" : "in"
+            }, {
+              "op" : "copy",
+              "from" : "/subject_info",
+              "to" : "/addDoc",
+              "inTypePath" : "document",
+              "outTypePath" : "document",
+              "direction" : "in"
+            }, {
+              "op" : "copy",
+              "from" : "/docList",
+              "to" : "/global_merge_vars",
+              "inTypePath" : "documentList",
+              "outTypePath" : "documentList",
+              "direction" : "out"
+            } ],
+            "lines" : [ {
+              "inputPath" : "global_merge_vars",
+              "outputPath" : "docList",
+              "inpJsTree" : "#launching_arrow_jsTree",
+              "outpJsTree" : "#landing_arrow_jsTree_function",
+              "INPath" : "global_merge_vars",
+              "OUTPath" : "docList",
+              "direction" : "in",
+              "op" : "copy",
+              "line" : 0,
+              "dashedLine" : false,
+              "inType" : "documentList",
+              "outType" : "documentList",
+              "inTypePath" : "documentList",
+              "outTypePath" : "documentList"
+            }, {
+              "inputPath" : "subject_info",
+              "outputPath" : "addDoc",
+              "inpJsTree" : "#launching_arrow_jsTree",
+              "outpJsTree" : "#landing_arrow_jsTree_function",
+              "INPath" : "subject_info",
+              "OUTPath" : "addDoc",
+              "direction" : "in",
+              "op" : "copy",
+              "line" : 0,
+              "dashedLine" : false,
+              "inType" : "document",
+              "outType" : "document",
+              "inTypePath" : "document",
+              "outTypePath" : "document"
+            }, {
+              "inputPath" : "docList",
+              "outputPath" : "global_merge_vars",
+              "inpJsTree" : "#launching_arrow_jsTree_function",
+              "outpJsTree" : "#landing_arrow_jsTree",
+              "INPath" : "docList",
+              "OUTPath" : "global_merge_vars",
+              "direction" : "out",
+              "op" : "copy",
+              "line" : 0,
+              "dashedLine" : false,
+              "inType" : "documentList",
+              "outType" : "documentList",
+              "inTypePath" : "documentList",
+              "outTypePath" : "documentList"
+            } ],
+            "dropList" : [ {
+              "path" : "docList",
+              "typePath" : "documentList"
+            }, {
+              "path" : "addDoc",
+              "typePath" : "document"
+            } ],
+            "createList" : [ ],
+            "serviceType" : "service",
+            "guid" : "8f9c8b0a-6348-46d8-a718-1590d28b92cc",
+            "status" : "enabled",
+            "fqn" : "packages/middleware/pub/docList/addDoc"
+          },
+          "children" : [ ],
+          "type" : "invoke"
+        }, {
+          "id" : "j1_9",
+          "text" : "Invoke",
+          "li_attr" : {
+            "id" : "j1_9"
+          },
+          "a_attr" : {
+            "href" : "javascript:void(0)",
+            "id" : "j1_9_anchor"
+          },
+          "state" : {
+            "loaded" : true,
+            "opened" : false,
+            "selected" : false,
+            "disabled" : false
+          },
+          "data" : {
+            "transformers" : [ {
+              "op" : "copy",
+              "from" : "/to_info",
+              "to" : "/addDoc",
+              "inTypePath" : "document",
+              "outTypePath" : "document",
+              "direction" : "in"
+            }, {
+              "op" : "copy",
+              "from" : "/docList",
+              "to" : "/to_list",
+              "inTypePath" : "documentList",
+              "outTypePath" : "documentList",
+              "direction" : "out"
+            } ],
+            "lines" : [ {
+              "inputPath" : "to_info",
+              "outputPath" : "addDoc",
+              "inpJsTree" : "#launching_arrow_jsTree",
+              "outpJsTree" : "#landing_arrow_jsTree_function",
+              "INPath" : "to_info",
+              "OUTPath" : "addDoc",
+              "direction" : "in",
+              "op" : "copy",
+              "line" : 0,
+              "dashedLine" : false,
+              "inType" : "document",
+              "outType" : "document",
+              "inTypePath" : "document",
+              "outTypePath" : "document"
+            }, {
+              "inputPath" : "docList",
+              "outputPath" : "to_list",
+              "inpJsTree" : "#launching_arrow_jsTree_function",
+              "outpJsTree" : "#landing_arrow_jsTree",
+              "INPath" : "docList",
+              "OUTPath" : "to_list",
+              "direction" : "out",
+              "op" : "copy",
+              "line" : 0,
+              "dashedLine" : false,
+              "inType" : "documentList",
+              "outType" : "documentList",
+              "inTypePath" : "documentList",
+              "outTypePath" : "documentList"
+            } ],
+            "dropList" : [ ],
+            "createList" : [ ],
+            "serviceType" : "service",
+            "guid" : "ce4c39f3-20e1-4f05-988f-987534d3250c",
+            "status" : "enabled",
+            "fqn" : "packages/middleware/pub/docList/addDoc"
+          },
+          "children" : [ ],
+          "type" : "invoke"
+        }, {
+          "id" : "j1_13",
+          "text" : "Invoke",
+          "li_attr" : {
+            "id" : "j1_13"
+          },
+          "a_attr" : {
+            "href" : "javascript:void(0)",
+            "id" : "j1_13_anchor"
+          },
+          "state" : {
+            "loaded" : true,
+            "opened" : false,
+            "selected" : false,
+            "disabled" : false
+          },
+          "data" : {
+            "transformers" : [ {
+              "op" : "copy",
+              "from" : "/base_url_info",
+              "to" : "/addDoc",
+              "inTypePath" : "document",
+              "outTypePath" : "document",
+              "direction" : "in"
+            }, {
+              "op" : "copy",
+              "from" : "/global_merge_vars",
+              "to" : "/docList",
+              "inTypePath" : "documentList",
+              "outTypePath" : "documentList",
+              "direction" : "in"
+            }, {
+              "op" : "copy",
+              "from" : "/docList",
+              "to" : "/global_merge_vars",
+              "inTypePath" : "documentList",
+              "outTypePath" : "documentList",
+              "direction" : "out"
+            } ],
+            "lines" : [ {
+              "inputPath" : "base_url_info",
+              "outputPath" : "addDoc",
+              "inpJsTree" : "#launching_arrow_jsTree",
+              "outpJsTree" : "#landing_arrow_jsTree_function",
+              "INPath" : "base_url_info",
+              "OUTPath" : "addDoc",
+              "direction" : "in",
+              "op" : "copy",
+              "line" : 0,
+              "dashedLine" : false,
+              "inType" : "document",
+              "outType" : "document",
+              "inTypePath" : "document",
+              "outTypePath" : "document"
+            }, {
+              "inputPath" : "global_merge_vars",
+              "outputPath" : "docList",
+              "inpJsTree" : "#launching_arrow_jsTree",
+              "outpJsTree" : "#landing_arrow_jsTree_function",
+              "INPath" : "global_merge_vars",
+              "OUTPath" : "docList",
+              "direction" : "in",
+              "op" : "copy",
+              "line" : 0,
+              "dashedLine" : false,
+              "inType" : "documentList",
+              "outType" : "documentList",
+              "inTypePath" : "documentList",
+              "outTypePath" : "documentList"
+            }, {
+              "inputPath" : "docList",
+              "outputPath" : "global_merge_vars",
+              "inpJsTree" : "#launching_arrow_jsTree_function",
+              "outpJsTree" : "#landing_arrow_jsTree",
+              "INPath" : "docList",
+              "OUTPath" : "global_merge_vars",
+              "direction" : "out",
+              "op" : "copy",
+              "line" : 0,
+              "dashedLine" : false,
+              "inType" : "documentList",
+              "outType" : "documentList",
+              "inTypePath" : "documentList",
+              "outTypePath" : "documentList"
+            } ],
+            "dropList" : [ ],
+            "createList" : [ ],
+            "serviceType" : "service",
+            "guid" : "bba5b5b7-a8dd-42d5-9563-40878f570b4a",
+            "status" : "enabled",
+            "fqn" : "packages/middleware/pub/docList/addDoc"
+          },
+          "children" : [ ],
+          "type" : "invoke"
+        }, {
+          "id" : "j1_11",
+          "text" : "Invoke",
+          "li_attr" : {
+            "id" : "j1_11"
+          },
+          "a_attr" : {
+            "href" : "javascript:void(0)",
+            "id" : "j1_11_anchor"
+          },
+          "state" : {
+            "loaded" : true,
+            "opened" : false,
+            "selected" : false,
+            "disabled" : false
+          },
+          "data" : {
+            "transformers" : [ {
+              "op" : "copy",
+              "from" : "/name_info",
+              "to" : "/addDoc",
+              "inTypePath" : "document",
+              "outTypePath" : "document",
+              "direction" : "in"
+            }, {
+              "op" : "copy",
+              "from" : "/docList",
+              "to" : "/global_merge_vars",
+              "inTypePath" : "documentList",
+              "outTypePath" : "documentList",
+              "direction" : "out"
+            }, {
+              "op" : "copy",
+              "from" : "/global_merge_vars",
+              "to" : "/docList",
+              "inTypePath" : "documentList",
+              "outTypePath" : "documentList",
+              "direction" : "in"
+            } ],
+            "lines" : [ {
+              "inputPath" : "name_info",
+              "outputPath" : "addDoc",
+              "inpJsTree" : "#launching_arrow_jsTree",
+              "outpJsTree" : "#landing_arrow_jsTree_function",
+              "INPath" : "name_info",
+              "OUTPath" : "addDoc",
+              "direction" : "in",
+              "op" : "copy",
+              "line" : 0,
+              "dashedLine" : false,
+              "inType" : "document",
+              "outType" : "document",
+              "inTypePath" : "document",
+              "outTypePath" : "document"
+            }, {
+              "inputPath" : "docList",
+              "outputPath" : "global_merge_vars",
+              "inpJsTree" : "#launching_arrow_jsTree_function",
+              "outpJsTree" : "#landing_arrow_jsTree",
+              "INPath" : "docList",
+              "OUTPath" : "global_merge_vars",
+              "direction" : "out",
+              "op" : "copy",
+              "line" : 0,
+              "dashedLine" : false,
+              "inType" : "documentList",
+              "outType" : "documentList",
+              "inTypePath" : "documentList",
+              "outTypePath" : "documentList"
+            }, {
+              "inputPath" : "global_merge_vars",
+              "outputPath" : "docList",
+              "inpJsTree" : "#launching_arrow_jsTree",
+              "outpJsTree" : "#landing_arrow_jsTree_function",
+              "INPath" : "global_merge_vars",
+              "OUTPath" : "docList",
+              "direction" : "in",
+              "op" : "copy",
+              "line" : 0,
+              "dashedLine" : false,
+              "inType" : "documentList",
+              "outType" : "documentList",
+              "inTypePath" : "documentList",
+              "outTypePath" : "documentList"
+            } ],
+            "dropList" : [ ],
+            "createList" : [ ],
+            "serviceType" : "service",
+            "guid" : "f639986d-a6b7-44b9-9fc4-59b1bf84f231",
+            "status" : "enabled",
+            "fqn" : "packages/middleware/pub/docList/addDoc"
+          },
+          "children" : [ ],
+          "type" : "invoke"
+        }, {
+          "id" : "j1_20",
+          "text" : "Transformer",
+          "li_attr" : {
+            "id" : "j1_20"
+          },
+          "a_attr" : {
+            "href" : "javascript:void(0)",
+            "id" : "j1_20_anchor"
+          },
+          "state" : {
+            "loaded" : true,
+            "opened" : false,
+            "selected" : false,
+            "disabled" : false
+          },
+          "data" : {
+            "guid" : "6252ac03-b9a3-46d7-9c55-85fbc051da8d",
+            "transformers" : [ {
+              "op" : "copy",
+              "from" : "/global_merge_vars",
+              "to" : "/template_content",
+              "inTypePath" : "documentList",
+              "outTypePath" : "documentList"
+            } ],
+            "lines" : [ {
+              "inputPath" : "global_merge_vars",
+              "outputPath" : "template_content",
+              "inpJsTree" : "#launching_arrow_jsTree",
+              "outpJsTree" : "#landing_arrow_jsTree",
+              "INPath" : "global_merge_vars",
+              "OUTPath" : "template_content",
+              "op" : "copy",
+              "line" : 0,
+              "dashedLine" : false,
+              "inType" : "documentList",
+              "outType" : "documentList",
+              "inTypePath" : "documentList",
+              "outTypePath" : "documentList"
+            } ],
+            "dropList" : [ {
+              "path" : "*payload",
+              "typePath" : "document"
+            } ],
+            "createList" : [ ]
+          },
+          "children" : [ ],
+          "type" : "transformer"
+        }, {
+          "id" : "j1_3",
+          "text" : "Invoke",
+          "li_attr" : {
+            "id" : "j1_3"
+          },
+          "a_attr" : {
+            "href" : "javascript:void(0)",
+            "id" : "j1_3_anchor"
+          },
+          "state" : {
+            "loaded" : true,
+            "opened" : false,
+            "selected" : false,
+            "disabled" : false
+          },
+          "data" : {
+            "transformers" : [ {
+              "op" : "copy",
+              "from" : "/templateName",
+              "to" : "/*payload/template_name",
+              "inTypePath" : "string",
+              "outTypePath" : "document/string",
+              "direction" : "in"
+            }, {
+              "op" : "copy",
+              "from" : "/subject_info/content",
+              "to" : "/*payload/message/subject",
+              "inTypePath" : "document/string",
+              "outTypePath" : "document/document/string",
+              "direction" : "in"
+            }, {
+              "op" : "copy",
+              "from" : "/to_list",
+              "to" : "/*payload/message/to",
+              "inTypePath" : "documentList",
+              "outTypePath" : "document/document/documentList",
+              "direction" : "in"
+            }, {
+              "op" : "copy",
+              "from" : "/fromEmail",
+              "to" : "/*payload/message/from_email",
+              "inTypePath" : "string",
+              "outTypePath" : "document/document/string",
+              "direction" : "in"
+            }, {
+              "op" : "copy",
+              "from" : "/fromName",
+              "to" : "/*payload/message/from_name",
+              "inTypePath" : "string",
+              "outTypePath" : "document/document/string",
+              "direction" : "in"
+            }, {
+              "op" : "copy",
+              "from" : "/respPayload",
+              "to" : "/respPayload",
+              "inTypePath" : "string",
+              "outTypePath" : "string",
+              "direction" : "out"
+            }, {
+              "op" : "copy",
+              "from" : "/key",
+              "to" : "/*payload/key",
+              "inTypePath" : "string",
+              "outTypePath" : "document/string",
+              "direction" : "in"
+            }, {
+              "op" : "copy",
+              "from" : "/global_merge_vars",
+              "to" : "/*payload/message/global_merge_vars",
+              "inTypePath" : "documentList",
+              "outTypePath" : "document/document/documentList",
+              "direction" : "in"
+            }, {
+              "op" : "copy",
+              "from" : "/*payload",
+              "to" : "/*payload",
+              "inTypePath" : "document",
+              "outTypePath" : "document",
+              "direction" : "out"
+            }, {
+              "op" : "copy",
+              "from" : "/template_content",
+              "to" : "/*payload/template_content",
+              "inTypePath" : "documentList",
+              "outTypePath" : "document/documentList",
+              "direction" : "in"
+            } ],
+            "lines" : [ {
+              "inputPath" : "templateName",
+              "outputPath" : "*payload/template_name",
+              "inpJsTree" : "#launching_arrow_jsTree",
+              "outpJsTree" : "#landing_arrow_jsTree_function",
+              "INPath" : "templateName",
+              "OUTPath" : "*payload/template_name",
+              "direction" : "in",
+              "op" : "copy",
+              "line" : 0,
+              "dashedLine" : false,
+              "inType" : "string",
+              "outType" : "string",
+              "inTypePath" : "string",
+              "outTypePath" : "document/string"
+            }, {
+              "inputPath" : "subject_info/content",
+              "outputPath" : "*payload/message/subject",
+              "inpJsTree" : "#launching_arrow_jsTree",
+              "outpJsTree" : "#landing_arrow_jsTree_function",
+              "INPath" : "subject_info/content",
+              "OUTPath" : "*payload/message/subject",
+              "direction" : "in",
+              "op" : "copy",
+              "line" : 0,
+              "dashedLine" : false,
+              "inType" : "string",
+              "outType" : "string",
+              "inTypePath" : "document/string",
+              "outTypePath" : "document/document/string"
+            }, {
+              "inputPath" : "to_list",
+              "outputPath" : "*payload/message/to",
+              "inpJsTree" : "#launching_arrow_jsTree",
+              "outpJsTree" : "#landing_arrow_jsTree_function",
+              "INPath" : "to_list",
+              "OUTPath" : "*payload/message/to",
+              "direction" : "in",
+              "op" : "copy",
+              "line" : 0,
+              "dashedLine" : false,
+              "inType" : "documentList",
+              "outType" : "documentList",
+              "inTypePath" : "documentList",
+              "outTypePath" : "document/document/documentList"
+            }, {
+              "inputPath" : "fromEmail",
+              "outputPath" : "*payload/message/from_email",
+              "inpJsTree" : "#launching_arrow_jsTree",
+              "outpJsTree" : "#landing_arrow_jsTree_function",
+              "INPath" : "fromEmail",
+              "OUTPath" : "*payload/message/from_email",
+              "direction" : "in",
+              "op" : "copy",
+              "line" : 0,
+              "dashedLine" : false,
+              "inType" : "string",
+              "outType" : "string",
+              "inTypePath" : "string",
+              "outTypePath" : "document/document/string"
+            }, {
+              "inputPath" : "fromName",
+              "outputPath" : "*payload/message/from_name",
+              "inpJsTree" : "#launching_arrow_jsTree",
+              "outpJsTree" : "#landing_arrow_jsTree_function",
+              "INPath" : "fromName",
+              "OUTPath" : "*payload/message/from_name",
+              "direction" : "in",
+              "op" : "copy",
+              "line" : 0,
+              "dashedLine" : false,
+              "inType" : "string",
+              "outType" : "string",
+              "inTypePath" : "string",
+              "outTypePath" : "document/document/string"
+            }, {
+              "inputPath" : "respPayload",
+              "outputPath" : "respPayload",
+              "inpJsTree" : "#launching_arrow_jsTree_function",
+              "outpJsTree" : "#landing_arrow_jsTree",
+              "INPath" : "respPayload",
+              "OUTPath" : "respPayload",
+              "direction" : "out",
+              "op" : "copy",
+              "line" : 0,
+              "dashedLine" : false,
+              "inType" : "string",
+              "outType" : "string",
+              "inTypePath" : "string",
+              "outTypePath" : "string"
+            }, {
+              "inputPath" : "key",
+              "outputPath" : "*payload/key",
+              "inpJsTree" : "#launching_arrow_jsTree",
+              "outpJsTree" : "#landing_arrow_jsTree_function",
+              "INPath" : "key",
+              "OUTPath" : "*payload/key",
+              "direction" : "in",
+              "op" : "copy",
+              "line" : 0,
+              "dashedLine" : false,
+              "inType" : "string",
+              "outType" : "string",
+              "inTypePath" : "string",
+              "outTypePath" : "document/string"
+            }, {
+              "inputPath" : "global_merge_vars",
+              "outputPath" : "*payload/message/global_merge_vars",
+              "inpJsTree" : "#launching_arrow_jsTree",
+              "outpJsTree" : "#landing_arrow_jsTree_function",
+              "INPath" : "global_merge_vars",
+              "OUTPath" : "*payload/message/global_merge_vars",
+              "direction" : "in",
+              "op" : "copy",
+              "line" : 0,
+              "dashedLine" : false,
+              "inType" : "documentList",
+              "outType" : "documentList",
+              "inTypePath" : "documentList",
+              "outTypePath" : "document/document/documentList"
+            }, {
+              "inputPath" : "*payload",
+              "outputPath" : "*payload",
+              "inpJsTree" : "#launching_arrow_jsTree_function",
+              "outpJsTree" : "#landing_arrow_jsTree",
+              "INPath" : "*payload",
+              "OUTPath" : "*payload",
+              "direction" : "out",
+              "op" : "copy",
+              "line" : 0,
+              "dashedLine" : false,
+              "inType" : "document",
+              "outType" : "document",
+              "inTypePath" : "document",
+              "outTypePath" : "document"
+            }, {
+              "inputPath" : "template_content",
+              "outputPath" : "*payload/template_content",
+              "inpJsTree" : "#launching_arrow_jsTree",
+              "outpJsTree" : "#landing_arrow_jsTree_function",
+              "INPath" : "template_content",
+              "OUTPath" : "*payload/template_content",
+              "direction" : "in",
+              "op" : "copy",
+              "line" : 0,
+              "dashedLine" : false,
+              "inType" : "documentList",
+              "outType" : "documentList",
+              "inTypePath" : "documentList",
+              "outTypePath" : "document/documentList"
+            } ],
+            "dropList" : [ ],
+            "createList" : [ ],
+            "serviceType" : "api",
+            "status" : "enabled",
+            "guid" : "2ef9f29c-a6fa-456f-8ff5-3680fbebc405",
+            "fqn" : "packages/Wrapper/mailchimp/mandrill/sendTemplate"
+          },
+          "children" : [ ],
+          "type" : "invoke"
+        }, {
+          "id" : "j1_16",
+          "text" : "Invoke",
+          "li_attr" : {
+            "id" : "j1_16"
+          },
+          "a_attr" : {
+            "href" : "javascript:void(0)",
+            "id" : "j1_16_anchor"
+          },
+          "state" : {
+            "loaded" : true,
+            "opened" : false,
+            "selected" : false,
+            "disabled" : false
+          },
+          "data" : {
+            "transformers" : [ {
+              "op" : "copy",
+              "from" : "/*payload/userId",
+              "to" : "/key",
+              "inTypePath" : "document/string",
+              "outTypePath" : "string",
+              "direction" : "in"
+            }, {
+              "op" : "copy",
+              "from" : "/*payload/groups/#0",
+              "to" : "/value",
+              "inTypePath" : "document/stringList",
+              "outTypePath" : "javaObject",
+              "direction" : "in"
+            } ],
+            "lines" : [ {
+              "inputPath" : "*payload/userId",
+              "outputPath" : "key",
+              "inpJsTree" : "#launching_arrow_jsTree",
+              "outpJsTree" : "#landing_arrow_jsTree_function",
+              "INPath" : "*payload/userId",
+              "OUTPath" : "key",
+              "direction" : "in",
+              "op" : "copy",
+              "line" : 0,
+              "dashedLine" : false,
+              "inType" : "string",
+              "outType" : "string",
+              "inTypePath" : "document/string",
+              "outTypePath" : "string"
+            }, {
+              "inputPath" : "*payload/groups",
+              "outputPath" : "value",
+              "inpJsTree" : "#launching_arrow_jsTree",
+              "outpJsTree" : "#landing_arrow_jsTree_function",
+              "INPath" : "*payload/groups/#0",
+              "OUTPath" : "value",
+              "direction" : "in",
+              "op" : "copy",
+              "line" : 0,
+              "dashedLine" : false,
+              "inType" : "stringList",
+              "outType" : "javaObject",
+              "inTypePath" : "document/stringList",
+              "outTypePath" : "javaObject"
+            } ],
+            "dropList" : [ {
+              "path" : "key",
+              "typePath" : "string"
+            }, {
+              "path" : "value",
+              "typePath" : "javaObject"
+            } ],
+            "createList" : [ ],
+            "serviceType" : "service",
+            "status" : "enabled",
+            "guid" : "c153fb4f-300f-4f47-8906-8b410fec3b36",
+            "fqn" : "packages/middleware/pub/service/keyLogger"
+          },
+          "children" : [ ],
+          "type" : "invoke"
+        }, {
+          "id" : "j1_17",
+          "text" : "Invoke",
+          "li_attr" : {
+            "id" : "j1_17"
+          },
+          "a_attr" : {
+            "href" : "javascript:void(0)",
+            "id" : "j1_17_anchor"
+          },
+          "state" : {
+            "loaded" : true,
+            "opened" : false,
+            "selected" : false,
+            "disabled" : false
+          },
+          "data" : {
+            "transformers" : [ {
+              "op" : "copy",
+              "from" : "/*payload/name",
+              "to" : "/key",
+              "inTypePath" : "document/string",
+              "outTypePath" : "string",
+              "direction" : "in"
+            }, {
+              "op" : "copy",
+              "from" : "/*payload/email",
+              "to" : "/value",
+              "inTypePath" : "document/string",
+              "outTypePath" : "javaObject",
+              "direction" : "in"
+            } ],
+            "lines" : [ {
+              "inputPath" : "*payload/name",
+              "outputPath" : "key",
+              "inpJsTree" : "#launching_arrow_jsTree",
+              "outpJsTree" : "#landing_arrow_jsTree_function",
+              "INPath" : "*payload/name",
+              "OUTPath" : "key",
+              "direction" : "in",
+              "op" : "copy",
+              "line" : 0,
+              "dashedLine" : false,
+              "inType" : "string",
+              "outType" : "string",
+              "inTypePath" : "document/string",
+              "outTypePath" : "string"
+            }, {
+              "inputPath" : "*payload/email",
+              "outputPath" : "value",
+              "inpJsTree" : "#launching_arrow_jsTree",
+              "outpJsTree" : "#landing_arrow_jsTree_function",
+              "INPath" : "*payload/email",
+              "OUTPath" : "value",
+              "direction" : "in",
+              "op" : "copy",
+              "line" : 0,
+              "dashedLine" : false,
+              "inType" : "string",
+              "outType" : "string",
+              "inTypePath" : "document/string",
+              "outTypePath" : "javaObject"
+            } ],
+            "dropList" : [ ],
+            "createList" : [ ],
+            "serviceType" : "service",
+            "status" : "enabled",
+            "guid" : "7cb8cd04-0d17-4479-a5ec-218db9b2d3a5",
+            "fqn" : "packages/middleware/pub/service/keyLogger"
+          },
+          "children" : [ ],
+          "type" : "invoke"
+        }, {
+          "id" : "j1_18",
+          "text" : "Invoke",
+          "li_attr" : {
+            "id" : "j1_18"
+          },
+          "a_attr" : {
+            "href" : "javascript:void(0)",
+            "id" : "j1_18_anchor"
+          },
+          "state" : {
+            "loaded" : true,
+            "opened" : false,
+            "selected" : false,
+            "disabled" : false
+          },
+          "data" : {
+            "transformers" : [ {
+              "op" : "copy",
+              "from" : "/templateName",
+              "to" : "/key",
+              "inTypePath" : "string",
+              "outTypePath" : "string",
+              "direction" : "in"
+            }, {
+              "op" : "copy",
+              "from" : "/base_path_url",
+              "to" : "/value",
+              "inTypePath" : "string",
+              "outTypePath" : "javaObject",
+              "direction" : "in"
+            } ],
+            "lines" : [ {
+              "inputPath" : "templateName",
+              "outputPath" : "key",
+              "inpJsTree" : "#launching_arrow_jsTree",
+              "outpJsTree" : "#landing_arrow_jsTree_function",
+              "INPath" : "templateName",
+              "OUTPath" : "key",
+              "direction" : "in",
+              "op" : "copy",
+              "line" : 0,
+              "dashedLine" : false,
+              "inType" : "string",
+              "outType" : "string",
+              "inTypePath" : "string",
+              "outTypePath" : "string"
+            }, {
+              "inputPath" : "base_path_url",
+              "outputPath" : "value",
+              "inpJsTree" : "#launching_arrow_jsTree",
+              "outpJsTree" : "#landing_arrow_jsTree_function",
+              "INPath" : "base_path_url",
+              "OUTPath" : "value",
+              "direction" : "in",
+              "op" : "copy",
+              "line" : 0,
+              "dashedLine" : false,
+              "inType" : "string",
+              "outType" : "string",
+              "inTypePath" : "string",
+              "outTypePath" : "javaObject"
+            } ],
+            "dropList" : [ ],
+            "createList" : [ {
+              "path" : "resp",
+              "value" : "checkResponse",
+              "typePath" : "string"
+            } ],
+            "serviceType" : "service",
+            "status" : "enabled",
+            "guid" : "07879f75-5d96-4862-81ff-2831ddfd0a7c",
+            "fqn" : "packages/middleware/pub/service/keyLogger"
+          },
+          "children" : [ ],
+          "type" : "invoke"
+        }, {
+          "id" : "j1_19",
+          "text" : "Invoke",
+          "li_attr" : {
+            "id" : "j1_19"
+          },
+          "a_attr" : {
+            "href" : "javascript:void(0)",
+            "id" : "j1_19_anchor"
+          },
+          "state" : {
+            "loaded" : true,
+            "opened" : false,
+            "selected" : false,
+            "disabled" : false
+          },
+          "data" : {
+            "transformers" : [ {
+              "op" : "copy",
+              "from" : "/resp",
+              "to" : "/key",
+              "inTypePath" : "string",
+              "outTypePath" : "string",
+              "direction" : "in"
+            }, {
+              "op" : "copy",
+              "from" : "/respPayload",
+              "to" : "/value",
+              "inTypePath" : "string",
+              "outTypePath" : "javaObject",
+              "direction" : "in"
+            } ],
+            "lines" : [ {
+              "inputPath" : "resp",
+              "outputPath" : "key",
+              "inpJsTree" : "#launching_arrow_jsTree",
+              "outpJsTree" : "#landing_arrow_jsTree_function",
+              "INPath" : "resp",
+              "OUTPath" : "key",
+              "direction" : "in",
+              "op" : "copy",
+              "line" : 0,
+              "dashedLine" : false,
+              "inType" : "string",
+              "outType" : "string",
+              "inTypePath" : "string",
+              "outTypePath" : "string"
+            }, {
+              "inputPath" : "respPayload",
+              "outputPath" : "value",
+              "inpJsTree" : "#launching_arrow_jsTree",
+              "outpJsTree" : "#landing_arrow_jsTree_function",
+              "INPath" : "respPayload",
+              "OUTPath" : "value",
+              "direction" : "in",
+              "op" : "copy",
+              "line" : 0,
+              "dashedLine" : false,
+              "inType" : "string",
+              "outType" : "string",
+              "inTypePath" : "string",
+              "outTypePath" : "javaObject"
+            } ],
+            "dropList" : [ ],
+            "createList" : [ ],
+            "serviceType" : "service",
+            "status" : "enabled",
+            "guid" : "d89504f2-3e71-49d9-a616-b72ca6aae880",
+            "fqn" : "packages/middleware/pub/service/keyLogger"
+          },
+          "children" : [ ],
+          "type" : "invoke"
+        } ],
+        "type" : "group"
+      } ],
+      "type" : "switch"
+    } ]
+  },
+  "consumers" : "",
+  "developers" : "",
+  "enableServiceDocumentValidation" : false
+}

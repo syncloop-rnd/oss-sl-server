@@ -1,0 +1,1573 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="jsonEditorApp">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Syncloop API Tester</title>
+	<base href="/"><script src="env.js"></script>
+	<script>
+		window.ENV = window.env || {};
+	</script>
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800&display=swap" rel="stylesheet">
+	<link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css" rel="stylesheet">
+	<script src="middleware/pub/server/ui/javascript/showdown.min.js"></script>
+	<link rel="stylesheet" href="middleware/pub/server/ui/css/json-iframe.css" />
+	<!-- DateTimePicker CSS -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datetimepicker/4.17.47/css/bootstrap-datetimepicker.min.css">
+<link rel="stylesheet" href="https://code.jquery.com/ui/1.12.1/themes/smoothness/jquery-ui.css">
+
+	<script src="middleware/pub/server/ui/javascript/sweetalert.min.js"></script>
+	<script src="middleware/pub/server/ui/javascript/sweetalert.init.js"></script>
+	<link rel="stylesheet" href="middleware/pub/server/ui/css/sweetalert.css" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.8.2/angular.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.29.1/moment.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datetimepicker/4.17.47/js/bootstrap-datetimepicker.min.js"></script>
+	<script type="text/javascript">
+		var SDK_EMBEDDED = false;
+	</script>
+	<style>
+		.test_nm a{
+			display: flex;
+			color: #7e7e7e;
+		}
+		.test_nm a img {
+			width: 14px;
+			margin-right: 8px;
+		}
+		.test_nm a img {
+			filter: invert(25%) sepia(15%) saturate(10%) hue-rotate(279deg) brightness(5%) contrast(1%);
+		}
+	</style>
+	<style>
+			.mb-2 {
+				margin-bottom: 10px;
+			}
+			.form-control[disabled], fieldset[disabled] .form-control{
+				background: #e2e2e2 !important;
+			}
+	</style>
+</head>
+<body ng-controller="JsonEditorController as ctrl">
+    <div class="ed_flex_container">
+		<div class="head_action">
+			<h2 id="serviceName"></h2> <div class="run_sv_buttons">
+				<a class="save save-file-name" href="javascript:void(0)">
+					<svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 18 18" fill="none">
+						<path d="M12 17V12H6V17M17 6.82843V15C17 16.1046 16.1046 17 15 17H3C1.89543 17 1 16.1046 1 15V3C1 1.89543 1.89543 1 3 1H11.1716C11.702 1 12.2107 1.21071 12.5858 1.58579L16.4142 5.41421C16.7893 5.78929 17 6.29799 17 6.82843Z" stroke="#33363F" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round"></path>
+					</svg> Save
+				</a> &nbsp;
+			<a class="saved saved-file-dropdown" href="javascript:void(0)">
+				<svg xmlns="http://www.w3.org/2000/svg" width="15" height="19" viewBox="0 0 15 19" fill="none">
+					<path d="M14.2222 16.3637V5.57579C14.2222 3.49472 12.735 1.7035 10.6703 1.29771C8.65057 0.900765 6.57165 0.900765 4.55195 1.29771C2.48719 1.7035 1 3.49472 1 5.57579V16.3637C1 17.6258 2.38599 18.4113 3.48782 17.7737L6.4977 16.0317C7.18535 15.6337 8.03687 15.6337 8.72452 16.0317L11.7344 17.7737C12.8362 18.4113 14.2222 17.6258 14.2222 16.3637Z" stroke="#363853" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/>
+					</svg> Saved Test
+			</a> &nbsp;
+
+			<a class="save refresh_btn" href="javascript:parent.openTestpopup();">
+				<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16" fill="none">
+					<path d="M1 1V4.88897M1 4.88897H4.88897M1 4.88897L3.33333 2.78243C4.57187 1.6741 6.20707 1 8 1C11.8661 1 15 4.1339 15 8C15 11.8661 11.8661 15 8 15C4.6687 15 1.88083 12.673 1.17337 9.55563" stroke="#33363F" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round"/>
+					</svg> Reload
+			</a> &nbsp;
+			<a class="run" href="javascript:runTest()">Run &nbsp;
+				<svg xmlns="http://www.w3.org/2000/svg" width="11" height="12" viewBox="0 0 11 12" fill="none">
+					<path d="M9.05549 5.00932L9.05556 5.00936C9.76229 5.43945 9.76229 6.56241 9.05556 6.99249L2.2089 11.158C2.20889 11.158 2.20888 11.158 2.20887 11.158C1.59498 11.5314 0.7 11.1058 0.7 10.1673V1.83245C0.7 0.895178 1.59537 0.46873 2.20874 0.841683C2.20876 0.841693 2.20877 0.841704 2.20879 0.841715C2.20883 0.841738 2.20887 0.84176 2.2089 0.841783L9.05549 5.00932Z" stroke="white" stroke-width="1.4"/>
+					</svg></a> &nbsp;
+			<div class="response_meta">
+				<span id="statusCode" class="test-status-icon"></span>
+				<span id="responseTime" class="test-response-time"></span>
+			</div>
+		</div>
+		<ul class="saved-dropdown-list"></ul>
+		<div class="save-file-popup">
+			<a class='cls_ps close-icon' href=''>×</a>
+			<p>Save</p>
+			<div class="form-group">
+				<label for="">Test Name</label>
+				<input type="text" class="form-control" id="testCaseName" placeholder="default file name should come here">
+			</div>
+			<a id="saveTestCase" class="save_file_button" href="javascript:saveTestCase()">Save</a>
+		</div>
+		</div>
+		<div class="test_edit_flx">
+		<div class="left_parm">
+
+			<div class="tabbable-panel">
+				<div class="tabbable-line">
+					<ul class="nav nav-tabs ">
+						<li class="active">
+							<a href="#tab_default_2" data-toggle="tab">Query Params</a>
+						</li>
+						<li>
+							<a href="#tab_default_4" data-toggle="tab">Path Parameter</a>
+						</li>
+						<li>
+							<a href="#tab_default_5" data-toggle="tab">Form Data</a>
+						</li>
+						<li>
+							<a href="#tab_default_3" data-toggle="tab">Headers</a>
+						</li>
+						<li>
+							<a href="#tab_default_1" data-toggle="tab">Payload</a>
+						</li>
+					</ul>
+					<div class="tab-content">
+						<div class="tab-pane" id="tab_default_1">
+							<div class="tabbable-line sub_tb_line">
+								<ul class="nav nav-tabs">
+									<li class="active">
+										<a href="#sub_tab_default_1" data-toggle="tab" id="formatted_Json">Formatted Json</a>
+									</li>
+									<li>
+										<a href="#sub_tab_default_2" data-toggle="tab" style="display: none;">Raw</a>
+									</li>
+									<li>
+										<a href="#sub_tab_default_3" data-toggle="tab" id="binary_view" style="display: none;">Binary</a>
+									</li>
+								</ul>
+								<div class="tab-content">
+									<div class="tab-pane active" id="sub_tab_default_1">
+										<div class="ed_sp" json-editor current-data="ctrl.schema" editor-data="ctrl.editorData"></div>
+										<div class="allow_nl hide">
+											<input type="checkbox" ng-model="ctrl.allowNull"> Allow null
+											<button ng-click="ctrl.viewFinalJSON()">View Final JSON</button>
+										</div>
+									</div>
+									<div class="tab-pane" id="sub_tab_default_2">
+										<div class="head_fields">
+											<div class="row">
+												<div class="col-md-12">
+													<textarea class="form-control js_row" id="" name="" value=""></textarea>
+												</div>
+											</div>
+										</div>
+									</div>
+
+									<div class="tab-pane" id="sub_tab_default_3">
+										<input type="file" id="fileInput" />
+									</div>
+								</div>
+							</div>
+							<div class="head_fields">
+								<div class="" id="payloads">
+									Add {}*payload in API service
+								</div>
+							</div>
+						</div>
+						<div class="tab-pane active" id="tab_default_2">
+							<div class="head_fields">
+							    <div class="" id="queryParameters">
+									Add parameters in API service
+								</div>
+							</div>
+						</div>
+						<div class="tab-pane" id="tab_default_3">
+						    <div class="head_fields">
+							    <div class="" id="requestHeaders">
+									Add {}*requestHeaders in API service
+								</div>
+							</div>
+						</div>
+						<div class="tab-pane" id="tab_default_4">
+							<div class="head_fields">
+								<div class="" id="pathParameters">
+									Add {}*pathParameters in API service
+								</div>
+							</div>
+						</div>
+						<div class="tab-pane" id="tab_default_5">
+							<div class="head_fields">
+								<div id="formData">
+									Add {}*formData in API service
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="right_response">
+		<p id="output">Click on RUN button to see the output here</p>
+		</div>
+	    </div>
+	</div>
+	<button ng-click="ctrl.viewFinalJSON()" style="display: none;" id="final_json_ngs">View Final JSON</button>
+	<!-- Template for JSON Editor -->
+	<script type="text/ng-template" id="jsonEditorTemplate">
+		<div ng-repeat="(key, value) in currentData.properties" class="json-item">
+			<div ng-if="value.type === 'object'">
+				<div class="item-header"><span class="toggle-icon" ng-click="toggleExpand(editorData[key])">{{ editorData[key]._toggle ? '-' : '+' }}</span><strong>{{key}}:</strong></div>
+				<div json-editor current-data="value" editor-data="editorData[key]"  ng-show="editorData[key]._toggle"></div>
+			</div>
+			<div ng-if="value.type === 'array'">
+				<div class="item-header">
+					<span><span class="toggle-icon" ng-click="toggleExpand(editorData[key])">{{ editorData[key]._toggle ? '-' : (editorData[key]._toggle==null ? '-' : '+' ) }}</span>
+
+						<img class="" ng-if="value.items.type === 'string' && value.items.format === 'date'" src="middleware/pub/server/ui/icons/dateArr.svg" alt="" />
+						<img class="" ng-if="value.items.type === 'string' && value.items.format != 'date'" src="middleware/pub/server/ui/icons/textArr.svg" alt="" />
+						<img class="" ng-if="value.items.type === 'number'" src="middleware/pub/server/ui/icons/numberArr.svg" alt="" />
+						<img class="" ng-if="value.items.type === 'integer'" src="middleware/pub/server/ui/icons/integerArr.svg" alt="" />
+						<img class="" ng-if="value.items.type === 'boolean'" src="middleware/pub/server/ui/icons/booleanArr.svg" alt="" />
+						<strong>{{key}}:</strong>
+					</span>
+					<button ng-click="addArrayItem(value.items, key)" class="array-item-add-button"><img src="middleware/pub/server/ui/icons/add-field.svg" alt=""></button>
+				</div>
+
+				<div class="array-item" ng-repeat="item in editorData[key] track by $index" ng-show="editorData[key]._toggle ? true : (editorData[key]._toggle==null ? true : false )">
+					<div class="item">
+						<div ng-if="value.items.type === 'object'">
+							<div class="item-header" >
+							<span><span current-data="value.items" editor-data="item" class="toggle-icon" ng-click="toggleExpand(item)">{{ item._toggle ? '-' : '+' }}</span>
+								<strong>{{key}}[{{$index}}]:</strong>
+							</span>
+								<button ng-click="removeArrayItem(key, $index)"><img src="middleware/pub/server/ui/icons/delete-filed.svg" alt=""></button>
+							</div>
+							<div json-editor current-data="value.items" editor-data="item" ng-show="item._toggle"></div>
+						</div>
+						<div ng-if="value.items.type !== 'object'" class="sub_obj">
+							<!-- Primitive array item template -->
+							<input type="{{value.items.type}}" ng-model="editorData[key][$index]" ng-if="(value.items.type === 'string' || value.items.type === 'number') && value.items.format !== 'date'">
+							<input type="text" data-class="date-picker" ng-model="editorData[key][$index]" ng-if="(value.items.type === 'string') && value.items.format === 'date'">
+							<input type="checkbox" ng-model="editorData[key][$index]" ng-if="value.items.type === 'boolean'">
+							<input type="number" ng-model="editorData[key][$index]" ng-if="value.items.type === 'integer'">
+							<button ng-click="removeArrayItem(key, $index)"><img src="middleware/pub/server/ui/icons/delete-filed.svg" alt=""></button>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div ng-if="value.type !== 'object' && value.type !== 'array'" class="lb_grid">
+				<img class="" ng-if="value.type === 'string' && value.format === 'date'" src="middleware/pub/server/ui/icons/date.svg" alt="" />
+				<img class="" ng-if="value.type === 'string' && value.format != 'date'" src="middleware/pub/server/ui/icons/text.svg" alt="" />
+				<img class="" ng-if="value.type === 'number'" src="middleware/pub/server/ui/icons/number.svg" alt="" />
+				<img class="" ng-if="value.type === 'integer'" src="middleware/pub/server/ui/icons/integer.svg" alt="" />
+				<img class="" ng-if="value.type === 'boolean'" src="middleware/pub/server/ui/icons/boolean.svg" alt="" />
+				&nbsp;
+
+				<strong> {{key}}:</strong>
+				<input type="text" ng-if="value.type === 'string' && value.format != 'date'" ng-model="editorData[key]" placeholder="{{key}}">
+				<input type="text" data-class="date-picker" ng-if="value.type === 'string' && value.format === 'date'" ng-model="editorData[key]" placeholder="{{key}}">
+				<input type="number" ng-if="value.type === 'number'" ng-model="editorData[key]" placeholder="{{key}}">
+				<input type="number" ng-if="value.type === 'integer'" ng-model="editorData[key]" placeholder="{{key}}">
+				<input type="checkbox" ng-if="value.type === 'boolean'" ng-model="editorData[key]">
+			</div>
+		</div>
+	</script>
+
+	<script src="middleware/pub/server/ui/javascript/middleware.js"></script>
+	<script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.inputmask/3.3.4/jquery.inputmask.bundle.min.js"></script>
+
+
+
+	<script type="text/javascript">
+		let inputmask_options = {
+			mask: "1-2-y",
+			placeholder: "dd-mm-yyyy",
+			separator: '-',
+			alias: "datetime",
+			inputFormat: "dd-mm-yyyy",
+			leapday: "02-29-",
+		};
+		$(document).ready(function() {
+			$(".date-picker").inputmask(inputmask_options);
+			$("input").click(function () {
+				if(!$(this).hasClass("date-picker") && $(this).data('class') == "date-picker") {
+					$(this).addClass("date-picker");
+					//$(this).inputmask(inputmask_options);
+				}
+			});
+		});
+	</script>
+    <script>
+		let finalJson = null;
+		let recentParams = JSON.parse(localStorage.getItem("json_recent_params"));
+		let recentoutput = JSON.parse(localStorage.getItem("json_recent_output"));
+		let usedTextList = [];
+		let usedTextListForFormData = [];
+
+		if (recentoutput && Object.keys(recentoutput).length > 0) {
+			$("#output").html("<pre>" + JSON.stringify(recentoutput, null, 2) + "</pre>");
+			$(".run").html('Run &nbsp;<img src="middleware/pub/server/ui/icons/play-ic.svg" alt="">');
+		}
+
+		if (!(localStorage.getItem("is_payload_missing") === 'true')) {
+			$("#payloads").hide();
+			$(".sub_tb_line").show();
+		} else {
+			$("#payloads").show();
+			$(".sub_tb_line").hide();
+		}
+
+		if (recentParams.formData && Object.keys(recentParams.formData).length > 0) {
+			$("#formData").html("");
+			recentParams.formData.map((item, index) => {
+				if (Array.isArray(item)) {
+
+					/**
+					 * For Array Form Data
+					 * */
+
+					if (item[0].text == '*filesMeta') {
+						return ;
+					}
+
+					let value = (null == item[0].value[0].text) ? "" : item[0].value[0].text;
+
+					let iconPath = getIconForType(item[0].type);
+					let inputType = (item[0].type === "javaObject" || item[0].type === "javaObjectList") ? "file" : "text";
+
+					let dateClass = "";
+					if (item[0].type == "date" || item[0].type == "dateList") {
+						dateClass = 'date-picker';
+					}
+
+					let disabledScript = '';
+					let checkedScript = 'checked';
+					if (null != item[0].status && !item[0].status) {
+						disabledScript = 'disabled="disabled"';
+						checkedScript = '';
+					}
+
+
+					let HTML = `
+							<div class="row form-data-row" data-index="${index}">
+								<div class="col-md-1 mb-2">
+									<img class="ic_spc" src="${iconPath}" alt="icon">
+								</div>
+								<div class="col-md-3 mb-2">
+									 <label class="ic_spc key-name"> ${item[0].key} </label>
+								</div>
+								<div class="col-md-6 mb-2">
+									<input type="${inputType}" class="${dateClass} form-control value-input form-data-${item[0].type}-${item[0].key}" data-type="${item[0].type}" ${disabledScript} placeholder="Value" value="${value}" />
+								</div>`;
+
+
+
+					if (item[0].type.includes("List")) {
+						if (!usedTextListForFormData.includes(item[0].key)) {
+							HTML += `
+									<div class="col-md-1 mb-2">
+										<button onclick="addMeForFormData(this, '${item[0].key}', '${item[0].type}', '')" class="array-item-add-button ad_more">
+											<img src="middleware/pub/server/ui/icons/add-field.svg" alt="">
+										</button>
+									</div><div class="col-md-1 mb-2">
+								<input type="checkbox" ${checkedScript} title="Include this field" onclick="excludeMeFromFormData(this, '${item[0].type}', '${item[0].key}')">
+							</div>`;
+							usedTextListForFormData.push(item[0].key);
+						} else {
+							HTML += `
+									<div class="col-md-1 mb-2">
+										<button onclick="deleteMe(this)" class="array-item-add-button deleteMe ad_more">
+											<img src="middleware/pub/server/ui/icons/delete-filed.svg" alt="">
+										</button>
+									</div>`;
+						}
+
+						for (let i = 1 ; i < item.length ; i++) {
+
+							disabledScript = '';
+							checkedScript = 'checked';
+							if (null != item[i].status && !item[i].status) {
+								disabledScript = 'disabled="disabled"';
+								checkedScript = '';
+							}
+
+							value = (null == item[i].value[0].text) ? "" : item[i].value[0].text;
+							HTML += `<div class="col-md-1 mb-2" style="clear: both;">
+									<img class="ic_spc" src="${iconPath}" alt="icon">
+								</div>
+								<div class="col-md-3 mb-2">
+									 <label class="ic_spc key-name"> ${item[i].key} </label>
+								</div>
+								<div class="col-md-6 mb-2">
+									<input type="${inputType}" class="${dateClass} form-control value-input form-data-${item[i].type}-${item[i].key}" data-type="${item[i].type}" ${disabledScript} placeholder="Value" value="${value}" />
+								</div>`;
+
+							HTML += `
+									<div class="col-md-1 mb-2">
+										<button onclick="deleteMe(this)" class="array-item-add-button deleteMe ad_more">
+											<img src="middleware/pub/server/ui/icons/delete-filed.svg" alt="">
+										</button>
+									</div>`;
+						}
+
+					} else {
+						HTML += `<div class="col-md-1"></div><div class="col-md-1 mb-2">
+									<input type="checkbox" ${checkedScript} title="Include this field" onclick="excludeMeFromFormData(this, '${item[0].type}', '${item[0].key}')">
+								</div>`;
+					}
+
+					HTML += `</div>`;
+
+					$("#formData").append(HTML);
+
+					/**
+					 * End Form Data Array Impl
+					 * */
+
+				} else {
+
+					if (item.text == '*filesMeta') {
+						return ;
+					}
+
+					let value = (null == item.value) ? "" : item.value;
+
+					let iconPath = getIconForType(item.type);
+					let inputType = (item.type === "javaObject" || item.type === "javaObjectList") ? "file" : "text";
+
+					let dateClass = "";
+					if (item.type == "date" || item.type == "dateList") {
+						dateClass = 'date-picker';
+					}
+
+					let disabledScript = '';
+					let checkedScript = 'checked';
+					if (null != item.status && !item.status) {
+						disabledScript = 'disabled="disabled"';
+						checkedScript = '';
+					}
+
+					let HTML = `
+        <div class="row form-data-row" data-index="${index}">
+            <div class="col-md-1 mb-2">
+                <img class="ic_spc" src="${iconPath}" alt="icon">
+            </div>
+            <div class="col-md-3 mb-2">
+                 <label class="ic_spc key-name"> ${item.text} </label>
+            </div>
+            <div class="col-md-6 mb-2">
+                <input type="${inputType}" class="${dateClass} form-control value-input form-data-${item.type}-${item.text}" data-type="${item.type}" ${disabledScript} placeholder="Value" value="${value}" />
+            </div>`;
+
+
+
+					if (item.type.includes("List")) {
+						if (!usedTextListForFormData.includes(item.text)) {
+							HTML += `
+                <div class="col-md-1 mb-2">
+                    <button onclick="addMeForFormData(this, '${item.text}', '${item.type}', '')" class="array-item-add-button ad_more">
+                        <img src="middleware/pub/server/ui/icons/add-field.svg" alt="">
+                    </button>
+                </div><div class="col-md-1 mb-2">
+            <input type="checkbox" ${checkedScript} title="Include this field" onclick="excludeMeFromFormData(this, '${item.type}', '${item.text}')">
+        </div>`;
+							usedTextListForFormData.push(item.text);
+						} else {
+							HTML += `
+                <div class="col-md-1 mb-2">
+                    <button onclick="deleteMe(this)" class="array-item-add-button deleteMe ad_more">
+                        <img src="middleware/pub/server/ui/icons/delete-filed.svg" alt="">
+                    </button>
+                </div>`;
+						}
+					} else {
+						HTML += `<div class="col-md-1"></div><div class="col-md-1 mb-2">
+            <input type="checkbox" ${checkedScript} title="Include this field" onclick="excludeMeFromFormData(this, '${item.type}', '${item.text}')">
+        </div>`;
+					}
+
+					HTML += `</div>`;
+
+					$("#formData").append(HTML);
+				}
+			});
+		} else {
+			$("#formData").html("Add {}*formData in API service");
+		}
+
+		function addMeForFormData(ref, text, type, value) {
+			let isDisabled = true;
+			let inputType = (type === "javaObject" || type === "javaObjectList") ? "file" : "text";
+
+			const checkbox = $(ref).parent().next().find("input[type='checkbox']");
+			if (checkbox.is(":checked")) {
+				isDisabled = false;
+			}
+
+			if (isDisabled) {
+				return;
+			}
+
+			let iconPath = getIconForType(type);
+			let dateClass = (type === "date" || type === "dateList") ? 'date-picker' : '';
+
+			let HTML = `
+    <div class="col-md-1 mb-2" style="clear: both">
+            <img class="ic_spc" src="${iconPath}" alt="icon">
+        </div>
+         <div class="col-md-3 mb-2">
+                <label class="ic_spc key-name"> ${text} </label>
+		  </div>
+         <div class="col-md-6 mb-2">
+                <input type="${inputType}" class="${dateClass} form-control value-input form-data-${type}-${text}" data-type="${type}" placeholder="Value" value="${value}" />
+            </div>
+        <div class="col-md-1 mb-2">
+            <button onclick="deleteMeForFormData(this)" class="array-item-add-button deleteMe ad_more">
+                <img src="middleware/pub/server/ui/icons/delete-filed.svg" alt="delete">
+            </button>
+        </div>
+`;
+
+
+			$(ref).parent().next().parent().append(HTML);
+
+			$(".date-picker").inputmask(inputmask_options);
+		}
+
+
+
+		function excludeMeFromFormData(ref, type, text) {
+			$(".form-data-" + type + '-' + text).each(function () {
+				if($(ref).is(":checked")) {
+					$(this).removeAttr('disabled');
+				} else {
+					$(this).attr('disabled', 'disabled')
+				}
+			});
+		}
+
+
+
+		function getIconForType(type) {
+			const iconBasePath = "middleware/pub/server/ui/icons/";
+			const typeToIconMap = {
+				"default": "doc.svg",
+				"document": "doc.svg",
+				"documentList": "docList.svg",
+				"string": "text.svg",
+				"stringList": "textArr.svg",
+				"javaObject": "javaObject.svg",
+				"javaObjectList": "javaObjectArr.svg",
+				"integer": "integer.svg",
+				"integerList": "integerArr.svg",
+				"number": "number.svg",
+				"numberList": "numberArr.svg",
+				"date": "date.svg",
+				"dateList": "dateArr.svg",
+				"boolean": "boolean.svg",
+				"booleanList": "booleanArr.svg",
+				"byte": "byte.svg",
+				"byteList": "byteArr.svg"
+			};
+
+			return iconBasePath + (typeToIconMap[type] || "default.svg");
+		}
+
+		$("#serviceName").html("Test " + recentParams.serviceName + " " + (null != recentParams.testName ? "[" + recentParams.testName + "]" : ""));
+
+		if (null != recentParams.queryParameters && Object.keys(recentParams.queryParameters).length > 0) {
+			$("#queryParameters").html("");
+			recentParams.queryParameters.map(k => {
+				let value = (null == k.value) ? "" : k.value;
+				let iconPath = getIconForType(k.type);  // Use dynamic icon
+				let dateClass = "";
+				if (k.type == "date" || k.type == "dateList") {
+					dateClass = 'date-picker';
+				}
+
+				let disabledScript = '';
+				let checkedScript = 'checked';
+				if (null != k.status && !k.status) {
+					disabledScript = 'disabled="disabled"';
+					checkedScript = '';
+				}
+
+				let HTML = '<div>' +
+						'<div class="col-md-1 mb-2" style="clear: both">' +
+						'<img class="ic_spc" src="' + iconPath + '" alt="">' +
+						'</div>' +
+						'<div class="col-md-3 mb-2">' +
+						'<label class="ic_spc">' + k.text + '</label>' +
+						'</div>' +
+						'<div class="col-md-6 mb-2">' +
+						'<input type="text" ' + disabledScript + ' value="' + value + '" class="' + dateClass + ' form-control queryParameters queryParameters-' + k.type + '-' + k.text + '" dataType="' + k.type + '" id="' + k.text + '" placeholder="value"> \n' +
+						'</div>';
+
+				if (k.type.includes("List")) {
+					if (!usedTextList.includes(k.text)) {
+						HTML += '<div class="col-md-1 mb-2"><button onclick="addMe(this, \'' + k.text + '\', \'' + k.type + '\', \'\')" class="array-item-add-button ad_more"><img src="middleware/pub/server/ui/icons/add-field.svg" alt=""></button></div>';
+						HTML += '<div class="col-md-1 mb-2"><input type="checkbox" ' + checkedScript + ' title="Include this field" onclick="excludeMe(this, \'' + k.text + '\', \'' + k.type + '\', \'' + value + '\')" /></div>';
+						usedTextList.push(k.text);
+					} else {
+						HTML += '<div class="col-md-1 mb-2"><button onclick="deleteMe(this)" class="array-item-add-button deleteMe"><img src="middleware/pub/server/ui/icons/delete-filed.svg" alt=""></button></div>';
+					}
+				} else {
+					HTML += '<div class="col-md-1"></div><div class="col-md-1 mb-2"><input type="checkbox" ' + checkedScript + ' title="Include this field" onclick="excludeMe(this, \'' + k.text + '\', \'' + k.type + '\', \'' + value + '\')" /></div>';
+				}
+				HTML += '</div></div>';
+
+				$("#queryParameters").append(HTML);
+			});
+		}
+
+		function excludeMe(ref, text, type, value) {
+			$(".queryParameters-" + type + '-' + text).each(function () {
+				if($(ref).is(":checked")) {
+					$(this).removeAttr('disabled');
+				} else {
+					$(this).attr('disabled', 'disabled')
+				}
+			});
+
+
+		}
+
+		function addMe(ref, text, type, value) {
+
+			let isDisabled = false;
+			$(".queryParameters-" + type + '-' + text).each(function () {
+				if ($(this).attr('disabled') == 'disabled') {
+					isDisabled = true;
+				}
+			});
+
+			if (isDisabled) {
+				return ;
+			}
+
+			let iconPath = getIconForType(type);
+			let dateClass = "";
+			if (type == "date" || type == "dateList") {
+				dateClass = 'date-picker';
+			}
+			let HTML =
+					'<div class="col-md-1 mb-2" style="clear: both">' +
+					'<img class="ic_spc" src="' + iconPath + '" alt="">' +
+					'</div>' +
+					'<div class="col-md-3 mb-2">' +
+					'<label class="ic_spc">' + text + '</label>' +
+					'</div>' +
+					'<div class="col-md-6 mb-2">' +
+					'<input type="text" value="' + value + '" class="' + dateClass + ' form-control queryParameters queryParameters-' + type + '-' + text + '" dataType="' + type + '" id="' + text + '" placeholder="value"> \n' +
+					'</div><div class="col-md-1 mb-2"><button onclick="deleteMe(this)" class="array-item-add-button ad_more"><img src="middleware/pub/server/ui/icons/delete-filed.svg" alt=""></button></div>';
+			$(ref).parent().next().parent().append(HTML);
+			$(".date-picker").inputmask(inputmask_options);
+		}
+
+		function deleteMe(ref) {
+			$(ref).parent().prev().remove();
+			$(ref).parent().prev().remove();
+			$(ref).parent().prev().remove();
+			$(ref).parent().remove();
+		}
+		function deleteMeForFormData(ref) {
+			$(ref).parent().prev().remove();
+			$(ref).parent().prev().remove();
+			$(ref).parent().prev().remove();
+			$(ref).parent().remove();
+		}
+
+
+		if (null != recentParams.requestHeaders && Object.keys(recentParams.requestHeaders).length > 0) {
+			$("#requestHeaders").html("");
+			recentParams.requestHeaders.map(k => {
+				let value = (null == k.value) ? "" : k.value;
+				let iconPath = getIconForType(k.type);  // Use dynamic icon
+				let dateClass = "";
+				if (k.type == "date" || k.type == "dateList") {
+					dateClass = 'date-picker';
+				}
+
+				let disabledScript = '';
+				let checkedScript = 'checked';
+				if (null != k.status && !k.status) {
+					disabledScript = 'disabled="disabled"';
+					checkedScript = '';
+				}
+
+				let HTML = '<div><div class="col-md-1 mb-2" style="clear: both">' +
+						'<img class="ic_spc" src="' + iconPath + '" alt="">' +
+						'</div>' + '<div class="col-md-3 mb-2">' +
+						'<label class="ic_spc">' + k.text + '</label>' +
+						'</div>' +
+						'<div class="col-md-6 mb-2">' +
+						'<input type="text" ' + disabledScript + ' value="' + value + '" class="' + dateClass + ' form-control requestHeaders requestHeaders-' + k.type + '-' + k.text + '" dataType="' + k.type + '" id="' + k.text + '" placeholder="value">' +
+						'</div>';
+
+				if (k.type && k.type.includes("List")) {
+					HTML += '<div class="col-md-1"><button onclick="addMeInHeaders(this, \'' + k.text + '\', \'' + k.type + '\', \'\')" class="array-item-add-button ad_more"><img src="middleware/pub/server/ui/icons/add-field.svg" alt=""></button></div>';
+				} else {
+					HTML += '<div class="col-md-1"></div>';
+				}
+				HTML += '<div class="col-md-1"><input type="checkbox" title="Include this field" ' + checkedScript + ' onclick="excludeMeFromHeaders(this, \'' + k.text + '\', \'' + k.type + '\', \'' + value + '\')" /></div>';
+				HTML += '</div></div>';
+
+				$("#requestHeaders").append(HTML);
+			});
+		}
+
+		if (null != recentParams.pathParameters && Object.keys(recentParams.pathParameters).length > 0) {
+			$("#pathParameters").html("");
+			recentParams.pathParameters.map(k => {
+				let value = (null == k.value) ? "" : k.value;
+				let iconPath = getIconForType(k.type);  // Use dynamic icon
+				let dateClass = "";
+				if (k.type == "date" || k.type == "dateList") {
+					dateClass = 'date-picker';
+				}
+				let HTML = '<div class="col-md-1" style="clear: both">' +
+						'<img class="ic_spc" src="' + iconPath + '" alt="">' +
+						'</div>' + '<div class="col-md-3">' +
+						'<label class="ic_spc">' + k.text + '</label>' +
+						'</div>' +
+						'<div class="col-md-6">' +
+						'<input type="text" value="' + value + '" class="' + dateClass + ' form-control pathParameters" dataType="' + k.type + '" id="' + k.text + '" placeholder="value">' +
+						'</div><div class="col-md-11" style="padding: 5px;"></div>';
+				$("#pathParameters").append(HTML);
+			});
+		}
+
+		function excludeMeFromHeaders(ref, text, type, value) {
+			$(".requestHeaders-" + type + '-' + text).each(function () {
+				if($(ref).is(":checked")) {
+					$(this).removeAttr('disabled');
+				} else {
+					$(this).attr('disabled', 'disabled')
+				}
+			});
+		}
+
+		function addMeInHeaders(ref, text, type, value) {
+
+			let isDisabled = false;
+			$(".requestHeaders-" + type + '-' + text).each(function () {
+				if ($(this).attr('disabled') == 'disabled') {
+					isDisabled = true;
+				}
+			});
+
+			if (isDisabled) {
+				return ;
+			}
+
+			let iconPath = getIconForType(type);
+			let dateClass = "";
+			if (type == "date" || type == "dateList") {
+				dateClass = 'date-picker';
+			}
+			let HTML =
+					'<div class="col-md-1 mb-2" style="clear: both">' +
+					'<img class="ic_spc" src="' + iconPath + '" alt="">' +
+					'</div>' +
+					'<div class="col-md-3 mb-2">' +
+					'<label class="ic_spc">' + text + '</label>' +
+					'</div>' +
+					'<div class="col-md-6 mb-2">' +
+					'<input type="text" value="' + value + '" class="' + dateClass + ' form-control requestHeaders requestHeaders-' + type + '-' + text + '" dataType="' + type + '" id="' + text + '" placeholder="value"> \n' +
+					'</div><div class="col-md-1"><button onclick="deleteMe(this)" class="array-item-add-button deleteMe"><img src="middleware/pub/server/ui/icons/delete-filed.svg" alt=""></button></div>';
+
+			$(ref).parent().parent().append(HTML);
+			$(".date-picker").inputmask(inputmask_options);
+		}
+
+		function runTest() {
+			$("#final_json_ngs").trigger('click');
+			var tempval = "";
+			/*var cookies = document.cookie.split(";");
+			for (var i = 0; i < cookies.length; i++) {
+				var coo = cookies[i].split("=");
+				if (coo[0].trim() == "tenant") {
+					tempval = (location.origin + "/tenant/" + coo[1].replaceAll('"', "").split(" ")[0]);
+				}
+			}*/
+			let url = tempval + "/" + recentParams.alias.replace(recentParams.alias.split("/")[0] + "/", "");
+
+			$(".pathParameters").each(function () {
+				var paramValue = $(this).val();
+				var trimmedValue = $.trim(paramValue);
+
+				if (paramValue === undefined || paramValue === "" || trimmedValue === "") {
+					swal({
+						title: "Path parameters are mandatory.",
+						text: "",
+						type: "error",
+						confirmButtonColor: "#f2533e" // red confirm button
+						});
+
+					throw new Error("Path parameter is missing or empty");
+				}
+				url = url.replaceAll("{" + $(this).attr("id") + "}" , $(this).val());
+			});
+
+			const formData = new FormData();
+			const useFormData = recentParams.formData && recentParams.formData.length > 0;
+
+			let queryString = "";
+			$(".queryParameters").each(function () {
+				if (!$(this).attr("disabled")) {
+					const paramKey = encodeURIComponent($(this).attr("id"));
+					const paramValue = encodeURIComponent($(this).val());
+					queryString += `${paramKey}=${paramValue}&`;
+				}
+			});
+
+			if (queryString.endsWith("&")) {
+				queryString = queryString.slice(0, -1);
+			}
+
+			if (queryString) {
+				url += `?${queryString}`;
+			}
+
+			let customHeaders = {};
+			customHeaders["Authorization"] = "Bearer " + localStorage.getItem("AuthToken");
+
+			$(".requestHeaders").each(function () {
+				if (!$(this).attr("disabled")) {
+					customHeaders[$(this).attr("id")] = $(this).val();
+				}
+			});
+
+			if (useFormData) {
+				$(".form-data-row").each(function () {
+					const keyName = [];
+					$(this).find(".key-name").each(function () {
+						keyName.push($(this).text().trim());
+					});
+
+					const valueInput = [];
+
+					$(this).find(".value-input").each(function() {
+						valueInput.push($(this).get(0));
+					});
+
+					const checkbox = $(this).find("input[type='checkbox']");
+
+					for (let i = 0 ; i < keyName.length ; i++) {
+
+						if ((checkbox.is(":checked") || $(this).is("[data-formdata-row='true']")) && keyName[i] && valueInput[i]) {
+							if (valueInput[i].type === "file") {
+								const files = valueInput[i].files;
+								for (let j = 0; j < files.length; j++) {
+									formData.append(keyName[i], files[j]);
+								}
+							} else {
+								const value = valueInput[i].value;
+								formData.append(keyName[i], value);
+							}
+						}
+					}
+				});
+			}
+
+			$(".run").html('Running');
+			if ($("#binary_view").is(":visible")) {
+
+				recentParams.formData = false;
+
+				const fileInput = $("#fileInput").get(0);
+
+				if (fileInput.files.length > 0) {
+					const file = fileInput.files[0];
+					const reader = new FileReader();
+					reader.onload = function(e) {
+						const binaryData = e.target.result;
+
+						sendRequest({
+							url,
+							method: recentParams.alias.split("/")[0],
+							data: binaryData,
+							headers: customHeaders,
+							contentType: file.type,
+							processData: false,
+						});
+					};
+
+					reader.readAsArrayBuffer(file);
+				}
+			} else {
+				let parsedJson;
+				try {
+					parsedJson = JSON.parse(finalJson);
+				} catch (error) {
+					console.error("Error parsing JSON:", error);
+				}
+
+				const dataToSend = useFormData
+						? formData
+						: parsedJson && parsedJson["*payload"]
+								? JSON.stringify(parsedJson["*payload"])
+								: "";
+				const processData = !useFormData;
+				const contentType = useFormData ? false : "application/json";
+
+				sendRequest({
+					url,
+					method: recentParams.alias.split("/")[0],
+					data: dataToSend,
+					headers: customHeaders,
+					contentType: contentType,
+					processData: processData,
+				});
+			}
+
+			function sendRequest({ url, method, data, headers, contentType, processData }) {
+				var startTime;
+				$.ajax({
+					type: method,
+					url: window.ENV.API_BASE_URL + "/tenant/" + localStorage.getItem("tenant") + url,
+					data: data,
+					processData: processData,
+					contentType: contentType,
+					headers: headers,
+					beforeSend: function(){
+						 startTime = performance.now();
+					},
+					success: function (response) {
+						const endTime = performance.now();
+						const responseTime = (endTime - startTime).toFixed(2);
+
+						$(".run").html('Run &nbsp;<img src="middleware/pub/server/ui/icons/play-ic.svg" alt="">');
+						$("#output").html("<pre>" + JSON.stringify(response, null, 2) + "</pre>");
+						updateResponseMeta(200, responseTime);
+					},
+					error: function (e) {
+						const endTime = performance.now();
+						const responseTime = (endTime - startTime).toFixed(2);
+
+						$(".run").html('Run &nbsp;<img src="middleware/pub/server/ui/icons/play-ic.svg" alt="">');
+						// if (e.status >= 400 && e.status <= 599) {
+						// 	const errorMessage = `Error ${e.status}: ${e.statusText || "An error occurred"}`;
+						// 	$("#output").html(`<pre>${errorMessage}</pre>`);
+						// } else {
+							try {
+								const parsedResponse = JSON.parse(e.responseText);
+								$("#output").html("<pre>" + JSON.stringify(parsedResponse, null, 2) + "</pre>");
+							} catch (error) {
+								const errorMessage = `${e.statusText || "An error occurred."}`;
+								$("#output").html(`<pre>${errorMessage}</pre>`);
+							}
+						// }
+						updateResponseMeta(e.status || "Error", responseTime);
+					},
+				});
+			}
+
+			function updateResponseMeta(status, responseTime) {
+				const statusElement = $("#statusCode");
+				const timeElement = $("#responseTime");
+				let isSecond = false;
+
+				if(responseTime > 1000){
+					responseTime = (responseTime/1000).toFixed(2);
+					isSecond = true;
+				}
+
+
+				statusElement.text(status);
+				if(isSecond){
+					timeElement.text(`Response Time: ${responseTime} s`);
+
+				}else
+					timeElement.text(`Response Time: ${responseTime} ms`);
+
+				if (status >= 200 && status < 300) { //Todo - add css
+					statusElement.attr("class", "status_sucess");
+				} else if (status >= 400) {
+					statusElement.attr("class", "status_failed");
+				} else {
+					statusElement.attr("class", "status_failed");
+				}
+			}
+		}
+
+		function loadListAndRunAllTests() {
+			$("#output").html("Tests Loading...");
+
+			let isSelected = $(".chk_sty:checked").length;
+
+			if (isSelected > 0) {
+				let testCases = [];
+				let requests = [];
+				$(".chk_sty:checked").each(function () {
+					let testName = $(this).data('value').replace(".json", "");
+
+					requests.push($.ajax({
+						type: "GET",
+						url: window.ENV.API_BASE_URL + "/tenant/" + localStorage.getItem("tenant") +"/middleware/test_cases/" + recentParams.fqn + "/" + testName,
+						headers: { "Authorization": `Bearer ${localStorage.getItem("AuthToken")}` },
+						dataType: 'json'
+					}).then(testCaseResponse => {
+						let payload = testCaseResponse.schema_json["*payload"] || {};
+
+						testCases.push({
+							testName: testName,
+							alias: recentParams.alias,
+							payload: payload || {},
+							expectedOutput: testCaseResponse.output,
+							requestHeaders: testCaseResponse.requestHeaders || {},
+							queryParameters: testCaseResponse.queryParameters || [],
+							pathParameters: testCaseResponse.pathParameters || {}
+						});
+					}))
+				});
+				// Wait for all test cases to be loaded before running
+				$.when.apply($, requests).then(() => {
+					runAllTest(testCases);
+				});
+			} else {
+				$.ajax({
+					type: "GET",
+					url: window.ENV.API_BASE_URL + "/tenant/" + localStorage.getItem("tenant") + "/middleware/test_cases/" + recentParams.fqn + "/list",
+					headers: { "Authorization": `Bearer ${localStorage.getItem("AuthToken")}` },
+					success: function (response) {
+						let testCases = [];
+						let requests = response.fileDispose.map(file => {
+							let testName = file.name.replace(".json", "");
+
+							return $.ajax({
+								type: "GET",
+								url: window.ENV.API_BASE_URL + "/tenant/" + localStorage.getItem("tenant") + "/middleware/test_cases/" + recentParams.fqn + "/" + testName,
+								headers: { "Authorization": `Bearer ${localStorage.getItem("AuthToken")}` },
+								dataType: 'json'
+							}).then(testCaseResponse => {
+								let payload = testCaseResponse.schema_json["*payload"] || {};
+
+								testCases.push({
+									testName: testName,
+									alias: recentParams.alias,
+									payload: payload || {},
+									expectedOutput: testCaseResponse.output,
+									requestHeaders: testCaseResponse.requestHeaders || {},
+									queryParameters: testCaseResponse.queryParameters || [],
+									pathParameters: testCaseResponse.pathParameters || {}
+								});
+							});
+						});
+
+						// Wait for all test cases to be loaded before running
+						$.when.apply($, requests).then(() => {
+							runAllTest(testCases);
+						});
+					}
+				});
+			}
+		}
+
+		function runAllTest(testCases) {
+			$("#output").html("");
+
+			function runSingleTest(testCase) {
+				var tempval = localStorage.getItem("tenant");
+				/*var cookies = document.cookie.split(";");
+				for (var i = 0; i < cookies.length; i++) {
+					var coo = cookies[i].split("=");
+					if (coo[0].trim() === "tenant") {
+						tempval = (location.origin + "/tenant/" + coo[1].replaceAll('"', "").split(" ")[0]);
+					}
+				}*/
+
+				let url = window.ENV.API_BASE_URL + "/tenant/" + localStorage.getItem("tenant") + tempval + "/" + testCase.alias.replace(testCase.alias.split("/")[0] + "/", "");
+
+				if (testCase.pathParameters && Array.isArray(testCase.pathParameters)) {
+					testCase.pathParameters.forEach(param => {
+						if (param.text && param.value) {
+							let placeholder = `{${param.text}}`;
+							if (url.includes(placeholder)) {
+								url = url.replace(placeholder, param.value);
+							}
+						}
+					});
+				}
+
+				let queryParams = [];
+				testCase.queryParameters.forEach(param => {
+					queryParams.push(`${encodeURIComponent(param.text)}=${encodeURIComponent(param.value)}`);
+				});
+
+				url = url + (queryParams.length > 0 ? "?" + queryParams.join("&") + "&" : "");
+				let customHeaders = testCase.requestHeaders.reduce((headersObj, header) => {
+					headersObj[header.text] = header.value;
+					return headersObj;
+				}, {});
+				customHeaders["Authorization"] = "Bearer " + localStorage.getItem("AuthToken");
+
+				let data;
+				if (testCase.formData) {
+					data = new FormData();
+					for (const key in testCase.payload) {
+						if (testCase.payload.hasOwnProperty(key)) {
+							data.append(key, testCase.payload[key]);
+						}
+					}
+					delete customHeaders['Content-Type'];
+				} else {
+					data = JSON.stringify(testCase.payload);
+					if (data === '{}' || data === '{}\n') {
+						data = undefined;
+					}
+				}
+
+				$.ajax({
+					type: testCase.alias.split("/")[0],
+					url: url,
+					data: data,
+					contentType: testCase.formData ? false : 'application/json',
+					processData: testCase.formData ? false : true,
+					dataType: "json",
+					headers: customHeaders,
+					success: function (response) {
+					let result = JSON.stringify(response, null, 2) === JSON.stringify(testCase.expectedOutput, null, 2) ? 'Passed' : 'Failed';
+					let iconUrl = result === 'Passed' ? '/middleware/pub/server/ui/icons/test-pass.svg' : '/middleware/pub/server/ui/icons/test-failed.svg';
+
+					$("#output").append("<div>Testcase - " + testCase.testName + " : " + result + " <img src='" + iconUrl + "' alt='" + result + " icon' style='width:16px; height:16px; vertical-align:middle;'></div>");
+
+					if (result === 'Failed') {
+						$("#output").append("<div>Expected Output: <pre>" + JSON.stringify(testCase.expectedOutput, null, 2) + "</pre></div>");
+						$("#output").append("<div>Actual Output: <pre>" + JSON.stringify(response, null, 2) + "</pre></div>");
+					}
+					$("#output").append("___________________________________________");
+					$(".run").html('Run &nbsp;<img src="middleware/pub/server/ui/icons/play-ic.svg" alt="">');
+				},
+
+					error: function (e) {
+						/*console.log("Request URL:", url);
+						console.log("Request Payload:", JSON.stringify(testCase.payload, null, 2));
+						console.log("Request Headers:", JSON.stringify(customHeaders, null, 2));
+						console.error("Error occurred:", e);
+						console.log("Status:", e.status);
+						console.log("Status Text:", e.statusText);
+						console.log("Response Text:", e.responseText);*/
+
+						$("#output").append("<div class='api_status'>Testcase - " + testCase.testName + " : Failed <img src='/middleware/pub/server/ui/icons/test-failed.svg' alt=''></div>");
+						$("#output").append("<div>Expected Output: <pre>" + JSON.stringify(testCase.expectedOutput, null, 2) + "</pre></div>");
+						try {
+							let actualOutput = e.responseText ? JSON.parse(e.responseText) : "No response text";
+							$("#output").append("<div>Actual Output: <pre>" + JSON.stringify(actualOutput, null, 2) + "</pre></div>");
+						} catch (parseError) {
+							//console.error("Failed to parse error response:", e.responseText);
+							$("#output").append("<div>Actual Output: <pre>" + e.responseText + "</pre></div>");
+						}
+						$("#output").append("___________________________________________");
+						$(".run").html('Run &nbsp;<img src="middleware/pub/server/ui/icons/play-ic.svg" alt="">');
+					}
+				});
+			}
+			testCases.forEach(runSingleTest);
+		}
+
+		function saveTestCase() {
+			var $saveTestButton = $("#saveTestCase");
+			$saveTestButton.html('<div class="spinner"></div>');
+
+			let pathParameters = [];
+			let queryParameters = [];
+			let requestHeaders = [];
+			$(".pathParameters").each(function () {
+				pathParameters.push({text: $(this).attr("id"), value: $(this).val(), type: $(this).attr("dataType")});
+			});
+
+			$(".queryParameters").each(function () {
+				queryParameters.push({text: $(this).attr("id"), value: $(this).val(), type: $(this).attr("dataType"), status: $(this).attr("disabled") != 'disabled'});
+			});
+
+			$(".requestHeaders").each(function () {
+				requestHeaders.push({text: $(this).attr("id"), value: $(this).val(), type: $(this).attr("dataType"), status: $(this).attr("disabled") != 'disabled'});
+			});
+
+			$("#final_json_ngs").trigger('click');
+
+			let outputText = $("#output").text();
+			let output;
+
+			try {
+				output = JSON.parse(outputText);
+			} catch (e) {
+				output = JSON.stringify({});
+			}
+
+			let formDataArray = [];
+			if (recentParams.formData) {
+				$(".form-data-row").each(function () {
+					const keyName = [];
+					$(this).find(".key-name").each(function () {
+						keyName.push($(this).text().trim());
+					});
+					const valueInput = [];
+					const statues = [];
+					const type = [] ;
+					$(this).find(".value-input").each(function() {
+						valueInput.push($(this).get(0));
+						type.push($(this).attr('data-type'));
+						statues.push($(this).attr("disabled") != 'disabled');
+					});
+
+					let formRow = [];
+
+					for (let j = 0 ; j < keyName.length ; j++) {
+						if (keyName[j] && valueInput[j]) {
+							if (valueInput[j].type === "javaObject") {
+								const files = valueInput[j].files;
+								let fileValues = [];
+								for (let i = 0; i < files.length; i++) {
+									fileValues.push({ text: files[i].name });
+								}
+								formRow.push({
+									key: keyName[j],
+									value: fileValues,
+									type: type[j],
+									status: statues[j]
+								});
+							} else {
+								const value = valueInput[j].value;
+								formRow.push({
+									key: keyName[j],
+									value: [{ text: value }],
+									type: type[j],
+									status: statues[j]
+								});
+							}
+						}
+					}
+
+					formDataArray.push(formRow);
+				});
+			}
+
+
+
+			let request = {
+				schema: safeParse(localStorage.getItem("json_recent_schema")),
+				schema_json: safeParse(finalJson),
+				pathParameters: pathParameters || {},
+				queryParameters: queryParameters || {},
+				requestHeaders: requestHeaders || {},
+				formData: Array.isArray(formDataArray) ? formDataArray : [],
+				output: output || null
+			};
+
+			let testCaseName = $("#testCaseName").val().trim();
+			if (!testCaseName) {
+				swal({
+					title: "Error!",
+					text: "Test case name cannot be empty!",
+					type: "error",
+					confirmButtonColor: "#f2533e"
+					});
+
+				return;
+			}
+
+			$.ajax({
+				type: "POST",
+				url: window.ENV.API_BASE_URL + "/tenant/" + localStorage.getItem("tenant") + "/packages.middleware.pub.server.build.api.saveTest.main?fqn=" + recentParams.fqn + "&caseName=" + testCaseName,
+				headers: { "Authorization": `Bearer ${localStorage.getItem("AuthToken")}` },
+				data: JSON.stringify(request),
+				contentType: 'application/json',
+				processData: true,
+				dataType: "json",
+				success: function (response) {
+					$("#testCaseName").val("");
+					swal({
+						title: "Saved!",
+						text: "Your case has been saved!",
+						type: "success",
+						confirmButtonColor: "#2C61F5"
+						});
+
+					loadList();
+					$('.save-file-popup').removeClass('active');
+					$('.saved-dropdown-list').removeClass('active');
+					$saveTestButton.text('Save');
+				},
+				error: function (e) {
+					swal({
+						title: "Error!",
+						text: "Try later!",
+						type: "error",
+						confirmButtonColor: "#f2533e"
+						});
+
+				}
+			});
+		}
+
+		function safeParse(jsonString) {
+			try {
+				return JSON.parse(jsonString) || {};
+			} catch (e) {
+				console.error("Error parsing JSON:", e);
+				return {};
+			}
+		}
+
+		function loadList() {
+
+			let HTML_top = "<li>" +
+					"<div class=\"srch_dlt\"><div class=\"ui left icon input srch_itm\"><i class=\"search_icon2\"></i>" +
+					"<input type=\"text\" name=\"search\" id=\"test-search\" placeholder=\"Search...\"></div><div class=\"delete_nm\" style=\"display: none;\">" +
+					"<a href=\"javascript:void(0)\"><img src=\"middleware/pub/server/ui/icons/snap-delete.svg\"> Delete 0 item(s)</a></div>" +
+					"<div class=\"test_nm\" style=\"display: none;\">" +
+					"</div><a class='test_pl' href=\"javascript:loadListAndRunAllTests()\"><img src=\"middleware/pub/server/ui/icons/test_play_icon.svg\"></a><div class=\"snap-group\"><input type=\"checkbox\" id=\"delete_service\"><label for=\"delete_service\">Select service(s)</label></div></div></li>";
+
+			$(".saved-dropdown-list").html(HTML_top);
+
+			$.ajax({
+				type: "GET",
+				url : window.ENV.API_BASE_URL + "/tenant/" + localStorage.getItem("tenant") + "/middleware/test_cases/" + recentParams.fqn + "/list",
+				headers: { "Authorization": `Bearer ${localStorage.getItem("AuthToken")}` },
+				success: function (response) {
+					let HTML = "";
+
+					for (let i = 0 ; i < response.fileDispose.length ; i++) {
+						HTML += "<li class=\"saved-dropdown-list-item\">" +
+								"<div class=\"snap-group-all\">" + "<span class=\"chk_sh\" data-value='" + (response.fileDispose[i].name) + "' data-time='" + response.fileDispose[i].time + "' style=\"display: none;\">" +
+								"<input class=\"chk_sty deleting_item\" data-value='" + (response.fileDispose[i].name) + "' data-time='" + response.fileDispose[i].time + "' type=\"checkbox\" id=\"delete_file" + (i + 1) + "\">" +
+								"<label for=\"delete_file" + (i + 1) + "\"></label>" + "</span>" +
+								"<span class=\"description test_case_sel\" data-value='" + (response.fileDispose[i].name) + "' data-time='" + response.fileDispose[i].time + "' >" + response.fileDispose[i].name.replace(".json", "") + "</span>" +
+								"</div>" + "<span class=\"time test_case_sel\" data-value='" + (response.fileDispose[i].name) + "' data-time='" + response.fileDispose[i].time + "' >" + response.fileDispose[i].time + "</span></li>";
+					}
+
+					$(".saved-dropdown-list").append(HTML);
+
+					$("#test-search").keyup(function(){
+						let keyVal = this;
+						$(".chk_sty").each(function () {
+							if ($(keyVal).val().length <= 0) {
+								$(this).parent().parent().parent().show();
+							} else {
+								if ($(this).attr("data-value").includes($(keyVal).val())) {
+									$(this).parent().parent().parent().show();
+								} else {
+									$(this).parent().parent().parent().hide();
+								}
+							}
+						});
+					});
+
+					$('.test_case_sel').on('click', function(){
+						let testName = $(this).data('value').replace(".json", "");
+						$.ajax({
+							type: "GET",
+							url: window.ENV.API_BASE_URL + "/tenant/" + localStorage.getItem("tenant") + "/middleware/test_cases/" + recentParams.fqn + "/" + testName,
+							headers: { "Authorization": `Bearer ${localStorage.getItem("AuthToken")}` },
+							dataType: 'json',
+							success: function (response) {
+								console.log(JSON.stringify(response));
+								const formData = (response.formData || [])
+
+								localStorage.setItem("json_recent_params", JSON.stringify({
+									"requestHeaders": (null == response.requestHeaders) ? {} : response.requestHeaders,
+									"queryParameters": (null == response.queryParameters) ? {} : response.queryParameters,
+									"pathParameters": (null == response.pathParameters) ? {} : response.pathParameters,
+									"formData": formData,
+									"alias": recentParams.alias,
+									"serviceName": recentParams.serviceName,
+									"fqn": recentParams.fqn,
+									"testName": testName,
+									"output":response.output
+								}));
+
+								localStorage.setItem("json_recent_schema", JSON.stringify(response.schema));
+								localStorage.setItem("json_recent_schema_json", JSON.stringify(response.schema_json));
+								localStorage.setItem("json_recent_output", JSON.stringify(response.output));
+								location.reload();
+
+							}
+						});
+					});
+
+					$("#delete_service").click(function () {
+						if ($(this).is(":checked")) {
+							$(".chk_sh").show();
+							$("#AddPassport").hide();
+							$(".delete_nm").show();
+							$(".test_nm").show();
+							$(".srch_itm").hide();
+						} else {
+							$(".chk_sh").hide();
+							$("#AddPassport").show();
+							$(".delete_nm").hide();
+							$(".test_nm").hide();
+							$(".srch_itm").show();
+							$(".deleting_item").prop('checked', false);
+
+							$(".test_nm").html('');
+							$(".delete_nm a").css({"color": "#7e7e7e"});
+							$(".test_nm a").css({"color": "#7e7e7e"});
+							$(".delete_nm a img").css({"filter": "invert(25%) sepia(15%) saturate(10%) hue-rotate(279deg) brightness(5%) contrast(1%)"});
+							$(".test_nm a img").css({"filter": "invert(25%) sepia(15%) saturate(10%) hue-rotate(279deg) brightness(5%) contrast(1%)"});
+						}
+					});
+
+					$(".chk_sty").click(function () {
+						$(".delete_nm").html('<a href="javascript:deleteTestCases()"><img src="middleware/pub/server/ui/icons/snap-delete.svg"> Delete ' + $(".chk_sty:checked").length + ' item(s)</a>');
+						if ($(".chk_sty:checked").length > 0) {
+							$(".test_nm").html('<a href="javascript:loadListAndRunAllTests()"><img src="middleware/pub/server/ui/icons/testapi.svg"> Test ' + $(".chk_sty:checked").length + ' item(s)</a>');
+							$(".delete_nm a").css({"color": "#2C61F5"});
+							$(".test_nm a").css({"color": "#2c61f5"});
+							$(".delete_nm a img").css({"filter": "invert(27%) sepia(51%) saturate(2878%) hue-rotate(195deg) brightness(90%) contrast(100%)"});
+							$(".test_nm a img").css({"filter": "invert(27%) sepia(51%) saturate(2878%) hue-rotate(195deg) brightness(90%) contrast(100%)"});
+						} else {
+							$(".test_nm").html('');
+							$(".delete_nm a").css({"color": "#7e7e7e"});
+							$(".test_nm a").css({"color": "#7e7e7e"});
+							$(".delete_nm a img").css({"filter": "invert(25%) sepia(15%) saturate(10%) hue-rotate(279deg) brightness(5%) contrast(1%)"});
+							$(".test_nm a img").css({"filter": "invert(25%) sepia(15%) saturate(10%) hue-rotate(279deg) brightness(5%) contrast(1%)"});
+						}
+					});
+
+				},
+				error: function (e) {
+				}
+			});
+		}
+
+		function deleteTestCases() {
+			let test = [];
+			$(".chk_sty:checked").each(function () {
+				test.push($(this).data('value'));
+			});
+
+			let HTML = $(".delete_nm").html();
+			$(".delete_nm").html("Deleting...");
+			asyncRestRequest("/DeleteTestCase", JSON.stringify({
+				"fqn": recentParams.fqn,
+				"test": test
+			}), "POST", function (response) {
+				if (response.status) {
+					swal({
+						title: "Deleted",
+						text: "Your test case(s) deleted successfully",
+						type: "success",
+						confirmButtonColor: "#2C61F5"
+						});
+
+					$(".delete_nm").html('<a href="javascript:deleteTestCases()"><img src="middleware/pub/server/ui/icons/snap-delete.svg"> Delete 0 item(s)</a>');
+					$(".delete_nm a").css({"color": "#7e7e7e"});
+					$(".delete_nm a img").css({"filter": "invert(25%) sepia(15%) saturate(10%) hue-rotate(279deg) brightness(5%) contrast(1%)"});
+					loadList();
+
+					$(".chk_sty:checked").each(function () {
+						console.log($(this).parent().parent().parent().remove());
+					});
+
+				} else {
+					swal({
+					title: "Error",
+					text: "Try later",
+					type: "error",
+					confirmButtonColor: "#f2533e"
+					});
+
+					$(".delete_nm").html(HTML);
+				}
+
+			});
+		}
+
+		loadList();
+
+		$('.saved-file-dropdown').on('click', function(){
+			$('.saved-dropdown-list').toggleClass('active');
+			$('.save-file-popup').removeClass('active');
+		});
+
+		$('.saved-dropdown-list .close-icon').on('click', function() {
+			$('.saved-dropdown-list').removeClass('active');
+		});
+
+		$('.save-file-name').on('click', function(){
+			$('.save-file-popup').toggleClass('active');
+			$('.saved-dropdown-list').removeClass('active');
+		});
+
+		$('.save-file-popup .close-icon').on('click', function() {
+			$('.save-file-popup').removeClass('active');
+		});
+
+
+
+		angular.module('jsonEditorApp', [])
+				.directive('jsonEditor', function() {
+					return {
+						restrict: 'A',
+						scope: {
+							currentData: '=',
+							editorData: '='
+						},
+						templateUrl: 'jsonEditorTemplate',
+						link: function(scope, element, attrs, ctrl) {
+							scope.addArrayItem = function(itemSchema, key) {
+								let newItem;
+								if (itemSchema.type === 'object') {
+									newItem = ctrl.populateEditorData(itemSchema);
+									newItem._toggle = true;
+								} else {
+									// Initialize default values for primitive types
+									newItem = itemSchema.type === 'number' ? 0 :
+											itemSchema.type === 'boolean' ? false : '';
+								}
+								scope.editorData[key].push(newItem);
+								setTimeout(function () {
+									$(".date-picker").inputmask(inputmask_options);
+								}, 300);
+							};
+
+							scope.removeArrayItem = function(key, index) {
+								scope.editorData[key].splice(index, 1);
+							};
+
+							scope.toggleExpand = function(item) {
+								if(item._toggle==null)
+									item._toggle=true;
+								item._toggle = !item._toggle;
+							};
+						},
+						controller: 'JsonEditorController'
+					};
+				})
+				.controller('JsonEditorController', ['$scope', function($scope) {
+					var ctrl = this;
+
+					ctrl.schema = JSON.parse(localStorage.getItem("json_recent_schema"));
+					ctrl.editorData = JSON.parse(localStorage.getItem("json_recent_schema_json"));
+
+					ctrl.populateEditorData = function(schema, existingData = {}) {
+						let data = {};
+						for (let key in schema.properties) {
+							if (existingData[key] !== undefined) {
+								data[key] = existingData[key];
+								data[key]["_toggle"] = true;
+							} else if (schema.properties[key].type === 'javaObject') {
+								$("#formatted_Json").hide();
+								$("#binary_view").show();
+								$("#binary_view").trigger('click');
+							} else if (schema.properties[key].type === 'object') {
+								data[key] = ctrl.populateEditorData(schema.properties[key]);
+								data[key]["_toggle"] = true;
+							} else if (schema.properties[key].type === 'array') {
+								data[key] = [];
+								data[key]["_toggle"] = true;
+							} else {
+								data[key] = '';
+							}
+						}
+						return data;
+					};
+
+					ctrl.viewFinalJSON = function() {
+						let finalJSON = JSON.parse(JSON.stringify(ctrl.editorData));
+						if (ctrl.allowNull) {
+							(function pruneEmpty(obj) {
+								Object.keys(obj).forEach(key => {
+									if (obj[key] && typeof obj[key] === 'object') {
+										pruneEmpty(obj[key]);
+									} else if (obj[key] === "") {
+										delete obj[key];
+									}
+								});
+							})(finalJSON);
+						}
+						finalJson = JSON.stringify(finalJSON, null, 4);
+						return JSON.stringify(finalJSON, null, 4);
+					};
+					ctrl.editorData = Object.assign({}, ctrl.editorData, ctrl.populateEditorData(ctrl.schema, ctrl.editorData));
+				}]);
+    </script>
+</body>
+</html>

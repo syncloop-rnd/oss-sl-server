@@ -1,0 +1,125 @@
+{
+  "input" : [ {
+    "id" : "j1_1",
+    "text" : "agentID",
+    "li_attr" : {
+      "id" : "j1_1"
+    },
+    "a_attr" : {
+      "href" : "#",
+      "id" : "j1_1_anchor"
+    },
+    "state" : {
+      "loaded" : true,
+      "opened" : false,
+      "selected" : false,
+      "disabled" : false,
+      "hidden" : false
+    },
+    "data" : {
+      "guid" : "3b624449-45a9-40de-99fd-287c59914041",
+      "columnType" : "-1"
+    },
+    "children" : [ ],
+    "type" : "string"
+  }, {
+    "id" : "j1_2",
+    "text" : "chatID",
+    "li_attr" : {
+      "id" : "j1_2"
+    },
+    "a_attr" : {
+      "href" : "#",
+      "id" : "j1_2_anchor"
+    },
+    "state" : {
+      "loaded" : true,
+      "opened" : false,
+      "selected" : false,
+      "disabled" : false,
+      "hidden" : false
+    },
+    "data" : {
+      "guid" : "2ea752b0-0771-4906-842d-5bcb375342bb",
+      "columnType" : "-1"
+    },
+    "children" : [ ],
+    "type" : "string"
+  } ],
+  "output" : [ {
+    "id" : "j2_1",
+    "text" : "chatHistory",
+    "li_attr" : {
+      "id" : "j2_1"
+    },
+    "a_attr" : {
+      "href" : "#",
+      "id" : "j2_1_anchor"
+    },
+    "state" : {
+      "loaded" : true,
+      "opened" : true,
+      "selected" : false,
+      "disabled" : false,
+      "hidden" : false
+    },
+    "data" : {
+      "guid" : "f1033ccd-4e1a-4381-b755-6459f30813fe",
+      "columnType" : "-1"
+    },
+    "children" : [ {
+      "id" : "j2_2",
+      "text" : "user",
+      "li_attr" : {
+        "id" : "j2_2"
+      },
+      "a_attr" : {
+        "href" : "#",
+        "id" : "j2_2_anchor"
+      },
+      "state" : {
+        "loaded" : true,
+        "opened" : false,
+        "selected" : false,
+        "disabled" : false
+      },
+      "data" : {
+        "guid" : "0612e489-8e16-4c13-84b3-9c68e01ca20c",
+        "columnType" : "-1"
+      },
+      "children" : [ ],
+      "type" : "string"
+    }, {
+      "id" : "j2_3",
+      "text" : "text",
+      "li_attr" : {
+        "id" : "j2_3"
+      },
+      "a_attr" : {
+        "href" : "#",
+        "id" : "j2_3_anchor"
+      },
+      "state" : {
+        "loaded" : true,
+        "opened" : false,
+        "selected" : false,
+        "disabled" : false
+      },
+      "data" : {
+        "guid" : "52ffec41-5b9c-4360-a844-e77ca2819df6",
+        "columnType" : "-1"
+      },
+      "children" : [ ],
+      "type" : "string"
+    } ],
+    "type" : "documentList"
+  } ],
+  "package" : "cGFja2FnZSBwYWNrYWdlcy5Bd2FyZW5lc3MuYXNzaXN0YW50LnV0aWxzOw==",
+  "imports" : "aW1wb3J0IGNvbS5la2EubWlkZGxld2FyZS5zZXJ2aWNlLkRhdGFQaXBlbGluZTsKaW1wb3J0IGNvbS5la2EubWlkZGxld2FyZS5zZXJ2aWNlLlNlcnZpY2VVdGlsczsKaW1wb3J0IGNvbS5la2EubWlkZGxld2FyZS50ZW1wbGF0ZS5TbmlwcGV0RXhjZXB0aW9uOwppbXBvcnQgYWdlbnRzLmNvcmUuYWdlbnQuUGVyc29uYWxpdHk7CmltcG9ydCBhZ2VudHMubWFuYWdlci5BZ2VudE1hbmFnZXI7CmltcG9ydCBqYXZhLnV0aWwuKjs=",
+  "main" : "ICB0cnl7CiAgICAgIFN0cmluZyBhZ2VudElEID0gZGF0YVBpcGVsaW5lLmdldFN0cmluZygiYWdlbnRJRCIpOwogICAgICBTdHJpbmcgY2hhdElEID0gZGF0YVBpcGVsaW5lLmdldFN0cmluZygiY2hhdElEIik7CiAgICAgIFBlcnNvbmFsaXR5IHA9QWdlbnRNYW5hZ2VyLmdldFBlcnNvbmFsaXR5KGFnZW50SUQpOwogICAgICBMaXN0PE1hcDxTdHJpbmcsT2JqZWN0Pj4gaGlzdG9yeT1wLmdldENoYXRIaXN0b3J5KGNoYXRJRCk7CiAgICAgIGRhdGFQaXBlbGluZS5wdXQoImNoYXRIaXN0b3J5IixoaXN0b3J5KTsKICAgICAgCiAgfWNhdGNoKEV4Y2VwdGlvbiBlKXsKICAgICAgZGF0YVBpcGVsaW5lLmNsZWFyKCk7CiAgICAgIGRhdGFQaXBlbGluZS5wdXQoImVycm9yIixlLmdldE1lc3NhZ2UoKSk7CiAgICAgIGRhdGFQaXBlbGluZS5wdXQoInN0YXR1cyIsImZhaWxlZCIpOwogICAgICBuZXcgU25pcHBldEV4Y2VwdGlvbihkYXRhUGlwZWxpbmUsIlNuaXBwZXQgZXhjZXB0aW9uIiwgbmV3IEV4Y2VwdGlvbihlKSk7CiAgfQ==",
+  "staticWorkspace" : "",
+  "version" : "v1",
+  "consumers" : "",
+  "developers" : "",
+  "lockedByUser" : "rupeshgupta@syncloop.com"
+}

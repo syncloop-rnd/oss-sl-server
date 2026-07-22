@@ -1,0 +1,2276 @@
+{
+  "latest" : {
+    "createdTS" : "",
+    "input" : [ {
+      "id" : "j2_1",
+      "text" : "start",
+      "li_attr" : {
+        "id" : "j2_1"
+      },
+      "a_attr" : {
+        "href" : "#",
+        "id" : "j2_1_anchor"
+      },
+      "state" : {
+        "loaded" : true,
+        "opened" : false,
+        "selected" : false,
+        "disabled" : false,
+        "hidden" : false
+      },
+      "data" : {
+        "assignList" : [ {
+          "path" : "start",
+          "value" : "0",
+          "typePath" : "integer"
+        } ]
+      },
+      "children" : [ ],
+      "type" : "integer"
+    }, {
+      "id" : "j2_2",
+      "text" : "length",
+      "li_attr" : {
+        "id" : "j2_2"
+      },
+      "a_attr" : {
+        "href" : "#",
+        "id" : "j2_2_anchor"
+      },
+      "state" : {
+        "loaded" : true,
+        "opened" : false,
+        "selected" : true,
+        "disabled" : false,
+        "hidden" : false
+      },
+      "data" : {
+        "assignList" : [ {
+          "path" : "length",
+          "value" : "12",
+          "typePath" : "integer"
+        } ]
+      },
+      "children" : [ ],
+      "type" : "integer"
+    } ],
+    "output" : [ {
+      "id" : "j3_1",
+      "text" : "environments",
+      "li_attr" : {
+        "id" : "j3_1"
+      },
+      "a_attr" : {
+        "href" : "#",
+        "id" : "j3_1_anchor"
+      },
+      "state" : {
+        "loaded" : true,
+        "opened" : false,
+        "selected" : false,
+        "disabled" : false,
+        "hidden" : false
+      },
+      "data" : { },
+      "children" : [ {
+        "id" : "j3_2",
+        "text" : "id",
+        "li_attr" : {
+          "id" : "j3_2"
+        },
+        "a_attr" : {
+          "href" : "#"
+        },
+        "state" : {
+          "loaded" : true,
+          "opened" : false,
+          "selected" : false,
+          "disabled" : false
+        },
+        "data" : { },
+        "children" : [ ],
+        "type" : "integer"
+      }, {
+        "id" : "j3_3",
+        "text" : "name",
+        "li_attr" : {
+          "id" : "j3_3"
+        },
+        "a_attr" : {
+          "href" : "#"
+        },
+        "state" : {
+          "loaded" : true,
+          "opened" : false,
+          "selected" : false,
+          "disabled" : false
+        },
+        "data" : { },
+        "children" : [ ],
+        "type" : "string"
+      }, {
+        "id" : "j3_4",
+        "text" : "type",
+        "li_attr" : {
+          "id" : "j3_4"
+        },
+        "a_attr" : {
+          "href" : "#"
+        },
+        "state" : {
+          "loaded" : true,
+          "opened" : false,
+          "selected" : false,
+          "disabled" : false
+        },
+        "data" : { },
+        "children" : [ ],
+        "type" : "string"
+      }, {
+        "id" : "j3_5",
+        "text" : "credential_key",
+        "li_attr" : {
+          "id" : "j3_5"
+        },
+        "a_attr" : {
+          "href" : "#"
+        },
+        "state" : {
+          "loaded" : true,
+          "opened" : false,
+          "selected" : false,
+          "disabled" : false
+        },
+        "data" : { },
+        "children" : [ ],
+        "type" : "string"
+      }, {
+        "id" : "j3_6",
+        "text" : "credential_secret",
+        "li_attr" : {
+          "id" : "j3_6"
+        },
+        "a_attr" : {
+          "href" : "#"
+        },
+        "state" : {
+          "loaded" : true,
+          "opened" : false,
+          "selected" : false,
+          "disabled" : false
+        },
+        "data" : { },
+        "children" : [ ],
+        "type" : "string"
+      }, {
+        "id" : "j3_7",
+        "text" : "data_center_region",
+        "li_attr" : {
+          "id" : "j3_7"
+        },
+        "a_attr" : {
+          "href" : "#"
+        },
+        "state" : {
+          "loaded" : true,
+          "opened" : false,
+          "selected" : false,
+          "disabled" : false
+        },
+        "data" : { },
+        "children" : [ ],
+        "type" : "string"
+      }, {
+        "id" : "j3_8",
+        "text" : "protocol",
+        "li_attr" : {
+          "id" : "j3_8"
+        },
+        "a_attr" : {
+          "href" : "#"
+        },
+        "state" : {
+          "loaded" : true,
+          "opened" : false,
+          "selected" : false,
+          "disabled" : false
+        },
+        "data" : { },
+        "children" : [ ],
+        "type" : "string"
+      }, {
+        "id" : "j3_9",
+        "text" : "aws_acm_arn",
+        "li_attr" : {
+          "id" : "j3_9"
+        },
+        "a_attr" : {
+          "href" : "#"
+        },
+        "state" : {
+          "loaded" : true,
+          "opened" : false,
+          "selected" : false,
+          "disabled" : false
+        },
+        "data" : { },
+        "children" : [ ],
+        "type" : "string"
+      }, {
+        "id" : "j3_10",
+        "text" : "port_mapping",
+        "li_attr" : {
+          "id" : "j3_10"
+        },
+        "a_attr" : {
+          "href" : "#"
+        },
+        "state" : {
+          "loaded" : true,
+          "opened" : false,
+          "selected" : false,
+          "disabled" : false
+        },
+        "data" : { },
+        "children" : [ ],
+        "type" : "string"
+      }, {
+        "id" : "j3_11",
+        "text" : "auto_scaling_min_nodes",
+        "li_attr" : {
+          "id" : "j3_11"
+        },
+        "a_attr" : {
+          "href" : "#"
+        },
+        "state" : {
+          "loaded" : true,
+          "opened" : false,
+          "selected" : false,
+          "disabled" : false
+        },
+        "data" : { },
+        "children" : [ ],
+        "type" : "integer"
+      }, {
+        "id" : "j3_12",
+        "text" : "auto_scaling_max_nodes",
+        "li_attr" : {
+          "id" : "j3_12"
+        },
+        "a_attr" : {
+          "href" : "#"
+        },
+        "state" : {
+          "loaded" : true,
+          "opened" : false,
+          "selected" : false,
+          "disabled" : false
+        },
+        "data" : { },
+        "children" : [ ],
+        "type" : "integer"
+      }, {
+        "id" : "j3_13",
+        "text" : "auto_scaling_cpu_threshold",
+        "li_attr" : {
+          "id" : "j3_13"
+        },
+        "a_attr" : {
+          "href" : "#"
+        },
+        "state" : {
+          "loaded" : true,
+          "opened" : false,
+          "selected" : false,
+          "disabled" : false
+        },
+        "data" : { },
+        "children" : [ ],
+        "type" : "number"
+      }, {
+        "id" : "j3_14",
+        "text" : "deployed",
+        "li_attr" : {
+          "id" : "j3_14"
+        },
+        "a_attr" : {
+          "href" : "#"
+        },
+        "state" : {
+          "loaded" : true,
+          "opened" : false,
+          "selected" : false,
+          "disabled" : false
+        },
+        "data" : { },
+        "children" : [ ],
+        "type" : "boolean"
+      }, {
+        "id" : "j3_15",
+        "text" : "resource_cups",
+        "li_attr" : {
+          "id" : "j3_15"
+        },
+        "a_attr" : {
+          "href" : "#"
+        },
+        "state" : {
+          "loaded" : true,
+          "opened" : false,
+          "selected" : false,
+          "disabled" : false
+        },
+        "data" : { },
+        "children" : [ ],
+        "type" : "number"
+      }, {
+        "id" : "j3_16",
+        "text" : "resource_memory",
+        "li_attr" : {
+          "id" : "j3_16"
+        },
+        "a_attr" : {
+          "href" : "#"
+        },
+        "state" : {
+          "loaded" : true,
+          "opened" : false,
+          "selected" : false,
+          "disabled" : false
+        },
+        "data" : { },
+        "children" : [ ],
+        "type" : "number"
+      }, {
+        "id" : "j3_17",
+        "text" : "sub_domain",
+        "li_attr" : {
+          "id" : "j3_17"
+        },
+        "a_attr" : {
+          "href" : "#"
+        },
+        "state" : {
+          "loaded" : true,
+          "opened" : false,
+          "selected" : false,
+          "disabled" : false
+        },
+        "data" : { },
+        "children" : [ ],
+        "type" : "string"
+      }, {
+        "id" : "j3_18",
+        "text" : "domain_registrar",
+        "li_attr" : {
+          "id" : "j3_18"
+        },
+        "a_attr" : {
+          "href" : "#"
+        },
+        "state" : {
+          "loaded" : true,
+          "opened" : false,
+          "selected" : false,
+          "disabled" : false
+        },
+        "data" : { },
+        "children" : [ ],
+        "type" : "string"
+      }, {
+        "id" : "j3_19",
+        "text" : "dns_mapping",
+        "li_attr" : {
+          "id" : "j3_19"
+        },
+        "a_attr" : {
+          "href" : "#"
+        },
+        "state" : {
+          "loaded" : true,
+          "opened" : false,
+          "selected" : false,
+          "disabled" : false
+        },
+        "data" : { },
+        "children" : [ ],
+        "type" : "boolean"
+      }, {
+        "id" : "j3_20",
+        "text" : "credential_id",
+        "li_attr" : {
+          "id" : "j3_20"
+        },
+        "a_attr" : {
+          "href" : "#"
+        },
+        "state" : {
+          "loaded" : true,
+          "opened" : false,
+          "selected" : false,
+          "disabled" : false
+        },
+        "data" : { },
+        "children" : [ ],
+        "type" : "integer"
+      }, {
+        "id" : "j3_21",
+        "text" : "tenant",
+        "li_attr" : {
+          "id" : "j3_21"
+        },
+        "a_attr" : {
+          "href" : "#"
+        },
+        "state" : {
+          "loaded" : true,
+          "opened" : false,
+          "selected" : false,
+          "disabled" : false
+        },
+        "data" : { },
+        "children" : [ ],
+        "type" : "string"
+      }, {
+        "id" : "j3_22",
+        "text" : "aws_vpc_id",
+        "li_attr" : {
+          "id" : "j3_22"
+        },
+        "a_attr" : {
+          "href" : "#"
+        },
+        "state" : {
+          "loaded" : true,
+          "opened" : false,
+          "selected" : false,
+          "disabled" : false
+        },
+        "data" : { },
+        "children" : [ ],
+        "type" : "string"
+      }, {
+        "id" : "j3_23",
+        "text" : "api_key",
+        "li_attr" : {
+          "id" : "j3_23"
+        },
+        "a_attr" : {
+          "href" : "#"
+        },
+        "state" : {
+          "loaded" : true,
+          "opened" : false,
+          "selected" : false,
+          "disabled" : false
+        },
+        "data" : { },
+        "children" : [ ],
+        "type" : "string"
+      } ],
+      "type" : "documentList"
+    } ],
+    "api" : [ {
+      "id" : "j1_1",
+      "text" : "Invoke",
+      "li_attr" : {
+        "id" : "j1_1"
+      },
+      "a_attr" : {
+        "href" : "javascript:void(0)",
+        "id" : "j1_1_anchor"
+      },
+      "state" : {
+        "loaded" : true,
+        "opened" : false,
+        "selected" : false,
+        "disabled" : false,
+        "hidden" : false
+      },
+      "data" : {
+        "transformers" : [ {
+          "op" : "copy",
+          "from" : "/start",
+          "to" : "/inputDocList/0/from",
+          "inTypePath" : "integer",
+          "outTypePath" : "documentList/integer",
+          "direction" : "in"
+        }, {
+          "op" : "copy",
+          "from" : "/length",
+          "to" : "/inputDocList/0/size",
+          "inTypePath" : "integer",
+          "outTypePath" : "documentList/integer",
+          "direction" : "in"
+        }, {
+          "op" : "loop",
+          "from" : "/outputDocList/#{loop_id_-331687499}",
+          "to" : "/environments/#{loop_id_-331687499}",
+          "loop_Id" : "loop_id_-331687499",
+          "inTypePath" : "documentList",
+          "outTypePath" : "documentList",
+          "direction" : "out"
+        }, {
+          "op" : "add",
+          "from" : "/outputDocList/#{loop_id_-331687499}/id",
+          "to" : "/environments/#{loop_id_-331687499}/id",
+          "follow" : "loop_id_-331687499",
+          "inTypePath" : "documentList/integer",
+          "outTypePath" : "documentList/integer",
+          "direction" : "out"
+        }, {
+          "op" : "add",
+          "from" : "/outputDocList/#{loop_id_-331687499}/name",
+          "to" : "/environments/#{loop_id_-331687499}/name",
+          "follow" : "loop_id_-331687499",
+          "inTypePath" : "documentList/string",
+          "outTypePath" : "documentList/string",
+          "direction" : "out"
+        }, {
+          "op" : "add",
+          "from" : "/outputDocList/#{loop_id_-331687499}/type",
+          "to" : "/environments/#{loop_id_-331687499}/type",
+          "follow" : "loop_id_-331687499",
+          "inTypePath" : "documentList/string",
+          "outTypePath" : "documentList/string",
+          "direction" : "out"
+        }, {
+          "op" : "add",
+          "from" : "/outputDocList/#{loop_id_-331687499}/credential_key",
+          "to" : "/environments/#{loop_id_-331687499}/credential_key",
+          "follow" : "loop_id_-331687499",
+          "inTypePath" : "documentList/string",
+          "outTypePath" : "documentList/string",
+          "direction" : "out"
+        }, {
+          "op" : "add",
+          "from" : "/outputDocList/#{loop_id_-331687499}/credential_secret",
+          "to" : "/environments/#{loop_id_-331687499}/credential_secret",
+          "follow" : "loop_id_-331687499",
+          "inTypePath" : "documentList/string",
+          "outTypePath" : "documentList/string",
+          "direction" : "out"
+        }, {
+          "op" : "add",
+          "from" : "/outputDocList/#{loop_id_-331687499}/data_center_region",
+          "to" : "/environments/#{loop_id_-331687499}/data_center_region",
+          "follow" : "loop_id_-331687499",
+          "inTypePath" : "documentList/string",
+          "outTypePath" : "documentList/string",
+          "direction" : "out"
+        }, {
+          "op" : "add",
+          "from" : "/outputDocList/#{loop_id_-331687499}/protocol",
+          "to" : "/environments/#{loop_id_-331687499}/protocol",
+          "follow" : "loop_id_-331687499",
+          "inTypePath" : "documentList/string",
+          "outTypePath" : "documentList/string",
+          "direction" : "out"
+        }, {
+          "op" : "add",
+          "from" : "/outputDocList/#{loop_id_-331687499}/aws_acm_arn",
+          "to" : "/environments/#{loop_id_-331687499}/aws_acm_arn",
+          "follow" : "loop_id_-331687499",
+          "inTypePath" : "documentList/string",
+          "outTypePath" : "documentList/string",
+          "direction" : "out"
+        }, {
+          "op" : "add",
+          "from" : "/outputDocList/#{loop_id_-331687499}/port_mapping",
+          "to" : "/environments/#{loop_id_-331687499}/port_mapping",
+          "follow" : "loop_id_-331687499",
+          "inTypePath" : "documentList/string",
+          "outTypePath" : "documentList/string",
+          "direction" : "out"
+        }, {
+          "op" : "add",
+          "from" : "/outputDocList/#{loop_id_-331687499}/auto_scaling_min_nodes",
+          "to" : "/environments/#{loop_id_-331687499}/auto_scaling_min_nodes",
+          "follow" : "loop_id_-331687499",
+          "inTypePath" : "documentList/integer",
+          "outTypePath" : "documentList/integer",
+          "direction" : "out"
+        }, {
+          "op" : "add",
+          "from" : "/outputDocList/#{loop_id_-331687499}/auto_scaling_max_nodes",
+          "to" : "/environments/#{loop_id_-331687499}/auto_scaling_max_nodes",
+          "follow" : "loop_id_-331687499",
+          "inTypePath" : "documentList/integer",
+          "outTypePath" : "documentList/integer",
+          "direction" : "out"
+        }, {
+          "op" : "add",
+          "from" : "/outputDocList/#{loop_id_-331687499}/auto_scaling_cpu_threshold",
+          "to" : "/environments/#{loop_id_-331687499}/auto_scaling_cpu_threshold",
+          "follow" : "loop_id_-331687499",
+          "inTypePath" : "documentList/number",
+          "outTypePath" : "documentList/number",
+          "direction" : "out"
+        }, {
+          "op" : "add",
+          "from" : "/outputDocList/#{loop_id_-331687499}/deployed",
+          "to" : "/environments/#{loop_id_-331687499}/deployed",
+          "follow" : "loop_id_-331687499",
+          "inTypePath" : "documentList/boolean",
+          "outTypePath" : "documentList/boolean",
+          "direction" : "out"
+        }, {
+          "op" : "add",
+          "from" : "/outputDocList/#{loop_id_-331687499}/resource_cups",
+          "to" : "/environments/#{loop_id_-331687499}/resource_cups",
+          "follow" : "loop_id_-331687499",
+          "inTypePath" : "documentList/number",
+          "outTypePath" : "documentList/number",
+          "direction" : "out"
+        }, {
+          "op" : "add",
+          "from" : "/outputDocList/#{loop_id_-331687499}/resource_memory",
+          "to" : "/environments/#{loop_id_-331687499}/resource_memory",
+          "follow" : "loop_id_-331687499",
+          "inTypePath" : "documentList/number",
+          "outTypePath" : "documentList/number",
+          "direction" : "out"
+        }, {
+          "op" : "add",
+          "from" : "/outputDocList/#{loop_id_-331687499}/sub_domain",
+          "to" : "/environments/#{loop_id_-331687499}/sub_domain",
+          "follow" : "loop_id_-331687499",
+          "inTypePath" : "documentList/string",
+          "outTypePath" : "documentList/string",
+          "direction" : "out"
+        }, {
+          "op" : "add",
+          "from" : "/outputDocList/#{loop_id_-331687499}/domain_registrar",
+          "to" : "/environments/#{loop_id_-331687499}/domain_registrar",
+          "follow" : "loop_id_-331687499",
+          "inTypePath" : "documentList/string",
+          "outTypePath" : "documentList/string",
+          "direction" : "out"
+        }, {
+          "op" : "add",
+          "from" : "/outputDocList/#{loop_id_-331687499}/dns_mapping",
+          "to" : "/environments/#{loop_id_-331687499}/dns_mapping",
+          "follow" : "loop_id_-331687499",
+          "inTypePath" : "documentList/boolean",
+          "outTypePath" : "documentList/boolean",
+          "direction" : "out"
+        }, {
+          "op" : "add",
+          "from" : "/outputDocList/#{loop_id_-331687499}/credential_id",
+          "to" : "/environments/#{loop_id_-331687499}/credential_id",
+          "follow" : "loop_id_-331687499",
+          "inTypePath" : "documentList/integer",
+          "outTypePath" : "documentList/integer",
+          "direction" : "out"
+        }, {
+          "op" : "add",
+          "from" : "/outputDocList/#{loop_id_-331687499}/tenant",
+          "to" : "/environments/#{loop_id_-331687499}/tenant",
+          "follow" : "loop_id_-331687499",
+          "inTypePath" : "documentList/string",
+          "outTypePath" : "documentList/string",
+          "direction" : "out"
+        }, {
+          "op" : "add",
+          "from" : "/outputDocList/#{loop_id_-331687499}/aws_vpc_id",
+          "to" : "/environments/#{loop_id_-331687499}/aws_vpc_id",
+          "follow" : "loop_id_-331687499",
+          "inTypePath" : "documentList/string",
+          "outTypePath" : "documentList/string",
+          "direction" : "out"
+        }, {
+          "op" : "add",
+          "from" : "/outputDocList/#{loop_id_-331687499}/api_key",
+          "to" : "/environments/#{loop_id_-331687499}/api_key",
+          "follow" : "loop_id_-331687499",
+          "inTypePath" : "documentList/string",
+          "outTypePath" : "documentList/string",
+          "direction" : "out"
+        } ],
+        "lines" : [ {
+          "inputPath" : "start",
+          "outputPath" : "inputDocList/from",
+          "inpJsTree" : "#launching_arrow_jsTree",
+          "outpJsTree" : "#landing_arrow_jsTree_function",
+          "INPath" : "start",
+          "OUTPath" : "inputDocList/#0/from",
+          "direction" : "in",
+          "op" : "copy",
+          "line" : 0,
+          "dashedLine" : false,
+          "inType" : "integer",
+          "outType" : "integer",
+          "inTypePath" : "integer",
+          "outTypePath" : "documentList/integer"
+        }, {
+          "inputPath" : "length",
+          "outputPath" : "inputDocList/size",
+          "inpJsTree" : "#launching_arrow_jsTree",
+          "outpJsTree" : "#landing_arrow_jsTree_function",
+          "INPath" : "length",
+          "OUTPath" : "inputDocList/#0/size",
+          "direction" : "in",
+          "op" : "copy",
+          "line" : 0,
+          "dashedLine" : false,
+          "inType" : "integer",
+          "outType" : "integer",
+          "inTypePath" : "integer",
+          "outTypePath" : "documentList/integer"
+        }, {
+          "loop_Id" : "loop_id_-331687499",
+          "inputPath" : "outputDocList",
+          "outputPath" : "environments",
+          "inpJsTree" : "#launching_arrow_jsTree_function",
+          "outpJsTree" : "#landing_arrow_jsTree",
+          "INPath" : "outputDocList/#{loop_id_-331687499}",
+          "OUTPath" : "environments/#{loop_id_-331687499}",
+          "direction" : "out",
+          "line" : 0,
+          "dashedLine" : true,
+          "op" : "loop",
+          "inType" : "documentList",
+          "outType" : "documentList",
+          "inTypePath" : "documentList",
+          "outTypePath" : "documentList"
+        }, {
+          "inputPath" : "outputDocList/id",
+          "outputPath" : "environments/id",
+          "inpJsTree" : "#launching_arrow_jsTree_function",
+          "outpJsTree" : "#landing_arrow_jsTree",
+          "INPath" : "outputDocList/#{loop_id_-331687499}/id",
+          "OUTPath" : "environments/#{loop_id_-331687499}/id",
+          "direction" : "out",
+          "follow" : "loop_id_-331687499",
+          "op" : "add",
+          "line" : 0,
+          "dashedLine" : false,
+          "inType" : "integer",
+          "outType" : "integer",
+          "inTypePath" : "documentList/integer",
+          "outTypePath" : "documentList/integer"
+        }, {
+          "inputPath" : "outputDocList/name",
+          "outputPath" : "environments/name",
+          "inpJsTree" : "#launching_arrow_jsTree_function",
+          "outpJsTree" : "#landing_arrow_jsTree",
+          "INPath" : "outputDocList/#{loop_id_-331687499}/name",
+          "OUTPath" : "environments/#{loop_id_-331687499}/name",
+          "direction" : "out",
+          "follow" : "loop_id_-331687499",
+          "op" : "add",
+          "line" : 0,
+          "dashedLine" : false,
+          "inType" : "string",
+          "outType" : "string",
+          "inTypePath" : "documentList/string",
+          "outTypePath" : "documentList/string"
+        }, {
+          "inputPath" : "outputDocList/type",
+          "outputPath" : "environments/type",
+          "inpJsTree" : "#launching_arrow_jsTree_function",
+          "outpJsTree" : "#landing_arrow_jsTree",
+          "INPath" : "outputDocList/#{loop_id_-331687499}/type",
+          "OUTPath" : "environments/#{loop_id_-331687499}/type",
+          "direction" : "out",
+          "follow" : "loop_id_-331687499",
+          "op" : "add",
+          "line" : 0,
+          "dashedLine" : false,
+          "inType" : "string",
+          "outType" : "string",
+          "inTypePath" : "documentList/string",
+          "outTypePath" : "documentList/string"
+        }, {
+          "inputPath" : "outputDocList/credential_key",
+          "outputPath" : "environments/credential_key",
+          "inpJsTree" : "#launching_arrow_jsTree_function",
+          "outpJsTree" : "#landing_arrow_jsTree",
+          "INPath" : "outputDocList/#{loop_id_-331687499}/credential_key",
+          "OUTPath" : "environments/#{loop_id_-331687499}/credential_key",
+          "direction" : "out",
+          "follow" : "loop_id_-331687499",
+          "op" : "add",
+          "line" : 0,
+          "dashedLine" : false,
+          "inType" : "string",
+          "outType" : "string",
+          "inTypePath" : "documentList/string",
+          "outTypePath" : "documentList/string"
+        }, {
+          "inputPath" : "outputDocList/credential_secret",
+          "outputPath" : "environments/credential_secret",
+          "inpJsTree" : "#launching_arrow_jsTree_function",
+          "outpJsTree" : "#landing_arrow_jsTree",
+          "INPath" : "outputDocList/#{loop_id_-331687499}/credential_secret",
+          "OUTPath" : "environments/#{loop_id_-331687499}/credential_secret",
+          "direction" : "out",
+          "follow" : "loop_id_-331687499",
+          "op" : "add",
+          "line" : 0,
+          "dashedLine" : false,
+          "inType" : "string",
+          "outType" : "string",
+          "inTypePath" : "documentList/string",
+          "outTypePath" : "documentList/string"
+        }, {
+          "inputPath" : "outputDocList/data_center_region",
+          "outputPath" : "environments/data_center_region",
+          "inpJsTree" : "#launching_arrow_jsTree_function",
+          "outpJsTree" : "#landing_arrow_jsTree",
+          "INPath" : "outputDocList/#{loop_id_-331687499}/data_center_region",
+          "OUTPath" : "environments/#{loop_id_-331687499}/data_center_region",
+          "direction" : "out",
+          "follow" : "loop_id_-331687499",
+          "op" : "add",
+          "line" : 0,
+          "dashedLine" : false,
+          "inType" : "string",
+          "outType" : "string",
+          "inTypePath" : "documentList/string",
+          "outTypePath" : "documentList/string"
+        }, {
+          "inputPath" : "outputDocList/protocol",
+          "outputPath" : "environments/protocol",
+          "inpJsTree" : "#launching_arrow_jsTree_function",
+          "outpJsTree" : "#landing_arrow_jsTree",
+          "INPath" : "outputDocList/#{loop_id_-331687499}/protocol",
+          "OUTPath" : "environments/#{loop_id_-331687499}/protocol",
+          "direction" : "out",
+          "follow" : "loop_id_-331687499",
+          "op" : "add",
+          "line" : 0,
+          "dashedLine" : false,
+          "inType" : "string",
+          "outType" : "string",
+          "inTypePath" : "documentList/string",
+          "outTypePath" : "documentList/string"
+        }, {
+          "inputPath" : "outputDocList/aws_acm_arn",
+          "outputPath" : "environments/aws_acm_arn",
+          "inpJsTree" : "#launching_arrow_jsTree_function",
+          "outpJsTree" : "#landing_arrow_jsTree",
+          "INPath" : "outputDocList/#{loop_id_-331687499}/aws_acm_arn",
+          "OUTPath" : "environments/#{loop_id_-331687499}/aws_acm_arn",
+          "direction" : "out",
+          "follow" : "loop_id_-331687499",
+          "op" : "add",
+          "line" : 0,
+          "dashedLine" : false,
+          "inType" : "string",
+          "outType" : "string",
+          "inTypePath" : "documentList/string",
+          "outTypePath" : "documentList/string"
+        }, {
+          "inputPath" : "outputDocList/port_mapping",
+          "outputPath" : "environments/port_mapping",
+          "inpJsTree" : "#launching_arrow_jsTree_function",
+          "outpJsTree" : "#landing_arrow_jsTree",
+          "INPath" : "outputDocList/#{loop_id_-331687499}/port_mapping",
+          "OUTPath" : "environments/#{loop_id_-331687499}/port_mapping",
+          "direction" : "out",
+          "follow" : "loop_id_-331687499",
+          "op" : "add",
+          "line" : 0,
+          "dashedLine" : false,
+          "inType" : "string",
+          "outType" : "string",
+          "inTypePath" : "documentList/string",
+          "outTypePath" : "documentList/string"
+        }, {
+          "inputPath" : "outputDocList/auto_scaling_min_nodes",
+          "outputPath" : "environments/auto_scaling_min_nodes",
+          "inpJsTree" : "#launching_arrow_jsTree_function",
+          "outpJsTree" : "#landing_arrow_jsTree",
+          "INPath" : "outputDocList/#{loop_id_-331687499}/auto_scaling_min_nodes",
+          "OUTPath" : "environments/#{loop_id_-331687499}/auto_scaling_min_nodes",
+          "direction" : "out",
+          "follow" : "loop_id_-331687499",
+          "op" : "add",
+          "line" : 0,
+          "dashedLine" : false,
+          "inType" : "integer",
+          "outType" : "integer",
+          "inTypePath" : "documentList/integer",
+          "outTypePath" : "documentList/integer"
+        }, {
+          "inputPath" : "outputDocList/auto_scaling_max_nodes",
+          "outputPath" : "environments/auto_scaling_max_nodes",
+          "inpJsTree" : "#launching_arrow_jsTree_function",
+          "outpJsTree" : "#landing_arrow_jsTree",
+          "INPath" : "outputDocList/#{loop_id_-331687499}/auto_scaling_max_nodes",
+          "OUTPath" : "environments/#{loop_id_-331687499}/auto_scaling_max_nodes",
+          "direction" : "out",
+          "follow" : "loop_id_-331687499",
+          "op" : "add",
+          "line" : 0,
+          "dashedLine" : false,
+          "inType" : "integer",
+          "outType" : "integer",
+          "inTypePath" : "documentList/integer",
+          "outTypePath" : "documentList/integer"
+        }, {
+          "inputPath" : "outputDocList/auto_scaling_cpu_threshold",
+          "outputPath" : "environments/auto_scaling_cpu_threshold",
+          "inpJsTree" : "#launching_arrow_jsTree_function",
+          "outpJsTree" : "#landing_arrow_jsTree",
+          "INPath" : "outputDocList/#{loop_id_-331687499}/auto_scaling_cpu_threshold",
+          "OUTPath" : "environments/#{loop_id_-331687499}/auto_scaling_cpu_threshold",
+          "direction" : "out",
+          "follow" : "loop_id_-331687499",
+          "op" : "add",
+          "line" : 0,
+          "dashedLine" : false,
+          "inType" : "number",
+          "outType" : "number",
+          "inTypePath" : "documentList/number",
+          "outTypePath" : "documentList/number"
+        }, {
+          "inputPath" : "outputDocList/deployed",
+          "outputPath" : "environments/deployed",
+          "inpJsTree" : "#launching_arrow_jsTree_function",
+          "outpJsTree" : "#landing_arrow_jsTree",
+          "INPath" : "outputDocList/#{loop_id_-331687499}/deployed",
+          "OUTPath" : "environments/#{loop_id_-331687499}/deployed",
+          "direction" : "out",
+          "follow" : "loop_id_-331687499",
+          "op" : "add",
+          "line" : 0,
+          "dashedLine" : false,
+          "inType" : "boolean",
+          "outType" : "boolean",
+          "inTypePath" : "documentList/boolean",
+          "outTypePath" : "documentList/boolean"
+        }, {
+          "inputPath" : "outputDocList/resource_cups",
+          "outputPath" : "environments/resource_cups",
+          "inpJsTree" : "#launching_arrow_jsTree_function",
+          "outpJsTree" : "#landing_arrow_jsTree",
+          "INPath" : "outputDocList/#{loop_id_-331687499}/resource_cups",
+          "OUTPath" : "environments/#{loop_id_-331687499}/resource_cups",
+          "direction" : "out",
+          "follow" : "loop_id_-331687499",
+          "op" : "add",
+          "line" : 0,
+          "dashedLine" : false,
+          "inType" : "number",
+          "outType" : "number",
+          "inTypePath" : "documentList/number",
+          "outTypePath" : "documentList/number"
+        }, {
+          "inputPath" : "outputDocList/resource_memory",
+          "outputPath" : "environments/resource_memory",
+          "inpJsTree" : "#launching_arrow_jsTree_function",
+          "outpJsTree" : "#landing_arrow_jsTree",
+          "INPath" : "outputDocList/#{loop_id_-331687499}/resource_memory",
+          "OUTPath" : "environments/#{loop_id_-331687499}/resource_memory",
+          "direction" : "out",
+          "follow" : "loop_id_-331687499",
+          "op" : "add",
+          "line" : 0,
+          "dashedLine" : false,
+          "inType" : "number",
+          "outType" : "number",
+          "inTypePath" : "documentList/number",
+          "outTypePath" : "documentList/number"
+        }, {
+          "inputPath" : "outputDocList/sub_domain",
+          "outputPath" : "environments/sub_domain",
+          "inpJsTree" : "#launching_arrow_jsTree_function",
+          "outpJsTree" : "#landing_arrow_jsTree",
+          "INPath" : "outputDocList/#{loop_id_-331687499}/sub_domain",
+          "OUTPath" : "environments/#{loop_id_-331687499}/sub_domain",
+          "direction" : "out",
+          "follow" : "loop_id_-331687499",
+          "op" : "add",
+          "line" : 0,
+          "dashedLine" : false,
+          "inType" : "string",
+          "outType" : "string",
+          "inTypePath" : "documentList/string",
+          "outTypePath" : "documentList/string"
+        }, {
+          "inputPath" : "outputDocList/domain_registrar",
+          "outputPath" : "environments/domain_registrar",
+          "inpJsTree" : "#launching_arrow_jsTree_function",
+          "outpJsTree" : "#landing_arrow_jsTree",
+          "INPath" : "outputDocList/#{loop_id_-331687499}/domain_registrar",
+          "OUTPath" : "environments/#{loop_id_-331687499}/domain_registrar",
+          "direction" : "out",
+          "follow" : "loop_id_-331687499",
+          "op" : "add",
+          "line" : 0,
+          "dashedLine" : false,
+          "inType" : "string",
+          "outType" : "string",
+          "inTypePath" : "documentList/string",
+          "outTypePath" : "documentList/string"
+        }, {
+          "inputPath" : "outputDocList/dns_mapping",
+          "outputPath" : "environments/dns_mapping",
+          "inpJsTree" : "#launching_arrow_jsTree_function",
+          "outpJsTree" : "#landing_arrow_jsTree",
+          "INPath" : "outputDocList/#{loop_id_-331687499}/dns_mapping",
+          "OUTPath" : "environments/#{loop_id_-331687499}/dns_mapping",
+          "direction" : "out",
+          "follow" : "loop_id_-331687499",
+          "op" : "add",
+          "line" : 0,
+          "dashedLine" : false,
+          "inType" : "boolean",
+          "outType" : "boolean",
+          "inTypePath" : "documentList/boolean",
+          "outTypePath" : "documentList/boolean"
+        }, {
+          "inputPath" : "outputDocList/credential_id",
+          "outputPath" : "environments/credential_id",
+          "inpJsTree" : "#launching_arrow_jsTree_function",
+          "outpJsTree" : "#landing_arrow_jsTree",
+          "INPath" : "outputDocList/#{loop_id_-331687499}/credential_id",
+          "OUTPath" : "environments/#{loop_id_-331687499}/credential_id",
+          "direction" : "out",
+          "follow" : "loop_id_-331687499",
+          "op" : "add",
+          "line" : 0,
+          "dashedLine" : false,
+          "inType" : "integer",
+          "outType" : "integer",
+          "inTypePath" : "documentList/integer",
+          "outTypePath" : "documentList/integer"
+        }, {
+          "inputPath" : "outputDocList/tenant",
+          "outputPath" : "environments/tenant",
+          "inpJsTree" : "#launching_arrow_jsTree_function",
+          "outpJsTree" : "#landing_arrow_jsTree",
+          "INPath" : "outputDocList/#{loop_id_-331687499}/tenant",
+          "OUTPath" : "environments/#{loop_id_-331687499}/tenant",
+          "direction" : "out",
+          "follow" : "loop_id_-331687499",
+          "op" : "add",
+          "line" : 0,
+          "dashedLine" : false,
+          "inType" : "string",
+          "outType" : "string",
+          "inTypePath" : "documentList/string",
+          "outTypePath" : "documentList/string"
+        }, {
+          "inputPath" : "outputDocList/aws_vpc_id",
+          "outputPath" : "environments/aws_vpc_id",
+          "inpJsTree" : "#launching_arrow_jsTree_function",
+          "outpJsTree" : "#landing_arrow_jsTree",
+          "INPath" : "outputDocList/#{loop_id_-331687499}/aws_vpc_id",
+          "OUTPath" : "environments/#{loop_id_-331687499}/aws_vpc_id",
+          "direction" : "out",
+          "follow" : "loop_id_-331687499",
+          "op" : "add",
+          "line" : 0,
+          "dashedLine" : false,
+          "inType" : "string",
+          "outType" : "string",
+          "inTypePath" : "documentList/string",
+          "outTypePath" : "documentList/string"
+        }, {
+          "inputPath" : "outputDocList/api_key",
+          "outputPath" : "environments/api_key",
+          "inpJsTree" : "#launching_arrow_jsTree_function",
+          "outpJsTree" : "#landing_arrow_jsTree",
+          "INPath" : "outputDocList/#{loop_id_-331687499}/api_key",
+          "OUTPath" : "environments/#{loop_id_-331687499}/api_key",
+          "direction" : "out",
+          "follow" : "loop_id_-331687499",
+          "op" : "add",
+          "line" : 0,
+          "dashedLine" : false,
+          "inType" : "string",
+          "outType" : "string",
+          "inTypePath" : "documentList/string",
+          "outTypePath" : "documentList/string"
+        } ],
+        "dropList" : [ {
+          "path" : "start",
+          "typePath" : "integer"
+        }, {
+          "path" : "length",
+          "typePath" : "integer"
+        }, {
+          "path" : "inputDocList",
+          "typePath" : "documentList"
+        } ],
+        "createList" : [ ],
+        "serviceType" : "sql",
+        "status" : "enabled",
+        "fqn" : "packages/middleware/pub/environments/adapter/services/DQL/getEnvironments",
+        "guid" : "7e5fb33c-9807-4fa2-906f-e573b85e221b"
+      },
+      "children" : [ ],
+      "type" : "invoke"
+    }, {
+      "id" : "j1_12",
+      "text" : "Transformer",
+      "li_attr" : {
+        "id" : "j1_12"
+      },
+      "a_attr" : {
+        "href" : "javascript:void(0)",
+        "id" : "j1_12_anchor"
+      },
+      "state" : {
+        "loaded" : true,
+        "opened" : false,
+        "selected" : false,
+        "disabled" : false,
+        "hidden" : false
+      },
+      "data" : {
+        "transformers" : [ ],
+        "lines" : [ ],
+        "dropList" : [ ],
+        "createList" : [ {
+          "path" : "LogicalResourceId",
+          "value" : "LoadBalancer",
+          "typePath" : "string"
+        } ],
+        "guid" : "fffe78d3-2243-4069-8e69-920f0fcd9d9d"
+      },
+      "children" : [ ],
+      "type" : "transformer"
+    }, {
+      "id" : "j1_2",
+      "text" : "Foreach",
+      "li_attr" : {
+        "id" : "j1_2"
+      },
+      "a_attr" : {
+        "href" : "javascript:void(0)",
+        "id" : "j1_2_anchor"
+      },
+      "state" : {
+        "loaded" : true,
+        "opened" : true,
+        "selected" : false,
+        "disabled" : false,
+        "hidden" : false
+      },
+      "data" : {
+        "inArray" : "environments",
+        "outArray" : "environments",
+        "status" : "enabled",
+        "guid" : "3e404046-e2af-43af-96ae-b1f684b3612a"
+      },
+      "children" : [ {
+        "id" : "j1_21",
+        "text" : "Invoke",
+        "li_attr" : {
+          "id" : "j1_21"
+        },
+        "a_attr" : {
+          "href" : "javascript:void(0)",
+          "id" : "j1_21_anchor"
+        },
+        "state" : {
+          "loaded" : true,
+          "opened" : false,
+          "selected" : false,
+          "disabled" : false
+        },
+        "data" : {
+          "transformers" : [ {
+            "op" : "copy",
+            "from" : "/environments/sub_domain",
+            "to" : "/endpoint",
+            "inTypePath" : "document/string",
+            "outTypePath" : "string",
+            "direction" : "in"
+          }, {
+            "op" : "copy",
+            "from" : "/environments/api_key",
+            "to" : "/apiKey",
+            "inTypePath" : "document/string",
+            "outTypePath" : "string",
+            "direction" : "in"
+          }, {
+            "op" : "copy",
+            "from" : "/isEnabled",
+            "to" : "/environments/isEnabled",
+            "inTypePath" : "boolean",
+            "outTypePath" : "document/boolean",
+            "direction" : "out"
+          }, {
+            "op" : "copy",
+            "from" : "/reason",
+            "to" : "/environments/reason",
+            "inTypePath" : "string",
+            "outTypePath" : "document/string",
+            "direction" : "out"
+          }, {
+            "op" : "copy",
+            "from" : "/environments/tenant",
+            "to" : "/tenant",
+            "inTypePath" : "document/string",
+            "outTypePath" : "string",
+            "direction" : "in"
+          } ],
+          "lines" : [ {
+            "inputPath" : "environments/sub_domain",
+            "outputPath" : "endpoint",
+            "inpJsTree" : "#launching_arrow_jsTree",
+            "outpJsTree" : "#landing_arrow_jsTree_function",
+            "INPath" : "environments/sub_domain",
+            "OUTPath" : "endpoint",
+            "direction" : "in",
+            "op" : "copy",
+            "line" : 0,
+            "dashedLine" : false,
+            "inType" : "string",
+            "outType" : "string",
+            "inTypePath" : "document/string",
+            "outTypePath" : "string"
+          }, {
+            "inputPath" : "environments/api_key",
+            "outputPath" : "apiKey",
+            "inpJsTree" : "#launching_arrow_jsTree",
+            "outpJsTree" : "#landing_arrow_jsTree_function",
+            "INPath" : "environments/api_key",
+            "OUTPath" : "apiKey",
+            "direction" : "in",
+            "op" : "copy",
+            "line" : 0,
+            "dashedLine" : false,
+            "inType" : "string",
+            "outType" : "string",
+            "inTypePath" : "document/string",
+            "outTypePath" : "string"
+          }, {
+            "inputPath" : "isEnabled",
+            "outputPath" : "environments/isEnabled",
+            "inpJsTree" : "#launching_arrow_jsTree_function",
+            "outpJsTree" : "#landing_arrow_jsTree",
+            "INPath" : "isEnabled",
+            "OUTPath" : "environments/isEnabled",
+            "direction" : "out",
+            "op" : "copy",
+            "line" : 0,
+            "dashedLine" : false,
+            "inType" : "boolean",
+            "outType" : "boolean",
+            "inTypePath" : "boolean",
+            "outTypePath" : "document/boolean"
+          }, {
+            "inputPath" : "reason",
+            "outputPath" : "environments/reason",
+            "inpJsTree" : "#launching_arrow_jsTree_function",
+            "outpJsTree" : "#landing_arrow_jsTree",
+            "INPath" : "reason",
+            "OUTPath" : "environments/reason",
+            "direction" : "out",
+            "op" : "copy",
+            "line" : 0,
+            "dashedLine" : false,
+            "inType" : "string",
+            "outType" : "string",
+            "inTypePath" : "string",
+            "outTypePath" : "document/string"
+          }, {
+            "inputPath" : "environments/tenant",
+            "outputPath" : "tenant",
+            "inpJsTree" : "#launching_arrow_jsTree",
+            "outpJsTree" : "#landing_arrow_jsTree_function",
+            "INPath" : "environments/tenant",
+            "OUTPath" : "tenant",
+            "direction" : "in",
+            "op" : "copy",
+            "line" : 0,
+            "dashedLine" : false,
+            "inType" : "string",
+            "outType" : "string",
+            "inTypePath" : "document/string",
+            "outTypePath" : "string"
+          } ],
+          "dropList" : [ ],
+          "createList" : [ ],
+          "serviceType" : "api",
+          "fqn" : "packages/middleware/pub/environments/api/checkEnvironmentAvailability",
+          "guid" : "1c49ce24-070e-4633-9ff1-49b2a829b68b"
+        },
+        "children" : [ ],
+        "type" : "invoke"
+      }, {
+        "id" : "j1_19",
+        "text" : "Invoke",
+        "li_attr" : {
+          "id" : "j1_19"
+        },
+        "a_attr" : {
+          "href" : "javascript:void(0)",
+          "id" : "j1_19_anchor"
+        },
+        "state" : {
+          "loaded" : true,
+          "opened" : false,
+          "selected" : false,
+          "disabled" : false
+        },
+        "data" : {
+          "transformers" : [ {
+            "op" : "copy",
+            "from" : "/environments/api_key",
+            "to" : "/confidential_string",
+            "inTypePath" : "document/string",
+            "outTypePath" : "string",
+            "direction" : "in"
+          }, {
+            "op" : "copy",
+            "from" : "/secured_string",
+            "to" : "/environments/api_key",
+            "inTypePath" : "string",
+            "outTypePath" : "document/string",
+            "direction" : "out"
+          } ],
+          "lines" : [ {
+            "inputPath" : "environments/api_key",
+            "outputPath" : "confidential_string",
+            "inpJsTree" : "#launching_arrow_jsTree",
+            "outpJsTree" : "#landing_arrow_jsTree_function",
+            "INPath" : "environments/api_key",
+            "OUTPath" : "confidential_string",
+            "direction" : "in",
+            "op" : "copy",
+            "line" : 0,
+            "dashedLine" : false,
+            "inType" : "string",
+            "outType" : "string",
+            "inTypePath" : "document/string",
+            "outTypePath" : "string"
+          }, {
+            "inputPath" : "secured_string",
+            "outputPath" : "environments/api_key",
+            "inpJsTree" : "#launching_arrow_jsTree_function",
+            "outpJsTree" : "#landing_arrow_jsTree",
+            "INPath" : "secured_string",
+            "OUTPath" : "environments/api_key",
+            "direction" : "out",
+            "op" : "copy",
+            "line" : 0,
+            "dashedLine" : false,
+            "inType" : "string",
+            "outType" : "string",
+            "inTypePath" : "string",
+            "outTypePath" : "document/string"
+          } ],
+          "dropList" : [ ],
+          "createList" : [ ],
+          "serviceType" : "service",
+          "fqn" : "packages/middleware/pub/string/maskString",
+          "guid" : "4822760c-7787-4244-b2af-c05f8d823373"
+        },
+        "children" : [ ],
+        "type" : "invoke"
+      }, {
+        "id" : "j1_9",
+        "text" : "SWITCH",
+        "li_attr" : {
+          "id" : "j1_9"
+        },
+        "a_attr" : {
+          "href" : "javascript:void(0)",
+          "id" : "j1_9_anchor"
+        },
+        "state" : {
+          "loaded" : true,
+          "opened" : true,
+          "selected" : false,
+          "disabled" : false
+        },
+        "data" : {
+          "switch" : "environments/type",
+          "status" : "enabled",
+          "guid" : "f7979a88-e321-4b83-9647-60a2e9284a03"
+        },
+        "children" : [ {
+          "id" : "j1_11",
+          "text" : "CASE",
+          "li_attr" : {
+            "id" : "j1_11"
+          },
+          "a_attr" : {
+            "href" : "javascript:void(0)",
+            "id" : "j1_11_anchor"
+          },
+          "state" : {
+            "loaded" : true,
+            "opened" : false,
+            "selected" : false,
+            "disabled" : false
+          },
+          "data" : {
+            "case" : "AWS_ECS",
+            "guid" : "1f1691ec-aba1-4568-8b8d-0a17cc7c7b3a"
+          },
+          "children" : [ {
+            "id" : "j1_13",
+            "text" : "Invoke",
+            "li_attr" : {
+              "id" : "j1_13"
+            },
+            "a_attr" : {
+              "href" : "javascript:void(0)",
+              "id" : "j1_13_anchor"
+            },
+            "state" : {
+              "loaded" : true,
+              "opened" : false,
+              "selected" : false,
+              "disabled" : false
+            },
+            "data" : {
+              "transformers" : [ {
+                "op" : "copy",
+                "from" : "/environments/id",
+                "to" : "/inputDocList/0/environment_id",
+                "inTypePath" : "document/integer",
+                "outTypePath" : "documentList/integer",
+                "direction" : "in"
+              }, {
+                "op" : "loop",
+                "from" : "/outputDocList/#{loop_id_-331687499}",
+                "to" : "/environments/subnets/#{loop_id_-331687499}",
+                "loop_Id" : "loop_id_-331687499",
+                "inTypePath" : "documentList",
+                "outTypePath" : "document/documentList",
+                "direction" : "out"
+              }, {
+                "op" : "add",
+                "from" : "/outputDocList/#{loop_id_-331687499}/subnet_id",
+                "to" : "/environments/subnets/#{loop_id_-331687499}/subnet_id",
+                "follow" : "loop_id_-331687499",
+                "inTypePath" : "documentList/string",
+                "outTypePath" : "document/documentList/string",
+                "direction" : "out"
+              } ],
+              "lines" : [ {
+                "inputPath" : "environments/id",
+                "outputPath" : "inputDocList/environment_id",
+                "inpJsTree" : "#launching_arrow_jsTree",
+                "outpJsTree" : "#landing_arrow_jsTree_function",
+                "INPath" : "environments/id",
+                "OUTPath" : "inputDocList/#0/environment_id",
+                "direction" : "in",
+                "op" : "copy",
+                "line" : 0,
+                "dashedLine" : false,
+                "inType" : "integer",
+                "outType" : "integer",
+                "inTypePath" : "document/integer",
+                "outTypePath" : "documentList/integer"
+              }, {
+                "loop_Id" : "loop_id_-331687499",
+                "inputPath" : "outputDocList",
+                "outputPath" : "environments/subnets",
+                "inpJsTree" : "#launching_arrow_jsTree_function",
+                "outpJsTree" : "#landing_arrow_jsTree",
+                "INPath" : "outputDocList/#{loop_id_-331687499}",
+                "OUTPath" : "environments/subnets/#{loop_id_-331687499}",
+                "direction" : "out",
+                "line" : 0,
+                "dashedLine" : true,
+                "op" : "loop",
+                "inType" : "documentList",
+                "outType" : "documentList",
+                "inTypePath" : "documentList",
+                "outTypePath" : "document/documentList"
+              }, {
+                "inputPath" : "outputDocList/subnet_id",
+                "outputPath" : "environments/subnets/subnet_id",
+                "inpJsTree" : "#launching_arrow_jsTree_function",
+                "outpJsTree" : "#landing_arrow_jsTree",
+                "INPath" : "outputDocList/#{loop_id_-331687499}/subnet_id",
+                "OUTPath" : "environments/subnets/#{loop_id_-331687499}/subnet_id",
+                "direction" : "out",
+                "follow" : "loop_id_-331687499",
+                "op" : "add",
+                "line" : 0,
+                "dashedLine" : false,
+                "inType" : "string",
+                "outType" : "string",
+                "inTypePath" : "documentList/string",
+                "outTypePath" : "document/documentList/string"
+              } ],
+              "dropList" : [ ],
+              "createList" : [ ],
+              "serviceType" : "sql",
+              "fqn" : "packages/middleware/pub/environments/adapter/services/DQL/getVpcSubnetByEnvironmentId",
+              "guid" : "ce3faaf4-87a6-449e-bafc-9ec26bb8da2a"
+            },
+            "children" : [ ],
+            "type" : "invoke"
+          }, {
+            "id" : "j1_15",
+            "text" : "Invoke",
+            "li_attr" : {
+              "id" : "j1_15"
+            },
+            "a_attr" : {
+              "href" : "javascript:void(0)",
+              "id" : "j1_15_anchor"
+            },
+            "state" : {
+              "loaded" : true,
+              "opened" : false,
+              "selected" : false,
+              "disabled" : false
+            },
+            "data" : {
+              "transformers" : [ {
+                "op" : "copy",
+                "from" : "/environments/credential_id",
+                "to" : "/inputDocList/0/id",
+                "inTypePath" : "document/integer",
+                "outTypePath" : "documentList/integer",
+                "direction" : "in"
+              }, {
+                "op" : "copy",
+                "from" : "/outputDocList/0/api_username",
+                "to" : "/environments/credential_key",
+                "inTypePath" : "documentList/string",
+                "outTypePath" : "document/string",
+                "direction" : "out"
+              }, {
+                "op" : "copy",
+                "from" : "/outputDocList/0/api_password",
+                "to" : "/environments/credential_secret",
+                "inTypePath" : "documentList/string",
+                "outTypePath" : "document/string",
+                "direction" : "out"
+              } ],
+              "lines" : [ {
+                "inputPath" : "environments/credential_id",
+                "outputPath" : "inputDocList/id",
+                "inpJsTree" : "#launching_arrow_jsTree",
+                "outpJsTree" : "#landing_arrow_jsTree_function",
+                "INPath" : "environments/credential_id",
+                "OUTPath" : "inputDocList/#0/id",
+                "direction" : "in",
+                "op" : "copy",
+                "line" : 0,
+                "dashedLine" : false,
+                "inType" : "integer",
+                "outType" : "integer",
+                "inTypePath" : "document/integer",
+                "outTypePath" : "documentList/integer"
+              }, {
+                "inputPath" : "outputDocList/api_username",
+                "outputPath" : "environments/credential_key",
+                "inpJsTree" : "#launching_arrow_jsTree_function",
+                "outpJsTree" : "#landing_arrow_jsTree",
+                "INPath" : "outputDocList/#0/api_username",
+                "OUTPath" : "environments/credential_key",
+                "direction" : "out",
+                "op" : "copy",
+                "line" : 0,
+                "dashedLine" : false,
+                "inType" : "string",
+                "outType" : "string",
+                "inTypePath" : "documentList/string",
+                "outTypePath" : "document/string"
+              }, {
+                "inputPath" : "outputDocList/api_password",
+                "outputPath" : "environments/credential_secret",
+                "inpJsTree" : "#launching_arrow_jsTree_function",
+                "outpJsTree" : "#landing_arrow_jsTree",
+                "INPath" : "outputDocList/#0/api_password",
+                "OUTPath" : "environments/credential_secret",
+                "direction" : "out",
+                "op" : "copy",
+                "line" : 0,
+                "dashedLine" : false,
+                "inType" : "string",
+                "outType" : "string",
+                "inTypePath" : "documentList/string",
+                "outTypePath" : "document/string"
+              } ],
+              "dropList" : [ ],
+              "createList" : [ ],
+              "serviceType" : "sql",
+              "fqn" : "packages/middleware/pub/environments/adapter/services/DQL/getCredentialById",
+              "guid" : "baf58b3c-c568-42c2-afff-7d873568e8d0"
+            },
+            "children" : [ ],
+            "type" : "invoke"
+          }, {
+            "id" : "j1_3",
+            "text" : "Invoke",
+            "li_attr" : {
+              "id" : "j1_3"
+            },
+            "a_attr" : {
+              "href" : "javascript:void(0)",
+              "id" : "j1_3_anchor"
+            },
+            "state" : {
+              "loaded" : true,
+              "opened" : false,
+              "selected" : false,
+              "disabled" : false
+            },
+            "data" : {
+              "transformers" : [ {
+                "op" : "copy",
+                "from" : "/environments/name",
+                "to" : "/*payload/stackName",
+                "inTypePath" : "document/string",
+                "outTypePath" : "document/string",
+                "direction" : "in"
+              }, {
+                "op" : "copy",
+                "from" : "/environments/data_center_region",
+                "to" : "/*payload/region",
+                "inTypePath" : "document/string",
+                "outTypePath" : "document/string",
+                "direction" : "in"
+              }, {
+                "op" : "copy",
+                "from" : "/response/DescribeStacksResponse",
+                "to" : "/environments/status",
+                "inTypePath" : "document/document",
+                "outTypePath" : "document/document",
+                "direction" : "out"
+              }, {
+                "op" : "copy",
+                "from" : "/environments/credential_key",
+                "to" : "/*payload/accessKey",
+                "inTypePath" : "document/string",
+                "outTypePath" : "document/string",
+                "direction" : "in"
+              }, {
+                "op" : "copy",
+                "from" : "/environments/credential_secret",
+                "to" : "/*payload/secret",
+                "inTypePath" : "document/string",
+                "outTypePath" : "document/string",
+                "direction" : "in"
+              } ],
+              "lines" : [ {
+                "inputPath" : "environments/name",
+                "outputPath" : "*payload/stackName",
+                "inpJsTree" : "#launching_arrow_jsTree",
+                "outpJsTree" : "#landing_arrow_jsTree_function",
+                "INPath" : "environments/name",
+                "OUTPath" : "*payload/stackName",
+                "direction" : "in",
+                "op" : "copy",
+                "line" : 0,
+                "dashedLine" : false,
+                "inType" : "string",
+                "outType" : "string",
+                "inTypePath" : "document/string",
+                "outTypePath" : "document/string"
+              }, {
+                "inputPath" : "environments/data_center_region",
+                "outputPath" : "*payload/region",
+                "inpJsTree" : "#launching_arrow_jsTree",
+                "outpJsTree" : "#landing_arrow_jsTree_function",
+                "INPath" : "environments/data_center_region",
+                "OUTPath" : "*payload/region",
+                "direction" : "in",
+                "op" : "copy",
+                "line" : 0,
+                "dashedLine" : false,
+                "inType" : "string",
+                "outType" : "string",
+                "inTypePath" : "document/string",
+                "outTypePath" : "document/string"
+              }, {
+                "inputPath" : "response/DescribeStacksResponse",
+                "outputPath" : "environments/status",
+                "inpJsTree" : "#launching_arrow_jsTree_function",
+                "outpJsTree" : "#landing_arrow_jsTree",
+                "INPath" : "response/DescribeStacksResponse",
+                "OUTPath" : "environments/status",
+                "direction" : "out",
+                "op" : "copy",
+                "line" : 0,
+                "dashedLine" : false,
+                "inType" : "document",
+                "outType" : "document",
+                "inTypePath" : "document/document",
+                "outTypePath" : "document/document"
+              }, {
+                "inputPath" : "environments/credential_key",
+                "outputPath" : "*payload/accessKey",
+                "inpJsTree" : "#launching_arrow_jsTree",
+                "outpJsTree" : "#landing_arrow_jsTree_function",
+                "INPath" : "environments/credential_key",
+                "OUTPath" : "*payload/accessKey",
+                "direction" : "in",
+                "op" : "copy",
+                "line" : 0,
+                "dashedLine" : false,
+                "inType" : "string",
+                "outType" : "string",
+                "inTypePath" : "document/string",
+                "outTypePath" : "document/string"
+              }, {
+                "inputPath" : "environments/credential_secret",
+                "outputPath" : "*payload/secret",
+                "inpJsTree" : "#launching_arrow_jsTree",
+                "outpJsTree" : "#landing_arrow_jsTree_function",
+                "INPath" : "environments/credential_secret",
+                "OUTPath" : "*payload/secret",
+                "direction" : "in",
+                "op" : "copy",
+                "line" : 0,
+                "dashedLine" : false,
+                "inType" : "string",
+                "outType" : "string",
+                "inTypePath" : "document/string",
+                "outTypePath" : "document/string"
+              } ],
+              "dropList" : [ {
+                "path" : "*payload",
+                "typePath" : "document"
+              } ],
+              "createList" : [ ],
+              "serviceType" : "api",
+              "fqn" : "packages/Wrapper/AWS/Cloudformation/DescribeStacks",
+              "guid" : "561167f4-837e-4286-8844-7199cd98a0f7"
+            },
+            "children" : [ ],
+            "type" : "invoke"
+          }, {
+            "id" : "j1_4",
+            "text" : "Invoke",
+            "li_attr" : {
+              "id" : "j1_4"
+            },
+            "a_attr" : {
+              "href" : "javascript:void(0)",
+              "id" : "j1_4_anchor"
+            },
+            "state" : {
+              "loaded" : true,
+              "opened" : false,
+              "selected" : false,
+              "disabled" : false
+            },
+            "data" : {
+              "transformers" : [ {
+                "op" : "copy",
+                "from" : "/environments/credential_key",
+                "to" : "/accessKey",
+                "inTypePath" : "document/string",
+                "outTypePath" : "string",
+                "direction" : "in"
+              }, {
+                "op" : "copy",
+                "from" : "/environments/credential_secret",
+                "to" : "/secret",
+                "inTypePath" : "document/string",
+                "outTypePath" : "string",
+                "direction" : "in"
+              }, {
+                "op" : "copy",
+                "from" : "/environments/data_center_region",
+                "to" : "/region",
+                "inTypePath" : "document/string",
+                "outTypePath" : "string",
+                "direction" : "in"
+              }, {
+                "op" : "copy",
+                "from" : "/environments/name",
+                "to" : "/StackName",
+                "inTypePath" : "document/string",
+                "outTypePath" : "string",
+                "direction" : "in"
+              }, {
+                "op" : "copy",
+                "from" : "/response/DescribeStackResourceResponse/DescribeStackResourceResult/StackResourceDetail/PhysicalResourceId",
+                "to" : "/PhysicalResourceId",
+                "inTypePath" : "document/document/document/document/string",
+                "outTypePath" : "string",
+                "direction" : "out"
+              } ],
+              "lines" : [ {
+                "inputPath" : "environments/credential_key",
+                "outputPath" : "accessKey",
+                "inpJsTree" : "#launching_arrow_jsTree",
+                "outpJsTree" : "#landing_arrow_jsTree_function",
+                "INPath" : "environments/credential_key",
+                "OUTPath" : "accessKey",
+                "direction" : "in",
+                "op" : "copy",
+                "line" : 0,
+                "dashedLine" : false,
+                "inType" : "string",
+                "outType" : "string",
+                "inTypePath" : "document/string",
+                "outTypePath" : "string"
+              }, {
+                "inputPath" : "environments/credential_secret",
+                "outputPath" : "secret",
+                "inpJsTree" : "#launching_arrow_jsTree",
+                "outpJsTree" : "#landing_arrow_jsTree_function",
+                "INPath" : "environments/credential_secret",
+                "OUTPath" : "secret",
+                "direction" : "in",
+                "op" : "copy",
+                "line" : 0,
+                "dashedLine" : false,
+                "inType" : "string",
+                "outType" : "string",
+                "inTypePath" : "document/string",
+                "outTypePath" : "string"
+              }, {
+                "inputPath" : "environments/data_center_region",
+                "outputPath" : "region",
+                "inpJsTree" : "#launching_arrow_jsTree",
+                "outpJsTree" : "#landing_arrow_jsTree_function",
+                "INPath" : "environments/data_center_region",
+                "OUTPath" : "region",
+                "direction" : "in",
+                "op" : "copy",
+                "line" : 0,
+                "dashedLine" : false,
+                "inType" : "string",
+                "outType" : "string",
+                "inTypePath" : "document/string",
+                "outTypePath" : "string"
+              }, {
+                "inputPath" : "environments/name",
+                "outputPath" : "StackName",
+                "inpJsTree" : "#launching_arrow_jsTree",
+                "outpJsTree" : "#landing_arrow_jsTree_function",
+                "INPath" : "environments/name",
+                "OUTPath" : "StackName",
+                "direction" : "in",
+                "op" : "copy",
+                "line" : 0,
+                "dashedLine" : false,
+                "inType" : "string",
+                "outType" : "string",
+                "inTypePath" : "document/string",
+                "outTypePath" : "string"
+              }, {
+                "inputPath" : "response/DescribeStackResourceResponse/DescribeStackResourceResult/StackResourceDetail/PhysicalResourceId",
+                "outputPath" : "PhysicalResourceId",
+                "inpJsTree" : "#launching_arrow_jsTree_function",
+                "outpJsTree" : "#landing_arrow_jsTree",
+                "INPath" : "response/DescribeStackResourceResponse/DescribeStackResourceResult/StackResourceDetail/PhysicalResourceId",
+                "OUTPath" : "PhysicalResourceId",
+                "direction" : "out",
+                "op" : "copy",
+                "line" : 0,
+                "dashedLine" : false,
+                "inType" : "string",
+                "outType" : "string",
+                "inTypePath" : "document/document/document/document/string",
+                "outTypePath" : "string"
+              } ],
+              "dropList" : [ {
+                "path" : "accessKey",
+                "typePath" : "string"
+              }, {
+                "path" : "secret",
+                "typePath" : "string"
+              }, {
+                "path" : "region",
+                "typePath" : "string"
+              }, {
+                "path" : "StackName",
+                "typePath" : "string"
+              } ],
+              "createList" : [ ],
+              "serviceType" : "api",
+              "snap" : "disabled",
+              "fqn" : "packages/Wrapper/AWS/Cloudformation/DescribeStackResource",
+              "guid" : "e02419a2-dc1d-4a24-ac4e-5f1234f45683"
+            },
+            "children" : [ ],
+            "type" : "invoke"
+          }, {
+            "id" : "j1_8",
+            "text" : "Invoke",
+            "li_attr" : {
+              "id" : "j1_8"
+            },
+            "a_attr" : {
+              "href" : "javascript:void(0)",
+              "id" : "j1_8_anchor"
+            },
+            "state" : {
+              "loaded" : true,
+              "opened" : false,
+              "selected" : false,
+              "disabled" : false
+            },
+            "data" : {
+              "transformers" : [ {
+                "op" : "copy",
+                "from" : "/LogicalResourceId",
+                "to" : "/msg",
+                "inTypePath" : "string",
+                "outTypePath" : "string",
+                "direction" : "in"
+              } ],
+              "lines" : [ {
+                "inputPath" : "LogicalResourceId",
+                "outputPath" : "msg",
+                "inpJsTree" : "#launching_arrow_jsTree",
+                "outpJsTree" : "#landing_arrow_jsTree_function",
+                "INPath" : "LogicalResourceId",
+                "OUTPath" : "msg",
+                "direction" : "in",
+                "op" : "copy",
+                "line" : 0,
+                "dashedLine" : false,
+                "inType" : "string",
+                "outType" : "string",
+                "inTypePath" : "string",
+                "outTypePath" : "string"
+              } ],
+              "dropList" : [ ],
+              "createList" : [ ],
+              "serviceType" : "service",
+              "fqn" : "packages/middleware/pub/service/debugLog",
+              "guid" : "24fc1a04-c595-45f3-9a17-a3bfc27b5331"
+            },
+            "children" : [ ],
+            "type" : "invoke"
+          }, {
+            "id" : "j1_10",
+            "text" : "Invoke",
+            "li_attr" : {
+              "id" : "j1_10"
+            },
+            "a_attr" : {
+              "href" : "javascript:void(0)",
+              "id" : "j1_10_anchor"
+            },
+            "state" : {
+              "loaded" : true,
+              "opened" : false,
+              "selected" : false,
+              "disabled" : false
+            },
+            "data" : {
+              "transformers" : [ {
+                "op" : "copy",
+                "from" : "/PhysicalResourceId",
+                "to" : "/ListenerArn",
+                "inTypePath" : "string",
+                "outTypePath" : "string",
+                "direction" : "in"
+              }, {
+                "op" : "copy",
+                "from" : "/environments/credential_key",
+                "to" : "/accessKey",
+                "inTypePath" : "document/string",
+                "outTypePath" : "string",
+                "direction" : "in"
+              }, {
+                "op" : "copy",
+                "from" : "/environments/credential_secret",
+                "to" : "/secret",
+                "inTypePath" : "document/string",
+                "outTypePath" : "string",
+                "direction" : "in"
+              }, {
+                "op" : "copy",
+                "from" : "/environments/data_center_region",
+                "to" : "/region",
+                "inTypePath" : "document/string",
+                "outTypePath" : "string",
+                "direction" : "in"
+              }, {
+                "op" : "copy",
+                "from" : "/response/DescribeLoadBalancersResponse",
+                "to" : "/environments/DescribeLoadBalancersResponse",
+                "inTypePath" : "document/document",
+                "outTypePath" : "document/document",
+                "direction" : "out"
+              } ],
+              "lines" : [ {
+                "inputPath" : "PhysicalResourceId",
+                "outputPath" : "ListenerArn",
+                "inpJsTree" : "#launching_arrow_jsTree",
+                "outpJsTree" : "#landing_arrow_jsTree_function",
+                "INPath" : "PhysicalResourceId",
+                "OUTPath" : "ListenerArn",
+                "direction" : "in",
+                "op" : "copy",
+                "line" : 0,
+                "dashedLine" : false,
+                "inType" : "string",
+                "outType" : "string",
+                "inTypePath" : "string",
+                "outTypePath" : "string"
+              }, {
+                "inputPath" : "environments/credential_key",
+                "outputPath" : "accessKey",
+                "inpJsTree" : "#launching_arrow_jsTree",
+                "outpJsTree" : "#landing_arrow_jsTree_function",
+                "INPath" : "environments/credential_key",
+                "OUTPath" : "accessKey",
+                "direction" : "in",
+                "op" : "copy",
+                "line" : 0,
+                "dashedLine" : false,
+                "inType" : "string",
+                "outType" : "string",
+                "inTypePath" : "document/string",
+                "outTypePath" : "string"
+              }, {
+                "inputPath" : "environments/credential_secret",
+                "outputPath" : "secret",
+                "inpJsTree" : "#launching_arrow_jsTree",
+                "outpJsTree" : "#landing_arrow_jsTree_function",
+                "INPath" : "environments/credential_secret",
+                "OUTPath" : "secret",
+                "direction" : "in",
+                "op" : "copy",
+                "line" : 0,
+                "dashedLine" : false,
+                "inType" : "string",
+                "outType" : "string",
+                "inTypePath" : "document/string",
+                "outTypePath" : "string"
+              }, {
+                "inputPath" : "environments/data_center_region",
+                "outputPath" : "region",
+                "inpJsTree" : "#launching_arrow_jsTree",
+                "outpJsTree" : "#landing_arrow_jsTree_function",
+                "INPath" : "environments/data_center_region",
+                "OUTPath" : "region",
+                "direction" : "in",
+                "op" : "copy",
+                "line" : 0,
+                "dashedLine" : false,
+                "inType" : "string",
+                "outType" : "string",
+                "inTypePath" : "document/string",
+                "outTypePath" : "string"
+              }, {
+                "inputPath" : "response/DescribeLoadBalancersResponse",
+                "outputPath" : "environments/DescribeLoadBalancersResponse",
+                "inpJsTree" : "#launching_arrow_jsTree_function",
+                "outpJsTree" : "#landing_arrow_jsTree",
+                "INPath" : "response/DescribeLoadBalancersResponse",
+                "OUTPath" : "environments/DescribeLoadBalancersResponse",
+                "direction" : "out",
+                "op" : "copy",
+                "line" : 0,
+                "dashedLine" : false,
+                "inType" : "document",
+                "outType" : "document",
+                "inTypePath" : "document/document",
+                "outTypePath" : "document/document"
+              } ],
+              "dropList" : [ ],
+              "createList" : [ ],
+              "serviceType" : "api",
+              "status" : "enabled",
+              "fqn" : "packages/Wrapper/AWS/ec2/elb/DescribeLoadBalancer",
+              "guid" : "11cc39d3-81a4-4b0c-a189-c2040831eaaf"
+            },
+            "children" : [ ],
+            "type" : "invoke"
+          }, {
+            "id" : "j1_5",
+            "text" : "Invoke",
+            "li_attr" : {
+              "id" : "j1_5"
+            },
+            "a_attr" : {
+              "href" : "javascript:void(0)",
+              "id" : "j1_5_anchor"
+            },
+            "state" : {
+              "loaded" : true,
+              "opened" : false,
+              "selected" : false,
+              "disabled" : false
+            },
+            "data" : {
+              "transformers" : [ {
+                "op" : "copy",
+                "from" : "/environments/credential_key",
+                "to" : "/confidential_string",
+                "inTypePath" : "document/string",
+                "outTypePath" : "string",
+                "direction" : "in"
+              }, {
+                "op" : "copy",
+                "from" : "/secured_string",
+                "to" : "/environments/credential_key",
+                "inTypePath" : "string",
+                "outTypePath" : "document/string",
+                "direction" : "out"
+              } ],
+              "lines" : [ {
+                "inputPath" : "environments/credential_key",
+                "outputPath" : "confidential_string",
+                "inpJsTree" : "#launching_arrow_jsTree",
+                "outpJsTree" : "#landing_arrow_jsTree_function",
+                "INPath" : "environments/credential_key",
+                "OUTPath" : "confidential_string",
+                "direction" : "in",
+                "op" : "copy",
+                "line" : 0,
+                "dashedLine" : false,
+                "inType" : "string",
+                "outType" : "string",
+                "inTypePath" : "document/string",
+                "outTypePath" : "string"
+              }, {
+                "inputPath" : "secured_string",
+                "outputPath" : "environments/credential_key",
+                "inpJsTree" : "#launching_arrow_jsTree_function",
+                "outpJsTree" : "#landing_arrow_jsTree",
+                "INPath" : "secured_string",
+                "OUTPath" : "environments/credential_key",
+                "direction" : "out",
+                "op" : "copy",
+                "line" : 0,
+                "dashedLine" : false,
+                "inType" : "string",
+                "outType" : "string",
+                "inTypePath" : "string",
+                "outTypePath" : "document/string"
+              } ],
+              "dropList" : [ ],
+              "createList" : [ ],
+              "serviceType" : "service",
+              "fqn" : "packages/middleware/pub/string/maskString",
+              "guid" : "42324c28-2a48-476b-86f7-c93495e8e978"
+            },
+            "children" : [ ],
+            "type" : "invoke"
+          }, {
+            "id" : "j1_7",
+            "text" : "Transformer",
+            "li_attr" : {
+              "id" : "j1_7"
+            },
+            "a_attr" : {
+              "href" : "javascript:void(0)",
+              "id" : "j1_7_anchor"
+            },
+            "state" : {
+              "loaded" : true,
+              "opened" : false,
+              "selected" : false,
+              "disabled" : false
+            },
+            "data" : {
+              "transformers" : [ {
+                "op" : "copy",
+                "from" : "/PhysicalResourceId",
+                "to" : "/environments/PhysicalResourceId",
+                "inTypePath" : "string",
+                "outTypePath" : "document/string"
+              } ],
+              "lines" : [ {
+                "inputPath" : "PhysicalResourceId",
+                "outputPath" : "environments/PhysicalResourceId",
+                "inpJsTree" : "#launching_arrow_jsTree",
+                "outpJsTree" : "#landing_arrow_jsTree",
+                "INPath" : "PhysicalResourceId",
+                "OUTPath" : "environments/PhysicalResourceId",
+                "op" : "copy",
+                "line" : 0,
+                "dashedLine" : false,
+                "inType" : "string",
+                "outType" : "string",
+                "inTypePath" : "string",
+                "outTypePath" : "document/string"
+              } ],
+              "dropList" : [ ],
+              "createList" : [ ],
+              "guid" : "ca2e0d2a-feb4-4796-ada3-3602299b27d5"
+            },
+            "children" : [ ],
+            "type" : "transformer"
+          }, {
+            "id" : "j1_6",
+            "text" : "Transformer",
+            "li_attr" : {
+              "id" : "j1_6"
+            },
+            "a_attr" : {
+              "href" : "javascript:void(0)",
+              "id" : "j1_6_anchor"
+            },
+            "state" : {
+              "loaded" : true,
+              "opened" : false,
+              "selected" : false,
+              "disabled" : false
+            },
+            "data" : {
+              "transformers" : [ ],
+              "lines" : [ ],
+              "dropList" : [ {
+                "path" : "confidential_string",
+                "typePath" : "string"
+              }, {
+                "path" : "secured_string",
+                "typePath" : "string"
+              }, {
+                "path" : "environments/credential_secret",
+                "typePath" : "document/string"
+              }, {
+                "path" : "PhysicalResourceId",
+                "typePath" : "string"
+              }, {
+                "path" : "msg",
+                "typePath" : "string"
+              }, {
+                "path" : "ListenerArn",
+                "typePath" : "string"
+              } ],
+              "createList" : [ ],
+              "guid" : "9063b6d6-a2fe-4771-8521-e4fcfba2d85e"
+            },
+            "children" : [ ],
+            "type" : "transformer"
+          } ],
+          "type" : "group"
+        }, {
+          "id" : "j1_16",
+          "text" : "CASE",
+          "li_attr" : {
+            "id" : "j1_16"
+          },
+          "a_attr" : {
+            "href" : "javascript:void(0)",
+            "id" : "j1_16_anchor"
+          },
+          "state" : {
+            "loaded" : true,
+            "opened" : false,
+            "selected" : false,
+            "disabled" : false
+          },
+          "data" : {
+            "case" : "EKA_ENV",
+            "guid" : "dec9a931-342b-49fa-9c9e-2aa7b8c80ee2"
+          },
+          "children" : [ ],
+          "type" : "group"
+        } ],
+        "type" : "switch"
+      } ],
+      "type" : "foreach"
+    } ],
+    "api_info" : {
+      "title" : "",
+      "description" : ""
+    },
+    "lockedByUser" : "admin"
+  },
+  "consumers" : "",
+  "developers" : "developers",
+  "enableServiceDocumentValidation" : false,
+  "created_on" : "1764142228865",
+  "modified_on" : 1764142228865
+}

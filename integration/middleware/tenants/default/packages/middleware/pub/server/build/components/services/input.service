@@ -1,0 +1,58 @@
+{
+  "input" : [ {
+    "id" : "j1_1",
+    "text" : "input",
+    "li_attr" : {
+      "id" : "j1_1"
+    },
+    "a_attr" : {
+      "href" : "#",
+      "id" : "j1_1_anchor"
+    },
+    "state" : {
+      "loaded" : true,
+      "opened" : false,
+      "selected" : false,
+      "disabled" : false,
+      "hidden" : false
+    },
+    "data" : {
+      "guid" : "e67b08c7-74a3-42b5-9b31-8b6042e9dc84",
+      "columnType" : "-1"
+    },
+    "children" : [ ],
+    "type" : "string"
+  } ],
+  "output" : [ {
+    "id" : "j2_1",
+    "text" : "map",
+    "li_attr" : {
+      "id" : "j2_1"
+    },
+    "a_attr" : {
+      "href" : "#",
+      "id" : "j2_1_anchor"
+    },
+    "state" : {
+      "loaded" : true,
+      "opened" : false,
+      "selected" : false,
+      "disabled" : false,
+      "hidden" : false
+    },
+    "data" : {
+      "guid" : "6aff36db-4300-4d5d-b725-c7f0a232ba0d",
+      "columnType" : "-1"
+    },
+    "children" : [ ],
+    "type" : "documentList"
+  } ],
+  "package" : "cGFja2FnZSBwYWNrYWdlcy5taWRkbGV3YXJlLnB1Yi5zZXJ2ZXIuYnVpbGQuY29tcG9uZW50cy5zZXJ2aWNlczs=",
+  "imports" : "aW1wb3J0IGNvbS5la2EubWlkZGxld2FyZS5zZXJ2aWNlLkRhdGFQaXBlbGluZTsKaW1wb3J0IGNvbS5la2EubWlkZGxld2FyZS5zZXJ2aWNlLlNlcnZpY2VVdGlsczsKaW1wb3J0IGNvbS5la2EubWlkZGxld2FyZS50ZW1wbGF0ZS5TbmlwcGV0RXhjZXB0aW9uOwppbXBvcnQgY29tLmZhc3RlcnhtbC5qYWNrc29uLmRhdGFiaW5kLk9iamVjdE1hcHBlcjsKaW1wb3J0IGphdmEudXRpbC4qOw==",
+  "main" : "dHJ5IHsKICAKICBTdHJpbmcgaW5wdXQgPSBkYXRhUGlwZWxpbmUuZ2V0U3RyaW5nKCJpbnB1dCIpOwovL01hcDxTdHJpbmcsT2JqZWN0PiBtYXAgPSBTZXJ2aWNlVXRpbHMuanNvblRvTWFwKGlucHV0KTsKCk9iamVjdE1hcHBlciBtYXBwZXIgPSBuZXcgT2JqZWN0TWFwcGVyKCk7Ckxpc3Q8TWFwPiBsaXN0ID0gbWFwcGVyLnJlYWRWYWx1ZSgKICAgICAgICBpbnB1dCwKICAgICAgICBtYXBwZXIuZ2V0VHlwZUZhY3RvcnkoKS5jb25zdHJ1Y3RDb2xsZWN0aW9uVHlwZShMaXN0LmNsYXNzLCBNYXAuY2xhc3MpKTsKICAKTGlzdDxNYXA+IG91dHB1dE9iaiA9IG5ldyBBcnJheUxpc3Q8PigpOwogIApmb3IgKE1hcDxTdHJpbmcsIE9iamVjdD4gaXRlbSA6IGxpc3QpIHsKICAgIEpzb25UcmVlQnVpbGRlci5pdGVyYXRlKGl0ZW0sIDAsIG91dHB1dE9iaik7Cn0KCmRhdGFQaXBlbGluZS5wdXQoIm1hcCIsIG91dHB1dE9iaik7CiAgCn0gY2F0Y2ggKEV4Y2VwdGlvbiBlKSB7CiAgCn0K",
+  "staticWorkspace" : "cHVibGljIGNsYXNzIEpzb25UcmVlQnVpbGRlciB7CgogICAgc3RhdGljIGludCBjb3VudGVyID0gMTsKCiAgICBwdWJsaWMgc3RhdGljIHZvaWQgaXRlcmF0ZShNYXA8U3RyaW5nLCBPYmplY3Q+IG1hcCwgaW50IGxldmVsLCBMaXN0PE1hcD4gb3V0cHV0T2JqKSB7CgogICAgICAgIFN0cmluZyBpZCA9ICJqMl8iICsgY291bnRlcisrOwoKICAgICAgICBNYXA8U3RyaW5nLCBPYmplY3Q+IGVsZW1lbnQgPSBuZXcgSGFzaE1hcDw+KCk7CgogICAgICAgIGVsZW1lbnQucHV0KCJpZCIsIGlkKTsKICAgICAgICBlbGVtZW50LnB1dCgidGV4dCIsIG1hcC5nZXQoInZhciIpKTsKICAgICAgICBlbGVtZW50LnB1dCgidHlwZSIsIG1hcC5nZXQoInR5cGUiKSk7CgogICAgICAgIE1hcDxTdHJpbmcsIE9iamVjdD4gbGlfYXR0ciA9IG5ldyBIYXNoTWFwPD4oKTsKICAgICAgICBsaV9hdHRyLnB1dCgiaWQiLCBpZCk7CiAgICAgICAgZWxlbWVudC5wdXQoImxpX2F0dHIiLCBsaV9hdHRyKTsKCiAgICAgICAgTWFwPFN0cmluZywgT2JqZWN0PiBhX2F0dHIgPSBuZXcgSGFzaE1hcDw+KCk7CiAgICAgICAgYV9hdHRyLnB1dCgiaHJlZiIsICIjIik7CiAgICAgICAgYV9hdHRyLnB1dCgiaWQiLCBpZCArICJfYW5jaG9yIik7CiAgICAgICAgZWxlbWVudC5wdXQoImFfYXR0ciIsIGFfYXR0cik7CgogICAgICAgIE1hcDxTdHJpbmcsIE9iamVjdD4gc3RhdGUgPSBuZXcgSGFzaE1hcDw+KCk7CiAgICAgICAgc3RhdGUucHV0KCJsb2FkZWQiLCB0cnVlKTsKICAgICAgICBzdGF0ZS5wdXQoIm9wZW5lZCIsIGZhbHNlKTsKICAgICAgICBzdGF0ZS5wdXQoInNlbGVjdGVkIiwgZmFsc2UpOwogICAgICAgIHN0YXRlLnB1dCgiZGlzYWJsZWQiLCBmYWxzZSk7CiAgICAgICAgZWxlbWVudC5wdXQoInN0YXRlIiwgc3RhdGUpOwoKICAgICAgICBNYXA8U3RyaW5nLCBPYmplY3Q+IGRhdGEgPSBuZXcgSGFzaE1hcDw+KCk7CgogICAgICAgIGlmIChtYXAuY29udGFpbnNLZXkoImNvbW1lbnQiKSkgewogICAgICAgICAgICBkYXRhLnB1dCgiZmllbGREZXNjcmlwdGlvbiIsIG1hcC5nZXQoImNvbW1lbnQiKSk7CiAgICAgICAgfQoKICAgICAgICBkYXRhLnB1dCgiaXNSZXF1aXJlZEZpZWxkIiwgdHJ1ZSk7CgogICAgICAgIGlmICghbWFwLmNvbnRhaW5zS2V5KCJjaGlsZCIpKSB7CiAgICAgICAgICAgIGRhdGEucHV0KCJ2YWx1ZSIsICI8IiArIG1hcC5nZXQoInR5cGUiKSArICI+Iik7CiAgICAgICAgfQoKICAgICAgICBlbGVtZW50LnB1dCgiZGF0YSIsIGRhdGEpOwoKICAgICAgICBMaXN0PE1hcD4gY2hpbGRPYmogPSBuZXcgQXJyYXlMaXN0PD4oKTsKICAgICAgICBlbGVtZW50LnB1dCgiY2hpbGRyZW4iLCBjaGlsZE9iaik7CgogICAgICAgIG91dHB1dE9iai5hZGQoZWxlbWVudCk7CgogICAgICAgIGlmIChtYXAuY29udGFpbnNLZXkoImNoaWxkIikpIHsKICAgICAgICAgICAgTGlzdDxNYXA8U3RyaW5nLCBPYmplY3Q+PiBjaGlsZHJlbiA9CiAgICAgICAgICAgICAgICAgICAgKExpc3Q8TWFwPFN0cmluZywgT2JqZWN0Pj4pIG1hcC5nZXQoImNoaWxkIik7CgogICAgICAgICAgICBmb3IgKE1hcDxTdHJpbmcsIE9iamVjdD4gY2hpbGQgOiBjaGlsZHJlbikgewogICAgICAgICAgICAgICAgaXRlcmF0ZShjaGlsZCwgbGV2ZWwgKyAxLCBjaGlsZE9iaik7CiAgICAgICAgICAgIH0KICAgICAgICB9CiAgICB9Cn0=",
+  "version" : "v1",
+  "consumers" : "",
+  "developers" : "administrators",
+  "lockedByUser" : "admin"
+}

@@ -1,0 +1,213 @@
+{
+  "latest" : {
+    "createdTS" : "",
+    "input" : [ {
+      "id" : "j2_1",
+      "text" : "*payload",
+      "li_attr" : {
+        "id" : "j2_1"
+      },
+      "a_attr" : {
+        "href" : "#",
+        "id" : "j2_1_anchor"
+      },
+      "state" : {
+        "loaded" : true,
+        "opened" : true,
+        "selected" : false,
+        "disabled" : false,
+        "hidden" : false
+      },
+      "data" : {
+        "guid" : "4f59c012-3455-4dc7-9ebf-60f50dfb852e",
+        "columnType" : "-1"
+      },
+      "children" : [ {
+        "id" : "j2_2",
+        "text" : "AGENT_ID",
+        "li_attr" : {
+          "id" : "j2_2"
+        },
+        "a_attr" : {
+          "href" : "#",
+          "id" : "j2_2_anchor"
+        },
+        "state" : {
+          "loaded" : true,
+          "opened" : false,
+          "selected" : false,
+          "disabled" : false
+        },
+        "data" : {
+          "guid" : "2dc65cf9-4613-4ba9-93c2-8f6a3a911a5b",
+          "columnType" : "-1",
+          "fieldDescription" : "QUdFTlRfSUQoc3RyaW5nKTogVW5pcXVlIGlkZW50aWZpZXIgb2YgdGhlIGFnZW50IHRvIGJlIGFkZGVkLg==",
+          "assignList" : [ {
+            "path" : "*payload/AGENT_ID",
+            "value" : "",
+            "typePath" : "document/string"
+          } ]
+        },
+        "children" : [ ],
+        "type" : "string"
+      }, {
+        "id" : "j2_3",
+        "text" : "TEAM_ID",
+        "li_attr" : {
+          "id" : "j2_3"
+        },
+        "a_attr" : {
+          "href" : "#",
+          "id" : "j2_3_anchor"
+        },
+        "state" : {
+          "loaded" : true,
+          "opened" : false,
+          "selected" : false,
+          "disabled" : false
+        },
+        "data" : {
+          "guid" : "b5b1aee9-3453-4fb2-9992-595665c27fe5",
+          "columnType" : "-1",
+          "fieldDescription" : "VEVBTV9JRCAoc3RyaW5nKTogVW5pcXVlIGlkZW50aWZpZXIgb2YgdGhlIHRlYW0u",
+          "assignList" : [ {
+            "path" : "*payload/TEAM_ID",
+            "value" : "",
+            "typePath" : "document/string"
+          } ]
+        },
+        "children" : [ ],
+        "type" : "string"
+      } ],
+      "type" : "document"
+    } ],
+    "output" : [ {
+      "id" : "j3_1",
+      "text" : "success",
+      "li_attr" : {
+        "id" : "j3_1"
+      },
+      "a_attr" : {
+        "href" : "#",
+        "id" : "j3_1_anchor"
+      },
+      "state" : {
+        "loaded" : true,
+        "opened" : false,
+        "selected" : false,
+        "disabled" : false,
+        "hidden" : false
+      },
+      "data" : { },
+      "children" : [ ],
+      "type" : "boolean"
+    } ],
+    "api" : [ {
+      "id" : "j1_1",
+      "text" : "Invoke",
+      "li_attr" : {
+        "id" : "j1_1"
+      },
+      "a_attr" : {
+        "href" : "javascript:void(0)",
+        "id" : "j1_1_anchor"
+      },
+      "state" : {
+        "loaded" : true,
+        "opened" : false,
+        "selected" : false,
+        "disabled" : false,
+        "hidden" : false
+      },
+      "data" : {
+        "guid" : "90341071-8e2f-4f53-96d7-d61696607281",
+        "columnType" : "-1",
+        "dropList" : [ ],
+        "createList" : [ ],
+        "initiateList" : [ ],
+        "fqn" : "packages/syncloopai/dashboard/services/api/teams/addAgentInTeam",
+        "serviceType" : "api",
+        "transformers" : [ {
+          "op" : "copy",
+          "from" : "/*payload/AGENT_ID",
+          "to" : "/*payload/AGENT_ID",
+          "inTypePath" : "document/string",
+          "outTypePath" : "document/string",
+          "direction" : "in"
+        }, {
+          "op" : "copy",
+          "from" : "/*payload/TEAM_ID",
+          "to" : "/*payload/TEAM_ID",
+          "inTypePath" : "document/string",
+          "outTypePath" : "document/string",
+          "direction" : "in"
+        }, {
+          "op" : "copy",
+          "from" : "/success",
+          "to" : "/success",
+          "inTypePath" : "boolean",
+          "outTypePath" : "boolean",
+          "direction" : "out"
+        } ],
+        "lines" : [ {
+          "inputPath" : "*payload/AGENT_ID",
+          "outputPath" : "*payload/AGENT_ID",
+          "inpJsTree" : "#launching_arrow_jsTree",
+          "outpJsTree" : "#landing_arrow_jsTree_function",
+          "INPath" : "*payload/AGENT_ID",
+          "OUTPath" : "*payload/AGENT_ID",
+          "direction" : "in",
+          "op" : "copy",
+          "line" : 0,
+          "dashedLine" : false,
+          "inType" : "string",
+          "outType" : "string",
+          "inTypePath" : "document/string",
+          "outTypePath" : "document/string"
+        }, {
+          "inputPath" : "*payload/TEAM_ID",
+          "outputPath" : "*payload/TEAM_ID",
+          "inpJsTree" : "#launching_arrow_jsTree",
+          "outpJsTree" : "#landing_arrow_jsTree_function",
+          "INPath" : "*payload/TEAM_ID",
+          "OUTPath" : "*payload/TEAM_ID",
+          "direction" : "in",
+          "op" : "copy",
+          "line" : 0,
+          "dashedLine" : false,
+          "inType" : "string",
+          "outType" : "string",
+          "inTypePath" : "document/string",
+          "outTypePath" : "document/string"
+        }, {
+          "inputPath" : "success",
+          "outputPath" : "success",
+          "inpJsTree" : "#launching_arrow_jsTree_function",
+          "outpJsTree" : "#landing_arrow_jsTree",
+          "INPath" : "success",
+          "OUTPath" : "success",
+          "direction" : "out",
+          "op" : "copy",
+          "line" : 0,
+          "dashedLine" : false,
+          "inType" : "boolean",
+          "outType" : "boolean",
+          "inTypePath" : "boolean",
+          "outTypePath" : "boolean"
+        } ]
+      },
+      "children" : [ ],
+      "type" : "invoke"
+    } ],
+    "api_info" : {
+      "title" : "Add Agent in Team",
+      "description" : "Adds an agent to a specific team in the system. This operation links the given agent with the specified team, allowing it to be managed and used within that team context."
+    },
+    "lockedByUser" : "akshitaaura@gmail.com"
+  },
+  "consumers" : "",
+  "developers" : "developers",
+  "enableServiceDocumentValidation" : false,
+  "created_on" : "1775644534985",
+  "modified_on" : 1775644534985
+}

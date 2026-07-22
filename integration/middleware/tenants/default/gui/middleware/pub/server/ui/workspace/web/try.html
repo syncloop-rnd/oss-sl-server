@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+</head>
+<body id="syncloop" style="height: 700px"></body>
+<script src="../../javascript/syncloop-core.js"></script>
+<script type="text/javascript">
+
+    var $syncloop = null;
+
+    $(document).ready(function() {
+        $syncloop = $("#syncloop").syncloop({
+            save: true,
+            unique_id: "1f6ecb2e-dc7c-4c36-891c-f38a8e5c7a93",
+            save_callback: function(data) {
+                console.log(data);
+            },
+            load_service_callback: function () {
+                return {"latest":{"createdTS":"","input":[{"id":"j2_2","text":"id","icon":null,"li_attr":{"id":"j2_2"},"a_attr":{"href":"#","id":"j2_2_anchor"},"state":{"loaded":true,"opened":false,"selected":false,"disabled":false,"hidden":false},"data":{},"children":[],"type":"integer"},{"id":"j2_3","text":"name","icon":null,"li_attr":{"id":"j2_3"},"a_attr":{"href":"#","id":"j2_3_anchor"},"state":{"loaded":true,"opened":false,"selected":false,"disabled":false,"hidden":false},"data":{},"children":[],"type":"string"}],"output":[{"id":"j3_10","text":"response","icon":null,"li_attr":{"id":"j3_10"},"a_attr":{"href":"#","id":"j3_10_anchor"},"state":{"loaded":true,"opened":true,"selected":false,"disabled":false,"hidden":false},"data":{},"children":[{"id":"j3_11","text":"id","icon":null,"li_attr":{"id":"j3_11"},"a_attr":{"href":"#","id":"j3_11_anchor"},"state":{"loaded":true,"opened":false,"selected":false,"disabled":false},"data":{},"children":[],"type":"integer"},{"id":"j3_12","text":"name","icon":null,"li_attr":{"id":"j3_12"},"a_attr":{"href":"#","id":"j3_12_anchor"},"state":{"loaded":true,"opened":false,"selected":false,"disabled":false},"data":{},"children":[],"type":"string"}],"type":"document"}],"api":[{"id":"j1_4","text":"Transformer","icon":null,"li_attr":{"id":"j1_4"},"a_attr":{"href":"javascript:void(0)","id":"j1_4_anchor"},"state":{"loaded":true,"opened":false,"selected":false,"disabled":false,"hidden":false},"data":{"guid":"377edefb-cdc1-457e-9922-a3f7b53033f0","transformers":[{"op":"copy","from":"/id","to":"/response/id","inTypePath":"integer","outTypePath":"document/integer"},{"op":"copy","from":"/name","to":"/response/name","inTypePath":"string","outTypePath":"document/string"}],"lines":[{"inputPath":"id","outputPath":"response/id","inpJsTree":"#launching_arrow_jsTree","outpJsTree":"#landing_arrow_jsTree","INPath":"id","OUTPath":"response/id","op":"copy","line":0,"dashedLine":false,"inType":"integer","outType":"integer","inTypePath":"integer","outTypePath":"document/integer"},{"inputPath":"name","outputPath":"response/name","inpJsTree":"#launching_arrow_jsTree","outpJsTree":"#landing_arrow_jsTree","INPath":"name","OUTPath":"response/name","op":"copy","line":0,"dashedLine":false,"inType":"string","outType":"string","inTypePath":"string","outTypePath":"document/string"}],"dropList":[{"path":"id","typePath":"integer"},{"path":"name","typePath":"string"}],"createList":[],"comment":"Transforming request to response document"},"children":[],"type":"transformer"}],"api_info":{"title":"","description":""}},"consumers":"","developers":"developers","enableServiceDocumentValidation":false,"created_on":"1724823289985","modified_on":1724823289985};
+            },
+            test: true,
+            export: true,
+            import: true,
+            documentation: true,
+            width: '100%',
+            height: '100%',
+            config: {
+                service: {
+                    list_options: {
+                        embedded_services_label: "embedded123",
+                        embedded_services_context: "contexts",
+                        embedded_services_function: "functions"
+                    }
+                }
+            },
+            service_base_url: "https://cloud.syncloop.com"
+        });
+    });
+
+
+</script>
+</html>

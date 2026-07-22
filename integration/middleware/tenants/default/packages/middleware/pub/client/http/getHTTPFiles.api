@@ -1,0 +1,674 @@
+{
+  "latest" : {
+    "createdTS" : "",
+    "input" : [ {
+      "id" : "j2_7",
+      "text" : "readAsStream",
+      "li_attr" : {
+        "id" : "j2_7"
+      },
+      "a_attr" : {
+        "href" : "#",
+        "id" : "j2_7_anchor"
+      },
+      "state" : {
+        "loaded" : true,
+        "opened" : false,
+        "selected" : true,
+        "disabled" : false,
+        "hidden" : false
+      },
+      "data" : { },
+      "children" : [ ],
+      "type" : "boolean"
+    } ],
+    "output" : [ {
+      "id" : "j3_3",
+      "text" : "inputStream",
+      "li_attr" : {
+        "id" : "j3_3"
+      },
+      "a_attr" : {
+        "href" : "#",
+        "id" : "j3_3_anchor"
+      },
+      "state" : {
+        "loaded" : true,
+        "opened" : false,
+        "selected" : false,
+        "disabled" : false,
+        "hidden" : false
+      },
+      "data" : { },
+      "children" : [ ],
+      "type" : "javaObject"
+    }, {
+      "id" : "j3_6",
+      "text" : "files",
+      "li_attr" : {
+        "id" : "j3_6"
+      },
+      "a_attr" : {
+        "href" : "#",
+        "id" : "j3_6_anchor"
+      },
+      "state" : {
+        "loaded" : true,
+        "opened" : false,
+        "selected" : false,
+        "disabled" : false,
+        "hidden" : false
+      },
+      "data" : { },
+      "children" : [ {
+        "id" : "j3_7",
+        "text" : "name",
+        "li_attr" : {
+          "id" : "j3_7"
+        },
+        "a_attr" : {
+          "href" : "#",
+          "id" : "j3_7_anchor"
+        },
+        "state" : {
+          "loaded" : true,
+          "opened" : false,
+          "selected" : false,
+          "disabled" : false
+        },
+        "data" : { },
+        "children" : [ ],
+        "type" : "string"
+      }, {
+        "id" : "j3_9",
+        "text" : "inputStream",
+        "li_attr" : {
+          "id" : "j3_9"
+        },
+        "a_attr" : {
+          "href" : "#",
+          "id" : "j3_9_anchor"
+        },
+        "state" : {
+          "loaded" : true,
+          "opened" : false,
+          "selected" : false,
+          "disabled" : false
+        },
+        "data" : { },
+        "children" : [ ],
+        "type" : "javaObject"
+      } ],
+      "type" : "documentList"
+    } ],
+    "api" : [ {
+      "id" : "j1_3",
+      "text" : "Ifelse",
+      "li_attr" : {
+        "id" : "j1_3"
+      },
+      "a_attr" : {
+        "href" : "javascript:void(0)",
+        "id" : "j1_3_anchor"
+      },
+      "state" : {
+        "loaded" : true,
+        "opened" : true,
+        "selected" : false,
+        "disabled" : false,
+        "hidden" : false
+      },
+      "data" : {
+        "guid" : "6a4dd544-aaae-43ed-8a30-d44cbddd7196",
+        "columnType" : "-1",
+        "comment" : "Ifelse step to check if readAsStream is true or false.",
+        "fieldDescription" : "SWZlbHNlIHN0ZXAgdG8gY2hlY2sgaWYgcmVhZEFzU3RyZWFtIGlzIHRydWUgb3IgZmFsc2Uu"
+      },
+      "children" : [ {
+        "id" : "j1_4",
+        "text" : "CONDITION",
+        "li_attr" : {
+          "id" : "j1_4"
+        },
+        "a_attr" : {
+          "href" : "#",
+          "id" : "j1_4_anchor"
+        },
+        "state" : {
+          "loaded" : true,
+          "opened" : true,
+          "selected" : false,
+          "disabled" : false
+        },
+        "data" : {
+          "guid" : "8c41dce9-5993-47da-92ea-43948eaf7961",
+          "columnType" : "-1",
+          "ifcondition" : "readAsStream",
+          "comment" : "if readAsStream is true. It will read as stream from the request",
+          "fieldDescription" : "Q09ORElUSU9OIHN0ZXAgdG8gY2hlY2sgaWYgcmVhZEFzU3RyZWFtIGlzIHRydWUu"
+        },
+        "children" : [ {
+          "id" : "j1_5",
+          "text" : "Invoke",
+          "li_attr" : {
+            "id" : "j1_5"
+          },
+          "a_attr" : {
+            "href" : "#",
+            "id" : "j1_5_anchor"
+          },
+          "state" : {
+            "loaded" : true,
+            "opened" : false,
+            "selected" : false,
+            "disabled" : false
+          },
+          "data" : {
+            "guid" : "b19349b9-d233-43f9-a482-2bc9430ec505",
+            "columnType" : "-1",
+            "transformers" : [ {
+              "op" : "copy",
+              "from" : "/inputStream",
+              "to" : "/inputStream",
+              "inTypePath" : "javaObject",
+              "outTypePath" : "javaObject",
+              "direction" : "out"
+            }, {
+              "op" : "copy",
+              "from" : "/readAsStream",
+              "to" : "/readAsStream",
+              "inTypePath" : "boolean",
+              "outTypePath" : "boolean",
+              "direction" : "in"
+            } ],
+            "lines" : [ {
+              "inputPath" : "inputStream",
+              "outputPath" : "inputStream",
+              "inpJsTree" : "#launching_arrow_jsTree_function",
+              "outpJsTree" : "#landing_arrow_jsTree",
+              "INPath" : "inputStream",
+              "OUTPath" : "inputStream",
+              "direction" : "out",
+              "op" : "copy",
+              "line" : 0,
+              "dashedLine" : false,
+              "inType" : "javaObject",
+              "outType" : "javaObject",
+              "inTypePath" : "javaObject",
+              "outTypePath" : "javaObject"
+            }, {
+              "inputPath" : "readAsStream",
+              "outputPath" : "readAsStream",
+              "inpJsTree" : "#launching_arrow_jsTree",
+              "outpJsTree" : "#landing_arrow_jsTree_function",
+              "INPath" : "readAsStream",
+              "OUTPath" : "readAsStream",
+              "direction" : "in",
+              "op" : "copy",
+              "line" : 0,
+              "dashedLine" : false,
+              "inType" : "boolean",
+              "outType" : "boolean",
+              "inTypePath" : "boolean",
+              "outTypePath" : "boolean"
+            } ],
+            "dropList" : [ ],
+            "createList" : [ ],
+            "initiateList" : [ ],
+            "fqn" : "packages/middleware/pub/service/utils/getMultipart",
+            "serviceType" : "service",
+            "comment" : "Reading data as stream from request thru multipart service.",
+            "fieldDescription" : "SW52b2tlIHN0ZXAgdG8gY2FsbCBnZXRNdWx0aXBhcnQgc2VydmljZSB3aGVuIHJlYWRBc1N0cmVhbSBpcyB0cnVlLg=="
+          },
+          "children" : [ ],
+          "type" : "invoke"
+        } ],
+        "type" : "sequence"
+      }, {
+        "id" : "j1_7",
+        "text" : "CONDITION",
+        "li_attr" : {
+          "id" : "j1_7"
+        },
+        "a_attr" : {
+          "href" : "#",
+          "id" : "j1_7_anchor"
+        },
+        "state" : {
+          "loaded" : true,
+          "opened" : true,
+          "selected" : false,
+          "disabled" : false
+        },
+        "data" : {
+          "guid" : "54c9c6f5-88a6-4244-9949-1bbf25e60749",
+          "columnType" : "-1",
+          "ifcondition" : "#else",
+          "comment" : "When readAsStream is false. It will read data from request multipart form.",
+          "fieldDescription" : "Q09ORElUSU9OIHN0ZXAgdG8gaGFuZGxlIHRoZSBlbHNlIGNhc2Ugd2hlbiByZWFkQXNTdHJlYW0gaXMgZmFsc2Uu"
+        },
+        "children" : [ {
+          "id" : "j1_8",
+          "text" : "Invoke",
+          "li_attr" : {
+            "id" : "j1_8"
+          },
+          "a_attr" : {
+            "href" : "#",
+            "id" : "j1_8_anchor"
+          },
+          "state" : {
+            "loaded" : true,
+            "opened" : false,
+            "selected" : false,
+            "disabled" : false
+          },
+          "data" : {
+            "guid" : "56184042-6a12-4795-9206-82ca8e11f3c6",
+            "columnType" : "-1",
+            "lines" : [ {
+              "inputPath" : "formData",
+              "outputPath" : "formData",
+              "inpJsTree" : "#launching_arrow_jsTree_function",
+              "outpJsTree" : "#landing_arrow_jsTree",
+              "INPath" : "formData",
+              "OUTPath" : "formData",
+              "direction" : "out",
+              "op" : "copy",
+              "line" : 0,
+              "dashedLine" : false,
+              "inType" : "document",
+              "outType" : "document",
+              "inTypePath" : "document",
+              "outTypePath" : "document"
+            } ],
+            "transformers" : [ {
+              "op" : "copy",
+              "from" : "/formData",
+              "to" : "/formData",
+              "inTypePath" : "document",
+              "outTypePath" : "document",
+              "direction" : "out"
+            } ],
+            "fqn" : "packages/middleware/pub/service/utils/getMultipart",
+            "serviceType" : "service",
+            "dropList" : [ ],
+            "createList" : [ ],
+            "initiateList" : [ ],
+            "comment" : "Reading data as form data from request thru multipart service.",
+            "fieldDescription" : "SW52b2tlIHN0ZXAgdG8gY2FsbCBnZXRNdWx0aXBhcnQgc2VydmljZSB3aGVuIHJlYWRBc1N0cmVhbSBpcyBmYWxzZS4="
+          },
+          "children" : [ ],
+          "type" : "invoke"
+        }, {
+          "id" : "j1_12",
+          "text" : "Transformer",
+          "li_attr" : {
+            "id" : "j1_12"
+          },
+          "a_attr" : {
+            "href" : "#",
+            "id" : "j1_12_anchor"
+          },
+          "state" : {
+            "loaded" : true,
+            "opened" : false,
+            "selected" : false,
+            "disabled" : false
+          },
+          "data" : {
+            "guid" : "515db909-eba3-4519-a67a-2c993e4a5160",
+            "columnType" : "-1",
+            "transformers" : [ {
+              "op" : "loop",
+              "from" : "/files/#{loop_id_97434231}",
+              "to" : "/files/#{loop_id_97434231}",
+              "loop_Id" : "loop_id_97434231",
+              "inTypePath" : "documentList",
+              "outTypePath" : "documentList"
+            }, {
+              "op" : "add",
+              "from" : "/files/#{loop_id_97434231}/name",
+              "to" : "/files/#{loop_id_97434231}/name",
+              "follow" : "loop_id_97434231",
+              "inTypePath" : "documentList/string",
+              "outTypePath" : "documentList/string"
+            }, {
+              "op" : "add",
+              "from" : "/files/#{loop_id_97434231}/inputStream",
+              "to" : "/files/#{loop_id_97434231}/inputStream",
+              "follow" : "loop_id_97434231",
+              "inTypePath" : "documentList/javaObject",
+              "outTypePath" : "documentList/javaObject"
+            } ],
+            "lines" : [ {
+              "loop_Id" : "loop_id_97434231",
+              "inputPath" : "files",
+              "outputPath" : "files",
+              "inpJsTree" : "#launching_arrow_jsTree",
+              "outpJsTree" : "#landing_arrow_jsTree",
+              "INPath" : "files/#{loop_id_97434231}",
+              "OUTPath" : "files/#{loop_id_97434231}",
+              "line" : 0,
+              "dashedLine" : true,
+              "op" : "loop",
+              "inType" : "documentList",
+              "outType" : "documentList",
+              "inTypePath" : "documentList",
+              "outTypePath" : "documentList"
+            }, {
+              "inputPath" : "files/name",
+              "outputPath" : "files/name",
+              "inpJsTree" : "#launching_arrow_jsTree",
+              "outpJsTree" : "#landing_arrow_jsTree",
+              "INPath" : "files/#{loop_id_97434231}/name",
+              "OUTPath" : "files/#{loop_id_97434231}/name",
+              "follow" : "loop_id_97434231",
+              "op" : "add",
+              "line" : 0,
+              "dashedLine" : false,
+              "inType" : "string",
+              "outType" : "string",
+              "inTypePath" : "documentList/string",
+              "outTypePath" : "documentList/string"
+            }, {
+              "inputPath" : "files/inputStream",
+              "outputPath" : "files/inputStream",
+              "inpJsTree" : "#launching_arrow_jsTree",
+              "outpJsTree" : "#landing_arrow_jsTree",
+              "INPath" : "files/#{loop_id_97434231}/inputStream",
+              "OUTPath" : "files/#{loop_id_97434231}/inputStream",
+              "follow" : "loop_id_97434231",
+              "op" : "add",
+              "line" : 0,
+              "dashedLine" : false,
+              "inType" : "javaObject",
+              "outType" : "javaObject",
+              "inTypePath" : "documentList/javaObject",
+              "outTypePath" : "documentList/javaObject"
+            } ],
+            "dropList" : [ ],
+            "createList" : [ ],
+            "initiateList" : [ ],
+            "comment" : "Transformer step to loop through files and add name and inputStream.",
+            "fieldDescription" : "VHJhbnNmb3JtZXIgc3RlcCB0byBsb29wIHRocm91Z2ggZmlsZXMgYW5kIGFkZCBuYW1lIGFuZCBpbnB1dFN0cmVhbS4="
+          },
+          "children" : [ ],
+          "type" : "transformer"
+        }, {
+          "id" : "j1_9",
+          "text" : "Foreach",
+          "li_attr" : {
+            "id" : "j1_9"
+          },
+          "a_attr" : {
+            "href" : "#",
+            "id" : "j1_9_anchor"
+          },
+          "state" : {
+            "loaded" : true,
+            "opened" : true,
+            "selected" : false,
+            "disabled" : false
+          },
+          "data" : {
+            "guid" : "6e06d059-3cea-4274-98d1-4d86a4a83370",
+            "indexVar" : "*index2",
+            "columnType" : "-1",
+            "inArray" : "formData/keys",
+            "outArray" : "files",
+            "comment" : "Foreach step to iterate over formData keys and map them to files.",
+            "fieldDescription" : "Rm9yZWFjaCBzdGVwIHRvIGl0ZXJhdGUgb3ZlciBmb3JtRGF0YSBrZXlzIGFuZCBtYXAgdGhlbSB0byBmaWxlcy4="
+          },
+          "children" : [ {
+            "id" : "j1_10",
+            "text" : "Transformer",
+            "li_attr" : {
+              "id" : "j1_10"
+            },
+            "a_attr" : {
+              "href" : "#",
+              "id" : "j1_10_anchor"
+            },
+            "state" : {
+              "loaded" : true,
+              "opened" : false,
+              "selected" : false,
+              "disabled" : false
+            },
+            "data" : {
+              "guid" : "5c2453a9-fb6e-47d1-ae46-aaeff911b18e",
+              "columnType" : "-1",
+              "transformers" : [ ],
+              "lines" : [ ],
+              "dropList" : [ ],
+              "createList" : [ {
+                "path" : "file_name",
+                "value" : "#{formData/keys}_fileName",
+                "id" : "0dae1461-8360-44cd-bda6-927c97742561",
+                "evaluate" : "EEV",
+                "typePath" : "string"
+              } ],
+              "initiateList" : [ {
+                "path" : "file_name",
+                "id" : "0a8fe79f-acbe-48d7-91d8-78cb356e4424",
+                "typePath" : "string"
+              } ],
+              "comment" : "Transformer step to create file_name variable for each formData key.",
+              "fieldDescription" : "VHJhbnNmb3JtZXIgc3RlcCB0byBjcmVhdGUgZmlsZV9uYW1lIHZhcmlhYmxlIGZvciBlYWNoIGZvcm1EYXRhIGtleS4="
+            },
+            "children" : [ ],
+            "type" : "transformer"
+          }, {
+            "id" : "j1_11",
+            "text" : "Invoke",
+            "li_attr" : {
+              "id" : "j1_11"
+            },
+            "a_attr" : {
+              "href" : "#",
+              "id" : "j1_11_anchor"
+            },
+            "state" : {
+              "loaded" : true,
+              "opened" : false,
+              "selected" : false,
+              "disabled" : false
+            },
+            "data" : {
+              "guid" : "c66a2c9c-50c9-4d9c-8ca4-b0406269d5c2",
+              "columnType" : "-1",
+              "transformers" : [ {
+                "op" : "copy",
+                "from" : "/formData",
+                "to" : "/map",
+                "inTypePath" : "document",
+                "outTypePath" : "javaObject",
+                "direction" : "in"
+              }, {
+                "op" : "copy",
+                "from" : "/file_name",
+                "to" : "/key",
+                "inTypePath" : "string",
+                "outTypePath" : "string",
+                "direction" : "in"
+              }, {
+                "op" : "copy",
+                "from" : "/value",
+                "to" : "/files/name",
+                "inTypePath" : "javaObject",
+                "outTypePath" : "document/javaObject",
+                "direction" : "out"
+              } ],
+              "lines" : [ {
+                "inputPath" : "formData",
+                "outputPath" : "map",
+                "inpJsTree" : "#launching_arrow_jsTree",
+                "outpJsTree" : "#landing_arrow_jsTree_function",
+                "INPath" : "formData",
+                "OUTPath" : "map",
+                "direction" : "in",
+                "op" : "copy",
+                "line" : 0,
+                "dashedLine" : false,
+                "inType" : "document",
+                "outType" : "document",
+                "inTypePath" : "document",
+                "outTypePath" : "javaObject"
+              }, {
+                "inputPath" : "file_name",
+                "outputPath" : "key",
+                "inpJsTree" : "#launching_arrow_jsTree",
+                "outpJsTree" : "#landing_arrow_jsTree_function",
+                "INPath" : "file_name",
+                "OUTPath" : "key",
+                "direction" : "in",
+                "op" : "copy",
+                "line" : 0,
+                "dashedLine" : false,
+                "inType" : "string",
+                "outType" : "string",
+                "inTypePath" : "string",
+                "outTypePath" : "string"
+              }, {
+                "inputPath" : "value",
+                "outputPath" : "files/name",
+                "inpJsTree" : "#launching_arrow_jsTree_function",
+                "outpJsTree" : "#landing_arrow_jsTree",
+                "INPath" : "value",
+                "OUTPath" : "files/name",
+                "direction" : "out",
+                "op" : "copy",
+                "line" : 0,
+                "dashedLine" : false,
+                "inType" : "javaObject",
+                "outType" : "javaObject",
+                "inTypePath" : "javaObject",
+                "outTypePath" : "document/javaObject"
+              } ],
+              "dropList" : [ ],
+              "createList" : [ ],
+              "initiateList" : [ ],
+              "fqn" : "packages/middleware/pub/collection/map/Get",
+              "serviceType" : "service",
+              "comment" : "Get file name from formData document.",
+              "fieldDescription" : "SW52b2tlIHN0ZXAgdG8gZ2V0IHZhbHVlIGZyb20gZm9ybURhdGEgbWFwIGFuZCBzZXQgaXQgdG8gZmlsZXMvbmFtZS4="
+            },
+            "children" : [ ],
+            "type" : "invoke"
+          }, {
+            "id" : "j1_13",
+            "text" : "Invoke",
+            "li_attr" : {
+              "id" : "j1_13"
+            },
+            "a_attr" : {
+              "href" : "#",
+              "id" : "j1_13_anchor"
+            },
+            "state" : {
+              "loaded" : true,
+              "opened" : false,
+              "selected" : true,
+              "disabled" : false
+            },
+            "data" : {
+              "guid" : "ca320159-fab7-497f-a11b-a13cff92a57c",
+              "columnType" : "-1",
+              "transformers" : [ {
+                "op" : "copy",
+                "from" : "/formData",
+                "to" : "/map",
+                "inTypePath" : "document",
+                "outTypePath" : "javaObject",
+                "direction" : "in"
+              }, {
+                "op" : "copy",
+                "from" : "/formData/keys",
+                "to" : "/key",
+                "inTypePath" : "document/string",
+                "outTypePath" : "string",
+                "direction" : "in"
+              }, {
+                "op" : "copy",
+                "from" : "/value",
+                "to" : "/files/inputStream",
+                "inTypePath" : "javaObject",
+                "outTypePath" : "document/javaObject",
+                "direction" : "out"
+              } ],
+              "lines" : [ {
+                "inputPath" : "formData",
+                "outputPath" : "map",
+                "inpJsTree" : "#launching_arrow_jsTree",
+                "outpJsTree" : "#landing_arrow_jsTree_function",
+                "INPath" : "formData",
+                "OUTPath" : "map",
+                "direction" : "in",
+                "op" : "copy",
+                "line" : 0,
+                "dashedLine" : false,
+                "inType" : "document",
+                "outType" : "document",
+                "inTypePath" : "document",
+                "outTypePath" : "javaObject"
+              }, {
+                "inputPath" : "formData/keys",
+                "outputPath" : "key",
+                "inpJsTree" : "#launching_arrow_jsTree",
+                "outpJsTree" : "#landing_arrow_jsTree_function",
+                "INPath" : "formData/keys",
+                "OUTPath" : "key",
+                "direction" : "in",
+                "op" : "copy",
+                "line" : 0,
+                "dashedLine" : false,
+                "inType" : "string",
+                "outType" : "string",
+                "inTypePath" : "document/string",
+                "outTypePath" : "string"
+              }, {
+                "inputPath" : "value",
+                "outputPath" : "files/inputStream",
+                "inpJsTree" : "#launching_arrow_jsTree_function",
+                "outpJsTree" : "#landing_arrow_jsTree",
+                "INPath" : "value",
+                "OUTPath" : "files/inputStream",
+                "direction" : "out",
+                "op" : "copy",
+                "line" : 0,
+                "dashedLine" : false,
+                "inType" : "javaObject",
+                "outType" : "javaObject",
+                "inTypePath" : "javaObject",
+                "outTypePath" : "document/javaObject"
+              } ],
+              "dropList" : [ ],
+              "createList" : [ ],
+              "initiateList" : [ ],
+              "fqn" : "packages/middleware/pub/collection/map/Get",
+              "serviceType" : "service",
+              "comment" : "Get file inputStrea from formData document.",
+              "fieldDescription" : "SW52b2tlIHN0ZXAgdG8gZ2V0IHZhbHVlIGZyb20gZm9ybURhdGEgbWFwIGFuZCBzZXQgaXQgdG8gZmlsZXMvaW5wdXRTdHJlYW0u"
+            },
+            "children" : [ ],
+            "type" : "invoke"
+          } ],
+          "type" : "foreach"
+        } ],
+        "type" : "sequence"
+      } ],
+      "type" : "ifelse"
+    } ],
+    "api_info" : {
+      "title" : "Multipart File Handling Service",
+      "description" : "This service handles multipart file uploads, allowing files to be read as streams or form data, and processes them accordingly."
+    },
+    "lockedByUser" : "admin"
+  },
+  "consumers" : "",
+  "developers" : "developers,developers",
+  "enableServiceDocumentValidation" : false,
+  "created_on" : "1725550850393",
+  "modified_on" : 1725550850393
+}

@@ -1,0 +1,1196 @@
+{
+    "openapi": "3.0.1",
+    "info": {
+        "title": "MCPNest API",
+        "description": "REST wrapper APIs for MCPNest.",
+        "version": "latest"
+    },
+    "servers": [
+        {
+            "url": "https://dev-new-api.syncloop.com/tenant/1782168784544462123",
+            "description": "Syncloop Server Machine"
+        }
+    ],
+    "paths": {
+        "/packages.MCPNest.wrapper.api.createToolCollection.main": {
+            "post": {
+                "summary": "",
+                "description": "",
+                "operationId": "createToolCollection",
+                "requestBody": {
+                    "description": "",
+                    "content": {
+                        "application/json": {
+                            "schema": {
+                                "type": "object",
+                                "properties": {
+                                    "request": {
+                                        "type": "object",
+                                        "properties": {
+                                            "collectionName": {
+                                                "type": "string",
+                                                "description": ""
+                                            },
+                                            "description": {
+                                                "type": "string",
+                                                "description": ""
+                                            },
+                                            "enabled": {
+                                                "type": "boolean",
+                                                "description": ""
+                                            }
+                                        },
+                                        "description": ""
+                                    }
+                                }
+                            }
+                        }
+                    }
+                },
+                "responses": {
+                    "status": {
+                        "description": "",
+                        "content": {
+                            "application/json": {
+                                "schema": {}
+                            }
+                        }
+                    },
+                    "error": {
+                        "description": "",
+                        "content": {
+                            "application/json": {
+                                "schema": {}
+                            }
+                        }
+                    },
+                    "result": {
+                        "description": "",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "type": "object",
+                                    "properties": {
+                                        "success": {
+                                            "type": "boolean",
+                                            "description": ""
+                                        },
+                                        "message": {
+                                            "type": "string",
+                                            "description": ""
+                                        },
+                                        "collectionId": {
+                                            "type": "string",
+                                            "description": ""
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                },
+                "security": [
+                    {
+                        "ApiKeyAuth": [
+                            "syncloop"
+                        ]
+                    }
+                ]
+            }
+        },
+        "/packages.MCPNest.wrapper.api.addMcpEndpoint.main": {
+            "post": {
+                "summary": "",
+                "description": "",
+                "operationId": "addMcpEndpoint",
+                "requestBody": {
+                    "description": "",
+                    "content": {
+                        "application/json": {
+                            "schema": {
+                                "type": "object",
+                                "properties": {
+                                    "request": {
+                                        "type": "object",
+                                        "properties": {
+                                            "mcpAlias": {
+                                                "type": "string",
+                                                "description": ""
+                                            },
+                                            "endpointUrl": {
+                                                "type": "string",
+                                                "description": ""
+                                            },
+                                            "mcpName": {
+                                                "type": "string",
+                                                "description": ""
+                                            },
+                                            "description": {
+                                                "type": "string",
+                                                "description": ""
+                                            },
+                                            "endpointType": {
+                                                "type": "string",
+                                                "description": ""
+                                            },
+                                            "authType": {
+                                                "type": "string",
+                                                "description": ""
+                                            },
+                                            "enabled": {
+                                                "type": "boolean",
+                                                "description": ""
+                                            },
+                                            "authInfo": {
+                                                "type": "object",
+                                                "properties": {
+                                                    "bearerToken": {
+                                                        "type": "string",
+                                                        "description": ""
+                                                    },
+                                                    "apiKey": {
+                                                        "type": "string",
+                                                        "description": ""
+                                                    },
+                                                    "headerName": {
+                                                        "type": "string",
+                                                        "description": ""
+                                                    },
+                                                    "headerValue": {
+                                                        "type": "string",
+                                                        "description": ""
+                                                    },
+                                                    "username": {
+                                                        "type": "string",
+                                                        "description": ""
+                                                    },
+                                                    "password": {
+                                                        "type": "string",
+                                                        "description": ""
+                                                    }
+                                                },
+                                                "description": ""
+                                            }
+                                        },
+                                        "description": ""
+                                    }
+                                }
+                            }
+                        }
+                    }
+                },
+                "responses": {
+                    "status": {
+                        "description": "",
+                        "content": {
+                            "application/json": {
+                                "schema": {}
+                            }
+                        }
+                    },
+                    "error": {
+                        "description": "",
+                        "content": {
+                            "application/json": {
+                                "schema": {}
+                            }
+                        }
+                    },
+                    "result": {
+                        "description": "",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "type": "object",
+                                    "properties": {
+                                        "success": {
+                                            "type": "boolean",
+                                            "description": ""
+                                        },
+                                        "message": {
+                                            "type": "string",
+                                            "description": ""
+                                        },
+                                        "mcpId": {
+                                            "type": "string",
+                                            "description": ""
+                                        },
+                                        "toolCount": {
+                                            "type": "integer",
+                                            "description": ""
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                },
+                "security": [
+                    {
+                        "ApiKeyAuth": [
+                            "syncloop"
+                        ]
+                    }
+                ]
+            }
+        },
+        "/packages.MCPNest.wrapper.api.addToolToCollection.main": {
+            "post": {
+                "summary": "",
+                "description": "",
+                "operationId": "addToolToCollection",
+                "requestBody": {
+                    "description": "",
+                    "content": {
+                        "application/json": {
+                            "schema": {
+                                "type": "object",
+                                "properties": {
+                                    "collectionId": {
+                                        "type": "string",
+                                        "description": ""
+                                    },
+                                    "toolId": {
+                                        "type": "string",
+                                        "description": ""
+                                    }
+                                }
+                            }
+                        }
+                    }
+                },
+                "responses": {
+                    "status": {
+                        "description": "",
+                        "content": {
+                            "application/json": {
+                                "schema": {}
+                            }
+                        }
+                    },
+                    "error": {
+                        "description": "",
+                        "content": {
+                            "application/json": {
+                                "schema": {}
+                            }
+                        }
+                    },
+                    "result": {
+                        "description": "",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "type": "object",
+                                    "properties": {
+                                        "success": {
+                                            "type": "boolean",
+                                            "description": ""
+                                        },
+                                        "message": {
+                                            "type": "string",
+                                            "description": ""
+                                        },
+                                        "collectionId": {
+                                            "type": "string",
+                                            "description": ""
+                                        },
+                                        "toolId": {
+                                            "type": "string",
+                                            "description": ""
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                },
+                "security": [
+                    {
+                        "ApiKeyAuth": [
+                            "syncloop"
+                        ]
+                    }
+                ]
+            }
+        },
+        "/packages.MCPNest.wrapper.api.listToolsByMcpId.main": {
+            "post": {
+                "summary": "",
+                "description": "",
+                "operationId": "listToolsByMcpId",
+                "requestBody": {
+                    "description": "",
+                    "content": {
+                        "application/json": {
+                            "schema": {
+                                "type": "object",
+                                "properties": {
+                                    "mcpId": {
+                                        "type": "string",
+                                        "description": ""
+                                    },
+                                    "keywords": {
+                                        "type": "array",
+                                        "description": "",
+                                        "items": {
+                                            "type": "string"
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                },
+                "responses": {
+                    "status": {
+                        "description": "",
+                        "content": {
+                            "application/json": {
+                                "schema": {}
+                            }
+                        }
+                    },
+                    "error": {
+                        "description": "",
+                        "content": {
+                            "application/json": {
+                                "schema": {}
+                            }
+                        }
+                    },
+                    "result": {
+                        "description": "",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "type": "array",
+                                    "properties": {
+                                        "toolId": {
+                                            "type": "string",
+                                            "description": ""
+                                        },
+                                        "mcpId": {
+                                            "type": "string",
+                                            "description": ""
+                                        },
+                                        "name": {
+                                            "type": "string",
+                                            "description": ""
+                                        },
+                                        "description": {
+                                            "type": "string",
+                                            "description": ""
+                                        },
+                                        "enabled": {
+                                            "type": "boolean",
+                                            "description": ""
+                                        }
+                                    },
+                                    "items": {
+                                        "type": "object",
+                                        "properties": {
+                                            "toolId": {
+                                                "type": "string",
+                                                "description": ""
+                                            },
+                                            "mcpId": {
+                                                "type": "string",
+                                                "description": ""
+                                            },
+                                            "name": {
+                                                "type": "string",
+                                                "description": ""
+                                            },
+                                            "description": {
+                                                "type": "string",
+                                                "description": ""
+                                            },
+                                            "enabled": {
+                                                "type": "boolean",
+                                                "description": ""
+                                            }
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                },
+                "security": [
+                    {
+                        "ApiKeyAuth": [
+                            "syncloop"
+                        ]
+                    }
+                ]
+            }
+        },
+        "/packages.MCPNest.wrapper.api.listToolsByCollectionId.main": {
+            "post": {
+                "summary": "",
+                "description": "",
+                "operationId": "listToolsByCollectionId",
+                "requestBody": {
+                    "description": "",
+                    "content": {
+                        "application/json": {
+                            "schema": {
+                                "type": "object",
+                                "properties": {
+                                    "collectionId": {
+                                        "type": "string",
+                                        "description": ""
+                                    },
+                                    "keywords": {
+                                        "type": "array",
+                                        "description": "",
+                                        "items": {
+                                            "type": "string"
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                },
+                "responses": {
+                    "status": {
+                        "description": "",
+                        "content": {
+                            "application/json": {
+                                "schema": {}
+                            }
+                        }
+                    },
+                    "error": {
+                        "description": "",
+                        "content": {
+                            "application/json": {
+                                "schema": {}
+                            }
+                        }
+                    },
+                    "result": {
+                        "description": "",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "type": "array",
+                                    "properties": {
+                                        "toolId": {
+                                            "type": "string",
+                                            "description": ""
+                                        },
+                                        "name": {
+                                            "type": "string",
+                                            "description": ""
+                                        },
+                                        "description": {
+                                            "type": "string",
+                                            "description": ""
+                                        }
+                                    },
+                                    "items": {
+                                        "type": "object",
+                                        "properties": {
+                                            "toolId": {
+                                                "type": "string",
+                                                "description": ""
+                                            },
+                                            "name": {
+                                                "type": "string",
+                                                "description": ""
+                                            },
+                                            "description": {
+                                                "type": "string",
+                                                "description": ""
+                                            }
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                },
+                "security": [
+                    {
+                        "ApiKeyAuth": [
+                            "syncloop"
+                        ]
+                    }
+                ]
+            }
+        },
+        "/packages.MCPNest.wrapper.api.getToolUsageDetails.main": {
+            "get": {
+                "summary": "",
+                "description": "",
+                "operationId": "getToolUsageDetails",
+                "parameters": [
+                    {
+                        "name": "toolId",
+                        "in": "query",
+                        "description": "",
+                        "required": false,
+                        "schema": {
+                            "type": "string"
+                        }
+                    }
+                ],
+                "responses": {
+                    "status": {
+                        "description": "",
+                        "content": {
+                            "application/json": {
+                                "schema": {}
+                            }
+                        }
+                    },
+                    "error": {
+                        "description": "",
+                        "content": {
+                            "application/json": {
+                                "schema": {}
+                            }
+                        }
+                    },
+                    "result": {
+                        "description": "",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "type": "object",
+                                    "properties": {
+                                        "toolId": {
+                                            "type": "string",
+                                            "description": ""
+                                        },
+                                        "name": {
+                                            "type": "string",
+                                            "description": ""
+                                        },
+                                        "description": {
+                                            "type": "string",
+                                            "description": ""
+                                        },
+                                        "usageDetails": {
+                                            "type": "string",
+                                            "description": ""
+                                        },
+                                        "currentOS": {
+                                            "type": "string",
+                                            "description": ""
+                                        },
+                                        "workingDirectory": {
+                                            "type": "string",
+                                            "description": ""
+                                        },
+                                        "inputSchema": {
+                                            "type": "object",
+                                            "properties": {
+                                                "type": {
+                                                    "type": "string",
+                                                    "description": ""
+                                                },
+                                                "command": {
+                                                    "type": "string",
+                                                    "description": ""
+                                                },
+                                                "args": {
+                                                    "type": "array",
+                                                    "description": "",
+                                                    "items": {
+                                                        "type": "string"
+                                                    }
+                                                },
+                                                "timeoutSeconds": {
+                                                    "type": "integer",
+                                                    "description": ""
+                                                },
+                                                "query": {
+                                                    "type": "string",
+                                                    "description": ""
+                                                },
+                                                "text": {
+                                                    "type": "string",
+                                                    "description": ""
+                                                }
+                                            },
+                                            "description": ""
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                },
+                "security": [
+                    {
+                        "ApiKeyAuth": [
+                            "syncloop"
+                        ]
+                    }
+                ]
+            }
+        },
+        "/packages.MCPNest.wrapper.api.listMcps.main": {
+            "post": {
+                "summary": "",
+                "description": "",
+                "operationId": "listMcps",
+                "requestBody": {
+                    "description": "",
+                    "content": {
+                        "application/json": {
+                            "schema": {
+                                "type": "object",
+                                "properties": {
+                                    "keywords": {
+                                        "type": "array",
+                                        "description": "",
+                                        "items": {
+                                            "type": "string"
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                },
+                "responses": {
+                    "status": {
+                        "description": "",
+                        "content": {
+                            "application/json": {
+                                "schema": {}
+                            }
+                        }
+                    },
+                    "error": {
+                        "description": "",
+                        "content": {
+                            "application/json": {
+                                "schema": {}
+                            }
+                        }
+                    },
+                    "result": {
+                        "description": "",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "type": "array",
+                                    "properties": {
+                                        "mcpId": {
+                                            "type": "string",
+                                            "description": ""
+                                        },
+                                        "alias": {
+                                            "type": "string",
+                                            "description": ""
+                                        },
+                                        "name": {
+                                            "type": "string",
+                                            "description": ""
+                                        },
+                                        "endpoint": {
+                                            "type": "string",
+                                            "description": ""
+                                        },
+                                        "endpointType": {
+                                            "type": "string",
+                                            "description": ""
+                                        },
+                                        "description": {
+                                            "type": "string",
+                                            "description": ""
+                                        },
+                                        "enabled": {
+                                            "type": "boolean",
+                                            "description": ""
+                                        },
+                                        "authType": {
+                                            "type": "string",
+                                            "description": ""
+                                        }
+                                    },
+                                    "items": {
+                                        "type": "object",
+                                        "properties": {
+                                            "mcpId": {
+                                                "type": "string",
+                                                "description": ""
+                                            },
+                                            "alias": {
+                                                "type": "string",
+                                                "description": ""
+                                            },
+                                            "name": {
+                                                "type": "string",
+                                                "description": ""
+                                            },
+                                            "endpoint": {
+                                                "type": "string",
+                                                "description": ""
+                                            },
+                                            "endpointType": {
+                                                "type": "string",
+                                                "description": ""
+                                            },
+                                            "description": {
+                                                "type": "string",
+                                                "description": ""
+                                            },
+                                            "enabled": {
+                                                "type": "boolean",
+                                                "description": ""
+                                            },
+                                            "authType": {
+                                                "type": "string",
+                                                "description": ""
+                                            }
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                },
+                "security": [
+                    {
+                        "ApiKeyAuth": [
+                            "syncloop"
+                        ]
+                    }
+                ]
+            }
+        },
+        "/packages.MCPNest.wrapper.api.callTool.main": {
+            "post": {
+                "summary": "",
+                "description": "",
+                "operationId": "callTool",
+                "requestBody": {
+                    "description": "",
+                    "content": {
+                        "application/json": {
+                            "schema": {
+                                "type": "object",
+                                "properties": {
+                                    "toolId": {
+                                        "type": "string",
+                                        "description": ""
+                                    },
+                                    "arguments": {
+                                        "type": "object",
+                                        "properties": {
+                                            "command": {
+                                                "type": "string",
+                                                "description": ""
+                                            },
+                                            "args": {
+                                                "type": "array",
+                                                "description": "",
+                                                "items": {
+                                                    "type": "string"
+                                                }
+                                            },
+                                            "timeoutSeconds": {
+                                                "type": "integer",
+                                                "description": ""
+                                            },
+                                            "query": {
+                                                "type": "string",
+                                                "description": ""
+                                            },
+                                            "text": {
+                                                "type": "string",
+                                                "description": ""
+                                            }
+                                        },
+                                        "description": ""
+                                    }
+                                }
+                            }
+                        }
+                    }
+                },
+                "responses": {
+                    "status": {
+                        "description": "",
+                        "content": {
+                            "application/json": {
+                                "schema": {}
+                            }
+                        }
+                    },
+                    "error": {
+                        "description": "",
+                        "content": {
+                            "application/json": {
+                                "schema": {}
+                            }
+                        }
+                    },
+                    "result": {
+                        "description": "",
+                        "content": {
+                            "application/json": {
+                                "schema": {}
+                            }
+                        }
+                    }
+                },
+                "security": [
+                    {
+                        "ApiKeyAuth": [
+                            "syncloop"
+                        ]
+                    }
+                ]
+            }
+        },
+        "/packages.MCPNest.wrapper.api.enableDisableMcpEndpoint.main": {
+            "post": {
+                "summary": "",
+                "description": "",
+                "operationId": "enableDisableMcpEndpoint",
+                "requestBody": {
+                    "description": "",
+                    "content": {
+                        "application/json": {
+                            "schema": {
+                                "type": "object",
+                                "properties": {
+                                    "mcpId": {
+                                        "type": "string",
+                                        "description": ""
+                                    },
+                                    "enabled": {
+                                        "type": "boolean",
+                                        "description": ""
+                                    }
+                                }
+                            }
+                        }
+                    }
+                },
+                "responses": {
+                    "status": {
+                        "description": "",
+                        "content": {
+                            "application/json": {
+                                "schema": {}
+                            }
+                        }
+                    },
+                    "error": {
+                        "description": "",
+                        "content": {
+                            "application/json": {
+                                "schema": {}
+                            }
+                        }
+                    },
+                    "result": {
+                        "description": "",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "type": "object",
+                                    "properties": {
+                                        "success": {
+                                            "type": "boolean",
+                                            "description": ""
+                                        },
+                                        "message": {
+                                            "type": "string",
+                                            "description": ""
+                                        },
+                                        "mcpId": {
+                                            "type": "string",
+                                            "description": ""
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                },
+                "security": [
+                    {
+                        "ApiKeyAuth": [
+                            "syncloop"
+                        ]
+                    }
+                ]
+            }
+        },
+        "/packages.MCPNest.wrapper.api.removeToolFromCollection.main": {
+            "get": {
+                "summary": "",
+                "description": "",
+                "operationId": "removeToolFromCollection",
+                "parameters": [
+                    {
+                        "name": "collectionId",
+                        "in": "query",
+                        "description": "",
+                        "required": false,
+                        "schema": {
+                            "type": "string"
+                        }
+                    },
+                    {
+                        "name": "toolId",
+                        "in": "query",
+                        "description": "",
+                        "required": false,
+                        "schema": {
+                            "type": "string"
+                        }
+                    }
+                ],
+                "responses": {
+                    "status": {
+                        "description": "",
+                        "content": {
+                            "application/json": {
+                                "schema": {}
+                            }
+                        }
+                    },
+                    "error": {
+                        "description": "",
+                        "content": {
+                            "application/json": {
+                                "schema": {}
+                            }
+                        }
+                    },
+                    "result": {
+                        "description": "",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "type": "object",
+                                    "properties": {
+                                        "success": {
+                                            "type": "boolean",
+                                            "description": ""
+                                        },
+                                        "message": {
+                                            "type": "string",
+                                            "description": ""
+                                        },
+                                        "collectionId": {
+                                            "type": "string",
+                                            "description": ""
+                                        },
+                                        "toolId": {
+                                            "type": "string",
+                                            "description": ""
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                },
+                "security": [
+                    {
+                        "ApiKeyAuth": [
+                            "syncloop"
+                        ]
+                    }
+                ]
+            }
+        },
+        "/packages.MCPNest.wrapper.api.enableDisableTool.main": {
+            "post": {
+                "summary": "",
+                "description": "",
+                "operationId": "enableDisableTool",
+                "requestBody": {
+                    "description": "",
+                    "content": {
+                        "application/json": {
+                            "schema": {
+                                "type": "object",
+                                "properties": {
+                                    "toolId": {
+                                        "type": "string",
+                                        "description": ""
+                                    },
+                                    "enabled": {
+                                        "type": "boolean",
+                                        "description": ""
+                                    }
+                                }
+                            }
+                        }
+                    }
+                },
+                "responses": {
+                    "status": {
+                        "description": "",
+                        "content": {
+                            "application/json": {
+                                "schema": {}
+                            }
+                        }
+                    },
+                    "error": {
+                        "description": "",
+                        "content": {
+                            "application/json": {
+                                "schema": {}
+                            }
+                        }
+                    },
+                    "result": {
+                        "description": "",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "type": "object",
+                                    "properties": {
+                                        "success": {
+                                            "type": "boolean",
+                                            "description": ""
+                                        },
+                                        "message": {
+                                            "type": "string",
+                                            "description": ""
+                                        },
+                                        "toolId": {
+                                            "type": "string",
+                                            "description": ""
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                },
+                "security": [
+                    {
+                        "ApiKeyAuth": [
+                            "syncloop"
+                        ]
+                    }
+                ]
+            }
+        },
+        "/packages.MCPNest.wrapper.api.listCollections.main": {
+            "post": {
+                "summary": "",
+                "description": "",
+                "operationId": "listCollections",
+                "requestBody": {
+                    "description": "",
+                    "content": {
+                        "application/json": {
+                            "schema": {
+                                "type": "object",
+                                "properties": {
+                                    "keywords": {
+                                        "type": "array",
+                                        "description": "",
+                                        "items": {
+                                            "type": "string"
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                },
+                "responses": {
+                    "status": {
+                        "description": "",
+                        "content": {
+                            "application/json": {
+                                "schema": {}
+                            }
+                        }
+                    },
+                    "error": {
+                        "description": "",
+                        "content": {
+                            "application/json": {
+                                "schema": {}
+                            }
+                        }
+                    },
+                    "result": {
+                        "description": "",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "type": "array",
+                                    "properties": {
+                                        "collectionId": {
+                                            "type": "string",
+                                            "description": ""
+                                        },
+                                        "collectionName": {
+                                            "type": "string",
+                                            "description": ""
+                                        },
+                                        "description": {
+                                            "type": "string",
+                                            "description": ""
+                                        },
+                                        "enabled": {
+                                            "type": "boolean",
+                                            "description": ""
+                                        }
+                                    },
+                                    "items": {
+                                        "type": "object",
+                                        "properties": {
+                                            "collectionId": {
+                                                "type": "string",
+                                                "description": ""
+                                            },
+                                            "collectionName": {
+                                                "type": "string",
+                                                "description": ""
+                                            },
+                                            "description": {
+                                                "type": "string",
+                                                "description": ""
+                                            },
+                                            "enabled": {
+                                                "type": "boolean",
+                                                "description": ""
+                                            }
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                },
+                "security": [
+                    {
+                        "ApiKeyAuth": [
+                            "syncloop"
+                        ]
+                    }
+                ]
+            }
+        }
+    },
+    "components": {
+        "securitySchemes": {
+            "ApiKeyAuth": {
+                "type": "apiKey",
+                "name": "Authorization",
+                "in": "header"
+            }
+        }
+    }
+}

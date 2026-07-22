@@ -1,0 +1,279 @@
+{
+  "input" : [ {
+    "id" : "j1_1",
+    "text" : "teamId",
+    "li_attr" : {
+      "id" : "j1_1"
+    },
+    "a_attr" : {
+      "href" : "#",
+      "id" : "j1_1_anchor"
+    },
+    "state" : {
+      "loaded" : true,
+      "opened" : false,
+      "selected" : false,
+      "disabled" : false,
+      "hidden" : false
+    },
+    "data" : {
+      "guid" : "d21b30e8-92dc-4d2a-9daa-64d3f837ed85",
+      "columnType" : "-1"
+    },
+    "children" : [ ],
+    "type" : "string"
+  } ],
+  "output" : [ {
+    "id" : "j2_1",
+    "text" : "TEAM",
+    "li_attr" : {
+      "id" : "j2_1"
+    },
+    "a_attr" : {
+      "href" : "#",
+      "id" : "j2_1_anchor"
+    },
+    "state" : {
+      "loaded" : true,
+      "opened" : true,
+      "selected" : false,
+      "disabled" : false,
+      "hidden" : false
+    },
+    "data" : {
+      "guid" : "680a35e4-f3d9-4542-9ec0-ebb771c92323",
+      "columnType" : "-1"
+    },
+    "children" : [ {
+      "id" : "j2_3",
+      "text" : "MODIFIED_TS_MS",
+      "li_attr" : {
+        "id" : "j2_3"
+      },
+      "a_attr" : {
+        "href" : "#",
+        "id" : "j2_3_anchor"
+      },
+      "state" : {
+        "loaded" : true,
+        "opened" : false,
+        "selected" : false,
+        "disabled" : false
+      },
+      "data" : {
+        "guid" : "e61b3137-6618-432d-9da6-ab16822a6e6f",
+        "columnType" : "-1"
+      },
+      "children" : [ ],
+      "type" : "integer"
+    }, {
+      "id" : "j2_4",
+      "text" : "APP_ID",
+      "li_attr" : {
+        "id" : "j2_4"
+      },
+      "a_attr" : {
+        "href" : "#",
+        "id" : "j2_4_anchor"
+      },
+      "state" : {
+        "loaded" : true,
+        "opened" : false,
+        "selected" : false,
+        "disabled" : false
+      },
+      "data" : {
+        "guid" : "7b8e3f5a-d2dc-4d7d-903a-bed3da55c201",
+        "columnType" : "-1"
+      },
+      "children" : [ ],
+      "type" : "string"
+    }, {
+      "id" : "j2_5",
+      "text" : "CREATED_TS_MS",
+      "li_attr" : {
+        "id" : "j2_5"
+      },
+      "a_attr" : {
+        "href" : "#",
+        "id" : "j2_5_anchor"
+      },
+      "state" : {
+        "loaded" : true,
+        "opened" : false,
+        "selected" : false,
+        "disabled" : false
+      },
+      "data" : {
+        "guid" : "24d71c67-f033-4070-b0c6-4f51e818d620",
+        "columnType" : "-1"
+      },
+      "children" : [ ],
+      "type" : "integer"
+    }, {
+      "id" : "j2_7",
+      "text" : "AGENT_IDS",
+      "li_attr" : {
+        "id" : "j2_7"
+      },
+      "a_attr" : {
+        "href" : "#",
+        "id" : "j2_7_anchor"
+      },
+      "state" : {
+        "loaded" : true,
+        "opened" : false,
+        "selected" : false,
+        "disabled" : false
+      },
+      "data" : {
+        "guid" : "b6890bc9-ef29-48ca-81a2-afcd28392671",
+        "columnType" : "-1"
+      },
+      "children" : [ ],
+      "type" : "document"
+    }, {
+      "id" : "j2_8",
+      "text" : "UUID",
+      "li_attr" : {
+        "id" : "j2_8"
+      },
+      "a_attr" : {
+        "href" : "#",
+        "id" : "j2_8_anchor"
+      },
+      "state" : {
+        "loaded" : true,
+        "opened" : false,
+        "selected" : false,
+        "disabled" : false
+      },
+      "data" : {
+        "guid" : "3a56f689-b6db-46c4-b29c-8b734cc76c62",
+        "columnType" : "-1"
+      },
+      "children" : [ ],
+      "type" : "string"
+    }, {
+      "id" : "j2_9",
+      "text" : "MANAGER_ID",
+      "li_attr" : {
+        "id" : "j2_9"
+      },
+      "a_attr" : {
+        "href" : "#",
+        "id" : "j2_9_anchor"
+      },
+      "state" : {
+        "loaded" : true,
+        "opened" : false,
+        "selected" : false,
+        "disabled" : false
+      },
+      "data" : {
+        "guid" : "81636f1e-af2a-4f9c-8143-e0731dbb95aa",
+        "columnType" : "-1"
+      },
+      "children" : [ ],
+      "type" : "string"
+    }, {
+      "id" : "j2_10",
+      "text" : "TEAM_ID",
+      "li_attr" : {
+        "id" : "j2_10"
+      },
+      "a_attr" : {
+        "href" : "#",
+        "id" : "j2_10_anchor"
+      },
+      "state" : {
+        "loaded" : true,
+        "opened" : false,
+        "selected" : false,
+        "disabled" : false
+      },
+      "data" : {
+        "guid" : "0370bb0d-192f-4cc9-9707-4383da2e1fc0",
+        "columnType" : "-1"
+      },
+      "children" : [ ],
+      "type" : "string"
+    }, {
+      "id" : "j2_11",
+      "text" : "NAME",
+      "li_attr" : {
+        "id" : "j2_11"
+      },
+      "a_attr" : {
+        "href" : "#",
+        "id" : "j2_11_anchor"
+      },
+      "state" : {
+        "loaded" : true,
+        "opened" : false,
+        "selected" : false,
+        "disabled" : false
+      },
+      "data" : {
+        "guid" : "01b025ef-40e4-4ee0-95b6-0eb00b57c4cb",
+        "columnType" : "-1"
+      },
+      "children" : [ ],
+      "type" : "string"
+    }, {
+      "id" : "j2_12",
+      "text" : "REQUIREMENT",
+      "li_attr" : {
+        "id" : "j2_12"
+      },
+      "a_attr" : {
+        "href" : "#",
+        "id" : "j2_12_anchor"
+      },
+      "state" : {
+        "loaded" : true,
+        "opened" : false,
+        "selected" : false,
+        "disabled" : false
+      },
+      "data" : {
+        "guid" : "c8a873d9-1011-4eb6-acce-2d0d4bcdd320",
+        "columnType" : "-1"
+      },
+      "children" : [ ],
+      "type" : "string"
+    } ],
+    "type" : "document"
+  }, {
+    "id" : "j2_2",
+    "text" : "status",
+    "li_attr" : {
+      "id" : "j2_2"
+    },
+    "a_attr" : {
+      "href" : "#",
+      "id" : "j2_2_anchor"
+    },
+    "state" : {
+      "loaded" : true,
+      "opened" : false,
+      "selected" : false,
+      "disabled" : false,
+      "hidden" : false
+    },
+    "data" : {
+      "guid" : "4c5b2f15-1816-469b-8a08-ac9fd006a720",
+      "columnType" : "-1"
+    },
+    "children" : [ ],
+    "type" : "string"
+  } ],
+  "package" : "cGFja2FnZSBwYWNrYWdlcy5Bd2FyZW5lc3MuZGFzaGJvYXJkLnNlcnZpY2VzLmphdmEudGVhbXM7",
+  "imports" : "aW1wb3J0IGNvbS5la2EubWlkZGxld2FyZS5zZXJ2aWNlLkRhdGFQaXBlbGluZTsKaW1wb3J0IGNvbS5la2EubWlkZGxld2FyZS5zZXJ2aWNlLlNlcnZpY2VVdGlsczsKaW1wb3J0IGNvbS5la2EubWlkZGxld2FyZS50ZW1wbGF0ZS5TbmlwcGV0RXhjZXB0aW9uOw==",
+  "main" : "dHJ5IHsKICAgIFN0cmluZyB0ZWFtSWQgPSBkYXRhUGlwZWxpbmUuZ2V0U3RyaW5nKCJ0ZWFtSWQiKTsKICAgIGlmICh0ZWFtSWQgPT0gbnVsbCB8fCB0ZWFtSWQudHJpbSgpLmlzRW1wdHkoKSkgewogICAgICAgIHRocm93IG5ldyBJbGxlZ2FsQXJndW1lbnRFeGNlcHRpb24oInRlYW1JZCBpcyByZXF1aXJlZCIpOwogICAgfQoKICAgIGphdmEudXRpbC5VVUlEIHRlYW1VVUlEID0gamF2YS51dGlsLlVVSUQuZnJvbVN0cmluZyh0ZWFtSWQudHJpbSgpKTsKCiAgICBhZ2VudHMuY29yZS50ZWFtcy5zZXJ2aWNlLlRlYW1zU2VydmljZSBzZXJ2aWNlID0KICAgICAgICAgICAgYWdlbnRzLmNvcmUudGVhbXMuc2VydmljZS5UZWFtc1NlcnZpY2UuZ2V0SW5zdGFuY2UoKTsKCiAgICBqYXZhLnV0aWwuTWFwPFN0cmluZywgT2JqZWN0PiB0ZWFtID0gc2VydmljZS5nZXRBc01hcCh0ZWFtVVVJRCk7CgogICAgaWYgKHRlYW0gPT0gbnVsbCB8fCB0ZWFtLmlzRW1wdHkoKSkgewogICAgICAgIHRocm93IG5ldyBJbGxlZ2FsQXJndW1lbnRFeGNlcHRpb24oInRlYW0gbm90IGZvdW5kIGZvciB0ZWFtSWQ6ICIgKyB0ZWFtSWQpOwogICAgfQoKICAgIGRhdGFQaXBlbGluZS5wdXQoIlRFQU0iLCB0ZWFtKTsKICAgIGRhdGFQaXBlbGluZS5wdXQoInN0YXR1cyIsICJzdWNjZXNzIik7Cn0gY2F0Y2ggKEV4Y2VwdGlvbiBlKSB7CiAgICBlLnByaW50U3RhY2tUcmFjZSgpOwogICAgZGF0YVBpcGVsaW5lLmNsZWFyKCk7CiAgICBkYXRhUGlwZWxpbmUucHV0KCJlcnJvciIsIGUuZ2V0TWVzc2FnZSgpKTsKICAgIGRhdGFQaXBlbGluZS5wdXQoInN0YXR1cyIsICJmYWlsZWQiKTsKICAgIG5ldyBTbmlwcGV0RXhjZXB0aW9uKGRhdGFQaXBlbGluZSwgIlNuaXBwZXQgZXhjZXB0aW9uIiwgbmV3IEV4Y2VwdGlvbihlKSk7Cn0=",
+  "staticWorkspace" : "",
+  "version" : "v1",
+  "consumers" : "",
+  "developers" : "developers",
+  "lockedByUser" : "rupeshgupta@syncloop.com"
+}

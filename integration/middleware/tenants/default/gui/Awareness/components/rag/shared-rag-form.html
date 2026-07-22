@@ -1,0 +1,205 @@
+<!-- components/rag/shared-rag-form.html -->
+<form name="ragFormNg" novalidate ng-submit="saveAgentRAG(ragFormNg)">
+
+    <div class="form-group row">
+        <label class="col-sm-4 entire_toggletitle pt-2">
+            Name
+            <a href="javascript:void(0)" class="info_tooltip">
+                <img src="Awareness/pub/images/info.svg"><span class="tooltiptext">Identifier for your RAG knowledge base.</span>
+            </a>
+        </label>
+        <div class="col-sm-8 position-rel">
+            <input type="text"
+                   class="input_form"
+                   name="ragName"
+                   placeholder="Enter RAG Name"
+                   ng-model="ragEdit.ragName"
+                   required
+                   ng-minlength="2"
+                   ng-class="{'input_formerror': (ragFormNg.ragName.$touched || ragFormNg.$submitted) && ragFormNg.ragName.$invalid}">
+            <div class="help-block form_error input_error"
+                 ng-if="(ragFormNg.ragName.$touched || ragFormNg.$submitted) && ragFormNg.ragName.$error.required">
+            </div>
+        </div>
+    </div>
+
+    <!-- Embedding Model (required) -->
+    <div class="form-group row">
+        <label class="col-sm-4 entire_toggletitle pt-2">
+            Embedding Model
+            <a href="javascript:void(0)" class="info_tooltip">
+                <img ng-src="Awareness/pub/images/info.svg">
+                <span class="tooltiptext">Select embedding model for this RAG</span>
+            </a>
+        </label>
+
+        <div class="col-sm-8 position-rel">
+            <select class="input_form"
+                    name="embeddingModel"
+                    ng-model="ragEdit.EMKey"
+                    ng-options="em.EMkey as em.displayName for em in spec.EMBEDDING_MODELs"
+                    required
+                    ng-class="{'input_formerror': (ragFormNg.embeddingModel.$touched || ragFormNg.$submitted) && ragFormNg.embeddingModel.$invalid}">
+
+                <!-- Placeholder -->
+<!--                <option value="">Select embedding model</option>-->
+            </select>
+
+            <div class="help-block form_error select_error"
+                 ng-if="(ragFormNg.embeddingModel.$touched || ragFormNg.$submitted) && ragFormNg.embeddingModel.$error.required">
+            </div>
+        </div>
+    </div>
+
+    <!-- Files (required) -->
+    <div class="form-group row">
+        <label class="col-sm-4 entire_toggletitle pt-2">
+            Files
+            <a href="javascript:void(0)" class="info_tooltip">
+                <img ng-src="Awareness/pub/images/info.svg">
+                <span class="tooltiptext">Documents indexed for search.</span>
+            </a>
+        </label>
+
+        <div class="col-sm-8 position-rel">
+            <input type="file"
+                   id="ragFileInput"
+                   accept=".pdf,.txt"
+                   multiple
+                   style="display:none;">
+
+            <div class="rag-drop-zone"
+                 file-drop-zone>
+
+                <input class="input_form"
+                       type="text"
+                       name="filesDisplay"
+                       placeholder="Choose files or drag & drop here"
+                       ng-model="ragEdit.filesDisplay"
+                       ng-attr-title="{{ragEdit.filesDisplayFull}}"
+                       required
+                       readonly
+                       style="padding-right:40px; overflow:hidden; text-overflow:ellipsis; white-space:nowrap;">
+            </div>
+
+
+            <a href="javascript:void(0)"
+               class="input-group-addon folder-path tooltip"
+               ng-click="onRAGActionClick()" style="right: 24px;"
+               ng-show="!(ragEdit.filesDisplay && ragEdit.filesDisplay.length)">
+                <img ng-src="Awareness/pub/images/Folder-icon.svg">
+                <span class="tooltiptext tooltiptextnope" style="left:-15px;">Choose files</span>
+            </a>
+
+            <img ng-src="Awareness/pub/images/Close_round_duotone_line.svg"
+                 class="folder-path cursor-pointer"
+                 ng-show="ragEdit.filesDisplay && ragEdit.filesDisplay.length"
+                 ng-click="clearRagPath()" style="width: 26px;right:15px">
+
+            <div class="help-block form_error folder_error"
+                 ng-if="(ragFormNg.filesDisplay.$touched || ragFormNg.$submitted) && ragFormNg.filesDisplay.$error.required">
+            </div>
+        </div>
+    </div>
+
+    <!-- File Pattern (required) -->
+    <div class="form-group row">
+        <label class="col-sm-4 entire_toggletitle pt-2">
+            File Pattern
+            <a href="javascript:void(0)" class="info_tooltip">
+                <img ng-src="Awareness/pub/images/info.svg">
+                <span class="tooltiptext">Filter for included file types.</span>
+            </a>
+        </label>
+        <div class="col-sm-8 position-rel">
+            <input type="text"
+                   class="input_form"
+                   name="filePattern"
+                   placeholder="*.txt, *.md"
+                   ng-model="ragEdit.filePattern"
+                   required
+                   ng-class="{'input_formerror': (ragFormNg.filePattern.$touched || ragFormNg.$submitted) && ragFormNg.filePattern.$invalid}">
+            <div class="help-block form_error input_error"
+                 ng-if="(ragFormNg.filePattern.$touched || ragFormNg.$submitted) && ragFormNg.filePattern.$error.required">
+            </div>
+        </div>
+    </div>
+
+    <!-- Max Segment Size -->
+    <div class="form-group row">
+        <label class="col-sm-4 entire_toggletitle pt-2">
+            Max Segment Size
+            <a href="javascript:void(0)" class="info_tooltip">
+                <img ng-src="Awareness/pub/images/info.svg">
+                <span class="tooltiptext">Maximum size of each text chunk.</span>
+            </a>
+        </label>
+        <div class="col-sm-8 position-rel">
+            <input type="number"
+                   class="input_form"
+                   name="maxSegment"
+                   min="1"
+                   ng-model="ragEdit.maxSegmentSizeInChars"
+                   required
+                   ng-class="{'input_formerror': (ragFormNg.maxSegment.$touched || ragFormNg.$submitted) && ragFormNg.maxSegment.$invalid}">
+            <div class="help-block form_error select_error"
+                 ng-if="(ragFormNg.maxSegment.$touched || ragFormNg.$submitted) && (ragFormNg.maxSegment.$error.required || ragFormNg.maxSegment.$error.min)">
+            </div>
+        </div>
+    </div>
+
+    <!-- Max Overlap Size -->
+    <div class="form-group row">
+        <label class="col-sm-4 entire_toggletitle pt-2">
+            Max Overlap Size
+            <a href="javascript:void(0)" class="info_tooltip">
+                <img ng-src="Awareness/pub/images/info.svg">
+                <span class="tooltiptext">Shared content between chunks.</span>
+            </a>
+        </label>
+        <div class="col-sm-8 position-rel">
+            <input type="number"
+                   class="input_form"
+                   name="maxOverlap"
+                   min="0"
+                   ng-model="ragEdit.maxOverlapSizeInChars"
+                   required
+                   ng-class="{'input_formerror': (ragFormNg.maxOverlap.$touched || ragFormNg.$submitted) && ragFormNg.maxOverlap.$invalid}">
+            <div class="help-block form_error select_error"
+                 ng-if="(ragFormNg.maxOverlap.$touched || ragFormNg.$submitted) && (ragFormNg.maxOverlap.$error.required || ragFormNg.maxOverlap.$error.min)">
+            </div>
+        </div>
+    </div>
+
+    <!-- Max Search Results -->
+    <div class="form-group row">
+        <label class="col-sm-4 entire_toggletitle pt-2">
+            Max Search Results
+            <a href="javascript:void(0)" class="info_tooltip">
+                <img ng-src="Awareness/pub/images/info.svg">
+                <span class="tooltiptext">Number of chunks retrieved per query.</span>
+            </a>
+        </label>
+        <div class="col-sm-8 position-rel">
+            <input type="number"
+                   class="input_form"
+                   name="maxResults"
+                   min="1"
+                   ng-model="ragEdit.maxSearchResults"
+                   required
+                   ng-class="{'input_formerror': (ragFormNg.maxResults.$touched || ragFormNg.$submitted) && ragFormNg.maxResults.$invalid}">
+            <div class="help-block form_error select_error"
+                 ng-if="(ragFormNg.maxResults.$touched || ragFormNg.$submitted) && (ragFormNg.maxResults.$error.required || ragFormNg.maxResults.$error.min)">
+            </div>
+        </div>
+    </div>
+
+    <!-- Submit -->
+    <div class="text-center mt-4 mb-5">
+        <button type="submit" class="create_btn" ng-disabled="saveInProgress">
+            <span ng-if="!saveInProgress">Create</span>
+            <span ng-if="saveInProgress">Creating…</span>
+        </button>
+    </div>
+
+</form>

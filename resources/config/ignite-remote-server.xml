@@ -1,0 +1,198 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+  Production baseline for running Apache Ignite as a separate server for Syncloop.
+
+  Use this file only for the external Ignite server nodes. The Syncloop middleware
+  should use:
+
+      middleware.ignite.mode=remote
+      middleware.ignite.thinClient.addresses=10.224.1.115:10800
+
+  Start an Ignite server with this config, for example:
+
+      ignite.sh /path/to/ignite-remote-server.xml
+      ignite.bat C:\path\to\ignite-remote-server.xml
+
+  When running Ignite 2.18 on Java 25, keep Ignite's required JVM module
+  opens in the server startup options. At minimum this config validation needed:
+
+      add-opens java.base/java.nio to ALL-UNNAMED
+
+  Every Ignite server node in the cluster must use the same data-region names:
+      SL-OffHeapRegion
+      SL-OffHeapRegion-persisted
+
+  Tune memory sizes and discovery addresses before production rollout.
+-->
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:util="http://www.springframework.org/schema/util"
+       xsi:schemaLocation="
+           http://www.springframework.org/schema/beans
+           http://www.springframework.org/schema/beans/spring-beans.xsd
+           http://www.springframework.org/schema/util
+           http://www.springframework.org/schema/util/spring-util.xsd">
+
+    <bean id="ignite.cfg" class="org.apache.ignite.configuration.IgniteConfiguration">
+        <!-- Set a unique value per server node. Do not reuse one consistentId on multiple servers. -->
+        <property name="consistentId" value="SL-RemoteServer-1"/>
+
+        <!-- This must be the real Ignite server IP reachable by Syncloop clients. Do not use 0.0.0.0 here. -->
+        <property name="localHost" value="10.224.1.115"/>
+
+        <!-- Change this to a fast persistent disk path. Do not share the directory across nodes. -->
+        <property name="workDirectory" value="/var/lib/syncloop/ignite"/>
+
+        <property name="shutdownPolicy">
+            <util:constant static-field="org.apache.ignite.ShutdownPolicy.GRACEFUL"/>
+        </property>
+
+        <property name="peerClassLoadingEnabled" value="true"/>
+        <property name="metricsLogFrequency" value="0"/>
+        <property name="clusterStateOnStart">
+            <util:constant static-field="org.apache.ignite.cluster.ClusterState.ACTIVE"/>
+        </property>
+
+        <property name="sqlConfiguration">
+            <bean class="org.apache.ignite.configuration.SqlConfiguration">
+                <property name="queryEnginesConfiguration">
+                    <list>
+                        <bean class="org.apache.ignite.calcite.CalciteQueryEngineConfiguration">
+                            <property name="default" value="true"/>
+                        </bean>
+                    </list>
+                </property>
+            </bean>
+        </property>
+
+        <property name="clientConnectorConfiguration">
+            <bean class="org.apache.ignite.configuration.ClientConnectorConfiguration">
+                <property name="host" value="10.224.1.115"/>
+                <property name="port" value="10800"/>
+                <property name="portRange" value="10"/>
+                <property name="thinClientEnabled" value="true"/>
+                <property name="jdbcEnabled" value="true"/>
+                <property name="odbcEnabled" value="false"/>
+                <property name="maxOpenCursorsPerConnection" value="512"/>
+                <property name="threadPoolSize" value="32"/>
+            </bean>
+        </property>
+
+        <property name="serviceConfiguration">
+            <list>
+                <bean class="org.apache.ignite.services.ServiceConfiguration">
+                    <property name="name" value="syncloop-cache-provisioner"/>
+                    <property name="maxPerNodeCount" value="1"/>
+                    <property name="totalCount" value="1"/>
+                    <property name="service">
+                        <bean class="com.eka.middleware.adapter.SyncloopCacheProvisionerService"/>
+                    </property>
+                </bean>
+            </list>
+        </property>
+
+        <property name="discoverySpi">
+            <bean class="org.apache.ignite.spi.discovery.tcp.TcpDiscoverySpi">
+                <property name="localAddress" value="10.224.1.115"/>
+                <property name="localPort" value="48500"/>
+                <property name="localPortRange" value="20"/>
+                <property name="socketTimeout" value="5000"/>
+                <property name="ackTimeout" value="5000"/>
+                <property name="maxAckTimeout" value="30000"/>
+                <property name="networkTimeout" value="10000"/>
+                <property name="reconnectCount" value="5"/>
+                <property name="reconnectDelay" value="5000"/>
+                <property name="clientReconnectDisabled" value="false"/>
+                <property name="ipFinder">
+                    <bean class="org.apache.ignite.spi.discovery.tcp.ipfinder.vm.TcpDiscoveryVmIpFinder">
+                        <!-- Replace with all Ignite server discovery endpoints. Include this node too. -->
+                        <property name="addresses">
+                            <list>
+                                <value>10.224.1.115:48500</value>
+                            </list>
+                        </property>
+                    </bean>
+                </property>
+            </bean>
+        </property>
+
+        <property name="communicationSpi">
+            <bean class="org.apache.ignite.spi.communication.tcp.TcpCommunicationSpi">
+                <property name="localAddress" value="10.224.1.115"/>
+                <property name="localPort" value="48100"/>
+                <property name="localPortRange" value="20"/>
+                <property name="connectTimeout" value="5000"/>
+                <property name="socketWriteTimeout" value="2000"/>
+                <property name="idleConnectionTimeout" value="30000"/>
+                <property name="connectionsPerNode" value="2"/>
+                <property name="messageQueueLimit" value="2048"/>
+                <property name="slowClientQueueLimit" value="512"/>
+            </bean>
+        </property>
+
+        <property name="dataStorageConfiguration">
+            <bean class="org.apache.ignite.configuration.DataStorageConfiguration">
+                <property name="walMode">
+                    <util:constant static-field="org.apache.ignite.configuration.WALMode.BACKGROUND"/>
+                </property>
+                <property name="writeThrottlingEnabled" value="true"/>
+                <property name="checkpointReadLockTimeout" value="180000"/>
+                <property name="walCompactionEnabled" value="true"/>
+                <property name="walSegments" value="64"/>
+                <property name="walSegmentSize" value="67108864"/>
+
+                <property name="defaultDataRegionConfiguration">
+                    <bean class="org.apache.ignite.configuration.DataRegionConfiguration">
+                        <property name="name" value="default"/>
+                        <property name="initialSize" value="268435456"/>
+                        <property name="maxSize" value="33285996544"/>
+                        <property name="persistenceEnabled" value="false"/>
+                        <property name="pageEvictionMode">
+                            <util:constant static-field="org.apache.ignite.configuration.DataPageEvictionMode.RANDOM_2_LRU"/>
+                        </property>
+                        <property name="evictionThreshold" value="0.5"/>
+                    </bean>
+                </property>
+
+                <property name="dataRegionConfigurations">
+                    <list>
+                        <bean class="org.apache.ignite.configuration.DataRegionConfiguration">
+                            <property name="name" value="SL-OffHeapRegion"/>
+                            <property name="initialSize" value="1073741824"/>
+                            <property name="maxSize" value="2147483648"/>
+                            <property name="persistenceEnabled" value="false"/>
+                            <property name="pageEvictionMode">
+                                <util:constant static-field="org.apache.ignite.configuration.DataPageEvictionMode.RANDOM_2_LRU"/>
+                            </property>
+                            <property name="evictionThreshold" value="0.9"/>
+                            <property name="emptyPagesPoolSize" value="100"/>
+                            <!-- Optional: set a node-local swap path on Linux. -->
+                            <!-- <property name="swapPath" value="/var/lib/syncloop/ignite/swap"/> -->
+                        </bean>
+
+                        <bean class="org.apache.ignite.configuration.DataRegionConfiguration">
+                            <property name="name" value="SL-OffHeapRegion-persisted"/>
+                            <property name="initialSize" value="1073741824"/>
+                            <property name="maxSize" value="2147483648"/>
+                            <property name="persistenceEnabled" value="false"/>
+                        </bean>
+                    </list>
+                </property>
+            </bean>
+        </property>
+
+        <property name="failureHandler">
+            <bean class="org.apache.ignite.failure.StopNodeOrHaltFailureHandler">
+                <constructor-arg value="true"/>
+                <constructor-arg value="10000"/>
+            </bean>
+        </property>
+
+        <property name="rebalanceBatchSize" value="8388608"/>
+        <property name="rebalanceThreadPoolSize" value="8"/>
+        <property name="rebalanceThrottle" value="5000"/>
+        <property name="rebalanceBatchesPrefetchCount" value="4"/>
+        <property name="failureDetectionTimeout" value="30000"/>
+        <property name="clientFailureDetectionTimeout" value="30000"/>
+    </bean>
+</beans>

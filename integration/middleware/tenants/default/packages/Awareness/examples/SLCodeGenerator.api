@@ -1,0 +1,566 @@
+{
+  "latest" : {
+    "createdTS" : "",
+    "input" : [ {
+      "id" : "j2_1",
+      "text" : "prompt",
+      "li_attr" : {
+        "id" : "j2_1"
+      },
+      "a_attr" : {
+        "href" : "#",
+        "id" : "j2_1_anchor"
+      },
+      "state" : {
+        "loaded" : true,
+        "opened" : false,
+        "selected" : false,
+        "disabled" : false,
+        "hidden" : false
+      },
+      "data" : {
+        "guid" : "5796eed5-c45a-4940-b7fd-a5d92d86fa9c",
+        "columnType" : "-1"
+      },
+      "children" : [ ],
+      "type" : "string"
+    } ],
+    "output" : [ {
+      "id" : "j3_2",
+      "text" : "resp",
+      "li_attr" : {
+        "id" : "j3_2"
+      },
+      "a_attr" : {
+        "href" : "#",
+        "id" : "j3_2_anchor"
+      },
+      "state" : {
+        "loaded" : true,
+        "opened" : false,
+        "selected" : false,
+        "disabled" : false,
+        "hidden" : false
+      },
+      "data" : { },
+      "children" : [ ],
+      "type" : "string"
+    }, {
+      "id" : "j3_3",
+      "text" : "request",
+      "li_attr" : {
+        "id" : "j3_3"
+      },
+      "a_attr" : {
+        "href" : "#",
+        "id" : "j3_3_anchor"
+      },
+      "state" : {
+        "loaded" : true,
+        "opened" : false,
+        "selected" : false,
+        "disabled" : false,
+        "hidden" : false
+      },
+      "data" : { },
+      "children" : [ ],
+      "type" : "string"
+    } ],
+    "api" : [ {
+      "id" : "j1_3",
+      "text" : "Group",
+      "li_attr" : {
+        "id" : "j1_3"
+      },
+      "a_attr" : {
+        "href" : "javascript:void(0)",
+        "id" : "j1_3_anchor"
+      },
+      "state" : {
+        "loaded" : true,
+        "opened" : true,
+        "selected" : false,
+        "disabled" : false,
+        "hidden" : false
+      },
+      "data" : {
+        "guid" : "9783e7cc-0c79-444b-8ced-b9de36eb52e4",
+        "columnType" : "-1",
+        "comment" : "Ask Charli to enhance and expand the user prompt"
+      },
+      "children" : [ {
+        "id" : "j1_1",
+        "text" : "Transformer",
+        "li_attr" : {
+          "id" : "j1_1"
+        },
+        "a_attr" : {
+          "href" : "#",
+          "id" : "j1_1_anchor"
+        },
+        "state" : {
+          "loaded" : true,
+          "opened" : false,
+          "selected" : false,
+          "disabled" : false
+        },
+        "data" : {
+          "guid" : "a31c6ef8-ee3f-41f3-9047-1740d94b7e08",
+          "columnType" : "-1",
+          "transformers" : [ ],
+          "lines" : [ ],
+          "dropList" : [ ],
+          "createList" : [ {
+            "path" : "charli",
+            "value" : "020f32e0-e94b-40c8-9dcb-81670d77c59c",
+            "id" : "0492742b-2f26-4972-951c-f1ae59cbd111",
+            "typePath" : "string"
+          }, {
+            "path" : "memory",
+            "value" : "true",
+            "id" : "10bc9809-c2bc-4bfa-8da8-1fa4b32bafac",
+            "typePath" : "boolean"
+          }, {
+            "path" : "rag",
+            "value" : "false",
+            "id" : "f7c8ab86-7430-49fc-a5a6-b33a7b488aa9",
+            "typePath" : "boolean"
+          }, {
+            "path" : "tools",
+            "value" : "true",
+            "id" : "ab336072-c469-41a2-9eb6-e09455ce7525",
+            "typePath" : "boolean"
+          }, {
+            "path" : "request",
+            "value" : "Enhance and expand the user query. Remember to make it short and to the point. \nUser Query:  \n#{prompt}\nNotes:\n1. No need to introduce yourself.\n2. Just produce what's requested.\n3. Do not over answer the question.\n4. Be precise.",
+            "id" : "f32b2547-87b2-4725-bd98-87d7d5cfdc39",
+            "evaluate" : "EEV",
+            "typePath" : "string"
+          } ],
+          "initiateList" : [ {
+            "path" : "charli",
+            "id" : "3b31d21a-fef9-4865-97b5-3f8107d58269",
+            "typePath" : "string"
+          }, {
+            "path" : "memory",
+            "id" : "9fbe70c9-a92a-41bb-82cc-e008c50271bf",
+            "typePath" : "boolean"
+          }, {
+            "path" : "rag",
+            "id" : "f16fd240-a038-4e9d-8645-27d17326949d",
+            "typePath" : "boolean"
+          }, {
+            "path" : "tools",
+            "id" : "b42ff58f-67ee-4e73-b386-20f12b281999",
+            "typePath" : "boolean"
+          }, {
+            "path" : "request",
+            "id" : "3ecdb5a7-8e31-4ff8-b513-ae659dde497e",
+            "typePath" : "string"
+          } ],
+          "comment" : "Configure Investigator agent Charli"
+        },
+        "children" : [ ],
+        "type" : "transformer"
+      }, {
+        "id" : "j1_2",
+        "text" : "Invoke",
+        "li_attr" : {
+          "id" : "j1_2"
+        },
+        "a_attr" : {
+          "href" : "#",
+          "id" : "j1_2_anchor"
+        },
+        "state" : {
+          "loaded" : true,
+          "opened" : false,
+          "selected" : false,
+          "disabled" : false
+        },
+        "data" : {
+          "guid" : "0fbff476-1b95-4476-a2f2-3fabcc9a50c2",
+          "columnType" : "-1",
+          "transformers" : [ {
+            "op" : "copy",
+            "from" : "/charli",
+            "to" : "/agentID",
+            "inTypePath" : "string",
+            "outTypePath" : "string",
+            "direction" : "in"
+          }, {
+            "op" : "copy",
+            "from" : "/memory",
+            "to" : "/disableMemory",
+            "inTypePath" : "boolean",
+            "outTypePath" : "boolean",
+            "direction" : "in"
+          }, {
+            "op" : "copy",
+            "from" : "/rag",
+            "to" : "/disableRAG",
+            "inTypePath" : "boolean",
+            "outTypePath" : "boolean",
+            "direction" : "in"
+          }, {
+            "op" : "copy",
+            "from" : "/tools",
+            "to" : "/disableTools",
+            "inTypePath" : "boolean",
+            "outTypePath" : "boolean",
+            "direction" : "in"
+          }, {
+            "op" : "copy",
+            "from" : "/request",
+            "to" : "/prompt",
+            "inTypePath" : "string",
+            "outTypePath" : "string",
+            "direction" : "in"
+          }, {
+            "op" : "copy",
+            "from" : "/resp",
+            "to" : "/prompt",
+            "inTypePath" : "string",
+            "outTypePath" : "string",
+            "direction" : "out"
+          } ],
+          "lines" : [ {
+            "inputPath" : "charli",
+            "outputPath" : "agentID",
+            "inpJsTree" : "#launching_arrow_jsTree",
+            "outpJsTree" : "#landing_arrow_jsTree_function",
+            "INPath" : "charli",
+            "OUTPath" : "agentID",
+            "direction" : "in",
+            "op" : "copy",
+            "line" : 0,
+            "dashedLine" : false,
+            "inType" : "string",
+            "outType" : "string",
+            "inTypePath" : "string",
+            "outTypePath" : "string"
+          }, {
+            "inputPath" : "memory",
+            "outputPath" : "disableMemory",
+            "inpJsTree" : "#launching_arrow_jsTree",
+            "outpJsTree" : "#landing_arrow_jsTree_function",
+            "INPath" : "memory",
+            "OUTPath" : "disableMemory",
+            "direction" : "in",
+            "op" : "copy",
+            "line" : 0,
+            "dashedLine" : false,
+            "inType" : "boolean",
+            "outType" : "boolean",
+            "inTypePath" : "boolean",
+            "outTypePath" : "boolean"
+          }, {
+            "inputPath" : "rag",
+            "outputPath" : "disableRAG",
+            "inpJsTree" : "#launching_arrow_jsTree",
+            "outpJsTree" : "#landing_arrow_jsTree_function",
+            "INPath" : "rag",
+            "OUTPath" : "disableRAG",
+            "direction" : "in",
+            "op" : "copy",
+            "line" : 0,
+            "dashedLine" : false,
+            "inType" : "boolean",
+            "outType" : "boolean",
+            "inTypePath" : "boolean",
+            "outTypePath" : "boolean"
+          }, {
+            "inputPath" : "tools",
+            "outputPath" : "disableTools",
+            "inpJsTree" : "#launching_arrow_jsTree",
+            "outpJsTree" : "#landing_arrow_jsTree_function",
+            "INPath" : "tools",
+            "OUTPath" : "disableTools",
+            "direction" : "in",
+            "op" : "copy",
+            "line" : 0,
+            "dashedLine" : false,
+            "inType" : "boolean",
+            "outType" : "boolean",
+            "inTypePath" : "boolean",
+            "outTypePath" : "boolean"
+          }, {
+            "inputPath" : "request",
+            "outputPath" : "prompt",
+            "inpJsTree" : "#launching_arrow_jsTree",
+            "outpJsTree" : "#landing_arrow_jsTree_function",
+            "INPath" : "request",
+            "OUTPath" : "prompt",
+            "direction" : "in",
+            "op" : "copy",
+            "line" : 0,
+            "dashedLine" : false,
+            "inType" : "string",
+            "outType" : "string",
+            "inTypePath" : "string",
+            "outTypePath" : "string"
+          }, {
+            "inputPath" : "resp",
+            "outputPath" : "prompt",
+            "inpJsTree" : "#launching_arrow_jsTree_function",
+            "outpJsTree" : "#landing_arrow_jsTree",
+            "INPath" : "resp",
+            "OUTPath" : "prompt",
+            "direction" : "out",
+            "op" : "copy",
+            "line" : 0,
+            "dashedLine" : false,
+            "inType" : "string",
+            "outType" : "string",
+            "inTypePath" : "string",
+            "outTypePath" : "string"
+          } ],
+          "dropList" : [ ],
+          "createList" : [ ],
+          "initiateList" : [ ],
+          "fqn" : "packages/Awareness/assistant/utils/chat",
+          "serviceType" : "service"
+        },
+        "children" : [ ],
+        "type" : "invoke"
+      } ],
+      "type" : "group"
+    }, {
+      "id" : "j1_4",
+      "text" : "Group",
+      "li_attr" : {
+        "id" : "j1_4"
+      },
+      "a_attr" : {
+        "href" : "javascript:void(0)",
+        "id" : "j1_4_anchor"
+      },
+      "state" : {
+        "loaded" : true,
+        "opened" : true,
+        "selected" : false,
+        "disabled" : false,
+        "hidden" : false
+      },
+      "data" : {
+        "guid" : "0be43ee7-3127-466e-9e30-156df8ae4024",
+        "columnType" : "-1",
+        "comment" : "Ask the Maya to generate the program based on Charli's query"
+      },
+      "children" : [ {
+        "id" : "j1_5",
+        "text" : "Transformer",
+        "li_attr" : {
+          "id" : "j1_5"
+        },
+        "a_attr" : {
+          "href" : "#",
+          "id" : "j1_5_anchor"
+        },
+        "state" : {
+          "loaded" : true,
+          "opened" : false,
+          "selected" : true,
+          "disabled" : false
+        },
+        "data" : {
+          "guid" : "63697428-f3dc-491d-94ac-f01527b06d9f",
+          "columnType" : "-1",
+          "transformers" : [ ],
+          "lines" : [ ],
+          "dropList" : [ ],
+          "createList" : [ {
+            "path" : "Maya",
+            "value" : "7d89d966-4f1c-4e6e-a20c-b7ca6ce85cad",
+            "id" : "344e8972-5f26-4f6b-9438-013e23aac12d",
+            "typePath" : "string"
+          }, {
+            "path" : "request",
+            "value" : "You are deep thinker and reasoner. Generate the Syncloop code with fully qualified and working Syncloop JSON. \nUser Query:  \n#{prompt}\nNotes:\n1. No need to introduce yourself.\n2. Just produce what's requested.\n3. Do not over answer the question.\n4. Be precise.",
+            "id" : "ea0f56ec-08ad-462a-8fc8-62b00331cb61",
+            "typePath" : "string"
+          } ],
+          "initiateList" : [ {
+            "path" : "Maya",
+            "id" : "2ecf72d5-7311-4937-9a0c-e84ddea6a665",
+            "typePath" : "string"
+          } ]
+        },
+        "children" : [ ],
+        "type" : "transformer"
+      }, {
+        "id" : "j1_6",
+        "text" : "Invoke",
+        "li_attr" : {
+          "id" : "j1_6"
+        },
+        "a_attr" : {
+          "href" : "#",
+          "id" : "j1_6_anchor"
+        },
+        "state" : {
+          "loaded" : true,
+          "opened" : false,
+          "selected" : false,
+          "disabled" : false
+        },
+        "data" : {
+          "guid" : "aeed7515-f5f4-40c1-95a9-3c297496a2cc",
+          "columnType" : "-1",
+          "transformers" : [ {
+            "op" : "copy",
+            "from" : "/Maya",
+            "to" : "/agentID",
+            "inTypePath" : "string",
+            "outTypePath" : "string",
+            "direction" : "in"
+          }, {
+            "op" : "copy",
+            "from" : "/memory",
+            "to" : "/disableMemory",
+            "inTypePath" : "boolean",
+            "outTypePath" : "boolean",
+            "direction" : "in"
+          }, {
+            "op" : "copy",
+            "from" : "/rag",
+            "to" : "/disableRAG",
+            "inTypePath" : "boolean",
+            "outTypePath" : "boolean",
+            "direction" : "in"
+          }, {
+            "op" : "copy",
+            "from" : "/tools",
+            "to" : "/disableTools",
+            "inTypePath" : "boolean",
+            "outTypePath" : "boolean",
+            "direction" : "in"
+          }, {
+            "op" : "copy",
+            "from" : "/resp",
+            "to" : "/resp",
+            "inTypePath" : "string",
+            "outTypePath" : "string",
+            "direction" : "out"
+          }, {
+            "op" : "copy",
+            "from" : "/request",
+            "to" : "/prompt",
+            "inTypePath" : "string",
+            "outTypePath" : "string",
+            "direction" : "in"
+          } ],
+          "lines" : [ {
+            "inputPath" : "Maya",
+            "outputPath" : "agentID",
+            "inpJsTree" : "#launching_arrow_jsTree",
+            "outpJsTree" : "#landing_arrow_jsTree_function",
+            "INPath" : "Maya",
+            "OUTPath" : "agentID",
+            "direction" : "in",
+            "op" : "copy",
+            "line" : 0,
+            "dashedLine" : false,
+            "inType" : "string",
+            "outType" : "string",
+            "inTypePath" : "string",
+            "outTypePath" : "string"
+          }, {
+            "inputPath" : "memory",
+            "outputPath" : "disableMemory",
+            "inpJsTree" : "#launching_arrow_jsTree",
+            "outpJsTree" : "#landing_arrow_jsTree_function",
+            "INPath" : "memory",
+            "OUTPath" : "disableMemory",
+            "direction" : "in",
+            "op" : "copy",
+            "line" : 0,
+            "dashedLine" : false,
+            "inType" : "boolean",
+            "outType" : "boolean",
+            "inTypePath" : "boolean",
+            "outTypePath" : "boolean"
+          }, {
+            "inputPath" : "rag",
+            "outputPath" : "disableRAG",
+            "inpJsTree" : "#launching_arrow_jsTree",
+            "outpJsTree" : "#landing_arrow_jsTree_function",
+            "INPath" : "rag",
+            "OUTPath" : "disableRAG",
+            "direction" : "in",
+            "op" : "copy",
+            "line" : 0,
+            "dashedLine" : false,
+            "inType" : "boolean",
+            "outType" : "boolean",
+            "inTypePath" : "boolean",
+            "outTypePath" : "boolean"
+          }, {
+            "inputPath" : "tools",
+            "outputPath" : "disableTools",
+            "inpJsTree" : "#launching_arrow_jsTree",
+            "outpJsTree" : "#landing_arrow_jsTree_function",
+            "INPath" : "tools",
+            "OUTPath" : "disableTools",
+            "direction" : "in",
+            "op" : "copy",
+            "line" : 0,
+            "dashedLine" : false,
+            "inType" : "boolean",
+            "outType" : "boolean",
+            "inTypePath" : "boolean",
+            "outTypePath" : "boolean"
+          }, {
+            "inputPath" : "resp",
+            "outputPath" : "resp",
+            "inpJsTree" : "#launching_arrow_jsTree_function",
+            "outpJsTree" : "#landing_arrow_jsTree",
+            "INPath" : "resp",
+            "OUTPath" : "resp",
+            "direction" : "out",
+            "op" : "copy",
+            "line" : 0,
+            "dashedLine" : false,
+            "inType" : "string",
+            "outType" : "string",
+            "inTypePath" : "string",
+            "outTypePath" : "string"
+          }, {
+            "inputPath" : "request",
+            "outputPath" : "prompt",
+            "inpJsTree" : "#launching_arrow_jsTree",
+            "outpJsTree" : "#landing_arrow_jsTree_function",
+            "INPath" : "request",
+            "OUTPath" : "prompt",
+            "direction" : "in",
+            "op" : "copy",
+            "line" : 0,
+            "dashedLine" : false,
+            "inType" : "string",
+            "outType" : "string",
+            "inTypePath" : "string",
+            "outTypePath" : "string"
+          } ],
+          "dropList" : [ ],
+          "createList" : [ ],
+          "initiateList" : [ ],
+          "fqn" : "packages/Awareness/assistant/utils/chat",
+          "serviceType" : "service"
+        },
+        "children" : [ ],
+        "type" : "invoke"
+      } ],
+      "type" : "group"
+    } ],
+    "api_info" : {
+      "title" : "",
+      "description" : ""
+    },
+    "lockedByUser" : "admin"
+  },
+  "consumers" : "",
+  "developers" : "developers",
+  "enableServiceDocumentValidation" : false,
+  "created_on" : "1739808178463",
+  "modified_on" : 1739808178463
+}

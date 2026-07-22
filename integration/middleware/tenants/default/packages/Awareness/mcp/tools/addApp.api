@@ -1,0 +1,446 @@
+{
+  "latest" : {
+    "createdTS" : "",
+    "input" : [ {
+      "id" : "j2_1",
+      "text" : "*payload",
+      "li_attr" : {
+        "id" : "j2_1"
+      },
+      "a_attr" : {
+        "href" : "#",
+        "id" : "j2_1_anchor"
+      },
+      "state" : {
+        "loaded" : true,
+        "opened" : true,
+        "selected" : false,
+        "disabled" : false,
+        "hidden" : false
+      },
+      "data" : { },
+      "children" : [ {
+        "id" : "j2_2",
+        "text" : "name",
+        "li_attr" : {
+          "id" : "j2_2"
+        },
+        "a_attr" : {
+          "href" : "#",
+          "id" : "j2_2_anchor"
+        },
+        "state" : {
+          "loaded" : true,
+          "opened" : false,
+          "selected" : false,
+          "disabled" : false
+        },
+        "data" : {
+          "fieldDescription" : "TmFtZSBvZiB0aGUgYXBwCg==",
+          "assignList" : [ {
+            "path" : "*payload/name",
+            "value" : "",
+            "typePath" : "document/string"
+          } ]
+        },
+        "children" : [ ],
+        "type" : "string"
+      }, {
+        "id" : "j2_3",
+        "text" : "description",
+        "li_attr" : {
+          "id" : "j2_3"
+        },
+        "a_attr" : {
+          "href" : "#",
+          "id" : "j2_3_anchor"
+        },
+        "state" : {
+          "loaded" : true,
+          "opened" : false,
+          "selected" : false,
+          "disabled" : false
+        },
+        "data" : {
+          "fieldDescription" : "RGVzY3JpcHRpb24gZm9yIHRoZSBhcHA=",
+          "assignList" : [ {
+            "path" : "*payload/description",
+            "value" : "",
+            "typePath" : "document/string"
+          } ]
+        },
+        "children" : [ ],
+        "type" : "string"
+      }, {
+        "id" : "j2_4",
+        "text" : "llmKey",
+        "li_attr" : {
+          "id" : "j2_4"
+        },
+        "a_attr" : {
+          "href" : "#",
+          "id" : "j2_4_anchor"
+        },
+        "state" : {
+          "loaded" : true,
+          "opened" : false,
+          "selected" : false,
+          "disabled" : false
+        },
+        "data" : {
+          "fieldDescription" : "V2hpY2ggbGxtIG1vZGVsIGl0IHdpbGwgdXNlLg==",
+          "assignList" : [ {
+            "path" : "*payload/llmKey",
+            "value" : "",
+            "typePath" : "document/string"
+          } ]
+        },
+        "children" : [ ],
+        "type" : "string"
+      }, {
+        "id" : "j2_5",
+        "text" : "appLink",
+        "li_attr" : {
+          "id" : "j2_5"
+        },
+        "a_attr" : {
+          "href" : "#",
+          "id" : "j2_5_anchor"
+        },
+        "state" : {
+          "loaded" : true,
+          "opened" : false,
+          "selected" : false,
+          "disabled" : false
+        },
+        "data" : {
+          "fieldDescription" : "Rm9yIHdoaWNoIHNlcnZpY2UgaXQgd2lsbCBiZSB1c2VkCg==",
+          "assignList" : [ {
+            "path" : "*payload/appLink",
+            "value" : "",
+            "typePath" : "document/string"
+          } ]
+        },
+        "children" : [ ],
+        "type" : "string"
+      }, {
+        "id" : "j2_6",
+        "text" : "reportingAgentId",
+        "li_attr" : {
+          "id" : "j2_6"
+        },
+        "a_attr" : {
+          "href" : "#",
+          "id" : "j2_6_anchor"
+        },
+        "state" : {
+          "loaded" : true,
+          "opened" : false,
+          "selected" : false,
+          "disabled" : false
+        },
+        "data" : {
+          "fieldDescription" : "dGhlcmUncyBhIHJlcG9ydGluZyBhZ2VudC4=",
+          "assignList" : [ {
+            "path" : "*payload/reportingAgentId",
+            "value" : "",
+            "typePath" : "document/string"
+          } ]
+        },
+        "children" : [ ],
+        "type" : "string"
+      }, {
+        "id" : "j2_7",
+        "text" : "terminationAgentId",
+        "li_attr" : {
+          "id" : "j2_7"
+        },
+        "a_attr" : {
+          "href" : "#",
+          "id" : "j2_7_anchor"
+        },
+        "state" : {
+          "loaded" : true,
+          "opened" : false,
+          "selected" : false,
+          "disabled" : false
+        },
+        "data" : {
+          "fieldDescription" : "VGhlcmUncyBhIHRlcm1pbmF0aW9uIGFnZW50Cg==",
+          "assignList" : [ {
+            "path" : "*payload/terminationAgentId",
+            "value" : "",
+            "typePath" : "document/string"
+          } ]
+        },
+        "children" : [ ],
+        "type" : "string"
+      }, {
+        "id" : "j2_8",
+        "text" : "appId",
+        "li_attr" : {
+          "id" : "j2_8"
+        },
+        "a_attr" : {
+          "href" : "#",
+          "id" : "j2_8_anchor"
+        },
+        "state" : {
+          "loaded" : true,
+          "opened" : false,
+          "selected" : true,
+          "disabled" : false
+        },
+        "data" : {
+          "fieldDescription" : "VW5pcXVlIGlkIGZvciB0aGUgYXBw",
+          "assignList" : [ {
+            "path" : "*payload/appId",
+            "value" : "",
+            "typePath" : "document/string"
+          } ]
+        },
+        "children" : [ ],
+        "type" : "string"
+      } ],
+      "type" : "document"
+    } ],
+    "output" : [ {
+      "id" : "j3_1",
+      "text" : "success",
+      "li_attr" : {
+        "id" : "j3_1"
+      },
+      "a_attr" : {
+        "href" : "#",
+        "id" : "j3_1_anchor"
+      },
+      "state" : {
+        "loaded" : true,
+        "opened" : false,
+        "selected" : false,
+        "disabled" : false,
+        "hidden" : false
+      },
+      "data" : { },
+      "children" : [ ],
+      "type" : "boolean"
+    } ],
+    "api" : [ {
+      "id" : "j1_1",
+      "text" : "Invoke",
+      "li_attr" : {
+        "id" : "j1_1"
+      },
+      "a_attr" : {
+        "href" : "javascript:void(0)",
+        "id" : "j1_1_anchor"
+      },
+      "state" : {
+        "loaded" : true,
+        "opened" : false,
+        "selected" : false,
+        "disabled" : false,
+        "hidden" : false
+      },
+      "data" : {
+        "guid" : "59b27a17-c3d2-41e7-b763-469ce2ec1925",
+        "columnType" : "-1",
+        "transformers" : [ {
+          "op" : "copy",
+          "from" : "/success",
+          "to" : "/success",
+          "inTypePath" : "boolean",
+          "outTypePath" : "boolean",
+          "direction" : "out"
+        }, {
+          "op" : "copy",
+          "from" : "/*payload/name",
+          "to" : "/*payload/name",
+          "inTypePath" : "document/string",
+          "outTypePath" : "document/string",
+          "direction" : "in"
+        }, {
+          "op" : "copy",
+          "from" : "/*payload/description",
+          "to" : "/*payload/description",
+          "inTypePath" : "document/string",
+          "outTypePath" : "document/string",
+          "direction" : "in"
+        }, {
+          "op" : "copy",
+          "from" : "/*payload/llmKey",
+          "to" : "/*payload/llmKey",
+          "inTypePath" : "document/string",
+          "outTypePath" : "document/string",
+          "direction" : "in"
+        }, {
+          "op" : "copy",
+          "from" : "/*payload/appLink",
+          "to" : "/*payload/appLink",
+          "inTypePath" : "document/string",
+          "outTypePath" : "document/string",
+          "direction" : "in"
+        }, {
+          "op" : "copy",
+          "from" : "/*payload/reportingAgentId",
+          "to" : "/*payload/reportingAgentId",
+          "inTypePath" : "document/string",
+          "outTypePath" : "document/string",
+          "direction" : "in"
+        }, {
+          "op" : "copy",
+          "from" : "/*payload/terminationAgentId",
+          "to" : "/*payload/terminationAgentId",
+          "inTypePath" : "document/string",
+          "outTypePath" : "document/string",
+          "direction" : "in"
+        }, {
+          "op" : "copy",
+          "from" : "/*payload/appId",
+          "to" : "/*payload/appId",
+          "inTypePath" : "document/string",
+          "outTypePath" : "document/string",
+          "direction" : "in"
+        } ],
+        "lines" : [ {
+          "inputPath" : "success",
+          "outputPath" : "success",
+          "inpJsTree" : "#launching_arrow_jsTree_function",
+          "outpJsTree" : "#landing_arrow_jsTree",
+          "INPath" : "success",
+          "OUTPath" : "success",
+          "direction" : "out",
+          "op" : "copy",
+          "line" : 0,
+          "dashedLine" : false,
+          "inType" : "boolean",
+          "outType" : "boolean",
+          "inTypePath" : "boolean",
+          "outTypePath" : "boolean"
+        }, {
+          "inputPath" : "*payload/name",
+          "outputPath" : "*payload/name",
+          "inpJsTree" : "#launching_arrow_jsTree",
+          "outpJsTree" : "#landing_arrow_jsTree_function",
+          "INPath" : "*payload/name",
+          "OUTPath" : "*payload/name",
+          "direction" : "in",
+          "op" : "copy",
+          "line" : 0,
+          "dashedLine" : false,
+          "inType" : "string",
+          "outType" : "string",
+          "inTypePath" : "document/string",
+          "outTypePath" : "document/string"
+        }, {
+          "inputPath" : "*payload/description",
+          "outputPath" : "*payload/description",
+          "inpJsTree" : "#launching_arrow_jsTree",
+          "outpJsTree" : "#landing_arrow_jsTree_function",
+          "INPath" : "*payload/description",
+          "OUTPath" : "*payload/description",
+          "direction" : "in",
+          "op" : "copy",
+          "line" : 0,
+          "dashedLine" : false,
+          "inType" : "string",
+          "outType" : "string",
+          "inTypePath" : "document/string",
+          "outTypePath" : "document/string"
+        }, {
+          "inputPath" : "*payload/llmKey",
+          "outputPath" : "*payload/llmKey",
+          "inpJsTree" : "#launching_arrow_jsTree",
+          "outpJsTree" : "#landing_arrow_jsTree_function",
+          "INPath" : "*payload/llmKey",
+          "OUTPath" : "*payload/llmKey",
+          "direction" : "in",
+          "op" : "copy",
+          "line" : 0,
+          "dashedLine" : false,
+          "inType" : "string",
+          "outType" : "string",
+          "inTypePath" : "document/string",
+          "outTypePath" : "document/string"
+        }, {
+          "inputPath" : "*payload/appLink",
+          "outputPath" : "*payload/appLink",
+          "inpJsTree" : "#launching_arrow_jsTree",
+          "outpJsTree" : "#landing_arrow_jsTree_function",
+          "INPath" : "*payload/appLink",
+          "OUTPath" : "*payload/appLink",
+          "direction" : "in",
+          "op" : "copy",
+          "line" : 0,
+          "dashedLine" : false,
+          "inType" : "string",
+          "outType" : "string",
+          "inTypePath" : "document/string",
+          "outTypePath" : "document/string"
+        }, {
+          "inputPath" : "*payload/reportingAgentId",
+          "outputPath" : "*payload/reportingAgentId",
+          "inpJsTree" : "#launching_arrow_jsTree",
+          "outpJsTree" : "#landing_arrow_jsTree_function",
+          "INPath" : "*payload/reportingAgentId",
+          "OUTPath" : "*payload/reportingAgentId",
+          "direction" : "in",
+          "op" : "copy",
+          "line" : 0,
+          "dashedLine" : false,
+          "inType" : "string",
+          "outType" : "string",
+          "inTypePath" : "document/string",
+          "outTypePath" : "document/string"
+        }, {
+          "inputPath" : "*payload/terminationAgentId",
+          "outputPath" : "*payload/terminationAgentId",
+          "inpJsTree" : "#launching_arrow_jsTree",
+          "outpJsTree" : "#landing_arrow_jsTree_function",
+          "INPath" : "*payload/terminationAgentId",
+          "OUTPath" : "*payload/terminationAgentId",
+          "direction" : "in",
+          "op" : "copy",
+          "line" : 0,
+          "dashedLine" : false,
+          "inType" : "string",
+          "outType" : "string",
+          "inTypePath" : "document/string",
+          "outTypePath" : "document/string"
+        }, {
+          "inputPath" : "*payload/appId",
+          "outputPath" : "*payload/appId",
+          "inpJsTree" : "#launching_arrow_jsTree",
+          "outpJsTree" : "#landing_arrow_jsTree_function",
+          "INPath" : "*payload/appId",
+          "OUTPath" : "*payload/appId",
+          "direction" : "in",
+          "op" : "copy",
+          "line" : 0,
+          "dashedLine" : false,
+          "inType" : "string",
+          "outType" : "string",
+          "inTypePath" : "document/string",
+          "outTypePath" : "document/string"
+        } ],
+        "dropList" : [ ],
+        "createList" : [ ],
+        "initiateList" : [ ],
+        "fqn" : "packages/syncloopai/dashboard/services/api/apps/addApp",
+        "serviceType" : "api"
+      },
+      "children" : [ ],
+      "type" : "invoke"
+    } ],
+    "api_info" : {
+      "title" : "Add app",
+      "description" : "This service is used for Adding an add to the syncloop."
+    },
+    "lockedByUser" : "admin"
+  },
+  "consumers" : "",
+  "developers" : "developers",
+  "enableServiceDocumentValidation" : false,
+  "created_on" : "1776142171681",
+  "modified_on" : 1776142171681
+}

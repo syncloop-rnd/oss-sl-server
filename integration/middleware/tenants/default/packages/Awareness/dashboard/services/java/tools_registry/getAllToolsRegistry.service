@@ -1,0 +1,34 @@
+{
+  "input" : [ ],
+  "output" : [ {
+    "id" : "j2_1",
+    "text" : "tools_registry",
+    "li_attr" : {
+      "id" : "j2_1"
+    },
+    "a_attr" : {
+      "href" : "#",
+      "id" : "j2_1_anchor"
+    },
+    "state" : {
+      "loaded" : true,
+      "opened" : false,
+      "selected" : true,
+      "disabled" : false
+    },
+    "data" : {
+      "guid" : "138686f1-32a8-4f96-92fa-7a10e6a11a0e",
+      "columnType" : "-1"
+    },
+    "children" : [ ],
+    "type" : "documentList"
+  } ],
+  "package" : "cGFja2FnZSBwYWNrYWdlcy5Bd2FyZW5lc3MuZGFzaGJvYXJkLnNlcnZpY2VzLmphdmEudG9vbHNfcmVnaXN0cnk7",
+  "imports" : "aW1wb3J0IGNvbS5la2EubWlkZGxld2FyZS5zZXJ2aWNlLkRhdGFQaXBlbGluZTsKaW1wb3J0IGNvbS5la2EubWlkZGxld2FyZS5zZXJ2aWNlLlNlcnZpY2VVdGlsczsKaW1wb3J0IGNvbS5la2EubWlkZGxld2FyZS50ZW1wbGF0ZS5TbmlwcGV0RXhjZXB0aW9uOwppbXBvcnQgamF2YS51dGlsLk1hcDs=",
+  "main" : "TWFwPFN0cmluZywgT2JqZWN0PiBtYXAgPSBhZ2VudHMuY29yZS50b29scy5zZXJ2aWNlLlRvb2xzUmVnaXN0cnlTZXJ2aWNlLmdldEluc3RhbmNlKCkuZ2V0QWxsV2l0aE1jcCgpOwpkYXRhUGlwZWxpbmUucHV0KCJ0b29sc19yZWdpc3RyeSIsIG1hcC5nZXQoInJlY29yZHMiKSk7",
+  "staticWorkspace" : "",
+  "version" : "v1",
+  "consumers" : "",
+  "developers" : "administrators",
+  "lockedByUser" : "rupeshgupta@syncloop.com"
+}

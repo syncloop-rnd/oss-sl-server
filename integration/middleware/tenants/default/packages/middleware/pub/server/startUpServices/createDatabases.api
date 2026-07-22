@@ -1,0 +1,440 @@
+{
+  "latest" : {
+    "createdTS" : "",
+    "input" : [ ],
+    "output" : [ ],
+    "api" : [ {
+      "id" : "j1_4",
+      "text" : "Group",
+      "li_attr" : {
+        "id" : "j1_4"
+      },
+      "a_attr" : {
+        "href" : "#",
+        "id" : "j1_4_anchor"
+      },
+      "state" : {
+        "loaded" : true,
+        "opened" : false,
+        "selected" : false,
+        "disabled" : false
+      },
+      "data" : {
+        "guid" : "a17c53f1-2f6e-434d-9d88-9a16418d2555",
+        "columnType" : "-1",
+        "comment" : "Create Audit logging tables"
+      },
+      "children" : [ {
+        "id" : "j1_1",
+        "text" : "Invoke",
+        "li_attr" : {
+          "id" : "j1_1"
+        },
+        "a_attr" : {
+          "href" : "#",
+          "id" : "j1_1_anchor"
+        },
+        "state" : {
+          "loaded" : true,
+          "opened" : false,
+          "selected" : false,
+          "disabled" : false
+        },
+        "data" : {
+          "guid" : "7278f77d-6b2c-4576-a7aa-2b2fbddc6db6",
+          "columnType" : "-1",
+          "dropList" : [ ],
+          "createList" : [ ],
+          "initiateList" : [ ],
+          "fqn" : "packages/middleware/pub/adapter/services/DDL/Audit_Logging/Create_AL",
+          "serviceType" : "sql"
+        },
+        "children" : [ ],
+        "type" : "invoke"
+      }, {
+        "id" : "j1_2",
+        "text" : "Invoke",
+        "li_attr" : {
+          "id" : "j1_2"
+        },
+        "a_attr" : {
+          "href" : "#",
+          "id" : "j1_2_anchor"
+        },
+        "state" : {
+          "loaded" : true,
+          "opened" : false,
+          "selected" : false,
+          "disabled" : false
+        },
+        "data" : {
+          "guid" : "6cd6c685-0252-4301-935a-d183d7caf773",
+          "columnType" : "-1",
+          "dropList" : [ ],
+          "createList" : [ ],
+          "initiateList" : [ ],
+          "fqn" : "packages/middleware/pub/adapter/services/DDL/Audit_Logging/IndexCID",
+          "serviceType" : "sql"
+        },
+        "children" : [ ],
+        "type" : "invoke"
+      }, {
+        "id" : "j1_3",
+        "text" : "Invoke",
+        "li_attr" : {
+          "id" : "j1_3"
+        },
+        "a_attr" : {
+          "href" : "#",
+          "id" : "j1_3_anchor"
+        },
+        "state" : {
+          "loaded" : true,
+          "opened" : false,
+          "selected" : false,
+          "disabled" : false
+        },
+        "data" : {
+          "guid" : "0b39b2b4-46b1-4d6c-a033-046b6bcfc4e8",
+          "columnType" : "-1",
+          "dropList" : [ ],
+          "createList" : [ ],
+          "initiateList" : [ ],
+          "fqn" : "packages/middleware/pub/adapter/services/DDL/Audit_Logging/IndexSID",
+          "serviceType" : "sql"
+        },
+        "children" : [ ],
+        "type" : "invoke"
+      } ],
+      "type" : "group"
+    }, {
+      "id" : "j1_5",
+      "text" : "Group",
+      "li_attr" : {
+        "id" : "j1_5"
+      },
+      "a_attr" : {
+        "href" : "#",
+        "id" : "j1_5_anchor"
+      },
+      "state" : {
+        "loaded" : true,
+        "opened" : false,
+        "selected" : false,
+        "disabled" : false
+      },
+      "data" : {
+        "guid" : "26485e24-2ad7-43b4-b815-2432de859f9c",
+        "columnType" : "-1",
+        "comment" : "Create environment tables"
+      },
+      "children" : [ {
+        "id" : "j1_6",
+        "text" : "Invoke",
+        "li_attr" : {
+          "id" : "j1_6"
+        },
+        "a_attr" : {
+          "href" : "#",
+          "id" : "j1_6_anchor"
+        },
+        "state" : {
+          "loaded" : true,
+          "opened" : false,
+          "selected" : false,
+          "disabled" : false
+        },
+        "data" : {
+          "guid" : "f0ec8aa2-3494-46b9-86d0-1a978d2b1c45",
+          "columnType" : "-1",
+          "lines" : [ ],
+          "transformers" : [ ],
+          "fqn" : "packages/middleware/pub/adapter/services/DDL/Environments/Create_aws_vpc_subnets",
+          "serviceType" : "sql",
+          "dropList" : [ ],
+          "createList" : [ ],
+          "initiateList" : [ ]
+        },
+        "children" : [ ],
+        "type" : "invoke"
+      }, {
+        "id" : "j1_7",
+        "text" : "Invoke",
+        "li_attr" : {
+          "id" : "j1_7"
+        },
+        "a_attr" : {
+          "href" : "#",
+          "id" : "j1_7_anchor"
+        },
+        "state" : {
+          "loaded" : true,
+          "opened" : false,
+          "selected" : false,
+          "disabled" : false
+        },
+        "data" : {
+          "guid" : "4cd112aa-15c3-4eac-aa38-2ad33e73e19b",
+          "columnType" : "-1",
+          "dropList" : [ ],
+          "createList" : [ ],
+          "initiateList" : [ ],
+          "fqn" : "packages/middleware/pub/adapter/services/DDL/Environments/Create_credentials",
+          "serviceType" : "sql"
+        },
+        "children" : [ ],
+        "type" : "invoke"
+      }, {
+        "id" : "j1_8",
+        "text" : "Invoke",
+        "li_attr" : {
+          "id" : "j1_8"
+        },
+        "a_attr" : {
+          "href" : "#",
+          "id" : "j1_8_anchor"
+        },
+        "state" : {
+          "loaded" : true,
+          "opened" : false,
+          "selected" : false,
+          "disabled" : false
+        },
+        "data" : {
+          "guid" : "ed02d962-84a3-42c0-951e-4396acb263a9",
+          "columnType" : "-1",
+          "dropList" : [ ],
+          "createList" : [ ],
+          "initiateList" : [ ],
+          "fqn" : "packages/middleware/pub/adapter/services/DDL/Environments/Create_environment_meta",
+          "serviceType" : "sql"
+        },
+        "children" : [ ],
+        "type" : "invoke"
+      }, {
+        "id" : "j1_9",
+        "text" : "Invoke",
+        "li_attr" : {
+          "id" : "j1_9"
+        },
+        "a_attr" : {
+          "href" : "#",
+          "id" : "j1_9_anchor"
+        },
+        "state" : {
+          "loaded" : true,
+          "opened" : false,
+          "selected" : false,
+          "disabled" : false
+        },
+        "data" : {
+          "guid" : "042cb53e-449a-4cd8-8ecc-9be71d55c8dc",
+          "columnType" : "-1",
+          "dropList" : [ ],
+          "createList" : [ ],
+          "initiateList" : [ ],
+          "fqn" : "packages/middleware/pub/adapter/services/DDL/Environments/Create_Env",
+          "serviceType" : "sql"
+        },
+        "children" : [ ],
+        "type" : "invoke"
+      }, {
+        "id" : "j1_10",
+        "text" : "Invoke",
+        "li_attr" : {
+          "id" : "j1_10"
+        },
+        "a_attr" : {
+          "href" : "#",
+          "id" : "j1_10_anchor"
+        },
+        "state" : {
+          "loaded" : true,
+          "opened" : false,
+          "selected" : false,
+          "disabled" : false
+        },
+        "data" : {
+          "guid" : "3495b7ec-96e6-4c9d-a2bd-80372bc11791",
+          "columnType" : "-1",
+          "dropList" : [ ],
+          "createList" : [ ],
+          "initiateList" : [ ],
+          "fqn" : "packages/middleware/pub/adapter/services/DDL/Environments/Index_credentials_name",
+          "serviceType" : "sql"
+        },
+        "children" : [ ],
+        "type" : "invoke"
+      }, {
+        "id" : "j1_11",
+        "text" : "Invoke",
+        "li_attr" : {
+          "id" : "j1_11"
+        },
+        "a_attr" : {
+          "href" : "#",
+          "id" : "j1_11_anchor"
+        },
+        "state" : {
+          "loaded" : true,
+          "opened" : false,
+          "selected" : false,
+          "disabled" : false
+        },
+        "data" : {
+          "guid" : "283253b9-2d0c-45a1-8209-8cafeab663ec",
+          "columnType" : "-1",
+          "dropList" : [ ],
+          "createList" : [ ],
+          "initiateList" : [ ],
+          "fqn" : "packages/middleware/pub/adapter/services/DDL/Environments/Index_environments_name",
+          "serviceType" : "sql"
+        },
+        "children" : [ ],
+        "type" : "invoke"
+      } ],
+      "type" : "group"
+    }, {
+      "id" : "j1_12",
+      "text" : "Group",
+      "li_attr" : {
+        "id" : "j1_12"
+      },
+      "a_attr" : {
+        "href" : "#",
+        "id" : "j1_12_anchor"
+      },
+      "state" : {
+        "loaded" : true,
+        "opened" : true,
+        "selected" : false,
+        "disabled" : false
+      },
+      "data" : {
+        "guid" : "2f88f292-89d9-42c7-afc2-e986ca06ec1c",
+        "columnType" : "-1",
+        "comment" : "Create Integrations tables"
+      },
+      "children" : [ {
+        "id" : "j1_13",
+        "text" : "Invoke",
+        "li_attr" : {
+          "id" : "j1_13"
+        },
+        "a_attr" : {
+          "href" : "#",
+          "id" : "j1_13_anchor"
+        },
+        "state" : {
+          "loaded" : true,
+          "opened" : false,
+          "selected" : false,
+          "disabled" : false
+        },
+        "data" : {
+          "guid" : "01baa124-ef56-47b0-bc99-e6c723462613",
+          "columnType" : "-1",
+          "lines" : [ ],
+          "transformers" : [ ],
+          "fqn" : "packages/middleware/pub/adapter/services/DDL/integrations/Create_integrations",
+          "serviceType" : "sql",
+          "dropList" : [ ],
+          "createList" : [ ],
+          "initiateList" : [ ]
+        },
+        "children" : [ ],
+        "type" : "invoke"
+      } ],
+      "type" : "group"
+    }, {
+      "id" : "j1_14",
+      "text" : "Group",
+      "li_attr" : {
+        "id" : "j1_14"
+      },
+      "a_attr" : {
+        "href" : "#",
+        "id" : "j1_14_anchor"
+      },
+      "state" : {
+        "loaded" : true,
+        "opened" : true,
+        "selected" : true,
+        "disabled" : false
+      },
+      "data" : {
+        "guid" : "dd93cce6-d830-4ab7-9292-a0a23012fa7d",
+        "columnType" : "-1",
+        "comment" : "Create scheduler tables"
+      },
+      "children" : [ {
+        "id" : "j1_15",
+        "text" : "Invoke",
+        "li_attr" : {
+          "id" : "j1_15"
+        },
+        "a_attr" : {
+          "href" : "#",
+          "id" : "j1_15_anchor"
+        },
+        "state" : {
+          "loaded" : true,
+          "opened" : false,
+          "selected" : false,
+          "disabled" : false
+        },
+        "data" : {
+          "guid" : "00fd8c6a-7b12-443b-b6e5-7093477f2868",
+          "columnType" : "-1",
+          "lines" : [ ],
+          "transformers" : [ ],
+          "fqn" : "packages/middleware/pub/adapter/services/DDL/Scheduler/Create_schedulers",
+          "serviceType" : "sql",
+          "dropList" : [ ],
+          "createList" : [ ],
+          "initiateList" : [ ]
+        },
+        "children" : [ ],
+        "type" : "invoke"
+      }, {
+        "id" : "j1_16",
+        "text" : "Invoke",
+        "li_attr" : {
+          "id" : "j1_16"
+        },
+        "a_attr" : {
+          "href" : "#",
+          "id" : "j1_16_anchor"
+        },
+        "state" : {
+          "loaded" : true,
+          "opened" : false,
+          "selected" : false,
+          "disabled" : false
+        },
+        "data" : {
+          "guid" : "3f41a5af-31ff-4720-a497-f9c7148be33a",
+          "columnType" : "-1",
+          "dropList" : [ ],
+          "createList" : [ ],
+          "initiateList" : [ ],
+          "fqn" : "packages/middleware/pub/adapter/services/DDL/Scheduler/Create_job_history",
+          "serviceType" : "sql"
+        },
+        "children" : [ ],
+        "type" : "invoke"
+      } ],
+      "type" : "group"
+    } ],
+    "api_info" : {
+      "title" : "",
+      "description" : ""
+    },
+    "lockedByUser" : "admin"
+  },
+  "consumers" : "",
+  "developers" : "developers",
+  "enableServiceDocumentValidation" : false,
+  "created_on" : "1733376813958",
+  "modified_on" : 1733376813958
+}

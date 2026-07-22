@@ -1,0 +1,71 @@
+{
+  "input" : [ ],
+  "output" : [ {
+    "id" : "j2_1",
+    "text" : "profile",
+    "li_attr" : {
+      "id" : "j2_1"
+    },
+    "a_attr" : {
+      "href" : "#",
+      "id" : "j2_1_anchor"
+    },
+    "state" : {
+      "loaded" : true,
+      "opened" : false,
+      "selected" : false,
+      "disabled" : false,
+      "hidden" : false
+    },
+    "data" : { },
+    "children" : [ {
+      "id" : "j2_2",
+      "text" : "tenant",
+      "li_attr" : {
+        "id" : "j2_2"
+      },
+      "a_attr" : {
+        "href" : "#",
+        "id" : "j2_2_anchor"
+      },
+      "state" : {
+        "loaded" : true,
+        "opened" : false,
+        "selected" : false,
+        "disabled" : false
+      },
+      "data" : { },
+      "children" : [ ],
+      "type" : "string"
+    } ],
+    "type" : "document"
+  }, {
+    "id" : "j2_3",
+    "text" : "userId",
+    "li_attr" : {
+      "id" : "j2_3"
+    },
+    "a_attr" : {
+      "href" : "#",
+      "id" : "j2_3_anchor"
+    },
+    "state" : {
+      "loaded" : true,
+      "opened" : false,
+      "selected" : false,
+      "disabled" : false,
+      "hidden" : false
+    },
+    "data" : { },
+    "children" : [ ],
+    "type" : "string"
+  } ],
+  "package" : "cGFja2FnZSBwYWNrYWdlcy5taWRkbGV3YXJlLnB1Yi5zZXJ2aWNlOw==",
+  "imports" : "aW1wb3J0IGNvbS5la2EubWlkZGxld2FyZS5zZXJ2aWNlLkRhdGFQaXBlbGluZTsKaW1wb3J0IGNvbS5la2EubWlkZGxld2FyZS5zZXJ2aWNlLlNlcnZpY2VVdGlsczsKaW1wb3J0IGNvbS5la2EubWlkZGxld2FyZS50ZW1wbGF0ZS5TbmlwcGV0RXhjZXB0aW9uOwppbXBvcnQgY29tLmVrYS5taWRkbGV3YXJlLmF1dGguQXV0aEFjY291bnQ7CmltcG9ydCBjb20uZWthLm1pZGRsZXdhcmUuYXV0aC5kYi5yZXBvc2l0b3J5LlVzZXJzUmVwb3NpdG9yeTsKaW1wb3J0IGphdmEudXRpbC4qOw==",
+  "main" : "dHJ5IHsKICBkYXRhUGlwZWxpbmUuYXBwTG9nKCJPUEVSQVRJT04iLCAiZ2V0Q1VycmVudFVzZXJBY2NvdW50Iik7CiAgQXV0aEFjY291bnQgYXV0aEFjY291bnQgPSBkYXRhUGlwZWxpbmUuZ2V0Q3VycmVudFJ1bnRpbWVBY2NvdW50KCk7CiAgZGF0YVBpcGVsaW5lLmFwcExvZygiRVhUUkFDVEVEX0FVVEhfQUNDT1VOVCIsIGF1dGhBY2NvdW50LnRvU3RyaW5nKCkpOwogIE1hcDxTdHJpbmcsIE9iamVjdD4gcHJvZmlsZSA9IGF1dGhBY2NvdW50LmdldEF1dGhQcm9maWxlKCk7CiAgZGF0YVBpcGVsaW5lLmFwcExvZygiRVhUUkFDVEVEX0FVVEhfUFJPRklMRSIsIHByb2ZpbGUudG9TdHJpbmcoKSk7CgogIExpc3Q8U3RyaW5nPiBncm91cHMgPSAoTGlzdDxTdHJpbmc+KSBwcm9maWxlLmdldCgiZ3JvdXBzIik7CiAgZGF0YVBpcGVsaW5lLmFwcExvZygiRVhUUkFDVEVEX1VTRVJfR1JPVVAiLCBncm91cHMudG9TdHJpbmcoKSk7CiAgaWYgKGdyb3VwcyAhPSBudWxsKSB7CiAgICBTdHJpbmcgYWRtaW5Hcm91cCA9IEF1dGhBY2NvdW50LlNUQVRJQ19BRE1JTl9HUk9VUDsKICAgIGRhdGFQaXBlbGluZS5hcHBMb2coIkFETUlOX0dST1VQIiwgYWRtaW5Hcm91cCk7CiAgICBTdHJpbmcgZGV2ZWxvcGVyR3JvdXAgPSBBdXRoQWNjb3VudC5TVEFUSUNfREVWRUxPUEVSX0dST1VQOwogICAgZGF0YVBpcGVsaW5lLmFwcExvZygiREVWRUxPUEVSX0dST1VQIiwgZGV2ZWxvcGVyR3JvdXApOwogICAgaWYgKENvbGxlY3Rpb25zLmZyZXF1ZW5jeShncm91cHMsIGFkbWluR3JvdXApID4gMSkgewogICAgICBkYXRhUGlwZWxpbmUuYXBwTG9nKCJSRU1PVklOR19EVVBMSUNBVEVfR1JPVVAiLCAiUmVtb3ZpbmcgZHVwbGljYXRlIGFkbWluIGdyb3VwIHZhbHVlcy4iKTsKICAgICAgZ3JvdXBzLnJlbW92ZShhZG1pbkdyb3VwKTsKICAgIH0KICAgIGlmIChDb2xsZWN0aW9ucy5mcmVxdWVuY3koZ3JvdXBzLCBkZXZlbG9wZXJHcm91cCkgPiAxKSB7CiAgICAgIGRhdGFQaXBlbGluZS5hcHBMb2coIlJFTU9WSU5HX0RVUExJQ0FURV9HUk9VUCIsICJSZW1vdmluZyBkdXBsaWNhdGUgZGV2ZWxvcGVyIGdyb3VwIHZhbHVlcy4iKTsKICAgICAgZ3JvdXBzLnJlbW92ZShkZXZlbG9wZXJHcm91cCk7CiAgICB9CiAgfQogIAogICBNYXA8U3RyaW5nLCBPYmplY3Q+IHJlZ2lzdGVyZWRVc2VyID0gVXNlcnNSZXBvc2l0b3J5LmdldFVzZXJSZWNvcmQoYXV0aEFjY291bnQuZ2V0VXNlcklkKCksIG51bGwpOwogIGRhdGFQaXBlbGluZS5hcHBMb2coIlJFR0lTVEVSRURfVVNFUl9DSEVDSyIsIFN0cmluZy52YWx1ZU9mKHJlZ2lzdGVyZWRVc2VyKSk7CgogIGlmIChyZWdpc3RlcmVkVXNlciA9PSBudWxsIHx8IHJlZ2lzdGVyZWRVc2VyLmlzRW1wdHkoKSkgewogICAgcHJvZmlsZS5yZW1vdmUoInRlbmFudCIpOwogICAgZGF0YVBpcGVsaW5lLmFwcExvZygiUkVNT1ZFRF9QUk9GSUxFX1RFTkFOVCIsICJVc2VyIGlzIG5vdCByZWdpc3RlcmVkIGluIHVzZXJzIHRhYmxlLiIpOwogIH0KICAKICBkYXRhUGlwZWxpbmUucHV0KCJwcm9maWxlIiwgcHJvZmlsZSk7CiAgZGF0YVBpcGVsaW5lLmFwcExvZygiU0VUVElOR19QUk9GSUxFIiwgIlNldHRpbmcgcHJvZmlsZSBkYXRhIik7CiAgZGF0YVBpcGVsaW5lLnB1dCgidXNlcklkIiwgYXV0aEFjY291bnQuZ2V0VXNlcklkKCkpOwogIGRhdGFQaXBlbGluZS5hcHBMb2coIlNFVFRJTkdfVVNFUl9JRCIsICJTZXR0aW5nIHVzZXIgSUQiKTsKfSBjYXRjaCAoRXhjZXB0aW9uIGUpIHsKICBlLnByaW50U3RhY2tUcmFjZSgpOwogIGRhdGFQaXBlbGluZS5jbGVhcigpOwogIGRhdGFQaXBlbGluZS5wdXQoImVycm9yIiwgZS5nZXRNZXNzYWdlKCkpOwogIGRhdGFQaXBlbGluZS5hcHBMb2coIlNFUlZJQ0VfRVJST1IiLCBlLmdldE1lc3NhZ2UoKSk7CiAgdGhyb3cgbmV3IFNuaXBwZXRFeGNlcHRpb24oZGF0YVBpcGVsaW5lLCAiU25pcHBldCBleGNlcHRpb24iLCBlKTsKfQo=",
+  "staticWorkspace" : "",
+  "version" : "v1",
+  "consumers" : "",
+  "developers" : "rnd",
+  "lockedByUser" : "admin"
+}

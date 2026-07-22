@@ -1,0 +1,50 @@
+{
+  "input" : [ {
+    "id" : "j1_1",
+    "text" : "numList",
+    "li_attr" : {
+      "id" : "j1_1"
+    },
+    "a_attr" : {
+      "href" : "#",
+      "id" : "j1_1_anchor"
+    },
+    "state" : {
+      "loaded" : true,
+      "opened" : false,
+      "selected" : false,
+      "disabled" : false
+    },
+    "data" : { },
+    "children" : [ ],
+    "type" : "numberList"
+  } ],
+  "output" : [ {
+    "id" : "j2_1",
+    "text" : "minValue",
+    "li_attr" : {
+      "id" : "j2_1"
+    },
+    "a_attr" : {
+      "href" : "#",
+      "id" : "j2_1_anchor"
+    },
+    "state" : {
+      "loaded" : true,
+      "opened" : false,
+      "selected" : false,
+      "disabled" : false
+    },
+    "data" : { },
+    "children" : [ ],
+    "type" : "number"
+  } ],
+  "package" : "cGFja2FnZSBwYWNrYWdlcy5taWRkbGV3YXJlLnB1Yi5tYXRoOw==",
+  "imports" : "aW1wb3J0IGNvbS5la2EubWlkZGxld2FyZS5zZXJ2aWNlLkRhdGFQaXBlbGluZTsKaW1wb3J0IGNvbS5la2EubWlkZGxld2FyZS5zZXJ2aWNlLlNlcnZpY2VVdGlsczsKaW1wb3J0IGNvbS5la2EubWlkZGxld2FyZS50ZW1wbGF0ZS5TbmlwcGV0RXhjZXB0aW9uOwppbXBvcnQgamF2YS51dGlsLkFycmF5TGlzdDsKaW1wb3J0IGphdmEudXRpbC5MaXN0OwppbXBvcnQgamF2YS51dGlsLk9wdGlvbmFsRG91YmxlOw==",
+  "main" : "dHJ5IHsKICAgICAgICBMaXN0PE51bWJlcj4gbnVtTGlzdCA9IGRhdGFQaXBlbGluZS5nZXRBc0xpc3QoIm51bUxpc3QiKTsKICAgICAgICBpZiAobnVtTGlzdCAhPSBudWxsKSB7CiAgICAgICAgICBPcHRpb25hbERvdWJsZSBtaW4gPSBudW1MaXN0LnN0cmVhbSgpCiAgICAgICAgICAgIC5tYXBUb0RvdWJsZShOdW1iZXI6OmRvdWJsZVZhbHVlKQogICAgICAgICAgICAubWluKCk7CiAgICAgICAgICBpZiAobWluLmlzUHJlc2VudCgpKSB7CiAgICAgICAgICAgIGRhdGFQaXBlbGluZS5wdXQoIm1pblZhbHVlIiwgbWluLmdldEFzRG91YmxlKCkpOwogICAgICAgICAgfQogICAgICAgIH0KfSAKY2F0Y2ggKEV4Y2VwdGlvbiBlKSB7CgkJZGF0YVBpcGVsaW5lLmNsZWFyKCk7CiAgCQlkYXRhUGlwZWxpbmUucHV0KCJlcnJvciIsZS5nZXRNZXNzYWdlKCkpOwogICAgCXRocm93IG5ldyBTbmlwcGV0RXhjZXB0aW9uKGRhdGFQaXBlbGluZSwiU25pcHBldCBleGNlcHRpb24iLCBuZXcgRXhjZXB0aW9uKGUpKTsKICB9",
+  "staticWorkspace" : "",
+  "version" : "v1",
+  "consumers" : "",
+  "developers" : "developers",
+  "lockedByUser" : "divyanshgurtoo4@gmail.com"
+}

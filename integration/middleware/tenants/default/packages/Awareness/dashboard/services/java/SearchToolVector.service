@@ -1,0 +1,81 @@
+{
+  "input" : [ {
+    "id" : "j1_1",
+    "text" : "searchText",
+    "li_attr" : {
+      "id" : "j1_1"
+    },
+    "a_attr" : {
+      "href" : "#",
+      "id" : "j1_1_anchor"
+    },
+    "state" : {
+      "loaded" : true,
+      "opened" : false,
+      "selected" : false,
+      "disabled" : false,
+      "hidden" : false
+    },
+    "data" : {
+      "guid" : "b1f2e83e-4948-4057-a730-b550e64bfc54",
+      "columnType" : "-1"
+    },
+    "children" : [ ],
+    "type" : "string"
+  } ],
+  "output" : [ {
+    "id" : "j2_3",
+    "text" : "Tool_Registry",
+    "li_attr" : {
+      "id" : "j2_3"
+    },
+    "a_attr" : {
+      "href" : "#",
+      "id" : "j2_3_anchor"
+    },
+    "state" : {
+      "loaded" : true,
+      "opened" : false,
+      "selected" : false,
+      "disabled" : false,
+      "hidden" : false
+    },
+    "data" : {
+      "guid" : "3cadca1f-3fbc-4a4c-9f4b-e7b60b1ba486",
+      "columnType" : "-1"
+    },
+    "children" : [ ],
+    "type" : "documentList"
+  }, {
+    "id" : "j2_4",
+    "text" : "status",
+    "li_attr" : {
+      "id" : "j2_4"
+    },
+    "a_attr" : {
+      "href" : "#",
+      "id" : "j2_4_anchor"
+    },
+    "state" : {
+      "loaded" : true,
+      "opened" : false,
+      "selected" : false,
+      "disabled" : false,
+      "hidden" : false
+    },
+    "data" : {
+      "guid" : "75892516-f579-42a2-bcae-09e18835f76c",
+      "columnType" : "-1"
+    },
+    "children" : [ ],
+    "type" : "string"
+  } ],
+  "package" : "cGFja2FnZSBwYWNrYWdlcy5Bd2FyZW5lc3MuZGFzaGJvYXJkLnNlcnZpY2VzLmphdmE7",
+  "imports" : "aW1wb3J0IGphdmEudXRpbC5MaXN0OwppbXBvcnQgY29tLmVrYS5taWRkbGV3YXJlLnNlcnZpY2UuRGF0YVBpcGVsaW5lOwppbXBvcnQgY29tLmVrYS5taWRkbGV3YXJlLnNlcnZpY2UuU2VydmljZVV0aWxzOwppbXBvcnQgY29tLmVrYS5taWRkbGV3YXJlLnRlbXBsYXRlLlNuaXBwZXRFeGNlcHRpb247CmltcG9ydCBhZ2VudHMuY29yZS50b29scy5zZXJ2aWNlLlRvb2xzUmVnaXN0cnlTZXJ2aWNlOwppbXBvcnQgYWdlbnRzLmNvcmUudG9vbHMubW9kZWwuVG9vbHNSZWdpc3RyeTs=",
+  "main" : "dHJ5ewkJCiAgCQkJCiAgCQkJVG9vbHNSZWdpc3RyeVNlcnZpY2UgdG9vbHNSZWdpc3RyeVNlcnZpY2UgPSBuZXcgVG9vbHNSZWdpc3RyeVNlcnZpY2UoZGF0YVBpcGVsaW5lKTsKICAgICAgICAgICAgTGlzdDxUb29sc1JlZ2lzdHJ5PiB0b29sc1JlZ2lzdHJ5ID0gdG9vbHNSZWdpc3RyeVNlcnZpY2Uuc2VhcmNoVG9vbFFkcmFudChkYXRhUGlwZWxpbmUuZ2V0U3RyaW5nKCJzZWFyY2hUZXh0IikpOwogIAkJCWRhdGFQaXBlbGluZS5wdXQoIlRvb2xfUmVnaXN0cnkiLCB0b29sc1JlZ2lzdHJ5KTsKICAgICAgICAgICAgZGF0YVBpcGVsaW5lLnB1dCgic3RhdHVzIiwgInN1Y2Nlc3MiKTsKICAgfWNhdGNoKEV4Y2VwdGlvbiBlKXsKICAgICAgICAgICAgZS5wcmludFN0YWNrVHJhY2UoKTsKICAgICAgICAgICAgZGF0YVBpcGVsaW5lLmNsZWFyKCk7CiAgICAgICAgICAgIGRhdGFQaXBlbGluZS5wdXQoImVycm9yIixlLmdldE1lc3NhZ2UoKSk7CiAgICAgICAgICAgIGRhdGFQaXBlbGluZS5wdXQoInN0YXR1cyIsImZhaWxlZCIpOwoJCQluZXcgU25pcHBldEV4Y2VwdGlvbihkYXRhUGlwZWxpbmUsIlRoaXMgaXMgYSBTbmlwcGV0IGV4Y2VwdGlvbiIsIG5ldyBFeGNlcHRpb24oZSkpOwogICAgICAgIH0K",
+  "staticWorkspace" : "",
+  "version" : "v1",
+  "consumers" : "",
+  "developers" : "",
+  "lockedByUser" : "sidharth@syncloop.com"
+}

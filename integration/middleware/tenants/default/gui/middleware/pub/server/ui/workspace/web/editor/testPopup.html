@@ -1,0 +1,269 @@
+
+
+<!DOCTYPE html>
+<html lang="en" ng-app="jsonEditorApp">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+    <script src="jsonToForm/jsonToForm.js"></script>
+    <link href="jsonToForm/jsonToForm.css" rel="stylesheet" type="text/css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="jsonToForm/json-iframe.css" />
+    <script src="../../../javascript/sweetalert.min.js"></script>
+
+    <link rel="stylesheet" href="../../../css/sweetalert.css" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.8.2/angular.min.js"></script>
+
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+
+    <style>
+        html,body{height:100%; overflow-y: hidden; margin:0px;}
+        .exc_enble {
+    position: absolute;
+    top: 12px;
+    right: 12px;
+    display: flex;
+    align-items: center;
+}
+
+.exc_enble a.ex_btn {
+    text-decoration: none;
+    padding: 9px 14px;
+    font-size: 13px;
+    border-radius: 4px;
+    background: #0c2da4;
+    color: #fff;
+    margin-left: 15px;
+    position: initial;
+}
+    </style>
+
+
+    <script>
+
+
+
+        function getUrlParam(name) {
+            var results = new RegExp('[\?&]' + name + '=([^&#]*)')
+                .exec(window.location.search);
+
+            return (results !== null) ? results[1] || 0 : false;
+        }
+
+        function executeRequest() {
+            $("#final_json_ngs").trigger('click');
+            $("#execute_btn").html("<i class='fa fa-stop' aria-hidden='true'></i>");
+            $.ajax({
+                type: "POST",
+                url: localStorage.getItem("SERVICE_ENDPOINT") + "/tenant/default/public/executeApi",
+                data: JSON.stringify(
+                    {
+                        "apiJson": localStorage.getItem("RECENT_DATA"),
+                        "payload": JSON.parse(finalJson),
+                        "is_trace_enabled": parent.IS_TRACE_ENABLED
+                    }),
+                contentType: "application/json", // Set content type to JSON,
+                headers: { "Authorization": `Bearer ${localStorage.getItem("AuthToken")}` },
+                success: function(response) {
+                    $("#execute_btn").html("<i class='fa fa-play' aria-hidden='true'></i>");
+
+                    if (parent.IS_TRACE_ENABLED && null != response.__snapData) {
+                        let snapData = [];
+                        for (let i = 0 ; i < response.__snapData.length ; i++) {
+                            snapData.push(JSON.parse(response.__snapData[i]))
+                        }
+                        localStorage.setItem("simulation_snapshot", "standalone@0");
+                        localStorage.setItem("simulate_response", JSON.stringify(snapData));
+                        parent.simulationReady();
+                        parent.hideMappingArea();
+                    }
+
+                    console.log(response)
+
+                    delete response.__snapData;
+                    $("#response").html("<pre style=\"font-size: 15px;\">" + JSON.stringify(response, null, 2) + "</pre>");
+
+
+                },
+                error: function(xhr, status, error) {
+                    $("#execute_btn").html("<i class='fa fa-play' aria-hidden='true'></i>");
+                }
+            });
+        }
+
+    </script>
+
+</head>
+
+<body ng-controller="JsonEditorController as ctrl">
+
+<div class="flex-container">
+    <div class="left-column">
+        <h5>Input</h5>
+        <div class="exc_enble">
+        Enable Trace &nbsp;<input onclick="enableTrace(this)" type="checkbox" />
+        <a class="ex_btn" id="execute_btn" href="javascript:executeRequest()"><i class="fa fa-play" aria-hidden="true"></i></a>
+        </div>
+        <div class="ed_sp" json-editor current-data="ctrl.schema" editor-data="ctrl.editorData"></div>
+        <button ng-click="ctrl.viewFinalJSON()" style="display: none;" id="final_json_ngs">View Final JSON</button>
+        <!-- Template for JSON Editor -->
+        <script type="text/ng-template" id="jsonEditorTemplate">
+            <div ng-repeat="(key, value) in currentData.properties" class="json-item">
+                <div ng-if="value.type === 'object'">
+                    <div class="item-header"><span class="toggle-icon" ng-click="toggleExpand(editorData[key])">{{ editorData[key]._toggle ? '-' : '+' }}</span><strong>{{key}}:</strong></div>
+                    <div json-editor current-data="value" editor-data="editorData[key]"  ng-show="editorData[key]._toggle"></div>
+                </div>
+                <div ng-if="value.type === 'array'">
+                    <div class="item-header">
+					<span><span class="toggle-icon" ng-click="toggleExpand(editorData[key])">{{ editorData[key]._toggle ? '-' : (editorData[key]._toggle==null ? '-' : '+' ) }}</span>
+						<strong>{{key}}:</strong>
+					</span>
+                        <button ng-click="addArrayItem(value.items, key)" class="array-item-add-button"><img src="jsonToForm/add-field.svg" alt=""></button>
+                    </div>
+
+                    <div class="array-item" ng-repeat="item in editorData[key] track by $index" ng-show="editorData[key]._toggle ? true : (editorData[key]._toggle==null ? true : false )">
+                        <div class="item">
+                            <div ng-if="value.items.type === 'object'">
+                                <div class="item-header" >
+							<span><span current-data="value.items" editor-data="item" class="toggle-icon" ng-click="toggleExpand(item)">{{ item._toggle ? '-' : '+' }}</span>
+								<strong>{{key}}[{{$index}}]:</strong>
+							</span>
+                                    <button ng-click="removeArrayItem(key, $index)"><img src="jsonToForm/delete-filed.svg" alt=""></button>
+                                </div>
+                                <div json-editor current-data="value.items" editor-data="item" ng-show="item._toggle"></div>
+                            </div>
+                            <div ng-if="value.items.type !== 'object'" class="sub_obj">
+                                <!-- Primitive array item template -->
+                                <input type="{{value.items.type}}" ng-model="editorData[key][$index]" ng-if="value.items.type === 'string' || value.items.type === 'number'">
+                                <input type="checkbox" ng-model="editorData[key][$index]" ng-if="value.items.type === 'boolean'">
+                                <input type="number" ng-model="editorData[key][$index]" ng-if="value.items.type === 'integer'">
+                                <button ng-click="removeArrayItem(key, $index)"><img src="jsonToForm/delete-filed.svg" alt=""></button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div ng-if="value.type !== 'object' && value.type !== 'array'" class="lb_grid">
+                    <strong>{{key}}:</strong>
+                    <input type="text" ng-if="value.type === 'string'" ng-model="editorData[key]" placeholder="{{key}}">
+                    <input type="number" ng-if="value.type === 'number'" ng-model="editorData[key]" placeholder="{{key}}">
+                    <input type="number" ng-if="value.type === 'integer'" ng-model="editorData[key]" placeholder="{{key}}">
+                    <input type="checkbox" ng-if="value.type === 'boolean'" ng-model="editorData[key]">
+                </div>
+            </div>
+
+        </script>
+    </div>
+
+    <div class="right-column">
+        <h5>Output</h5>
+        <div id="response"></div>
+    </div>
+</div>
+<script>
+    function enableTrace(ref) {
+        if ($(ref).is(":checked")) {
+            parent.enableEmbeddedTrace();
+        } else {
+            parent.disableEmbeddedTrace();
+        }
+    }
+    let finalJson = null;
+    let myctrl = {};
+    angular.module('jsonEditorApp', [])
+        .directive('jsonEditor', function() {
+            return {
+                restrict: 'A',
+                scope: {
+                    currentData: '=',
+                    editorData: '='
+                },
+                templateUrl: 'jsonEditorTemplate',
+                link: function(scope, element, attrs, ctrl) {
+                    scope.addArrayItem = function(itemSchema, key) {
+                        let newItem;
+                        if (itemSchema.type === 'object') {
+                            newItem = ctrl.populateEditorData(itemSchema);
+                            newItem._toggle = true;
+                        } else {
+                            // Initialize default values for primitive types
+                            newItem = itemSchema.type === 'number' ? 0 :
+                                itemSchema.type === 'boolean' ? false : '';
+                        }
+                        scope.editorData[key].push(newItem);
+                    };
+
+                    scope.removeArrayItem = function(key, index) {
+                        scope.editorData[key].splice(index, 1);
+                    };
+
+                    scope.toggleExpand = function(item) {
+                        if(item._toggle==null)
+                            item._toggle=true;
+                        item._toggle = !item._toggle;
+                    };
+                },
+                controller: 'JsonEditorController'
+            };
+        })
+        .controller('JsonEditorController', ['$scope', function($scope) {
+            myctrl = this;
+            var ctrl = this;
+
+            if (null == localStorage.getItem("JSON_SCHEMA")) {
+                return ;
+            }
+
+            ctrl.schema = JSON.parse(localStorage.getItem("JSON_SCHEMA")).schema;
+
+            ctrl.editorData = {};
+
+
+            ctrl.populateEditorData = function(schema, existingData = {}) {
+                let data = {};
+                for (let key in schema.properties) {
+                    if (existingData[key] !== undefined) {
+                        data[key] = existingData[key];
+                        data[key]["_toggle"] = true;
+                    } else if (schema.properties[key].type === 'object') {
+                        data[key] = ctrl.populateEditorData(schema.properties[key]);
+                        data[key]["_toggle"] = true;
+                    } else if (schema.properties[key].type === 'array') {
+                        data[key] = [];
+                        data[key]["_toggle"] = true;
+                    } else {
+                        data[key] = '';
+                    }
+                }
+                return data;
+            };
+
+            ctrl.viewFinalJSON = function() {
+                let finalJSON = JSON.parse(JSON.stringify(ctrl.editorData));
+                if (ctrl.allowNull) {
+                    (function pruneEmpty(obj) {
+                        Object.keys(obj).forEach(key => {
+                            if (obj[key] && typeof obj[key] === 'object') {
+                                pruneEmpty(obj[key]);
+                            } else if (obj[key] === "") {
+                                delete obj[key];
+                            }
+                        });
+                    })(finalJSON);
+                }
+                finalJson = JSON.stringify(finalJSON, null, 4);
+                return JSON.stringify(finalJSON, null, 4);
+            };
+
+            ctrl.editorData = Object.assign({}, ctrl.editorData, ctrl.populateEditorData(ctrl.schema, ctrl.editorData));
+        }]);
+
+
+</script>
+</body>
+
+</html>

@@ -1,0 +1,837 @@
+{
+  "latest" : {
+    "createdTS" : "",
+    "input" : [ ],
+    "output" : [ {
+      "id" : "j3_1",
+      "text" : "userId",
+      "li_attr" : {
+        "id" : "j3_1"
+      },
+      "a_attr" : {
+        "href" : "#",
+        "id" : "j3_1_anchor"
+      },
+      "state" : {
+        "loaded" : true,
+        "opened" : false,
+        "selected" : false,
+        "disabled" : false,
+        "hidden" : false
+      },
+      "data" : { },
+      "children" : [ ],
+      "type" : "string"
+    }, {
+      "id" : "j3_2",
+      "text" : "tenant",
+      "li_attr" : {
+        "id" : "j3_2"
+      },
+      "a_attr" : {
+        "href" : "#",
+        "id" : "j3_2_anchor"
+      },
+      "state" : {
+        "loaded" : true,
+        "opened" : false,
+        "selected" : false,
+        "disabled" : false,
+        "hidden" : false
+      },
+      "data" : { },
+      "children" : [ ],
+      "type" : "string"
+    }, {
+      "id" : "j3_3",
+      "text" : "message",
+      "li_attr" : {
+        "id" : "j3_3"
+      },
+      "a_attr" : {
+        "href" : "#",
+        "id" : "j3_3_anchor"
+      },
+      "state" : {
+        "loaded" : true,
+        "opened" : false,
+        "selected" : false,
+        "disabled" : false,
+        "hidden" : false
+      },
+      "data" : { },
+      "children" : [ ],
+      "type" : "string"
+    }, {
+      "id" : "j3_4",
+      "text" : "profile",
+      "li_attr" : {
+        "id" : "j3_4"
+      },
+      "a_attr" : {
+        "href" : "#",
+        "id" : "j3_4_anchor"
+      },
+      "state" : {
+        "loaded" : true,
+        "opened" : false,
+        "selected" : false,
+        "disabled" : false,
+        "hidden" : false
+      },
+      "data" : { },
+      "children" : [ {
+        "id" : "j3_5",
+        "text" : "tenant",
+        "li_attr" : {
+          "id" : "j3_5"
+        },
+        "a_attr" : {
+          "href" : "#"
+        },
+        "state" : {
+          "loaded" : true,
+          "opened" : false,
+          "selected" : false,
+          "disabled" : false
+        },
+        "data" : { },
+        "children" : [ ],
+        "type" : "string"
+      } ],
+      "type" : "document"
+    } ],
+    "api" : [ {
+      "id" : "j1_3",
+      "text" : "Invoke",
+      "li_attr" : {
+        "id" : "j1_3"
+      },
+      "a_attr" : {
+        "href" : "javascript:void(0)",
+        "id" : "j1_3_anchor"
+      },
+      "state" : {
+        "loaded" : true,
+        "opened" : false,
+        "selected" : false,
+        "disabled" : false,
+        "hidden" : false
+      },
+      "data" : {
+        "transformers" : [ {
+          "op" : "copy",
+          "from" : "/userId",
+          "to" : "/userId",
+          "inTypePath" : "string",
+          "outTypePath" : "string",
+          "direction" : "out"
+        }, {
+          "op" : "copy",
+          "from" : "/profile/tenant",
+          "to" : "/tenant",
+          "inTypePath" : "document/string",
+          "outTypePath" : "string",
+          "direction" : "out"
+        } ],
+        "lines" : [ {
+          "inputPath" : "userId",
+          "outputPath" : "userId",
+          "inpJsTree" : "#launching_arrow_jsTree_function",
+          "outpJsTree" : "#landing_arrow_jsTree",
+          "INPath" : "userId",
+          "OUTPath" : "userId",
+          "direction" : "out",
+          "op" : "copy",
+          "line" : 0,
+          "dashedLine" : false,
+          "inType" : "string",
+          "outType" : "string",
+          "inTypePath" : "string",
+          "outTypePath" : "string"
+        }, {
+          "inputPath" : "profile/tenant",
+          "outputPath" : "tenant",
+          "inpJsTree" : "#launching_arrow_jsTree_function",
+          "outpJsTree" : "#landing_arrow_jsTree",
+          "INPath" : "profile/tenant",
+          "OUTPath" : "tenant",
+          "direction" : "out",
+          "op" : "copy",
+          "line" : 0,
+          "dashedLine" : false,
+          "inType" : "string",
+          "outType" : "string",
+          "inTypePath" : "document/string",
+          "outTypePath" : "string"
+        } ],
+        "dropList" : [ ],
+        "createList" : [ {
+          "path" : "KEY",
+          "value" : "OPERATION",
+          "typePath" : "string"
+        }, {
+          "path" : "VALUE",
+          "value" : "GOOGLE_LOGIN",
+          "typePath" : "string"
+        } ],
+        "serviceType" : "service",
+        "guid" : "a608b864-5e47-4cb4-8bde-caf98c1cedcd",
+        "fqn" : "packages/middleware/pub/service/getCurrentUserAccount",
+        "status" : "enabled",
+        "initiateList" : [ ]
+      },
+      "children" : [ ],
+      "type" : "invoke"
+    }, {
+      "id" : "j1_21",
+      "text" : "Invoke",
+      "li_attr" : {
+        "id" : "j1_21"
+      },
+      "a_attr" : {
+        "href" : "javascript:void(0)",
+        "id" : "j1_21_anchor"
+      },
+      "state" : {
+        "loaded" : true,
+        "opened" : false,
+        "selected" : false,
+        "disabled" : false,
+        "hidden" : false
+      },
+      "data" : {
+        "transformers" : [ {
+          "op" : "copy",
+          "from" : "/KEY",
+          "to" : "/key",
+          "inTypePath" : "string",
+          "outTypePath" : "string",
+          "direction" : "in"
+        }, {
+          "op" : "copy",
+          "from" : "/VALUE",
+          "to" : "/value",
+          "inTypePath" : "string",
+          "outTypePath" : "javaObject",
+          "direction" : "in"
+        }, {
+          "op" : "copy",
+          "from" : "/userId",
+          "to" : "/VALUE_USER_ID",
+          "inTypePath" : "string",
+          "outTypePath" : "string"
+        }, {
+          "op" : "copy",
+          "from" : "/tenant",
+          "to" : "/VALUE_TENANT",
+          "inTypePath" : "string",
+          "outTypePath" : "string"
+        } ],
+        "lines" : [ {
+          "inputPath" : "KEY",
+          "outputPath" : "key",
+          "inpJsTree" : "#launching_arrow_jsTree",
+          "outpJsTree" : "#landing_arrow_jsTree_function",
+          "INPath" : "KEY",
+          "OUTPath" : "key",
+          "direction" : "in",
+          "op" : "copy",
+          "line" : 0,
+          "dashedLine" : false,
+          "inType" : "string",
+          "outType" : "string",
+          "inTypePath" : "string",
+          "outTypePath" : "string"
+        }, {
+          "inputPath" : "VALUE",
+          "outputPath" : "value",
+          "inpJsTree" : "#launching_arrow_jsTree",
+          "outpJsTree" : "#landing_arrow_jsTree_function",
+          "INPath" : "VALUE",
+          "OUTPath" : "value",
+          "direction" : "in",
+          "op" : "copy",
+          "line" : 0,
+          "dashedLine" : false,
+          "inType" : "string",
+          "outType" : "string",
+          "inTypePath" : "string",
+          "outTypePath" : "javaObject"
+        }, {
+          "inputPath" : "userId",
+          "outputPath" : "VALUE_USER_ID",
+          "inpJsTree" : "#launching_arrow_jsTree",
+          "outpJsTree" : "#landing_arrow_jsTree",
+          "INPath" : "userId",
+          "OUTPath" : "VALUE_USER_ID",
+          "op" : "copy",
+          "line" : 0,
+          "dashedLine" : false,
+          "inType" : "string",
+          "outType" : "string",
+          "inTypePath" : "string",
+          "outTypePath" : "string"
+        }, {
+          "inputPath" : "tenant",
+          "outputPath" : "VALUE_TENANT",
+          "inpJsTree" : "#launching_arrow_jsTree",
+          "outpJsTree" : "#landing_arrow_jsTree",
+          "INPath" : "tenant",
+          "OUTPath" : "VALUE_TENANT",
+          "op" : "copy",
+          "line" : 0,
+          "dashedLine" : false,
+          "inType" : "string",
+          "outType" : "string",
+          "inTypePath" : "string",
+          "outTypePath" : "string"
+        } ],
+        "dropList" : [ {
+          "path" : "KEY",
+          "typePath" : "string"
+        }, {
+          "path" : "VALUE",
+          "typePath" : "string"
+        } ],
+        "createList" : [ {
+          "path" : "KEY_USER_ID",
+          "value" : "USER_ID",
+          "typePath" : "string"
+        }, {
+          "path" : "KEY_TENANT",
+          "value" : "TENANT",
+          "typePath" : "string"
+        } ],
+        "serviceType" : "service",
+        "guid" : "f768e239-728a-42ff-baf0-357fb5fcad5a",
+        "status" : "enabled",
+        "fqn" : "packages/middleware/pub/service/keyLogger"
+      },
+      "children" : [ ],
+      "type" : "invoke"
+    }, {
+      "id" : "j1_22",
+      "text" : "Invoke",
+      "li_attr" : {
+        "id" : "j1_22"
+      },
+      "a_attr" : {
+        "href" : "javascript:void(0)",
+        "id" : "j1_22_anchor"
+      },
+      "state" : {
+        "loaded" : true,
+        "opened" : false,
+        "selected" : false,
+        "disabled" : false,
+        "hidden" : false
+      },
+      "data" : {
+        "transformers" : [ {
+          "op" : "copy",
+          "from" : "/VALUE_USER_ID",
+          "to" : "/value",
+          "inTypePath" : "string",
+          "outTypePath" : "javaObject",
+          "direction" : "in"
+        }, {
+          "op" : "copy",
+          "from" : "/KEY_USER_ID",
+          "to" : "/key",
+          "inTypePath" : "string",
+          "outTypePath" : "string",
+          "direction" : "in"
+        } ],
+        "lines" : [ {
+          "inputPath" : "VALUE_USER_ID",
+          "outputPath" : "value",
+          "inpJsTree" : "#launching_arrow_jsTree",
+          "outpJsTree" : "#landing_arrow_jsTree_function",
+          "INPath" : "VALUE_USER_ID",
+          "OUTPath" : "value",
+          "direction" : "in",
+          "op" : "copy",
+          "line" : 0,
+          "dashedLine" : false,
+          "inType" : "string",
+          "outType" : "string",
+          "inTypePath" : "string",
+          "outTypePath" : "javaObject"
+        }, {
+          "inputPath" : "KEY_USER_ID",
+          "outputPath" : "key",
+          "inpJsTree" : "#launching_arrow_jsTree",
+          "outpJsTree" : "#landing_arrow_jsTree_function",
+          "INPath" : "KEY_USER_ID",
+          "OUTPath" : "key",
+          "direction" : "in",
+          "op" : "copy",
+          "line" : 0,
+          "dashedLine" : false,
+          "inType" : "string",
+          "outType" : "string",
+          "inTypePath" : "string",
+          "outTypePath" : "string"
+        } ],
+        "dropList" : [ ],
+        "createList" : [ ],
+        "serviceType" : "service",
+        "guid" : "2299c598-132b-4758-9522-dcc3cb81070f",
+        "status" : "enabled",
+        "fqn" : "packages/middleware/pub/service/keyLogger"
+      },
+      "children" : [ ],
+      "type" : "invoke"
+    }, {
+      "id" : "j1_23",
+      "text" : "Invoke",
+      "li_attr" : {
+        "id" : "j1_23"
+      },
+      "a_attr" : {
+        "href" : "javascript:void(0)",
+        "id" : "j1_23_anchor"
+      },
+      "state" : {
+        "loaded" : true,
+        "opened" : false,
+        "selected" : false,
+        "disabled" : false,
+        "hidden" : false
+      },
+      "data" : {
+        "transformers" : [ {
+          "op" : "copy",
+          "from" : "/VALUE_TENANT",
+          "to" : "/value",
+          "inTypePath" : "string",
+          "outTypePath" : "javaObject",
+          "direction" : "in"
+        }, {
+          "op" : "copy",
+          "from" : "/KEY_TENANT",
+          "to" : "/key",
+          "inTypePath" : "string",
+          "outTypePath" : "string",
+          "direction" : "in"
+        } ],
+        "lines" : [ {
+          "inputPath" : "VALUE_TENANT",
+          "outputPath" : "value",
+          "inpJsTree" : "#launching_arrow_jsTree",
+          "outpJsTree" : "#landing_arrow_jsTree_function",
+          "INPath" : "VALUE_TENANT",
+          "OUTPath" : "value",
+          "direction" : "in",
+          "op" : "copy",
+          "line" : 0,
+          "dashedLine" : false,
+          "inType" : "string",
+          "outType" : "string",
+          "inTypePath" : "string",
+          "outTypePath" : "javaObject"
+        }, {
+          "inputPath" : "KEY_TENANT",
+          "outputPath" : "key",
+          "inpJsTree" : "#launching_arrow_jsTree",
+          "outpJsTree" : "#landing_arrow_jsTree_function",
+          "INPath" : "KEY_TENANT",
+          "OUTPath" : "key",
+          "direction" : "in",
+          "op" : "copy",
+          "line" : 0,
+          "dashedLine" : false,
+          "inType" : "string",
+          "outType" : "string",
+          "inTypePath" : "string",
+          "outTypePath" : "string"
+        } ],
+        "dropList" : [ {
+          "path" : "VALUE_USER_ID",
+          "typePath" : "string"
+        }, {
+          "path" : "VALUE_TENANT",
+          "typePath" : "string"
+        }, {
+          "path" : "KEY_USER_ID",
+          "typePath" : "string"
+        }, {
+          "path" : "KEY_TENANT",
+          "typePath" : "string"
+        } ],
+        "createList" : [ ],
+        "serviceType" : "service",
+        "guid" : "99d0ed3a-9d80-4bfb-b697-a017991b381f",
+        "status" : "enabled",
+        "fqn" : "packages/middleware/pub/service/keyLogger"
+      },
+      "children" : [ ],
+      "type" : "invoke"
+    }, {
+      "id" : "j1_4",
+      "text" : "SWITCH",
+      "li_attr" : {
+        "id" : "j1_4"
+      },
+      "a_attr" : {
+        "href" : "javascript:void(0)",
+        "id" : "j1_4_anchor"
+      },
+      "state" : {
+        "loaded" : true,
+        "opened" : true,
+        "selected" : true,
+        "disabled" : false,
+        "hidden" : false
+      },
+      "data" : {
+        "switch" : "tenant",
+        "status" : "enabled",
+        "guid" : "2d8b2fe3-c672-4b71-a0b1-8218e6904ccf"
+      },
+      "children" : [ {
+        "id" : "j1_5",
+        "text" : "CASE",
+        "li_attr" : {
+          "id" : "j1_5"
+        },
+        "a_attr" : {
+          "href" : "javascript:void(0)",
+          "id" : "j1_5_anchor"
+        },
+        "state" : {
+          "loaded" : true,
+          "opened" : true,
+          "selected" : false,
+          "disabled" : false
+        },
+        "data" : {
+          "case" : "#null",
+          "comment" : "Redirect to tenant onboarding page",
+          "guid" : "a2fc6dab-a763-4c4f-9605-98eacc2988fd"
+        },
+        "children" : [ {
+          "id" : "j1_7",
+          "text" : "Transformer",
+          "li_attr" : {
+            "id" : "j1_7"
+          },
+          "a_attr" : {
+            "href" : "javascript:void(0)",
+            "id" : "j1_7_anchor"
+          },
+          "state" : {
+            "loaded" : true,
+            "opened" : false,
+            "selected" : false,
+            "disabled" : false
+          },
+          "data" : {
+            "transformers" : [ ],
+            "lines" : [ ],
+            "dropList" : [ ],
+            "createList" : [ {
+              "path" : "NEW_TENANT_KEY",
+              "value" : "CREATING_NEW_TENANT",
+              "typePath" : "string"
+            }, {
+              "path" : "NEW_TENANT_VALUE",
+              "value" : "true",
+              "typePath" : "string"
+            }, {
+              "path" : "location",
+              "value" : "/files/gui/middleware/pub/server/ui/tenant/newTenant.html",
+              "typePath" : "string",
+              "id" : "6a34ee41-b55d-4e6a-a9fc-4d65546c7201"
+            } ],
+            "comment" : "Setting tenant creation page",
+            "guid" : "b88372b5-b26e-42a7-9b51-9935b512fc48",
+            "initiateList" : [ ]
+          },
+          "children" : [ ],
+          "type" : "transformer"
+        }, {
+          "id" : "j1_16",
+          "text" : "Invoke",
+          "li_attr" : {
+            "id" : "j1_16"
+          },
+          "a_attr" : {
+            "href" : "#",
+            "id" : "j1_16_anchor"
+          },
+          "state" : {
+            "loaded" : true,
+            "opened" : false,
+            "selected" : false,
+            "disabled" : false
+          },
+          "data" : {
+            "transformers" : [ {
+              "op" : "copy",
+              "from" : "/NEW_TENANT_KEY",
+              "to" : "/key",
+              "inTypePath" : "string",
+              "outTypePath" : "string",
+              "direction" : "in"
+            }, {
+              "op" : "copy",
+              "from" : "/NEW_TENANT_VALUE",
+              "to" : "/value",
+              "inTypePath" : "string",
+              "outTypePath" : "string",
+              "direction" : "in"
+            } ],
+            "lines" : [ {
+              "inputPath" : "NEW_TENANT_KEY",
+              "outputPath" : "key",
+              "inpJsTree" : "#launching_arrow_jsTree",
+              "outpJsTree" : "#landing_arrow_jsTree_function",
+              "INPath" : "NEW_TENANT_KEY",
+              "OUTPath" : "key",
+              "direction" : "in",
+              "op" : "copy",
+              "line" : 0,
+              "dashedLine" : false,
+              "inType" : "string",
+              "outType" : "string",
+              "inTypePath" : "string",
+              "outTypePath" : "string"
+            }, {
+              "inputPath" : "NEW_TENANT_VALUE",
+              "outputPath" : "value",
+              "inpJsTree" : "#launching_arrow_jsTree",
+              "outpJsTree" : "#landing_arrow_jsTree_function",
+              "INPath" : "NEW_TENANT_VALUE",
+              "OUTPath" : "value",
+              "direction" : "in",
+              "op" : "copy",
+              "line" : 0,
+              "dashedLine" : false,
+              "inType" : "string",
+              "outType" : "string",
+              "inTypePath" : "string",
+              "outTypePath" : "string"
+            } ],
+            "dropList" : [ ],
+            "createList" : [ ],
+            "serviceType" : "service",
+            "guid" : "ab9e6177-793d-476c-8f37-2e2893056af0",
+            "fqn" : "packages/middleware/pub/service/keyLogger"
+          },
+          "children" : [ ],
+          "type" : "invoke"
+        }, {
+          "id" : "j1_8",
+          "text" : "Invoke",
+          "li_attr" : {
+            "id" : "j1_8"
+          },
+          "a_attr" : {
+            "href" : "javascript:void(0)",
+            "id" : "j1_8_anchor"
+          },
+          "state" : {
+            "loaded" : true,
+            "opened" : false,
+            "selected" : false,
+            "disabled" : false
+          },
+          "data" : {
+            "transformers" : [ {
+              "op" : "copy",
+              "from" : "/location",
+              "to" : "/location",
+              "inTypePath" : "string",
+              "outTypePath" : "string",
+              "direction" : "in"
+            } ],
+            "lines" : [ {
+              "inputPath" : "location",
+              "outputPath" : "location",
+              "inpJsTree" : "#launching_arrow_jsTree",
+              "outpJsTree" : "#landing_arrow_jsTree_function",
+              "INPath" : "location",
+              "OUTPath" : "location",
+              "direction" : "in",
+              "op" : "copy",
+              "line" : 0,
+              "dashedLine" : false,
+              "inType" : "string",
+              "outType" : "string",
+              "inTypePath" : "string",
+              "outTypePath" : "string"
+            } ],
+            "dropList" : [ ],
+            "createList" : [ ],
+            "serviceType" : "service",
+            "guid" : "78684d06-7079-40b1-9299-6c1d58c83d70",
+            "fqn" : "packages/middleware/pub/service/utils/redirect",
+            "initiateList" : [ ]
+          },
+          "children" : [ ],
+          "type" : "invoke"
+        } ],
+        "type" : "group"
+      }, {
+        "id" : "j1_6",
+        "text" : "CASE",
+        "li_attr" : {
+          "id" : "j1_6"
+        },
+        "a_attr" : {
+          "href" : "javascript:void(0)",
+          "id" : "j1_6_anchor"
+        },
+        "state" : {
+          "loaded" : true,
+          "opened" : false,
+          "selected" : false,
+          "disabled" : false
+        },
+        "data" : {
+          "case" : "#default",
+          "comment" : "Redirect to user landing page ",
+          "guid" : "a6de5f31-b354-4178-936e-e454ed0e3bb6"
+        },
+        "children" : [ {
+          "id" : "j1_2",
+          "text" : "Transformer",
+          "li_attr" : {
+            "id" : "j1_2"
+          },
+          "a_attr" : {
+            "href" : "javascript:void(0)",
+            "id" : "j1_2_anchor"
+          },
+          "state" : {
+            "loaded" : true,
+            "opened" : false,
+            "selected" : false,
+            "disabled" : false
+          },
+          "data" : {
+            "transformers" : [ ],
+            "lines" : [ ],
+            "dropList" : [ ],
+            "createList" : [ {
+              "path" : "location",
+              "value" : "/files/gui/middleware/oidc.html",
+              "typePath" : "string",
+              "id" : "aeee8087-b29a-4b91-9722-54962176ca4c"
+            }, {
+              "path" : "Activity",
+              "value" : "Login",
+              "typePath" : "string"
+            } ],
+            "comment" : "Setting workspace page",
+            "guid" : "d7a5cd6e-8e60-42ce-bbfc-ea353df3f019",
+            "initiateList" : [ ]
+          },
+          "children" : [ ],
+          "type" : "transformer"
+        }, {
+          "id" : "j1_1",
+          "text" : "Invoke",
+          "li_attr" : {
+            "id" : "j1_1"
+          },
+          "a_attr" : {
+            "href" : "javascript:void(0)",
+            "id" : "j1_1_anchor"
+          },
+          "state" : {
+            "loaded" : true,
+            "opened" : false,
+            "selected" : false,
+            "disabled" : false
+          },
+          "data" : {
+            "transformers" : [ {
+              "op" : "copy",
+              "from" : "/location",
+              "to" : "/location",
+              "inTypePath" : "string",
+              "outTypePath" : "string",
+              "direction" : "in"
+            } ],
+            "lines" : [ {
+              "inputPath" : "location",
+              "outputPath" : "location",
+              "inpJsTree" : "#launching_arrow_jsTree",
+              "outpJsTree" : "#landing_arrow_jsTree_function",
+              "INPath" : "location",
+              "OUTPath" : "location",
+              "direction" : "in",
+              "op" : "copy",
+              "line" : 0,
+              "dashedLine" : false,
+              "inType" : "string",
+              "outType" : "string",
+              "inTypePath" : "string",
+              "outTypePath" : "string"
+            } ],
+            "dropList" : [ ],
+            "createList" : [ ],
+            "serviceType" : "service",
+            "status" : "enabled",
+            "guid" : "a6f092a1-9879-45c7-b4d6-5975b6d43032",
+            "fqn" : "packages/middleware/pub/service/utils/redirect"
+          },
+          "children" : [ ],
+          "type" : "invoke"
+        } ],
+        "type" : "group"
+      } ],
+      "type" : "switch"
+    }, {
+      "id" : "j1_14",
+      "text" : "Transformer",
+      "li_attr" : {
+        "id" : "j1_14"
+      },
+      "a_attr" : {
+        "href" : "javascript:void(0)",
+        "id" : "j1_14_anchor"
+      },
+      "state" : {
+        "loaded" : true,
+        "opened" : false,
+        "selected" : false,
+        "disabled" : false,
+        "hidden" : false
+      },
+      "data" : {
+        "guid" : "6c2562b3-4a5a-4504-9a72-e32f3609605f",
+        "columnType" : "-1",
+        "transformers" : [ ],
+        "lines" : [ ],
+        "dropList" : [ ],
+        "createList" : [ {
+          "path" : "message",
+          "value" : "Test1",
+          "id" : "ae17ce06-e289-49c1-92eb-33d179078fcc",
+          "typePath" : "string"
+        } ],
+        "initiateList" : [ {
+          "path" : "message",
+          "id" : "483240b4-400c-4939-b56f-4c2ffd0d5ae7",
+          "typePath" : "string"
+        } ]
+      },
+      "children" : [ ],
+      "type" : "transformer"
+    } ],
+    "api_info" : {
+      "title" : "",
+      "description" : ""
+    },
+    "lockedByUser" : "admin"
+  },
+  "consumers" : "administrators,developers,default",
+  "developers" : "developers",
+  "enableServiceDocumentValidation" : false,
+  "created_on" : "1780421865427",
+  "modified_on" : 1780421865427
+}

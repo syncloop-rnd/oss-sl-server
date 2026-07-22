@@ -1,0 +1,904 @@
+{
+  "latest" : {
+    "createdTS" : "",
+    "input" : [ {
+      "id" : "j2_1",
+      "text" : "*payload",
+      "li_attr" : {
+        "id" : "j2_1"
+      },
+      "a_attr" : {
+        "href" : "#",
+        "id" : "j2_1_anchor"
+      },
+      "state" : {
+        "loaded" : true,
+        "opened" : false,
+        "selected" : false,
+        "disabled" : false,
+        "hidden" : false
+      },
+      "data" : { },
+      "children" : [ {
+        "id" : "j2_2",
+        "text" : "name",
+        "li_attr" : {
+          "id" : "j2_2"
+        },
+        "a_attr" : {
+          "href" : "#",
+          "id" : "j2_2_anchor"
+        },
+        "state" : {
+          "loaded" : true,
+          "opened" : false,
+          "selected" : false,
+          "disabled" : false
+        },
+        "data" : { },
+        "children" : [ ],
+        "type" : "string"
+      }, {
+        "id" : "j2_3",
+        "text" : "category_id",
+        "li_attr" : {
+          "id" : "j2_3"
+        },
+        "a_attr" : {
+          "href" : "#",
+          "id" : "j2_3_anchor"
+        },
+        "state" : {
+          "loaded" : true,
+          "opened" : false,
+          "selected" : false,
+          "disabled" : false
+        },
+        "data" : { },
+        "children" : [ ],
+        "type" : "string"
+      } ],
+      "type" : "document"
+    }, {
+      "id" : "j2_4",
+      "text" : "start",
+      "li_attr" : {
+        "id" : "j2_4"
+      },
+      "a_attr" : {
+        "href" : "#",
+        "id" : "j2_4_anchor"
+      },
+      "state" : {
+        "loaded" : true,
+        "opened" : false,
+        "selected" : false,
+        "disabled" : false,
+        "hidden" : false
+      },
+      "data" : {
+        "guid" : "1ff32c23-d3ea-4af8-a766-2731b7e68dc2",
+        "columnType" : "-1",
+        "assignList" : [ {
+          "path" : "start",
+          "value" : "",
+          "typePath" : "integer"
+        } ]
+      },
+      "children" : [ ],
+      "type" : "integer"
+    }, {
+      "id" : "j2_5",
+      "text" : "offset",
+      "li_attr" : {
+        "id" : "j2_5"
+      },
+      "a_attr" : {
+        "href" : "#",
+        "id" : "j2_5_anchor"
+      },
+      "state" : {
+        "loaded" : true,
+        "opened" : false,
+        "selected" : false,
+        "disabled" : false,
+        "hidden" : false
+      },
+      "data" : {
+        "guid" : "951dd0e0-ee08-456f-a800-92711bcd4978",
+        "columnType" : "-1",
+        "assignList" : [ {
+          "path" : "offset",
+          "value" : "",
+          "typePath" : "integer"
+        } ]
+      },
+      "children" : [ ],
+      "type" : "integer"
+    } ],
+    "output" : [ {
+      "id" : "j3_26",
+      "text" : "count",
+      "li_attr" : {
+        "id" : "j3_26"
+      },
+      "a_attr" : {
+        "href" : "#",
+        "id" : "j3_26_anchor"
+      },
+      "state" : {
+        "loaded" : true,
+        "opened" : false,
+        "selected" : false,
+        "disabled" : false
+      },
+      "data" : { },
+      "children" : [ ],
+      "type" : "integer"
+    }, {
+      "id" : "j3_25",
+      "text" : "marketplace",
+      "li_attr" : {
+        "id" : "j3_25"
+      },
+      "a_attr" : {
+        "href" : "#",
+        "id" : "j3_25_anchor"
+      },
+      "state" : {
+        "loaded" : true,
+        "opened" : false,
+        "selected" : true,
+        "disabled" : false,
+        "hidden" : false
+      },
+      "data" : { },
+      "children" : [ {
+        "id" : "j3_50",
+        "text" : "plugins",
+        "li_attr" : {
+          "id" : "j3_50"
+        },
+        "a_attr" : {
+          "href" : "#",
+          "id" : "j3_50_anchor"
+        },
+        "state" : {
+          "loaded" : true,
+          "opened" : false,
+          "selected" : false,
+          "disabled" : false
+        },
+        "data" : { },
+        "children" : [ {
+          "id" : "j3_51",
+          "text" : "plugin_id",
+          "li_attr" : {
+            "id" : "j3_51"
+          },
+          "a_attr" : {
+            "href" : "#"
+          },
+          "state" : {
+            "loaded" : true,
+            "opened" : false,
+            "selected" : false,
+            "disabled" : false
+          },
+          "data" : { },
+          "children" : [ ],
+          "type" : "integer"
+        }, {
+          "id" : "j3_52",
+          "text" : "plugin_name",
+          "li_attr" : {
+            "id" : "j3_52"
+          },
+          "a_attr" : {
+            "href" : "#"
+          },
+          "state" : {
+            "loaded" : true,
+            "opened" : false,
+            "selected" : false,
+            "disabled" : false
+          },
+          "data" : { },
+          "children" : [ ],
+          "type" : "string"
+        }, {
+          "id" : "j3_53",
+          "text" : "short_description",
+          "li_attr" : {
+            "id" : "j3_53"
+          },
+          "a_attr" : {
+            "href" : "#"
+          },
+          "state" : {
+            "loaded" : true,
+            "opened" : false,
+            "selected" : false,
+            "disabled" : false
+          },
+          "data" : { },
+          "children" : [ ],
+          "type" : "string"
+        }, {
+          "id" : "j3_54",
+          "text" : "description",
+          "li_attr" : {
+            "id" : "j3_54"
+          },
+          "a_attr" : {
+            "href" : "#"
+          },
+          "state" : {
+            "loaded" : true,
+            "opened" : false,
+            "selected" : false,
+            "disabled" : false
+          },
+          "data" : { },
+          "children" : [ ],
+          "type" : "string"
+        }, {
+          "id" : "j3_55",
+          "text" : "latest_version",
+          "li_attr" : {
+            "id" : "j3_55"
+          },
+          "a_attr" : {
+            "href" : "#"
+          },
+          "state" : {
+            "loaded" : true,
+            "opened" : false,
+            "selected" : false,
+            "disabled" : false
+          },
+          "data" : { },
+          "children" : [ ],
+          "type" : "string"
+        }, {
+          "id" : "j3_56",
+          "text" : "latest_version_number",
+          "li_attr" : {
+            "id" : "j3_56"
+          },
+          "a_attr" : {
+            "href" : "#"
+          },
+          "state" : {
+            "loaded" : true,
+            "opened" : false,
+            "selected" : false,
+            "disabled" : false
+          },
+          "data" : { },
+          "children" : [ ],
+          "type" : "integer"
+        }, {
+          "id" : "j3_57",
+          "text" : "created_on",
+          "li_attr" : {
+            "id" : "j3_57"
+          },
+          "a_attr" : {
+            "href" : "#"
+          },
+          "state" : {
+            "loaded" : true,
+            "opened" : false,
+            "selected" : false,
+            "disabled" : false
+          },
+          "data" : { },
+          "children" : [ ],
+          "type" : "date"
+        }, {
+          "id" : "j3_58",
+          "text" : "modified_on",
+          "li_attr" : {
+            "id" : "j3_58"
+          },
+          "a_attr" : {
+            "href" : "#"
+          },
+          "state" : {
+            "loaded" : true,
+            "opened" : false,
+            "selected" : false,
+            "disabled" : false
+          },
+          "data" : { },
+          "children" : [ ],
+          "type" : "date"
+        }, {
+          "id" : "j3_59",
+          "text" : "vendor",
+          "li_attr" : {
+            "id" : "j3_59"
+          },
+          "a_attr" : {
+            "href" : "#"
+          },
+          "state" : {
+            "loaded" : true,
+            "opened" : false,
+            "selected" : false,
+            "disabled" : false
+          },
+          "data" : { },
+          "children" : [ ],
+          "type" : "string"
+        }, {
+          "id" : "j3_60",
+          "text" : "service",
+          "li_attr" : {
+            "id" : "j3_60"
+          },
+          "a_attr" : {
+            "href" : "#"
+          },
+          "state" : {
+            "loaded" : true,
+            "opened" : false,
+            "selected" : false,
+            "disabled" : false
+          },
+          "data" : { },
+          "children" : [ ],
+          "type" : "string"
+        }, {
+          "id" : "j3_61",
+          "text" : "installing_path",
+          "li_attr" : {
+            "id" : "j3_61"
+          },
+          "a_attr" : {
+            "href" : "#"
+          },
+          "state" : {
+            "loaded" : true,
+            "opened" : false,
+            "selected" : false,
+            "disabled" : false
+          },
+          "data" : { },
+          "children" : [ ],
+          "type" : "string"
+        }, {
+          "id" : "j3_62",
+          "text" : "category_name",
+          "li_attr" : {
+            "id" : "j3_62"
+          },
+          "a_attr" : {
+            "href" : "#"
+          },
+          "state" : {
+            "loaded" : true,
+            "opened" : false,
+            "selected" : false,
+            "disabled" : false
+          },
+          "data" : { },
+          "children" : [ ],
+          "type" : "string"
+        }, {
+          "id" : "j3_63",
+          "text" : "license_description",
+          "li_attr" : {
+            "id" : "j3_63"
+          },
+          "a_attr" : {
+            "href" : "#"
+          },
+          "state" : {
+            "loaded" : true,
+            "opened" : false,
+            "selected" : false,
+            "disabled" : false
+          },
+          "data" : { },
+          "children" : [ ],
+          "type" : "string"
+        }, {
+          "id" : "j3_64",
+          "text" : "metric_name",
+          "li_attr" : {
+            "id" : "j3_64"
+          },
+          "a_attr" : {
+            "href" : "#"
+          },
+          "state" : {
+            "loaded" : true,
+            "opened" : false,
+            "selected" : false,
+            "disabled" : false
+          },
+          "data" : { },
+          "children" : [ ],
+          "type" : "string"
+        }, {
+          "id" : "j3_65",
+          "text" : "published_by",
+          "li_attr" : {
+            "id" : "j3_65"
+          },
+          "a_attr" : {
+            "href" : "#"
+          },
+          "state" : {
+            "loaded" : true,
+            "opened" : false,
+            "selected" : false,
+            "disabled" : false
+          },
+          "data" : { },
+          "children" : [ ],
+          "type" : "string"
+        }, {
+          "id" : "j3_66",
+          "text" : "verified",
+          "li_attr" : {
+            "id" : "j3_66"
+          },
+          "a_attr" : {
+            "href" : "#"
+          },
+          "state" : {
+            "loaded" : true,
+            "opened" : false,
+            "selected" : false,
+            "disabled" : false
+          },
+          "data" : { },
+          "children" : [ ],
+          "type" : "string"
+        }, {
+          "id" : "j3_67",
+          "text" : "website",
+          "li_attr" : {
+            "id" : "j3_67"
+          },
+          "a_attr" : {
+            "href" : "#"
+          },
+          "state" : {
+            "loaded" : true,
+            "opened" : false,
+            "selected" : false,
+            "disabled" : false
+          },
+          "data" : { },
+          "children" : [ ],
+          "type" : "string"
+        }, {
+          "id" : "j3_68",
+          "text" : "privacy_policy",
+          "li_attr" : {
+            "id" : "j3_68"
+          },
+          "a_attr" : {
+            "href" : "#"
+          },
+          "state" : {
+            "loaded" : true,
+            "opened" : false,
+            "selected" : false,
+            "disabled" : false
+          },
+          "data" : { },
+          "children" : [ ],
+          "type" : "string"
+        }, {
+          "id" : "j3_69",
+          "text" : "cost_type",
+          "li_attr" : {
+            "id" : "j3_69"
+          },
+          "a_attr" : {
+            "href" : "#"
+          },
+          "state" : {
+            "loaded" : true,
+            "opened" : false,
+            "selected" : false,
+            "disabled" : false
+          },
+          "data" : { },
+          "children" : [ ],
+          "type" : "string"
+        }, {
+          "id" : "j3_70",
+          "text" : "screenshot",
+          "li_attr" : {
+            "id" : "j3_70"
+          },
+          "a_attr" : {
+            "href" : "#"
+          },
+          "state" : {
+            "loaded" : true,
+            "opened" : false,
+            "selected" : false,
+            "disabled" : false
+          },
+          "data" : { },
+          "children" : [ ],
+          "type" : "string"
+        }, {
+          "id" : "j3_71",
+          "text" : "tag_name",
+          "li_attr" : {
+            "id" : "j3_71"
+          },
+          "a_attr" : {
+            "href" : "#"
+          },
+          "state" : {
+            "loaded" : true,
+            "opened" : false,
+            "selected" : false,
+            "disabled" : false
+          },
+          "data" : { },
+          "children" : [ ],
+          "type" : "string"
+        }, {
+          "id" : "j3_72",
+          "text" : "name_slug",
+          "li_attr" : {
+            "id" : "j3_72"
+          },
+          "a_attr" : {
+            "href" : "#"
+          },
+          "state" : {
+            "loaded" : true,
+            "opened" : false,
+            "selected" : false,
+            "disabled" : false
+          },
+          "data" : { },
+          "children" : [ ],
+          "type" : "string"
+        }, {
+          "id" : "j3_73",
+          "text" : "unique_id",
+          "li_attr" : {
+            "id" : "j3_73"
+          },
+          "a_attr" : {
+            "href" : "#"
+          },
+          "state" : {
+            "loaded" : true,
+            "opened" : false,
+            "selected" : false,
+            "disabled" : false
+          },
+          "data" : { },
+          "children" : [ ],
+          "type" : "string"
+        } ],
+        "type" : "documentList"
+      } ],
+      "type" : "document"
+    }, {
+      "id" : "j3_27",
+      "text" : "start",
+      "li_attr" : {
+        "id" : "j3_27"
+      },
+      "a_attr" : {
+        "href" : "#",
+        "id" : "j3_27_anchor"
+      },
+      "state" : {
+        "loaded" : true,
+        "opened" : false,
+        "selected" : false,
+        "disabled" : false
+      },
+      "data" : { },
+      "children" : [ ],
+      "type" : "integer"
+    }, {
+      "id" : "j3_28",
+      "text" : "offset",
+      "li_attr" : {
+        "id" : "j3_28"
+      },
+      "a_attr" : {
+        "href" : "#",
+        "id" : "j3_28_anchor"
+      },
+      "state" : {
+        "loaded" : true,
+        "opened" : false,
+        "selected" : false,
+        "disabled" : false
+      },
+      "data" : { },
+      "children" : [ ],
+      "type" : "integer"
+    } ],
+    "api" : [ {
+      "id" : "j1_2",
+      "text" : "Transformer",
+      "li_attr" : {
+        "id" : "j1_2"
+      },
+      "a_attr" : {
+        "href" : "javascript:void(0)",
+        "id" : "j1_2_anchor"
+      },
+      "state" : {
+        "loaded" : true,
+        "opened" : false,
+        "selected" : false,
+        "disabled" : false,
+        "hidden" : false
+      },
+      "data" : {
+        "guid" : "bb74f4dd-edc4-4e41-a296-2797a1e64995",
+        "transformers" : [ ],
+        "lines" : [ ],
+        "dropList" : [ ],
+        "createList" : [ ],
+        "initiateList" : [ ]
+      },
+      "children" : [ ],
+      "type" : "transformer"
+    }, {
+      "id" : "j1_1",
+      "text" : "Invoke",
+      "li_attr" : {
+        "id" : "j1_1"
+      },
+      "a_attr" : {
+        "href" : "javascript:void(0)",
+        "id" : "j1_1_anchor"
+      },
+      "state" : {
+        "loaded" : true,
+        "opened" : false,
+        "selected" : true,
+        "disabled" : false,
+        "hidden" : false
+      },
+      "data" : {
+        "guid" : "3aa3bd22-37bd-45ae-83b0-fd828aba896a",
+        "transformers" : [ {
+          "op" : "copy",
+          "from" : "/*payload/name",
+          "to" : "/inputDocList/0/name",
+          "inTypePath" : "document/string",
+          "outTypePath" : "documentList/string",
+          "direction" : "in"
+        }, {
+          "op" : "copy",
+          "from" : "/*payload/category_id",
+          "to" : "/inputDocList/0/category_id",
+          "inTypePath" : "document/string",
+          "outTypePath" : "documentList/string",
+          "direction" : "in"
+        }, {
+          "op" : "copy",
+          "from" : "/outputDocList",
+          "to" : "/marketplace/plugins",
+          "inTypePath" : "documentList",
+          "outTypePath" : "document/documentList",
+          "direction" : "out"
+        }, {
+          "op" : "copy",
+          "from" : "/start",
+          "to" : "/inputDocList/0/start",
+          "inTypePath" : "integer",
+          "outTypePath" : "documentList/integer",
+          "direction" : "in"
+        }, {
+          "op" : "copy",
+          "from" : "/offset",
+          "to" : "/inputDocList/0/offset",
+          "inTypePath" : "integer",
+          "outTypePath" : "documentList/integer",
+          "direction" : "in"
+        } ],
+        "lines" : [ {
+          "inputPath" : "*payload/name",
+          "outputPath" : "inputDocList/name",
+          "inpJsTree" : "#launching_arrow_jsTree",
+          "outpJsTree" : "#landing_arrow_jsTree_function",
+          "INPath" : "*payload/name",
+          "OUTPath" : "inputDocList/#0/name",
+          "direction" : "in",
+          "op" : "copy",
+          "line" : 0,
+          "dashedLine" : false,
+          "inType" : "string",
+          "outType" : "string",
+          "inTypePath" : "document/string",
+          "outTypePath" : "documentList/string"
+        }, {
+          "inputPath" : "*payload/category_id",
+          "outputPath" : "inputDocList/category_id",
+          "inpJsTree" : "#launching_arrow_jsTree",
+          "outpJsTree" : "#landing_arrow_jsTree_function",
+          "INPath" : "*payload/category_id",
+          "OUTPath" : "inputDocList/#0/category_id",
+          "direction" : "in",
+          "op" : "copy",
+          "line" : 0,
+          "dashedLine" : false,
+          "inType" : "string",
+          "outType" : "string",
+          "inTypePath" : "document/string",
+          "outTypePath" : "documentList/string"
+        }, {
+          "inputPath" : "outputDocList",
+          "outputPath" : "marketplace/plugins",
+          "inpJsTree" : "#launching_arrow_jsTree_function",
+          "outpJsTree" : "#landing_arrow_jsTree",
+          "INPath" : "outputDocList",
+          "OUTPath" : "marketplace/plugins",
+          "direction" : "out",
+          "op" : "copy",
+          "line" : 0,
+          "dashedLine" : false,
+          "inType" : "documentList",
+          "outType" : "documentList",
+          "inTypePath" : "documentList",
+          "outTypePath" : "document/documentList"
+        }, {
+          "inputPath" : "start",
+          "outputPath" : "inputDocList/start",
+          "inpJsTree" : "#launching_arrow_jsTree",
+          "outpJsTree" : "#landing_arrow_jsTree_function",
+          "INPath" : "start",
+          "OUTPath" : "inputDocList/#0/start",
+          "direction" : "in",
+          "op" : "copy",
+          "line" : 0,
+          "dashedLine" : false,
+          "inType" : "integer",
+          "outType" : "integer",
+          "inTypePath" : "integer",
+          "outTypePath" : "documentList/integer"
+        }, {
+          "inputPath" : "offset",
+          "outputPath" : "inputDocList/offset",
+          "inpJsTree" : "#launching_arrow_jsTree",
+          "outpJsTree" : "#landing_arrow_jsTree_function",
+          "INPath" : "offset",
+          "OUTPath" : "inputDocList/#0/offset",
+          "direction" : "in",
+          "op" : "copy",
+          "line" : 0,
+          "dashedLine" : false,
+          "inType" : "integer",
+          "outType" : "integer",
+          "inTypePath" : "integer",
+          "outTypePath" : "documentList/integer"
+        } ],
+        "dropList" : [ ],
+        "createList" : [ ],
+        "initiateList" : [ ],
+        "fqn" : "packages/middleware/pub/marketplace/adapter/services/DQL/getPluginByNameAndCategory",
+        "serviceType" : "sql"
+      },
+      "children" : [ ],
+      "type" : "invoke"
+    }, {
+      "id" : "j1_4",
+      "text" : "Invoke",
+      "li_attr" : {
+        "id" : "j1_4"
+      },
+      "a_attr" : {
+        "href" : "javascript:void(0)",
+        "id" : "j1_4_anchor"
+      },
+      "state" : {
+        "loaded" : true,
+        "opened" : false,
+        "selected" : false,
+        "disabled" : false,
+        "hidden" : false
+      },
+      "data" : {
+        "guid" : "64a977c8-3d03-4b1a-af04-59d2b06828ef",
+        "columnType" : "-1",
+        "transformers" : [ {
+          "op" : "copy",
+          "from" : "/*payload/name",
+          "to" : "/inputDocList/0/name",
+          "inTypePath" : "document/string",
+          "outTypePath" : "documentList/string",
+          "direction" : "in"
+        }, {
+          "op" : "copy",
+          "from" : "/*payload/category_id",
+          "to" : "/inputDocList/0/category_id",
+          "inTypePath" : "document/string",
+          "outTypePath" : "documentList/string",
+          "direction" : "in"
+        }, {
+          "op" : "copy",
+          "from" : "/outputDocList/0/count",
+          "to" : "/count",
+          "inTypePath" : "documentList/integer",
+          "outTypePath" : "integer",
+          "direction" : "out"
+        } ],
+        "lines" : [ {
+          "inputPath" : "*payload/name",
+          "outputPath" : "inputDocList/name",
+          "inpJsTree" : "#launching_arrow_jsTree",
+          "outpJsTree" : "#landing_arrow_jsTree_function",
+          "INPath" : "*payload/name",
+          "OUTPath" : "inputDocList/#0/name",
+          "direction" : "in",
+          "op" : "copy",
+          "line" : 0,
+          "dashedLine" : false,
+          "inType" : "string",
+          "outType" : "string",
+          "inTypePath" : "document/string",
+          "outTypePath" : "documentList/string"
+        }, {
+          "inputPath" : "*payload/category_id",
+          "outputPath" : "inputDocList/category_id",
+          "inpJsTree" : "#launching_arrow_jsTree",
+          "outpJsTree" : "#landing_arrow_jsTree_function",
+          "INPath" : "*payload/category_id",
+          "OUTPath" : "inputDocList/#0/category_id",
+          "direction" : "in",
+          "op" : "copy",
+          "line" : 0,
+          "dashedLine" : false,
+          "inType" : "string",
+          "outType" : "string",
+          "inTypePath" : "document/string",
+          "outTypePath" : "documentList/string"
+        }, {
+          "inputPath" : "outputDocList/count",
+          "outputPath" : "count",
+          "inpJsTree" : "#launching_arrow_jsTree_function",
+          "outpJsTree" : "#landing_arrow_jsTree",
+          "INPath" : "outputDocList/#0/count",
+          "OUTPath" : "count",
+          "direction" : "out",
+          "op" : "copy",
+          "line" : 0,
+          "dashedLine" : false,
+          "inType" : "integer",
+          "outType" : "integer",
+          "inTypePath" : "documentList/integer",
+          "outTypePath" : "integer"
+        } ],
+        "dropList" : [ ],
+        "createList" : [ ],
+        "initiateList" : [ ],
+        "fqn" : "packages/middleware/pub/marketplace/adapter/services/DQL/getPluginCountByNameAndCategory",
+        "serviceType" : "sql"
+      },
+      "children" : [ ],
+      "type" : "invoke"
+    } ],
+    "api_info" : {
+      "title" : "",
+      "description" : ""
+    },
+    "lockedByUser" : "admin"
+  },
+  "consumers" : "",
+  "developers" : "developers",
+  "enableServiceDocumentValidation" : false,
+  "created_on" : "1725283864068",
+  "modified_on" : 1725283864068
+}

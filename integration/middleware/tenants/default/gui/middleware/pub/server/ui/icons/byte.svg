@@ -1,0 +1,41 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="20" height="20" viewBox="0 0 20 20">
+  <defs>
+    <style>
+      .cls-1 {
+        filter: url(#filter);
+      }
+
+      .cls-2, .cls-3 {
+        fill-rule: evenodd;
+      }
+
+      .cls-3 {
+        fill: #6b6c6f;
+      }
+
+      .cls-4 {
+        font-size: 20px;
+        font-family: Arial;
+        font-weight: 700;
+        text-transform: uppercase;
+      }
+    </style>
+    <filter id="filter" filterUnits="userSpaceOnUse">
+      <feFlood result="flood" flood-color="#7b7b7b"/>
+      <feComposite result="composite" operator="in" in2="SourceGraphic"/>
+      <feBlend result="blend" in2="SourceGraphic"/>
+    </filter>
+  </defs>
+  <g id="byte">
+    <g class="cls-1">
+      <g>
+        <path class="cls-2" d="M780.424,1.545V18.455h13.152V6.419l-4.982-4.874h-8.17Zm0.9,0.995V17.46h11.358V6.718L788.5,2.54h-7.174Z" transform="translate(-777)"/>
+        <path class="cls-3" d="M788.5,2.54V6.718h4.284Z" transform="translate(-777)"/>
+        <text id="_10100" data-name="10100" class="cls-4" transform="translate(6.146 9.152) scale(0.142 0.105)">10100</text>
+        <text id="_01001" data-name="01001" class="cls-4" transform="translate(6.288 11.571) scale(0.142 0.105)">01001</text>
+        <text id="_10100-2" data-name="10100" class="cls-4" transform="translate(6.288 13.991) scale(0.142 0.105)">10100</text>
+        <text id="_11001" data-name="11001" class="cls-4" transform="translate(6.288 16.41) scale(0.142 0.105)">11001</text>
+      </g>
+    </g>
+  </g>
+</svg>

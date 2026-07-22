@@ -1,0 +1,414 @@
+{
+  "latest" : {
+    "createdTS" : "",
+    "input" : [ ],
+    "output" : [ {
+      "id" : "j3_1",
+      "text" : "msg",
+      "li_attr" : {
+        "id" : "j3_1"
+      },
+      "a_attr" : {
+        "href" : "#",
+        "id" : "j3_1_anchor"
+      },
+      "state" : {
+        "loaded" : true,
+        "opened" : false,
+        "selected" : false,
+        "disabled" : false
+      },
+      "data" : { },
+      "children" : [ ],
+      "type" : "string"
+    } ],
+    "api_info" : {
+      "title" : "",
+      "description" : ""
+    },
+    "lockedByUser" : "admin",
+    "api" : [ {
+      "id" : "j1_3",
+      "text" : "Group",
+      "li_attr" : {
+        "id" : "j1_3"
+      },
+      "a_attr" : {
+        "href" : "javascript:void(0)",
+        "id" : "j1_3_anchor"
+      },
+      "state" : {
+        "loaded" : true,
+        "opened" : true,
+        "selected" : false,
+        "disabled" : false
+      },
+      "data" : {
+        "comment" : "Create Google OIDC Login profille",
+        "guid" : "441bca4f-c24d-4056-9899-24e0b6a1d4f3"
+      },
+      "children" : [ {
+        "id" : "j1_4",
+        "text" : "Invoke",
+        "li_attr" : {
+          "id" : "j1_4"
+        },
+        "a_attr" : {
+          "href" : "#",
+          "id" : "j1_4_anchor"
+        },
+        "state" : {
+          "loaded" : true,
+          "opened" : false,
+          "selected" : false,
+          "disabled" : false
+        },
+        "data" : {
+          "transformers" : [ {
+            "op" : "copy",
+            "from" : "/uri",
+            "to" : "/basePath",
+            "inTypePath" : "string",
+            "outTypePath" : "string",
+            "direction" : "out"
+          } ],
+          "lines" : [ {
+            "inputPath" : "uri",
+            "outputPath" : "basePath",
+            "inpJsTree" : "#launching_arrow_jsTree_function",
+            "outpJsTree" : "#landing_arrow_jsTree",
+            "INPath" : "uri",
+            "OUTPath" : "basePath",
+            "direction" : "out",
+            "op" : "copy",
+            "line" : 0,
+            "dashedLine" : false,
+            "inType" : "string",
+            "outType" : "string",
+            "inTypePath" : "string",
+            "outTypePath" : "string"
+          } ],
+          "dropList" : [ ],
+          "createList" : [ ],
+          "serviceType" : "service",
+          "guid" : "226682c2-2927-4238-9bc5-a7c8e5f57750",
+          "fqn" : "packages/middleware/pub/client/utils/getCurrentBasePath"
+        },
+        "children" : [ ],
+        "type" : "invoke"
+      }, {
+        "id" : "j1_1",
+        "text" : "Transformer",
+        "li_attr" : {
+          "id" : "j1_1"
+        },
+        "a_attr" : {
+          "href" : "javascript:void(0)",
+          "id" : "j1_1_anchor"
+        },
+        "state" : {
+          "loaded" : true,
+          "opened" : false,
+          "selected" : true,
+          "disabled" : false
+        },
+        "data" : {
+          "transformers" : [ ],
+          "lines" : [ ],
+          "dropList" : [ ],
+          "createList" : [ {
+            "path" : "google/clientId",
+            "value" : "#{clientId}",
+            "evaluate" : "ELV",
+            "typePath" : "document/string"
+          }, {
+            "path" : "google/secret",
+            "value" : "#{secret}",
+            "evaluate" : "ELV",
+            "typePath" : "document/string"
+          }, {
+            "path" : "google/discoveryURI",
+            "value" : "#{discoveryURI}",
+            "evaluate" : "ELV",
+            "typePath" : "document/string"
+          }, {
+            "path" : "google/customParam.prompt",
+            "value" : "#{customParam.prompt}",
+            "evaluate" : "ELV",
+            "typePath" : "document/string"
+          }, {
+            "path" : "google/basePath",
+            "value" : "#{*middleware.host.name}",
+            "evaluate" : "EEV",
+            "typePath" : "document/string"
+          }, {
+            "path" : "google/loginHandlerAPI",
+            "value" : "/google/login",
+            "typePath" : "document/string"
+          } ],
+          "status" : "enabled",
+          "guid" : "4f2cef61-0a81-497b-955d-8895ca78666e"
+        },
+        "children" : [ ],
+        "type" : "transformer"
+      }, {
+        "id" : "j1_2",
+        "text" : "Invoke",
+        "li_attr" : {
+          "id" : "j1_2"
+        },
+        "a_attr" : {
+          "href" : "javascript:void(0)",
+          "id" : "j1_2_anchor"
+        },
+        "state" : {
+          "loaded" : true,
+          "opened" : false,
+          "selected" : false,
+          "disabled" : false
+        },
+        "data" : {
+          "transformers" : [ {
+            "op" : "copy",
+            "from" : "/google/clientId",
+            "to" : "/oidcProfile/clientId",
+            "inTypePath" : "document/string",
+            "outTypePath" : "document/string",
+            "direction" : "in"
+          }, {
+            "op" : "copy",
+            "from" : "/google/secret",
+            "to" : "/oidcProfile/secret",
+            "inTypePath" : "document/string",
+            "outTypePath" : "document/string",
+            "direction" : "in"
+          }, {
+            "op" : "copy",
+            "from" : "/google/discoveryURI",
+            "to" : "/oidcProfile/discoveryURI",
+            "inTypePath" : "document/string",
+            "outTypePath" : "document/string",
+            "direction" : "in"
+          }, {
+            "op" : "copy",
+            "from" : "/google/customParam.prompt",
+            "to" : "/oidcProfile/customParam.prompt",
+            "inTypePath" : "document/string",
+            "outTypePath" : "document/string",
+            "direction" : "in"
+          }, {
+            "op" : "copy",
+            "from" : "/msg",
+            "to" : "/msg",
+            "inTypePath" : "string",
+            "outTypePath" : "string",
+            "direction" : "out"
+          }, {
+            "op" : "copy",
+            "from" : "/google/loginHandlerAPI",
+            "to" : "/oidcProfile/loginHandlerAPI",
+            "inTypePath" : "document/string",
+            "outTypePath" : "document/string",
+            "direction" : "in"
+          }, {
+            "op" : "copy",
+            "from" : "/google/basePath",
+            "to" : "/oidcProfile/basePath",
+            "inTypePath" : "document/string",
+            "outTypePath" : "document/string",
+            "direction" : "in"
+          } ],
+          "lines" : [ {
+            "inputPath" : "google/clientId",
+            "outputPath" : "oidcProfile/clientId",
+            "inpJsTree" : "#launching_arrow_jsTree",
+            "outpJsTree" : "#landing_arrow_jsTree_function",
+            "INPath" : "google/clientId",
+            "OUTPath" : "oidcProfile/clientId",
+            "direction" : "in",
+            "op" : "copy",
+            "line" : 0,
+            "dashedLine" : false,
+            "inType" : "string",
+            "outType" : "string",
+            "inTypePath" : "document/string",
+            "outTypePath" : "document/string"
+          }, {
+            "inputPath" : "google/secret",
+            "outputPath" : "oidcProfile/secret",
+            "inpJsTree" : "#launching_arrow_jsTree",
+            "outpJsTree" : "#landing_arrow_jsTree_function",
+            "INPath" : "google/secret",
+            "OUTPath" : "oidcProfile/secret",
+            "direction" : "in",
+            "op" : "copy",
+            "line" : 0,
+            "dashedLine" : false,
+            "inType" : "string",
+            "outType" : "string",
+            "inTypePath" : "document/string",
+            "outTypePath" : "document/string"
+          }, {
+            "inputPath" : "google/discoveryURI",
+            "outputPath" : "oidcProfile/discoveryURI",
+            "inpJsTree" : "#launching_arrow_jsTree",
+            "outpJsTree" : "#landing_arrow_jsTree_function",
+            "INPath" : "google/discoveryURI",
+            "OUTPath" : "oidcProfile/discoveryURI",
+            "direction" : "in",
+            "op" : "copy",
+            "line" : 0,
+            "dashedLine" : false,
+            "inType" : "string",
+            "outType" : "string",
+            "inTypePath" : "document/string",
+            "outTypePath" : "document/string"
+          }, {
+            "inputPath" : "google/customParam.prompt",
+            "outputPath" : "oidcProfile/customParam.prompt",
+            "inpJsTree" : "#launching_arrow_jsTree",
+            "outpJsTree" : "#landing_arrow_jsTree_function",
+            "INPath" : "google/customParam.prompt",
+            "OUTPath" : "oidcProfile/customParam.prompt",
+            "direction" : "in",
+            "op" : "copy",
+            "line" : 0,
+            "dashedLine" : false,
+            "inType" : "string",
+            "outType" : "string",
+            "inTypePath" : "document/string",
+            "outTypePath" : "document/string"
+          }, {
+            "inputPath" : "msg",
+            "outputPath" : "msg",
+            "inpJsTree" : "#launching_arrow_jsTree_function",
+            "outpJsTree" : "#landing_arrow_jsTree",
+            "INPath" : "msg",
+            "OUTPath" : "msg",
+            "direction" : "out",
+            "op" : "copy",
+            "line" : 0,
+            "dashedLine" : false,
+            "inType" : "string",
+            "outType" : "string",
+            "inTypePath" : "string",
+            "outTypePath" : "string"
+          }, {
+            "inputPath" : "google/loginHandlerAPI",
+            "outputPath" : "oidcProfile/loginHandlerAPI",
+            "inpJsTree" : "#launching_arrow_jsTree",
+            "outpJsTree" : "#landing_arrow_jsTree_function",
+            "INPath" : "google/loginHandlerAPI",
+            "OUTPath" : "oidcProfile/loginHandlerAPI",
+            "direction" : "in",
+            "op" : "copy",
+            "line" : 0,
+            "dashedLine" : false,
+            "inType" : "string",
+            "outType" : "string",
+            "inTypePath" : "document/string",
+            "outTypePath" : "document/string"
+          }, {
+            "inputPath" : "google/basePath",
+            "outputPath" : "oidcProfile/basePath",
+            "inpJsTree" : "#launching_arrow_jsTree",
+            "outpJsTree" : "#landing_arrow_jsTree_function",
+            "INPath" : "google/basePath",
+            "OUTPath" : "oidcProfile/basePath",
+            "direction" : "in",
+            "op" : "copy",
+            "line" : 0,
+            "dashedLine" : false,
+            "inType" : "string",
+            "outType" : "string",
+            "inTypePath" : "document/string",
+            "outTypePath" : "document/string"
+          } ],
+          "dropList" : [ ],
+          "createList" : [ ],
+          "serviceType" : "service",
+          "status" : "enabled",
+          "guid" : "2afd05e8-e980-47e9-bae3-fcaac969e475",
+          "fqn" : "packages/middleware/pub/security/java/createOIDCProfile"
+        },
+        "children" : [ ],
+        "type" : "invoke"
+      }, {
+        "id" : "j1_6",
+        "text" : "Invoke",
+        "li_attr" : {
+          "id" : "j1_6"
+        },
+        "a_attr" : {
+          "href" : "#",
+          "id" : "j1_6_anchor"
+        },
+        "state" : {
+          "loaded" : true,
+          "opened" : false,
+          "selected" : false,
+          "disabled" : false
+        },
+        "data" : {
+          "transformers" : [ {
+            "op" : "copy",
+            "from" : "/basePath",
+            "to" : "/key",
+            "inTypePath" : "string",
+            "outTypePath" : "string",
+            "direction" : "in"
+          }, {
+            "op" : "copy",
+            "from" : "/msg",
+            "to" : "/value",
+            "inTypePath" : "string",
+            "outTypePath" : "string",
+            "direction" : "in"
+          } ],
+          "lines" : [ {
+            "inputPath" : "basePath",
+            "outputPath" : "key",
+            "inpJsTree" : "#launching_arrow_jsTree",
+            "outpJsTree" : "#landing_arrow_jsTree_function",
+            "INPath" : "basePath",
+            "OUTPath" : "key",
+            "direction" : "in",
+            "op" : "copy",
+            "line" : 0,
+            "dashedLine" : false,
+            "inType" : "string",
+            "outType" : "string",
+            "inTypePath" : "string",
+            "outTypePath" : "string"
+          }, {
+            "inputPath" : "msg",
+            "outputPath" : "value",
+            "inpJsTree" : "#launching_arrow_jsTree",
+            "outpJsTree" : "#landing_arrow_jsTree_function",
+            "INPath" : "msg",
+            "OUTPath" : "value",
+            "direction" : "in",
+            "op" : "copy",
+            "line" : 0,
+            "dashedLine" : false,
+            "inType" : "string",
+            "outType" : "string",
+            "inTypePath" : "string",
+            "outTypePath" : "string"
+          } ],
+          "dropList" : [ ],
+          "createList" : [ ],
+          "serviceType" : "service",
+          "guid" : "20bf0f82-40cf-45fb-9efb-8474e29ebcdc",
+          "fqn" : "packages/middleware/pub/service/keyLogger"
+        },
+        "children" : [ ],
+        "type" : "invoke"
+      } ],
+      "type" : "group"
+    } ]
+  },
+  "consumers" : "",
+  "developers" : "",
+  "enableServiceDocumentValidation" : false
+}

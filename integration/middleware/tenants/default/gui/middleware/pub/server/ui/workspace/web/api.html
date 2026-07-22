@@ -1,0 +1,1208 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<title>API</title>
+	<base href="/"><script src="env.js"></script>
+	<script>
+		window.ENV = window.env || {};
+	</script>
+	<link href="middleware/pub/server/ui/assets/css/bootstrap.min.css" rel="stylesheet">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+	<link href="https://unpkg.com/tabulator-tables@5.2.1/dist/css/tabulator.min.css" rel="stylesheet">
+	<link rel="shortcut icon" href="middleware/pub/server/ui/assets/img/favicon.ico" type="image/x-icon" />
+	<link rel="stylesheet" href="index.css" />
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600&display=swap" rel="stylesheet">
+
+	<!-- Custom styles for this template -->
+	<link href="middleware/pub/server/ui/assets/css/sidebars.css" rel="stylesheet">
+	<link href="middleware/pub/server/ui/assets/css/custom.css" rel="stylesheet">
+	<link href="middleware/pub/server/ui/css/style.min.css" rel="stylesheet">
+	<link href="middleware/pub/server/ui/assets/css/preload.css" rel="stylesheet">
+	<link rel="stylesheet" href="middleware/pub/server/ui/assets/css/select2.min.css">
+	<script type="text/javascript">
+		var SDK_EMBEDDED = false;
+	</script>
+	<script	src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+	<script src="middleware/pub/server/ui/assets/js/skeleton.js"></script>
+	<script	src="middleware/pub/server/ui/javascript/jstree.min.js"></script>
+	<script src="middleware/pub/server/ui/javascript/jstreetable.js"></script>
+	<script src="middleware/pub/server/ui/javascript/middleware.js"></script>
+	<script src="middleware/pub/server/ui/javascript/workspace-profile-header.js"></script>
+	<script type="text/javascript" src="https://unpkg.com/tabulator-tables@5.2.1/dist/js/tabulator.min.js"></script>
+	<script src="middleware/pub/server/ui/assets/js/select2-init.js"></script>
+	<script src="middleware/pub/server/ui/assets/js/select2.full.min.js"></script>
+	<script src="middleware/pub/server/ui/javascript/sweetalert.min.js"></script>
+	<script src="middleware/pub/server/ui/javascript/sweetalert.init.js"></script>
+	<link rel="stylesheet" href="middleware/pub/server/ui/css/sweetalert.css" />
+
+	<script type="syncloop/analytics"></script>
+
+	<style>
+		.modal-header {
+			display: inline-block;
+		}
+
+		.modal-body li.nav-link.active.in {
+			border-color: transparent;
+		}
+
+		.modal-body .nav-link{
+			padding: 0;
+			border: none;
+		}
+
+		#api-dtable td:nth-child(3) {
+			max-width: 200px;
+			white-space: nowrap;
+			overflow: hidden;
+			text-overflow: ellipsis;
+		}
+
+
+		cron-expression-input .nav-tabs>li>a{margin-right: 0px !important;}
+		#aPiTable_filter {
+			display: none;
+		}
+
+		#aPiTable tbody tr td:nth-child(3) a:nth-child(2), #aPiTable tbody tr td:nth-child(3){
+
+		}
+
+		.dataTables_length select {
+			margin-left: 10px;
+			padding: 5px;
+		}
+
+	</style>
+	<script type="syncloop/analytics"></script>
+</head>
+<body>
+<script type="syncloop/body-analytics"></script>
+<div class="preload">
+	<div class="pre-wrap">
+		<div class="pre-top">
+			<div class="pre-brand">
+				<div class="pre-logo placeholder-content">
+				</div>
+			</div>
+
+			<div class="pre-menu">
+				<div class="pre-switch">
+					<div class="pre-large placeholder-content"></div>
+				</div>
+
+				<div class="pre-switch">
+					<div class="pre-large placeholder-content"></div>
+				</div>
+
+				<div class="pre-switch">
+					<div class="pre-large placeholder-content"></div>
+				</div>
+			</div>
+		</div>
+
+
+		<div class="pre-wrapper">
+			<div class="pre-sidebar work">
+				<div class="pre-switch pre-menu">
+					<div class="pre-dot placeholder-content"></div>
+				</div>
+
+				<div class="pre-switch pre-menu">
+					<div class="pre-dot placeholder-content"></div>
+				</div>
+
+				<div class="pre-switch pre-menu">
+					<div class="pre-dot placeholder-content"></div>
+				</div>
+
+				<div class="pre-switch pre-menu">
+					<div class="pre-dot placeholder-content"></div>
+				</div>
+
+				<div class="pre-switch pre-menu">
+					<div class="pre-dot placeholder-content"></div>
+				</div>
+
+				<div class="pre-switch pre-menu">
+					<div class="pre-dot placeholder-content"></div>
+				</div>
+
+				<div class="pre-switch pre-menu">
+					<div class="pre-dot placeholder-content"></div>
+				</div>
+
+				<div class="pre-switch pre-menu">
+					<div class="pre-dot placeholder-content"></div>
+				</div>
+
+				<div class="pre-switch pre-menu">
+					<div class="pre-dot placeholder-content"></div>
+				</div>
+
+				<div class="pre-switch pre-menu">
+					<div class="pre-dot placeholder-content"></div>
+				</div>
+			</div>
+
+			<div class="pre-content work">
+				<div class="pre-head-sche">
+					<div class="pre-subhead pre-subhead3 placeholder-content"></div>
+				</div>
+
+				<table class="pre-table">
+					<tr>
+						<th>
+							<div class="line line1 placeholder-content"></div>
+						</th>
+						<th>
+							<div class="line line2 placeholder-content"></div>
+						</th>
+						<th>
+							<div class="line line2 placeholder-content"></div>
+						</th>
+						<th>
+							<div class="line line2 placeholder-content"></div>
+						</th>
+						<th>
+							<div class="line line2 placeholder-content"></div>
+						</th>
+					</tr>
+					<tr>
+						<td>
+							<div class="line line1 placeholder-content"></div>
+						</td>
+						<td>
+							<div class="line line2 placeholder-content"></div>
+						</td>
+						<td>
+							<div class="line line2 placeholder-content"></div>
+						</td>
+						<td>
+							<div class="line line2 placeholder-content"></div>
+						</td>
+						<td>
+							<div class="line line2 placeholder-content"></div>
+						</td>
+					</tr>
+					<tr>
+						<td>
+							<div class="line line1 placeholder-content"></div>
+						</td>
+						<td>
+							<div class="line line2 placeholder-content"></div>
+						</td>
+						<td>
+							<div class="line line2 placeholder-content"></div>
+						</td>
+						<td>
+							<div class="line line2 placeholder-content"></div>
+						</td>
+						<td>
+							<div class="line line2 placeholder-content"></div>
+						</td>
+					</tr>
+					<tr>
+						<td>
+							<div class="line line1 placeholder-content"></div>
+						</td>
+						<td>
+							<div class="line line2 placeholder-content"></div>
+						</td>
+						<td>
+							<div class="line line2 placeholder-content"></div>
+						</td>
+						<td>
+							<div class="line line2 placeholder-content"></div>
+						</td>
+						<td>
+							<div class="line line2 placeholder-content"></div>
+						</td>
+					</tr>
+					<tr>
+						<td>
+							<div class="line line1 placeholder-content"></div>
+						</td>
+						<td>
+							<div class="line line2 placeholder-content"></div>
+						</td>
+						<td>
+							<div class="line line2 placeholder-content"></div>
+						</td>
+						<td>
+							<div class="line line2 placeholder-content"></div>
+						</td>
+						<td>
+							<div class="line line2 placeholder-content"></div>
+						</td>
+					</tr>
+				</table>
+			</div>
+		</div>
+	</div>
+</div>
+
+
+<header class="navbar custom_head sticky-top flex-md-nowrap bg-gray">
+	<div id="license_warning" class="toast-warning" style="display: none;">
+		<div class="toast-content">
+		  <i class="toast-check"><svg xmlns="http://www.w3.org/2000/svg" width="24px" height="24px" viewBox="0 0 24 24" fill="#000000">
+			<g id="SVGRepo_bgCarrier" stroke-width="0"/>
+			<g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"/>
+			<g id="SVGRepo_iconCarrier"> <path fill="none" stroke="#ffffff" stroke-linejoin="round" stroke-width="2" d="M12,3 L22,21 L2,21 L12,3 Z M12,9 L12,15 M12,16 L12,18"/> </g>
+			</svg></i>
+		  <div class="message">
+			<h5>Warning</h5>
+			<p>Maximum two users are allowed on community version. <a target="_blank" href="https://www.syncloop.com/terms-conditions.html?utm_source=Website&utm_medium=click&utm_id=terms-conditions&utm_content=footer-link">Click here</a> to view the community usage terms and conditions.</p>
+		  </div>
+		</div>
+		<i onclick="$(this).parent().hide();" class="toast-close"><svg xmlns="http://www.w3.org/2000/svg" width="14px" height="14px" viewBox="0 0 24 24" fill="none">
+			<g id="SVGRepo_bgCarrier" stroke-width="0"/>
+			<g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"/>
+			<g id="SVGRepo_iconCarrier"> <path fill-rule="evenodd" clip-rule="evenodd" d="M5.29289 5.29289C5.68342 4.90237 6.31658 4.90237 6.70711 5.29289L12 10.5858L17.2929 5.29289C17.6834 4.90237 18.3166 4.90237 18.7071 5.29289C19.0976 5.68342 19.0976 6.31658 18.7071 6.70711L13.4142 12L18.7071 17.2929C19.0976 17.6834 19.0976 18.3166 18.7071 18.7071C18.3166 19.0976 17.6834 19.0976 17.2929 18.7071L12 13.4142L6.70711 18.7071C6.31658 19.0976 5.68342 19.0976 5.29289 18.7071C4.90237 18.3166 4.90237 17.6834 5.29289 17.2929L10.5858 12L5.29289 6.70711C4.90237 6.31658 4.90237 5.68342 5.29289 5.29289Z" fill="#040d21"/> </g>
+			</svg></i>
+	  </div>
+	<div id="mostRecentlyOpened">
+	<a class="eka_logo" href="middleware/pub/server/ui/workspace/web/dashboard.html?utm_source=Workspace&utm_medium=dashboard-page">
+		<img class="ekalogos" src="middleware/pub/server/ui/assets/img/syncloop-logo.svg">
+	</a>
+	<a href="middleware/pub/server/ui/workspace/web/dashboard.html?utm_source=Workspace&utm_medium=dashboard-page"class="header_home">
+				<img src="middleware/pub/server/ui/assets/img/header_nav.svg">
+	</a>
+</div>
+	<div class="navbar-nav tp_m">
+		<div class="nav-item text-nowrap">
+			<!--
+			<a href="https://www.udemy.com/course/syncloop-ai/?referralCode=FE8BC4DE6B60DD9509C7" target="_blank" class="dropbtn"><img class="hvc" src="middleware/pub/server/ui/icons/play_icon.svg">&nbsp; Watch Tutorials</a>
+			<button type="button" onclick="clearCacheExceptAuth()" class="dropbtn"><span><img class="hvc" src="middleware/pub/server/ui/icons/clear_cache.svg"></span>&nbsp; Clear Cache</button>
+			<button type="button" class="dropbtn" onclick="doLogout()"><img class="hvc" src="middleware/pub/server/ui/icons/icn_logout.svg">&nbsp; Logout</button>
+			-->
+			<div class="workspace-profile-header-host"></div>
+		</div>
+	</div>
+</header>
+
+<main class="rg_br">
+	<div class="container-fluid ">
+		<div class="row">
+			<div class="col-lg-1 d-flex flex-column flex-shrink-0 eka-side p-0" data-match-height="groupName">
+				<ul class="nav nav-pills nav-flush flex-column mb-auto text-center left-m-bar">
+
+					<li>
+						<a href="middleware/pub/server/ui/workspace/web/api.html?utm_source=Workspace&utm_medium=api-page" class="nav-link active py-3" title="API" data-bs-toggle="tooltip" data-bs-placement="right">
+							<svg class="ic2" xmlns="http://www.w3.org/2000/svg" width="26" height="25" viewBox="0 0 26 25" fill="none">
+								<path d="M5.82142 19C3.15863 19 1 16.8668 1 14.2353C1 11.6038 3.15863 9.47057 5.82142 9.47057C6.14106 9.47057 6.45344 9.50129 6.75568 9.56001M6.75568 9.56001C6.49794 8.87253 6.35714 8.12898 6.35714 7.35294C6.35714 3.8443 9.23532 1 12.7857 1C16.0929 1 18.8167 3.46792 19.1745 6.64185M6.75568 9.56001C7.39066 9.6832 7.98094 9.92958 8.5 10.2729M14.9286 6.65561C15.5988 6.4215 16.32 6.29412 17.0714 6.29412C17.8079 6.29412 18.5155 6.41652 19.1745 6.64185M19.1745 6.64185C19.9429 6.9046 20.6451 7.30729 21.25 7.81909" stroke="#434550" stroke-width="1.6" stroke-linecap="round"/>
+								<path class="appi" d="M15.0244 20L12.0214 12.3H13.2974L16.3774 20H15.0244ZM8.87543 20L11.9444 12.3H13.2314L10.2284 20H8.87543ZM10.3164 18.108V16.975H14.9254V18.108H10.3164ZM18.0958 17.338V16.161H19.8008C20.1675 16.161 20.4682 16.0363 20.7028 15.787C20.9375 15.5377 21.0548 15.215 21.0548 14.819C21.0548 14.5477 20.9925 14.313 20.8678 14.115C20.7505 13.9097 20.5855 13.7483 20.3728 13.631C20.1602 13.5137 19.9145 13.4587 19.6358 13.466H18.0958V12.3L19.6578 12.289C20.1858 12.289 20.6515 12.399 21.0548 12.619C21.4582 12.8317 21.7735 13.1287 22.0008 13.51C22.2282 13.884 22.3418 14.3203 22.3418 14.819C22.3418 15.303 22.2355 15.7357 22.0228 16.117C21.8102 16.4983 21.5132 16.799 21.1318 17.019C20.7578 17.2317 20.3215 17.338 19.8228 17.338H18.0958ZM16.9408 20V12.3H18.2168V20H16.9408ZM23.0321 20V12.3H24.3081V20H23.0321Z" fill="#434550"/>
+							</svg>
+						</a>
+					</li>
+					<li>
+						<a href="middleware/pub/server/ui/workspace/web/workspace.html?utm_source=Workspace&utm_medium=workspace-page" class="nav-link py-3 " title="Workspace" data-bs-toggle="tooltip" data-bs-placement="right">
+							<svg class="ic" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" id="Layer_1" x="0px" y="0px" viewBox="0 0 46 46" style="enable-background:new 0 0 46 46;" xml:space="preserve">
+                                <style type="text/css">
+                                    .st0{fill:none;stroke:#434550;stroke-width:2.4;}
+                                </style>
+								<path class="st0" d="M39.9,27.5V10.6c0-1.9,0-2.8-0.6-3.4c-0.6-0.6-1.5-0.6-3.4-0.6H18.5h-2.9h-5.3c-1.9,0-2.8,0-3.4,0.6  c-0.6,0.6-0.6,1.5-0.6,3.4v16.9c0,1.9,0,2.8,0.6,3.4c0.6,0.6,1.5,0.6,3.4,0.6h25.6c1.9,0,2.8,0,3.4-0.6  C39.9,30.3,39.9,29.4,39.9,27.5z"/>
+								<path class="st0" d="M31.9,38.9H14.2"/>
+                                </svg>
+						</a>
+					</li>
+					<li>
+						<a href="scheduler/manager/web/scheduler-new.html?utm_source=Workspace&utm_medium=scheduler-page" class="nav-link py-3 " title="Scheduler" data-bs-toggle="tooltip"
+						   data-bs-placement="right">
+							<svg class="ic4" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" id="Layer_1" x="0px" y="0px" viewBox="0 0 46 46" style="enable-background:new 0 0 46 46;" xml:space="preserve">
+                            <style type="text/css">
+                                .st0{fill:none;stroke:#434550;stroke-width:2.4;}
+								.st1{fill:none;stroke:#434550;stroke-width:2.4;stroke-linecap:round;}
+                            </style>
+								<ellipse class="st0" cx="23.4" cy="27.2" rx="16.9" ry="16.9"/>
+								<path class="st1" d="M23.4,27.2v-6.3"/>
+								<path class="st1" d="M35,13.5l3.2-3.2"/>
+								<path class="st1" d="M19.3,2.6c0.2-0.2,0.8-0.4,1.5-0.6c0.7-0.1,1.6-0.2,2.6-0.2s1.8,0.1,2.6,0.2s1.3,0.3,1.5,0.6"/>
+                            </svg>
+						</a>
+					</li>
+					<li>
+						<a href="middleware/pub/server/ui/workspace/web/export.html?utm_source=Workspace&utm_medium=export-page" id="createBuildExport" class="nav-link py-3" title="Export/Promote" data-bs-toggle="tooltip"
+						   data-bs-placement="right">
+							<svg class="ic5" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" id="Layer_1" x="0px" y="0px" viewBox="0 0 46 46" style="enable-background:new 0 0 46 46;" xml:space="preserve">
+                            <style type="text/css">
+                                .st0{fill:none;stroke:#434550;stroke-width:2.4;stroke-linecap:round;stroke-miterlimit:10;}
+								.st1{fill:#434550;}
+                            </style>
+								<path class="st0" d="M35.3,23.9c5.3-8.7,5.1-16.8,5-18.4c0-0.2-0.2-0.3-0.3-0.3C25.5,5.2,19,11,16.1,15.4c-1.3,2.1-2,4.1-2.3,5  c-0.1,0.3,0,0.7,0.2,1l7.2,7.3"/>
+								<path class="st0" d="M5.6,19.6c0.8-1.2,5.1-7.5,11-5.8"/>
+								<path class="st0" d="M14.7,30.6l8.5-8.5"/>
+								<path class="st0" d="M25.9,31.9l3.6,4.1c0,0,0.2,0.1,0.2,0l4-4.1"/>
+								<path class="st0" d="M29.8,25.2v10.5"/>
+								<path class="st0" d="M21.8,36.5v4.3c0,0.1,0.1,0.2,0.2,0.2h15.3c0.1,0,0.2-0.1,0.2-0.2v-4.3"/>
+								<path class="st1" d="M29.1,18.8c1.5,0,2.7-1.2,2.7-2.7c0-1.5-1.2-2.7-2.7-2.7c-1.5,0-2.7,1.2-2.7,2.7C26.4,17.6,27.6,18.8,29.1,18.8  z"/>
+                            </svg>
+						</a>
+					</li>
+					<li>
+						<a href="javascript:importBuildV2()" class="nav-link py-3" title="Import" data-bs-toggle="tooltip"
+						   data-bs-placement="right">
+							<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" id="Layer_1" x="0px" y="0px" viewBox="0 0 46 46" style="enable-background:new 0 0 46 46;" xml:space="preserve">
+                            <style type="text/css">
+                                .st0{fill:none;stroke:#434550;stroke-width:2.4;}
+                            </style>
+								<path class="st0" d="M6.2,21.3v1.6c0,1.9,0,2.8,0.6,3.4s1.5,0.6,3.4,0.6h3.9c0.7,0,1,0,1.3,0.2s0.4,0.5,0.6,1.2l1,2.9  c0.2,0.7,0.3,1,0.6,1.2c0.3,0.2,0.6,0.2,1.3,0.2h8.3c0.7,0,1,0,1.3-0.2s0.4-0.5,0.6-1.2l1-2.9c0.2-0.7,0.3-1,0.6-1.2  c0.3-0.2,0.6-0.2,1.3-0.2h3.9c1.9,0,2.8,0,3.4-0.6c0.6-0.6,0.6-1.5,0.6-3.4v-1.6"/>
+								<path class="st0" d="M23.1,3.5l-7.5,5.6 M30.6,9.1l-7.5-5.6 M23.1,22.2V3.5"/>
+								<path class="st0" d="M30.5,14.1h5.3c1.9,0,2.8,0,3.4,0.6c0.6,0.6,0.6,1.5,0.6,3.4V36c0,1.9,0,2.8-0.6,3.4C38.7,40,37.8,40,35.9,40  H10.2c-1.9,0-2.8,0-3.4-0.6S6.2,37.9,6.2,36V18.1c0-1.9,0-2.8,0.6-3.4c0.6-0.6,1.5-0.6,3.4-0.6h5.3"/>
+                            </svg>
+						</a>
+					</li>
+					<li>
+						<a href="middleware/pub/server/ui/workspace/web/server-logs.html?utm_source=Workspace&utm_medium=server-logs-page" class="nav-link py-3" title="Server Logs" data-bs-toggle="tooltip"
+						   data-bs-placement="right">
+							<svg class="ic7" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" id="Layer_1" x="0px" y="0px" viewBox="0 0 46 46" style="enable-background:new 0 0 46 46;" xml:space="preserve">
+                            <style type="text/css">
+                                .st0{fill:none;stroke:#434550;stroke-width:2.4;stroke-linecap:round;}
+								.st1{fill:none;stroke:#434550;stroke-width:2.4;}
+                            </style>
+								<path class="st0" d="M15.5,24.5h15.1"/>
+								<path class="st0" d="M15.5,30.9h8.6"/>
+								<path class="st1" d="M9,5.9c0-0.8,0-1.3,0.2-1.6C9.3,4,9.5,3.8,9.8,3.7c0.3-0.2,0.7-0.2,1.6-0.2h13.9c0.4,0,0.6,0,0.7,0  c0.2,0,0.3,0.1,0.4,0.2c0.2,0.1,0.3,0.2,0.5,0.5l9.4,9.4c0.3,0.3,0.4,0.4,0.5,0.5c0.1,0.1,0.1,0.3,0.2,0.4c0,0.2,0,0.4,0,0.7v25.6  c0,0.8,0,1.3-0.2,1.6c-0.1,0.3-0.4,0.5-0.7,0.7c-0.3,0.2-0.7,0.2-1.6,0.2H11.4c-0.8,0-1.3,0-1.6-0.2c-0.3-0.1-0.5-0.4-0.7-0.7  C9,42.1,9,41.7,9,40.9V5.9z"/>
+								<path class="st1" d="M24.1,3.5v10.6c0,0.8,0,1.3,0.2,1.6c0.1,0.3,0.4,0.5,0.7,0.7c0.3,0.2,0.7,0.2,1.6,0.2h10.6"/>
+                            </svg>
+						</a>
+					</li>
+					<li>
+						<a href="javascript:openJWTPopup()" class="nav-link py-3" title="API Token" data-bs-toggle="tooltip" data-bs-placement="right">
+							<svg class="ic8" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+								<ellipse cx="7" cy="16.3848" rx="6" ry="6" stroke="#434550" stroke-width="1.6"/>
+								<path d="M10.9219 11.2308L18.3834 3.76923M21.1526 1L18.3834 3.76923M18.3834 3.76923L22.9988 8.38462" stroke="#434550" stroke-width="1.6" stroke-linecap="round"/>
+								<path d="M16.5391 7.46191L19.3083 10.2311" stroke="#434550" stroke-width="1.6" stroke-linecap="round"/>
+							</svg>
+						</a>
+					</li>
+					<li>
+						<a href="middleware/pub/server/ui/workspace/web/setting.html?utm_source=Workspace&utm_medium=setting-page" class="nav-link py-3" title="Settings" data-bs-toggle="tooltip" data-bs-placement="right">
+							<svg class="ic9" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" id="Layer_1" x="0px" y="0px" viewBox="0 0 46 46" style="enable-background:new 0 0 46 46;" xml:space="preserve">
+                                <style type="text/css">
+                                    .st0{fill:none;stroke:#434550;stroke-width:2.4;stroke-linecap:round;stroke-linejoin:round;}
+									.st1{fill:none;stroke:#434550;stroke-width:2;stroke-linecap:round;stroke-linejoin:round;}
+                                </style>
+								<path class="st0" d="M4,30v-2.5c0-1.5,1.2-2.7,2.7-2.7c2.6,0,3.6-1.8,2.3-4.1c-0.7-1.3-0.3-3,1-3.7l2.5-1.4c1.1-0.7,2.6-0.3,3.3,0.9  l0.2,0.3c1.3,2.2,3.4,2.2,4.7,0l0.2-0.3c0.7-1.1,2.1-1.5,3.3-0.9l2.5,1.4c1.3,0.7,1.7,2.4,1,3.7c-1.3,2.2-0.2,4.1,2.3,4.1  c1.5,0,2.7,1.2,2.7,2.7V30c0,1.5-1.2,2.7-2.7,2.7c-2.6,0-3.6,1.8-2.3,4.1c0.7,1.3,0.3,3-1,3.7l-2.5,1.4c-1.1,0.7-2.6,0.3-3.3-0.9  l-0.2-0.3c-1.3-2.2-3.4-2.2-4.7,0l-0.2,0.3c-0.7,1.1-2.1,1.5-3.3,0.9l-2.5-1.4c-1.3-0.7-1.7-2.4-1-3.7c1.3-2.2,0.2-4.1-2.3-4.1  C5.2,32.7,4,31.5,4,30z"/>
+								<path class="st0" d="M18.3,34.6c3.3,0,5.9-2.7,5.9-5.9c0-3.3-2.7-5.9-5.9-5.9c-3.3,0-5.9,2.7-5.9,5.9C12.4,32,15.1,34.6,18.3,34.6z"/>
+								<path class="st1" d="M19.5,15.6v-2.1c0-1.2,1-2.2,2.2-2.2c2.1,0,3-1.5,1.9-3.3c-0.6-1.1-0.2-2.4,0.8-3l2-1.2  c0.9-0.5,2.1-0.2,2.7,0.7l0.1,0.2c1.1,1.8,2.8,1.8,3.8,0l0.1-0.2C33.8,3.5,35,3.2,36,3.8l2,1.2c1.1,0.6,1.4,2,0.8,3  c-1.1,1.8-0.2,3.3,1.9,3.3c1.2,0,2.2,1,2.2,2.2v2.1c0,1.2-1,2.2-2.2,2.2c-2.1,0-3,1.5-1.9,3.3c0.6,1.1,0.2,2.4-0.8,3l-2,1.2  c-0.9,0.6-2.1,0.2-2.7-0.7l-0.1-0.2"/>
+								<path class="st1" d="M31,19.4c2.1,0,3.9-1.7,3.9-3.9s-1.7-3.9-3.9-3.9s-3.9,1.7-3.9,3.9S28.9,19.4,31,19.4z"/>
+                                </svg>
+						</a>
+					</li>
+					<li>
+						<a href="https://docs.syncloop.ai" class="nav-link py-3" title="Documentation" data-bs-toggle="tooltip"
+						   data-bs-placement="right" target="_blank">
+							<svg class="ic10" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" id="Layer_1" x="0px" y="0px" viewBox="0 0 46 46" style="enable-background:new 0 0 46 46;" xml:space="preserve">
+                            <style type="text/css">
+                                .st0{fill:none;stroke:#434550;stroke-width:2.4;}
+                            </style>
+								<path class="st0" d="M7,34h10c2.8,0,4.2,0,5.1,0.9S23,37.2,23,40V14c0-2.8,0-4.2-0.9-5.1S19.8,8,17,8H7C6.1,8,5.6,8,5.3,8.3  C5,8.6,5,9.1,5,10v22c0,0.9,0,1.4,0.3,1.7C5.6,34,6.1,34,7,34z"/>
+								<path class="st0" d="M39,34H29c-2.8,0-4.2,0-5.1,0.9S23,37.2,23,40V14c0-2.8,0-4.2,0.9-5.1S26.2,8,29,8h10c0.9,0,1.4,0,1.7,0.3  C41,8.6,41,9.1,41,10v22c0,0.9,0,1.4-0.3,1.7S39.9,34,39,34z"/>
+                            </svg>
+						</a>
+					</li>
+					<li>
+						<a href="middleware/pub/server/ui/workspace/web/marketplace.html?utm_source=Workspace&amp;utm_medium=marketplace-page" class="nav-link py-3" title="Marketplace" data-bs-toggle="tooltip"
+						   data-bs-placement="right">
+							<svg class="ic11" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" id="Layer_1" x="0px" y="0px" viewBox="0 0 46 46" style="enable-background:new 0 0 46 46;" xml:space="preserve">
+                            <style type="text/css">
+                                .st0{fill:none;stroke:#434550;stroke-width:2.4;stroke-linecap:round;}
+								.st1{fill:none;stroke:#434550;stroke-width:2.4;stroke-linejoin:round;}
+                            </style>
+								<path class="st0" d="M40,40H6"/>
+								<path class="st0" d="M36.6,40V21.3"/>
+								<path class="st0" d="M9.4,40V21.3"/>
+								<path class="st1" d="M30.7,6H15.3c-2,0-3.1,0-3.9,0.5C10.6,7,10.2,7.9,9.2,9.8l-2.4,6c-0.6,1.4-1,3-0.1,4.2c0.6,0.8,1.6,1.3,2.7,1.3  c1.9,0,3.4-1.5,3.4-3.4c0,1.9,1.5,3.4,3.4,3.4c1.9,0,3.4-1.5,3.4-3.4c0,1.9,1.5,3.4,3.4,3.4c1.9,0,3.4-1.5,3.4-3.4  c0,1.9,1.5,3.4,3.4,3.4c1.9,0,3.4-1.5,3.4-3.4c0,1.9,1.5,3.4,3.4,3.4c1.1,0,2-0.5,2.7-1.3c0.9-1.2,0.4-2.8-0.1-4.2l-2.4-6  c-0.9-1.8-1.4-2.7-2.2-3.3C33.8,6,32.8,6,30.7,6z"/>
+								<path class="st0" d="M18.8,39.2v-5.1c0-1.6,0-2.4,0.3-3c0.2-0.4,0.5-0.7,0.9-0.9c0.6-0.3,1.4-0.3,3-0.3s2.4,0,3,0.3  c0.4,0.2,0.7,0.5,0.9,0.9c0.3,0.6,0.3,1.4,0.3,3v5.1"/>
+                            </svg>
+						</a>
+					</li>
+					<li>
+						<a href="middleware/pub/server/ui/workspace/web/monitor-services.html" class="nav-link py-3" title="Monitor Services" data-bs-toggle="tooltip"
+						   data-bs-placement="right">
+							<svg xmlns="http://www.w3.org/2000/svg" width="35" height="24" viewBox="0 0 35 24" fill="none">
+								<path d="M1 13.042H4.34245L6.47755 11.1321L8.70005 17.1883L10.4422 6.27131L13.4882 16L16.6336 1L18.6504 13.7381L20 22.5L21.1277 15.655L23.119 2.53163L25.5994 13.042H27.0211C27.1564 13.042 29.2322 17.6097 29.2322 17.6097C29.2322 17.6097 30.1888 13.042 30.3298 13.042H34" stroke="#434550" stroke-width="1.7" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+							</svg>
+						</a>
+					</li>
+				</ul>
+			</div>
+
+			<div class="col-lg-11 px-5 pr-0 p-3 rg_pnl" data-match-height="groupName">
+				<div class="tabl_outer">
+
+					<!-- <div class="refresh_at">
+                        <select class="auto_refresh_dropdown" name="">
+                            <option value="-1">Auto Refresh (Manually)</option>
+                            <option value="5000">5 Seconds</option>
+                            <option value="10000">10 Seconds</option>
+                         </select>
+                         <a class="refresh_btn" id="refresh_btn" href="javascript:void(0)" onclick="loadDataTable()"><i class="fa fa-refresh" aria-hidden="true"></i> &nbsp; Refresh</a>
+                     </div> -->
+					<div class="sch_action" >
+						<div style="max-width:100%;">
+							<h3>API Dashboard</h3>
+
+							<div class="th_btn_grid">
+								<div class="shw_all">
+									<input type="checkbox" class="show_all_apis" id="show_all_apis_checkbox" style="margin-right: 10px" onclick="" value="" /> <label for="show_all_apis_checkbox">Show all API</label></div>
+								<button type="button" class="btn btn-primary" id="openPurgeLogsModalButton" style="margin-right: 10px;">Delete API Logs</button>
+							<div class="btn-group">
+							  <button type="button" class="btn btn-secondary exdrop disabled" id="export-api-button" >Export API</button>
+							  <button type="button" class="btn btn-secondary dropdown-toggle dropdown-toggle-split exdrop2" data-bs-toggle="dropdown" aria-expanded="false">
+								<span class="visually-hidden">Toggle Dropdown</span>
+							  </button>
+							  <ul class="dropdown-menu sw_dr">
+								<li><a class="dropdown-item disabled" href="#" id="swagger-api-button">Swagger UI</a></li>
+							  </ul>
+							</div>
+
+								<!-- <button type="button" class="btn btn-primary disabled" id="export-api-button" style="float:right;margin-left: 10px;">Export API</button> -->
+								<!-- <button type="button" class="btn btn-primary disabled" id="swagger-api-button" style="float:right;margin-left: 10px;">Swagger UI</button> -->
+								<button type="button" onclick="showCreateAPIModelDialog('#createAPIPrompt');" class="btn btn-primary" style="float:right;margin-left: 10px;">New API</button>
+								&nbsp;
+							</div>
+						</div>
+					</div>
+					<div class="table-responsive-">
+						<table id="aPiTable" class="table table-bordered table-striped-">
+							<thead>
+							<tr>
+								<th id="startCheckBox" style="display: none;"><input type="checkbox" class="select-all-apis" /></th>
+								<th>S.No</th>
+								<th>Name</th>
+								<th>Start Time</th>
+								<th>Trace duration (ms)</th>
+								<th>Status</th>
+							</tr>
+							</thead>
+
+							<tbody id="api-dtable"></tbody>
+						</table>
+					</div>
+					<!-- <div class="sch_action">
+                       <button type="button" onclick="" class="btn btn-primary mr-1">New</button>
+                       <button type="button" onclick="" class="btn btn-secondary">Refresh</button>
+                    </div> -->
+				</div>
+
+				<div id="purgeLogsModalDialog" class="modal wd_ds" style="display:none;">
+					<div class="modal-content" style="width:500px;height:auto;">
+						<span id="closePurgeLogsModalDialog" class="close">&times;</span>
+						<h3>Purge API Logs</h3>
+
+						<div class="row exp_alg" style="align-items: center; margin-bottom: 15px;">
+							<div class="col-md-4">
+								<label for="purge_days_select">Purge logs older than:</label>
+							</div>
+
+							<div class="col-md-4">
+								<select id="purge_days_select" class="form-control">
+									<option value="7">7 Days</option>
+									<option value="14">14 Days</option>
+									<option value="30">30 Days</option>
+									<option value="60">60 Days</option>
+									<option value="custom_days">Custom</option>
+								</select>
+							</div>
+
+							<div id="purge_custom_days_div" class="col-md-4 cs_opt" style="display:none;">
+								<input placeholder="Days" class="form-control" type="number" min="1" max="365" id="purge_custom_days" value="30" />
+								<span class="h_title">days</span>
+							</div>
+						</div>
+
+						<div class="anc_kbtn" style="margin-top:15px;">
+							<button type="button" class="btn btn-primary" id="purgeLogsOkButton">Purge Logs</button>
+						</div>
+					</div>
+				</div>
+
+
+				<div id="jwtModelDialog" class="modal">
+					<!-- Modal content -->
+					<div class="modal-content" style="width:650px;height:auto;">
+						<span id="closejwtModelDialog" class="close">&times;</span>
+						<h3>API token</h3>
+
+						<div class="row exp_alg">
+							<div class="col-md-3"><label>Expiration in:</label></div>
+							<div class="col-md-4">
+								<select id="jwt_expiration_in" class="form-control">
+									<option value="2">2 Hours</option>
+									<option value="4">4 Hours</option>
+									<option value="6">6 Hours</option>
+									<option value="8">8 Hours</option>
+									<option value="expir_custom">Custom</option>
+								</select>
+							</div>
+							<div id="expir_custom" class="col-md-3 cs_opt">
+								<input placeholder="Custom Value" class="form-control" type="number" min="2" max="800"
+									   id="expir_custom_hours" value="8"/>
+								<span class="h_title">hours</span>
+							</div>
+						</div>
+
+						<div class="row exp_alg">
+							<div class="col-md-3"><label>Api Endpoint:</label></div>
+							<div class="col-md-9">
+								<input id="api-endpoint-gt" class="form-control" readonly="readonly" />
+							</div>
+						</div>
+
+						<div class="row exp_alg" style="margin-top:10px; margin-bottom:15px;">
+							<div class="col-md-3"><label for="jwt_token_key">Token key:</label></div>
+							<div class="col-md-9"><input id="jwt_token_key" type="text" class="form-control" value="" /></div>
+						</div>
+
+						<div class="copy-text3" id="jwtNameDiv" style="margin-top:0; margin-bottom:15px;">
+							<a class="copy_icon" href="javascript:void(0)" id="button-copy"><img
+									src="middleware/pub/server/ui/icons/copy-svgrepo-com.svg"></a>
+							<label for="jwtInput">Bearer Token: </label>
+							<textarea id="jwtInput" name="jwtInput" value="" class="form-control"
+									  readonly="readonly"></textarea>
+						</div>
+
+						<div class="anc_kbtn">
+							<button type="button" class="btn btn-primary2" onclick="openJWTPopupTime()">Generate token
+							</button> &nbsp;
+							<button type="button" id="JWTOKButton" class="btn btn-primary">OK</button>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div id="createAPIPrompt" class="modal" style="display: none; z-index: 999;">
+
+				<!-- Modal content -->
+				<div class="modal-content" style="width:500px;height:auto;">
+					<span id="closeCreateAPIPrompt" onclick="hideCreateAPIModelDialog('#createAPIPrompt')" class="close">×</span>
+					<h3 id="new-item-heading">Create New API</h3>
+					<div id="new-item-panel">
+						<label for="new-item-panel" id="">Package Name:</label>
+						<input class="form-control" type="text" id="package_name" name="" value="GlobalAPIs" readonly="readonly" onkeyup="applyNamingPolicy('#'+this.id)">
+					</div>
+					<div id="new-item-panel-apiname">
+						<label for="new-item-panel-apiname" id="">API Name:</label>
+						<input class="form-control" type="text" id="api_name" name="" value="" onkeyup="applyNamingPolicy('#'+this.id)">
+					</div>
+					<p id="info_message"></p>
+
+					<div class="row" id="group-panel" style="">
+						<div class="col-md-6 plf-0">
+							<label>Consumers: </label>
+							<select multiple="" class="form-control multi-options select2-hidden-accessible" id="consumer-groups" tabindex="-1" aria-hidden="true"><option>administrators</option><option>developers</option></select><span class="select2 select2-container select2-container--default" dir="ltr" style="width: auto;">
+				</span><span class="dropdown-wrapper" aria-hidden="true"></span></span>
+						</div>
+						<div class="col-md-6 prf-0">
+							<label>Developers: </label>
+							<select multiple="" class="form-control multi-options select2-hidden-accessible" id="developer-groups" tabindex="-1" aria-hidden="true"><option>administrators</option><option>developers</option></select><span class="select2 select2-container select2-container--default" dir="ltr" style="width: auto;">
+				<span class="dropdown-wrapper" aria-hidden="true"></span></span>
+						</div>
+					</div>
+
+					<div class="anc_kbtn">
+						<!-- <button type="button" id="" class="cn_trs" onclick="$('#closeExportNameItemPromptModelDialog').trigger('click')">Cancel</button> -->
+						<button type="button" id="createAPIButton" disabled class="btn btn-primary" onclick="createAPI()" disabled="">OK</button>
+					</div>
+				</div>
+
+			</div>
+
+
+			<div id="serviceImportedModelDialog" class="modal">
+				<!-- Modal content -->
+				<div class="modal-content" style="width:950px;height:auto;">
+					<span id="closeServiceImportedModelDialog" class="close" >&times;</span>
+					<!-- <h3>Service</h3> -->
+					<div class="service_hd">
+						<div class="exl_icon"><img src="middleware/pub/server/ui/icons/import-fl.svg"></div>
+						<div class="sv_heading">
+							<h2>List of Imported files</h2>
+						</div>
+					</div>
+					<div class="service_tree_v_Imported" id="service_tree_v_Imported">
+					</div>
+					<div class="anc_kbtn"><button class="btn btn-primary" onclick='$("#closeServiceImportedModelDialog").trigger("click")'>Okay</button></div>
+				</div>
+			</div>
+
+
+			<!-- environment update popup -->
+			<div id="newUpdateModelDialog" class="modal">
+				<!-- Modal content -->
+				<div class="modal-content" style="width:650px;height:auto;">
+					<span id="closenewUpdateModelDialog" class="close hide" style="display: none;" >&times;</span>
+					<div class="env_latest_update">
+						<h3 id="update_popup_title">Updating environment</h3>
+						<p id="updating_popup_description">Please wait... your environment is getting updated.</p>
+						<div class="progress_outer">
+							<progress id="progressBar" max="100" value="0"></progress>
+							<span id="percentage">0%</span>
+						</div>
+					</div>
+				</div>
+			</div>
+			<!-- environment update popup -->
+
+
+			<link rel="stylesheet" href="middleware/pub/server/ui/assets/css/cron-expression-input.min.css">
+			<script src="/ekaScheduler/manager/web/cultures/langs/en-US.js"></script> <!-- Languague (Optional) -->
+			<script src="https://unpkg.com/cron-expression-input@1.3.1/lib/cron-expression-input.min.js"></script>
+
+			<script src="middleware/pub/server/ui/assets/js/bootstrap.bundle.min.js"></script>
+
+			<script src="middleware/pub/server/ui/assets/js/sidebars.js"></script>
+
+
+			<script src="middleware/pub/server/ui/javascript/datatables/datatables.min.js"></script>
+			<script src="middleware/pub/server/ui/javascript/datatables/cdn.datatables.net/buttons/1.2.2/js/dataTables.buttons.min.js"></script>
+			<script src="middleware/pub/server/ui/javascript/datatables/cdn.datatables.net/buttons/1.2.2/js/buttons.flash.min.js"></script>
+			<script src="middleware/pub/server/ui/javascript/datatables/cdnjs.cloudflare.com/ajax/libs/jszip/2.5.0/jszip.min.js"></script>
+			<script src="middleware/pub/server/ui/javascript/datatables/cdn.rawgit.com/bpampuch/pdfmake/0.1.18/build/pdfmake.min.js"></script>
+			<script src="middleware/pub/server/ui/javascript/datatables/cdn.rawgit.com/bpampuch/pdfmake/0.1.18/build/vfs_fonts.js"></script>
+			<script src="middleware/pub/server/ui/javascript/datatables/cdn.datatables.net/buttons/1.2.2/js/buttons.html5.min.js"></script>
+			<script src="middleware/pub/server/ui/javascript/datatables/cdn.datatables.net/buttons/1.2.2/js/buttons.print.min.js"></script>
+			<script src="middleware/pub/server/ui/javascript/datatables/datatables-init.js"></script>
+			<script src="https://cdn.jsdelivr.net/npm/js-cookie@2.2.1/src/js.cookie.js"></script>
+			<script src="https://cdn.jsdelivr.net/npm/js-cookie@2/src/js.cookie.min.js"></script>
+
+			<script>
+				var table = null;
+				$(window).ready(function () {
+					$(".preload").delay(1000).fadeOut(80);
+				});
+
+				function createAPI(){
+					if ($("#developer-groups").val().length == 0) {
+						swal({
+								title: "Error",
+								text: "Please select at least one Developers group",
+								type: "error",
+								confirmButtonColor: "#f2533e"
+							});
+
+						return;
+					}
+					var packageObj=$("#package_name");
+					var apiObj=$("#api_name");
+					var packageName=packageObj.val();
+					var apiName=apiObj.val();
+					var apiEndpoint="/api/packages/"+packageName+"/wrapper/api/"+apiName+".api";
+					var apiJsonObj={
+						"latest" : {
+							"createdTS" : "",
+							"input" : [ {
+								"text" : "*payload",
+								"data" : { },
+								"children" : [ ],
+								"type" : "document"
+							}, {
+								"text" : "*requestHeaders",
+								"data" : { },
+								"children" : [ ],
+								"type" : "document"
+							}, {
+								"text" : "*pathParameters",
+								"data" : { },
+								"children" : [ ],
+								"type" : "document"
+							}, {
+								"text" : "inputString",
+								"data" : { },
+								"children" : [ ],
+								"type" : "string"
+							} ],
+							"output" : [ {
+								"text" : "*200",
+								"data" : { },
+								"children" : [ ],
+								"type" : "document"
+							}, {
+								"text" : "*500",
+								"data" : { },
+								"children" : [ ],
+								"type" : "document"
+							} ],
+							"api" : [ ],
+							"flow" : [ ],
+							"api_info" : {
+								"title" : "",
+								"description" : ""
+							}
+						},
+						"consumers" : $("#consumer-groups").val() + "",
+						"developers" : $("#developer-groups").val() + "",
+						"enableServiceDocumentValidation" : false
+					};
+
+					var respExists = syncRestRequest("/packages.middleware.pub.service.doesServiceExist.main?fqn=" + "packages/"+packageName+"/wrapper/api/"+apiName + "&" + "type=api", "GET", null);
+					if ( JSON.parse(respExists.payload).exist ) {
+						swal({
+								title: "Error",
+								text: "API with this name already exists. Please choose another name.",
+								type: "error",
+								confirmButtonColor: "#f2533e"
+							});
+
+						return ;
+					}
+					hideCreateAPIModelDialog("#createAPIPrompt");
+					var resp=syncRestRequest(apiEndpoint, "POST",JSON.stringify(apiJsonObj));
+					if(resp.status==200){
+						$("#api_name").val("");
+						$("#consumer-groups").val(['']).trigger('change');
+						$("#developer-groups").val(['']).trigger('change');
+
+						//syncRestRequest("/packages."+packageName+".wrapper.api."+apiName+".main", "GET", null);
+
+						swal({
+								title: "Success",
+								text: "API Created successfully.",
+								type: "success",
+								confirmButtonColor: "#2C61F5"
+							});
+
+						//table.draw(false);
+						loadData();
+						swal({
+									title: "API Created successfully",
+									text: "Start development now?",
+									type: "success",
+									showCancelButton: true,
+									confirmButtonColor: "#2C61F5",
+									cancelButtonText: "No, Stay here !!",
+									confirmButtonText: "Go to Workspace",
+									showLoaderOnConfirm : true,
+									closeOnConfirm: true,
+									closeOnCancel: true
+								},
+								function(isConfirm){
+									if (isConfirm) {
+										apiEndpoint=("#"+apiEndpoint).replace("#/api/","files/");
+										var workSpaceEndpoint="middleware/pub/server/ui/workspace/web/workspace.html?r="+apiEndpoint;
+										window.location.href=workSpaceEndpoint;
+									}
+									else {
+										//swal("Stay here !!", "", "warning");
+									}
+								});
+					}
+					else
+						swal({
+								title: "Failed",
+								text: resp.payload,
+								type: "error",
+								confirmButtonColor: "#f2533e"
+							});
+
+				}
+
+
+
+				function applyNamingPolicy(id){
+					var regex = /^[a-zA-Z_$][a-zA-Z_$0-9]*$/;
+					var obj=$(id);
+					if (regex.test(obj.val())) {
+						console.log("Valid function name");
+						obj.css("border","1px solid green");
+						$("#createAPIButton").prop("disabled", false);
+					} else {
+						console.log("Invalid function name");
+						obj.css("border","1px solid red");
+						$("#createAPIButton").prop("disabled", true);
+					}
+				}
+
+				function showCreateAPIModelDialog(id){
+					$(id).css("display","block");
+				}
+				function hideCreateAPIModelDialog(id){
+					$(id).css("display","none");
+				}
+			</script>
+			<script>
+				$(function() {
+					$('#jwt_expiration_in').change(function(){
+						$('.cs_opt').hide();
+						$('#' + $(this).val()).show();
+					});
+				});
+			</script>
+			<script>
+				let copyText3 = document.querySelector(".copy-text3");
+				document.querySelector("#button-copy").onclick = function () {
+					document.querySelector("#jwtInput").select();
+					document.execCommand("copy");
+					copyText3.classList.add("active");
+					window.getSelection().removeAllRanges();
+					setTimeout(function () {
+						copyText3.classList.remove("active");
+					}, 2500);
+				};
+
+			</script>
+
+			<script>
+
+			</script>
+
+
+			<script>
+				function loadData() {
+					let url = window.ENV.API_BASE_URL + "/tenant/" + localStorage.getItem("tenant") + `/packages.middleware.pub.server.dashboard.api_page.getAPIAuditList.main`;
+
+					if ($("#show_all_apis_checkbox").is(":checked")) {
+						url = window.ENV.API_BASE_URL + "/tenant/" + localStorage.getItem("tenant") + "/packages.middleware.pub.server.dashboard.api_page.getAPILogs.main";
+					}
+
+					if(table != null){
+						table.destroy();
+					}
+
+					table = $("#aPiTable").DataTable({
+						"serverSide": true,
+						"ajax": {
+							"url": url,
+							"dataSrc": function (data) {
+								if (data.data == null) {
+									return [];
+								} else {
+									return data.data;
+								}
+							},
+							"headers": {
+								"Authorization": "Bearer " + localStorage.getItem("AuthToken")
+							},
+							"type": "GET"
+						},
+						saveState: true,
+						"deferRender": true,
+						"iDisplayLength": 20,
+						"lengthMenu": [20, 50, 100],
+						"fnRowCallback": function (nRow, aData, iDisplayIndex) {
+							$("#startCheckBox").show();
+							$("td:nth-of-type(2)", nRow).html(table.page.info().start + iDisplayIndex + 1);
+							return nRow;
+						},
+						"columnDefs": [
+							{ "orderable": false, "targets": "_all" },
+							{ "max-width": "100px", targets: 2 },
+						],
+						autoWidth: false,
+						"columns": [
+							{
+								"data": "id", "render": function (data, type, full, meta) {
+									return '<input type="checkbox" class="select-this-api" onclick="selectFnq()" value="'+ full.fqn +'" />';
+								}
+							},
+							{"data": "id",  "render": function (data, type, full, meta)
+								{
+									if(data == null){
+										return "-";
+									}else {
+										return data;
+									}
+								}
+							},
+							{
+								"data": "fqn",
+								"render": function (data, type, full, meta) {
+									let openServiceLink = "middleware/pub/server/ui/workspace/web/workspace.html?r=files/" + data.replaceAll(".", "/") + ".api";
+									if (null != full.details && full.details.trim() != "") {
+										return '<a target="_blank" href="' + openServiceLink + '"><img src="middleware/pub/server/ui/icons/flow.svg" /></a> <a href="middleware/pub/server/ui/workspace/web/api-detail.html?fqn=' + encodeURIComponent(data) + '">' + data + '</a>';
+									} else{
+
+									}
+									return data ? '<a target="_blank" href="' + openServiceLink + '"><img src="middleware/pub/server/ui/icons/flow.svg" /></a> ' + data : "-";
+								}
+							},
+							{"data": "dateTimeStmp" , "render": function (data, type, full, meta)
+								{
+									if(data == null){
+										return "-";
+									}else {
+										return data;
+									}
+								}
+							},
+							{"data": "duration", "render": function (data, type, full, meta) {
+									if(data == null){
+										return "-";
+									}else {
+										return data;
+									}}},
+							{
+								"data": "details",
+								"render": function (details, type, full, meta) {
+									let STATUS = (null != details && details.trim() != "") ? "" : "-";
+									let services = [];
+									if (null != details && details.trim() != "") {
+										services = details.split(";");
+									}
+									for (var j = 0 ; j < services.length ; j++) {
+										if (j > 5) {
+											continue;
+										}
+										let chunks = services[j].split(",");
+										if (null != chunks[2] && chunks[2].trim() != "") {
+											STATUS += "<div class=\"ekatooltipdefault\"><a href='middleware/pub/server/ui/workspace/web/api-detail.html?correlationId=" + chunks[1] + "&sessionId=" + chunks[1] + "&fqn=" + full.fqn +"#run_history_highlights'><span class=\"status st-danger\"></span></a><span class=\"ekatooltipdefaulttext\">ERROR</span></div>";
+										} else {
+											STATUS += "<div class=\"ekatooltipdefault\"><a href='middleware/pub/server/ui/workspace/web/api-detail.html?correlationId=" + chunks[1] + "&sessionId=" + chunks[1] + "&fqn=" + full.fqn + "#run_history_highlights'><span class=\"status st-success\"></span></a><span class=\"ekatooltipdefaulttext\">200 OK</span></div>";
+										}
+									}
+									return STATUS;
+								}
+							}
+						]
+					});
+
+				}
+
+				function reloadTable() {
+					let url = window.ENV.API_BASE_URL + "/tenant/" + localStorage.getItem("tenant") + `/packages.middleware.pub.server.dashboard.api_page.getAPIAuditList.main`;
+
+					if ($("#show_all_apis_checkbox").is(":checked")) {
+						url = window.ENV.API_BASE_URL + "/tenant/" + localStorage.getItem("tenant") + "/packages.middleware.pub.server.dashboard.api_page.getAPILogs.main";
+					}
+
+					$(".select-all-apis").prop("checked", false);
+					//TODO - Blocker
+					table.ajax.url(url).load();
+				}
+
+				$(document).ready(function() {
+					var headerCheckbox = document.getElementById("startCheckBox");
+
+					loadData();
+					loadGroupsDP();
+
+					const fullScanCheckbox = document.getElementById("show_all_apis_checkbox");
+					fullScanCheckbox.addEventListener("change", function(){
+						reloadTable();
+					});
+
+					$('[data-toggle="tooltip"]').tooltip();
+				});
+
+			</script>
+
+
+			<script>
+
+
+
+				//	Equal height //
+
+				var matchHeight = function () {
+
+					function init() {
+						eventListeners();
+						matchHeight();
+					}
+
+					function eventListeners(){
+						$(window).on('resize', function() {
+							matchHeight();
+						});
+					}
+
+					function matchHeight(){
+						var groupName = $('[data-match-height]');
+						var groupHeights = [];
+
+						groupName.css('min-height', 'auto');
+
+						groupName.each(function() {
+							groupHeights.push($(this).outerHeight());
+						});
+
+						var maxHeight = Math.max.apply(null, groupHeights);
+						groupName.css('min-height', maxHeight);
+					};
+
+					return {
+						init: init
+					};
+
+				} ();
+
+				$(document).ready(function() {
+					matchHeight.init();
+					$('.select-all-apis').click(function(){
+						if ($('.select-all-apis').is(":checked")) {
+							$('.select-this-api').prop('checked', true);
+							$("#export-api-button").removeClass('disabled');
+							$("#swagger-api-button").removeClass('disabled');
+						} else {
+							$('.select-this-api').prop('checked', false);
+							$("#export-api-button").addClass('disabled', 'disabled');
+							$("#swagger-api-button").addClass('disabled', 'disabled');
+						}
+
+					});
+
+					$("#export-api-button").click(function () {
+						let fnqs = [];
+						$('.select-this-api').each(function () {
+							if ($(this).is(":checked")) {
+								fnqs.push($(this).val() + ".main");
+							}
+						});
+
+						$("#export-api-button").html("exporting...");
+
+						$.ajax({
+							url: window.ENV.API_BASE_URL + "/tenant/" + localStorage.getItem("tenant") +
+									"/packages.middleware.pub.specs.swagger.v3.ExportMultipleSwagger.main",
+							type: "POST",
+							headers: { "Authorization": `Bearer ${localStorage.getItem("AuthToken")}` },
+							contentType: 'application/json',
+							dataType: 'json',
+							data: JSON.stringify({
+								fqns: fnqs,
+								isDownloadable: true
+							}),
+							success: function (result) {
+								$("#export-api-button").html("Export API");
+								let fileName = new Date().getTime();
+
+								if (fnqs.length == 1) {
+									fileName = fnqs[0] + ".json";
+								}
+								downloadContentOffline(JSON.stringify(result), fileName, "application/json")
+
+							},
+							error: function (errormessage) {
+								$("#export-api-button").html("Export API");
+								swal({
+										title: "Export API not completed. Please try later",
+										text: "",
+										type: "error",
+										confirmButtonColor: "#f2533e"
+									});
+
+							}
+						})
+
+					});
+
+
+					$("#swagger-api-button").click(function () {
+						let fnqs = [];
+						$('.select-this-api').each(function () {
+							if ($(this).is(":checked")) {
+								fnqs.push($(this).val() + ".main");
+							}
+						});
+
+						window.open("middleware/pub/server/ui/oas/client.html?fqn=" + fnqs, "_blank");
+					});
+				});
+
+				function selectFnq() {
+					if ($('.select-this-api').is(":checked")) {
+						$("#export-api-button").removeClass('disabled');
+						$("#swagger-api-button").removeClass('disabled');
+					} else {
+						$("#export-api-button").addClass('disabled', 'disabled');
+						$("#swagger-api-button").addClass('disabled', 'disabled');
+					}
+				}
+			</script>
+			<script>
+			let index = 1;
+
+const on = (listener, query, fn) => {
+	document.querySelectorAll(query).forEach(item => {
+		item.addEventListener(listener, el => {
+			fn(el);
+		})
+	})
+}
+
+on('click', '.selectBtn', item => {
+	const next = item.target.nextElementSibling;
+	next.classList.toggle('toggle');
+	next.style.zIndex = index++;
+});
+on('click', '.option', item => {
+	item.target.parentElement.classList.remove('toggle');
+
+	const parent = item.target.closest('.select').children[0];
+	parent.setAttribute('data-type', item.target.getAttribute('data-type'));
+	parent.innerText = item.target.innerText;
+})
+			</script>
+
+			<script>
+				document.getElementById('openPurgeLogsModalButton').addEventListener('click', function() {
+					document.getElementById('purgeLogsModalDialog').style.display = 'block';
+				});
+
+				document.getElementById('closePurgeLogsModalDialog').addEventListener('click', function() {
+					document.getElementById('purgeLogsModalDialog').style.display = 'none';
+				});
+
+				document.getElementById('purge_days_select').addEventListener('change', function() {
+					if (this.value === 'custom_days') {
+						document.getElementById('purge_custom_days_div').style.display = 'block';
+					} else {
+						document.getElementById('purge_custom_days_div').style.display = 'none';
+					}
+				});
+
+				document.getElementById('purgeLogsOkButton').addEventListener('click', function() {
+					let days;
+					let selectedValue = document.getElementById('purge_days_select').value;
+
+					if (selectedValue === 'custom_days') {
+						days = document.getElementById('purge_custom_days').value;
+						if (!days || days < 1) {
+							swal({
+									title: "Please enter a valid number of days.",
+									type: "error",
+									confirmButtonColor: "#f2533e" // Optional: red confirm button
+								});
+
+							return;
+						}
+					} else {
+						days = selectedValue;
+					}
+
+					asyncRestRequest("/tenant/" + localStorage.getItem("tenant") + "/packages.middleware.pub.server.housekeeping.purgeAuditLogs.main?olderThan_Days=" + days,
+							null, "POST",
+							function(response) {
+								swal({
+										title: "Success",
+										text: "Logs Deleted",
+										type: "success",
+										confirmButtonColor: "#2C61F5" // Optional: custom button color
+									});
+
+								document.getElementById('purgeLogsModalDialog').style.display = 'none';
+								reloadTable();
+							},function(error) {
+								swal({
+										title: "Error",
+										text: "Please try again.",
+										type: "error",
+										confirmButtonColor: "#f2533e" // Optional: red shade for error
+									});
+
+								document.getElementById('purgeLogsModalDialog').style.display = 'none';
+							});
+				});
+			</script>
+
+
+
+</body>
+</html>

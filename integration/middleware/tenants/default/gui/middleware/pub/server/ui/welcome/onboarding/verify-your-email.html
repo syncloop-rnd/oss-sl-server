@@ -1,0 +1,48 @@
+<html style="min-height: 100% !important;">
+<head>
+	<!-- Required meta tags -->
+	<meta charset="utf-8">
+	<base href="/"><script src="env.js"></script>
+	<script>
+		window.ENV = window.env || {};
+	</script>
+	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+	<link rel="shortcut icon" href="middleware/pub/server/ui/assets/img/favicon.ico" type="image/x-icon" />
+	<!-- Bootstrap CSS -->
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+	<link rel="stylesheet" href="middleware/pub/server/ui/assets/css/bootstrap.min.css">
+	<!-- Style -->
+	<link rel="stylesheet" href="middleware/pub/server/ui/assets/css/login.css">
+	<title>Syncloop | Verify Your Email Address</title>
+
+	<script type="syncloop/analytics"></script>
+</head>
+<body>
+<script type="syncloop/body-analytics"></script>
+<div class="d-lg-flex half">
+	<div class="bg order-1 order-md-2 verify_img"></div>
+	<div class="contents order-2 order-md-1">
+		<div class="container login-style verify">
+			<div class="login_logo"><img src="middleware/pub/server/ui/assets/img/syncloop-blue-logo.svg" alt="Image"></div>
+			<div class="row align-items-center justify-content-center reset_ps">
+				<div class="col-md-9">
+					<h3>Verify your email</h3>
+					<p>To use Syncloop, click the verification button in the mail we sent to
+						<strong id="email-id"></strong>. Click the link in the email to verify your email address.<br><br>
+						Please allow up to 5 minutes for the email to arrive, you may need to check
+						your spam folder.
+					</p>
+					<p style="display: none;">No email in your inbox or spam folder? <a href="javascript:void(0)">Let’s resend it</a>.</p>
+					<!-- 			<button onclick="location.href='about-yourself.html'" type="button" id="" class="btn btn-gry">OK</button> -->
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+</body>
+<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
+<script type="text/javascript" src="middleware/pub/server/ui/javascript/middleware.js"></script>
+<script type="text/javascript">
+	$("#email-id").html(getQueryVariable("email"));
+</script>
+</html>

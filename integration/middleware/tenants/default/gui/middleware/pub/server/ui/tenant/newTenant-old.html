@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+<script src="middleware/pub/server/ui/javascript/middleware.js"></script>
+</head>
+<body>
+New Tenant name: <input type="text" id="tenantName"></input>
+<a onClick="createTenant();" href="#">Create and open workspace</a>
+
+<script>
+
+function createTenant(){
+
+location.href="/packages.middleware.pub.tenant.createNew.main?tenantName="+document.getElementById('tenantName').value+"&redirect=/middleware/pub/server/ui/workspace/web/workspace.html";
+
+var response=syncRestRequest("/packages.middleware.pub.tenant.createNew.main?tenantName="+$('#tenantName').value(), "GET", editorContent,"application/text","application/text");
+		if(response.status==200){
+			alert("Created");
+			location.href="middleware/pub/server/ui/workspace/web/workspace.html";
+		}else
+			alert(JSON.parse(response.payload).error);
+}
+</script>
+</body>
+</html>

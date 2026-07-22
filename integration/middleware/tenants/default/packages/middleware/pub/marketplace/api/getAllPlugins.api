@@ -1,0 +1,305 @@
+{
+  "latest" : {
+    "createdTS" : "",
+    "input" : [ {
+      "id" : "j2_1",
+      "text" : "length",
+      "li_attr" : {
+        "id" : "j2_1"
+      },
+      "a_attr" : {
+        "href" : "#",
+        "id" : "j2_1_anchor"
+      },
+      "state" : {
+        "loaded" : true,
+        "opened" : false,
+        "selected" : false,
+        "disabled" : false,
+        "hidden" : false
+      },
+      "data" : { },
+      "children" : [ ],
+      "type" : "integer"
+    }, {
+      "id" : "j2_2",
+      "text" : "start",
+      "li_attr" : {
+        "id" : "j2_2"
+      },
+      "a_attr" : {
+        "href" : "#",
+        "id" : "j2_2_anchor"
+      },
+      "state" : {
+        "loaded" : true,
+        "opened" : false,
+        "selected" : false,
+        "disabled" : false,
+        "hidden" : false
+      },
+      "data" : { },
+      "children" : [ ],
+      "type" : "integer"
+    } ],
+    "output" : [ {
+      "id" : "j3_23",
+      "text" : "count",
+      "li_attr" : {
+        "id" : "j3_23"
+      },
+      "a_attr" : {
+        "href" : "#",
+        "id" : "j3_23_anchor"
+      },
+      "state" : {
+        "loaded" : true,
+        "opened" : false,
+        "selected" : false,
+        "disabled" : false,
+        "hidden" : false
+      },
+      "data" : { },
+      "children" : [ ],
+      "type" : "string"
+    }, {
+      "id" : "j3_24",
+      "text" : "marketplace",
+      "li_attr" : {
+        "id" : "j3_24"
+      },
+      "a_attr" : {
+        "href" : "#",
+        "id" : "j3_24_anchor"
+      },
+      "state" : {
+        "loaded" : true,
+        "opened" : false,
+        "selected" : false,
+        "disabled" : false,
+        "hidden" : false
+      },
+      "data" : { },
+      "children" : [ {
+        "id" : "j3_25",
+        "text" : "plugins",
+        "li_attr" : {
+          "id" : "j3_25"
+        },
+        "a_attr" : {
+          "href" : "#"
+        },
+        "state" : {
+          "loaded" : true,
+          "opened" : false,
+          "selected" : false,
+          "disabled" : false
+        },
+        "data" : { },
+        "children" : [ ],
+        "type" : "documentList"
+      } ],
+      "type" : "document"
+    } ],
+    "api" : [ {
+      "id" : "j1_4",
+      "text" : "Transformer",
+      "li_attr" : {
+        "id" : "j1_4"
+      },
+      "a_attr" : {
+        "href" : "javascript:void(0)",
+        "id" : "j1_4_anchor"
+      },
+      "state" : {
+        "loaded" : true,
+        "opened" : false,
+        "selected" : false,
+        "disabled" : false,
+        "hidden" : false
+      },
+      "data" : {
+        "guid" : "389a77ff-39a0-4980-b022-d9742675354a",
+        "transformers" : [ ],
+        "lines" : [ ],
+        "dropList" : [ ],
+        "createList" : [ ],
+        "initiateList" : [ ]
+      },
+      "children" : [ ],
+      "type" : "transformer"
+    }, {
+      "id" : "j1_1",
+      "text" : "Invoke",
+      "li_attr" : {
+        "id" : "j1_1"
+      },
+      "a_attr" : {
+        "href" : "javascript:void(0)",
+        "id" : "j1_1_anchor"
+      },
+      "state" : {
+        "loaded" : true,
+        "opened" : false,
+        "selected" : true,
+        "disabled" : false,
+        "hidden" : false
+      },
+      "data" : {
+        "guid" : "69994ba9-afeb-4f3d-93e4-93395f5d174b",
+        "transformers" : [ {
+          "op" : "copy",
+          "from" : "/start",
+          "to" : "/inputDocList/0/start",
+          "inTypePath" : "integer",
+          "outTypePath" : "documentList/integer",
+          "direction" : "in"
+        }, {
+          "op" : "copy",
+          "from" : "/length",
+          "to" : "/inputDocList/0/offset",
+          "inTypePath" : "integer",
+          "outTypePath" : "documentList/integer",
+          "direction" : "in"
+        }, {
+          "op" : "copy",
+          "from" : "/outputDocList",
+          "to" : "/marketplace/plugins",
+          "inTypePath" : "documentList",
+          "outTypePath" : "document/documentList",
+          "direction" : "out"
+        } ],
+        "lines" : [ {
+          "inputPath" : "start",
+          "outputPath" : "inputDocList/start",
+          "inpJsTree" : "#launching_arrow_jsTree",
+          "outpJsTree" : "#landing_arrow_jsTree_function",
+          "INPath" : "start",
+          "OUTPath" : "inputDocList/#0/start",
+          "direction" : "in",
+          "op" : "copy",
+          "line" : 0,
+          "dashedLine" : false,
+          "inType" : "integer",
+          "outType" : "integer",
+          "inTypePath" : "integer",
+          "outTypePath" : "documentList/integer"
+        }, {
+          "inputPath" : "length",
+          "outputPath" : "inputDocList/offset",
+          "inpJsTree" : "#launching_arrow_jsTree",
+          "outpJsTree" : "#landing_arrow_jsTree_function",
+          "INPath" : "length",
+          "OUTPath" : "inputDocList/#0/offset",
+          "direction" : "in",
+          "op" : "copy",
+          "line" : 0,
+          "dashedLine" : false,
+          "inType" : "integer",
+          "outType" : "integer",
+          "inTypePath" : "integer",
+          "outTypePath" : "documentList/integer"
+        }, {
+          "inputPath" : "outputDocList",
+          "outputPath" : "marketplace/plugins",
+          "inpJsTree" : "#launching_arrow_jsTree_function",
+          "outpJsTree" : "#landing_arrow_jsTree",
+          "INPath" : "outputDocList",
+          "OUTPath" : "marketplace/plugins",
+          "direction" : "out",
+          "op" : "copy",
+          "line" : 0,
+          "dashedLine" : false,
+          "inType" : "documentList",
+          "outType" : "documentList",
+          "inTypePath" : "documentList",
+          "outTypePath" : "document/documentList"
+        } ],
+        "dropList" : [ ],
+        "createList" : [ ],
+        "initiateList" : [ {
+          "path" : "outputDocList",
+          "id" : "2105ae7a-e742-41a7-ab8c-f192033daea6",
+          "typePath" : "documentList"
+        }, {
+          "path" : "marketplace",
+          "id" : "d6a7bc49-47da-471a-b8fd-f792ab4c7020",
+          "typePath" : "document"
+        }, {
+          "path" : "marketplace/plugins",
+          "id" : "92d7019a-8bfd-4661-8242-32d27e5dfc50",
+          "typePath" : "document/documentList"
+        } ],
+        "fqn" : "packages/middleware/pub/marketplace/adapter/services/DQL/getAllPlugins",
+        "serviceType" : "sql",
+        "snap" : "disabled",
+        "status" : "enabled"
+      },
+      "children" : [ ],
+      "type" : "invoke"
+    }, {
+      "id" : "j1_5",
+      "text" : "Invoke",
+      "li_attr" : {
+        "id" : "j1_5"
+      },
+      "a_attr" : {
+        "href" : "javascript:void(0)",
+        "id" : "j1_5_anchor"
+      },
+      "state" : {
+        "loaded" : true,
+        "opened" : false,
+        "selected" : false,
+        "disabled" : false,
+        "hidden" : false
+      },
+      "data" : {
+        "guid" : "d7a78ebd-cbf1-408b-aa41-9f2dc292348f",
+        "columnType" : "-1",
+        "transformers" : [ {
+          "op" : "copy",
+          "from" : "/outputDocList/0/count",
+          "to" : "/count",
+          "inTypePath" : "documentList/string",
+          "outTypePath" : "string",
+          "direction" : "out"
+        } ],
+        "lines" : [ {
+          "inputPath" : "outputDocList/count",
+          "outputPath" : "count",
+          "inpJsTree" : "#launching_arrow_jsTree_function",
+          "outpJsTree" : "#landing_arrow_jsTree",
+          "INPath" : "outputDocList/#0/count",
+          "OUTPath" : "count",
+          "direction" : "out",
+          "op" : "copy",
+          "line" : 0,
+          "dashedLine" : false,
+          "inType" : "string",
+          "outType" : "string",
+          "inTypePath" : "documentList/string",
+          "outTypePath" : "string"
+        } ],
+        "dropList" : [ ],
+        "createList" : [ ],
+        "initiateList" : [ ],
+        "fqn" : "packages/middleware/pub/marketplace/adapter/services/DQL/getPluginCount",
+        "serviceType" : "sql",
+        "status" : "enabled"
+      },
+      "children" : [ ],
+      "type" : "invoke"
+    } ],
+    "api_info" : {
+      "title" : "",
+      "description" : ""
+    },
+    "lockedByUser" : "admin"
+  },
+  "consumers" : "",
+  "developers" : "developers",
+  "enableServiceDocumentValidation" : false,
+  "created_on" : "1725362717576",
+  "modified_on" : 1725362717576
+}

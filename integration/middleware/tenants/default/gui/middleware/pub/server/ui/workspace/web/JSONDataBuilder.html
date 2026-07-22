@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="jsonEditorApp">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Interactive JSON Editor</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.8.2/angular.min.js"></script>
+
+<style>
+    body {
+        font-family: Consolas, "Courier New", monospace;
+        background-color: #1E1E1E;
+        color: #D4D4D4;
+        margin: 0;
+        padding: 20px;
+    }
+
+    .json-item {
+        margin-top: 5px;
+        padding-left: 10px;
+        border: none;
+    }
+
+    input[type="text"],
+    input[type="number"] {
+        width: 100%;
+        background-color: #1E1E1E;
+        border: none;
+        border-radius: 3px;
+        color: #D4D4D4;
+        padding: 5px;
+        outline: none;
+        transition: border 0.15s ease-in-out;
+    }
+
+    input[type="text"]:focus,
+    input[type="number"]:focus {
+        border: 1px solid #007ACC;
+    }
+
+    .view-json-btn {
+        display: inline-block;
+        margin-top: 20px;
+        padding: 5px 15px;
+        background-color: #00579B;
+        color: #D4D4D4;
+        border: none;
+        border-radius: 3px;
+        cursor: pointer;
+        transition: background-color 0.15s ease-in-out;
+    }
+
+    .view-json-btn:hover {
+        background-color: #007ACC;
+    }
+
+    .array-item {
+        padding-left: 20px;
+        position: relative;
+        border-left: 2px dotted #3C3C3C;
+    }
+
+    .array-item button {
+        display: inline-block;
+        background-color: #A41313;
+        color: #D4D4D4;
+        border: none;
+        border-radius: 10px;
+        padding: 2px 5px;
+        margin-left: 5px;
+        cursor: pointer;
+        transition: background-color 0.15s ease-in-out;
+		float:right;
+    }
+
+	.array-item-add-button{
+		display: inline-block;
+        background-color: #58690f;
+        color: #D4D4D4;
+        border: none;
+        border-radius: 10px;
+        padding: 2px 5px;
+        margin-left: 5px;
+        cursor: pointer;
+        transition: background-color 0.15s ease-in-out;
+		float:right;
+	}
+
+    .array-item button:hover {
+        background-color: #D21313;
+    }
+	.toggle-icon {
+		cursor: pointer;
+		margin-right: 5px;
+		float:left;
+	}
+
+	.hidden {
+		display: none;
+	}
+
+	.array-item .item{
+		width:100%;
+		padding-bottom:5px;
+		margin-top:5px;
+		border: 1px solid #3C3C3C;
+	}
+
+	.item-header{
+		width:100%;
+		padding:2px;
+		background-color: #1385d2;
+		border-bottom: 1px solid #3C3C3C;
+		height:20px;
+	}
+
+</style>
+
+</head>
+
+<body ng-controller="JsonEditorController as ctrl">
+
+    <div json-editor current-data="ctrl.schema" editor-data="ctrl.editorData" style="width:500px;"></div>
+
+    <input type="checkbox" ng-model="ctrl.allowNull"> Allow null
+    <button ng-click="ctrl.viewFinalJSON()">View Final JSON</button>
+
+    <!-- Template for JSON Editor -->
+    <script type="text/ng-template" id="jsonEditorTemplate">
+        <div ng-repeat="(key, value) in currentData.properties" class="json-item">
+            <div ng-if="value.type === 'object'">
+                <div class="item-header"><span class="toggle-icon" ng-click="toggleExpand(editorData[key])">{{ editorData[key]._toggle ? '-' : '+' }}</span><strong>{{key}}:</strong></div>
+                <div json-editor current-data="value" editor-data="editorData[key]"  ng-show="editorData[key]._toggle"></div>
+            </div>
+            <div ng-if="value.type === 'array'">
+                <div class="item-header">
+					<span><span class="toggle-icon" ng-click="toggleExpand(editorData[key])">{{ editorData[key]._toggle ? '-' : (editorData[key]._toggle==null ? '-' : '+' ) }}</span>
+						<strong>{{key}}:</strong>
+					</span>
+					<button ng-click="addArrayItem(value.items, key)" class="array-item-add-button">Add</button>
+				</div>
+
+                <div class="array-item" ng-repeat="item in editorData[key] track by $index" ng-show="editorData[key]._toggle ? true : (editorData[key]._toggle==null ? true : false )">
+					<div class="item">
+						<div ng-if="value.items.type === 'object'">
+						<div class="item-header" >
+							<span><span current-data="value.items" editor-data="item" class="toggle-icon" ng-click="toggleExpand(item)">{{ item._toggle ? '-' : '+' }}</span>
+								<strong>{{key}}[{{$index}}]:</strong>
+							</span>
+							<button ng-click="removeArrayItem(key, $index)">Del</button>
+						</div>
+						<div json-editor current-data="value.items" editor-data="item" ng-show="item._toggle"></div>
+						</div>
+						<div ng-if="value.items.type !== 'object'">
+							<!-- Primitive array item template -->
+							<input type="{{value.items.type}}" ng-model="editorData[key][$index]" ng-if="value.items.type === 'string' || value.items.type === 'number'">
+							<input type="checkbox" ng-model="editorData[key][$index]" ng-if="value.items.type === 'boolean'">
+							<button ng-click="removeArrayItem(key, $index)">Del</button>
+						</div>
+					</div>
+                </div>
+            </div>
+            <div ng-if="value.type !== 'object' && value.type !== 'array'">
+                <strong>{{key}}:</strong>
+                <input style="width:200px;" type="text" ng-if="value.type === 'string'" ng-model="editorData[key]" placeholder="{{key}}">
+                <input style="width:200px;" type="number" ng-if="value.type === 'number'" ng-model="editorData[key]" placeholder="{{key}}">
+                <input style="width:200px;" type="checkbox" ng-if="value.type === 'boolean'" ng-model="editorData[key]">
+            </div>
+        </div>
+
+    </script>
+
+    <script type="text/javascript">
+
+angular.module('jsonEditorApp', [])
+    .directive('jsonEditor', function() {
+        return {
+            restrict: 'A',
+            scope: {
+                currentData: '=',
+                editorData: '='
+            },
+            templateUrl: 'jsonEditorTemplate',
+            link: function(scope, element, attrs, ctrl) {
+				scope.addArrayItem = function(itemSchema, key) {
+					let newItem;
+					if (itemSchema.type === 'object') {
+						newItem = ctrl.populateEditorData(itemSchema);
+						newItem._toggle = true;
+					} else {
+						// Initialize default values for primitive types
+						newItem = itemSchema.type === 'number' ? 0 :
+								  itemSchema.type === 'boolean' ? false : '';
+					}
+					scope.editorData[key].push(newItem);
+				};
+
+                scope.removeArrayItem = function(key, index) {
+                    scope.editorData[key].splice(index, 1);
+                };
+
+                scope.toggleExpand = function(item) {
+					if(item._toggle==null)
+						item._toggle=true;
+                    item._toggle = !item._toggle;
+                };
+            },
+            controller: 'JsonEditorController'
+        };
+    })
+    .controller('JsonEditorController', ['$scope', function($scope) {
+        var ctrl = this;
+
+        ctrl.schema = JSON.parse(localStorage.getItem("json_recent_schema"));
+        ctrl.editorData = {};
+
+        ctrl.populateEditorData = function(schema, existingData = {}) {
+            let data = {};
+            for (let key in schema.properties) {
+                if (existingData[key] !== undefined) {
+                    data[key] = existingData[key];
+					data[key]["_toggle"] = true;
+                } else if (schema.properties[key].type === 'object') {
+                    data[key] = ctrl.populateEditorData(schema.properties[key]);
+                    data[key]["_toggle"] = true;
+                } else if (schema.properties[key].type === 'array') {
+                    data[key] = [];
+                    data[key]["_toggle"] = true;
+                } else {
+                    data[key] = '';
+                }
+            }
+            return data;
+        };
+
+        ctrl.viewFinalJSON = function() {
+            let finalJSON = JSON.parse(JSON.stringify(ctrl.editorData));
+            if (ctrl.allowNull) {
+                (function pruneEmpty(obj) {
+                    Object.keys(obj).forEach(key => {
+                        if (obj[key] && typeof obj[key] === 'object') {
+                            pruneEmpty(obj[key]);
+                        } else if (obj[key] === "") {
+                            delete obj[key];
+                        }
+                    });
+                })(finalJSON);
+            }
+            console.log(JSON.stringify(finalJSON, null, 4));
+        };
+
+        ctrl.editorData = Object.assign({}, ctrl.editorData, ctrl.populateEditorData(ctrl.schema, ctrl.editorData));
+    }]);
+
+
+    </script>
+
+</body>
+</html>

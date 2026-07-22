@@ -1,0 +1,687 @@
+{
+  "latest" : {
+    "createdTS" : "",
+    "input" : [ ],
+    "output" : [ {
+      "id" : "j3_2",
+      "text" : "output",
+      "li_attr" : {
+        "id" : "j3_2"
+      },
+      "a_attr" : {
+        "href" : "#",
+        "id" : "j3_2_anchor"
+      },
+      "state" : {
+        "loaded" : true,
+        "opened" : true,
+        "selected" : false,
+        "disabled" : false,
+        "hidden" : false
+      },
+      "data" : { },
+      "children" : [ {
+        "id" : "j3_3",
+        "text" : "id",
+        "li_attr" : {
+          "id" : "j3_3"
+        },
+        "a_attr" : {
+          "href" : "#",
+          "id" : "j3_3_anchor"
+        },
+        "state" : {
+          "loaded" : true,
+          "opened" : false,
+          "selected" : false,
+          "disabled" : false
+        },
+        "data" : { },
+        "children" : [ ],
+        "type" : "string"
+      }, {
+        "id" : "j3_4",
+        "text" : "serviceFqn",
+        "li_attr" : {
+          "id" : "j3_4"
+        },
+        "a_attr" : {
+          "href" : "#",
+          "id" : "j3_4_anchor"
+        },
+        "state" : {
+          "loaded" : true,
+          "opened" : false,
+          "selected" : false,
+          "disabled" : false
+        },
+        "data" : { },
+        "children" : [ ],
+        "type" : "string"
+      }, {
+        "id" : "j3_5",
+        "text" : "cron",
+        "li_attr" : {
+          "id" : "j3_5"
+        },
+        "a_attr" : {
+          "href" : "#",
+          "id" : "j3_5_anchor"
+        },
+        "state" : {
+          "loaded" : true,
+          "opened" : false,
+          "selected" : false,
+          "disabled" : false
+        },
+        "data" : { },
+        "children" : [ ],
+        "type" : "string"
+      }, {
+        "id" : "j3_6",
+        "text" : "status",
+        "li_attr" : {
+          "id" : "j3_6"
+        },
+        "a_attr" : {
+          "href" : "#",
+          "id" : "j3_6_anchor"
+        },
+        "state" : {
+          "loaded" : true,
+          "opened" : false,
+          "selected" : false,
+          "disabled" : false
+        },
+        "data" : { },
+        "children" : [ ],
+        "type" : "string"
+      }, {
+        "id" : "j3_7",
+        "text" : "lasterror",
+        "li_attr" : {
+          "id" : "j3_7"
+        },
+        "a_attr" : {
+          "href" : "#",
+          "id" : "j3_7_anchor"
+        },
+        "state" : {
+          "loaded" : true,
+          "opened" : false,
+          "selected" : false,
+          "disabled" : false
+        },
+        "data" : { },
+        "children" : [ ],
+        "type" : "string"
+      }, {
+        "id" : "j3_8",
+        "text" : "enabled",
+        "li_attr" : {
+          "id" : "j3_8"
+        },
+        "a_attr" : {
+          "href" : "#",
+          "id" : "j3_8_anchor"
+        },
+        "state" : {
+          "loaded" : true,
+          "opened" : false,
+          "selected" : false,
+          "disabled" : false
+        },
+        "data" : { },
+        "children" : [ ],
+        "type" : "string"
+      }, {
+        "id" : "j3_9",
+        "text" : "owner_node",
+        "li_attr" : {
+          "id" : "j3_9"
+        },
+        "a_attr" : {
+          "href" : "#",
+          "id" : "j3_9_anchor"
+        },
+        "state" : {
+          "loaded" : true,
+          "opened" : false,
+          "selected" : false,
+          "disabled" : false
+        },
+        "data" : { },
+        "children" : [ ],
+        "type" : "string"
+      }, {
+        "id" : "j3_10",
+        "text" : "last_run",
+        "li_attr" : {
+          "id" : "j3_10"
+        },
+        "a_attr" : {
+          "href" : "#",
+          "id" : "j3_10_anchor"
+        },
+        "state" : {
+          "loaded" : true,
+          "opened" : false,
+          "selected" : false,
+          "disabled" : false
+        },
+        "data" : { },
+        "children" : [ ],
+        "type" : "string"
+      }, {
+        "id" : "j3_11",
+        "text" : "next_run",
+        "li_attr" : {
+          "id" : "j3_11"
+        },
+        "a_attr" : {
+          "href" : "#",
+          "id" : "j3_11_anchor"
+        },
+        "state" : {
+          "loaded" : true,
+          "opened" : false,
+          "selected" : false,
+          "disabled" : false
+        },
+        "data" : { },
+        "children" : [ ],
+        "type" : "string"
+      }, {
+        "id" : "j3_12",
+        "text" : "job_name",
+        "li_attr" : {
+          "id" : "j3_12"
+        },
+        "a_attr" : {
+          "href" : "#",
+          "id" : "j3_12_anchor"
+        },
+        "state" : {
+          "loaded" : true,
+          "opened" : false,
+          "selected" : false,
+          "disabled" : false
+        },
+        "data" : { },
+        "children" : [ ],
+        "type" : "string"
+      }, {
+        "id" : "j3_13",
+        "text" : "created_date",
+        "li_attr" : {
+          "id" : "j3_13"
+        },
+        "a_attr" : {
+          "href" : "#",
+          "id" : "j3_13_anchor"
+        },
+        "state" : {
+          "loaded" : true,
+          "opened" : false,
+          "selected" : false,
+          "disabled" : false
+        },
+        "data" : { },
+        "children" : [ ],
+        "type" : "string"
+      } ],
+      "type" : "documentList"
+    } ],
+    "api_info" : {
+      "title" : "",
+      "description" : ""
+    },
+    "lockedByUser" : "admin",
+    "api" : [ {
+      "id" : "j1_5",
+      "text" : "Invoke",
+      "li_attr" : {
+        "id" : "j1_5"
+      },
+      "a_attr" : {
+        "href" : "javascript:void(0)",
+        "id" : "j1_5_anchor"
+      },
+      "state" : {
+        "loaded" : true,
+        "opened" : false,
+        "selected" : false,
+        "disabled" : false,
+        "hidden" : false
+      },
+      "data" : {
+        "transformers" : [ {
+          "op" : "loop",
+          "from" : "/outputDocList/#{loop_id_-331687499}",
+          "to" : "/output/#{loop_id_-331687499}",
+          "loop_Id" : "loop_id_-331687499",
+          "inTypePath" : "documentList",
+          "outTypePath" : "documentList"
+        }, {
+          "op" : "add",
+          "from" : "/outputDocList/#{loop_id_-331687499}/id",
+          "to" : "/output/#{loop_id_-331687499}/id",
+          "follow" : "loop_id_-331687499",
+          "inTypePath" : "documentList/string",
+          "outTypePath" : "documentList/string"
+        }, {
+          "op" : "add",
+          "from" : "/outputDocList/#{loop_id_-331687499}/serviceFqn",
+          "to" : "/output/#{loop_id_-331687499}/serviceFqn",
+          "follow" : "loop_id_-331687499",
+          "inTypePath" : "documentList/string",
+          "outTypePath" : "documentList/string"
+        }, {
+          "op" : "add",
+          "from" : "/outputDocList/#{loop_id_-331687499}/cron",
+          "to" : "/output/#{loop_id_-331687499}/cron",
+          "follow" : "loop_id_-331687499",
+          "inTypePath" : "documentList/string",
+          "outTypePath" : "documentList/string"
+        }, {
+          "op" : "add",
+          "from" : "/outputDocList/#{loop_id_-331687499}/status",
+          "to" : "/output/#{loop_id_-331687499}/status",
+          "follow" : "loop_id_-331687499",
+          "inTypePath" : "documentList/string",
+          "outTypePath" : "documentList/string"
+        }, {
+          "op" : "add",
+          "from" : "/outputDocList/#{loop_id_-331687499}/lasterror",
+          "to" : "/output/#{loop_id_-331687499}/lasterror",
+          "follow" : "loop_id_-331687499",
+          "inTypePath" : "documentList/string",
+          "outTypePath" : "documentList/string"
+        }, {
+          "op" : "add",
+          "from" : "/outputDocList/#{loop_id_-331687499}/enabled",
+          "to" : "/output/#{loop_id_-331687499}/enabled",
+          "follow" : "loop_id_-331687499",
+          "inTypePath" : "documentList/string",
+          "outTypePath" : "documentList/string"
+        }, {
+          "op" : "add",
+          "from" : "/outputDocList/#{loop_id_-331687499}/owner_node",
+          "to" : "/output/#{loop_id_-331687499}/owner_node",
+          "follow" : "loop_id_-331687499",
+          "inTypePath" : "documentList/string",
+          "outTypePath" : "documentList/string"
+        }, {
+          "op" : "add",
+          "from" : "/outputDocList/#{loop_id_-331687499}/last_run",
+          "to" : "/output/#{loop_id_-331687499}/last_run",
+          "follow" : "loop_id_-331687499",
+          "inTypePath" : "documentList/string",
+          "outTypePath" : "documentList/string"
+        }, {
+          "op" : "add",
+          "from" : "/outputDocList/#{loop_id_-331687499}/next_run",
+          "to" : "/output/#{loop_id_-331687499}/next_run",
+          "follow" : "loop_id_-331687499",
+          "inTypePath" : "documentList/string",
+          "outTypePath" : "documentList/string"
+        }, {
+          "op" : "add",
+          "from" : "/outputDocList/#{loop_id_-331687499}/job_name",
+          "to" : "/output/#{loop_id_-331687499}/job_name",
+          "follow" : "loop_id_-331687499",
+          "inTypePath" : "documentList/string",
+          "outTypePath" : "documentList/string"
+        }, {
+          "op" : "add",
+          "from" : "/outputDocList/#{loop_id_-331687499}/created_time",
+          "to" : "/output/#{loop_id_-331687499}/created_time",
+          "follow" : "loop_id_-331687499",
+          "inTypePath" : "documentList/string",
+          "outTypePath" : "documentList/string"
+        } ],
+        "lines" : [ {
+          "loop_Id" : "loop_id_-331687499",
+          "inputPath" : "outputDocList",
+          "outputPath" : "output",
+          "inpJsTree" : "#launching_arrow_jsTree_function",
+          "outpJsTree" : "#landing_arrow_jsTree",
+          "INPath" : "outputDocList/#{loop_id_-331687499}",
+          "OUTPath" : "output/#{loop_id_-331687499}",
+          "line" : 0,
+          "dashedLine" : true,
+          "op" : "loop",
+          "inType" : "documentList",
+          "outType" : "documentList",
+          "inTypePath" : "documentList",
+          "outTypePath" : "documentList"
+        }, {
+          "inputPath" : "outputDocList/id",
+          "outputPath" : "output/id",
+          "inpJsTree" : "#launching_arrow_jsTree_function",
+          "outpJsTree" : "#landing_arrow_jsTree",
+          "INPath" : "outputDocList/#{loop_id_-331687499}/id",
+          "OUTPath" : "output/#{loop_id_-331687499}/id",
+          "follow" : "loop_id_-331687499",
+          "op" : "add",
+          "line" : 0,
+          "dashedLine" : false,
+          "inType" : "string",
+          "outType" : "string",
+          "inTypePath" : "documentList/string",
+          "outTypePath" : "documentList/string"
+        }, {
+          "inputPath" : "outputDocList/serviceFqn",
+          "outputPath" : "output/serviceFqn",
+          "inpJsTree" : "#launching_arrow_jsTree_function",
+          "outpJsTree" : "#landing_arrow_jsTree",
+          "INPath" : "outputDocList/#{loop_id_-331687499}/serviceFqn",
+          "OUTPath" : "output/#{loop_id_-331687499}/serviceFqn",
+          "follow" : "loop_id_-331687499",
+          "op" : "add",
+          "line" : 0,
+          "dashedLine" : false,
+          "inType" : "string",
+          "outType" : "string",
+          "inTypePath" : "documentList/string",
+          "outTypePath" : "documentList/string"
+        }, {
+          "inputPath" : "outputDocList/cron",
+          "outputPath" : "output/cron",
+          "inpJsTree" : "#launching_arrow_jsTree_function",
+          "outpJsTree" : "#landing_arrow_jsTree",
+          "INPath" : "outputDocList/#{loop_id_-331687499}/cron",
+          "OUTPath" : "output/#{loop_id_-331687499}/cron",
+          "follow" : "loop_id_-331687499",
+          "op" : "add",
+          "line" : 0,
+          "dashedLine" : false,
+          "inType" : "string",
+          "outType" : "string",
+          "inTypePath" : "documentList/string",
+          "outTypePath" : "documentList/string"
+        }, {
+          "inputPath" : "outputDocList/status",
+          "outputPath" : "output/status",
+          "inpJsTree" : "#launching_arrow_jsTree_function",
+          "outpJsTree" : "#landing_arrow_jsTree",
+          "INPath" : "outputDocList/#{loop_id_-331687499}/status",
+          "OUTPath" : "output/#{loop_id_-331687499}/status",
+          "follow" : "loop_id_-331687499",
+          "op" : "add",
+          "line" : 0,
+          "dashedLine" : false,
+          "inType" : "string",
+          "outType" : "string",
+          "inTypePath" : "documentList/string",
+          "outTypePath" : "documentList/string"
+        }, {
+          "inputPath" : "outputDocList/lasterror",
+          "outputPath" : "output/lasterror",
+          "inpJsTree" : "#launching_arrow_jsTree_function",
+          "outpJsTree" : "#landing_arrow_jsTree",
+          "INPath" : "outputDocList/#{loop_id_-331687499}/lasterror",
+          "OUTPath" : "output/#{loop_id_-331687499}/lasterror",
+          "follow" : "loop_id_-331687499",
+          "op" : "add",
+          "line" : 0,
+          "dashedLine" : false,
+          "inType" : "string",
+          "outType" : "string",
+          "inTypePath" : "documentList/string",
+          "outTypePath" : "documentList/string"
+        }, {
+          "inputPath" : "outputDocList/enabled",
+          "outputPath" : "output/enabled",
+          "inpJsTree" : "#launching_arrow_jsTree_function",
+          "outpJsTree" : "#landing_arrow_jsTree",
+          "INPath" : "outputDocList/#{loop_id_-331687499}/enabled",
+          "OUTPath" : "output/#{loop_id_-331687499}/enabled",
+          "follow" : "loop_id_-331687499",
+          "op" : "add",
+          "line" : 0,
+          "dashedLine" : false,
+          "inType" : "string",
+          "outType" : "string",
+          "inTypePath" : "documentList/string",
+          "outTypePath" : "documentList/string"
+        }, {
+          "inputPath" : "outputDocList/owner_node",
+          "outputPath" : "output/owner_node",
+          "inpJsTree" : "#launching_arrow_jsTree_function",
+          "outpJsTree" : "#landing_arrow_jsTree",
+          "INPath" : "outputDocList/#{loop_id_-331687499}/owner_node",
+          "OUTPath" : "output/#{loop_id_-331687499}/owner_node",
+          "follow" : "loop_id_-331687499",
+          "op" : "add",
+          "line" : 0,
+          "dashedLine" : false,
+          "inType" : "string",
+          "outType" : "string",
+          "inTypePath" : "documentList/string",
+          "outTypePath" : "documentList/string"
+        }, {
+          "inputPath" : "outputDocList/last_run",
+          "outputPath" : "output/last_run",
+          "inpJsTree" : "#launching_arrow_jsTree_function",
+          "outpJsTree" : "#landing_arrow_jsTree",
+          "INPath" : "outputDocList/#{loop_id_-331687499}/last_run",
+          "OUTPath" : "output/#{loop_id_-331687499}/last_run",
+          "follow" : "loop_id_-331687499",
+          "op" : "add",
+          "line" : 0,
+          "dashedLine" : false,
+          "inType" : "string",
+          "outType" : "string",
+          "inTypePath" : "documentList/string",
+          "outTypePath" : "documentList/string"
+        }, {
+          "inputPath" : "outputDocList/next_run",
+          "outputPath" : "output/next_run",
+          "inpJsTree" : "#launching_arrow_jsTree_function",
+          "outpJsTree" : "#landing_arrow_jsTree",
+          "INPath" : "outputDocList/#{loop_id_-331687499}/next_run",
+          "OUTPath" : "output/#{loop_id_-331687499}/next_run",
+          "follow" : "loop_id_-331687499",
+          "op" : "add",
+          "line" : 0,
+          "dashedLine" : false,
+          "inType" : "string",
+          "outType" : "string",
+          "inTypePath" : "documentList/string",
+          "outTypePath" : "documentList/string"
+        }, {
+          "inputPath" : "outputDocList/job_name",
+          "outputPath" : "output/job_name",
+          "inpJsTree" : "#launching_arrow_jsTree_function",
+          "outpJsTree" : "#landing_arrow_jsTree",
+          "INPath" : "outputDocList/#{loop_id_-331687499}/job_name",
+          "OUTPath" : "output/#{loop_id_-331687499}/job_name",
+          "follow" : "loop_id_-331687499",
+          "op" : "add",
+          "line" : 0,
+          "dashedLine" : false,
+          "inType" : "string",
+          "outType" : "string",
+          "inTypePath" : "documentList/string",
+          "outTypePath" : "documentList/string"
+        }, {
+          "inputPath" : "outputDocList/created_time",
+          "outputPath" : "output/created_time",
+          "inpJsTree" : "#launching_arrow_jsTree_function",
+          "outpJsTree" : "#landing_arrow_jsTree",
+          "INPath" : "outputDocList/#{loop_id_-331687499}/created_time",
+          "OUTPath" : "output/#{loop_id_-331687499}/created_time",
+          "follow" : "loop_id_-331687499",
+          "op" : "add",
+          "line" : 0,
+          "dashedLine" : false,
+          "inType" : "string",
+          "outType" : "string",
+          "inTypePath" : "documentList/string",
+          "outTypePath" : "documentList/string"
+        } ],
+        "dropList" : [ ],
+        "createList" : [ {
+          "path" : "rows",
+          "value" : "5",
+          "typePath" : "integer"
+        }, {
+          "path" : "startIndex",
+          "value" : "0",
+          "typePath" : "integer"
+        } ],
+        "serviceType" : "sql",
+        "comment" : "Getting all scheduler records from the database",
+        "guid" : "e94d5ab7-6eba-4af5-987a-df20d109c0b8",
+        "initiateList" : [ ],
+        "snap" : "disabled",
+        "fqn" : "packages/scheduler/cronJob/adapter/services/DQL/getSchedulers"
+      },
+      "children" : [ ],
+      "type" : "invoke"
+    }, {
+      "id" : "j1_3",
+      "text" : "Foreach",
+      "li_attr" : {
+        "id" : "j1_3"
+      },
+      "a_attr" : {
+        "href" : "javascript:void(0)",
+        "id" : "j1_3_anchor"
+      },
+      "state" : {
+        "loaded" : true,
+        "opened" : true,
+        "selected" : false,
+        "disabled" : false,
+        "hidden" : false
+      },
+      "data" : {
+        "inArray" : "output",
+        "outArray" : "out",
+        "guid" : "3b239342-4b5f-4cb8-83d2-01ed2ec6434b",
+        "snap" : "enabled"
+      },
+      "children" : [ {
+        "id" : "j1_2",
+        "text" : "Invoke",
+        "li_attr" : {
+          "id" : "j1_2"
+        },
+        "a_attr" : {
+          "href" : "javascript:void(0)",
+          "id" : "j1_2_anchor"
+        },
+        "state" : {
+          "loaded" : true,
+          "opened" : false,
+          "selected" : true,
+          "disabled" : false
+        },
+        "data" : {
+          "transformers" : [ {
+            "op" : "copy",
+            "from" : "/output/id",
+            "to" : "/inputDocList/0/id",
+            "inTypePath" : "document/string",
+            "outTypePath" : "documentList/string"
+          }, {
+            "op" : "copy",
+            "from" : "/outputDocList",
+            "to" : "/output/job_history",
+            "inTypePath" : "documentList",
+            "outTypePath" : "document/documentList"
+          }, {
+            "op" : "copy",
+            "from" : "/startIndex",
+            "to" : "/substitute/startIndex",
+            "inTypePath" : "integer",
+            "outTypePath" : "document/integer",
+            "direction" : "in"
+          }, {
+            "op" : "copy",
+            "from" : "/rows",
+            "to" : "/substitute/rows",
+            "inTypePath" : "integer",
+            "outTypePath" : "document/integer",
+            "direction" : "in"
+          } ],
+          "lines" : [ {
+            "inputPath" : "output/id",
+            "outputPath" : "inputDocList/id",
+            "inpJsTree" : "#launching_arrow_jsTree",
+            "outpJsTree" : "#landing_arrow_jsTree_function",
+            "INPath" : "output/id",
+            "OUTPath" : "inputDocList/#0/id",
+            "op" : "copy",
+            "line" : 0,
+            "dashedLine" : false,
+            "inType" : "string",
+            "outType" : "string",
+            "inTypePath" : "document/string",
+            "outTypePath" : "documentList/string"
+          }, {
+            "inputPath" : "outputDocList",
+            "outputPath" : "output/job_history",
+            "inpJsTree" : "#launching_arrow_jsTree_function",
+            "outpJsTree" : "#landing_arrow_jsTree",
+            "INPath" : "outputDocList",
+            "OUTPath" : "output/job_history",
+            "op" : "copy",
+            "line" : 0,
+            "dashedLine" : false,
+            "inType" : "documentList",
+            "outType" : "documentList",
+            "inTypePath" : "documentList",
+            "outTypePath" : "document/documentList"
+          }, {
+            "inputPath" : "startIndex",
+            "outputPath" : "substitute/startIndex",
+            "inpJsTree" : "#launching_arrow_jsTree",
+            "outpJsTree" : "#landing_arrow_jsTree_function",
+            "INPath" : "startIndex",
+            "OUTPath" : "substitute/startIndex",
+            "direction" : "in",
+            "op" : "copy",
+            "line" : 0,
+            "dashedLine" : false,
+            "inType" : "integer",
+            "outType" : "integer",
+            "inTypePath" : "integer",
+            "outTypePath" : "document/integer"
+          }, {
+            "inputPath" : "rows",
+            "outputPath" : "substitute/rows",
+            "inpJsTree" : "#launching_arrow_jsTree",
+            "outpJsTree" : "#landing_arrow_jsTree_function",
+            "INPath" : "rows",
+            "OUTPath" : "substitute/rows",
+            "direction" : "in",
+            "op" : "copy",
+            "line" : 0,
+            "dashedLine" : false,
+            "inType" : "integer",
+            "outType" : "integer",
+            "inTypePath" : "integer",
+            "outTypePath" : "document/integer"
+          } ],
+          "dropList" : [ ],
+          "createList" : [ ],
+          "serviceType" : "sql",
+          "comment" : "Getting recent 5 rows form job_history database.",
+          "guid" : "0da802f7-2e91-4930-9f1d-4ea782206961",
+          "initiateList" : [ ],
+          "snap" : "enabled",
+          "fqn" : "packages/scheduler/cronJob/adapter/services/DQL/getJobHistory"
+        },
+        "children" : [ ],
+        "type" : "invoke"
+      } ],
+      "type" : "foreach"
+    } ]
+  },
+  "consumers" : "",
+  "developers" : "rnd",
+  "enableServiceDocumentValidation" : false
+}

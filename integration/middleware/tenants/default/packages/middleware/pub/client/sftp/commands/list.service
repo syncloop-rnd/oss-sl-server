@@ -1,0 +1,232 @@
+{
+  "input" : [ {
+    "id" : "j1_1",
+    "text" : "path",
+    "icon" : null,
+    "li_attr" : {
+      "id" : "j1_1"
+    },
+    "a_attr" : {
+      "href" : "#",
+      "id" : "j1_1_anchor"
+    },
+    "state" : {
+      "loaded" : true,
+      "opened" : false,
+      "selected" : false,
+      "disabled" : false
+    },
+    "data" : { },
+    "children" : [ ],
+    "type" : "string"
+  }, {
+    "id" : "j1_2",
+    "text" : "sftpClient",
+    "icon" : null,
+    "li_attr" : {
+      "id" : "j1_2"
+    },
+    "a_attr" : {
+      "href" : "#",
+      "id" : "j1_2_anchor"
+    },
+    "state" : {
+      "loaded" : true,
+      "opened" : false,
+      "selected" : false,
+      "disabled" : false
+    },
+    "data" : { },
+    "children" : [ ],
+    "type" : "javaObject"
+  } ],
+  "output" : [ {
+    "id" : "j2_3",
+    "text" : "info",
+    "icon" : null,
+    "li_attr" : {
+      "id" : "j2_3"
+    },
+    "a_attr" : {
+      "href" : "#",
+      "id" : "j2_3_anchor"
+    },
+    "state" : {
+      "loaded" : true,
+      "opened" : false,
+      "selected" : false,
+      "disabled" : false
+    },
+    "data" : { },
+    "children" : [ {
+      "id" : "j2_4",
+      "text" : "name",
+      "icon" : null,
+      "li_attr" : {
+        "id" : "j2_4"
+      },
+      "a_attr" : {
+        "href" : "#",
+        "id" : "j2_4_anchor"
+      },
+      "state" : {
+        "loaded" : true,
+        "opened" : false,
+        "selected" : false,
+        "disabled" : false
+      },
+      "data" : { },
+      "children" : [ ],
+      "type" : "string"
+    }, {
+      "id" : "j2_5",
+      "text" : "path",
+      "icon" : null,
+      "li_attr" : {
+        "id" : "j2_5"
+      },
+      "a_attr" : {
+        "href" : "#",
+        "id" : "j2_5_anchor"
+      },
+      "state" : {
+        "loaded" : true,
+        "opened" : false,
+        "selected" : false,
+        "disabled" : false
+      },
+      "data" : { },
+      "children" : [ ],
+      "type" : "string"
+    }, {
+      "id" : "j2_6",
+      "text" : "isDirectory",
+      "icon" : null,
+      "li_attr" : {
+        "id" : "j2_6"
+      },
+      "a_attr" : {
+        "href" : "#",
+        "id" : "j2_6_anchor"
+      },
+      "state" : {
+        "loaded" : true,
+        "opened" : false,
+        "selected" : false,
+        "disabled" : false
+      },
+      "data" : { },
+      "children" : [ ],
+      "type" : "boolean"
+    }, {
+      "id" : "j2_8",
+      "text" : "actedTime",
+      "icon" : null,
+      "li_attr" : {
+        "id" : "j2_8"
+      },
+      "a_attr" : {
+        "href" : "#",
+        "id" : "j2_8_anchor"
+      },
+      "state" : {
+        "loaded" : true,
+        "opened" : false,
+        "selected" : false,
+        "disabled" : false
+      },
+      "data" : { },
+      "children" : [ ],
+      "type" : "date"
+    }, {
+      "id" : "j2_9",
+      "text" : "size",
+      "icon" : null,
+      "li_attr" : {
+        "id" : "j2_9"
+      },
+      "a_attr" : {
+        "href" : "#",
+        "id" : "j2_9_anchor"
+      },
+      "state" : {
+        "loaded" : true,
+        "opened" : false,
+        "selected" : false,
+        "disabled" : false
+      },
+      "data" : { },
+      "children" : [ ],
+      "type" : "number"
+    }, {
+      "id" : "j2_10",
+      "text" : "id",
+      "icon" : null,
+      "li_attr" : {
+        "id" : "j2_10"
+      },
+      "a_attr" : {
+        "href" : "#",
+        "id" : "j2_10_anchor"
+      },
+      "state" : {
+        "loaded" : true,
+        "opened" : false,
+        "selected" : false,
+        "disabled" : false
+      },
+      "data" : { },
+      "children" : [ ],
+      "type" : "integer"
+    } ],
+    "type" : "documentList"
+  }, {
+    "id" : "j2_11",
+    "text" : "status",
+    "icon" : null,
+    "li_attr" : {
+      "id" : "j2_11"
+    },
+    "a_attr" : {
+      "href" : "#",
+      "id" : "j2_11_anchor"
+    },
+    "state" : {
+      "loaded" : true,
+      "opened" : false,
+      "selected" : false,
+      "disabled" : false
+    },
+    "data" : { },
+    "children" : [ ],
+    "type" : "string"
+  }, {
+    "id" : "j2_12",
+    "text" : "error",
+    "icon" : null,
+    "li_attr" : {
+      "id" : "j2_12"
+    },
+    "a_attr" : {
+      "href" : "#",
+      "id" : "j2_12_anchor"
+    },
+    "state" : {
+      "loaded" : true,
+      "opened" : false,
+      "selected" : false,
+      "disabled" : false
+    },
+    "data" : { },
+    "children" : [ ],
+    "type" : "string"
+  } ],
+  "package" : "cGFja2FnZSBwYWNrYWdlcy5taWRkbGV3YXJlLnB1Yi5jbGllbnQuc2Z0cC5jb21tYW5kczs=",
+  "imports" : "aW1wb3J0IGNvbS5la2EubWlkZGxld2FyZS5zZXJ2aWNlLkRhdGFQaXBlbGluZTsKaW1wb3J0IGNvbS5la2EubWlkZGxld2FyZS5zZXJ2aWNlLlNlcnZpY2VVdGlsczsKaW1wb3J0IGNvbS5la2EubWlkZGxld2FyZS50ZW1wbGF0ZS5TbmlwcGV0RXhjZXB0aW9uOwppbXBvcnQgbmV0LnNjaG1penouc3Noai5zZnRwLlJlbW90ZVJlc291cmNlSW5mbzsKaW1wb3J0IG5ldC5zY2htaXp6LnNzaGouc2Z0cC5TRlRQQ2xpZW50OwppbXBvcnQgamF2YS51dGlsLio7",
+  "main" : "ICB0cnl7CiAgICAgIFNGVFBDbGllbnQgc2Z0cD0oU0ZUUENsaWVudClkYXRhUGlwZWxpbmUuZ2V0KCJzZnRwQ2xpZW50Iik7CiAgICAgIFN0cmluZyBwYXRoPWRhdGFQaXBlbGluZS5nZXRTdHJpbmcoInBhdGgiKTsKICAgICAgTGlzdDxNYXA+IGluZm9MaXN0PW5ldyBBcnJheUxpc3Q8TWFwPigpOwogICAgICBMaXN0PFJlbW90ZVJlc291cmNlSW5mbz4gbGlzdD0gc2Z0cC5scyhwYXRoKTsKICAgICAgZm9yIChSZW1vdGVSZXNvdXJjZUluZm8gcmVtb3RlUmVzb3VyY2VJbmZvIDogbGlzdCkgewogICAgICAgIE1hcCBpbmZvPW5ldyBIYXNoTWFwKCk7CiAgICAgICAgaW5mby5wdXQoImlzRGlyZWN0b3J5IiwoQm9vbGVhbilyZW1vdGVSZXNvdXJjZUluZm8uaXNEaXJlY3RvcnkoKSk7CiAgICAgICAgaW5mby5wdXQoIm5hbWUiLHJlbW90ZVJlc291cmNlSW5mby5nZXROYW1lKCkpOwogICAgICAgIGluZm8ucHV0KCJwYXRoIixyZW1vdGVSZXNvdXJjZUluZm8uZ2V0UGF0aCgpKTsKICAgICAgICBpbmZvLnB1dCgiYWN0ZWRUaW1lIixuZXcgRGF0ZShyZW1vdGVSZXNvdXJjZUluZm8uZ2V0QXR0cmlidXRlcygpLmdldEF0aW1lKCkpKTsKICAgICAgICBpbmZvLnB1dCgic2l6ZSIscmVtb3RlUmVzb3VyY2VJbmZvLmdldEF0dHJpYnV0ZXMoKS5nZXRTaXplKCkpOwogICAgICAgIGluZm8ucHV0KCJpZCIscmVtb3RlUmVzb3VyY2VJbmZvLmdldEF0dHJpYnV0ZXMoKS5nZXRVSUQoKSk7CiAgICAgICAgaW5mb0xpc3QuYWRkKGluZm8pOwogICAgICB9CiAgICAgIGRhdGFQaXBlbGluZS5wdXQoImluZm8iLGluZm9MaXN0KTsKICB9Y2F0Y2goRXhjZXB0aW9uIGUpewogICAgZS5wcmludFN0YWNrVHJhY2UoKTsKICAJZGF0YVBpcGVsaW5lLmNsZWFyKCk7CiAgCWRhdGFQaXBlbGluZS5wdXQoInN0YXR1cyIsImZhaWxlZCIpOwogICAgZGF0YVBpcGVsaW5lLnB1dCgiZXJyb3IiLGUuZ2V0TWVzc2FnZSgpKTsKICAgIHRocm93IG5ldyBTbmlwcGV0RXhjZXB0aW9uKGRhdGFQaXBlbGluZSwiU25lcHBldCBleGNlcHRpb24iLCBuZXcgRXhjZXB0aW9uKGUpKTsKICB9",
+  "staticWorkspace" : "",
+  "version" : "v1",
+  "consumers" : "",
+  "developers" : "",
+  "lockedByUser" : "admin"
+}

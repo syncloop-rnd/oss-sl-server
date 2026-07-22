@@ -1,0 +1,107 @@
+<html style="min-height: 100% !important;">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <link rel="shortcut icon" href="/files/gui/middleware/pub/server/ui/tenant/favicon.ico" type="image/x-icon" />
+    <!-- Bootstrap CSS -->
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="/files/gui/middleware/pub/server/ui/tenant/assets/css/bootstrap.min.css">
+    <!-- Style -->
+    <link rel="stylesheet" href="/files/gui/middleware/pub/server/ui/tenant/assets/css/login.css">
+
+    <script src="https://cloud.syncloop.com/env.js"></script>
+    <script>
+      window.ENV = window.env || {};
+    </script>
+
+    <title>Welcome to Syncloop</title>
+
+    <script type="syncloop/analytics"></script>
+    <script type="text/javascript">
+      let SDK_EMBEDDED = true;
+      let warnOnExit = true ;
+      localStorage.setItem("tenant", "default");
+    </script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.3/jquery.min.js"></script>
+    <script src="/files/gui/middleware/pub/server/ui/javascript/middleware.js"></script>
+    <link rel="stylesheet" href="middleware/pub/server/ui/css/sweetalert.css">
+    <script src="/files/gui/middleware/pub/server/ui/javascript/sweetalert.min.js"></script>
+    <script src="/files/gui/middleware/pub/server/ui/javascript/sweetalert.init.js"></script>
+  </head>
+  <body>
+  <script type="syncloop/body-analytics"></script>
+  <div class="half org_bg">
+
+    <div class="-">
+
+      <div class="container login-style" style="position: inherit;">
+         <div class="login_logo"><img src="/files/gui/middleware/pub/server/ui/tenant/syncloop-blue-logo.svg" alt="Image"></div>
+		<div class="row justify-content-center reset_ps tnt_info">
+          <div class="col-md-5">
+            <h3>Welcome to syncloop</h3>
+			<p>Your tenant is being set up. This may take a few moments.</p>
+
+			  <form>
+              <div class="form-group first spr" style="display: none">
+                <input type="text" placeholder="your-workspace" class="form-control icon1" id="tenantName">
+                <i class="org_icon" aria-hidden="true"><img src="/files/gui/middleware/pub/server/ui/tenant/icon_organization.svg"></i>
+				<span class="ekaap">.syncloop.com</span>
+              </div>
+
+                <button onclick="createNewTenant(this)" type="button" id="createTenantBtn" class="btn btn-gry" style="display:none;">
+                  <span id="btn-text">Save & Continue</span>
+                  <span id="btn-spinner" style="display: none;">
+                    <svg width="40" height="20" viewBox="0 0 120 30" xmlns="http://www.w3.org/2000/svg" fill="#ffffff">
+                      <circle cx="15" cy="15" r="15">
+                        <animate attributeName="r" from="15" to="15"
+                                 begin="0s" dur="0.8s"
+                                 values="15;9;15" calcMode="linear"
+                                 repeatCount="indefinite" />
+                      </circle>
+                      <circle cx="60" cy="15" r="9">
+                        <animate attributeName="r" from="9" to="9"
+                                 begin="0.2s" dur="0.8s"
+                                 values="9;15;9" calcMode="linear"
+                                 repeatCount="indefinite" />
+                      </circle>
+                      <circle cx="105" cy="15" r="15">
+                        <animate attributeName="r" from="15" to="15"
+                                 begin="0.4s" dur="0.8s"
+                                 values="15;9;15" calcMode="linear"
+                                 repeatCount="indefinite" />
+                      </circle>
+                    </svg>
+                  </span>
+                </button>
+
+            </form>
+
+
+
+          </div>
+        </div>
+		     <div class="org_logo"><img src="/files/gui/middleware/pub/server/ui/tenant/org_logoss.png" alt="Image">
+        </div>
+
+      </div>
+    </div>
+
+
+  </div>
+  </body>
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<script type="text/javascript">
+  /*warnOnExit = true;
+  window.addEventListener("beforeunload", function (e) {
+    if (!warnOnExit) return;
+    e.preventDefault();
+    e.returnValue = "";
+  });*/
+
+  createAutoTenant();
+
+</script>
+
+</html>

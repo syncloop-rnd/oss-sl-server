@@ -1,0 +1,738 @@
+{
+  "latest" : {
+    "createdTS" : "",
+    "input" : [ {
+      "id" : "j2_1",
+      "text" : "packageName",
+      "li_attr" : {
+        "id" : "j2_1"
+      },
+      "a_attr" : {
+        "href" : "#",
+        "id" : "j2_1_anchor"
+      },
+      "state" : {
+        "loaded" : true,
+        "opened" : false,
+        "selected" : false,
+        "disabled" : false,
+        "hidden" : false
+      },
+      "data" : {
+        "guid" : "0dc13525-5d88-4456-bf3b-89f74777b71b",
+        "columnType" : "-1"
+      },
+      "children" : [ ],
+      "type" : "string"
+    } ],
+    "output" : [ {
+      "id" : "j3_1",
+      "text" : "*payload",
+      "li_attr" : {
+        "id" : "j3_1"
+      },
+      "a_attr" : {
+        "href" : "#",
+        "id" : "j3_1_anchor"
+      },
+      "state" : {
+        "loaded" : true,
+        "opened" : true,
+        "selected" : false,
+        "disabled" : false,
+        "hidden" : false
+      },
+      "data" : { },
+      "children" : [ {
+        "id" : "j3_4",
+        "text" : "result",
+        "li_attr" : {
+          "id" : "j3_4"
+        },
+        "a_attr" : {
+          "href" : "#",
+          "id" : "j3_4_anchor"
+        },
+        "state" : {
+          "loaded" : true,
+          "opened" : true,
+          "selected" : false,
+          "disabled" : false
+        },
+        "data" : { },
+        "children" : [ {
+          "id" : "j3_5",
+          "text" : "tools",
+          "li_attr" : {
+            "id" : "j3_5"
+          },
+          "a_attr" : {
+            "href" : "#",
+            "id" : "j3_5_anchor"
+          },
+          "state" : {
+            "loaded" : true,
+            "opened" : true,
+            "selected" : false,
+            "disabled" : false
+          },
+          "data" : { },
+          "children" : [ {
+            "id" : "j3_6",
+            "text" : "name",
+            "li_attr" : {
+              "id" : "j3_6"
+            },
+            "a_attr" : {
+              "href" : "#",
+              "id" : "j3_6_anchor"
+            },
+            "state" : {
+              "loaded" : true,
+              "opened" : false,
+              "selected" : false,
+              "disabled" : false
+            },
+            "data" : { },
+            "children" : [ ],
+            "type" : "string"
+          }, {
+            "id" : "j3_7",
+            "text" : "description",
+            "li_attr" : {
+              "id" : "j3_7"
+            },
+            "a_attr" : {
+              "href" : "#",
+              "id" : "j3_7_anchor"
+            },
+            "state" : {
+              "loaded" : true,
+              "opened" : false,
+              "selected" : false,
+              "disabled" : false
+            },
+            "data" : { },
+            "children" : [ ],
+            "type" : "string"
+          }, {
+            "id" : "j3_8",
+            "text" : "inputSchema",
+            "li_attr" : {
+              "id" : "j3_8"
+            },
+            "a_attr" : {
+              "href" : "#",
+              "id" : "j3_8_anchor"
+            },
+            "state" : {
+              "loaded" : true,
+              "opened" : true,
+              "selected" : false,
+              "disabled" : false
+            },
+            "data" : { },
+            "children" : [ {
+              "id" : "j3_17",
+              "text" : "required",
+              "li_attr" : {
+                "id" : "j3_17"
+              },
+              "a_attr" : {
+                "href" : "#",
+                "id" : "j3_17_anchor"
+              },
+              "state" : {
+                "loaded" : true,
+                "opened" : false,
+                "selected" : false,
+                "disabled" : false
+              },
+              "data" : { },
+              "children" : [ ],
+              "type" : "stringList"
+            } ],
+            "type" : "document"
+          } ],
+          "type" : "documentList"
+        } ],
+        "type" : "document"
+      } ],
+      "type" : "document"
+    } ],
+    "api" : [ {
+      "id" : "j1_4",
+      "text" : "Transformer",
+      "li_attr" : {
+        "id" : "j1_4"
+      },
+      "a_attr" : {
+        "href" : "javascript:void(0)",
+        "id" : "j1_4_anchor"
+      },
+      "state" : {
+        "loaded" : true,
+        "opened" : false,
+        "selected" : false,
+        "disabled" : false,
+        "hidden" : false
+      },
+      "data" : {
+        "guid" : "9dd71459-b726-483f-9bb7-beaae0f0355f",
+        "columnType" : "-1",
+        "transformers" : [ ],
+        "lines" : [ ],
+        "dropList" : [ ],
+        "createList" : [ {
+          "path" : "rootName",
+          "value" : "json",
+          "id" : "362e19d1-2a73-4359-bffe-f4825986af0a",
+          "typePath" : "string"
+        } ],
+        "initiateList" : [ ]
+      },
+      "children" : [ ],
+      "type" : "transformer"
+    }, {
+      "id" : "j1_11",
+      "text" : "Invoke",
+      "li_attr" : {
+        "id" : "j1_11"
+      },
+      "a_attr" : {
+        "href" : "javascript:void(0)",
+        "id" : "j1_11_anchor"
+      },
+      "state" : {
+        "loaded" : true,
+        "opened" : false,
+        "selected" : false,
+        "disabled" : false,
+        "hidden" : false
+      },
+      "data" : {
+        "guid" : "799e7b04-93ea-4864-a6d3-b0887a6b67af",
+        "columnType" : "-1",
+        "transformers" : [ {
+          "op" : "copy",
+          "from" : "/tools",
+          "to" : "/tools",
+          "inTypePath" : "stringList",
+          "outTypePath" : "stringList",
+          "direction" : "out"
+        }, {
+          "op" : "copy",
+          "from" : "/packageName",
+          "to" : "/packageName",
+          "inTypePath" : "string",
+          "outTypePath" : "string",
+          "direction" : "in"
+        } ],
+        "lines" : [ {
+          "inputPath" : "tools",
+          "outputPath" : "tools",
+          "inpJsTree" : "#launching_arrow_jsTree_function",
+          "outpJsTree" : "#landing_arrow_jsTree",
+          "INPath" : "tools",
+          "OUTPath" : "tools",
+          "direction" : "out",
+          "op" : "copy",
+          "line" : 0,
+          "dashedLine" : false,
+          "inType" : "stringList",
+          "outType" : "stringList",
+          "inTypePath" : "stringList",
+          "outTypePath" : "stringList"
+        }, {
+          "inputPath" : "packageName",
+          "outputPath" : "packageName",
+          "inpJsTree" : "#launching_arrow_jsTree",
+          "outpJsTree" : "#landing_arrow_jsTree_function",
+          "INPath" : "packageName",
+          "OUTPath" : "packageName",
+          "direction" : "in",
+          "op" : "copy",
+          "line" : 0,
+          "dashedLine" : false,
+          "inType" : "string",
+          "outType" : "string",
+          "inTypePath" : "string",
+          "outTypePath" : "string"
+        } ],
+        "dropList" : [ ],
+        "createList" : [ ],
+        "initiateList" : [ ],
+        "fqn" : "packages/middleware/pub/server/mcp/java/getToolFQNs",
+        "serviceType" : "service",
+        "snap" : "enabled"
+      },
+      "children" : [ ],
+      "type" : "invoke"
+    }, {
+      "id" : "j1_12",
+      "text" : "Switch",
+      "li_attr" : {
+        "id" : "j1_12"
+      },
+      "a_attr" : {
+        "href" : "javascript:void(0)",
+        "id" : "j1_12_anchor"
+      },
+      "state" : {
+        "loaded" : true,
+        "opened" : true,
+        "selected" : false,
+        "disabled" : false,
+        "hidden" : false
+      },
+      "data" : {
+        "guid" : "84a8a3cb-ceb3-4532-93d0-178d657c695f",
+        "columnType" : "-1",
+        "switch" : "tools",
+        "snap" : "enabled"
+      },
+      "children" : [ {
+        "id" : "j1_13",
+        "text" : "CASE",
+        "li_attr" : {
+          "id" : "j1_13"
+        },
+        "a_attr" : {
+          "href" : "#",
+          "id" : "j1_13_anchor"
+        },
+        "state" : {
+          "loaded" : true,
+          "opened" : false,
+          "selected" : false,
+          "disabled" : false
+        },
+        "data" : {
+          "guid" : "e8eb3c53-ec94-4163-b982-974b270878c4",
+          "columnType" : "-1",
+          "case" : "#null"
+        },
+        "children" : [ ],
+        "type" : "group"
+      }, {
+        "id" : "j1_14",
+        "text" : "CASE",
+        "li_attr" : {
+          "id" : "j1_14"
+        },
+        "a_attr" : {
+          "href" : "#",
+          "id" : "j1_14_anchor"
+        },
+        "state" : {
+          "loaded" : true,
+          "opened" : true,
+          "selected" : false,
+          "disabled" : false
+        },
+        "data" : {
+          "guid" : "95e429c6-c5bb-4671-9526-52db92f6af21",
+          "columnType" : "-1",
+          "case" : "#default"
+        },
+        "children" : [ {
+          "id" : "j1_7",
+          "text" : "Invoke",
+          "li_attr" : {
+            "id" : "j1_7"
+          },
+          "a_attr" : {
+            "href" : "javascript:void(0)",
+            "id" : "j1_7_anchor"
+          },
+          "state" : {
+            "loaded" : true,
+            "opened" : false,
+            "selected" : false,
+            "disabled" : false,
+            "hidden" : false
+          },
+          "data" : {
+            "guid" : "f96a1f10-c1c2-41b8-9b39-acabf64eb6af",
+            "columnType" : "-1",
+            "transformers" : [ {
+              "op" : "copy",
+              "from" : "/openAPI",
+              "to" : "/openAPI",
+              "inTypePath" : "string",
+              "outTypePath" : "string",
+              "direction" : "out"
+            }, {
+              "op" : "copy",
+              "from" : "/tools",
+              "to" : "/*payload/fqns",
+              "inTypePath" : "stringList",
+              "outTypePath" : "document/stringList",
+              "direction" : "in"
+            } ],
+            "lines" : [ {
+              "inputPath" : "openAPI",
+              "outputPath" : "openAPI",
+              "inpJsTree" : "#launching_arrow_jsTree_function",
+              "outpJsTree" : "#landing_arrow_jsTree",
+              "INPath" : "openAPI",
+              "OUTPath" : "openAPI",
+              "direction" : "out",
+              "op" : "copy",
+              "line" : 0,
+              "dashedLine" : false,
+              "inType" : "string",
+              "outType" : "string",
+              "inTypePath" : "string",
+              "outTypePath" : "string"
+            }, {
+              "inputPath" : "tools",
+              "outputPath" : "*payload/fqns",
+              "inpJsTree" : "#launching_arrow_jsTree",
+              "outpJsTree" : "#landing_arrow_jsTree_function",
+              "INPath" : "tools",
+              "OUTPath" : "*payload/fqns",
+              "direction" : "in",
+              "op" : "copy",
+              "line" : 0,
+              "dashedLine" : false,
+              "inType" : "stringList",
+              "outType" : "stringList",
+              "inTypePath" : "stringList",
+              "outTypePath" : "document/stringList"
+            } ],
+            "dropList" : [ ],
+            "createList" : [ ],
+            "initiateList" : [ ],
+            "fqn" : "packages/middleware/pub/specs/swagger/v3/ExportMultipleSwagger",
+            "serviceType" : "api"
+          },
+          "children" : [ ],
+          "type" : "invoke"
+        }, {
+          "id" : "j1_8",
+          "text" : "Invoke",
+          "li_attr" : {
+            "id" : "j1_8"
+          },
+          "a_attr" : {
+            "href" : "javascript:void(0)",
+            "id" : "j1_8_anchor"
+          },
+          "state" : {
+            "loaded" : true,
+            "opened" : false,
+            "selected" : false,
+            "disabled" : false,
+            "hidden" : false
+          },
+          "data" : {
+            "guid" : "2ce8b36d-4cb1-4af3-9067-1e8b401eca8e",
+            "columnType" : "-1",
+            "transformers" : [ {
+              "op" : "copy",
+              "from" : "/openAPI",
+              "to" : "/jsonString",
+              "inTypePath" : "string",
+              "outTypePath" : "string",
+              "direction" : "in"
+            }, {
+              "op" : "copy",
+              "from" : "/rootName",
+              "to" : "/rootName",
+              "inTypePath" : "string",
+              "outTypePath" : "string",
+              "direction" : "in"
+            }, {
+              "op" : "copy",
+              "from" : "/output/json",
+              "to" : "/OAS",
+              "inTypePath" : "document/document",
+              "outTypePath" : "document",
+              "direction" : "out"
+            } ],
+            "lines" : [ {
+              "inputPath" : "openAPI",
+              "outputPath" : "jsonString",
+              "inpJsTree" : "#launching_arrow_jsTree",
+              "outpJsTree" : "#landing_arrow_jsTree_function",
+              "INPath" : "openAPI",
+              "OUTPath" : "jsonString",
+              "direction" : "in",
+              "op" : "copy",
+              "line" : 0,
+              "dashedLine" : false,
+              "inType" : "string",
+              "outType" : "string",
+              "inTypePath" : "string",
+              "outTypePath" : "string"
+            }, {
+              "inputPath" : "rootName",
+              "outputPath" : "rootName",
+              "inpJsTree" : "#launching_arrow_jsTree",
+              "outpJsTree" : "#landing_arrow_jsTree_function",
+              "INPath" : "rootName",
+              "OUTPath" : "rootName",
+              "direction" : "in",
+              "op" : "copy",
+              "line" : 0,
+              "dashedLine" : false,
+              "inType" : "string",
+              "outType" : "string",
+              "inTypePath" : "string",
+              "outTypePath" : "string"
+            }, {
+              "inputPath" : "output/json",
+              "outputPath" : "OAS",
+              "inpJsTree" : "#launching_arrow_jsTree_function",
+              "outpJsTree" : "#landing_arrow_jsTree",
+              "INPath" : "output/json",
+              "OUTPath" : "OAS",
+              "direction" : "out",
+              "op" : "copy",
+              "line" : 0,
+              "dashedLine" : false,
+              "inType" : "document",
+              "outType" : "document",
+              "inTypePath" : "document/document",
+              "outTypePath" : "document"
+            } ],
+            "dropList" : [ ],
+            "createList" : [ ],
+            "initiateList" : [ ],
+            "fqn" : "packages/middleware/pub/json/fromJson",
+            "serviceType" : "service"
+          },
+          "children" : [ ],
+          "type" : "invoke"
+        }, {
+          "id" : "j1_10",
+          "text" : "Invoke",
+          "li_attr" : {
+            "id" : "j1_10"
+          },
+          "a_attr" : {
+            "href" : "javascript:void(0)",
+            "id" : "j1_10_anchor"
+          },
+          "state" : {
+            "loaded" : true,
+            "opened" : false,
+            "selected" : false,
+            "disabled" : false,
+            "hidden" : false
+          },
+          "data" : {
+            "guid" : "900c21c4-5310-46f8-8085-7e45c8ca319b",
+            "columnType" : "-1",
+            "transformers" : [ {
+              "op" : "copy",
+              "from" : "/OAS/paths",
+              "to" : "/paths",
+              "inTypePath" : "document/document",
+              "outTypePath" : "document",
+              "direction" : "in"
+            }, {
+              "op" : "copy",
+              "from" : "/contents",
+              "to" : "/contents",
+              "inTypePath" : "documentList",
+              "outTypePath" : "documentList",
+              "direction" : "out"
+            }, {
+              "op" : "copy",
+              "from" : "/mcp_tools_cache",
+              "to" : "/mcp_tools_cache",
+              "inTypePath" : "javaObject",
+              "outTypePath" : "javaObject",
+              "direction" : "out"
+            } ],
+            "lines" : [ {
+              "inputPath" : "OAS/paths",
+              "outputPath" : "paths",
+              "inpJsTree" : "#launching_arrow_jsTree",
+              "outpJsTree" : "#landing_arrow_jsTree_function",
+              "INPath" : "OAS/paths",
+              "OUTPath" : "paths",
+              "direction" : "in",
+              "op" : "copy",
+              "line" : 0,
+              "dashedLine" : false,
+              "inType" : "document",
+              "outType" : "document",
+              "inTypePath" : "document/document",
+              "outTypePath" : "document"
+            }, {
+              "inputPath" : "contents",
+              "outputPath" : "contents",
+              "inpJsTree" : "#launching_arrow_jsTree_function",
+              "outpJsTree" : "#landing_arrow_jsTree",
+              "INPath" : "contents",
+              "OUTPath" : "contents",
+              "direction" : "out",
+              "op" : "copy",
+              "line" : 0,
+              "dashedLine" : false,
+              "inType" : "documentList",
+              "outType" : "documentList",
+              "inTypePath" : "documentList",
+              "outTypePath" : "documentList"
+            }, {
+              "inputPath" : "mcp_tools_cache",
+              "outputPath" : "mcp_tools_cache",
+              "inpJsTree" : "#launching_arrow_jsTree_function",
+              "outpJsTree" : "#landing_arrow_jsTree",
+              "INPath" : "mcp_tools_cache",
+              "OUTPath" : "mcp_tools_cache",
+              "direction" : "out",
+              "op" : "copy",
+              "line" : 0,
+              "dashedLine" : false,
+              "inType" : "javaObject",
+              "outType" : "javaObject",
+              "inTypePath" : "javaObject",
+              "outTypePath" : "javaObject"
+            } ],
+            "dropList" : [ ],
+            "createList" : [ ],
+            "initiateList" : [ ],
+            "fqn" : "packages/middleware/pub/server/mcp/java/fixResourcePaths",
+            "serviceType" : "service",
+            "status" : "enabled"
+          },
+          "children" : [ ],
+          "type" : "invoke"
+        }, {
+          "id" : "j1_9",
+          "text" : "Transformer",
+          "li_attr" : {
+            "id" : "j1_9"
+          },
+          "a_attr" : {
+            "href" : "javascript:void(0)",
+            "id" : "j1_9_anchor"
+          },
+          "state" : {
+            "loaded" : true,
+            "opened" : false,
+            "selected" : false,
+            "disabled" : false,
+            "hidden" : false
+          },
+          "data" : {
+            "guid" : "09d3924e-0be5-4cf3-94c0-85a012973ba1",
+            "columnType" : "-1",
+            "transformers" : [ {
+              "op" : "loop",
+              "from" : "/contents/#{loop_id_-567321830}",
+              "to" : "/*payload/result/tools/#{loop_id_-567321830}",
+              "loop_Id" : "loop_id_-567321830",
+              "inTypePath" : "documentList",
+              "outTypePath" : "document/document/documentList"
+            }, {
+              "op" : "add",
+              "from" : "/contents/#{loop_id_-567321830}/schema",
+              "to" : "/*payload/result/tools/#{loop_id_-567321830}/inputSchema",
+              "follow" : "loop_id_-567321830",
+              "inTypePath" : "documentList/document",
+              "outTypePath" : "document/document/documentList/document"
+            }, {
+              "op" : "add",
+              "from" : "/contents/#{loop_id_-567321830}/operationId",
+              "to" : "/*payload/result/tools/#{loop_id_-567321830}/name",
+              "follow" : "loop_id_-567321830",
+              "inTypePath" : "documentList/string",
+              "outTypePath" : "document/document/documentList/string"
+            }, {
+              "op" : "add",
+              "from" : "/contents/#{loop_id_-567321830}/description",
+              "to" : "/*payload/result/tools/#{loop_id_-567321830}/description",
+              "follow" : "loop_id_-567321830",
+              "inTypePath" : "documentList/string",
+              "outTypePath" : "document/document/documentList/string"
+            } ],
+            "lines" : [ {
+              "loop_Id" : "loop_id_-567321830",
+              "inputPath" : "contents",
+              "outputPath" : "*payload/result/tools",
+              "inpJsTree" : "#launching_arrow_jsTree",
+              "outpJsTree" : "#landing_arrow_jsTree",
+              "INPath" : "contents/#{loop_id_-567321830}",
+              "OUTPath" : "*payload/result/tools/#{loop_id_-567321830}",
+              "line" : 0,
+              "dashedLine" : true,
+              "op" : "loop",
+              "inType" : "documentList",
+              "outType" : "documentList",
+              "inTypePath" : "documentList",
+              "outTypePath" : "document/document/documentList"
+            }, {
+              "inputPath" : "contents/schema",
+              "outputPath" : "*payload/result/tools/inputSchema",
+              "inpJsTree" : "#launching_arrow_jsTree",
+              "outpJsTree" : "#landing_arrow_jsTree",
+              "INPath" : "contents/#{loop_id_-567321830}/schema",
+              "OUTPath" : "*payload/result/tools/#{loop_id_-567321830}/inputSchema",
+              "follow" : "loop_id_-567321830",
+              "op" : "add",
+              "line" : 0,
+              "dashedLine" : false,
+              "inType" : "document",
+              "outType" : "document",
+              "inTypePath" : "documentList/document",
+              "outTypePath" : "document/document/documentList/document"
+            }, {
+              "inputPath" : "contents/operationId",
+              "outputPath" : "*payload/result/tools/name",
+              "inpJsTree" : "#launching_arrow_jsTree",
+              "outpJsTree" : "#landing_arrow_jsTree",
+              "INPath" : "contents/#{loop_id_-567321830}/operationId",
+              "OUTPath" : "*payload/result/tools/#{loop_id_-567321830}/name",
+              "follow" : "loop_id_-567321830",
+              "op" : "add",
+              "line" : 0,
+              "dashedLine" : false,
+              "inType" : "string",
+              "outType" : "string",
+              "inTypePath" : "documentList/string",
+              "outTypePath" : "document/document/documentList/string"
+            }, {
+              "inputPath" : "contents/description",
+              "outputPath" : "*payload/result/tools/description",
+              "inpJsTree" : "#launching_arrow_jsTree",
+              "outpJsTree" : "#landing_arrow_jsTree",
+              "INPath" : "contents/#{loop_id_-567321830}/description",
+              "OUTPath" : "*payload/result/tools/#{loop_id_-567321830}/description",
+              "follow" : "loop_id_-567321830",
+              "op" : "add",
+              "line" : 0,
+              "dashedLine" : false,
+              "inType" : "string",
+              "outType" : "string",
+              "inTypePath" : "documentList/string",
+              "outTypePath" : "document/document/documentList/string"
+            } ],
+            "dropList" : [ ],
+            "createList" : [ ],
+            "initiateList" : [ ],
+            "status" : "enabled"
+          },
+          "children" : [ ],
+          "type" : "transformer"
+        } ],
+        "type" : "group"
+      } ],
+      "type" : "switch"
+    } ],
+    "api_info" : {
+      "title" : "",
+      "description" : "This API will be used to list out all the available tools"
+    },
+    "lockedByUser" : "admin"
+  },
+  "consumers" : "administrators",
+  "developers" : "administrators",
+  "enableServiceDocumentValidation" : false,
+  "created_on" : "1776148667197",
+  "modified_on" : 1776148667197
+}

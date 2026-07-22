@@ -1,0 +1,252 @@
+{
+  "input" : [ {
+    "id" : "j1_1",
+    "text" : "host",
+    "icon" : null,
+    "li_attr" : {
+      "id" : "j1_1"
+    },
+    "a_attr" : {
+      "href" : "#",
+      "id" : "j1_1_anchor"
+    },
+    "state" : {
+      "loaded" : true,
+      "opened" : false,
+      "selected" : false,
+      "disabled" : false
+    },
+    "data" : { },
+    "children" : [ ],
+    "type" : "string"
+  }, {
+    "id" : "j1_2",
+    "text" : "username",
+    "icon" : null,
+    "li_attr" : {
+      "id" : "j1_2"
+    },
+    "a_attr" : {
+      "href" : "#",
+      "id" : "j1_2_anchor"
+    },
+    "state" : {
+      "loaded" : true,
+      "opened" : false,
+      "selected" : false,
+      "disabled" : false
+    },
+    "data" : { },
+    "children" : [ ],
+    "type" : "string"
+  }, {
+    "id" : "j1_3",
+    "text" : "password",
+    "icon" : null,
+    "li_attr" : {
+      "id" : "j1_3"
+    },
+    "a_attr" : {
+      "href" : "#",
+      "id" : "j1_3_anchor"
+    },
+    "state" : {
+      "loaded" : true,
+      "opened" : false,
+      "selected" : false,
+      "disabled" : false
+    },
+    "data" : { },
+    "children" : [ ],
+    "type" : "string"
+  }, {
+    "id" : "j1_4",
+    "text" : "pemFileLocation",
+    "icon" : null,
+    "li_attr" : {
+      "id" : "j1_4"
+    },
+    "a_attr" : {
+      "href" : "#",
+      "id" : "j1_4_anchor"
+    },
+    "state" : {
+      "loaded" : true,
+      "opened" : false,
+      "selected" : false,
+      "disabled" : false
+    },
+    "data" : { },
+    "children" : [ ],
+    "type" : "string"
+  }, {
+    "id" : "j1_5",
+    "text" : "port",
+    "icon" : null,
+    "li_attr" : {
+      "id" : "j1_5"
+    },
+    "a_attr" : {
+      "href" : "#",
+      "id" : "j1_5_anchor"
+    },
+    "state" : {
+      "loaded" : true,
+      "opened" : false,
+      "selected" : false,
+      "disabled" : false
+    },
+    "data" : { },
+    "children" : [ ],
+    "type" : "integer"
+  } ],
+  "output" : [ {
+    "id" : "j2_2",
+    "text" : "sshObjects",
+    "icon" : null,
+    "li_attr" : {
+      "id" : "j2_2"
+    },
+    "a_attr" : {
+      "href" : "#",
+      "id" : "j2_2_anchor"
+    },
+    "state" : {
+      "loaded" : true,
+      "opened" : true,
+      "selected" : false,
+      "disabled" : false
+    },
+    "data" : { },
+    "children" : [ {
+      "id" : "j2_3",
+      "text" : "sftpClient",
+      "icon" : null,
+      "li_attr" : {
+        "id" : "j2_3"
+      },
+      "a_attr" : {
+        "href" : "#",
+        "id" : "j2_3_anchor"
+      },
+      "state" : {
+        "loaded" : true,
+        "opened" : false,
+        "selected" : false,
+        "disabled" : false
+      },
+      "data" : { },
+      "children" : [ ],
+      "type" : "javaObject"
+    }, {
+      "id" : "j2_4",
+      "text" : "sshClient",
+      "icon" : null,
+      "li_attr" : {
+        "id" : "j2_4"
+      },
+      "a_attr" : {
+        "href" : "#",
+        "id" : "j2_4_anchor"
+      },
+      "state" : {
+        "loaded" : true,
+        "opened" : false,
+        "selected" : false,
+        "disabled" : false
+      },
+      "data" : { },
+      "children" : [ ],
+      "type" : "javaObject"
+    }, {
+      "id" : "j2_5",
+      "text" : "session",
+      "icon" : null,
+      "li_attr" : {
+        "id" : "j2_5"
+      },
+      "a_attr" : {
+        "href" : "#",
+        "id" : "j2_5_anchor"
+      },
+      "state" : {
+        "loaded" : true,
+        "opened" : false,
+        "selected" : false,
+        "disabled" : false
+      },
+      "data" : { },
+      "children" : [ ],
+      "type" : "javaObject"
+    } ],
+    "type" : "document"
+  }, {
+    "id" : "j2_6",
+    "text" : "status",
+    "icon" : null,
+    "li_attr" : {
+      "id" : "j2_6"
+    },
+    "a_attr" : {
+      "href" : "#",
+      "id" : "j2_6_anchor"
+    },
+    "state" : {
+      "loaded" : true,
+      "opened" : false,
+      "selected" : false,
+      "disabled" : false
+    },
+    "data" : { },
+    "children" : [ ],
+    "type" : "string"
+  }, {
+    "id" : "j2_7",
+    "text" : "error",
+    "icon" : null,
+    "li_attr" : {
+      "id" : "j2_7"
+    },
+    "a_attr" : {
+      "href" : "#",
+      "id" : "j2_7_anchor"
+    },
+    "state" : {
+      "loaded" : true,
+      "opened" : false,
+      "selected" : false,
+      "disabled" : false
+    },
+    "data" : { },
+    "children" : [ ],
+    "type" : "string"
+  }, {
+    "id" : "j2_8",
+    "text" : "pemFilePath",
+    "icon" : null,
+    "li_attr" : {
+      "id" : "j2_8"
+    },
+    "a_attr" : {
+      "href" : "#",
+      "id" : "j2_8_anchor"
+    },
+    "state" : {
+      "loaded" : true,
+      "opened" : false,
+      "selected" : false,
+      "disabled" : false
+    },
+    "data" : { },
+    "children" : [ ],
+    "type" : "string"
+  } ],
+  "package" : "cGFja2FnZSBwYWNrYWdlcy5taWRkbGV3YXJlLnB1Yi5jbGllbnQuc2Z0cC5jb21tYW5kczs=",
+  "imports" : "aW1wb3J0IGNvbS5la2EubWlkZGxld2FyZS5zZXJ2aWNlLkRhdGFQaXBlbGluZTsKaW1wb3J0IGNvbS5la2EubWlkZGxld2FyZS5zZXJ2aWNlLlNlcnZpY2VVdGlsczsKaW1wb3J0IGNvbS5la2EubWlkZGxld2FyZS50ZW1wbGF0ZS5TbmlwcGV0RXhjZXB0aW9uOwppbXBvcnQgamF2YS5pby5GaWxlOwppbXBvcnQgamF2YS51dGlsLio7CgppbXBvcnQgbmV0LnNjaG1penouc3Noai5TU0hDbGllbnQ7CmltcG9ydCBuZXQuc2NobWl6ei5zc2hqLnNmdHAuUmVtb3RlUmVzb3VyY2VJbmZvOwppbXBvcnQgbmV0LnNjaG1penouc3Noai5zZnRwLlNGVFBDbGllbnQ7CmltcG9ydCBuZXQuc2NobWl6ei5zc2hqLnRyYW5zcG9ydC52ZXJpZmljYXRpb24uUHJvbWlzY3VvdXNWZXJpZmllcjsKaW1wb3J0IG5ldC5zY2htaXp6LnNzaGoudXNlcmF1dGgua2V5cHJvdmlkZXIuUEtDUzhLZXlGaWxlOwppbXBvcnQgbmV0LnNjaG1penouc3Noai5jb25uZWN0aW9uLmNoYW5uZWwuZGlyZWN0LlNlc3Npb247CmltcG9ydCBjb20uZWthLm1pZGRsZXdhcmUuc2VydmljZS5Qcm9wZXJ0eU1hbmFnZXI7",
+  "main" : "U1NIQ2xpZW50IGNsaWVudCA9IG51bGw7ClNlc3Npb24gc2Vzc2lvbiA9IG51bGw7ClNGVFBDbGllbnQgc2Z0cCA9IG51bGw7CnRyeSB7CgkJCVN0cmluZyByZW1vdGVIb3N0ID0gZGF0YVBpcGVsaW5lLmdldFN0cmluZygiaG9zdCIpOwogIAkJCUludGVnZXIgcG9ydD1kYXRhUGlwZWxpbmUuZ2V0SW50ZWdlcigicG9ydCIpOwoJCQlTdHJpbmcgdXNlcm5hbWUgPSBkYXRhUGlwZWxpbmUuZ2V0U3RyaW5nKCJ1c2VybmFtZSIpOwoJCQlTdHJpbmcgcGFzc3dvcmQgPSBkYXRhUGlwZWxpbmUuZ2V0U3RyaW5nKCJwYXNzd29yZCIpOwogIAkJCVN0cmluZyBwZW1GaWxlPWRhdGFQaXBlbGluZS5nZXRTdHJpbmcoInBlbUZpbGVMb2NhdGlvbiIpOwogIAkJCVN0cmluZyBsb2NhdGlvbiA9IFByb3BlcnR5TWFuYWdlci5nZXRQYWNrYWdlUGF0aChkYXRhUGlwZWxpbmUucnAuZ2V0VGVuYW50KCkpOwogIAkJCWlmKHBhc3N3b3JkPT1udWxsICYmIHBlbUZpbGU9PW51bGwpCiAgICAgICAgICAgICAgdGhyb3cgbmV3IEV4Y2VwdGlvbigiUGFzc3dvcmQgb3IgcGVtIGZpbGUgaXMgcmVxdWlyZWQuIik7CiAgICAgICAgICAgIGlmKHBlbUZpbGUhPW51bGwpCiAgICAgICAgICAgICAgcGVtRmlsZT1sb2NhdGlvbitwZW1GaWxlOwoJCQljbGllbnQ9bmV3IFNTSENsaWVudCgpOwoJCQljbGllbnQuYWRkSG9zdEtleVZlcmlmaWVyKG5ldyBQcm9taXNjdW91c1ZlcmlmaWVyKCkpOwoJCQlQS0NTOEtleUZpbGUga2V5RmlsZSA9IG5ldyBQS0NTOEtleUZpbGUoKTsKCQkJLy9rZXlGaWxlLgoJCQlrZXlGaWxlLmluaXQobmV3IEZpbGUocGVtRmlsZSkpOwogIAkJCWlmKHBvcnQ9PW51bGwpCgkJCQljbGllbnQuY29ubmVjdChyZW1vdGVIb3N0KTsKICAJCQllbHNlCiAgICAgICAgICAgICAgICBjbGllbnQuY29ubmVjdChyZW1vdGVIb3N0LHBvcnQpOwogICAgICAgICAgICBpZihwZW1GaWxlIT1udWxsKQoJCQkJY2xpZW50LmF1dGhQdWJsaWNrZXkodXNlcm5hbWUsIGtleUZpbGUpOwogIAkJCWVsc2UKICAJCQkJY2xpZW50LmF1dGhQYXNzd29yZCh1c2VybmFtZSwgcGFzc3dvcmQpOwoJCQlzZnRwPWNsaWVudC5uZXdTRlRQQ2xpZW50KCk7CiAgCQkJc2Vzc2lvbiA9IGNsaWVudC5zdGFydFNlc3Npb24oKTsKICAJCQlNYXAgY2xpZW50TWFwPW5ldyBIYXNoTWFwKCk7CiAgCQkJY2xpZW50TWFwLnB1dCgic2Z0cENsaWVudCIsc2Z0cCk7CiAgCQkJY2xpZW50TWFwLnB1dCgic3NoQ2xpZW50IixjbGllbnQpOwogIAkJCWNsaWVudE1hcC5wdXQoInNlc3Npb24iLHNlc3Npb24pOwogIAkJCWRhdGFQaXBlbGluZS5wdXQoInNzaE9iamVjdHMiLGNsaWVudE1hcCk7CiAgCQkJZGF0YVBpcGVsaW5lLnB1dCgic3RhdHVzIiwic3VjY2VzcyIpOwoJCX0gY2F0Y2ggKEV4Y2VwdGlvbiBlKSB7CiAgCQkJdHJ5ewogICAgICAgICAgICAgIGlmKHNmdHAhPW51bGwpCiAgICAgICAgICAgICAgICBzZnRwLmNsb3NlKCk7CiAgICAgICAgICAgICAgaWYoc2Vzc2lvbiE9bnVsbCkKICAgICAgICAgICAgICAgIHNlc3Npb24uY2xvc2UoKTsKICAgICAgICAgICAgICBpZihjbGllbnQhPW51bGwpCiAgCQkJCWNsaWVudC5jbG9zZSgpOwogICAgICAgICAgICB9Y2F0Y2goRXhjZXB0aW9uIGV4KXt9CgkJCWRhdGFQaXBlbGluZS5jbGVhcigpOwogIAkJCWRhdGFQaXBlbGluZS5wdXQoInN0YXR1cyIsImZhaWxlZCIpOwogICAgCQlkYXRhUGlwZWxpbmUucHV0KCJlcnJvciIsZS5nZXRNZXNzYWdlKCkpOwogICAgCQl0aHJvdyBuZXcgU25pcHBldEV4Y2VwdGlvbihkYXRhUGlwZWxpbmUsIlNuaXBwZXQgZXhjZXB0aW9uIiwgbmV3IEV4Y2VwdGlvbihlKSk7CgkJfQ==",
+  "staticWorkspace" : "",
+  "version" : "v1",
+  "consumers" : "",
+  "developers" : "",
+  "lockedByUser" : "admin"
+}

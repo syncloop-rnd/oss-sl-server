@@ -1,0 +1,252 @@
+{
+  "input" : [ {
+    "id" : "j1_1",
+    "text" : "key",
+    "li_attr" : {
+      "id" : "j1_1"
+    },
+    "a_attr" : {
+      "href" : "#",
+      "id" : "j1_1_anchor"
+    },
+    "state" : {
+      "loaded" : true,
+      "opened" : false,
+      "selected" : false,
+      "disabled" : false,
+      "hidden" : false
+    },
+    "data" : { },
+    "children" : [ ],
+    "type" : "string"
+  }, {
+    "id" : "j1_2",
+    "text" : "textValue",
+    "li_attr" : {
+      "id" : "j1_2"
+    },
+    "a_attr" : {
+      "href" : "#",
+      "id" : "j1_2_anchor"
+    },
+    "state" : {
+      "loaded" : true,
+      "opened" : false,
+      "selected" : false,
+      "disabled" : false,
+      "hidden" : false
+    },
+    "data" : { },
+    "children" : [ ],
+    "type" : "string"
+  }, {
+    "id" : "j1_3",
+    "text" : "map",
+    "li_attr" : {
+      "id" : "j1_3"
+    },
+    "a_attr" : {
+      "href" : "#",
+      "id" : "j1_3_anchor"
+    },
+    "state" : {
+      "loaded" : true,
+      "opened" : false,
+      "selected" : false,
+      "disabled" : false,
+      "hidden" : false
+    },
+    "data" : { },
+    "children" : [ ],
+    "type" : "javaObject"
+  }, {
+    "id" : "j1_4",
+    "text" : "integerValue",
+    "li_attr" : {
+      "id" : "j1_4"
+    },
+    "a_attr" : {
+      "href" : "#",
+      "id" : "j1_4_anchor"
+    },
+    "state" : {
+      "loaded" : true,
+      "opened" : false,
+      "selected" : false,
+      "disabled" : false,
+      "hidden" : false
+    },
+    "data" : { },
+    "children" : [ ],
+    "type" : "integer"
+  }, {
+    "id" : "j1_5",
+    "text" : "numberValue",
+    "li_attr" : {
+      "id" : "j1_5"
+    },
+    "a_attr" : {
+      "href" : "#",
+      "id" : "j1_5_anchor"
+    },
+    "state" : {
+      "loaded" : true,
+      "opened" : false,
+      "selected" : false,
+      "disabled" : false,
+      "hidden" : false
+    },
+    "data" : { },
+    "children" : [ ],
+    "type" : "number"
+  }, {
+    "id" : "j1_6",
+    "text" : "docValue",
+    "li_attr" : {
+      "id" : "j1_6"
+    },
+    "a_attr" : {
+      "href" : "#",
+      "id" : "j1_6_anchor"
+    },
+    "state" : {
+      "loaded" : true,
+      "opened" : false,
+      "selected" : false,
+      "disabled" : false,
+      "hidden" : false
+    },
+    "data" : { },
+    "children" : [ ],
+    "type" : "document"
+  }, {
+    "id" : "j1_7",
+    "text" : "dateValue",
+    "li_attr" : {
+      "id" : "j1_7"
+    },
+    "a_attr" : {
+      "href" : "#",
+      "id" : "j1_7_anchor"
+    },
+    "state" : {
+      "loaded" : true,
+      "opened" : false,
+      "selected" : false,
+      "disabled" : false,
+      "hidden" : false
+    },
+    "data" : { },
+    "children" : [ ],
+    "type" : "date"
+  }, {
+    "id" : "j1_8",
+    "text" : "booleanValue",
+    "li_attr" : {
+      "id" : "j1_8"
+    },
+    "a_attr" : {
+      "href" : "#",
+      "id" : "j1_8_anchor"
+    },
+    "state" : {
+      "loaded" : true,
+      "opened" : false,
+      "selected" : false,
+      "disabled" : false,
+      "hidden" : false
+    },
+    "data" : { },
+    "children" : [ ],
+    "type" : "boolean"
+  }, {
+    "id" : "j1_9",
+    "text" : "byteArrayValue",
+    "li_attr" : {
+      "id" : "j1_9"
+    },
+    "a_attr" : {
+      "href" : "#",
+      "id" : "j1_9_anchor"
+    },
+    "state" : {
+      "loaded" : true,
+      "opened" : false,
+      "selected" : false,
+      "disabled" : false,
+      "hidden" : false
+    },
+    "data" : { },
+    "children" : [ ],
+    "type" : "byteList"
+  }, {
+    "id" : "j1_10",
+    "text" : "objectArrayValue",
+    "li_attr" : {
+      "id" : "j1_10"
+    },
+    "a_attr" : {
+      "href" : "#",
+      "id" : "j1_10_anchor"
+    },
+    "state" : {
+      "loaded" : true,
+      "opened" : false,
+      "selected" : false,
+      "disabled" : false,
+      "hidden" : false
+    },
+    "data" : { },
+    "children" : [ ],
+    "type" : "javaObject"
+  }, {
+    "id" : "j1_11",
+    "text" : "docArrayValue",
+    "li_attr" : {
+      "id" : "j1_11"
+    },
+    "a_attr" : {
+      "href" : "#",
+      "id" : "j1_11_anchor"
+    },
+    "state" : {
+      "loaded" : true,
+      "opened" : false,
+      "selected" : true,
+      "disabled" : false,
+      "hidden" : false
+    },
+    "data" : { },
+    "children" : [ ],
+    "type" : "documentList"
+  } ],
+  "output" : [ {
+    "id" : "j2_1",
+    "text" : "map",
+    "li_attr" : {
+      "id" : "j2_1"
+    },
+    "a_attr" : {
+      "href" : "#",
+      "id" : "j2_1_anchor"
+    },
+    "state" : {
+      "loaded" : true,
+      "opened" : false,
+      "selected" : false,
+      "disabled" : false,
+      "hidden" : false
+    },
+    "data" : { },
+    "children" : [ ],
+    "type" : "javaObject"
+  } ],
+  "package" : "cGFja2FnZSBwYWNrYWdlcy5taWRkbGV3YXJlLnB1Yi5jb2xsZWN0aW9uLm1hcDs=",
+  "imports" : "aW1wb3J0IGNvbS5la2EubWlkZGxld2FyZS5zZXJ2aWNlLkRhdGFQaXBlbGluZTsKaW1wb3J0IGNvbS5la2EubWlkZGxld2FyZS5zZXJ2aWNlLlNlcnZpY2VVdGlsczsKaW1wb3J0IGNvbS5la2EubWlkZGxld2FyZS50ZW1wbGF0ZS5TbmlwcGV0RXhjZXB0aW9uOwppbXBvcnQgamF2YS51dGlsLk1hcDsKaW1wb3J0IGphdmEudXRpbC5MaXN0OwppbXBvcnQgamF2YS51dGlsLkhhc2hNYXA7CmltcG9ydCBvcmcuYXBhY2hlLmNvbW1vbnMubGFuZzMuU3RyaW5nVXRpbHM7CmltcG9ydCBqYXZhLnV0aWwuRGF0ZTs=",
+  "main" : "dHJ5IHsKCQlTdHJpbmcga2V5ID0gZGF0YVBpcGVsaW5lLmdldFN0cmluZygia2V5Iik7CiAgICAgICAgU3RyaW5nIHRleHRWYWx1ZSA9IGRhdGFQaXBlbGluZS5nZXRTdHJpbmcoInRleHRWYWx1ZSIpOwogICAgICAgIEludGVnZXIgaW50ZWdlclZhbHVlID0gZGF0YVBpcGVsaW5lLmdldEludGVnZXIoImludGVnZXJWYWx1ZSIpOwogICAgICAgIERvdWJsZSBudW1iZXJWYWx1ZSA9IGRhdGFQaXBlbGluZS5nZXRBc051bWJlcigibnVtYmVyVmFsdWUiKTsKICAgICAgICBNYXAgZG9jVmFsdWUgPSBkYXRhUGlwZWxpbmUuZ2V0QXNNYXAoImRvY1ZhbHVlIik7CiAgICAgICAgRGF0ZSBkYXRlVmFsdWUgPSBkYXRhUGlwZWxpbmUuZ2V0QXNEYXRlKCJkYXRlVmFsdWUiKTsKICAgICAgICBCb29sZWFuIGJvb2xlYW5WYWx1ZSA9IGRhdGFQaXBlbGluZS5nZXRBc0Jvb2xlYW4oImJvb2xlYW5WYWx1ZSIpOwogICAgICAgIE9iamVjdCBvYmplY3RBcnJheVZhbHVlID0gZGF0YVBpcGVsaW5lLmdldCgib2JqZWN0QXJyYXlWYWx1ZSIpOwogICAgICAgIE9iamVjdCBieXRlQXJyYXlWYWx1ZU9iamVjdCA9IGRhdGFQaXBlbGluZS5nZXQoImJ5dGVBcnJheVZhbHVlIik7CiAgCQlMaXN0PE1hcDxTdHJpbmcsIE9iamVjdD4+IGRvY0FycmF5VmFsdWUgPSAoTGlzdClkYXRhUGlwZWxpbmUuZ2V0KCJkb2NBcnJheVZhbHVlIik7CiAgICAgICAgYnl0ZVtdIGJ5dGVBcnJheVZhbHVlID0gbnVsbDsKICAgICAgICBpZiAobnVsbCAhPSBieXRlQXJyYXlWYWx1ZU9iamVjdCkgewogICAgICAgICAgICBieXRlQXJyYXlWYWx1ZSA9IChieXRlW10pIGJ5dGVBcnJheVZhbHVlT2JqZWN0OwogICAgICAgIH0KICAgICAgICBNYXA8U3RyaW5nLE9iamVjdD4gbWFwID0gZGF0YVBpcGVsaW5lLmdldEFzTWFwKCJtYXAiKTsKICAgICAgICBpZiAobnVsbCA9PSBtYXApIHsKICAgICAgICAgICAgbWFwID0gbmV3IEhhc2hNYXA8PigpOwogICAgICAgIH0KCiAgICAgICAgaWYgKFN0cmluZ1V0aWxzLmlzTm90QmxhbmsodGV4dFZhbHVlKSkgewogICAgICAgICAgICBtYXAucHV0KGtleSwgdGV4dFZhbHVlKTsKICAgICAgICB9IGVsc2UgaWYgKG51bGwgIT0gaW50ZWdlclZhbHVlKSB7CiAgICAgICAgICAgIG1hcC5wdXQoa2V5LCBpbnRlZ2VyVmFsdWUpOwogICAgICAgIH0gZWxzZSBpZiAobnVsbCAhPSBudW1iZXJWYWx1ZSkgewogICAgICAgICAgICBtYXAucHV0KGtleSwgdGV4dFZhbHVlKTsKICAgICAgICB9IGVsc2UgaWYgKG51bGwgIT0gZG9jVmFsdWUpIHsKICAgICAgICAgICAgbWFwLnB1dChrZXksIGRvY1ZhbHVlKTsKICAgICAgICB9IGVsc2UgaWYgKG51bGwgIT0gZGF0ZVZhbHVlKSB7CiAgICAgICAgICAgIG1hcC5wdXQoa2V5LCBkYXRlVmFsdWUpOwogICAgICAgIH0gZWxzZSBpZiAobnVsbCAhPSBib29sZWFuVmFsdWUpIHsKICAgICAgICAgICAgbWFwLnB1dChrZXksIGJvb2xlYW5WYWx1ZSk7CiAgICAgICAgfSBlbHNlIGlmIChudWxsICE9IG9iamVjdEFycmF5VmFsdWUpIHsKICAgICAgICAgICAgbWFwLnB1dChrZXksIG9iamVjdEFycmF5VmFsdWUpOwogICAgICAgIH0gZWxzZSBpZiAobnVsbCAhPSBieXRlQXJyYXlWYWx1ZSkgewogICAgICAgICAgICBtYXAucHV0KGtleSwgYnl0ZUFycmF5VmFsdWUpOwogICAgICAgIH0gZWxzZSBpZiAobnVsbCAhPSBkb2NBcnJheVZhbHVlKSB7CiAgICAgICAgICAgIG1hcC5wdXQoa2V5LCBkb2NBcnJheVZhbHVlKTsKICAgICAgICB9CiAgICAgICAgZGF0YVBpcGVsaW5lLnB1dCgibWFwIiwgbWFwKTsKfSBjYXRjaCAoRXhjZXB0aW9uIGUpIHsKCQlkYXRhUGlwZWxpbmUuY2xlYXIoKTsKICAJCWRhdGFQaXBlbGluZS5wdXQoImVycm9yIixlLmdldE1lc3NhZ2UoKSk7CiAgICAJdGhyb3cgbmV3IFNuaXBwZXRFeGNlcHRpb24oZGF0YVBpcGVsaW5lLCJTbmlwcGV0IGV4Y2VwdGlvbiIsIG5ldyBFeGNlcHRpb24oZSkpOwogIH0=",
+  "staticWorkspace" : "",
+  "version" : "v1",
+  "consumers" : "",
+  "developers" : "",
+  "lockedByUser" : "admin"
+}

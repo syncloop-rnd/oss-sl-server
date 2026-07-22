@@ -1,0 +1,35 @@
+{
+  "input" : [ {
+    "id" : "j1_1",
+    "text" : "token",
+    "li_attr" : {
+      "id" : "j1_1"
+    },
+    "a_attr" : {
+      "href" : "#",
+      "id" : "j1_1_anchor"
+    },
+    "state" : {
+      "loaded" : true,
+      "opened" : false,
+      "selected" : false,
+      "disabled" : false,
+      "hidden" : false
+    },
+    "data" : {
+      "guid" : "9d4e0ca8-5cc0-4001-b5ab-611c332b0626",
+      "columnType" : "-1"
+    },
+    "children" : [ ],
+    "type" : "string"
+  } ],
+  "output" : [ ],
+  "package" : "cGFja2FnZSBwYWNrYWdlcy5taWRkbGV3YXJlLnB1Yi5zZXJ2ZXIuYnVpbGQuYXBpOw==",
+  "imports" : "aW1wb3J0IGNvbS5la2EubWlkZGxld2FyZS5zZXJ2aWNlLkRhdGFQaXBlbGluZTsKaW1wb3J0IGNvbS5la2EubWlkZGxld2FyZS5zZXJ2aWNlLlNlcnZpY2VVdGlsczsKaW1wb3J0IGNvbS5la2EubWlkZGxld2FyZS50ZW1wbGF0ZS5TbmlwcGV0RXhjZXB0aW9uOwppbXBvcnQgamF2YS51dGlsLk1hcDsKaW1wb3J0IGNvbS5la2EubWlkZGxld2FyZS5wdWIudXRpbC5BcHBVcGRhdGU7",
+  "main" : "U3RyaW5nIHRva2VuID0gZGF0YVBpcGVsaW5lLmdldEFzU3RyaW5nKCJ0b2tlbiIpOwpNYXA8U3RyaW5nLCBPYmplY3Q+IHJlc3VsdCA9IEFwcFVwZGF0ZS5jaGVja1BvbGxpbmdJbXBvcnRTdGF0dXMoZGF0YVBpcGVsaW5lLCB0b2tlbik7CmRhdGFQaXBlbGluZS5wdXQoInJlc3BvbnNlIiwgcmVzdWx0KTs=",
+  "staticWorkspace" : "",
+  "version" : "v1",
+  "consumers" : "",
+  "developers" : "developers",
+  "lockedByUser" : "admin"
+}

@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>Swagger UI</title>
+  <base href="/"><script src="env.js"></script>
+  <script>
+    window.ENV = window.env || {};
+  </script>
+  <link rel="stylesheet" type="text/css" href="middleware/pub/server/ui/oas/dist/swagger-ui.css">
+  <style>
+    html, body { margin: 0; padding: 0; }
+    #swagger-ui { height: 100vh; }
+	#swagger-ui .download-url-wrapper{
+		display:none;
+	}
+	#swagger-ui .info{
+		display:none;
+	}
+	button.btn.authorize.unlocked {
+    display: none;
+    }
+  </style>
+</head>
+<body>
+  <div id="swagger-ui"></div>
+
+  <script src="middleware/pub/server/ui/oas/dist/swagger-ui-bundle.js"></script>
+  <script src="middleware/pub/server/ui/oas/dist/swagger-ui-standalone-preset.js"></script>
+  <script>
+  function getUrlParam(name) {
+    var results = new RegExp('[\?&]' + name + '=([^&#]*)')
+        .exec(window.location.search);
+
+    return (results !== null) ? results[1] || 0 : false;
+}
+
+var fqn=getUrlParam("fqn");
+if(fqn){
+if(!fqn.endsWith(".main"))
+fqn=fqn+".main";
+    window.onload = function() {
+      const ui = SwaggerUIBundle({
+        url: window.ENV.API_BASE_URL + "/tenant/" + localStorage.getItem("tenant") +
+                "/packages.middleware.pub.specs.swagger.v3.ExportSwagger.main?fqn=" + fqn,
+
+        dom_id: '#swagger-ui',
+        deepLinking: true,
+        validatorUrl: null,
+        docExpansion: "full",
+
+        presets: [
+          SwaggerUIBundle.presets.apis,
+          SwaggerUIStandalonePreset
+        ],
+
+        plugins: [
+          SwaggerUIBundle.plugins.DownloadUrl
+        ],
+
+        layout: "StandaloneLayout",
+
+        requestInterceptor: (req) => {
+          const token = localStorage.getItem("AuthToken"); // your JWT
+
+          if (token) {
+            req.headers['Authorization'] = `Bearer ${token}`;
+          }
+          return req;
+        }
+      });
+
+      window.ui = ui;
+    };
+	}else{
+		alert("API not found.");
+	}
+
+  </script>
+</body>
+</html>

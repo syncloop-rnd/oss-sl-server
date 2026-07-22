@@ -1,0 +1,746 @@
+{
+  "latest" : {
+    "createdTS" : "",
+    "input" : [ {
+      "id" : "j2_1",
+      "text" : "*payload",
+      "li_attr" : {
+        "id" : "j2_1"
+      },
+      "a_attr" : {
+        "href" : "#",
+        "id" : "j2_1_anchor"
+      },
+      "state" : {
+        "loaded" : true,
+        "opened" : true,
+        "selected" : false,
+        "disabled" : false,
+        "hidden" : false
+      },
+      "data" : {
+        "guid" : "69714d2e-b80c-4ae1-ae4f-354c5b185c5c",
+        "columnType" : "-1"
+      },
+      "children" : [ {
+        "id" : "j2_2",
+        "text" : "uuid",
+        "li_attr" : {
+          "id" : "j2_2"
+        },
+        "a_attr" : {
+          "href" : "#",
+          "id" : "j2_2_anchor"
+        },
+        "state" : {
+          "loaded" : true,
+          "opened" : false,
+          "selected" : false,
+          "disabled" : false
+        },
+        "data" : {
+          "guid" : "f93db9f1-a788-44c2-a15d-c4c46103864a",
+          "columnType" : "-1",
+          "fieldDescription" : "dXVpZCAoc3RyaW5nKTogVW5pcXVlIGlkZW50aWZpZXIgb2YgdGhlIHRvb2wgKHVzZWQgZm9yIHVwZGF0aW5nIGFuIGV4aXN0aW5nIHRvb2wpLg==",
+          "assignList" : [ {
+            "path" : "*payload/uuid",
+            "value" : "",
+            "typePath" : "document/string"
+          } ]
+        },
+        "children" : [ ],
+        "type" : "string"
+      }, {
+        "id" : "j2_3",
+        "text" : "name",
+        "li_attr" : {
+          "id" : "j2_3"
+        },
+        "a_attr" : {
+          "href" : "#",
+          "id" : "j2_3_anchor"
+        },
+        "state" : {
+          "loaded" : true,
+          "opened" : false,
+          "selected" : false,
+          "disabled" : false
+        },
+        "data" : {
+          "guid" : "bd3e974e-4a0c-4194-92ad-c04a7749a28c",
+          "columnType" : "-1",
+          "fieldDescription" : "bmFtZSAoc3RyaW5nKTogTmFtZSBvZiB0aGUgdG9vbC4=",
+          "assignList" : [ {
+            "path" : "*payload/name",
+            "value" : "",
+            "typePath" : "document/string"
+          } ]
+        },
+        "children" : [ ],
+        "type" : "string"
+      }, {
+        "id" : "j2_4",
+        "text" : "description",
+        "li_attr" : {
+          "id" : "j2_4"
+        },
+        "a_attr" : {
+          "href" : "#",
+          "id" : "j2_4_anchor"
+        },
+        "state" : {
+          "loaded" : true,
+          "opened" : false,
+          "selected" : false,
+          "disabled" : false
+        },
+        "data" : {
+          "guid" : "6a81ef47-807f-4106-b533-9746f5073c21",
+          "columnType" : "-1",
+          "fieldDescription" : "ZGVzY3JpcHRpb24gKHN0cmluZyk6IERlc2NyaXB0aW9uIG9mIHRoZSB0b29sIGFuZCBpdHMgZnVuY3Rpb25hbGl0eS4=",
+          "assignList" : [ {
+            "path" : "*payload/description",
+            "value" : "",
+            "typePath" : "document/string"
+          } ]
+        },
+        "children" : [ ],
+        "type" : "string"
+      }, {
+        "id" : "j2_5",
+        "text" : "source",
+        "li_attr" : {
+          "id" : "j2_5"
+        },
+        "a_attr" : {
+          "href" : "#",
+          "id" : "j2_5_anchor"
+        },
+        "state" : {
+          "loaded" : true,
+          "opened" : false,
+          "selected" : false,
+          "disabled" : false
+        },
+        "data" : {
+          "guid" : "b3f7957a-cc77-4e44-9344-623078cc859b",
+          "columnType" : "-1",
+          "fieldDescription" : "c291cmNlIChzdHJpbmcpOiBTb3VyY2Ugb3Igb3JpZ2luIG9mIHRoZSB0b29sIChlLmcuLCBpbnRlcm5hbCwgZXh0ZXJuYWwpLg==",
+          "assignList" : [ {
+            "path" : "*payload/source",
+            "value" : "",
+            "typePath" : "document/string"
+          } ]
+        },
+        "children" : [ ],
+        "type" : "string"
+      }, {
+        "id" : "j2_6",
+        "text" : "fqn",
+        "li_attr" : {
+          "id" : "j2_6"
+        },
+        "a_attr" : {
+          "href" : "#",
+          "id" : "j2_6_anchor"
+        },
+        "state" : {
+          "loaded" : true,
+          "opened" : false,
+          "selected" : false,
+          "disabled" : false
+        },
+        "data" : {
+          "guid" : "1c2f9d46-93e0-4c8c-b7a4-fdd769e51cc7",
+          "columnType" : "-1",
+          "assignList" : [ {
+            "path" : "*payload/fqn",
+            "value" : "",
+            "typePath" : "document/string"
+          } ]
+        },
+        "children" : [ ],
+        "type" : "string"
+      }, {
+        "id" : "j2_7",
+        "text" : "schema",
+        "li_attr" : {
+          "id" : "j2_7"
+        },
+        "a_attr" : {
+          "href" : "#",
+          "id" : "j2_7_anchor"
+        },
+        "state" : {
+          "loaded" : true,
+          "opened" : false,
+          "selected" : false,
+          "disabled" : false
+        },
+        "data" : {
+          "guid" : "9944d9fb-6303-419f-8539-f9aaedc62011",
+          "columnType" : "-1",
+          "fieldDescription" : "c2NoZW1hIChvYmplY3Qvc3RyaW5nKTogRGVmaW5lcyB0aGUgaW5wdXQvb3V0cHV0IHN0cnVjdHVyZSBvZiB0aGUgdG9vbC4=",
+          "assignList" : [ {
+            "path" : "*payload/schema",
+            "value" : "",
+            "typePath" : "document/string"
+          } ]
+        },
+        "children" : [ ],
+        "type" : "string"
+      }, {
+        "id" : "j2_8",
+        "text" : "staticPayload",
+        "li_attr" : {
+          "id" : "j2_8"
+        },
+        "a_attr" : {
+          "href" : "#",
+          "id" : "j2_8_anchor"
+        },
+        "state" : {
+          "loaded" : true,
+          "opened" : false,
+          "selected" : false,
+          "disabled" : false
+        },
+        "data" : {
+          "guid" : "b2e15a58-ccec-4a3b-a870-e6d38193673e",
+          "columnType" : "-1",
+          "fieldDescription" : "c3RhdGljUGF5bG9hZCAob2JqZWN0L3N0cmluZyk6IFByZWRlZmluZWQgc3RhdGljIHBheWxvYWQgYXNzb2NpYXRlZCB3aXRoIHRoZSB0b29sLg==",
+          "assignList" : [ {
+            "path" : "*payload/staticPayload",
+            "value" : "",
+            "typePath" : "document/string"
+          } ]
+        },
+        "children" : [ ],
+        "type" : "string"
+      }, {
+        "id" : "j2_9",
+        "text" : "status",
+        "li_attr" : {
+          "id" : "j2_9"
+        },
+        "a_attr" : {
+          "href" : "#",
+          "id" : "j2_9_anchor"
+        },
+        "state" : {
+          "loaded" : true,
+          "opened" : false,
+          "selected" : false,
+          "disabled" : false
+        },
+        "data" : {
+          "guid" : "0ebe3ad4-668d-4862-a654-48dc0fdff3a5",
+          "columnType" : "-1",
+          "fieldDescription" : "c3RhdHVzIChzdHJpbmcpOiBTdGF0dXMgb2YgdGhlIHRvb2wgKGUuZy4sIGFjdGl2ZS9pbmFjdGl2ZSku",
+          "assignList" : [ {
+            "path" : "*payload/status",
+            "value" : "",
+            "typePath" : "document/string"
+          } ]
+        },
+        "children" : [ ],
+        "type" : "string"
+      }, {
+        "id" : "j2_10",
+        "text" : "mcpId",
+        "li_attr" : {
+          "id" : "j2_10"
+        },
+        "a_attr" : {
+          "href" : "#",
+          "id" : "j2_10_anchor"
+        },
+        "state" : {
+          "loaded" : true,
+          "opened" : false,
+          "selected" : false,
+          "disabled" : false
+        },
+        "data" : {
+          "guid" : "f944fa31-ef3b-44e4-9d24-69da95b09545",
+          "columnType" : "-1",
+          "fieldDescription" : "bWNwSWQgKHN0cmluZyk6IElkZW50aWZpZXIgb2YgdGhlIE1DUCBhc3NvY2lhdGVkIHdpdGggdGhlIHRvb2wu",
+          "assignList" : [ {
+            "path" : "*payload/mcpId",
+            "value" : "",
+            "typePath" : "document/string"
+          } ]
+        },
+        "children" : [ ],
+        "type" : "string"
+      }, {
+        "id" : "j2_11",
+        "text" : "agentAccess",
+        "li_attr" : {
+          "id" : "j2_11"
+        },
+        "a_attr" : {
+          "href" : "#",
+          "id" : "j2_11_anchor"
+        },
+        "state" : {
+          "loaded" : true,
+          "opened" : false,
+          "selected" : false,
+          "disabled" : false
+        },
+        "data" : {
+          "guid" : "c5e4f4c7-9c48-47cc-8c9a-6cc84f06609b",
+          "columnType" : "-1",
+          "fieldDescription" : "YWdlbnRBY2Nlc3MgKHN0cmluZyk6IERlZmluZXMgYWNjZXNzIGxldmVsIG9mIHRoZSB0b29sIChlLmcuLCBwdWJsaWMvcHJpdmF0ZSku",
+          "assignList" : [ {
+            "path" : "*payload/agentAccess",
+            "value" : "",
+            "typePath" : "document/string"
+          } ]
+        },
+        "children" : [ ],
+        "type" : "string"
+      }, {
+        "id" : "j2_12",
+        "text" : "active",
+        "li_attr" : {
+          "id" : "j2_12"
+        },
+        "a_attr" : {
+          "href" : "#",
+          "id" : "j2_12_anchor"
+        },
+        "state" : {
+          "loaded" : true,
+          "opened" : false,
+          "selected" : false,
+          "disabled" : false
+        },
+        "data" : {
+          "guid" : "8d94f995-1de2-4b5c-9a8d-2a22fdc2f2fe",
+          "columnType" : "-1",
+          "fieldDescription" : "YWN0aXZlIChib29sZWFuKTogSW5kaWNhdGVzIHdoZXRoZXIgdGhlIHRvb2wgaXMgZW5hYmxlZCBmb3IgdXNlLg==",
+          "assignList" : [ {
+            "path" : "*payload/active",
+            "value" : "",
+            "typePath" : "document/boolean"
+          } ]
+        },
+        "children" : [ ],
+        "type" : "boolean"
+      } ],
+      "type" : "document"
+    } ],
+    "output" : [ {
+      "id" : "j3_1",
+      "text" : "status",
+      "li_attr" : {
+        "id" : "j3_1"
+      },
+      "a_attr" : {
+        "href" : "#",
+        "id" : "j3_1_anchor"
+      },
+      "state" : {
+        "loaded" : true,
+        "opened" : false,
+        "selected" : false,
+        "disabled" : false,
+        "hidden" : false
+      },
+      "data" : { },
+      "children" : [ ],
+      "type" : "string"
+    }, {
+      "id" : "j3_2",
+      "text" : "error",
+      "li_attr" : {
+        "id" : "j3_2"
+      },
+      "a_attr" : {
+        "href" : "#",
+        "id" : "j3_2_anchor"
+      },
+      "state" : {
+        "loaded" : true,
+        "opened" : false,
+        "selected" : false,
+        "disabled" : false,
+        "hidden" : false
+      },
+      "data" : { },
+      "children" : [ ],
+      "type" : "string"
+    }, {
+      "id" : "j3_3",
+      "text" : "uuid",
+      "li_attr" : {
+        "id" : "j3_3"
+      },
+      "a_attr" : {
+        "href" : "#",
+        "id" : "j3_3_anchor"
+      },
+      "state" : {
+        "loaded" : true,
+        "opened" : false,
+        "selected" : false,
+        "disabled" : false,
+        "hidden" : false
+      },
+      "data" : { },
+      "children" : [ ],
+      "type" : "string"
+    } ],
+    "api" : [ {
+      "id" : "j1_1",
+      "text" : "Invoke",
+      "li_attr" : {
+        "id" : "j1_1"
+      },
+      "a_attr" : {
+        "href" : "javascript:void(0)",
+        "id" : "j1_1_anchor"
+      },
+      "state" : {
+        "loaded" : true,
+        "opened" : false,
+        "selected" : false,
+        "disabled" : false,
+        "hidden" : false
+      },
+      "data" : {
+        "guid" : "c93b7bba-0ad0-473b-99f3-aab3e4201d70",
+        "columnType" : "-1",
+        "transformers" : [ {
+          "op" : "copy",
+          "from" : "/uuid",
+          "to" : "/uuid",
+          "inTypePath" : "string",
+          "outTypePath" : "string",
+          "direction" : "out"
+        }, {
+          "op" : "copy",
+          "from" : "/error",
+          "to" : "/error",
+          "inTypePath" : "string",
+          "outTypePath" : "string",
+          "direction" : "out"
+        }, {
+          "op" : "copy",
+          "from" : "/status",
+          "to" : "/status",
+          "inTypePath" : "string",
+          "outTypePath" : "string",
+          "direction" : "out"
+        }, {
+          "op" : "copy",
+          "from" : "/*payload/uuid",
+          "to" : "/*payload/uuid",
+          "inTypePath" : "document/string",
+          "outTypePath" : "document/string",
+          "direction" : "in"
+        }, {
+          "op" : "copy",
+          "from" : "/*payload/name",
+          "to" : "/*payload/name",
+          "inTypePath" : "document/string",
+          "outTypePath" : "document/string",
+          "direction" : "in"
+        }, {
+          "op" : "copy",
+          "from" : "/*payload/description",
+          "to" : "/*payload/description",
+          "inTypePath" : "document/string",
+          "outTypePath" : "document/string",
+          "direction" : "in"
+        }, {
+          "op" : "copy",
+          "from" : "/*payload/source",
+          "to" : "/*payload/source",
+          "inTypePath" : "document/string",
+          "outTypePath" : "document/string",
+          "direction" : "in"
+        }, {
+          "op" : "copy",
+          "from" : "/*payload/fqn",
+          "to" : "/*payload/fqn",
+          "inTypePath" : "document/string",
+          "outTypePath" : "document/string",
+          "direction" : "in"
+        }, {
+          "op" : "copy",
+          "from" : "/*payload/schema",
+          "to" : "/*payload/schema",
+          "inTypePath" : "document/string",
+          "outTypePath" : "document/string",
+          "direction" : "in"
+        }, {
+          "op" : "copy",
+          "from" : "/*payload/staticPayload",
+          "to" : "/*payload/staticPayload",
+          "inTypePath" : "document/string",
+          "outTypePath" : "document/string",
+          "direction" : "in"
+        }, {
+          "op" : "copy",
+          "from" : "/*payload/status",
+          "to" : "/*payload/status",
+          "inTypePath" : "document/string",
+          "outTypePath" : "document/string",
+          "direction" : "in"
+        }, {
+          "op" : "copy",
+          "from" : "/*payload/mcpId",
+          "to" : "/*payload/mcpId",
+          "inTypePath" : "document/string",
+          "outTypePath" : "document/string",
+          "direction" : "in"
+        }, {
+          "op" : "copy",
+          "from" : "/*payload/agentAccess",
+          "to" : "/*payload/agentAccess",
+          "inTypePath" : "document/string",
+          "outTypePath" : "document/string",
+          "direction" : "in"
+        }, {
+          "op" : "copy",
+          "from" : "/*payload/active",
+          "to" : "/*payload/active",
+          "inTypePath" : "document/boolean",
+          "outTypePath" : "document/boolean",
+          "direction" : "in"
+        } ],
+        "lines" : [ {
+          "inputPath" : "uuid",
+          "outputPath" : "uuid",
+          "inpJsTree" : "#launching_arrow_jsTree_function",
+          "outpJsTree" : "#landing_arrow_jsTree",
+          "INPath" : "uuid",
+          "OUTPath" : "uuid",
+          "direction" : "out",
+          "op" : "copy",
+          "line" : 0,
+          "dashedLine" : false,
+          "inType" : "string",
+          "outType" : "string",
+          "inTypePath" : "string",
+          "outTypePath" : "string"
+        }, {
+          "inputPath" : "error",
+          "outputPath" : "error",
+          "inpJsTree" : "#launching_arrow_jsTree_function",
+          "outpJsTree" : "#landing_arrow_jsTree",
+          "INPath" : "error",
+          "OUTPath" : "error",
+          "direction" : "out",
+          "op" : "copy",
+          "line" : 0,
+          "dashedLine" : false,
+          "inType" : "string",
+          "outType" : "string",
+          "inTypePath" : "string",
+          "outTypePath" : "string"
+        }, {
+          "inputPath" : "status",
+          "outputPath" : "status",
+          "inpJsTree" : "#launching_arrow_jsTree_function",
+          "outpJsTree" : "#landing_arrow_jsTree",
+          "INPath" : "status",
+          "OUTPath" : "status",
+          "direction" : "out",
+          "op" : "copy",
+          "line" : 0,
+          "dashedLine" : false,
+          "inType" : "string",
+          "outType" : "string",
+          "inTypePath" : "string",
+          "outTypePath" : "string"
+        }, {
+          "inputPath" : "*payload/uuid",
+          "outputPath" : "*payload/uuid",
+          "inpJsTree" : "#launching_arrow_jsTree",
+          "outpJsTree" : "#landing_arrow_jsTree_function",
+          "INPath" : "*payload/uuid",
+          "OUTPath" : "*payload/uuid",
+          "direction" : "in",
+          "op" : "copy",
+          "line" : 0,
+          "dashedLine" : false,
+          "inType" : "string",
+          "outType" : "string",
+          "inTypePath" : "document/string",
+          "outTypePath" : "document/string"
+        }, {
+          "inputPath" : "*payload/name",
+          "outputPath" : "*payload/name",
+          "inpJsTree" : "#launching_arrow_jsTree",
+          "outpJsTree" : "#landing_arrow_jsTree_function",
+          "INPath" : "*payload/name",
+          "OUTPath" : "*payload/name",
+          "direction" : "in",
+          "op" : "copy",
+          "line" : 0,
+          "dashedLine" : false,
+          "inType" : "string",
+          "outType" : "string",
+          "inTypePath" : "document/string",
+          "outTypePath" : "document/string"
+        }, {
+          "inputPath" : "*payload/description",
+          "outputPath" : "*payload/description",
+          "inpJsTree" : "#launching_arrow_jsTree",
+          "outpJsTree" : "#landing_arrow_jsTree_function",
+          "INPath" : "*payload/description",
+          "OUTPath" : "*payload/description",
+          "direction" : "in",
+          "op" : "copy",
+          "line" : 0,
+          "dashedLine" : false,
+          "inType" : "string",
+          "outType" : "string",
+          "inTypePath" : "document/string",
+          "outTypePath" : "document/string"
+        }, {
+          "inputPath" : "*payload/source",
+          "outputPath" : "*payload/source",
+          "inpJsTree" : "#launching_arrow_jsTree",
+          "outpJsTree" : "#landing_arrow_jsTree_function",
+          "INPath" : "*payload/source",
+          "OUTPath" : "*payload/source",
+          "direction" : "in",
+          "op" : "copy",
+          "line" : 0,
+          "dashedLine" : false,
+          "inType" : "string",
+          "outType" : "string",
+          "inTypePath" : "document/string",
+          "outTypePath" : "document/string"
+        }, {
+          "inputPath" : "*payload/fqn",
+          "outputPath" : "*payload/fqn",
+          "inpJsTree" : "#launching_arrow_jsTree",
+          "outpJsTree" : "#landing_arrow_jsTree_function",
+          "INPath" : "*payload/fqn",
+          "OUTPath" : "*payload/fqn",
+          "direction" : "in",
+          "op" : "copy",
+          "line" : 0,
+          "dashedLine" : false,
+          "inType" : "string",
+          "outType" : "string",
+          "inTypePath" : "document/string",
+          "outTypePath" : "document/string"
+        }, {
+          "inputPath" : "*payload/schema",
+          "outputPath" : "*payload/schema",
+          "inpJsTree" : "#launching_arrow_jsTree",
+          "outpJsTree" : "#landing_arrow_jsTree_function",
+          "INPath" : "*payload/schema",
+          "OUTPath" : "*payload/schema",
+          "direction" : "in",
+          "op" : "copy",
+          "line" : 0,
+          "dashedLine" : false,
+          "inType" : "string",
+          "outType" : "string",
+          "inTypePath" : "document/string",
+          "outTypePath" : "document/string"
+        }, {
+          "inputPath" : "*payload/staticPayload",
+          "outputPath" : "*payload/staticPayload",
+          "inpJsTree" : "#launching_arrow_jsTree",
+          "outpJsTree" : "#landing_arrow_jsTree_function",
+          "INPath" : "*payload/staticPayload",
+          "OUTPath" : "*payload/staticPayload",
+          "direction" : "in",
+          "op" : "copy",
+          "line" : 0,
+          "dashedLine" : false,
+          "inType" : "string",
+          "outType" : "string",
+          "inTypePath" : "document/string",
+          "outTypePath" : "document/string"
+        }, {
+          "inputPath" : "*payload/status",
+          "outputPath" : "*payload/status",
+          "inpJsTree" : "#launching_arrow_jsTree",
+          "outpJsTree" : "#landing_arrow_jsTree_function",
+          "INPath" : "*payload/status",
+          "OUTPath" : "*payload/status",
+          "direction" : "in",
+          "op" : "copy",
+          "line" : 0,
+          "dashedLine" : false,
+          "inType" : "string",
+          "outType" : "string",
+          "inTypePath" : "document/string",
+          "outTypePath" : "document/string"
+        }, {
+          "inputPath" : "*payload/mcpId",
+          "outputPath" : "*payload/mcpId",
+          "inpJsTree" : "#launching_arrow_jsTree",
+          "outpJsTree" : "#landing_arrow_jsTree_function",
+          "INPath" : "*payload/mcpId",
+          "OUTPath" : "*payload/mcpId",
+          "direction" : "in",
+          "op" : "copy",
+          "line" : 0,
+          "dashedLine" : false,
+          "inType" : "string",
+          "outType" : "string",
+          "inTypePath" : "document/string",
+          "outTypePath" : "document/string"
+        }, {
+          "inputPath" : "*payload/agentAccess",
+          "outputPath" : "*payload/agentAccess",
+          "inpJsTree" : "#launching_arrow_jsTree",
+          "outpJsTree" : "#landing_arrow_jsTree_function",
+          "INPath" : "*payload/agentAccess",
+          "OUTPath" : "*payload/agentAccess",
+          "direction" : "in",
+          "op" : "copy",
+          "line" : 0,
+          "dashedLine" : false,
+          "inType" : "string",
+          "outType" : "string",
+          "inTypePath" : "document/string",
+          "outTypePath" : "document/string"
+        }, {
+          "inputPath" : "*payload/active",
+          "outputPath" : "*payload/active",
+          "inpJsTree" : "#launching_arrow_jsTree",
+          "outpJsTree" : "#landing_arrow_jsTree_function",
+          "INPath" : "*payload/active",
+          "OUTPath" : "*payload/active",
+          "direction" : "in",
+          "op" : "copy",
+          "line" : 0,
+          "dashedLine" : false,
+          "inType" : "boolean",
+          "outType" : "boolean",
+          "inTypePath" : "document/boolean",
+          "outTypePath" : "document/boolean"
+        } ],
+        "dropList" : [ ],
+        "createList" : [ ],
+        "initiateList" : [ ],
+        "fqn" : "packages/Awareness/dashboard/services/api/tools_registry/save",
+        "serviceType" : "api"
+      },
+      "children" : [ ],
+      "type" : "invoke"
+    } ],
+    "api_info" : {
+      "title" : "Save",
+      "description" : "Creates or updates a tool in the tool registry. This operation allows defining tool metadata, execution details, schema, and access control. If a UUID is provided, the existing tool is updated; otherwise, a new tool is created and registered in the system.\n\nInput Parameters:\nuuid (string): Unique identifier of the tool (used for updating an existing tool).\nname (string): Name of the tool.\ndescription (string): Description of the tool and its functionality.\nsource (string): Source or origin of the tool (e.g., internal, external).\nfqn (string): Fully Qualified Name representing the tool’s execution path.\nschema (object/string): Defines the input/output structure of the tool.\nstaticPayload (object/string): Predefined static payload associated with the tool.\nstatus (string): Status of the tool (e.g., active/inactive).\nmcpId (string): Identifier of the MCP associated with the tool.\nagentAccess (string): Defines access level of the tool (e.g., public/private).\nactive (boolean): Indicates whether the tool is enabled for use.\n\nOutput Parameters:\nuuid (string): Unique identifier of the created or updated tool.\nstatus (string): Status of the operation (e.g., success or failure).\nerror (string): Error message in case the operation fails."
+    },
+    "lockedByUser" : "akshitaaura@gmail.com"
+  },
+  "consumers" : "",
+  "developers" : "developers",
+  "enableServiceDocumentValidation" : false,
+  "created_on" : "1775644864203",
+  "modified_on" : 1775644864203
+}

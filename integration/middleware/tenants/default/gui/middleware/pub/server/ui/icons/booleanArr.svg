@@ -1,0 +1,32 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="20" height="20" viewBox="0 0 20 20">
+  <defs>
+    <style>
+      .cls-1 {
+        filter: url(#filter);
+      }
+
+      .cls-2 {
+        fill: #0840a6;
+      }
+
+      .cls-2, .cls-3 {
+        fill-rule: evenodd;
+      }
+    </style>
+    <filter id="filter" filterUnits="userSpaceOnUse">
+      <feFlood result="flood" flood-color="#7b7b7b"/>
+      <feComposite result="composite" operator="in" in2="SourceGraphic"/>
+      <feBlend result="blend" in2="SourceGraphic"/>
+    </filter>
+  </defs>
+  <g id="Boolean_array" data-name="Boolean array">
+    <g class="cls-1">
+      <path id="Shape_4_copy_4" data-name="Shape 4 copy 4" class="cls-2" d="M757.915,18H742V3.212h1.326V2.606h1.447V2H759V15.455h-0.482v1.455h-0.6V18ZM742.362,3.576V17.515h15.191V16.788H743.326V3.576h-0.964Zm1.205-.606V16.424h14.589v-0.97h-13.5V2.97h-1.085Zm1.447-.485h13.624V15.091H745.014V2.485Z" transform="translate(-740)"/>
+      <g>
+        <path class="cls-3" d="M749.323,7.689l-0.66-.569a0.349,0.349,0,0,1,.5-0.362l0.551,0.569,0.605-.621s0.48-.044.441,0.362l-0.661.673,0.551,0.518s0.2,0.488-.386.414l-0.55-.569-0.606.569s-0.493.041-.385-0.362Z" transform="translate(-740)"/>
+        <path class="cls-3" d="M753.012,11.57l1.267-1.242s0.5-.066.385,0.362l-1.486,1.5a0.224,0.224,0,0,1-.386,0l-0.716-.725a0.305,0.305,0,0,1,.386-0.414Z" transform="translate(-740)"/>
+        <path id="Rounded_Rectangle_1" data-name="Rounded Rectangle 1" class="cls-3" d="M747.4,4.791h4.46a0.927,0.927,0,0,1,.771.828V8.361H755.6a0.805,0.805,0,0,1,.606.828V13.64a0.8,0.8,0,0,1-.881.569h-4.35a0.93,0.93,0,0,1-.605-0.776V10.587H747.4a0.881,0.881,0,0,1-.6-0.673v-4.5A0.872,0.872,0,0,1,747.4,4.791Zm5.176,4.14h2.808a0.33,0.33,0,0,1,.275.31v4.244a0.405,0.405,0,0,1-.33.207H751.2s-0.338-.153-0.275-0.311V10.587h0.936a0.822,0.822,0,0,0,.716-0.725V8.931Zm-4.286-3.623h2.79a1,1,0,0,1,1,1V9.121a1,1,0,0,1-1,1h-2.79a1,1,0,0,1-1-1V6.308A1,1,0,0,1,748.286,5.308Z" transform="translate(-740)"/>
+      </g>
+    </g>
+  </g>
+</svg>

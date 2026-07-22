@@ -1,0 +1,126 @@
+{
+  "input" : [ {
+    "id" : "j1_6",
+    "text" : "inputDocList",
+    "li_attr" : {
+      "id" : "j1_6"
+    },
+    "a_attr" : {
+      "href" : "#",
+      "id" : "j1_6_anchor"
+    },
+    "state" : {
+      "loaded" : true,
+      "opened" : true,
+      "selected" : false,
+      "disabled" : false
+    },
+    "data" : { },
+    "children" : [ {
+      "id" : "j1_1",
+      "text" : "enabled",
+      "li_attr" : {
+        "id" : "j1_1"
+      },
+      "a_attr" : {
+        "href" : "#",
+        "id" : "j1_1_anchor"
+      },
+      "state" : {
+        "loaded" : true,
+        "opened" : false,
+        "selected" : false,
+        "disabled" : false
+      },
+      "data" : { },
+      "children" : [ ],
+      "type" : "string"
+    }, {
+      "id" : "j1_5",
+      "text" : "jobName",
+      "li_attr" : {
+        "id" : "j1_5"
+      },
+      "a_attr" : {
+        "href" : "#",
+        "id" : "j1_5_anchor"
+      },
+      "state" : {
+        "loaded" : true,
+        "opened" : false,
+        "selected" : false,
+        "disabled" : false
+      },
+      "data" : { },
+      "children" : [ ],
+      "type" : "string"
+    }, {
+      "id" : "j1_4",
+      "text" : "serviceFqn",
+      "li_attr" : {
+        "id" : "j1_4"
+      },
+      "a_attr" : {
+        "href" : "#",
+        "id" : "j1_4_anchor"
+      },
+      "state" : {
+        "loaded" : true,
+        "opened" : false,
+        "selected" : false,
+        "disabled" : false
+      },
+      "data" : { },
+      "children" : [ ],
+      "type" : "string"
+    }, {
+      "id" : "j1_3",
+      "text" : "cronExpression",
+      "li_attr" : {
+        "id" : "j1_3"
+      },
+      "a_attr" : {
+        "href" : "#",
+        "id" : "j1_3_anchor"
+      },
+      "state" : {
+        "loaded" : true,
+        "opened" : false,
+        "selected" : false,
+        "disabled" : false
+      },
+      "data" : { },
+      "children" : [ ],
+      "type" : "string"
+    }, {
+      "id" : "j1_2",
+      "text" : "databaseId",
+      "li_attr" : {
+        "id" : "j1_2"
+      },
+      "a_attr" : {
+        "href" : "#",
+        "id" : "j1_2_anchor"
+      },
+      "state" : {
+        "loaded" : true,
+        "opened" : false,
+        "selected" : false,
+        "disabled" : false
+      },
+      "data" : { },
+      "children" : [ ],
+      "type" : "string"
+    } ],
+    "type" : "document"
+  } ],
+  "output" : [ ],
+  "package" : "cGFja2FnZSBwYWNrYWdlcy5zY2hlZHVsZXIuY3JvbkpvYi5zZXJ2aWNlcy5qYXZhOw==",
+  "imports" : "aW1wb3J0IGNvbS5la2EubWlkZGxld2FyZS5zZXJ2aWNlLkRhdGFQaXBlbGluZTsKaW1wb3J0IGNvbS5la2EubWlkZGxld2FyZS5zZXJ2aWNlLlNlcnZpY2VVdGlsczsKaW1wb3J0IGNvbS5la2EubWlkZGxld2FyZS50ZW1wbGF0ZS5TbmlwcGV0RXhjZXB0aW9uOwppbXBvcnQgY29tLmVrYS5taWRkbGV3YXJlLnNjaGVkdWxpbmcuSm9iU2NoZWR1bGVyOwppbXBvcnQgamF2YS51dGlsLkxpc3Q7CmltcG9ydCBqYXZhLnV0aWwuTWFwOwppbXBvcnQgamF2YS51dGlsLkFycmF5TGlzdDs=",
+  "main" : "dHJ5IHsKCiAgICAgIE1hcDxTdHJpbmcsT2JqZWN0PiBtYXA9IChNYXA8U3RyaW5nLE9iamVjdD4pZGF0YVBpcGVsaW5lLmdldCgiaW5wdXREb2NMaXN0Iik7CiAgICAgIFN0cmluZyBlbmFibGVkID0oU3RyaW5nKSBtYXAuZ2V0KCJlbmFibGVkIik7CiAgICAgIE9iamVjdCBpZCA9IG1hcC5nZXQoImRhdGFiYXNlSWQiKTsKICAgICAgU3RyaW5nIGlkU3RyaW5nID0gaWQgIT0gbnVsbCA/IGlkLnRvU3RyaW5nKCkgOiBudWxsOwogICAgICBTdHJpbmcgam9iTmFtZSA9KFN0cmluZykgbWFwLmdldCgiam9iTmFtZSIpOwogICAgICBTdHJpbmcgc2VydmljZUZxbiA9KFN0cmluZykgbWFwLmdldCgic2VydmljZUZxbiIpOwogICAgICBTdHJpbmcgY3JvbkV4cHJlc3Npb24gPShTdHJpbmcpIG1hcC5nZXQoImNyb25FeHByZXNzaW9uIik7CiAgICAgIGlmIChlbmFibGVkICE9IG51bGwgJiYgZW5hYmxlZC5lcXVhbHNJZ25vcmVDYXNlKCJZIikpIHsKICAgICAgICBKb2JTY2hlZHVsZXIuZGVsZXRlSm9iKGlkU3RyaW5nLGRhdGFQaXBlbGluZSk7CiAgICAgICAgSm9iU2NoZWR1bGVyLmFkZEpvYihpZFN0cmluZyxzZXJ2aWNlRnFuLGNyb25FeHByZXNzaW9uLGpvYk5hbWUsZGF0YVBpcGVsaW5lKTsKICAgICAgfQp9IGNhdGNoIChFeGNlcHRpb24gZSkgewogICAgdGhyb3cgbmV3IFNuaXBwZXRFeGNlcHRpb24oZGF0YVBpcGVsaW5lLCAiU25pcHBldCBleGNlcHRpb24iLCBlKTsKfQo=",
+  "staticWorkspace" : "",
+  "version" : "v1",
+  "consumers" : "",
+  "developers" : "administrators",
+  "lockedByUser" : "admin"
+}

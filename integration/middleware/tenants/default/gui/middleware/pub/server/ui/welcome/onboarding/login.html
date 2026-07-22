@@ -1,0 +1,322 @@
+<html style="min-height: 100% !important;">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+	  <base href="/"><script src="env.js"></script>
+	  <script>
+		  window.ENV = window.env || {};
+	  </script>
+
+    <link rel="shortcut icon" href="middleware/pub/server/ui/assets/img/favicon.ico" type="image/x-icon" />
+    <!-- Bootstrap CSS -->
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="middleware/pub/server/ui/assets/css/bootstrap.min.css">
+    <!-- Style -->
+    <link rel="stylesheet" href="middleware/pub/server/ui/assets/css/login.css">
+	<link rel="stylesheet" href="middleware/pub/server/ui/assets/css/dashboard.css">
+    <link rel="stylesheet" href="middleware/pub/server/ui/assets/img/icon_apple.png">
+	  <script src="https://cdn.jsdelivr.net/npm/js-cookie@2.2.1/src/js.cookie.js"></script>
+	  <script src="https://cdn.jsdelivr.net/npm/js-cookie@2/src/js.cookie.min.js"></script>
+
+
+	  <title>Syncloop | Login</title>
+
+	  <script type="syncloop/analytics"></script>
+
+
+	<script>
+		function getTenant(){
+			var pathName=window.location.pathname;
+			var pathTokens = pathName.split("/");
+			if(pathTokens[0]=="tenant")
+				return pathTokens[1];
+			return "default";
+		}
+
+		let authPopup = null;
+		let popupCheckInterval = null;
+
+		function openWorkspace(authServer) {
+			if (continueExistingSession()) {
+				return;
+			}
+
+			let url = window.env.API_BASE_URL + '/tenant/default/' + authServer + '/login';
+
+			softLogout();
+
+			authPopup = window.open(
+				url,
+				"popupWindow",
+				"width=800,height=600,left=200,top=100"
+			);
+
+			// Show overlay
+			document.getElementById("popupOverlay").classList.add("active");
+
+			// Watch for popup close
+			popupCheckInterval = setInterval(() => {
+				if (!authPopup || authPopup.closed) {
+					clearInterval(popupCheckInterval);
+					closeOverlay();
+				}
+			}, 500);
+		}
+
+		function relaunchPopup() {
+			if (!authPopup || authPopup.closed) {
+				openWorkspace('google');
+			} else {
+				authPopup.focus();
+			}
+		}
+
+		function closeOverlay() {
+			document.getElementById("popupOverlay").classList.remove("active");
+		}
+
+		window.addEventListener("message", function (event) {
+			if (event.origin !== window.window.env.API_BASE_URL) return;
+
+			console.log("Received from child:", event.data);
+
+			if (event.data.action === "installLoggingKeys") {
+				installLoggingKeys(event.data.payload);
+			}
+		});
+
+	</script>
+
+	  <!-- CSS styles for login overlay window -->
+	  <style>
+		  .popup-overlay {
+			  position: fixed;
+			  inset: 0;
+			  background: rgba(0, 0, 0, 0.8);
+			  display: none;
+			  align-items: center;
+			  justify-content: center;
+			  z-index: 2147483647;
+		  }
+
+		  .popup-overlay.active {
+			  display: flex;
+		  }
+
+		  .popup-card {
+			  background: #fff;
+			  padding: 24px 28px;
+			  border-radius: 8px;
+			  text-align: center;
+			  max-width: 360px;
+			  box-shadow: 0 10px 40px rgba(0,0,0,0.2);
+		  }
+
+		  .popup-card h4 {
+			  margin-bottom: 8px;
+		  }
+
+		  .popup-card p {
+			  font-size: 14px;
+			  margin-bottom: 16px;
+		  }
+
+	  </style>
+  </head>
+  <body>
+  <script type="syncloop/body-analytics"></script>
+
+    <div id="toasts"></div>
+
+  <div class="d-lg-flex half">
+    <div class="bg order-1 order-md-2 eka_img"></div>
+    <div class="contents order-2 order-md-1">
+
+      <div class="container login-style">
+         <div class="login_logo">
+		  <a href="https://www.syncloop.ai/" target="_blank">	<img src="middleware/pub/server/ui/assets/img/syncloop-blue-logo.svg" alt="Image"></a>
+		</div>
+		<div class="row align-items-center justify-content-center">
+          <div class="col-md-9">
+
+			<!--<button data-type="error">Error</button>
+			<button data-type="successful">Sucessfull</button>
+			<button data-type="info">Info</button>
+			<button data-type="warning">Warning</button>-->
+
+			  <div class="licence_info" style="display: none;">
+				  <h4>Syncloop offering you...</h4>
+				  <div class="info_pr">
+					  <h5>Enterprise License</h5>
+					  <div class="l_price">Price: &nbsp;<span id="licenseCredits"></span></div>
+				  </div>
+			  </div>
+
+			<h3>Log in with Syncloop</h3>
+
+			  <a class="login_google" href="javascript:openWorkspace('google')"><img src="middleware/pub/server/ui/assets/img/icon_google.png"> &nbsp; Log in with Google</a>
+
+			  <ul class="login_gl" style="display:none;">
+			    <li><a href="javascript:openWorkspace('apple')"><img src="middleware/pub/server/ui/assets/img/icon_apple.png"></a><span>Apple</span></li>
+				<li><a href="javascript:openWorkspace('google')"><img src="middleware/pub/server/ui/assets/img/icon_google.png"></a><span>Google</span></li>
+				<li><a href="javascript:openWorkspace('keycloak')"><img src="middleware/pub/server/ui/assets/img/icon_keyclock.png"></a><span>Keycloak</span></li>
+				<li><a href="javascript:openWorkspace('microsoft')"><img src="middleware/pub/server/ui/assets/img/icon_microsoft.png"></a><span>Microsoft</span></li>
+				<li><a href="javascript:openWorkspace('okta')"><img src="middleware/pub/server/ui/assets/img/icon_okta.png"></a><span>Okta</span></li>
+			  </ul>
+
+
+			  <div class="login-form-divider"><span class="login-form-text">OR</span></div>
+
+			  <div id="login_error" style="display: none; text-align: center;padding: 20px;    font-size: 14px;    border: 1px solid black;    margin-bottom: 10px;background: antiquewhite;">
+				  Invalid Username & Password
+			  </div>
+
+			  <form action="/tenant/default/authenticate?client_name=FormClient" method="POST">
+              <div class="form-group first spr">
+                <input type="text" placeholder="Enter your email" class="form-control icon1" name="username" id="username" />
+                <i class="" aria-hidden="true"><img src="middleware/pub/server/ui/assets/img/icon_email.svg"></i>
+              </div>
+              <div class="form-group last spr">
+                <input id="password" type="password" placeholder="Enter your password" class="form-control" name="password" />
+                <i class="us-p" aria-hidden="true"><img src="middleware/pub/server/ui/assets/img/icon_lock.svg"></i>
+				<i class="bi bi-eye-slash" id="togglePassword"></i>
+              </div>
+              <button type="button" class="btn btn-gry" onclick="tryLogin(this)">Log In</button>
+			  <div class="sign_grid">
+			     <div class="">New to Syncloop? <a href="middleware/pub/server/ui/welcome/onboarding/signup.html?utm_source=Workspace&utm_medium=login-page&utm_id=signup-link" class="">Sign up</a></div>
+				 <a href="middleware/pub/server/ui/welcome/onboarding/reset-password.html" class="">Reset password?</a>
+              </div>
+            </form>
+			<div class="lgn_footer">
+			<div class="join_slack"><span><img src="middleware/pub/server/ui/assets/img/discord2.png" alt="">Join us on <a target="_blank" href="https://discord.com/invite/EnazFJpGQs?">Discord</a></span></div>
+			</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div id="popupOverlay" class="popup-overlay">
+	  <div class="popup-card">
+		  <h4>Login window opened</h4>
+		  <p>Don’t see the login window?</p>
+		  <button class="btn btn-primary" onclick="relaunchPopup()">Continue</button>
+	  </div>
+  </div>
+  </body>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+<script type="text/javascript" src="middleware/pub/server/ui/javascript/middleware.js"></script>
+<script src="middleware/pub/server/ui/assets/js/custom-dashboard.js"></script>
+<script type="text/javascript">
+	if (getQueryVariable("error") == "CredentialsException") {
+		$.toast('<div class="custom-toast"><span class="tst red"><svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" viewBox="0 0 30 30"><defs><style>.cls-1 {fill: #fff;fill-rule: evenodd;}</style></defs><g id="notification_error"><path class="cls-in" d="M275.5,28A12.5,12.5,0,1,1,288,15.5,12.514,12.514,0,0,1,275.5,28Zm0-24A11.5,11.5,0,1,0,287,15.5,11.513,11.513,0,0,0,275.5,4Zm-0.473,13.867-2.241,2.241a1.339,1.339,0,0,1-1.894-1.894l2.241-2.241a0.669,0.669,0,0,0,0-.947l-2.241-2.241a1.339,1.339,0,0,1,1.894-1.894l2.241,2.241a0.67,0.67,0,0,0,.947,0l2.24-2.241a1.339,1.339,0,0,1,1.894,1.894l-2.241,2.241a0.671,0.671,0,0,0,0,.947l2.241,2.241a1.339,1.339,0,0,1-1.894,1.894l-2.24-2.241a0.67,0.67,0,0,0-.947,0h0Z" transform="translate(-260)"/></g></svg></span><div class="t_info"><h5>Oops!</h5><span>Enter the correct username and password to log in</span></div></div>');
+	}
+</script>
+<script type="text/javascript">
+
+	$(document).ready(function () {
+		if ("#" != getQueryVariable("licenseCredits")) {
+			localStorage.setItem("licenseCredits", getQueryVariable("licenseCredits"));
+			$("#licenseCredits").html("$" + getQueryVariable("licenseCredits"));
+			$(".licence_info").show();
+		}
+	});
+
+        const togglePassword = document.querySelector("#togglePassword");
+        const password = document.querySelector("#password");
+
+        togglePassword.addEventListener("click", function () {
+            // toggle the type attribute
+            const type = password.getAttribute("type") === "password" ? "text" : "password";
+            password.setAttribute("type", type);
+
+            // toggle the icon
+            this.classList.toggle("bi-eye");
+        });
+		//$.ajax( "/tenant/default/packages.middleware.pub.security.OIDCLogin.Google.OIDCProfile.main" );
+
+    </script>
+
+	<script>
+		const dashboardUrl = "/middleware/pub/server/ui/workspace/web/dashboard.html";
+
+		function openTenantSelection() {
+			const redirectUrl = new URLSearchParams(window.location.search).get("r");
+			location.href = "/middleware/pub/server/ui/tenant/selectTenant.html" +
+				(redirectUrl ? "?r=" + encodeURIComponent(redirectUrl) : "");
+		}
+
+		function continueExistingSession() {
+			if (!localStorage.getItem("AuthToken")) return false;
+			const redirectUrl = new URLSearchParams(window.location.search).get("r");
+			location.href = localStorage.getItem("tenant") ? (redirectUrl || dashboardUrl) :
+				"/middleware/pub/server/ui/tenant/selectTenant.html" +
+				(redirectUrl ? "?r=" + encodeURIComponent(redirectUrl) : "");
+			return true;
+		}
+
+		window.addEventListener("storage", function (event) {
+			if ((event.key === "AuthToken" || event.key === "tenant") && event.newValue) {
+				continueExistingSession();
+			}
+		});
+
+		function tryLogin(ref) {
+			$(ref).addClass("disabled");
+			$(ref).html("Logging...");
+			$.ajax({
+				url: window.ENV.API_BASE_URL + "/jwt/basic",
+				method: "GET",
+				headers: {
+					"Authorization": "Basic " + btoa($("#username").val() + ":" + $("#password").val())
+				},
+				success: function(result) {
+					$(ref).removeClass("disabled");
+					$(ref).text("Log In");
+
+					const resp = JSON.parse(result);
+
+					localStorage.removeItem("tenant");
+					localStorage.setItem("AuthToken", resp.token);
+					var tenantName = resp.tenant;
+					localStorage.setItem("loginTenant", !tenantName ? "default" : tenantName);
+					localStorage.setItem("loginUserId", $("#username").val());
+
+					openTenantSelection();
+
+				},
+				error: function(err) {
+					$(ref).removeClass("disabled");
+					$(ref).text("Log In");
+					$.toast('<div class="custom-toast"><span class="tst red"><svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" viewBox="0 0 30 30"><defs><style>.cls-1 {fill: #fff;fill-rule: evenodd;}</style></defs><g id="notification_error"><path class="cls-in" d="M275.5,28A12.5,12.5,0,1,1,288,15.5,12.514,12.514,0,0,1,275.5,28Zm0-24A11.5,11.5,0,1,0,287,15.5,11.513,11.513,0,0,0,275.5,4Zm-0.473,13.867-2.241,2.241a1.339,1.339,0,0,1-1.894-1.894l2.241-2.241a0.669,0.669,0,0,0,0-.947l-2.241-2.241a1.339,1.339,0,0,1,1.894-1.894l2.241,2.241a0.67,0.67,0,0,0,.947,0l2.24-2.241a1.339,1.339,0,0,1,1.894,1.894l-2.241,2.241a0.671,0.671,0,0,0,0,.947l2.241,2.241a1.339,1.339,0,0,1-1.894,1.894l-2.24-2.241a0.67,0.67,0,0,0-.947,0h0Z" transform="translate(-260)"/></g></svg></span><div class="t_info"><h5>Oops!</h5><span>Enter the correct username and password to log in</span></div></div>');
+				}
+			});
+		}
+		document.addEventListener("keydown", function (event) {
+			if (event.key === "Enter") {
+				const active = document.activeElement;
+
+				if (active && (active.id === "username" || active.id === "password")) {
+					event.preventDefault();
+
+					const loginBtn = document.querySelector(".btn.btn-gry");
+					if (loginBtn && !loginBtn.classList.contains("disabled")) {
+						tryLogin(loginBtn);
+					}
+				}
+			}
+		});
+
+		function installLoggingKeys(payload) {
+			localStorage.removeItem("tenant");
+			localStorage.setItem("AuthToken", payload.token);
+			localStorage.setItem("loginTenant", !payload.tenant ? "default" : payload.tenant);
+			localStorage.setItem("loginUserId", payload.userId || payload.userID || payload.email || "");
+			openTenantSelection();
+		}
+
+		continueExistingSession();
+
+	</script>
+
+</html>

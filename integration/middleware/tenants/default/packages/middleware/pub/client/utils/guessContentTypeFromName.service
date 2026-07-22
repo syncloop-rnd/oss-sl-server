@@ -1,0 +1,57 @@
+{
+  "input" : [ {
+    "id" : "j1_1",
+    "text" : "name",
+    "li_attr" : {
+      "id" : "j1_1"
+    },
+    "a_attr" : {
+      "href" : "#",
+      "id" : "j1_1_anchor"
+    },
+    "state" : {
+      "loaded" : true,
+      "opened" : false,
+      "selected" : false,
+      "disabled" : false,
+      "hidden" : false
+    },
+    "data" : {
+      "guid" : "94c834fe-3215-4766-90dc-1eb1c36a41bf",
+      "columnType" : "-1"
+    },
+    "children" : [ ],
+    "type" : "string"
+  } ],
+  "output" : [ {
+    "id" : "j2_1",
+    "text" : "mimeType",
+    "li_attr" : {
+      "id" : "j2_1"
+    },
+    "a_attr" : {
+      "href" : "#",
+      "id" : "j2_1_anchor"
+    },
+    "state" : {
+      "loaded" : true,
+      "opened" : false,
+      "selected" : true,
+      "disabled" : false
+    },
+    "data" : {
+      "guid" : "d6a428ef-f018-4249-af78-f1ed33dbc285",
+      "columnType" : "-1"
+    },
+    "children" : [ ],
+    "type" : "string"
+  } ],
+  "package" : "cGFja2FnZSBwYWNrYWdlcy5taWRkbGV3YXJlLnB1Yi5jbGllbnQudXRpbHM7",
+  "imports" : "aW1wb3J0IGNvbS5la2EubWlkZGxld2FyZS5zZXJ2aWNlLkRhdGFQaXBlbGluZTsKaW1wb3J0IGNvbS5la2EubWlkZGxld2FyZS50ZW1wbGF0ZS5TbmlwcGV0RXhjZXB0aW9uOwoKaW1wb3J0IGphdmEubmV0LlVSTENvbm5lY3Rpb247",
+  "main" : "dHJ5IHsKICAgICAgICAgICAgU3RyaW5nIG5hbWUgPSBkYXRhUGlwZWxpbmUuZ2V0U3RyaW5nKCJuYW1lIik7CiAgICAgICAgICAgIFN0cmluZyBtaW1lVHlwZSA9IFVSTENvbm5lY3Rpb24uZ3Vlc3NDb250ZW50VHlwZUZyb21OYW1lKG5hbWUpOwogICAgICAgICAgICBkYXRhUGlwZWxpbmUucHV0KCJtaW1lVHlwZSIsIG1pbWVUeXBlKTsKICAgICAgICB9IGNhdGNoIChUaHJvd2FibGUgZSkgewogICAgICAgICAgICBkYXRhUGlwZWxpbmUuY2xlYXIoKTsKICAgICAgICAgICAgZGF0YVBpcGVsaW5lLnB1dCgiZXJyb3IiLCBlLmdldE1lc3NhZ2UoKSk7CiAgICAgICAgICAgIGUucHJpbnRTdGFja1RyYWNlKCk7CiAgICAgICAgfQ==",
+  "staticWorkspace" : "",
+  "version" : "v1",
+  "consumers" : "",
+  "developers" : "",
+  "lockedByUser" : "admin"
+}

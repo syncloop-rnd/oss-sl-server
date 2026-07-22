@@ -1,0 +1,2225 @@
+{
+  "latest": {
+    "createdTS": "",
+    "input": [
+      {
+        "id": "j2_4",
+        "text": "*payload",
+        "li_attr": {
+          "id": "j2_4"
+        },
+        "a_attr": {
+          "href": "#",
+          "id": "j2_4_anchor"
+        },
+        "state": {
+          "loaded": true,
+          "opened": true,
+          "selected": true,
+          "disabled": false,
+          "hidden": false
+        },
+        "data": {},
+        "children": [
+          {
+            "id": "j2_3",
+            "text": "request",
+            "li_attr": {
+              "id": "j2_3"
+            },
+            "a_attr": {
+              "href": "#",
+              "id": "j2_3_anchor"
+            },
+            "state": {
+              "loaded": true,
+              "opened": true,
+              "selected": false,
+              "disabled": false,
+              "hidden": false
+            },
+            "data": {},
+            "children": [
+              {
+                "id": "j2_1",
+                "text": "includeDefaultTerminal",
+                "li_attr": {
+                  "id": "j2_1"
+                },
+                "a_attr": {
+                  "href": "#",
+                  "id": "j2_1_anchor"
+                },
+                "state": {
+                  "loaded": true,
+                  "opened": false,
+                  "selected": false,
+                  "disabled": false,
+                  "hidden": false
+                },
+                "data": {},
+                "children": [],
+                "type": "boolean"
+              },
+              {
+                "id": "j2_2",
+                "text": "defaultTerminalRoot",
+                "li_attr": {
+                  "id": "j2_2"
+                },
+                "a_attr": {
+                  "href": "#",
+                  "id": "j2_2_anchor"
+                },
+                "state": {
+                  "loaded": true,
+                  "opened": false,
+                  "selected": false,
+                  "disabled": false,
+                  "hidden": false
+                },
+                "data": {},
+                "children": [],
+                "type": "string"
+              }
+            ],
+            "type": "document"
+          }
+        ],
+        "type": "document"
+      }
+    ],
+    "output": [
+      {
+        "id": "j3_1",
+        "text": "status",
+        "li_attr": {
+          "id": "j3_1"
+        },
+        "a_attr": {
+          "href": "#",
+          "id": "j3_1_anchor"
+        },
+        "state": {
+          "loaded": true,
+          "opened": false,
+          "selected": false,
+          "disabled": false,
+          "hidden": false
+        },
+        "data": {},
+        "children": [],
+        "type": "string"
+      },
+      {
+        "id": "j3_2",
+        "text": "error",
+        "li_attr": {
+          "id": "j3_2"
+        },
+        "a_attr": {
+          "href": "#",
+          "id": "j3_2_anchor"
+        },
+        "state": {
+          "loaded": true,
+          "opened": false,
+          "selected": false,
+          "disabled": false,
+          "hidden": false
+        },
+        "data": {},
+        "children": [],
+        "type": "string"
+      },
+      {
+        "id": "j3_66",
+        "text": "result",
+        "li_attr": {
+          "id": "j3_66"
+        },
+        "a_attr": {
+          "href": "#",
+          "id": "j3_66_anchor"
+        },
+        "state": {
+          "loaded": true,
+          "opened": true,
+          "selected": false,
+          "disabled": false,
+          "hidden": false
+        },
+        "data": {},
+        "children": [
+          {
+            "id": "j3_3",
+            "text": "success",
+            "li_attr": {
+              "id": "j3_3"
+            },
+            "a_attr": {
+              "href": "#",
+              "id": "j3_3_anchor"
+            },
+            "state": {
+              "loaded": true,
+              "opened": false,
+              "selected": false,
+              "disabled": false,
+              "hidden": false
+            },
+            "data": {},
+            "children": [],
+            "type": "boolean"
+          },
+          {
+            "id": "j3_4",
+            "text": "message",
+            "li_attr": {
+              "id": "j3_4"
+            },
+            "a_attr": {
+              "href": "#",
+              "id": "j3_4_anchor"
+            },
+            "state": {
+              "loaded": true,
+              "opened": false,
+              "selected": false,
+              "disabled": false,
+              "hidden": false
+            },
+            "data": {},
+            "children": [],
+            "type": "string"
+          },
+          {
+            "id": "j3_5",
+            "text": "migratedAt",
+            "li_attr": {
+              "id": "j3_5"
+            },
+            "a_attr": {
+              "href": "#",
+              "id": "j3_5_anchor"
+            },
+            "state": {
+              "loaded": true,
+              "opened": false,
+              "selected": false,
+              "disabled": false,
+              "hidden": false
+            },
+            "data": {},
+            "children": [],
+            "type": "string"
+          },
+          {
+            "id": "j3_51",
+            "text": "export",
+            "li_attr": {
+              "id": "j3_51"
+            },
+            "a_attr": {
+              "href": "#",
+              "id": "j3_51_anchor"
+            },
+            "state": {
+              "loaded": true,
+              "opened": true,
+              "selected": false,
+              "disabled": false,
+              "hidden": false
+            },
+            "data": {},
+            "children": [
+              {
+                "id": "j3_6",
+                "text": "success",
+                "li_attr": {
+                  "id": "j3_6"
+                },
+                "a_attr": {
+                  "href": "#",
+                  "id": "j3_6_anchor"
+                },
+                "state": {
+                  "loaded": true,
+                  "opened": false,
+                  "selected": false,
+                  "disabled": false,
+                  "hidden": false
+                },
+                "data": {},
+                "children": [],
+                "type": "boolean"
+              },
+              {
+                "id": "j3_7",
+                "text": "message",
+                "li_attr": {
+                  "id": "j3_7"
+                },
+                "a_attr": {
+                  "href": "#",
+                  "id": "j3_7_anchor"
+                },
+                "state": {
+                  "loaded": true,
+                  "opened": false,
+                  "selected": false,
+                  "disabled": false,
+                  "hidden": false
+                },
+                "data": {},
+                "children": [],
+                "type": "string"
+              },
+              {
+                "id": "j3_8",
+                "text": "exportedAt",
+                "li_attr": {
+                  "id": "j3_8"
+                },
+                "a_attr": {
+                  "href": "#",
+                  "id": "j3_8_anchor"
+                },
+                "state": {
+                  "loaded": true,
+                  "opened": false,
+                  "selected": false,
+                  "disabled": false,
+                  "hidden": false
+                },
+                "data": {},
+                "children": [],
+                "type": "string"
+              },
+              {
+                "id": "j3_13",
+                "text": "counts",
+                "li_attr": {
+                  "id": "j3_13"
+                },
+                "a_attr": {
+                  "href": "#",
+                  "id": "j3_13_anchor"
+                },
+                "state": {
+                  "loaded": true,
+                  "opened": true,
+                  "selected": false,
+                  "disabled": false,
+                  "hidden": false
+                },
+                "data": {},
+                "children": [
+                  {
+                    "id": "j3_9",
+                    "text": "MCPNEST_MCP",
+                    "li_attr": {
+                      "id": "j3_9"
+                    },
+                    "a_attr": {
+                      "href": "#",
+                      "id": "j3_9_anchor"
+                    },
+                    "state": {
+                      "loaded": true,
+                      "opened": false,
+                      "selected": false,
+                      "disabled": false,
+                      "hidden": false
+                    },
+                    "data": {},
+                    "children": [],
+                    "type": "integer"
+                  },
+                  {
+                    "id": "j3_10",
+                    "text": "MCPNEST_MCP_TOOL",
+                    "li_attr": {
+                      "id": "j3_10"
+                    },
+                    "a_attr": {
+                      "href": "#",
+                      "id": "j3_10_anchor"
+                    },
+                    "state": {
+                      "loaded": true,
+                      "opened": false,
+                      "selected": false,
+                      "disabled": false,
+                      "hidden": false
+                    },
+                    "data": {},
+                    "children": [],
+                    "type": "integer"
+                  },
+                  {
+                    "id": "j3_11",
+                    "text": "MCPNEST_MCP_TOOL_COLLECTION",
+                    "li_attr": {
+                      "id": "j3_11"
+                    },
+                    "a_attr": {
+                      "href": "#",
+                      "id": "j3_11_anchor"
+                    },
+                    "state": {
+                      "loaded": true,
+                      "opened": false,
+                      "selected": false,
+                      "disabled": false,
+                      "hidden": false
+                    },
+                    "data": {},
+                    "children": [],
+                    "type": "integer"
+                  },
+                  {
+                    "id": "j3_12",
+                    "text": "MCPNEST_MCP_TOOL_COLLECTION_MAP",
+                    "li_attr": {
+                      "id": "j3_12"
+                    },
+                    "a_attr": {
+                      "href": "#",
+                      "id": "j3_12_anchor"
+                    },
+                    "state": {
+                      "loaded": true,
+                      "opened": true,
+                      "selected": false,
+                      "disabled": false,
+                      "hidden": false
+                    },
+                    "data": {},
+                    "children": [
+                      {
+                        "id": "j3_12_551903057",
+                        "text": "ALIAS",
+                        "li_attr": {
+                          "id": "j3_12_551903057"
+                        },
+                        "a_attr": {
+                          "href": "#",
+                          "id": "j3_12_551903057_anchor"
+                        },
+                        "state": {
+                          "loaded": true,
+                          "opened": false,
+                          "selected": false,
+                          "disabled": false,
+                          "hidden": false
+                        },
+                        "data": {},
+                        "children": [],
+                        "type": "string"
+                      },
+                      {
+                        "id": "j3_12_898584169",
+                        "text": "DESCRIPTION",
+                        "li_attr": {
+                          "id": "j3_12_898584169"
+                        },
+                        "a_attr": {
+                          "href": "#",
+                          "id": "j3_12_898584169_anchor"
+                        },
+                        "state": {
+                          "loaded": true,
+                          "opened": false,
+                          "selected": false,
+                          "disabled": false,
+                          "hidden": false
+                        },
+                        "data": {},
+                        "children": [],
+                        "type": "string"
+                      },
+                      {
+                        "id": "j3_12_262308735",
+                        "text": "MANAGED_PAYLOAD",
+                        "li_attr": {
+                          "id": "j3_12_262308735"
+                        },
+                        "a_attr": {
+                          "href": "#",
+                          "id": "j3_12_262308735_anchor"
+                        },
+                        "state": {
+                          "loaded": true,
+                          "opened": false,
+                          "selected": false,
+                          "disabled": false,
+                          "hidden": false
+                        },
+                        "data": {},
+                        "children": [],
+                        "type": "string"
+                      }
+                    ],
+                    "type": "integer"
+                  },
+                  {
+                    "id": "j3_13_MCPNEST_MCP_TOOL_CALL_LOG",
+                    "text": "MCPNEST_MCP_TOOL_CALL_LOG",
+                    "li_attr": {
+                      "id": "j3_13_MCPNEST_MCP_TOOL_CALL_LOG"
+                    },
+                    "a_attr": {
+                      "href": "#",
+                      "id": "j3_13_MCPNEST_MCP_TOOL_CALL_LOG_anchor"
+                    },
+                    "state": {
+                      "loaded": true,
+                      "opened": false,
+                      "selected": false,
+                      "disabled": false,
+                      "hidden": false
+                    },
+                    "data": {},
+                    "children": [],
+                    "type": "integer"
+                  }
+                ],
+                "type": "document"
+              },
+              {
+                "id": "j3_50",
+                "text": "tables",
+                "li_attr": {
+                  "id": "j3_50"
+                },
+                "a_attr": {
+                  "href": "#",
+                  "id": "j3_50_anchor"
+                },
+                "state": {
+                  "loaded": true,
+                  "opened": true,
+                  "selected": false,
+                  "disabled": false,
+                  "hidden": false
+                },
+                "data": {},
+                "children": [
+                  {
+                    "id": "j3_25",
+                    "text": "MCPNEST_MCP",
+                    "li_attr": {
+                      "id": "j3_25"
+                    },
+                    "a_attr": {
+                      "href": "#",
+                      "id": "j3_25_anchor"
+                    },
+                    "state": {
+                      "loaded": true,
+                      "opened": true,
+                      "selected": false,
+                      "disabled": false,
+                      "hidden": false
+                    },
+                    "data": {},
+                    "children": [
+                      {
+                        "id": "j3_14",
+                        "text": "UUID",
+                        "li_attr": {
+                          "id": "j3_14"
+                        },
+                        "a_attr": {
+                          "href": "#",
+                          "id": "j3_14_anchor"
+                        },
+                        "state": {
+                          "loaded": true,
+                          "opened": false,
+                          "selected": false,
+                          "disabled": false,
+                          "hidden": false
+                        },
+                        "data": {},
+                        "children": [],
+                        "type": "string"
+                      },
+                      {
+                        "id": "j3_15",
+                        "text": "MCP_ALIAS",
+                        "li_attr": {
+                          "id": "j3_15"
+                        },
+                        "a_attr": {
+                          "href": "#",
+                          "id": "j3_15_anchor"
+                        },
+                        "state": {
+                          "loaded": true,
+                          "opened": false,
+                          "selected": false,
+                          "disabled": false,
+                          "hidden": false
+                        },
+                        "data": {},
+                        "children": [],
+                        "type": "string"
+                      },
+                      {
+                        "id": "j3_16",
+                        "text": "MCP_ENDPOINT",
+                        "li_attr": {
+                          "id": "j3_16"
+                        },
+                        "a_attr": {
+                          "href": "#",
+                          "id": "j3_16_anchor"
+                        },
+                        "state": {
+                          "loaded": true,
+                          "opened": false,
+                          "selected": false,
+                          "disabled": false,
+                          "hidden": false
+                        },
+                        "data": {},
+                        "children": [],
+                        "type": "string"
+                      },
+                      {
+                        "id": "j3_17",
+                        "text": "MCP_NAME",
+                        "li_attr": {
+                          "id": "j3_17"
+                        },
+                        "a_attr": {
+                          "href": "#",
+                          "id": "j3_17_anchor"
+                        },
+                        "state": {
+                          "loaded": true,
+                          "opened": false,
+                          "selected": false,
+                          "disabled": false,
+                          "hidden": false
+                        },
+                        "data": {},
+                        "children": [],
+                        "type": "string"
+                      },
+                      {
+                        "id": "j3_18",
+                        "text": "DESCRIPTION",
+                        "li_attr": {
+                          "id": "j3_18"
+                        },
+                        "a_attr": {
+                          "href": "#",
+                          "id": "j3_18_anchor"
+                        },
+                        "state": {
+                          "loaded": true,
+                          "opened": false,
+                          "selected": false,
+                          "disabled": false,
+                          "hidden": false
+                        },
+                        "data": {},
+                        "children": [],
+                        "type": "string"
+                      },
+                      {
+                        "id": "j3_19",
+                        "text": "ENDPOINT_TYPE",
+                        "li_attr": {
+                          "id": "j3_19"
+                        },
+                        "a_attr": {
+                          "href": "#",
+                          "id": "j3_19_anchor"
+                        },
+                        "state": {
+                          "loaded": true,
+                          "opened": false,
+                          "selected": false,
+                          "disabled": false,
+                          "hidden": false
+                        },
+                        "data": {},
+                        "children": [],
+                        "type": "string"
+                      },
+                      {
+                        "id": "j3_20",
+                        "text": "AUTH_TYPE",
+                        "li_attr": {
+                          "id": "j3_20"
+                        },
+                        "a_attr": {
+                          "href": "#",
+                          "id": "j3_20_anchor"
+                        },
+                        "state": {
+                          "loaded": true,
+                          "opened": false,
+                          "selected": false,
+                          "disabled": false,
+                          "hidden": false
+                        },
+                        "data": {},
+                        "children": [],
+                        "type": "string"
+                      },
+                      {
+                        "id": "j3_21",
+                        "text": "AUTH_INFO",
+                        "li_attr": {
+                          "id": "j3_21"
+                        },
+                        "a_attr": {
+                          "href": "#",
+                          "id": "j3_21_anchor"
+                        },
+                        "state": {
+                          "loaded": true,
+                          "opened": false,
+                          "selected": false,
+                          "disabled": false,
+                          "hidden": false
+                        },
+                        "data": {},
+                        "children": [],
+                        "type": "string"
+                      },
+                      {
+                        "id": "j3_22",
+                        "text": "ENABLED",
+                        "li_attr": {
+                          "id": "j3_22"
+                        },
+                        "a_attr": {
+                          "href": "#",
+                          "id": "j3_22_anchor"
+                        },
+                        "state": {
+                          "loaded": true,
+                          "opened": false,
+                          "selected": false,
+                          "disabled": false,
+                          "hidden": false
+                        },
+                        "data": {},
+                        "children": [],
+                        "type": "boolean"
+                      },
+                      {
+                        "id": "j3_23",
+                        "text": "CREATED_AT",
+                        "li_attr": {
+                          "id": "j3_23"
+                        },
+                        "a_attr": {
+                          "href": "#",
+                          "id": "j3_23_anchor"
+                        },
+                        "state": {
+                          "loaded": true,
+                          "opened": false,
+                          "selected": false,
+                          "disabled": false,
+                          "hidden": false
+                        },
+                        "data": {},
+                        "children": [],
+                        "type": "string"
+                      },
+                      {
+                        "id": "j3_24",
+                        "text": "UPDATED_AT",
+                        "li_attr": {
+                          "id": "j3_24"
+                        },
+                        "a_attr": {
+                          "href": "#",
+                          "id": "j3_24_anchor"
+                        },
+                        "state": {
+                          "loaded": true,
+                          "opened": false,
+                          "selected": false,
+                          "disabled": false,
+                          "hidden": false
+                        },
+                        "data": {},
+                        "children": [],
+                        "type": "string"
+                      }
+                    ],
+                    "type": "documentList"
+                  },
+                  {
+                    "id": "j3_35",
+                    "text": "MCPNEST_MCP_TOOL",
+                    "li_attr": {
+                      "id": "j3_35"
+                    },
+                    "a_attr": {
+                      "href": "#",
+                      "id": "j3_35_anchor"
+                    },
+                    "state": {
+                      "loaded": true,
+                      "opened": true,
+                      "selected": false,
+                      "disabled": false,
+                      "hidden": false
+                    },
+                    "data": {},
+                    "children": [
+                      {
+                        "id": "j3_26",
+                        "text": "UUID",
+                        "li_attr": {
+                          "id": "j3_26"
+                        },
+                        "a_attr": {
+                          "href": "#",
+                          "id": "j3_26_anchor"
+                        },
+                        "state": {
+                          "loaded": true,
+                          "opened": false,
+                          "selected": false,
+                          "disabled": false,
+                          "hidden": false
+                        },
+                        "data": {},
+                        "children": [],
+                        "type": "string"
+                      },
+                      {
+                        "id": "j3_27",
+                        "text": "MCP_UUID",
+                        "li_attr": {
+                          "id": "j3_27"
+                        },
+                        "a_attr": {
+                          "href": "#",
+                          "id": "j3_27_anchor"
+                        },
+                        "state": {
+                          "loaded": true,
+                          "opened": false,
+                          "selected": false,
+                          "disabled": false,
+                          "hidden": false
+                        },
+                        "data": {},
+                        "children": [],
+                        "type": "string"
+                      },
+                      {
+                        "id": "j3_28",
+                        "text": "TOOL_NAME",
+                        "li_attr": {
+                          "id": "j3_28"
+                        },
+                        "a_attr": {
+                          "href": "#",
+                          "id": "j3_28_anchor"
+                        },
+                        "state": {
+                          "loaded": true,
+                          "opened": false,
+                          "selected": false,
+                          "disabled": false,
+                          "hidden": false
+                        },
+                        "data": {},
+                        "children": [],
+                        "type": "string"
+                      },
+                      {
+                        "id": "j3_29",
+                        "text": "DESCRIPTION",
+                        "li_attr": {
+                          "id": "j3_29"
+                        },
+                        "a_attr": {
+                          "href": "#",
+                          "id": "j3_29_anchor"
+                        },
+                        "state": {
+                          "loaded": true,
+                          "opened": false,
+                          "selected": false,
+                          "disabled": false,
+                          "hidden": false
+                        },
+                        "data": {},
+                        "children": [],
+                        "type": "string"
+                      },
+                      {
+                        "id": "j3_30",
+                        "text": "INPUT_SCHEMA",
+                        "li_attr": {
+                          "id": "j3_30"
+                        },
+                        "a_attr": {
+                          "href": "#",
+                          "id": "j3_30_anchor"
+                        },
+                        "state": {
+                          "loaded": true,
+                          "opened": false,
+                          "selected": false,
+                          "disabled": false,
+                          "hidden": false
+                        },
+                        "data": {},
+                        "children": [],
+                        "type": "string"
+                      },
+                      {
+                        "id": "j3_31",
+                        "text": "USAGE_DETAILS",
+                        "li_attr": {
+                          "id": "j3_31"
+                        },
+                        "a_attr": {
+                          "href": "#",
+                          "id": "j3_31_anchor"
+                        },
+                        "state": {
+                          "loaded": true,
+                          "opened": false,
+                          "selected": false,
+                          "disabled": false,
+                          "hidden": false
+                        },
+                        "data": {},
+                        "children": [],
+                        "type": "string"
+                      },
+                      {
+                        "id": "j3_32",
+                        "text": "ENABLED",
+                        "li_attr": {
+                          "id": "j3_32"
+                        },
+                        "a_attr": {
+                          "href": "#",
+                          "id": "j3_32_anchor"
+                        },
+                        "state": {
+                          "loaded": true,
+                          "opened": false,
+                          "selected": false,
+                          "disabled": false,
+                          "hidden": false
+                        },
+                        "data": {},
+                        "children": [],
+                        "type": "boolean"
+                      },
+                      {
+                        "id": "j3_33",
+                        "text": "CREATED_AT",
+                        "li_attr": {
+                          "id": "j3_33"
+                        },
+                        "a_attr": {
+                          "href": "#",
+                          "id": "j3_33_anchor"
+                        },
+                        "state": {
+                          "loaded": true,
+                          "opened": false,
+                          "selected": false,
+                          "disabled": false,
+                          "hidden": false
+                        },
+                        "data": {},
+                        "children": [],
+                        "type": "string"
+                      },
+                      {
+                        "id": "j3_34",
+                        "text": "UPDATED_AT",
+                        "li_attr": {
+                          "id": "j3_34"
+                        },
+                        "a_attr": {
+                          "href": "#",
+                          "id": "j3_34_anchor"
+                        },
+                        "state": {
+                          "loaded": true,
+                          "opened": false,
+                          "selected": false,
+                          "disabled": false,
+                          "hidden": false
+                        },
+                        "data": {},
+                        "children": [],
+                        "type": "string"
+                      }
+                    ],
+                    "type": "documentList"
+                  },
+                  {
+                    "id": "j3_42",
+                    "text": "MCPNEST_MCP_TOOL_COLLECTION",
+                    "li_attr": {
+                      "id": "j3_42"
+                    },
+                    "a_attr": {
+                      "href": "#",
+                      "id": "j3_42_anchor"
+                    },
+                    "state": {
+                      "loaded": true,
+                      "opened": true,
+                      "selected": false,
+                      "disabled": false,
+                      "hidden": false
+                    },
+                    "data": {},
+                    "children": [
+                      {
+                        "id": "j3_36",
+                        "text": "UUID",
+                        "li_attr": {
+                          "id": "j3_36"
+                        },
+                        "a_attr": {
+                          "href": "#",
+                          "id": "j3_36_anchor"
+                        },
+                        "state": {
+                          "loaded": true,
+                          "opened": false,
+                          "selected": false,
+                          "disabled": false,
+                          "hidden": false
+                        },
+                        "data": {},
+                        "children": [],
+                        "type": "string"
+                      },
+                      {
+                        "id": "j3_37",
+                        "text": "COLLECTION_NAME",
+                        "li_attr": {
+                          "id": "j3_37"
+                        },
+                        "a_attr": {
+                          "href": "#",
+                          "id": "j3_37_anchor"
+                        },
+                        "state": {
+                          "loaded": true,
+                          "opened": false,
+                          "selected": false,
+                          "disabled": false,
+                          "hidden": false
+                        },
+                        "data": {},
+                        "children": [],
+                        "type": "string"
+                      },
+                      {
+                        "id": "j3_38",
+                        "text": "DESCRIPTION",
+                        "li_attr": {
+                          "id": "j3_38"
+                        },
+                        "a_attr": {
+                          "href": "#",
+                          "id": "j3_38_anchor"
+                        },
+                        "state": {
+                          "loaded": true,
+                          "opened": false,
+                          "selected": false,
+                          "disabled": false,
+                          "hidden": false
+                        },
+                        "data": {},
+                        "children": [],
+                        "type": "string"
+                      },
+                      {
+                        "id": "j3_39",
+                        "text": "ENABLED",
+                        "li_attr": {
+                          "id": "j3_39"
+                        },
+                        "a_attr": {
+                          "href": "#",
+                          "id": "j3_39_anchor"
+                        },
+                        "state": {
+                          "loaded": true,
+                          "opened": false,
+                          "selected": false,
+                          "disabled": false,
+                          "hidden": false
+                        },
+                        "data": {},
+                        "children": [],
+                        "type": "boolean"
+                      },
+                      {
+                        "id": "j3_40",
+                        "text": "CREATED_AT",
+                        "li_attr": {
+                          "id": "j3_40"
+                        },
+                        "a_attr": {
+                          "href": "#",
+                          "id": "j3_40_anchor"
+                        },
+                        "state": {
+                          "loaded": true,
+                          "opened": false,
+                          "selected": false,
+                          "disabled": false,
+                          "hidden": false
+                        },
+                        "data": {},
+                        "children": [],
+                        "type": "string"
+                      },
+                      {
+                        "id": "j3_41",
+                        "text": "UPDATED_AT",
+                        "li_attr": {
+                          "id": "j3_41"
+                        },
+                        "a_attr": {
+                          "href": "#",
+                          "id": "j3_41_anchor"
+                        },
+                        "state": {
+                          "loaded": true,
+                          "opened": false,
+                          "selected": false,
+                          "disabled": false,
+                          "hidden": false
+                        },
+                        "data": {},
+                        "children": [],
+                        "type": "string"
+                      }
+                    ],
+                    "type": "documentList"
+                  },
+                  {
+                    "id": "j3_49",
+                    "text": "MCPNEST_MCP_TOOL_COLLECTION_MAP",
+                    "li_attr": {
+                      "id": "j3_49"
+                    },
+                    "a_attr": {
+                      "href": "#",
+                      "id": "j3_49_anchor"
+                    },
+                    "state": {
+                      "loaded": true,
+                      "opened": true,
+                      "selected": false,
+                      "disabled": false,
+                      "hidden": false
+                    },
+                    "data": {},
+                    "children": [
+                      {
+                        "id": "j3_43",
+                        "text": "UUID",
+                        "li_attr": {
+                          "id": "j3_43"
+                        },
+                        "a_attr": {
+                          "href": "#",
+                          "id": "j3_43_anchor"
+                        },
+                        "state": {
+                          "loaded": true,
+                          "opened": false,
+                          "selected": false,
+                          "disabled": false,
+                          "hidden": false
+                        },
+                        "data": {},
+                        "children": [],
+                        "type": "string"
+                      },
+                      {
+                        "id": "j3_44",
+                        "text": "COLLECTION_UUID",
+                        "li_attr": {
+                          "id": "j3_44"
+                        },
+                        "a_attr": {
+                          "href": "#",
+                          "id": "j3_44_anchor"
+                        },
+                        "state": {
+                          "loaded": true,
+                          "opened": false,
+                          "selected": false,
+                          "disabled": false,
+                          "hidden": false
+                        },
+                        "data": {},
+                        "children": [],
+                        "type": "string"
+                      },
+                      {
+                        "id": "j3_45",
+                        "text": "TOOL_UUID",
+                        "li_attr": {
+                          "id": "j3_45"
+                        },
+                        "a_attr": {
+                          "href": "#",
+                          "id": "j3_45_anchor"
+                        },
+                        "state": {
+                          "loaded": true,
+                          "opened": false,
+                          "selected": false,
+                          "disabled": false,
+                          "hidden": false
+                        },
+                        "data": {},
+                        "children": [],
+                        "type": "string"
+                      },
+                      {
+                        "id": "j3_46",
+                        "text": "ENABLED",
+                        "li_attr": {
+                          "id": "j3_46"
+                        },
+                        "a_attr": {
+                          "href": "#",
+                          "id": "j3_46_anchor"
+                        },
+                        "state": {
+                          "loaded": true,
+                          "opened": false,
+                          "selected": false,
+                          "disabled": false,
+                          "hidden": false
+                        },
+                        "data": {},
+                        "children": [],
+                        "type": "boolean"
+                      },
+                      {
+                        "id": "j3_47",
+                        "text": "CREATED_AT",
+                        "li_attr": {
+                          "id": "j3_47"
+                        },
+                        "a_attr": {
+                          "href": "#",
+                          "id": "j3_47_anchor"
+                        },
+                        "state": {
+                          "loaded": true,
+                          "opened": false,
+                          "selected": false,
+                          "disabled": false,
+                          "hidden": false
+                        },
+                        "data": {},
+                        "children": [],
+                        "type": "string"
+                      },
+                      {
+                        "id": "j3_48",
+                        "text": "UPDATED_AT",
+                        "li_attr": {
+                          "id": "j3_48"
+                        },
+                        "a_attr": {
+                          "href": "#",
+                          "id": "j3_48_anchor"
+                        },
+                        "state": {
+                          "loaded": true,
+                          "opened": false,
+                          "selected": false,
+                          "disabled": false,
+                          "hidden": false
+                        },
+                        "data": {},
+                        "children": [],
+                        "type": "string"
+                      },
+                      {
+                        "id": "j3_49_82862339",
+                        "text": "ALIAS",
+                        "li_attr": {
+                          "id": "j3_49_82862339"
+                        },
+                        "a_attr": {
+                          "href": "#",
+                          "id": "j3_49_82862339_anchor"
+                        },
+                        "state": {
+                          "loaded": true,
+                          "opened": false,
+                          "selected": false,
+                          "disabled": false,
+                          "hidden": false
+                        },
+                        "data": {},
+                        "children": [],
+                        "type": "string"
+                      },
+                      {
+                        "id": "j3_49_870790664",
+                        "text": "DESCRIPTION",
+                        "li_attr": {
+                          "id": "j3_49_870790664"
+                        },
+                        "a_attr": {
+                          "href": "#",
+                          "id": "j3_49_870790664_anchor"
+                        },
+                        "state": {
+                          "loaded": true,
+                          "opened": false,
+                          "selected": false,
+                          "disabled": false,
+                          "hidden": false
+                        },
+                        "data": {},
+                        "children": [],
+                        "type": "string"
+                      },
+                      {
+                        "id": "j3_49_331822946",
+                        "text": "MANAGED_PAYLOAD",
+                        "li_attr": {
+                          "id": "j3_49_331822946"
+                        },
+                        "a_attr": {
+                          "href": "#",
+                          "id": "j3_49_331822946_anchor"
+                        },
+                        "state": {
+                          "loaded": true,
+                          "opened": false,
+                          "selected": false,
+                          "disabled": false,
+                          "hidden": false
+                        },
+                        "data": {},
+                        "children": [],
+                        "type": "string"
+                      }
+                    ],
+                    "type": "documentList"
+                  },
+                  {
+                    "id": "j3_50_MCPNEST_MCP_TOOL_CALL_LOG",
+                    "text": "MCPNEST_MCP_TOOL_CALL_LOG",
+                    "li_attr": {
+                      "id": "j3_50_MCPNEST_MCP_TOOL_CALL_LOG"
+                    },
+                    "a_attr": {
+                      "href": "#",
+                      "id": "j3_50_MCPNEST_MCP_TOOL_CALL_LOG_anchor"
+                    },
+                    "state": {
+                      "loaded": true,
+                      "opened": true,
+                      "selected": false,
+                      "disabled": false,
+                      "hidden": false
+                    },
+                    "data": {},
+                    "children": [
+                      {
+                        "id": "j3_50_MCPNEST_MCP_TOOL_CALL_LOG_UUID",
+                        "text": "UUID",
+                        "li_attr": {
+                          "id": "j3_50_MCPNEST_MCP_TOOL_CALL_LOG_UUID"
+                        },
+                        "a_attr": {
+                          "href": "#",
+                          "id": "j3_50_MCPNEST_MCP_TOOL_CALL_LOG_UUID_anchor"
+                        },
+                        "state": {
+                          "loaded": true,
+                          "opened": false,
+                          "selected": false,
+                          "disabled": false,
+                          "hidden": false
+                        },
+                        "data": {},
+                        "children": [],
+                        "type": "string"
+                      },
+                      {
+                        "id": "j3_50_MCPNEST_MCP_TOOL_CALL_LOG_USER_ID",
+                        "text": "USER_ID",
+                        "li_attr": {
+                          "id": "j3_50_MCPNEST_MCP_TOOL_CALL_LOG_USER_ID"
+                        },
+                        "a_attr": {
+                          "href": "#",
+                          "id": "j3_50_MCPNEST_MCP_TOOL_CALL_LOG_USER_ID_anchor"
+                        },
+                        "state": {
+                          "loaded": true,
+                          "opened": false,
+                          "selected": false,
+                          "disabled": false,
+                          "hidden": false
+                        },
+                        "data": {},
+                        "children": [],
+                        "type": "string"
+                      },
+                      {
+                        "id": "j3_50_MCPNEST_MCP_TOOL_CALL_LOG_TENANT_NAME",
+                        "text": "TENANT_NAME",
+                        "li_attr": {
+                          "id": "j3_50_MCPNEST_MCP_TOOL_CALL_LOG_TENANT_NAME"
+                        },
+                        "a_attr": {
+                          "href": "#",
+                          "id": "j3_50_MCPNEST_MCP_TOOL_CALL_LOG_TENANT_NAME_anchor"
+                        },
+                        "state": {
+                          "loaded": true,
+                          "opened": false,
+                          "selected": false,
+                          "disabled": false,
+                          "hidden": false
+                        },
+                        "data": {},
+                        "children": [],
+                        "type": "string"
+                      },
+                      {
+                        "id": "j3_50_MCPNEST_MCP_TOOL_CALL_LOG_MCP_ALIAS",
+                        "text": "MCP_ALIAS",
+                        "li_attr": {
+                          "id": "j3_50_MCPNEST_MCP_TOOL_CALL_LOG_MCP_ALIAS"
+                        },
+                        "a_attr": {
+                          "href": "#",
+                          "id": "j3_50_MCPNEST_MCP_TOOL_CALL_LOG_MCP_ALIAS_anchor"
+                        },
+                        "state": {
+                          "loaded": true,
+                          "opened": false,
+                          "selected": false,
+                          "disabled": false,
+                          "hidden": false
+                        },
+                        "data": {},
+                        "children": [],
+                        "type": "string"
+                      },
+                      {
+                        "id": "j3_50_MCPNEST_MCP_TOOL_CALL_LOG_COLLECTION_ALIAS",
+                        "text": "COLLECTION_ALIAS",
+                        "li_attr": {
+                          "id": "j3_50_MCPNEST_MCP_TOOL_CALL_LOG_COLLECTION_ALIAS"
+                        },
+                        "a_attr": {
+                          "href": "#",
+                          "id": "j3_50_MCPNEST_MCP_TOOL_CALL_LOG_COLLECTION_ALIAS_anchor"
+                        },
+                        "state": {
+                          "loaded": true,
+                          "opened": false,
+                          "selected": false,
+                          "disabled": false,
+                          "hidden": false
+                        },
+                        "data": {},
+                        "children": [],
+                        "type": "string"
+                      },
+                      {
+                        "id": "j3_50_MCPNEST_MCP_TOOL_CALL_LOG_MCP_TOOL_ID",
+                        "text": "MCP_TOOL_ID",
+                        "li_attr": {
+                          "id": "j3_50_MCPNEST_MCP_TOOL_CALL_LOG_MCP_TOOL_ID"
+                        },
+                        "a_attr": {
+                          "href": "#",
+                          "id": "j3_50_MCPNEST_MCP_TOOL_CALL_LOG_MCP_TOOL_ID_anchor"
+                        },
+                        "state": {
+                          "loaded": true,
+                          "opened": false,
+                          "selected": false,
+                          "disabled": false,
+                          "hidden": false
+                        },
+                        "data": {},
+                        "children": [],
+                        "type": "string"
+                      },
+                      {
+                        "id": "j3_50_MCPNEST_MCP_TOOL_CALL_LOG_COLLECTION_TOOL_UUID",
+                        "text": "COLLECTION_TOOL_UUID",
+                        "li_attr": {
+                          "id": "j3_50_MCPNEST_MCP_TOOL_CALL_LOG_COLLECTION_TOOL_UUID"
+                        },
+                        "a_attr": {
+                          "href": "#",
+                          "id": "j3_50_MCPNEST_MCP_TOOL_CALL_LOG_COLLECTION_TOOL_UUID_anchor"
+                        },
+                        "state": {
+                          "loaded": true,
+                          "opened": false,
+                          "selected": false,
+                          "disabled": false,
+                          "hidden": false
+                        },
+                        "data": {},
+                        "children": [],
+                        "type": "string"
+                      },
+                      {
+                        "id": "j3_50_MCPNEST_MCP_TOOL_CALL_LOG_REQUEST_START_TIME",
+                        "text": "REQUEST_START_TIME",
+                        "li_attr": {
+                          "id": "j3_50_MCPNEST_MCP_TOOL_CALL_LOG_REQUEST_START_TIME"
+                        },
+                        "a_attr": {
+                          "href": "#",
+                          "id": "j3_50_MCPNEST_MCP_TOOL_CALL_LOG_REQUEST_START_TIME_anchor"
+                        },
+                        "state": {
+                          "loaded": true,
+                          "opened": false,
+                          "selected": false,
+                          "disabled": false,
+                          "hidden": false
+                        },
+                        "data": {},
+                        "children": [],
+                        "type": "string"
+                      },
+                      {
+                        "id": "j3_50_MCPNEST_MCP_TOOL_CALL_LOG_RESPONSE_RECEIVED_TIME",
+                        "text": "RESPONSE_RECEIVED_TIME",
+                        "li_attr": {
+                          "id": "j3_50_MCPNEST_MCP_TOOL_CALL_LOG_RESPONSE_RECEIVED_TIME"
+                        },
+                        "a_attr": {
+                          "href": "#",
+                          "id": "j3_50_MCPNEST_MCP_TOOL_CALL_LOG_RESPONSE_RECEIVED_TIME_anchor"
+                        },
+                        "state": {
+                          "loaded": true,
+                          "opened": false,
+                          "selected": false,
+                          "disabled": false,
+                          "hidden": false
+                        },
+                        "data": {},
+                        "children": [],
+                        "type": "string"
+                      },
+                      {
+                        "id": "j3_50_MCPNEST_MCP_TOOL_CALL_LOG_STATUS",
+                        "text": "STATUS",
+                        "li_attr": {
+                          "id": "j3_50_MCPNEST_MCP_TOOL_CALL_LOG_STATUS"
+                        },
+                        "a_attr": {
+                          "href": "#",
+                          "id": "j3_50_MCPNEST_MCP_TOOL_CALL_LOG_STATUS_anchor"
+                        },
+                        "state": {
+                          "loaded": true,
+                          "opened": false,
+                          "selected": false,
+                          "disabled": false,
+                          "hidden": false
+                        },
+                        "data": {},
+                        "children": [],
+                        "type": "string"
+                      },
+                      {
+                        "id": "j3_50_MCPNEST_MCP_TOOL_CALL_LOG_ERROR",
+                        "text": "ERROR",
+                        "li_attr": {
+                          "id": "j3_50_MCPNEST_MCP_TOOL_CALL_LOG_ERROR"
+                        },
+                        "a_attr": {
+                          "href": "#",
+                          "id": "j3_50_MCPNEST_MCP_TOOL_CALL_LOG_ERROR_anchor"
+                        },
+                        "state": {
+                          "loaded": true,
+                          "opened": false,
+                          "selected": false,
+                          "disabled": false,
+                          "hidden": false
+                        },
+                        "data": {},
+                        "children": [],
+                        "type": "string"
+                      },
+                      {
+                        "id": "j3_50_MCPNEST_MCP_TOOL_CALL_LOG_FAILED_REQUEST_PAYLOAD",
+                        "text": "FAILED_REQUEST_PAYLOAD",
+                        "li_attr": {
+                          "id": "j3_50_MCPNEST_MCP_TOOL_CALL_LOG_FAILED_REQUEST_PAYLOAD"
+                        },
+                        "a_attr": {
+                          "href": "#",
+                          "id": "j3_50_MCPNEST_MCP_TOOL_CALL_LOG_FAILED_REQUEST_PAYLOAD_anchor"
+                        },
+                        "state": {
+                          "loaded": true,
+                          "opened": false,
+                          "selected": false,
+                          "disabled": false,
+                          "hidden": false
+                        },
+                        "data": {},
+                        "children": [],
+                        "type": "string"
+                      },
+                      {
+                        "id": "j3_50_MCPNEST_MCP_TOOL_CALL_LOG_CREATED_AT",
+                        "text": "CREATED_AT",
+                        "li_attr": {
+                          "id": "j3_50_MCPNEST_MCP_TOOL_CALL_LOG_CREATED_AT"
+                        },
+                        "a_attr": {
+                          "href": "#",
+                          "id": "j3_50_MCPNEST_MCP_TOOL_CALL_LOG_CREATED_AT_anchor"
+                        },
+                        "state": {
+                          "loaded": true,
+                          "opened": false,
+                          "selected": false,
+                          "disabled": false,
+                          "hidden": false
+                        },
+                        "data": {},
+                        "children": [],
+                        "type": "string"
+                      },
+                      {
+                        "id": "j3_50_MCPNEST_MCP_TOOL_CALL_LOG_UPDATED_AT",
+                        "text": "UPDATED_AT",
+                        "li_attr": {
+                          "id": "j3_50_MCPNEST_MCP_TOOL_CALL_LOG_UPDATED_AT"
+                        },
+                        "a_attr": {
+                          "href": "#",
+                          "id": "j3_50_MCPNEST_MCP_TOOL_CALL_LOG_UPDATED_AT_anchor"
+                        },
+                        "state": {
+                          "loaded": true,
+                          "opened": false,
+                          "selected": false,
+                          "disabled": false,
+                          "hidden": false
+                        },
+                        "data": {},
+                        "children": [],
+                        "type": "string"
+                      }
+                    ],
+                    "type": "documentList"
+                  }
+                ],
+                "type": "document"
+              }
+            ],
+            "type": "document"
+          },
+          {
+            "id": "j3_56",
+            "text": "clearedCounts",
+            "li_attr": {
+              "id": "j3_56"
+            },
+            "a_attr": {
+              "href": "#",
+              "id": "j3_56_anchor"
+            },
+            "state": {
+              "loaded": true,
+              "opened": true,
+              "selected": false,
+              "disabled": false,
+              "hidden": false
+            },
+            "data": {},
+            "children": [
+              {
+                "id": "j3_52",
+                "text": "MCPNEST_MCP",
+                "li_attr": {
+                  "id": "j3_52"
+                },
+                "a_attr": {
+                  "href": "#",
+                  "id": "j3_52_anchor"
+                },
+                "state": {
+                  "loaded": true,
+                  "opened": false,
+                  "selected": false,
+                  "disabled": false,
+                  "hidden": false
+                },
+                "data": {},
+                "children": [],
+                "type": "integer"
+              },
+              {
+                "id": "j3_53",
+                "text": "MCPNEST_MCP_TOOL",
+                "li_attr": {
+                  "id": "j3_53"
+                },
+                "a_attr": {
+                  "href": "#",
+                  "id": "j3_53_anchor"
+                },
+                "state": {
+                  "loaded": true,
+                  "opened": false,
+                  "selected": false,
+                  "disabled": false,
+                  "hidden": false
+                },
+                "data": {},
+                "children": [],
+                "type": "integer"
+              },
+              {
+                "id": "j3_54",
+                "text": "MCPNEST_MCP_TOOL_COLLECTION",
+                "li_attr": {
+                  "id": "j3_54"
+                },
+                "a_attr": {
+                  "href": "#",
+                  "id": "j3_54_anchor"
+                },
+                "state": {
+                  "loaded": true,
+                  "opened": false,
+                  "selected": false,
+                  "disabled": false,
+                  "hidden": false
+                },
+                "data": {},
+                "children": [],
+                "type": "integer"
+              },
+              {
+                "id": "j3_55",
+                "text": "MCPNEST_MCP_TOOL_COLLECTION_MAP",
+                "li_attr": {
+                  "id": "j3_55"
+                },
+                "a_attr": {
+                  "href": "#",
+                  "id": "j3_55_anchor"
+                },
+                "state": {
+                  "loaded": true,
+                  "opened": true,
+                  "selected": false,
+                  "disabled": false,
+                  "hidden": false
+                },
+                "data": {},
+                "children": [
+                  {
+                    "id": "j3_55_933418559",
+                    "text": "ALIAS",
+                    "li_attr": {
+                      "id": "j3_55_933418559"
+                    },
+                    "a_attr": {
+                      "href": "#",
+                      "id": "j3_55_933418559_anchor"
+                    },
+                    "state": {
+                      "loaded": true,
+                      "opened": false,
+                      "selected": false,
+                      "disabled": false,
+                      "hidden": false
+                    },
+                    "data": {},
+                    "children": [],
+                    "type": "string"
+                  },
+                  {
+                    "id": "j3_55_791144423",
+                    "text": "DESCRIPTION",
+                    "li_attr": {
+                      "id": "j3_55_791144423"
+                    },
+                    "a_attr": {
+                      "href": "#",
+                      "id": "j3_55_791144423_anchor"
+                    },
+                    "state": {
+                      "loaded": true,
+                      "opened": false,
+                      "selected": false,
+                      "disabled": false,
+                      "hidden": false
+                    },
+                    "data": {},
+                    "children": [],
+                    "type": "string"
+                  },
+                  {
+                    "id": "j3_55_321531946",
+                    "text": "MANAGED_PAYLOAD",
+                    "li_attr": {
+                      "id": "j3_55_321531946"
+                    },
+                    "a_attr": {
+                      "href": "#",
+                      "id": "j3_55_321531946_anchor"
+                    },
+                    "state": {
+                      "loaded": true,
+                      "opened": false,
+                      "selected": false,
+                      "disabled": false,
+                      "hidden": false
+                    },
+                    "data": {},
+                    "children": [],
+                    "type": "string"
+                  }
+                ],
+                "type": "integer"
+              }
+            ],
+            "type": "document"
+          },
+          {
+            "id": "j3_61",
+            "text": "importedCounts",
+            "li_attr": {
+              "id": "j3_61"
+            },
+            "a_attr": {
+              "href": "#",
+              "id": "j3_61_anchor"
+            },
+            "state": {
+              "loaded": true,
+              "opened": true,
+              "selected": false,
+              "disabled": false,
+              "hidden": false
+            },
+            "data": {},
+            "children": [
+              {
+                "id": "j3_57",
+                "text": "MCPNEST_MCP",
+                "li_attr": {
+                  "id": "j3_57"
+                },
+                "a_attr": {
+                  "href": "#",
+                  "id": "j3_57_anchor"
+                },
+                "state": {
+                  "loaded": true,
+                  "opened": false,
+                  "selected": false,
+                  "disabled": false,
+                  "hidden": false
+                },
+                "data": {},
+                "children": [],
+                "type": "integer"
+              },
+              {
+                "id": "j3_58",
+                "text": "MCPNEST_MCP_TOOL",
+                "li_attr": {
+                  "id": "j3_58"
+                },
+                "a_attr": {
+                  "href": "#",
+                  "id": "j3_58_anchor"
+                },
+                "state": {
+                  "loaded": true,
+                  "opened": false,
+                  "selected": false,
+                  "disabled": false,
+                  "hidden": false
+                },
+                "data": {},
+                "children": [],
+                "type": "integer"
+              },
+              {
+                "id": "j3_59",
+                "text": "MCPNEST_MCP_TOOL_COLLECTION",
+                "li_attr": {
+                  "id": "j3_59"
+                },
+                "a_attr": {
+                  "href": "#",
+                  "id": "j3_59_anchor"
+                },
+                "state": {
+                  "loaded": true,
+                  "opened": false,
+                  "selected": false,
+                  "disabled": false,
+                  "hidden": false
+                },
+                "data": {},
+                "children": [],
+                "type": "integer"
+              },
+              {
+                "id": "j3_60",
+                "text": "MCPNEST_MCP_TOOL_COLLECTION_MAP",
+                "li_attr": {
+                  "id": "j3_60"
+                },
+                "a_attr": {
+                  "href": "#",
+                  "id": "j3_60_anchor"
+                },
+                "state": {
+                  "loaded": true,
+                  "opened": true,
+                  "selected": false,
+                  "disabled": false,
+                  "hidden": false
+                },
+                "data": {},
+                "children": [
+                  {
+                    "id": "j3_60_220375612",
+                    "text": "ALIAS",
+                    "li_attr": {
+                      "id": "j3_60_220375612"
+                    },
+                    "a_attr": {
+                      "href": "#",
+                      "id": "j3_60_220375612_anchor"
+                    },
+                    "state": {
+                      "loaded": true,
+                      "opened": false,
+                      "selected": false,
+                      "disabled": false,
+                      "hidden": false
+                    },
+                    "data": {},
+                    "children": [],
+                    "type": "string"
+                  },
+                  {
+                    "id": "j3_60_432845594",
+                    "text": "DESCRIPTION",
+                    "li_attr": {
+                      "id": "j3_60_432845594"
+                    },
+                    "a_attr": {
+                      "href": "#",
+                      "id": "j3_60_432845594_anchor"
+                    },
+                    "state": {
+                      "loaded": true,
+                      "opened": false,
+                      "selected": false,
+                      "disabled": false,
+                      "hidden": false
+                    },
+                    "data": {},
+                    "children": [],
+                    "type": "string"
+                  },
+                  {
+                    "id": "j3_60_208419131",
+                    "text": "MANAGED_PAYLOAD",
+                    "li_attr": {
+                      "id": "j3_60_208419131"
+                    },
+                    "a_attr": {
+                      "href": "#",
+                      "id": "j3_60_208419131_anchor"
+                    },
+                    "state": {
+                      "loaded": true,
+                      "opened": false,
+                      "selected": false,
+                      "disabled": false,
+                      "hidden": false
+                    },
+                    "data": {},
+                    "children": [],
+                    "type": "string"
+                  }
+                ],
+                "type": "integer"
+              }
+            ],
+            "type": "document"
+          },
+          {
+            "id": "j3_65",
+            "text": "defaultData",
+            "li_attr": {
+              "id": "j3_65"
+            },
+            "a_attr": {
+              "href": "#",
+              "id": "j3_65_anchor"
+            },
+            "state": {
+              "loaded": true,
+              "opened": true,
+              "selected": false,
+              "disabled": false,
+              "hidden": false
+            },
+            "data": {},
+            "children": [
+              {
+                "id": "j3_62",
+                "text": "created",
+                "li_attr": {
+                  "id": "j3_62"
+                },
+                "a_attr": {
+                  "href": "#",
+                  "id": "j3_62_anchor"
+                },
+                "state": {
+                  "loaded": true,
+                  "opened": false,
+                  "selected": false,
+                  "disabled": false,
+                  "hidden": false
+                },
+                "data": {},
+                "children": [],
+                "type": "boolean"
+              },
+              {
+                "id": "j3_63",
+                "text": "mcpId",
+                "li_attr": {
+                  "id": "j3_63"
+                },
+                "a_attr": {
+                  "href": "#",
+                  "id": "j3_63_anchor"
+                },
+                "state": {
+                  "loaded": true,
+                  "opened": false,
+                  "selected": false,
+                  "disabled": false,
+                  "hidden": false
+                },
+                "data": {},
+                "children": [],
+                "type": "string"
+              },
+              {
+                "id": "j3_64",
+                "text": "toolId",
+                "li_attr": {
+                  "id": "j3_64"
+                },
+                "a_attr": {
+                  "href": "#",
+                  "id": "j3_64_anchor"
+                },
+                "state": {
+                  "loaded": true,
+                  "opened": false,
+                  "selected": false,
+                  "disabled": false,
+                  "hidden": false
+                },
+                "data": {},
+                "children": [],
+                "type": "string"
+              }
+            ],
+            "type": "document"
+          }
+        ],
+        "type": "document"
+      }
+    ],
+    "api": [
+      {
+        "id": "j1_1",
+        "text": "Invoke",
+        "li_attr": {
+          "id": "j1_1"
+        },
+        "a_attr": {
+          "href": "#",
+          "id": "j1_1_anchor"
+        },
+        "state": {
+          "loaded": true,
+          "opened": false,
+          "selected": true,
+          "disabled": false,
+          "hidden": false
+        },
+        "data": {
+          "guid": "326fa4cd-0567-42bb-860e-41b4d38c31b2",
+          "columnType": "-1",
+          "transformers": [
+            {
+              "op": "copy",
+              "from": "/status",
+              "to": "/status",
+              "inTypePath": "string",
+              "outTypePath": "string",
+              "direction": "out"
+            },
+            {
+              "op": "copy",
+              "from": "/error",
+              "to": "/error",
+              "inTypePath": "string",
+              "outTypePath": "string",
+              "direction": "out"
+            },
+            {
+              "op": "copy",
+              "from": "/result",
+              "to": "/result",
+              "inTypePath": "document",
+              "outTypePath": "document",
+              "direction": "out"
+            },
+            {
+              "op": "copy",
+              "from": "/*payload/request",
+              "to": "/request",
+              "inTypePath": "document/document",
+              "outTypePath": "document",
+              "direction": "in"
+            }
+          ],
+          "lines": [
+            {
+              "inputPath": "status",
+              "outputPath": "status",
+              "inpJsTree": "#launching_arrow_jsTree_function",
+              "outpJsTree": "#landing_arrow_jsTree",
+              "INPath": "status",
+              "OUTPath": "status",
+              "direction": "out",
+              "op": "copy",
+              "line": 0,
+              "dashedLine": false,
+              "inType": "string",
+              "outType": "string",
+              "inTypePath": "string",
+              "outTypePath": "string"
+            },
+            {
+              "inputPath": "error",
+              "outputPath": "error",
+              "inpJsTree": "#launching_arrow_jsTree_function",
+              "outpJsTree": "#landing_arrow_jsTree",
+              "INPath": "error",
+              "OUTPath": "error",
+              "direction": "out",
+              "op": "copy",
+              "line": 0,
+              "dashedLine": false,
+              "inType": "string",
+              "outType": "string",
+              "inTypePath": "string",
+              "outTypePath": "string"
+            },
+            {
+              "inputPath": "result",
+              "outputPath": "result",
+              "inpJsTree": "#launching_arrow_jsTree_function",
+              "outpJsTree": "#landing_arrow_jsTree",
+              "INPath": "result",
+              "OUTPath": "result",
+              "direction": "out",
+              "op": "copy",
+              "line": 0,
+              "dashedLine": false,
+              "inType": "document",
+              "outType": "document",
+              "inTypePath": "document",
+              "outTypePath": "document"
+            },
+            {
+              "inputPath": "*payload/request",
+              "outputPath": "request",
+              "inpJsTree": "#launching_arrow_jsTree",
+              "outpJsTree": "#landing_arrow_jsTree_function",
+              "INPath": "*payload/request",
+              "OUTPath": "request",
+              "direction": "in",
+              "op": "copy",
+              "line": 0,
+              "dashedLine": false,
+              "inType": "document",
+              "outType": "document",
+              "inTypePath": "document/document",
+              "outTypePath": "document"
+            }
+          ],
+          "dropList": [],
+          "createList": [],
+          "initiateList": [],
+          "fqn": "packages/MCPNest/services/java/migrateMcpNestDatabase",
+          "serviceType": "service",
+          "requestMethod": "sync",
+          "status": "enabled"
+        },
+        "children": [],
+        "type": "invoke"
+      }
+    ],
+    "api_info": {
+      "title": "",
+      "description": ""
+    },
+    "flow": []
+  },
+  "enableServiceDocumentValidation": false,
+  "created_on": "",
+  "modified_on": ""
+}

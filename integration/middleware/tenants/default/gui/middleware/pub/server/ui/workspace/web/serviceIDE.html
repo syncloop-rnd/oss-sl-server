@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="vs/editor/editor.main.css" />
+    <script src="vs/loader.js"></script>
+    <script src="vs/editor/editor.main.nls.js"></script>
+    <script src="vs/editor/editor.main.js"></script>
+</head>
+
+<body>
+<div id="editor-container" style="top: 0px; left: 0px;height: 100%;width: 100%;position: absolute;"></div>
+</body>
+<script type="text/javascript">
+    var editor = monaco.editor.create(document.getElementById('editor-container'), {
+        value: '',
+        language: 'java'
+    });
+
+</script>
+</html>

@@ -1,0 +1,31 @@
+{
+  "input" : [ ],
+  "output" : [ {
+    "id" : "j2_1",
+    "text" : "domDocument",
+    "li_attr" : {
+      "id" : "j2_1"
+    },
+    "a_attr" : {
+      "href" : "#",
+      "id" : "j2_1_anchor"
+    },
+    "state" : {
+      "loaded" : true,
+      "opened" : false,
+      "selected" : false,
+      "disabled" : false
+    },
+    "data" : { },
+    "children" : [ ],
+    "type" : "javaObject"
+  } ],
+  "package" : "cGFja2FnZSBwYWNrYWdlcy5taWRkbGV3YXJlLnB1Yi54bWw7",
+  "imports" : "aW1wb3J0IGNvbS5la2EubWlkZGxld2FyZS5zZXJ2aWNlLkRhdGFQaXBlbGluZTsKaW1wb3J0IGNvbS5la2EubWlkZGxld2FyZS5zZXJ2aWNlLlNlcnZpY2VVdGlsczsKaW1wb3J0IGNvbS5la2EubWlkZGxld2FyZS50ZW1wbGF0ZS5TbmlwcGV0RXhjZXB0aW9uOwppbXBvcnQgb3JnLnczYy5kb20uRG9jdW1lbnQ7CmltcG9ydCBqYXZheC54bWwucGFyc2Vycy5Eb2N1bWVudEJ1aWxkZXJGYWN0b3J5OwppbXBvcnQgamF2YXgueG1sLnBhcnNlcnMuRG9jdW1lbnRCdWlsZGVyOw==",
+  "main" : "dHJ5IHsKICAJCWRhdGFQaXBlbGluZS5hcHBMb2coIk9QRVJBVElPTiIsICJjcmVhdGVEb2N1bWVudCIpOwogIAkJRG9jdW1lbnRCdWlsZGVyRmFjdG9yeSBmYWN0b3J5ID0gRG9jdW1lbnRCdWlsZGVyRmFjdG9yeS5uZXdJbnN0YW5jZSgpOwogICAgICAgIERvY3VtZW50QnVpbGRlciBidWlsZGVyID0gZmFjdG9yeS5uZXdEb2N1bWVudEJ1aWxkZXIoKTsKICAgICAgICBEb2N1bWVudCBkb2MgPSBidWlsZGVyLm5ld0RvY3VtZW50KCk7CiAgCQlkYXRhUGlwZWxpbmUucHV0KCJkb21Eb2N1bWVudCIsIGRvYyk7CiAgCQlkYXRhUGlwZWxpbmUuYXBwTG9nKCJET0NVTUVOVF9DUkVBVEVEIiwgIkEgbmV3IERPTSBkb2N1bWVudCBjcmVhdGVkIHN1Y2Nlc3NmdWxseS4iKTsKICAgICAgfSAKY2F0Y2ggKEV4Y2VwdGlvbiBlKSB7CgkJZGF0YVBpcGVsaW5lLmNsZWFyKCk7CiAgCQlkYXRhUGlwZWxpbmUucHV0KCJlcnJvciIsZS5nZXRNZXNzYWdlKCkpOwogIAkJZGF0YVBpcGVsaW5lLmFwcExvZygiU0VSVklDRV9FUlJPUiIsIGUuZ2V0TWVzc2FnZSgpKTsKICAgIAl0aHJvdyBuZXcgU25pcHBldEV4Y2VwdGlvbihkYXRhUGlwZWxpbmUsIlNuaXBwZXQgZXhjZXB0aW9uIiwgbmV3IEV4Y2VwdGlvbihlKSk7CiAgfQ==",
+  "staticWorkspace" : "",
+  "version" : "v1",
+  "consumers" : "",
+  "developers" : "",
+  "lockedByUser" : "admin"
+}

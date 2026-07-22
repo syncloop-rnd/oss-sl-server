@@ -1,0 +1,28 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="20" height="20" viewBox="0 0 20 20">
+  <defs>
+    <style>
+      .cls-1 {
+        filter: url(#filter);
+      }
+
+      .cls-2 {
+        fill-rule: evenodd;
+      }
+    </style>
+    <filter id="filter" filterUnits="userSpaceOnUse">
+      <feFlood result="flood" flood-color="#7b7b7b"/>
+      <feComposite result="composite" operator="in" in2="SourceGraphic"/>
+      <feBlend result="blend" in2="SourceGraphic"/>
+    </filter>
+  </defs>
+  <g id="property">
+    <g class="cls-1">
+      <path id="Rounded_Rectangle_1" data-name="Rounded Rectangle 1" class="cls-2" d="M187.281,3.233H202.94a1,1,0,0,1,1,1V16.152a1,1,0,0,1-1,1H187.281a1,1,0,0,1-1-1V4.233A1,1,0,0,1,187.281,3.233Zm0.831,0.831h14a1,1,0,0,1,1,1V15.321a1,1,0,0,1-1,1h-14a1,1,0,0,1-1-1V5.064A1,1,0,0,1,188.112,4.064Zm3.144,4.363h0.022a0.4,0.4,0,0,1,.405.4v3.762a0.4,0.4,0,0,1-.405.4h-0.022a0.4,0.4,0,0,1-.4-0.4V8.831A0.4,0.4,0,0,1,191.256,8.427Zm-0.022,3.947a1.213,1.213,0,1,1-1.213,1.213A1.213,1.213,0,0,1,191.234,12.374Zm0,0.694a0.519,0.519,0,1,1-.519.519A0.519,0.519,0,0,1,191.234,13.068Zm-2.771-8.381a0.727,0.727,0,1,1-.728.727A0.727,0.727,0,0,1,188.463,4.687Zm2.077,0a0.727,0.727,0,1,1-.727.727A0.727,0.727,0,0,1,190.54,4.687Zm1.87,0a0.727,0.727,0,1,1-.727.727A0.727,0.727,0,0,1,192.41,4.687Zm-1.154,7.479h0.022a0.4,0.4,0,0,1,.405.4v0.022a0.4,0.4,0,0,1-.405.4h-0.022a0.4,0.4,0,0,1-.4-0.4V12.571A0.4,0.4,0,0,1,191.256,12.166Z" transform="translate(-185)"/>
+      <path class="cls-2" d="M186.9,6.973h16.413V7.8H186.9V6.973h0Z" transform="translate(-185)"/>
+      <path id="Rounded_Rectangle_3" data-name="Rounded Rectangle 3" class="cls-2" d="M195.2,8.427h0.023a0.4,0.4,0,0,1,.4.4V9.892a0.4,0.4,0,0,1-.4.4H195.2a0.4,0.4,0,0,1-.4-0.4V8.831A0.4,0.4,0,0,1,195.2,8.427Zm0,3.739h0.023a0.4,0.4,0,0,1,.4.4v2.1a0.4,0.4,0,0,1-.4.4H195.2a0.4,0.4,0,0,1-.4-0.4v-2.1A0.4,0.4,0,0,1,195.2,12.166Z" transform="translate(-185)"/>
+      <path id="Rounded_Rectangle_3_copy" data-name="Rounded Rectangle 3 copy" class="cls-2" d="M199.358,15.075h0.023a0.4,0.4,0,0,0,.4-0.4V13.609a0.4,0.4,0,0,0-.4-0.4h-0.023a0.4,0.4,0,0,0-.4.4v1.061A0.4,0.4,0,0,0,199.358,15.075Zm0-3.739h0.023a0.4,0.4,0,0,0,.4-0.4v-2.1a0.4,0.4,0,0,0-.4-0.4h-0.023a0.4,0.4,0,0,0-.4.4v2.1A0.4,0.4,0,0,0,199.358,11.335Z" transform="translate(-185)"/>
+      <path id="Ellipse_1_copy" data-name="Ellipse 1 copy" class="cls-2" d="M195.214,10.089a1.247,1.247,0,1,1-1.246,1.246A1.247,1.247,0,0,1,195.214,10.089Zm0,0.74a0.507,0.507,0,1,1-.506.507A0.507,0.507,0,0,1,195.214,10.829Z" transform="translate(-185)"/>
+      <path id="Ellipse_1_copy_2" data-name="Ellipse 1 copy 2" class="cls-2" d="M199.369,11.128a1.247,1.247,0,1,1-1.246,1.246A1.247,1.247,0,0,1,199.369,11.128Zm0,0.74a0.507,0.507,0,1,1-.506.507A0.507,0.507,0,0,1,199.369,11.867Z" transform="translate(-185)"/>
+    </g>
+  </g>
+</svg>

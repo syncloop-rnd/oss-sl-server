@@ -1,0 +1,126 @@
+{
+  "input" : [ {
+    "id" : "j1_1",
+    "text" : "startDateObj",
+    "li_attr" : {
+      "id" : "j1_1"
+    },
+    "a_attr" : {
+      "href" : "#",
+      "id" : "j1_1_anchor"
+    },
+    "state" : {
+      "loaded" : true,
+      "opened" : false,
+      "selected" : false,
+      "disabled" : false
+    },
+    "data" : { },
+    "children" : [ ],
+    "type" : "javaObject"
+  }, {
+    "id" : "j1_2",
+    "text" : "endDateObj",
+    "li_attr" : {
+      "id" : "j1_2"
+    },
+    "a_attr" : {
+      "href" : "#",
+      "id" : "j1_2_anchor"
+    },
+    "state" : {
+      "loaded" : true,
+      "opened" : false,
+      "selected" : false,
+      "disabled" : false
+    },
+    "data" : { },
+    "children" : [ ],
+    "type" : "javaObject"
+  } ],
+  "output" : [ {
+    "id" : "j2_1",
+    "text" : "seconds",
+    "li_attr" : {
+      "id" : "j2_1"
+    },
+    "a_attr" : {
+      "href" : "#",
+      "id" : "j2_1_anchor"
+    },
+    "state" : {
+      "loaded" : true,
+      "opened" : false,
+      "selected" : false,
+      "disabled" : false
+    },
+    "data" : { },
+    "children" : [ ],
+    "type" : "integer"
+  }, {
+    "id" : "j2_2",
+    "text" : "minutes",
+    "li_attr" : {
+      "id" : "j2_2"
+    },
+    "a_attr" : {
+      "href" : "#",
+      "id" : "j2_2_anchor"
+    },
+    "state" : {
+      "loaded" : true,
+      "opened" : false,
+      "selected" : false,
+      "disabled" : false
+    },
+    "data" : { },
+    "children" : [ ],
+    "type" : "integer"
+  }, {
+    "id" : "j2_3",
+    "text" : "hours",
+    "li_attr" : {
+      "id" : "j2_3"
+    },
+    "a_attr" : {
+      "href" : "#",
+      "id" : "j2_3_anchor"
+    },
+    "state" : {
+      "loaded" : true,
+      "opened" : false,
+      "selected" : false,
+      "disabled" : false
+    },
+    "data" : { },
+    "children" : [ ],
+    "type" : "integer"
+  }, {
+    "id" : "j2_4",
+    "text" : "days",
+    "li_attr" : {
+      "id" : "j2_4"
+    },
+    "a_attr" : {
+      "href" : "#",
+      "id" : "j2_4_anchor"
+    },
+    "state" : {
+      "loaded" : true,
+      "opened" : false,
+      "selected" : false,
+      "disabled" : false
+    },
+    "data" : { },
+    "children" : [ ],
+    "type" : "number"
+  } ],
+  "package" : "cGFja2FnZSBwYWNrYWdlcy5taWRkbGV3YXJlLnB1Yi5kYXRlOw==",
+  "imports" : "aW1wb3J0IGNvbS5la2EubWlkZGxld2FyZS5zZXJ2aWNlLkRhdGFQaXBlbGluZTsKaW1wb3J0IGNvbS5la2EubWlkZGxld2FyZS5zZXJ2aWNlLlNlcnZpY2VVdGlsczsKaW1wb3J0IGNvbS5la2EubWlkZGxld2FyZS50ZW1wbGF0ZS5TbmlwcGV0RXhjZXB0aW9uOwppbXBvcnQgamF2YS50aW1lLkR1cmF0aW9uOwppbXBvcnQgamF2YS50aW1lLkxvY2FsRGF0ZVRpbWU7CmltcG9ydCBqYXZhLnRpbWUuWm9uZUlkOwppbXBvcnQgamF2YS50aW1lLlpvbmVkRGF0ZVRpbWU7CmltcG9ydCBqYXZhLnV0aWwuRGF0ZTs=",
+  "main" : "dHJ5IHsKICAgICAgICBEYXRlIHN0YXJ0RGF0ZSA9IChEYXRlKWRhdGFQaXBlbGluZS5nZXQoInN0YXJ0RGF0ZU9iaiIpOwkKICAgICAgICBEYXRlIGVuZERhdGUgPSAoRGF0ZSlkYXRhUGlwZWxpbmUuZ2V0KCJlbmREYXRlT2JqIik7CQoKICAgICAgIAlMb2NhbERhdGVUaW1lIHN0YXJ0ID0gTG9jYWxEYXRlVGltZS5vZkluc3RhbnQoc3RhcnREYXRlLnRvSW5zdGFudCgpLCBab25lSWQuc3lzdGVtRGVmYXVsdCgpKTsJCiAgICAgICAgICBMb2NhbERhdGVUaW1lIGVuZCA9IExvY2FsRGF0ZVRpbWUub2ZJbnN0YW50KGVuZERhdGUudG9JbnN0YW50KCksIFpvbmVJZC5zeXN0ZW1EZWZhdWx0KCkpOwkKCiAgICAgICAgICBEdXJhdGlvbiBkdXJhdGlvbiA9IER1cmF0aW9uLmJldHdlZW4oc3RhcnQsIGVuZCk7CgogICAgICAgICAgbG9uZyBzZWNvbmRzID0gZHVyYXRpb24uZ2V0U2Vjb25kcygpOwogICAgICAgICAgbG9uZyBtaW51dGVzID0gZHVyYXRpb24udG9NaW51dGVzKCk7CiAgICAgICAgICBsb25nIGhvdXJzID0gZHVyYXRpb24udG9Ib3VycygpOwogICAgICAgICAgbG9uZyBkYXlzID0gZHVyYXRpb24udG9EYXlzKCk7CgogICAgICAgICAgZGF0YVBpcGVsaW5lLnB1dCgic2Vjb25kcyIsCXNlY29uZHMgKTsKICAgICAgICAgIGRhdGFQaXBlbGluZS5wdXQoIm1pbnV0ZXMiLAltaW51dGVzICk7CiAgICAgICAgICBkYXRhUGlwZWxpbmUucHV0KCJob3VycyIsCWhvdXJzKTsKICAgICAgICAgIGRhdGFQaXBlbGluZS5wdXQoImRheXMiLAlkYXlzICk7CiAgICAgIH0gCmNhdGNoIChFeGNlcHRpb24gZSkgewoJCWRhdGFQaXBlbGluZS5jbGVhcigpOwogIAkJZGF0YVBpcGVsaW5lLnB1dCgiZXJyb3IiLGUuZ2V0TWVzc2FnZSgpKTsKICAgIAl0aHJvdyBuZXcgU25pcHBldEV4Y2VwdGlvbihkYXRhUGlwZWxpbmUsIlNuaXBwZXQgZXhjZXB0aW9uIiwgbmV3IEV4Y2VwdGlvbihlKSk7CiAgfQ==",
+  "staticWorkspace" : "",
+  "version" : "v1",
+  "consumers" : "",
+  "developers" : "developers",
+  "lockedByUser" : "admin"
+}

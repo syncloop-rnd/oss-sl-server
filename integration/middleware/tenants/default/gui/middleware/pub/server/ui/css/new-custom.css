@@ -1,0 +1,4 @@
+.position{position:relative;}
+#path-copy img{width:17px;}
+#path-copy {right: 9px;top: 52px;}
+input:read-only:focus {border: solid 1px #e5e5e517;}

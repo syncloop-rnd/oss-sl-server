@@ -1,0 +1,92 @@
+{
+  "input" : [ {
+    "id" : "j1_1",
+    "text" : "inputStream",
+    "icon" : null,
+    "li_attr" : {
+      "id" : "j1_1"
+    },
+    "a_attr" : {
+      "href" : "#",
+      "id" : "j1_1_anchor"
+    },
+    "state" : {
+      "loaded" : true,
+      "opened" : false,
+      "selected" : false,
+      "disabled" : false
+    },
+    "data" : { },
+    "children" : [ ],
+    "type" : "javaObject"
+  }, {
+    "id" : "j1_2",
+    "text" : "reader",
+    "icon" : null,
+    "li_attr" : {
+      "id" : "j1_2"
+    },
+    "a_attr" : {
+      "href" : "#",
+      "id" : "j1_2_anchor"
+    },
+    "state" : {
+      "loaded" : true,
+      "opened" : false,
+      "selected" : false,
+      "disabled" : false
+    },
+    "data" : { },
+    "children" : [ ],
+    "type" : "javaObject"
+  } ],
+  "output" : [ {
+    "id" : "j2_1",
+    "text" : "inputStream",
+    "icon" : null,
+    "li_attr" : {
+      "id" : "j2_1"
+    },
+    "a_attr" : {
+      "href" : "#",
+      "id" : "j2_1_anchor"
+    },
+    "state" : {
+      "loaded" : true,
+      "opened" : false,
+      "selected" : false,
+      "disabled" : false
+    },
+    "data" : { },
+    "children" : [ ],
+    "type" : "javaObject"
+  }, {
+    "id" : "j2_2",
+    "text" : "reader",
+    "icon" : null,
+    "li_attr" : {
+      "id" : "j2_2"
+    },
+    "a_attr" : {
+      "href" : "#",
+      "id" : "j2_2_anchor"
+    },
+    "state" : {
+      "loaded" : true,
+      "opened" : false,
+      "selected" : false,
+      "disabled" : false
+    },
+    "data" : { },
+    "children" : [ ],
+    "type" : "javaObject"
+  } ],
+  "package" : "cGFja2FnZSBwYWNrYWdlcy5taWRkbGV3YXJlLnB1Yi5pbzs=",
+  "imports" : "aW1wb3J0IGNvbS5la2EubWlkZGxld2FyZS5zZXJ2aWNlLkRhdGFQaXBlbGluZTsKaW1wb3J0IGNvbS5la2EubWlkZGxld2FyZS5zZXJ2aWNlLlNlcnZpY2VVdGlsczsKaW1wb3J0IGNvbS5la2EubWlkZGxld2FyZS50ZW1wbGF0ZS5TbmlwcGV0RXhjZXB0aW9uOwppbXBvcnQgamF2YS5pby5JbnB1dFN0cmVhbTsKaW1wb3J0IGphdmEuaW8uUmVhZGVyOw==",
+  "main" : "dHJ5IHsKICAgICAgICBJbnB1dFN0cmVhbSBpbnB1dFN0cmVhbSA9IChJbnB1dFN0cmVhbSkgZGF0YVBpcGVsaW5lLmdldCgiaW5wdXRTdHJlYW0iKTsKICAgICAgICBSZWFkZXIgcmVhZGVyID0gKFJlYWRlcilkYXRhUGlwZWxpbmUuZ2V0KCJyZWFkZXIiKTsJCiAgCiAgICAgICAgaWYoaW5wdXRTdHJlYW0hPW51bGwpCiAgICAgICAgewogICAgICAgICAgICBpZihpbnB1dFN0cmVhbS5tYXJrU3VwcG9ydGVkKCkpCiAgICAgICAgICAgIHsKICAgICAgICAgICAgICAgIGlucHV0U3RyZWFtLnJlc2V0KCk7CiAgICAgICAgICAgICAgICBkYXRhUGlwZWxpbmUucHV0KCJpbnB1dFN0cmVhbSIsIGlucHV0U3RyZWFtKTsKICAgICAgICAgICAgICB9CiAgICAgICAgfQogICAgICAgIGlmKHJlYWRlciE9bnVsbCkKICAgICAgICB7CiAgICAgICAgICAgIGlmKHJlYWRlci5tYXJrU3VwcG9ydGVkKCkpCiAgICAgICAgICAgIHsKICAgICAgICAgICAgICAgIHJlYWRlci5yZXNldCgpOwogICAgICAgICAgICAgICAgZGF0YVBpcGVsaW5lLnB1dCgicmVhZGVyIiwgcmVhZGVyKTsKICAgICAgICAgICAgfQogICAgICAgIH0KfSBjYXRjaCAoRXhjZXB0aW9uIGUpIHsKICAJZGF0YVBpcGVsaW5lLmNsZWFyKCk7CiAgCWRhdGFQaXBlbGluZS5wdXQoImVycm9yIixlLmdldE1lc3NhZ2UoKSk7CiAgCW5ldyBTbmlwcGV0RXhjZXB0aW9uKGRhdGFQaXBlbGluZSwiU25lcHBldCBleGNlcHRpb24iLCBuZXcgRXhjZXB0aW9uKGUpKTsKfQ==",
+  "staticWorkspace" : "",
+  "version" : "v1",
+  "consumers" : "",
+  "developers" : "developers",
+  "lockedByUser" : "ascorp.adarsh@gmail.com"
+}

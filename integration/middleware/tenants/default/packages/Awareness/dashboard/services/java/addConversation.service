@@ -1,0 +1,171 @@
+{
+  "input" : [ {
+    "id" : "j1_1",
+    "text" : "chatID",
+    "li_attr" : {
+      "id" : "j1_1"
+    },
+    "a_attr" : {
+      "href" : "#",
+      "id" : "j1_1_anchor"
+    },
+    "state" : {
+      "loaded" : true,
+      "opened" : false,
+      "selected" : false,
+      "disabled" : false,
+      "hidden" : false
+    },
+    "data" : {
+      "guid" : "ecd8bd8d-05fe-4848-afce-1e93d554a024",
+      "columnType" : "-1"
+    },
+    "children" : [ ],
+    "type" : "string"
+  }, {
+    "id" : "j1_2",
+    "text" : "userID",
+    "li_attr" : {
+      "id" : "j1_2"
+    },
+    "a_attr" : {
+      "href" : "#",
+      "id" : "j1_2_anchor"
+    },
+    "state" : {
+      "loaded" : true,
+      "opened" : false,
+      "selected" : false,
+      "disabled" : false,
+      "hidden" : false
+    },
+    "data" : {
+      "guid" : "3b01725a-93de-472e-90f6-bcf5519fd471",
+      "columnType" : "-1"
+    },
+    "children" : [ ],
+    "type" : "string"
+  }, {
+    "id" : "j1_3",
+    "text" : "data",
+    "li_attr" : {
+      "id" : "j1_3"
+    },
+    "a_attr" : {
+      "href" : "#",
+      "id" : "j1_3_anchor"
+    },
+    "state" : {
+      "loaded" : true,
+      "opened" : true,
+      "selected" : false,
+      "disabled" : false,
+      "hidden" : false
+    },
+    "data" : {
+      "guid" : "6b02563b-2b7f-475d-89b3-fa6130f2dd81",
+      "columnType" : "-1"
+    },
+    "children" : [ {
+      "id" : "j1_4",
+      "text" : "subject",
+      "li_attr" : {
+        "id" : "j1_4"
+      },
+      "a_attr" : {
+        "href" : "#",
+        "id" : "j1_4_anchor"
+      },
+      "state" : {
+        "loaded" : true,
+        "opened" : false,
+        "selected" : false,
+        "disabled" : false
+      },
+      "data" : {
+        "guid" : "699e733a-16ac-4991-84ae-40fff8d8dd1c",
+        "columnType" : "-1"
+      },
+      "children" : [ ],
+      "type" : "string"
+    }, {
+      "id" : "j1_5",
+      "text" : "dateTime",
+      "li_attr" : {
+        "id" : "j1_5"
+      },
+      "a_attr" : {
+        "href" : "#",
+        "id" : "j1_5_anchor"
+      },
+      "state" : {
+        "loaded" : true,
+        "opened" : false,
+        "selected" : false,
+        "disabled" : false
+      },
+      "data" : {
+        "guid" : "63532249-b72b-4034-9ba6-6b54431ce8a0",
+        "columnType" : "-1"
+      },
+      "children" : [ ],
+      "type" : "string"
+    } ],
+    "type" : "document"
+  } ],
+  "output" : [ {
+    "id" : "j2_1",
+    "text" : "status",
+    "li_attr" : {
+      "id" : "j2_1"
+    },
+    "a_attr" : {
+      "href" : "#",
+      "id" : "j2_1_anchor"
+    },
+    "state" : {
+      "loaded" : true,
+      "opened" : false,
+      "selected" : false,
+      "disabled" : false,
+      "hidden" : false
+    },
+    "data" : {
+      "guid" : "4310c571-6ef6-40fc-b6e8-3755f0c33377",
+      "columnType" : "-1"
+    },
+    "children" : [ ],
+    "type" : "string"
+  }, {
+    "id" : "j2_2",
+    "text" : "error",
+    "li_attr" : {
+      "id" : "j2_2"
+    },
+    "a_attr" : {
+      "href" : "#",
+      "id" : "j2_2_anchor"
+    },
+    "state" : {
+      "loaded" : true,
+      "opened" : false,
+      "selected" : false,
+      "disabled" : false,
+      "hidden" : false
+    },
+    "data" : {
+      "guid" : "72908d96-0667-4a8d-9497-a3d6c93f50ab",
+      "columnType" : "-1"
+    },
+    "children" : [ ],
+    "type" : "string"
+  } ],
+  "package" : "cGFja2FnZSBwYWNrYWdlcy5Bd2FyZW5lc3MuZGFzaGJvYXJkLnNlcnZpY2VzLmphdmE7",
+  "imports" : "aW1wb3J0IGNvbS5la2EubWlkZGxld2FyZS5zZXJ2aWNlLkRhdGFQaXBlbGluZTsKaW1wb3J0IGNvbS5la2EubWlkZGxld2FyZS5zZXJ2aWNlLlNlcnZpY2VVdGlsczsKaW1wb3J0IGNvbS5la2EubWlkZGxld2FyZS50ZW1wbGF0ZS5TbmlwcGV0RXhjZXB0aW9uOwppbXBvcnQgYWdlbnRzLm1hbmFnZXIuQ29udmVyc2F0aW9uTWFuYWdlcjsKaW1wb3J0IGphdmEudXRpbC4qOw==",
+  "main" : "dHJ5ewoKICAgIFN0cmluZyBjaGF0SUQgPSBkYXRhUGlwZWxpbmUuZ2V0U3RyaW5nKCJjaGF0SUQiKTsKCVN0cmluZyB1c2VySUQgPSBkYXRhUGlwZWxpbmUuZ2V0U3RyaW5nKCJ1c2VySUQiKTsKICAvL0dldCBDb252ZXJzYXRpb24gdG8gY2hlY2sgaWYgYW55IGNvbnZlcnNhdGlvbiBleGlzdHMgZm9yIHRoZSBjaGF0SUQKICAJTWFwPFN0cmluZyxPYmplY3Q+IGRhdGE9Q29udmVyc2F0aW9uTWFuYWdlci5nZXRDb252ZXJzYXRpb24oY2hhdElEKTsKCiAgCWlmIChkYXRhID09IG51bGwpIHsKICAgICAgICBkYXRhID0gZGF0YVBpcGVsaW5lLmdldEFzTWFwKCJkYXRhIik7CgogICAgICAgIFN0cmluZyBjaGF0U3ViamVjdCA9IChTdHJpbmcpIGRhdGEuZ2V0KCJzdWJqZWN0Iik7CgogICAgICAgIGlmIChjaGF0U3ViamVjdCA9PSBudWxsIHx8IGNoYXRTdWJqZWN0LnRyaW0oKS5pc0VtcHR5KCkpIHsKICAgICAgICAgICAgY2hhdFN1YmplY3QgPSAiTmV3IENoYXQiOwogICAgICAgIH0KCiAgICAgICAgaWYgKGNoYXRTdWJqZWN0Lmxlbmd0aCgpID4gNTApIHsKICAgICAgICAgICAgY2hhdFN1YmplY3QgPSBjaGF0U3ViamVjdC5zdWJzdHJpbmcoMCwgNTApOwogICAgICAgIH0KCgogICAgICAgIGRhdGEucHV0KCJzdWJqZWN0IiwgY2hhdFN1YmplY3QpOwogICAgfQoKICAgICAgLy8gTm93IGFkZCBjb252ZXJzYXRpb24gdG8gY3JlYXRlIGhpc3RvcnkKICAJCUNvbnZlcnNhdGlvbk1hbmFnZXIuYWRkQ29udmVyc2F0aW9uKGNoYXRJRCx1c2VySUQsZGF0YSk7CiAgICAKCWRhdGFQaXBlbGluZS5wdXQoInN0YXR1cyIsInN1Y2Nlc3MiKTsKICB9Y2F0Y2goRXhjZXB0aW9uIGUpewoKICAgIGRhdGFQaXBlbGluZS5jbGVhcigpOwogICAgZGF0YVBpcGVsaW5lLnB1dCgiZXJyb3IiLGUuZ2V0TWVzc2FnZSgpKTsKICAgIGRhdGFQaXBlbGluZS5wdXQoInN0YXR1cyIsImZhaWxlZCIpOwogICAgbmV3IFNuaXBwZXRFeGNlcHRpb24oZGF0YVBpcGVsaW5lLCJTbmlwcGV0IGV4Y2VwdGlvbiIsIG5ldyBFeGNlcHRpb24oZSkpOwogIH0=",
+  "staticWorkspace" : "",
+  "version" : "v1",
+  "consumers" : "",
+  "developers" : "developers",
+  "lockedByUser" : "sidharth@syncloop.com"
+}

@@ -1,0 +1,53 @@
+Build a single-page "OAuth Manager" GUI for MCPNest.
+
+Purpose:
+The page lets users create, edit, test, authorize, inspect, and delete OAuth provider setups and MCP tokens from one interactive screen.
+
+API base:
+Use the configured Syncloop tenant base URL, then call the MCPNest OAuth APIs under:
+/packages.MCPNest.wrapper.api.oauth.<apiName>.main
+
+Required page sections:
+1. OAuth setup list
+   - Load setups using listOAuthSetups.
+   - Show unique name, provider name, app name, status, base endpoint, authorize URL, and redirect URI.
+   - Provide search/filter by keyword.
+   - Provide actions: View, Edit, Delete, Test Authorization, Authorize.
+
+2. Add/Edit OAuth setup form
+   - Use addOAuthSetup for create and editOAuthSetup for update.
+   - addOAuthSetup is POST and accepts a JSON body with a top-level request object.
+   - editOAuthSetup follows the swagger contract; send the fields in the shape declared by the swagger.
+   - Capture: uniqueName, providerName, appName, appLogo, privacyPolicyUrl, baseEndpoint, wellKnownUrl, clientId, clientSecret, authorizationUrl, tokenUrl, redirectUri, scopes, grantTypes, status, extraAuthParams.
+   - If wellKnownUrl is provided, the backend may fill authorizationUrl, tokenUrl, scopes, and grantTypes.
+   - Display the generated authorizeUrl and redirectUri after save.
+
+3. Authorization test panel
+   - Use testOAuthAuthorization to preview the generated provider authorization URL without saving pending token state.
+   - Inputs: name, mcpId, visibility.
+   - Show the full response JSON and provide a copy/open button for authorizeUrl.
+
+4. Start authorization
+   - Use authorizeOAuth to start real authorization.
+   - Inputs: name, mcpId, visibility.
+   - Open the returned authorizeUrl in the browser.
+   - The OAuth provider redirects to oauthCallback with name, code, and state query parameters.
+
+5. OAuth callback result
+   - oauthCallback is GET-only and receives query parameters: name, code, state.
+   - Show success/error result JSON after callback.
+   - On success, refresh token list.
+
+6. Token list
+   - Use listOAuthTokens with optional filters: mcpId, name, uniqueName.
+   - Show tokenId, oauthUniqueName, mcpId, userId, visibility, status, createdAt, updatedAt.
+   - Provide delete action using deleteOAuthToken.
+
+UX requirements:
+- Keep the page single-screen with tabs or split panels: Setups, Authorization Test, Tokens.
+- Show progress for every API call.
+- Show top-right notifications for add, edit, delete, authorize, and callback results.
+- Use clear validation: uniqueName and baseEndpoint are required for setup; name and mcpId are required for authorization; name, code, and state are required for callback.
+- Never expose clientSecret in table views; show it only in the edit form with masked display and explicit reveal.
+- Provide copy buttons for authorizeUrl, redirectUri, tokenId, and mcpId.
+- Show raw response JSON in a collapsible details panel for every operation.

@@ -1,0 +1,47 @@
+package packages.middleware.pub.integrations.adapter.services.DQL;
+
+import com.eka.middleware.service.DataPipeline;
+import com.eka.middleware.service.ServiceUtils;
+import com.eka.middleware.template.SnippetException;
+import com.eka.middleware.adapter.SqlResolver;
+import java.io.File;
+import java.io.FileInputStream;
+import javax.json.Json;
+import javax.json.JsonArray;
+import javax.json.JsonObject;
+import javax.json.JsonValue;
+import java.util.Properties;
+import com.eka.middleware.service.PropertyManager;
+import java.util.concurrent.ConcurrentHashMap;
+import java.util.Map;
+
+public final class getCountFindAll {
+
+	private static final Map<String,JsonObject> mainSqlJsonObjectMap=new ConcurrentHashMap<String,JsonObject>();
+	static final String syncBlock=new String("sync");
+	public static final void main(DataPipeline dataPipeline) throws SnippetException{
+		try{
+		  JsonObject mainSqlJsonObject=mainSqlJsonObjectMap.get(dataPipeline.rp.getTenant().id);
+		  if(mainSqlJsonObject==null)
+			synchronized(syncBlock){
+			  String location = PropertyManager.getPackagePath(dataPipeline.rp.getTenant());
+			  String flowRef = location+"packages/middleware/pub/integrations/adapter/services/DQL/getCountFindAll.sql";
+			  if(mainSqlJsonObject==null){
+				  mainSqlJsonObject = Json.createReader(new FileInputStream(new File(flowRef))).readObject();
+				  mainSqlJsonObjectMap.put(dataPipeline.rp.getTenant().id,mainSqlJsonObject);
+			  }
+			  if(mainSqlJsonObject==null)
+				  mainSqlJsonObject = Json.createReader(new FileInputStream(new File(flowRef))).readObject();
+			}
+		  Properties myProps=dataPipeline.getMyProperties();
+		  dataPipeline.put("sqlLocalProperties",myProps);
+		  SqlResolver.execute(dataPipeline,mainSqlJsonObject);
+		}catch(Throwable e) {
+			dataPipeline.clear();
+			dataPipeline.put("error", e.getMessage());
+			//dataPipeline.setResponseStatus(500);
+			dataPipeline.put("status", "SQL Service error");
+			throw new SnippetException(dataPipeline,"Failed to execute getCountFindAll", new Exception(e));
+		}
+	}
+}

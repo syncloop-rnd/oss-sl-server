@@ -1,0 +1,104 @@
+{
+  "latest" : {
+    "createdTS" : "",
+    "input" : [ ],
+    "output" : [ {
+      "id" : "j3_2",
+      "text" : "response",
+      "li_attr" : {
+        "id" : "j3_2"
+      },
+      "a_attr" : {
+        "href" : "#",
+        "id" : "j3_2_anchor"
+      },
+      "state" : {
+        "loaded" : true,
+        "opened" : false,
+        "selected" : false,
+        "disabled" : false,
+        "hidden" : false
+      },
+      "data" : {
+        "guid" : "9c4fc9c4-539f-4c7a-a379-45f04ff149c7",
+        "columnType" : "-1"
+      },
+      "children" : [ {
+        "id" : "j3_1",
+        "text" : "dateTime",
+        "li_attr" : {
+          "id" : "j3_1"
+        },
+        "a_attr" : {
+          "href" : "#",
+          "id" : "j3_1_anchor"
+        },
+        "state" : {
+          "loaded" : true,
+          "opened" : false,
+          "selected" : false,
+          "disabled" : false,
+          "hidden" : false
+        },
+        "data" : { },
+        "children" : [ ],
+        "type" : "string"
+      } ],
+      "type" : "document"
+    } ],
+    "api" : [ {
+      "id" : "j1_1",
+      "text" : "Transformer",
+      "li_attr" : {
+        "id" : "j1_1"
+      },
+      "a_attr" : {
+        "href" : "javascript:void(0)",
+        "id" : "j1_1_anchor"
+      },
+      "state" : {
+        "loaded" : true,
+        "opened" : false,
+        "selected" : true,
+        "disabled" : false,
+        "hidden" : false
+      },
+      "data" : {
+        "guid" : "f08e6921-aaa8-47f7-934b-c63720a89a34",
+        "columnType" : "-1",
+        "transformers" : [ ],
+        "lines" : [ ],
+        "dropList" : [ ],
+        "createList" : [ {
+          "path" : "response/dateTime",
+          "value" : "new Date()+\"\"",
+          "id" : "ddcd9711-c257-49ad-889e-7f11ea1ea9b4",
+          "evaluate" : "EEV2",
+          "typePath" : "document/string"
+        } ],
+        "initiateList" : [ {
+          "path" : "dateTime",
+          "id" : "a352088c-4854-471d-a109-722f781531f2",
+          "typePath" : "string"
+        }, {
+          "path" : "response",
+          "id" : "d45f2766-97f0-4802-b0a2-3b91062f5acb",
+          "typePath" : "document"
+        } ],
+        "snap" : "disabled"
+      },
+      "children" : [ ],
+      "type" : "transformer"
+    } ],
+    "api_info" : {
+      "title" : "",
+      "description" : ""
+    },
+    "lockedByUser" : "admin"
+  },
+  "consumers" : "",
+  "developers" : "developers",
+  "enableServiceDocumentValidation" : false,
+  "created_on" : "1771257163039",
+  "modified_on" : 1771257163039
+}

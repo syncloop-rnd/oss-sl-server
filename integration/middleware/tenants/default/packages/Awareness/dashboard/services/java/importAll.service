@@ -1,0 +1,286 @@
+{
+  "input" : [ {
+    "id" : "j1_1",
+    "text" : "spec",
+    "li_attr" : {
+      "id" : "j1_1"
+    },
+    "a_attr" : {
+      "href" : "#",
+      "id" : "j1_1_anchor"
+    },
+    "state" : {
+      "loaded" : true,
+      "opened" : true,
+      "selected" : false,
+      "disabled" : false,
+      "hidden" : false
+    },
+    "data" : {
+      "guid" : "125d4af6-d629-413a-a67f-8d18b947e084",
+      "columnType" : "-1"
+    },
+    "children" : [ {
+      "id" : "j1_3",
+      "text" : "LLMs",
+      "li_attr" : {
+        "id" : "j1_3"
+      },
+      "a_attr" : {
+        "href" : "#",
+        "id" : "j1_3_anchor"
+      },
+      "state" : {
+        "loaded" : true,
+        "opened" : false,
+        "selected" : false,
+        "disabled" : false
+      },
+      "data" : {
+        "guid" : "fb31c319-d79e-40c3-8fc2-e25c2ddedebe",
+        "columnType" : "-1",
+        "assignList" : [ ]
+      },
+      "children" : [ ],
+      "type" : "documentList"
+    }, {
+      "id" : "j1_5",
+      "text" : "Agents",
+      "li_attr" : {
+        "id" : "j1_5"
+      },
+      "a_attr" : {
+        "href" : "#",
+        "id" : "j1_5_anchor"
+      },
+      "state" : {
+        "loaded" : true,
+        "opened" : false,
+        "selected" : false,
+        "disabled" : false
+      },
+      "data" : {
+        "guid" : "70fc328e-ad6d-4696-924a-232af3a74448",
+        "columnType" : "-1",
+        "assignList" : [ ]
+      },
+      "children" : [ ],
+      "type" : "documentList"
+    }, {
+      "id" : "j1_4",
+      "text" : "RAGs",
+      "li_attr" : {
+        "id" : "j1_4"
+      },
+      "a_attr" : {
+        "href" : "#",
+        "id" : "j1_4_anchor"
+      },
+      "state" : {
+        "loaded" : true,
+        "opened" : false,
+        "selected" : false,
+        "disabled" : false
+      },
+      "data" : {
+        "guid" : "d6d4b0a3-8c29-41ed-8ad4-494339b83972",
+        "columnType" : "-1",
+        "assignList" : [ ]
+      },
+      "children" : [ ],
+      "type" : "documentList"
+    }, {
+      "id" : "j1_6",
+      "text" : "Tools",
+      "li_attr" : {
+        "id" : "j1_6"
+      },
+      "a_attr" : {
+        "href" : "#",
+        "id" : "j1_6_anchor"
+      },
+      "state" : {
+        "loaded" : true,
+        "opened" : false,
+        "selected" : false,
+        "disabled" : false
+      },
+      "data" : {
+        "guid" : "1d4a7c8d-b2a8-4747-952d-11b4b0c13e73",
+        "columnType" : "-1",
+        "assignList" : [ ]
+      },
+      "children" : [ ],
+      "type" : "documentList"
+    }, {
+      "id" : "j1_8",
+      "text" : "KBs",
+      "li_attr" : {
+        "id" : "j1_8"
+      },
+      "a_attr" : {
+        "href" : "#",
+        "id" : "j1_8_anchor"
+      },
+      "state" : {
+        "loaded" : true,
+        "opened" : false,
+        "selected" : false,
+        "disabled" : false
+      },
+      "data" : {
+        "guid" : "39d62363-a81a-4c89-8f17-ccbb2ac2d451",
+        "columnType" : "-1",
+        "assignList" : [ ]
+      },
+      "children" : [ {
+        "id" : "j1_9",
+        "text" : "ragID",
+        "li_attr" : {
+          "id" : "j1_9"
+        },
+        "a_attr" : {
+          "href" : "#",
+          "id" : "j1_9_anchor"
+        },
+        "state" : {
+          "loaded" : true,
+          "opened" : false,
+          "selected" : false,
+          "disabled" : false
+        },
+        "data" : {
+          "guid" : "c0bd4c10-44d8-4c23-aa3b-2eb717ef7294",
+          "columnType" : "-1"
+        },
+        "children" : [ ],
+        "type" : "string"
+      }, {
+        "id" : "j1_10",
+        "text" : "name",
+        "li_attr" : {
+          "id" : "j1_10"
+        },
+        "a_attr" : {
+          "href" : "#",
+          "id" : "j1_10_anchor"
+        },
+        "state" : {
+          "loaded" : true,
+          "opened" : false,
+          "selected" : false,
+          "disabled" : false
+        },
+        "data" : {
+          "guid" : "401c687e-2fe0-474d-b0ea-6285191f5fec",
+          "columnType" : "-1"
+        },
+        "children" : [ ],
+        "type" : "string"
+      } ],
+      "type" : "documentList"
+    }, {
+      "id" : "j1_11",
+      "text" : "EMBEDDING_MODELs",
+      "li_attr" : {
+        "id" : "j1_11"
+      },
+      "a_attr" : {
+        "href" : "#",
+        "id" : "j1_11_anchor"
+      },
+      "state" : {
+        "loaded" : true,
+        "opened" : false,
+        "selected" : false,
+        "disabled" : false
+      },
+      "data" : {
+        "guid" : "90ad7aa4-4ee9-4627-9ff6-d119c504932a",
+        "columnType" : "-1",
+        "assignList" : [ ]
+      },
+      "children" : [ ],
+      "type" : "documentList"
+    } ],
+    "type" : "document"
+  } ],
+  "output" : [ {
+    "id" : "j2_1",
+    "text" : "status",
+    "li_attr" : {
+      "id" : "j2_1"
+    },
+    "a_attr" : {
+      "href" : "#",
+      "id" : "j2_1_anchor"
+    },
+    "state" : {
+      "loaded" : true,
+      "opened" : false,
+      "selected" : false,
+      "disabled" : false,
+      "hidden" : false
+    },
+    "data" : {
+      "guid" : "614d1613-313d-415e-94ac-a8a41ff2686b",
+      "columnType" : "-1"
+    },
+    "children" : [ ],
+    "type" : "string"
+  }, {
+    "id" : "j2_2",
+    "text" : "error",
+    "li_attr" : {
+      "id" : "j2_2"
+    },
+    "a_attr" : {
+      "href" : "#",
+      "id" : "j2_2_anchor"
+    },
+    "state" : {
+      "loaded" : true,
+      "opened" : false,
+      "selected" : false,
+      "disabled" : false,
+      "hidden" : false
+    },
+    "data" : {
+      "guid" : "cf323682-e36b-4961-9e8a-7b0bff6a60e5",
+      "columnType" : "-1"
+    },
+    "children" : [ ],
+    "type" : "string"
+  }, {
+    "id" : "j2_3",
+    "text" : "json",
+    "li_attr" : {
+      "id" : "j2_3"
+    },
+    "a_attr" : {
+      "href" : "#",
+      "id" : "j2_3_anchor"
+    },
+    "state" : {
+      "loaded" : true,
+      "opened" : false,
+      "selected" : false,
+      "disabled" : false,
+      "hidden" : false
+    },
+    "data" : {
+      "guid" : "f2174118-ba86-4469-89ae-e4c557c54e22",
+      "columnType" : "-1"
+    },
+    "children" : [ ],
+    "type" : "string"
+  } ],
+  "package" : "cGFja2FnZSBwYWNrYWdlcy5Bd2FyZW5lc3MuZGFzaGJvYXJkLnNlcnZpY2VzLmphdmE7",
+  "imports" : "aW1wb3J0IGNvbS5la2EubWlkZGxld2FyZS5zZXJ2aWNlLkRhdGFQaXBlbGluZTsKaW1wb3J0IGNvbS5la2EubWlkZGxld2FyZS5zZXJ2aWNlLlNlcnZpY2VVdGlsczsKaW1wb3J0IGNvbS5la2EubWlkZGxld2FyZS50ZW1wbGF0ZS5TbmlwcGV0RXhjZXB0aW9uOwppbXBvcnQgYWdlbnRzLm1hbmFnZXIuQ2hhdExhbmd1YWdlTW9kZWxNYW5hZ2VyOwppbXBvcnQgYWdlbnRzLm1hbmFnZXIuUkFHTWFuYWdlcjsKaW1wb3J0IGFnZW50cy5tYW5hZ2VyLkZ1bmN0aW9uTWFuYWdlcjsKaW1wb3J0IGFnZW50cy5tYW5hZ2VyLkFnZW50TWFuYWdlcjsKaW1wb3J0IGFnZW50cy5tYW5hZ2VyLktub3dsZWRnZUJhc2VNYW5hZ2VyOwppbXBvcnQgYWdlbnRzLm1hbmFnZXIuRW1iZWRkaW5nTW9kZWxNYW5hZ2VyOwppbXBvcnQgamF2YS51dGlsLio7CmltcG9ydCB1dGlscy5JbXBvcnRBSTs=",
+  "main" : "dHJ5IHsKICAgIE1hcDxTdHJpbmcsIE9iamVjdD4gc3BlYyA9IChNYXA8U3RyaW5nLCBPYmplY3Q+KSBkYXRhUGlwZWxpbmUuZ2V0KCJzcGVjIik7CiAgICBTdHJpbmcganNvbiA9IFNlcnZpY2VVdGlscy50b0pzb24oc3BlYyk7CgogICAgLy8gRGVwcmVjYXRlZCBmYWxsYmFjayBpbXBvcnQgcGF0aHMga2VwdCBoZXJlIGZvciByZWZlcmVuY2Ugb25seS4KICAgIC8vIFN0cmluZyB0biA9IGRhdGFQaXBlbGluZS5ycC5nZXRUZW5hbnQoKS5nZXROYW1lKCk7CiAgICAvLyBFbWJlZGRpbmdNb2RlbE1hbmFnZXIubG9hZEpzb24oanNvbiwgdHJ1ZSk7CiAgICAvLyBDaGF0TGFuZ3VhZ2VNb2RlbE1hbmFnZXIubG9hZEpzb24oanNvbik7CiAgICAvLyBSQUdNYW5hZ2VyLmxvYWRKc29uKGpzb24pOwogICAgLy8gRnVuY3Rpb25NYW5hZ2VyLmxvYWRKc29uKGpzb24pOyAvLyBkZXByZWNhdGVkCiAgICAvLyBBZ2VudE1hbmFnZXIubG9hZEpzb24oanNvbiwgdG4pOwogICAgLy8gS25vd2xlZGdlQmFzZU1hbmFnZXIubG9hZEpzb24oanNvbik7CgogICAgTWFwPFN0cmluZywgT2JqZWN0PiBpbXBvcnRSZXN1bHQgPSBJbXBvcnRBSS5pbXBvcnRGcm9tSnNvbihqc29uLCBkYXRhUGlwZWxpbmUpOwoKICAgIGRhdGFQaXBlbGluZS5wdXQoInN0YXR1cyIsIGltcG9ydFJlc3VsdC5nZXQoInN0YXR1cyIpKTsKICAgIGRhdGFQaXBlbGluZS5wdXQoInJlc3VsdCIsIGltcG9ydFJlc3VsdCk7Cn0gY2F0Y2ggKEV4Y2VwdGlvbiBlKSB7CiAgICBkYXRhUGlwZWxpbmUuY2xlYXIoKTsKICAgIGRhdGFQaXBlbGluZS5wdXQoImVycm9yIiwgZS5nZXRNZXNzYWdlKCkpOwogICAgZGF0YVBpcGVsaW5lLnB1dCgic3RhdHVzIiwgImZhaWxlZCIpOwogICAgbmV3IFNuaXBwZXRFeGNlcHRpb24oZGF0YVBpcGVsaW5lLCAiU25pcHBldCBleGNlcHRpb24iLCBuZXcgRXhjZXB0aW9uKGUpKTsKfQo=",
+  "staticWorkspace" : "",
+  "version" : "v1",
+  "consumers" : "",
+  "developers" : "developers",
+  "lockedByUser" : "admin"
+}

@@ -1,0 +1,110 @@
+{
+  "input" : [ {
+    "id" : "j1_1",
+    "text" : "*pathParameters",
+    "li_attr" : {
+      "id" : "j1_1"
+    },
+    "a_attr" : {
+      "href" : "#",
+      "id" : "j1_1_anchor"
+    },
+    "state" : {
+      "loaded" : true,
+      "opened" : true,
+      "selected" : false,
+      "disabled" : false,
+      "hidden" : false
+    },
+    "data" : { },
+    "children" : [ {
+      "id" : "j1_2",
+      "text" : "resource",
+      "li_attr" : {
+        "id" : "j1_2"
+      },
+      "a_attr" : {
+        "href" : "#",
+        "id" : "j1_2_anchor"
+      },
+      "state" : {
+        "loaded" : true,
+        "opened" : false,
+        "selected" : false,
+        "disabled" : false
+      },
+      "data" : { },
+      "children" : [ ],
+      "type" : "string"
+    }, {
+      "id" : "j1_3",
+      "text" : "id",
+      "li_attr" : {
+        "id" : "j1_3"
+      },
+      "a_attr" : {
+        "href" : "#",
+        "id" : "j1_3_anchor"
+      },
+      "state" : {
+        "loaded" : true,
+        "opened" : false,
+        "selected" : false,
+        "disabled" : false
+      },
+      "data" : { },
+      "children" : [ ],
+      "type" : "string"
+    } ],
+    "type" : "document"
+  } ],
+  "output" : [ {
+    "id" : "j2_1",
+    "text" : "fileDispose",
+    "li_attr" : {
+      "id" : "j2_1"
+    },
+    "a_attr" : {
+      "href" : "#",
+      "id" : "j2_1_anchor"
+    },
+    "state" : {
+      "loaded" : true,
+      "opened" : false,
+      "selected" : false,
+      "disabled" : false,
+      "hidden" : false
+    },
+    "data" : { },
+    "children" : [ ],
+    "type" : "documentList"
+  }, {
+    "id" : "j2_2",
+    "text" : "*multiPart",
+    "li_attr" : {
+      "id" : "j2_2"
+    },
+    "a_attr" : {
+      "href" : "#",
+      "id" : "j2_2_anchor"
+    },
+    "state" : {
+      "loaded" : true,
+      "opened" : false,
+      "selected" : false,
+      "disabled" : false,
+      "hidden" : false
+    },
+    "data" : { },
+    "children" : [ ],
+    "type" : "javaObject"
+  } ],
+  "package" : "cGFja2FnZSBwYWNrYWdlcy5taWRkbGV3YXJlLnB1Yi51dGlsOw==",
+  "imports" : "aW1wb3J0IGNvbS5la2EubWlkZGxld2FyZS5zZXJ2aWNlLkRhdGFQaXBlbGluZTsKaW1wb3J0IGNvbS5la2EubWlkZGxld2FyZS5zZXJ2aWNlLlByb3BlcnR5TWFuYWdlcjsKaW1wb3J0IGNvbS5la2EubWlkZGxld2FyZS5zZXJ2aWNlLlNlcnZpY2VVdGlsczsKaW1wb3J0IGNvbS5la2EubWlkZGxld2FyZS50ZW1wbGF0ZS5TbmlwcGV0RXhjZXB0aW9uOwppbXBvcnQgb3JnLmFwYWNoZS5jb21tb25zLmlvLklPVXRpbHM7CgppbXBvcnQgamF2YS5pby5GaWxlOwppbXBvcnQgamF2YS5pby5GaWxlT3V0cHV0U3RyZWFtOwppbXBvcnQgamF2YS5uaW8uY2hhcnNldC5DaGFyc2V0OwppbXBvcnQgamF2YS5uaW8uZmlsZS5GaWxlczsKaW1wb3J0IGphdmEubmlvLmZpbGUuYXR0cmlidXRlLkJhc2ljRmlsZUF0dHJpYnV0ZXM7CmltcG9ydCBqYXZhLm5pby5maWxlLmF0dHJpYnV0ZS5GaWxlVGltZTsKaW1wb3J0IGphdmEudGV4dC5TaW1wbGVEYXRlRm9ybWF0OwppbXBvcnQgamF2YS51dGlsLkFycmF5czsKaW1wb3J0IGphdmEudXRpbC5Db21wYXJhdG9yOwppbXBvcnQgamF2YS51dGlsLkxpc3Q7CmltcG9ydCBqYXZhLnV0aWwuTWFwOwppbXBvcnQgamF2YS51dGlsLnN0cmVhbS5Db2xsZWN0b3JzOw==",
+  "main" : "dHJ5IHsKCiAgICAgICAgICAgIGRhdGFQaXBlbGluZS5hcHBMb2coIk9QRVJBVElPTiIsICJnZXRMb2dzIik7CiAgICAgICAgICAgIFN0cmluZyByZXNvdXJjZT1kYXRhUGlwZWxpbmUuZ2V0QXNTdHJpbmcoIipwYXRoUGFyYW1ldGVycy9yZXNvdXJjZSIpOwogICAgICAgICAgICBkYXRhUGlwZWxpbmUuYXBwTG9nKCJFWFRSQUNURURfUkVTT1VSQ0UiLCByZXNvdXJjZSk7CiAgICAgICAgICAgIFN0cmluZyBuYW1lPWRhdGFQaXBlbGluZS5nZXRBc1N0cmluZygiKnBhdGhQYXJhbWV0ZXJzL2lkIik7CiAgICAgICAgICAgIGRhdGFQaXBlbGluZS5hcHBMb2coIkVYVFJBQ1RFRF9OQU1FIiwgbmFtZSk7CiAgICAgICAgICAgIGRhdGFQaXBlbGluZS5jbGVhcigpOwogICAgICAgICAgICBGaWxlIGZpbGUgPSBudWxsOwogICAgICAgICAgICBpZihuYW1lPT1udWxsIHx8IG5hbWUuZXF1YWxzKCJsaXN0IikpewogICAgICAgICAgICAgICAgZmlsZT1uZXcgRmlsZShQcm9wZXJ0eU1hbmFnZXIuZ2V0UGFja2FnZVBhdGgoZGF0YVBpcGVsaW5lLnJwLmdldFRlbmFudCgpKSArICIvdGVzdF9jYXNlcy8iICsgcmVzb3VyY2UpOwogICAgICAgICAgICAgICAgU3RyaW5nIGZpbGVzW109ZmlsZS5saXN0KCk7CiAgICAgICAgICAgICAgICBkYXRhUGlwZWxpbmUucHV0KCJmaWxlcyIsZmlsZXMpOwogICAgICAgICAgICAgICAgZGF0YVBpcGVsaW5lLmFwcExvZygiT1BFUkFUSU9OIiwgIkxpc3RpbmcgZmlsZXMgaW4gc25hcHNob3RzIGZvbGRlciIpOwoKICAgICAgICAgICAgICAgIFNpbXBsZURhdGVGb3JtYXQgZGYgPSBuZXcgU2ltcGxlRGF0ZUZvcm1hdCgiZGQtTU0teXl5eSBISDptbSIpOwoKICAgICAgICAgICAgICAgIExpc3Q8RmlsZURpc3Bvc2U+IGZpbGVEaXNwb3NlID0gQXJyYXlzLnN0cmVhbShudWxsID09IGZpbGVzID8gbmV3IFN0cmluZ1tde30gOiBmaWxlcykubWFwKGYgLT4gbmV3IEZpbGVPcChuZXcgRmlsZSgKICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICBTdHJpbmcuZm9ybWF0KFByb3BlcnR5TWFuYWdlci5nZXRQYWNrYWdlUGF0aChkYXRhUGlwZWxpbmUucnAuZ2V0VGVuYW50KCkpICsgIi90ZXN0X2Nhc2VzLyVzLyVzIiwgcmVzb3VyY2UsIGYpCiAgICAgICAgICAgICAgICAgICAgICAgICkpKQogICAgICAgICAgICAgICAgICAgICAgICAubWFwKG0gLT4gewogICAgICAgICAgICAgICAgICAgICAgICAgICAgdHJ5IHsKICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICBtLmZpbGVUaW1lID0gRmlsZXMucmVhZEF0dHJpYnV0ZXMobS5maWxlLnRvUGF0aCgpLCBCYXNpY0ZpbGVBdHRyaWJ1dGVzLmNsYXNzKS5jcmVhdGlvblRpbWUoKTsKICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICByZXR1cm4gbTsKICAgICAgICAgICAgICAgICAgICAgICAgICAgIH0gY2F0Y2ggKEV4Y2VwdGlvbiBlKSB7CiAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgZS5wcmludFN0YWNrVHJhY2UoKTsKICAgICAgICAgICAgICAgICAgICAgICAgICAgIH0KICAgICAgICAgICAgICAgICAgICAgICAgICAgIHJldHVybiBudWxsOwogICAgICAgICAgICAgICAgICAgICAgICB9KS5maWx0ZXIoZiAtPiBudWxsICE9IGYpLnNvcnRlZChuZXcgQ29tcGFyYXRvcjxGaWxlT3A+KCkgewogICAgICAgICAgICAgICAgICAgICAgICAgICAgQE92ZXJyaWRlCiAgICAgICAgICAgICAgICAgICAgICAgICAgICBwdWJsaWMgaW50IGNvbXBhcmUoRmlsZU9wIG8xLCBGaWxlT3AgbzIpIHsKICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICByZXR1cm4gbzIuZmlsZVRpbWUuY29tcGFyZVRvKG8xLmZpbGVUaW1lKTsKICAgICAgICAgICAgICAgICAgICAgICAgICAgIH0KICAgICAgICAgICAgICAgICAgICAgICAgfSkubWFwKGYgLT4gbmV3IEZpbGVEaXNwb3NlKGYuZmlsZS5nZXROYW1lKCksIGYuZmlsZS5nZXROYW1lKCksIGRmLmZvcm1hdChmLmZpbGVUaW1lLnRvTWlsbGlzKCkpKSkuY29sbGVjdChDb2xsZWN0b3JzLnRvTGlzdCgpKTsKCiAgICAgICAgICAgICAgICBkYXRhUGlwZWxpbmUucHV0KCJmaWxlRGlzcG9zZSIsIGZpbGVEaXNwb3NlKTsKCiAgICAgICAgICAgIH1lbHNlewogICAgICAgICAgICAgICAgaWYoIW5hbWUuZW5kc1dpdGgoImNhc2VOYW1lIikpCiAgICAgICAgICAgICAgICAgICAgbmFtZSs9Ii5qc29uIjsKICAgICAgICAgICAgICAgIGRhdGFQaXBlbGluZS5hcHBMb2coIk9QRVJBVElPTiIsICJMaXN0IC5zbmFwIGZpbGVzIik7CiAgICAgICAgICAgICAgICBmaWxlPW5ldyBGaWxlKFByb3BlcnR5TWFuYWdlci5nZXRQYWNrYWdlUGF0aChkYXRhUGlwZWxpbmUucnAuZ2V0VGVuYW50KCkpICsgIi90ZXN0X2Nhc2VzLyIgKyByZXNvdXJjZSArICIvIiArIG5hbWUpOwogICAgICAgICAgICAgICAgZGF0YVBpcGVsaW5lLnNldEJvZHkoZmlsZSk7CiAgICAgICAgICAgIH0KCiAgICAgICAgfSBjYXRjaCAoRXhjZXB0aW9uIGUpIHsKICAgICAgICAgICAgZS5wcmludFN0YWNrVHJhY2UoKTsKICAgICAgICAgICAgZGF0YVBpcGVsaW5lLmNsZWFyKCk7CiAgICAgICAgICAgIGRhdGFQaXBlbGluZS5wdXQoImVycm9yIiwgZS5nZXRNZXNzYWdlKCkpOwogICAgICAgICAgICBkYXRhUGlwZWxpbmUuYXBwTG9nKCJTRVJWSUNFX0VSUk9SIiwgZS5nZXRNZXNzYWdlKCkpOwogICAgICAgICAgICBkYXRhUGlwZWxpbmUuc2V0UmVzcG9uc2VTdGF0dXMoNTAwKTsKICAgICAgICAgICAgZGF0YVBpcGVsaW5lLnB1dCgic3RhdHVzIiwgIk5vdCBNb2RpZmllZCIpOwogICAgICAgICAgICBkYXRhUGlwZWxpbmUuYXBwTG9nKCJTRVJWSUNFX1NUQVRVUyIsIk5vdCBNb2RpZmllZCIpOwogICAgICAgICAgICBuZXcgU25pcHBldEV4Y2VwdGlvbihkYXRhUGlwZWxpbmUsICJGYWlsZWQgd2hpbGUgc2F2aW5nIGZpbGUiLCBuZXcgRXhjZXB0aW9uKGUpKTsKICAgICAgICB9",
+  "staticWorkspace" : "CnN0YXRpYyBwdWJsaWMgY2xhc3MgRmlsZURpc3Bvc2UgewogICAgICAgIFN0cmluZyBrZXk7CiAgICAgICAgU3RyaW5nIG5hbWU7CgogICAgICAgIFN0cmluZyB0aW1lOwoKICAgICAgICBGaWxlRGlzcG9zZShTdHJpbmcga2V5LCBTdHJpbmcgbmFtZSwgU3RyaW5nIHRpbWUpIHsKICAgICAgICAgICAgdGhpcy5rZXkgPSBrZXk7CiAgICAgICAgICAgIHRoaXMubmFtZSA9IG5hbWU7CiAgICAgICAgICAgIHRoaXMudGltZSA9IHRpbWU7CiAgICAgICAgfQogICAgICAgIHB1YmxpYyBTdHJpbmcgZ2V0S2V5KCkgewogICAgICAgICAgICByZXR1cm4ga2V5OwogICAgICAgIH0KCiAgICAgICAgcHVibGljIHZvaWQgc2V0S2V5KFN0cmluZyBrZXkpIHsKICAgICAgICAgICAgdGhpcy5rZXkgPSBrZXk7CiAgICAgICAgfQoKICAgICAgICBwdWJsaWMgU3RyaW5nIGdldE5hbWUoKSB7CiAgICAgICAgICAgIHJldHVybiBuYW1lOwogICAgICAgIH0KCiAgICAgICAgcHVibGljIHZvaWQgc2V0TmFtZShTdHJpbmcgbmFtZSkgewogICAgICAgICAgICB0aGlzLm5hbWUgPSBuYW1lOwogICAgICAgIH0KCiAgICAgICAgcHVibGljIFN0cmluZyBnZXRUaW1lKCkgewogICAgICAgICAgICByZXR1cm4gdGltZTsKICAgICAgICB9CgogICAgICAgIHB1YmxpYyB2b2lkIHNldFRpbWUoU3RyaW5nIHRpbWUpIHsKICAgICAgICAgICAgdGhpcy50aW1lID0gdGltZTsKICAgICAgICB9CiAgICB9CgogICAgc3RhdGljIHB1YmxpYyBjbGFzcyBGaWxlT3AgewoKICAgICAgICBGaWxlIGZpbGU7CiAgICAgICAgRmlsZVRpbWUgZmlsZVRpbWU7CgogICAgICAgIHB1YmxpYyBGaWxlT3AoRmlsZSBmaWxlKSB7CiAgICAgICAgICAgIHRoaXMuZmlsZSA9IGZpbGU7CiAgICAgICAgfQogICAgfQ==",
+  "version" : "v1",
+  "consumers" : "",
+  "developers" : "developers",
+  "lockedByUser" : "admin"
+}

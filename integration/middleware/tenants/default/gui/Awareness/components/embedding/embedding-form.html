@@ -1,0 +1,106 @@
+<div ng-if="showEmbeddingOverlay">
+
+    <!-- PROVIDER TILE SELECTION -->
+    <div class="mb-4" ng-if="!embeddingProviderChosen">
+
+        <div class="text-center mb-3">
+            <h4>Select Embedding Provider</h4>
+        </div>
+
+        <div class="d-flex justify-content-center gap_mix flex-wrap"
+             style="--gapwidth:20px; max-width:500px; margin:0 auto;">
+
+            <div class="connectllmbox_inner connectllmbox_innerbox cursor-pointer"
+                 ng-repeat="company in embeddingCompanies"
+                 ng-click="quickSelectEmbeddingProvider(company.company_name)">
+
+                <img ng-src="Awareness/pub/images/{{company.logo_icon}}">
+                <span class="connectllmbox_innertitle">{{company.company_name}}</span>
+
+            </div>
+
+            <div class="connectllmbox_inner connectllmbox_innerbox cursor-pointer"
+                 ng-click="quickSelectEmbeddingProvider('OTHER')">
+
+                <img src="Awareness/pub/images/otheragent.svg" style="width:20px;height:20px;">
+                <span class="connectllmbox_innertitle">Other</span>
+
+            </div>
+
+        </div>
+
+    </div>
+
+
+    <!-- TABS + PANELS -->
+    <div ng-if="embeddingProviderChosen"
+         class="d-flex flex-column padding-rightm">
+
+        <!-- TOP TABS -->
+        <div role="tablist" class="connectllmbox_tab">
+
+            <button role="connectllmboxtab"
+                    ng-repeat="company in embeddingCompanies"
+                    id="tab-{{ (company.company_name||'').toLowerCase().split(' ').join('') }}"
+                    type="button"
+                    ng-disabled="isUIBusy && isUIBusy()"
+                    ng-class="{active: emActiveProvider === (company.company_name||'').toLowerCase()}"
+                    ng-attr-aria-selected="{{ (emActiveProvider === (company.company_name||'').toLowerCase()) ? 'true' : 'false' }}"
+                    aria-controls="panel-{{ (company.company_name||'').toLowerCase().split(' ').join('') }}"
+                    ng-click="selectEMProvider((company.company_name||'').toLowerCase())"
+                    tabindex="{{ emActiveProvider === (company.company_name||'').toLowerCase() ? 0 : -1 }}">
+
+                <img ng-src="Awareness/pub/images/{{company.logo_icon}}">
+                <span class="connectllmbox_innertitle">{{company.company_name}}</span>
+
+            </button>
+
+            <button role="connectllmboxtab"
+                    id="tab-other"
+                    type="button"
+                    ng-disabled="isUIBusy && isUIBusy()"
+                    ng-class="{active: emActiveProvider==='other'}"
+                    ng-attr-aria-selected="{{ emActiveProvider==='other' ? 'true' : 'false' }}"
+                    aria-controls="panel-other"
+                    ng-click="selectEMProvider('other')"
+                    tabindex="{{ emActiveProvider === 'other' ? 0 : -1 }}">
+
+                <img src="Awareness/pub/images/otheragent.svg" style="width:20px;height:20px;">
+                <span class="connectllmbox_innertitle">Other</span>
+
+            </button>
+
+        </div>
+
+
+        <!-- PANELS -->
+        <div ng-switch="emActiveProvider" class="connectllmbox_panelarea">
+
+            <!-- OPENAI -->
+            <div id="panel-openai" role="tabpanel" ng-switch-when="openai">
+                <div ng-include="'Awareness/components/embedding/embedding-form-dropdown.html'"
+                     ng-init="providerKey='OpenAI'"></div>
+            </div>
+
+
+            <!-- GOOGLE -->
+            <div id="panel-google" role="tabpanel" ng-switch-when="google">
+                <div ng-include="'Awareness/components/embedding/embedding-form-dropdown.html'"
+                     ng-init="providerKey='Google'"></div>
+            </div>
+
+
+            <!-- OTHER -->
+            <div id="panel-other" role="tabpanel" ng-switch-when="other">
+                <div ng-include="'Awareness/components/embedding/embedding-form-other.html'"></div>
+            </div>
+
+
+            <!-- DEFAULT -->
+            <div ng-switch-default class="ng-hide"></div>
+
+        </div>
+
+    </div>
+
+</div>

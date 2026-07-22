@@ -1,0 +1,115 @@
+{
+  "input" : [ {
+    "id" : "j1_1",
+    "text" : "pluginId",
+    "li_attr" : {
+      "id" : "j1_1"
+    },
+    "a_attr" : {
+      "href" : "#",
+      "id" : "j1_1_anchor"
+    },
+    "state" : {
+      "loaded" : true,
+      "opened" : false,
+      "selected" : false,
+      "disabled" : false,
+      "hidden" : false
+    },
+    "data" : { },
+    "children" : [ ],
+    "type" : "string"
+  }, {
+    "id" : "j1_2",
+    "text" : "version",
+    "li_attr" : {
+      "id" : "j1_2"
+    },
+    "a_attr" : {
+      "href" : "#",
+      "id" : "j1_2_anchor"
+    },
+    "state" : {
+      "loaded" : true,
+      "opened" : false,
+      "selected" : false,
+      "disabled" : false,
+      "hidden" : false
+    },
+    "data" : { },
+    "children" : [ ],
+    "type" : "string"
+  }, {
+    "id" : "j1_3",
+    "text" : "token",
+    "li_attr" : {
+      "id" : "j1_3"
+    },
+    "a_attr" : {
+      "href" : "#",
+      "id" : "j1_3_anchor"
+    },
+    "state" : {
+      "loaded" : true,
+      "opened" : false,
+      "selected" : false,
+      "disabled" : false,
+      "hidden" : false
+    },
+    "data" : {
+      "guid" : "36fac300-72e8-4245-a5c1-722a2d9b58e9",
+      "columnType" : "-1"
+    },
+    "children" : [ ],
+    "type" : "string"
+  } ],
+  "output" : [ {
+    "id" : "j2_1",
+    "text" : "status",
+    "li_attr" : {
+      "id" : "j2_1"
+    },
+    "a_attr" : {
+      "href" : "#",
+      "id" : "j2_1_anchor"
+    },
+    "state" : {
+      "loaded" : true,
+      "opened" : false,
+      "selected" : false,
+      "disabled" : false,
+      "hidden" : false
+    },
+    "data" : { },
+    "children" : [ ],
+    "type" : "boolean"
+  }, {
+    "id" : "j2_2",
+    "text" : "message",
+    "li_attr" : {
+      "id" : "j2_2"
+    },
+    "a_attr" : {
+      "href" : "#",
+      "id" : "j2_2_anchor"
+    },
+    "state" : {
+      "loaded" : true,
+      "opened" : false,
+      "selected" : false,
+      "disabled" : false,
+      "hidden" : false
+    },
+    "data" : { },
+    "children" : [ ],
+    "type" : "string"
+  } ],
+  "package" : "cGFja2FnZSBwYWNrYWdlcy5taWRkbGV3YXJlLnB1Yi5wbGF0Zm9ybTs=",
+  "imports" : "aW1wb3J0IGNvbS5la2EubWlkZGxld2FyZS5zZXJ2aWNlLkRhdGFQaXBlbGluZTsKaW1wb3J0IGNvbS5la2EubWlkZGxld2FyZS5zZXJ2aWNlLlNlcnZpY2VVdGlsczsKaW1wb3J0IGNvbS5la2EubWlkZGxld2FyZS50ZW1wbGF0ZS5TbmlwcGV0RXhjZXB0aW9uOwppbXBvcnQgY29tLmVrYS5taWRkbGV3YXJlLnVwZGF0ZS5QbHVnaW5JbnN0YWxsZXI7CmltcG9ydCBjb20uZWthLm1pZGRsZXdhcmUuc2VydmljZS5SdW50aW1lUGlwZWxpbmU7",
+  "main" : "ICBTdHJpbmcgcGx1Z2luSWQgPSBkYXRhUGlwZWxpbmUuZ2V0U3RyaW5nKCJwbHVnaW5JZCIpOwogIFN0cmluZyB2ZXJzaW9uID0gZGF0YVBpcGVsaW5lLmdldFN0cmluZygidmVyc2lvbiIpOwogIFN0cmluZyB0b2tlbiA9IGRhdGFQaXBlbGluZS5nZXRBc1N0cmluZygidG9rZW4iKTsKICBSdW50aW1lUGlwZWxpbmUgcGFyZW50UnAgPSBSdW50aW1lUGlwZWxpbmUuZ2V0UlAoKTsKICBuZXcgVGhyZWFkKCgpIC0+IHsKICAgICAgdHJ5IHsKICAgICAgICBwYXJlbnRScC5jbG9uZVRocmVhZExvY2FsKCk7CiAgICAgICAgY29tLmVrYS5taWRkbGV3YXJlLnVwZGF0ZS5QbHVnaW5JbnN0YWxsZXIuaW5zdGFsbFBsdWdpbihwbHVnaW5JZCwgdmVyc2lvbiwgdG9rZW4sIGRhdGFQaXBlbGluZSk7CiAgICAgICAgU2VydmljZVV0aWxzLmV4cGlyZVNlcnZpY2VDYWNoZSgicGFja2FnZXMubWlkZGxld2FyZS5wdWIuc2VydmVyLmJyb3dzZS5nZXRQYWNrYWdlc0FzVHJlZSIpOwogICAgICB9IGNhdGNoIChFeGNlcHRpb24gZSkgewogICAgICAgIGRhdGFQaXBlbGluZS5jbGVhcigpOwogICAgICAgIGUucHJpbnRTdGFja1RyYWNlKCk7CiAgICAgICAgbmV3IFNuaXBwZXRFeGNlcHRpb24oZGF0YVBpcGVsaW5lLCJTbmlwcGV0IGV4Y2VwdGlvbiIsIGUpOwogICAgICB9CiAgICB9KS5zdGFydCgpOwoKICAgIGRhdGFQaXBlbGluZS5wdXQoInN0YXR1cyIsICIyMDIiKTsKICAgIGRhdGFQaXBlbGluZS5wdXQoIm1lc3NhZ2UiLCAiUGx1Z2luIEluc3RhbGxhdGlvbiBwcm9jZXNzIHN0YXJ0ZWQgaW4gYmFja2dyb3VuZC4iKTs=",
+  "staticWorkspace" : "",
+  "version" : "v1",
+  "consumers" : "",
+  "developers" : "developers",
+  "lockedByUser" : "rupeshgupta@syncloop.com"
+}

@@ -1,0 +1,106 @@
+{
+  "latest" : {
+    "createdTS" : "",
+    "input" : [ {
+      "id" : "j2_6",
+      "text" : "chatgptToken",
+      "li_attr" : {
+        "id" : "j2_6"
+      },
+      "a_attr" : {
+        "href" : "#",
+        "id" : "j2_6_anchor"
+      },
+      "state" : {
+        "loaded" : true,
+        "opened" : false,
+        "selected" : false,
+        "disabled" : false,
+        "hidden" : false
+      },
+      "data" : {
+        "guid" : "a0a35b9e-184f-4363-b936-d164588cc2a4",
+        "columnType" : "-1",
+        "assignList" : [ {
+          "path" : "chatgptToken",
+          "value" : "#{chatgptToken}",
+          "evaluate" : "EPV",
+          "typePath" : "string"
+        } ]
+      },
+      "children" : [ ],
+      "type" : "string"
+    } ],
+    "output" : [ {
+      "id" : "j3_5",
+      "text" : "checkToken",
+      "li_attr" : {
+        "id" : "j3_5"
+      },
+      "a_attr" : {
+        "href" : "#",
+        "id" : "j3_5_anchor"
+      },
+      "state" : {
+        "loaded" : true,
+        "opened" : false,
+        "selected" : false,
+        "disabled" : false,
+        "hidden" : false
+      },
+      "data" : { },
+      "children" : [ ],
+      "type" : "boolean"
+    } ],
+    "api" : [ {
+      "id" : "j1_15",
+      "text" : "Transformer",
+      "li_attr" : {
+        "id" : "j1_15"
+      },
+      "a_attr" : {
+        "href" : "javascript:void(0)",
+        "id" : "j1_15_anchor"
+      },
+      "state" : {
+        "loaded" : true,
+        "opened" : false,
+        "selected" : false,
+        "disabled" : false,
+        "hidden" : false
+      },
+      "data" : {
+        "guid" : "ddda26d0-b37d-47e1-b903-cc135abda616",
+        "columnType" : "-1",
+        "transformers" : [ ],
+        "lines" : [ ],
+        "dropList" : [ ],
+        "createList" : [ {
+          "path" : "checkToken",
+          "value" : "\"null\" == \"#{chatgptToken}\" || \"\" == \"#{chatgptToken}\".trim()",
+          "id" : "aa500414-eabf-478d-a61e-c94b1f9d8690",
+          "typePath" : "boolean",
+          "evaluate" : "EEV"
+        } ],
+        "initiateList" : [ {
+          "path" : "checkToken",
+          "id" : "b928228c-b487-4c4b-8277-922b4536093e",
+          "typePath" : "boolean"
+        } ],
+        "comment" : "Check If Chatgpt Token Exists in the package Configuration"
+      },
+      "children" : [ ],
+      "type" : "transformer"
+    } ],
+    "api_info" : {
+      "title" : "",
+      "description" : ""
+    },
+    "lockedByUser" : "admin"
+  },
+  "consumers" : "",
+  "developers" : "developers",
+  "enableServiceDocumentValidation" : false,
+  "created_on" : "1718119397287",
+  "modified_on" : 1718119397287
+}

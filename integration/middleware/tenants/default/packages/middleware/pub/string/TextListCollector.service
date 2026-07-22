@@ -1,0 +1,69 @@
+{
+  "input" : [ {
+    "id" : "j1_1",
+    "text" : "text",
+    "li_attr" : {
+      "id" : "j1_1"
+    },
+    "a_attr" : {
+      "href" : "#",
+      "id" : "j1_1_anchor"
+    },
+    "state" : {
+      "loaded" : true,
+      "opened" : false,
+      "selected" : false,
+      "disabled" : false
+    },
+    "data" : { },
+    "children" : [ ],
+    "type" : "string"
+  }, {
+    "id" : "j1_2",
+    "text" : "textArray",
+    "li_attr" : {
+      "id" : "j1_2"
+    },
+    "a_attr" : {
+      "href" : "#",
+      "id" : "j1_2_anchor"
+    },
+    "state" : {
+      "loaded" : true,
+      "opened" : false,
+      "selected" : false,
+      "disabled" : false
+    },
+    "data" : { },
+    "children" : [ ],
+    "type" : "stringList"
+  } ],
+  "output" : [ {
+    "id" : "j2_1",
+    "text" : "textArray",
+    "li_attr" : {
+      "id" : "j2_1"
+    },
+    "a_attr" : {
+      "href" : "#",
+      "id" : "j2_1_anchor"
+    },
+    "state" : {
+      "loaded" : true,
+      "opened" : false,
+      "selected" : false,
+      "disabled" : false
+    },
+    "data" : { },
+    "children" : [ ],
+    "type" : "stringList"
+  } ],
+  "package" : "cGFja2FnZSBwYWNrYWdlcy5taWRkbGV3YXJlLnB1Yi5zdHJpbmc7",
+  "imports" : "aW1wb3J0IGNvbS5la2EubWlkZGxld2FyZS5zZXJ2aWNlLkRhdGFQaXBlbGluZTsKaW1wb3J0IGNvbS5la2EubWlkZGxld2FyZS5zZXJ2aWNlLlNlcnZpY2VVdGlsczsKaW1wb3J0IGNvbS5la2EubWlkZGxld2FyZS50ZW1wbGF0ZS5TbmlwcGV0RXhjZXB0aW9uOwppbXBvcnQgamF2YS51dGlsLio7",
+  "main" : "ZGF0YVBpcGVsaW5lLmFwcExvZygiT1BFUkFUSU9OIiwgIlRleHRMaXN0Q29sbGVjdG9yIik7ClN0cmluZyB0ZXh0ID0gZGF0YVBpcGVsaW5lLmdldEFzU3RyaW5nKCJ0ZXh0Iik7Ckxpc3Q8U3RyaW5nPiB0ZXh0QXJyYXkgPSBkYXRhUGlwZWxpbmUuZ2V0QXNMaXN0KCJ0ZXh0QXJyYXkiKTsKaWYgKG51bGwgPT0gdGV4dEFycmF5KSB7CiAgZGF0YVBpcGVsaW5lLmFwcExvZygiSU5GTyIsICIndGV4dEFycmF5JyBub3QgZm91bmQsIGNyZWF0aW5nIGEgbmV3IGxpc3QuIik7CiAgdGV4dEFycmF5ID0gbmV3IEFycmF5TGlzdDw+KCk7Cn0KdGV4dEFycmF5LmFkZCh0ZXh0KTsKZGF0YVBpcGVsaW5lLnB1dCgidGV4dEFycmF5IiwgdGV4dEFycmF5KTsKZGF0YVBpcGVsaW5lLmFwcExvZygiUkVTVUxUIiwgIkFkZGVkICd0ZXh0JyB0byAnbGlzdCciKTs=",
+  "staticWorkspace" : "",
+  "version" : "v1",
+  "consumers" : "",
+  "developers" : "",
+  "lockedByUser" : "admin"
+}

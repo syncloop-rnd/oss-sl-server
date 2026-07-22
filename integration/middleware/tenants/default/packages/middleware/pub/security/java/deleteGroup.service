@@ -1,0 +1,50 @@
+{
+  "input" : [ {
+    "id" : "j1_1",
+    "text" : "groupName",
+    "li_attr" : {
+      "id" : "j1_1"
+    },
+    "a_attr" : {
+      "href" : "#",
+      "id" : "j1_1_anchor"
+    },
+    "state" : {
+      "loaded" : true,
+      "opened" : false,
+      "selected" : false,
+      "disabled" : false
+    },
+    "data" : { },
+    "children" : [ ],
+    "type" : "string"
+  } ],
+  "output" : [ {
+    "id" : "j2_1",
+    "text" : "status",
+    "li_attr" : {
+      "id" : "j2_1"
+    },
+    "a_attr" : {
+      "href" : "#",
+      "id" : "j2_1_anchor"
+    },
+    "state" : {
+      "loaded" : true,
+      "opened" : false,
+      "selected" : false,
+      "disabled" : false
+    },
+    "data" : { },
+    "children" : [ ],
+    "type" : "boolean"
+  } ],
+  "package" : "cGFja2FnZSBwYWNrYWdlcy5taWRkbGV3YXJlLnB1Yi5zZWN1cml0eS5qYXZhOw==",
+  "imports" : "aW1wb3J0IGNvbS5la2EubWlkZGxld2FyZS5zZXJ2aWNlLkRhdGFQaXBlbGluZTsKaW1wb3J0IGNvbS5la2EubWlkZGxld2FyZS5zZXJ2aWNlLlNlcnZpY2VVdGlsczsKaW1wb3J0IGNvbS5la2EubWlkZGxld2FyZS50ZW1wbGF0ZS5TbmlwcGV0RXhjZXB0aW9uOwppbXBvcnQgY29tLmVrYS5taWRkbGV3YXJlLmF1dGguVXNlclByb2ZpbGVNYW5hZ2VyOw==",
+  "main" : "dHJ5ewogIAlTdHJpbmcgZ3JvdXBOYW1lID0gZGF0YVBpcGVsaW5lLmdldFN0cmluZygiZ3JvdXBOYW1lIik7CiAgICBVc2VyUHJvZmlsZU1hbmFnZXIucmVtb3ZlR3JvdXBGb3JUZW5hbnQoZ3JvdXBOYW1lLGRhdGFQaXBlbGluZSk7CiAgCWRhdGFQaXBlbGluZS5wdXQoInN0YXR1cyIsIHRydWUpOwogIAlkYXRhUGlwZWxpbmUua2V5TG9nKGdyb3VwTmFtZSwgImdyb3VwLWRlbGV0ZWQiKTsKfWNhdGNoKEV4Y2VwdGlvbiBlKXsKICAJU3RyaW5nIGdyb3VwTmFtZSA9IGRhdGFQaXBlbGluZS5nZXRTdHJpbmcoImdyb3VwTmFtZSIpOwoJZGF0YVBpcGVsaW5lLmNsZWFyKCk7CiAgCWRhdGFQaXBlbGluZS5wdXQoImVycm9yIixlLmdldE1lc3NhZ2UoKSk7CiAgCWRhdGFQaXBlbGluZS5wdXQoInN0YXR1cyIsIGZhbHNlKTsKICAJZGF0YVBpcGVsaW5lLmtleUxvZyhncm91cE5hbWUsICJkZWxldGluZy1ncm91cC1mYWlsZWQiKTsKICAgIHRocm93IG5ldyBTbmlwcGV0RXhjZXB0aW9uKGRhdGFQaXBlbGluZSwiU25pcHBldCBleGNlcHRpb24gaW4gY3JlYXRlIG5ldyB1c2VyIiwgbmV3IEV4Y2VwdGlvbihlKSk7Cn0=",
+  "staticWorkspace" : "",
+  "version" : "v1",
+  "consumers" : "",
+  "developers" : "",
+  "lockedByUser" : "admin"
+}

@@ -1,0 +1,867 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<title>Syncloop | Create New Environment</title>
+	<base href="/"><script src="env.js"></script>
+	<script>
+		window.ENV = window.env || {};
+	</script>
+	<link href="middleware/pub/server/ui/assets/css/bootstrap.min.css" rel="stylesheet">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+	<link href="https://unpkg.com/tabulator-tables@5.2.1/dist/css/tabulator.min.css" rel="stylesheet">
+	<link rel="shortcut icon" href="middleware/pub/server/ui/assets/img/favicon.ico" type="image/x-icon" />
+	<link rel="stylesheet" href="index.css" />
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600&display=swap" rel="stylesheet">
+	<!-- Custom styles for this template -->
+	<link href="middleware/pub/server/ui/assets/css/sidebars.css" rel="stylesheet">
+	<link href="middleware/pub/server/ui/assets/css/custom.css" rel="stylesheet">
+	<link href="middleware/pub/server/ui/css/style.min.css" rel="stylesheet">
+	<link href="middleware/pub/server/ui/assets/css/skeleton.css" rel="stylesheet">
+	<script type="text/javascript">
+		var SDK_EMBEDDED = false;
+	</script>
+	<script	src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+	<script src="middleware/pub/server/ui/assets/js/skeleton.js"></script>
+	<script	src="middleware/pub/server/ui/javascript/jstree.min.js"></script>
+	<script src="middleware/pub/server/ui/javascript/jstreetable.js"></script>
+	<script src="middleware/pub/server/ui/javascript/middleware.js"></script>
+	<script type="text/javascript" src="https://unpkg.com/tabulator-tables@5.2.1/dist/js/tabulator.min.js"></script>
+	<script src="middleware/pub/server/ui/javascript/sweetalert.min.js"></script>
+	<script src="middleware/pub/server/ui/javascript/sweetalert.init.js"></script>
+	<link rel="stylesheet" href="middleware/pub/server/ui/css/sweetalert.css" />
+
+	<script type="syncloop/analytics"></script>
+
+	<style>
+		.modal-header {
+			display: inline-block;
+		}
+		.modal-body li.nav-link.active.in {
+			border-color: transparent;
+		}
+		.modal-body .nav-link{
+			padding: 0;
+			border: none;
+		}
+		cron-expression-input .nav-tabs>li>a{margin-right: 0px !important;}
+		#aPiTable_filter {
+			display: none;
+		}
+	</style>
+</head>
+<body>
+<script type="syncloop/body-analytics"></script>
+<header class="navbar custom_head sticky-top flex-md-nowrap bg-gray">
+	<div id="license_warning" style="position: absolute;z-index: 9999;background-color: #fff5d8;padding: 10px;border: 1px solid #fff5d8;margin-left: 17%;margin-top: 2px;color: #886701;border-radius: 5px;font-weight: 600;display:none;">
+		Warning: Maximum two users are allowed on community version. Click here to view the community usage terms and conditions. &nbsp;&nbsp;
+		<div style="position: absolute;right: 4px;top: 4px;cursor: pointer" onclick="$(this).parent().hide();"><i class="fa fa-window-close" aria-hidden="true"></i></div>
+	</div>
+	<div id="mostRecentlyOpened">
+	<a class="eka_logo" href="dashboard.html">
+		<img class="ekalogos" src="middleware/pub/server/ui/assets/img/syncloop-logo.svg">
+	</a>
+	<a href="middleware/pub/server/ui/workspace/web/dashboard.html?utm_source=Workspace&utm_medium=dashboard-page"class="header_home">
+				<img src="middleware/pub/server/ui/assets/img/header_nav.svg">
+	</a>
+</div>
+	<!-- <div class="navbar-nav">
+       <div class="nav-item text-nowrap">
+         <a class="nav-link px-3" href="https://www.ekamw.org/video.html" style="color: #6d6d6d; font-size:13px;"><img style="width:22px;" src="middleware/pub/server/ui/icons/play_icon.svg">&nbsp; Watch Tutorials</a>
+       </div>
+       </div> -->
+</header>
+<main class="rg_br">
+	<div class="container-fluid ">
+		<div class="row">
+			<div class="col-lg-1 d-flex flex-column flex-shrink-0 eka-side p-0" data-match-height="groupName">
+				<ul class="nav nav-pills nav-flush flex-column mb-auto text-center left-m-bar">
+
+                    <li>
+                        <a href="middleware/pub/server/ui/workspace/web/api.html?utm_source=Workspace&utm_medium=api-page" class="nav-link py-3" title="API" data-bs-toggle="tooltip" data-bs-placement="right">
+                            <svg class="ic2" xmlns="http://www.w3.org/2000/svg" width="26" height="25" viewBox="0 0 26 25" fill="none">
+								<path d="M5.82142 19C3.15863 19 1 16.8668 1 14.2353C1 11.6038 3.15863 9.47057 5.82142 9.47057C6.14106 9.47057 6.45344 9.50129 6.75568 9.56001M6.75568 9.56001C6.49794 8.87253 6.35714 8.12898 6.35714 7.35294C6.35714 3.8443 9.23532 1 12.7857 1C16.0929 1 18.8167 3.46792 19.1745 6.64185M6.75568 9.56001C7.39066 9.6832 7.98094 9.92958 8.5 10.2729M14.9286 6.65561C15.5988 6.4215 16.32 6.29412 17.0714 6.29412C17.8079 6.29412 18.5155 6.41652 19.1745 6.64185M19.1745 6.64185C19.9429 6.9046 20.6451 7.30729 21.25 7.81909" stroke="#434550" stroke-width="1.6" stroke-linecap="round"/>
+								<path class="appi" d="M15.0244 20L12.0214 12.3H13.2974L16.3774 20H15.0244ZM8.87543 20L11.9444 12.3H13.2314L10.2284 20H8.87543ZM10.3164 18.108V16.975H14.9254V18.108H10.3164ZM18.0958 17.338V16.161H19.8008C20.1675 16.161 20.4682 16.0363 20.7028 15.787C20.9375 15.5377 21.0548 15.215 21.0548 14.819C21.0548 14.5477 20.9925 14.313 20.8678 14.115C20.7505 13.9097 20.5855 13.7483 20.3728 13.631C20.1602 13.5137 19.9145 13.4587 19.6358 13.466H18.0958V12.3L19.6578 12.289C20.1858 12.289 20.6515 12.399 21.0548 12.619C21.4582 12.8317 21.7735 13.1287 22.0008 13.51C22.2282 13.884 22.3418 14.3203 22.3418 14.819C22.3418 15.303 22.2355 15.7357 22.0228 16.117C21.8102 16.4983 21.5132 16.799 21.1318 17.019C20.7578 17.2317 20.3215 17.338 19.8228 17.338H18.0958ZM16.9408 20V12.3H18.2168V20H16.9408ZM23.0321 20V12.3H24.3081V20H23.0321Z" fill="#434550"/>
+								</svg>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="middleware/pub/server/ui/workspace/web/workspace.html?utm_source=Workspace&utm_medium=workspace-page" class="nav-link py-3 " title="Workspace" data-bs-toggle="tooltip" data-bs-placement="right">
+                            <svg class="ic" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" id="Layer_1" x="0px" y="0px" viewBox="0 0 46 46" style="enable-background:new 0 0 46 46;" xml:space="preserve">
+                                <style type="text/css">
+                                    .st0{fill:none;stroke:#434550;stroke-width:2.4;}
+                                </style>
+                                <path class="st0" d="M39.9,27.5V10.6c0-1.9,0-2.8-0.6-3.4c-0.6-0.6-1.5-0.6-3.4-0.6H18.5h-2.9h-5.3c-1.9,0-2.8,0-3.4,0.6  c-0.6,0.6-0.6,1.5-0.6,3.4v16.9c0,1.9,0,2.8,0.6,3.4c0.6,0.6,1.5,0.6,3.4,0.6h25.6c1.9,0,2.8,0,3.4-0.6  C39.9,30.3,39.9,29.4,39.9,27.5z"/>
+                                <path class="st0" d="M31.9,38.9H14.2"/>
+                                </svg>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="scheduler/manager/web/scheduler-new.html?utm_source=Workspace&utm_medium=scheduler-page" class="nav-link py-3 " title="Scheduler" data-bs-toggle="tooltip"
+                           data-bs-placement="right">
+                           <svg class="ic4" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" id="Layer_1" x="0px" y="0px" viewBox="0 0 46 46" style="enable-background:new 0 0 46 46;" xml:space="preserve">
+                            <style type="text/css">
+                                .st0{fill:none;stroke:#434550;stroke-width:2.4;}
+                                .st1{fill:none;stroke:#434550;stroke-width:2.4;stroke-linecap:round;}
+                            </style>
+                            <ellipse class="st0" cx="23.4" cy="27.2" rx="16.9" ry="16.9"/>
+                            <path class="st1" d="M23.4,27.2v-6.3"/>
+                            <path class="st1" d="M35,13.5l3.2-3.2"/>
+                            <path class="st1" d="M19.3,2.6c0.2-0.2,0.8-0.4,1.5-0.6c0.7-0.1,1.6-0.2,2.6-0.2s1.8,0.1,2.6,0.2s1.3,0.3,1.5,0.6"/>
+                            </svg>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="middleware/pub/server/ui/workspace/web/export.html?utm_source=Workspace&utm_medium=export-page" id="createBuildExport" class="nav-link py-3" title="Export/Promote" data-bs-toggle="tooltip"
+                           data-bs-placement="right">
+                           <svg class="ic5" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" id="Layer_1" x="0px" y="0px" viewBox="0 0 46 46" style="enable-background:new 0 0 46 46;" xml:space="preserve">
+                            <style type="text/css">
+                                .st0{fill:none;stroke:#434550;stroke-width:2.4;stroke-linecap:round;stroke-miterlimit:10;}
+                                .st1{fill:#434550;}
+                            </style>
+                            <path class="st0" d="M35.3,23.9c5.3-8.7,5.1-16.8,5-18.4c0-0.2-0.2-0.3-0.3-0.3C25.5,5.2,19,11,16.1,15.4c-1.3,2.1-2,4.1-2.3,5  c-0.1,0.3,0,0.7,0.2,1l7.2,7.3"/>
+                            <path class="st0" d="M5.6,19.6c0.8-1.2,5.1-7.5,11-5.8"/>
+                            <path class="st0" d="M14.7,30.6l8.5-8.5"/>
+                            <path class="st0" d="M25.9,31.9l3.6,4.1c0,0,0.2,0.1,0.2,0l4-4.1"/>
+                            <path class="st0" d="M29.8,25.2v10.5"/>
+                            <path class="st0" d="M21.8,36.5v4.3c0,0.1,0.1,0.2,0.2,0.2h15.3c0.1,0,0.2-0.1,0.2-0.2v-4.3"/>
+                            <path class="st1" d="M29.1,18.8c1.5,0,2.7-1.2,2.7-2.7c0-1.5-1.2-2.7-2.7-2.7c-1.5,0-2.7,1.2-2.7,2.7C26.4,17.6,27.6,18.8,29.1,18.8  z"/>
+                            </svg>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="javascript:importBuildV2()" class="nav-link py-3" title="Import" data-bs-toggle="tooltip"
+                           data-bs-placement="right">
+                           <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" id="Layer_1" x="0px" y="0px" viewBox="0 0 46 46" style="enable-background:new 0 0 46 46;" xml:space="preserve">
+							<style type="text/css">
+								.st0{fill:none;stroke:#434550;stroke-width:2.4;}
+							</style>
+							<path class="st0" d="M6.2,21.3v1.6c0,1.9,0,2.8,0.6,3.4s1.5,0.6,3.4,0.6h3.9c0.7,0,1,0,1.3,0.2s0.4,0.5,0.6,1.2l1,2.9  c0.2,0.7,0.3,1,0.6,1.2c0.3,0.2,0.6,0.2,1.3,0.2h8.3c0.7,0,1,0,1.3-0.2s0.4-0.5,0.6-1.2l1-2.9c0.2-0.7,0.3-1,0.6-1.2  c0.3-0.2,0.6-0.2,1.3-0.2h3.9c1.9,0,2.8,0,3.4-0.6c0.6-0.6,0.6-1.5,0.6-3.4v-1.6"/>
+							<path class="st0" d="M23.1,3.5l-7.5,5.6 M30.6,9.1l-7.5-5.6 M23.1,22.2V3.5"/>
+							<path class="st0" d="M30.5,14.1h5.3c1.9,0,2.8,0,3.4,0.6c0.6,0.6,0.6,1.5,0.6,3.4V36c0,1.9,0,2.8-0.6,3.4C38.7,40,37.8,40,35.9,40  H10.2c-1.9,0-2.8,0-3.4-0.6S6.2,37.9,6.2,36V18.1c0-1.9,0-2.8,0.6-3.4c0.6-0.6,1.5-0.6,3.4-0.6h5.3"/>
+							</svg>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="middleware/pub/server/ui/workspace/web/server-logs.html?utm_source=Workspace&utm_medium=server-logs-page" class="nav-link py-3" title="Server Logs" data-bs-toggle="tooltip"
+                           data-bs-placement="right">
+                           <svg class="ic7" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" id="Layer_1" x="0px" y="0px" viewBox="0 0 46 46" style="enable-background:new 0 0 46 46;" xml:space="preserve">
+                            <style type="text/css">
+                                .st0{fill:none;stroke:#434550;stroke-width:2.4;stroke-linecap:round;}
+                                .st1{fill:none;stroke:#434550;stroke-width:2.4;}
+                            </style>
+                            <path class="st0" d="M15.5,24.5h15.1"/>
+                            <path class="st0" d="M15.5,30.9h8.6"/>
+                            <path class="st1" d="M9,5.9c0-0.8,0-1.3,0.2-1.6C9.3,4,9.5,3.8,9.8,3.7c0.3-0.2,0.7-0.2,1.6-0.2h13.9c0.4,0,0.6,0,0.7,0  c0.2,0,0.3,0.1,0.4,0.2c0.2,0.1,0.3,0.2,0.5,0.5l9.4,9.4c0.3,0.3,0.4,0.4,0.5,0.5c0.1,0.1,0.1,0.3,0.2,0.4c0,0.2,0,0.4,0,0.7v25.6  c0,0.8,0,1.3-0.2,1.6c-0.1,0.3-0.4,0.5-0.7,0.7c-0.3,0.2-0.7,0.2-1.6,0.2H11.4c-0.8,0-1.3,0-1.6-0.2c-0.3-0.1-0.5-0.4-0.7-0.7  C9,42.1,9,41.7,9,40.9V5.9z"/>
+                            <path class="st1" d="M24.1,3.5v10.6c0,0.8,0,1.3,0.2,1.6c0.1,0.3,0.4,0.5,0.7,0.7c0.3,0.2,0.7,0.2,1.6,0.2h10.6"/>
+                            </svg>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="javascript:openJWTPopup()" class="nav-link py-3" title="API Token" data-bs-toggle="tooltip" data-bs-placement="right">
+                            <svg class="ic8" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+								<ellipse cx="7" cy="16.3848" rx="6" ry="6" stroke="#434550" stroke-width="1.6"/>
+								<path d="M10.9219 11.2308L18.3834 3.76923M21.1526 1L18.3834 3.76923M18.3834 3.76923L22.9988 8.38462" stroke="#434550" stroke-width="1.6" stroke-linecap="round"/>
+								<path d="M16.5391 7.46191L19.3083 10.2311" stroke="#434550" stroke-width="1.6" stroke-linecap="round"/>
+								</svg>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="middleware/pub/server/ui/workspace/web/setting.html?utm_source=Workspace&utm_medium=setting-page" class="nav-link py-3" title="Settings" data-bs-toggle="tooltip" data-bs-placement="right">
+                            <svg class="ic9" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" id="Layer_1" x="0px" y="0px" viewBox="0 0 46 46" style="enable-background:new 0 0 46 46;" xml:space="preserve">
+                                <style type="text/css">
+                                    .st0{fill:none;stroke:#434550;stroke-width:2.4;stroke-linecap:round;stroke-linejoin:round;}
+                                    .st1{fill:none;stroke:#434550;stroke-width:2;stroke-linecap:round;stroke-linejoin:round;}
+                                </style>
+                                <path class="st0" d="M4,30v-2.5c0-1.5,1.2-2.7,2.7-2.7c2.6,0,3.6-1.8,2.3-4.1c-0.7-1.3-0.3-3,1-3.7l2.5-1.4c1.1-0.7,2.6-0.3,3.3,0.9  l0.2,0.3c1.3,2.2,3.4,2.2,4.7,0l0.2-0.3c0.7-1.1,2.1-1.5,3.3-0.9l2.5,1.4c1.3,0.7,1.7,2.4,1,3.7c-1.3,2.2-0.2,4.1,2.3,4.1  c1.5,0,2.7,1.2,2.7,2.7V30c0,1.5-1.2,2.7-2.7,2.7c-2.6,0-3.6,1.8-2.3,4.1c0.7,1.3,0.3,3-1,3.7l-2.5,1.4c-1.1,0.7-2.6,0.3-3.3-0.9  l-0.2-0.3c-1.3-2.2-3.4-2.2-4.7,0l-0.2,0.3c-0.7,1.1-2.1,1.5-3.3,0.9l-2.5-1.4c-1.3-0.7-1.7-2.4-1-3.7c1.3-2.2,0.2-4.1-2.3-4.1  C5.2,32.7,4,31.5,4,30z"/>
+                                <path class="st0" d="M18.3,34.6c3.3,0,5.9-2.7,5.9-5.9c0-3.3-2.7-5.9-5.9-5.9c-3.3,0-5.9,2.7-5.9,5.9C12.4,32,15.1,34.6,18.3,34.6z"/>
+                                <path class="st1" d="M19.5,15.6v-2.1c0-1.2,1-2.2,2.2-2.2c2.1,0,3-1.5,1.9-3.3c-0.6-1.1-0.2-2.4,0.8-3l2-1.2  c0.9-0.5,2.1-0.2,2.7,0.7l0.1,0.2c1.1,1.8,2.8,1.8,3.8,0l0.1-0.2C33.8,3.5,35,3.2,36,3.8l2,1.2c1.1,0.6,1.4,2,0.8,3  c-1.1,1.8-0.2,3.3,1.9,3.3c1.2,0,2.2,1,2.2,2.2v2.1c0,1.2-1,2.2-2.2,2.2c-2.1,0-3,1.5-1.9,3.3c0.6,1.1,0.2,2.4-0.8,3l-2,1.2  c-0.9,0.6-2.1,0.2-2.7-0.7l-0.1-0.2"/>
+                                <path class="st1" d="M31,19.4c2.1,0,3.9-1.7,3.9-3.9s-1.7-3.9-3.9-3.9s-3.9,1.7-3.9,3.9S28.9,19.4,31,19.4z"/>
+                                </svg>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="middleware/pub/server/ui/workspace/web/documentation.html?utm_source=Workspace&utm_medium=documentation-page" class="nav-link py-3" title="Documentation" data-bs-toggle="tooltip"
+                           data-bs-placement="right">
+                           <svg class="ic10" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" id="Layer_1" x="0px" y="0px" viewBox="0 0 46 46" style="enable-background:new 0 0 46 46;" xml:space="preserve">
+                            <style type="text/css">
+                                .st0{fill:none;stroke:#434550;stroke-width:2.4;}
+                            </style>
+                            <path class="st0" d="M7,34h10c2.8,0,4.2,0,5.1,0.9S23,37.2,23,40V14c0-2.8,0-4.2-0.9-5.1S19.8,8,17,8H7C6.1,8,5.6,8,5.3,8.3  C5,8.6,5,9.1,5,10v22c0,0.9,0,1.4,0.3,1.7C5.6,34,6.1,34,7,34z"/>
+                            <path class="st0" d="M39,34H29c-2.8,0-4.2,0-5.1,0.9S23,37.2,23,40V14c0-2.8,0-4.2,0.9-5.1S26.2,8,29,8h10c0.9,0,1.4,0,1.7,0.3  C41,8.6,41,9.1,41,10v22c0,0.9,0,1.4-0.3,1.7S39.9,34,39,34z"/>
+                            </svg>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="middleware/pub/server/ui/workspace/web/marketplace.html?utm_source=Workspace&amp;utm_medium=marketplace-page" class="nav-link py-3" title="Marketplace" data-bs-toggle="tooltip"
+                          data-bs-placement="right">
+                          <svg class="ic11" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" id="Layer_1" x="0px" y="0px" viewBox="0 0 46 46" style="enable-background:new 0 0 46 46;" xml:space="preserve">
+                            <style type="text/css">
+                                .st0{fill:none;stroke:#434550;stroke-width:2.4;stroke-linecap:round;}
+                                .st1{fill:none;stroke:#434550;stroke-width:2.4;stroke-linejoin:round;}
+                            </style>
+                            <path class="st0" d="M40,40H6"/>
+                            <path class="st0" d="M36.6,40V21.3"/>
+                            <path class="st0" d="M9.4,40V21.3"/>
+                            <path class="st1" d="M30.7,6H15.3c-2,0-3.1,0-3.9,0.5C10.6,7,10.2,7.9,9.2,9.8l-2.4,6c-0.6,1.4-1,3-0.1,4.2c0.6,0.8,1.6,1.3,2.7,1.3  c1.9,0,3.4-1.5,3.4-3.4c0,1.9,1.5,3.4,3.4,3.4c1.9,0,3.4-1.5,3.4-3.4c0,1.9,1.5,3.4,3.4,3.4c1.9,0,3.4-1.5,3.4-3.4  c0,1.9,1.5,3.4,3.4,3.4c1.9,0,3.4-1.5,3.4-3.4c0,1.9,1.5,3.4,3.4,3.4c1.1,0,2-0.5,2.7-1.3c0.9-1.2,0.4-2.8-0.1-4.2l-2.4-6  c-0.9-1.8-1.4-2.7-2.2-3.3C33.8,6,32.8,6,30.7,6z"/>
+                            <path class="st0" d="M18.8,39.2v-5.1c0-1.6,0-2.4,0.3-3c0.2-0.4,0.5-0.7,0.9-0.9c0.6-0.3,1.4-0.3,3-0.3s2.4,0,3,0.3  c0.4,0.2,0.7,0.5,0.9,0.9c0.3,0.6,0.3,1.4,0.3,3v5.1"/>
+                            </svg>
+                        </a>
+                      </li>
+					  <li>
+                        <a href="middleware/pub/server/ui/workspace/web/monitor-services.html" class="nav-link py-3" title="Monitor Services" data-bs-toggle="tooltip"
+                          data-bs-placement="right">
+                          <svg xmlns="http://www.w3.org/2000/svg" width="35" height="24" viewBox="0 0 35 24" fill="none">
+                            <path d="M1 13.042H4.34245L6.47755 11.1321L8.70005 17.1883L10.4422 6.27131L13.4882 16L16.6336 1L18.6504 13.7381L20 22.5L21.1277 15.655L23.119 2.53163L25.5994 13.042H27.0211C27.1564 13.042 29.2322 17.6097 29.2322 17.6097C29.2322 17.6097 30.1888 13.042 30.3298 13.042H34" stroke="#434550" stroke-width="1.7" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+                            </svg>
+                        </a>
+                      </li>
+                </ul>
+			</div>
+			<div class="col-lg-11 px-5 pr-0 p-3 rg_pnl" data-match-height="groupName">
+				<!-- MultiStep Form -->
+				<div class="row">
+					<div class="col-md-12">
+						<div class="create-envir">
+							<div class="bk_btn_cn">
+								<h1>Create New Environment</h1>
+								<div class="b_cn_btn">
+									<a class="back_to_setting" href="middleware/pub/server/ui/workspace/web/setting.html?tab=deployments">Back to settings</a>
+									<!-- <a class="back_to_setting" href="javascript:void(0)">Cancel</a> -->
+								</div>
+							</div>
+							<div class="row">
+								<div class="col-md-8">
+									<div class="pr_space">
+										<div class="row">
+											<div class="col-md-12">
+												<div class="inn_space">
+													<label>Cloud provider: </label>
+													<div class="cld_provider"><img src="middleware/pub/server/ui/assets/img/aws_logo.svg"></div>
+												</div>
+											</div>
+										</div>
+										<div class="row">
+											<div class="col-md-6">
+												<div class="inn_space">
+													<label>Name: </label>
+													<input class="form-control" placeholder="Add environment name" type="text" id="environment_name" value="">
+												</div>
+											</div>
+											<div class="col-md-6">
+												<div class="inn_space">
+													<label>Type: </label>
+													<select class="form-control" id="environment_type">
+														<option value="AWS_ECS">AWS_ECS</option>
+													</select>
+												</div>
+											</div>
+										</div>
+									</div>
+									<h5>Credentials</h5>
+									<div class="row">
+										<div class="col-md-6">
+											<div class="inn_space">
+												<label>Key: </label>
+												<select class="form-control" id="credential_id"></select>
+											</div>
+										</div>
+										<div class="col-md-6">
+											<div class="inn_space">
+												<label>Region: </label>
+												<select class="form-control" id="environment_aws_region">
+													<option>us-east-1</option>
+													<option>us-east-2</option>
+													<option>us-west-1</option>
+													<option>us-west-2</option>
+													<option>eu-west-1</option>
+													<option>eu-west-2</option>
+													<option>eu-west-3</option>
+													<option>eu-central-1</option>
+													<option>eu-north-1</option>
+													<option>ap-east-1</option>
+													<option>ap-south-1</option>
+													<option>ap-southeast-1</option>
+													<option>ap-southeast-2</option>
+													<option>ap-northeast-1</option>
+													<option>ap-northeast-2</option>
+													<option>sa-east-1</option>
+													<option>cn-north-1</option>
+													<option>cn-northwest-1</option>
+													<option>ca-central-1</option>
+													<option>me-south-1</option>
+													<option>us-gov-west-1</option>
+													<option>us-gov-east-1</option>
+												</select>
+											</div>
+										</div>
+									</div>
+									<hr>
+									<div class="row">
+										<div class="col-md-6">
+											<div class="inn_space">
+												<label>Protocol: </label>
+												<select class="form-control" id="environment_protocol">
+													<option value="HTTPS">HTTPS</option>
+												</select>
+											</div>
+										</div>
+									</div>
+									<div class="row">
+										<div class="col-md-12">
+											<div class="inn_space">
+												<label>Certificate: </label>
+												<div class="cr_gr">
+													<select class="form-control" id="environment_aws_acm_arn"></select> &nbsp; <a class="rf_btn" href="javascript:loadCertificates()"><i class="fa fa-refresh"></i>Refresh</a>
+												</div>
+											</div>
+										</div>
+									</div>
+									<hr>
+									<h5>VPC</h5>
+									<div class="row">
+										<div class="col-md-6">
+											<div class="inn_space">
+												<label>VPC ID: </label>
+												<input class="form-control" placeholder="VPC" type="text" id="aws_vpc_id" value="">
+											</div>
+										</div>
+										<div class="col-md-6">
+											<div class="inn_space">
+												<label>Subnet ID: </label>
+												<input class="form-control" placeholder="Subnet id" type="text" id="aws_vpc_subnet_id_1" value="">
+											</div>
+										</div>
+										<div class="col-md-6" style="display: none;" id="aws_vpc_subnet_id_2_panel">
+											<div class="inn_space">
+												<label>Subnet ID: </label>
+												<input class="form-control" placeholder="Subnet id" type="text" id="aws_vpc_subnet_id_2" value="">
+											</div>
+										</div>
+										<div class="col-md-6" style="display: none;" id="aws_vpc_subnet_id_3_panel">
+											<div class="inn_space">
+												<label>Subnet ID: </label>
+												<input class="form-control" placeholder="Subnet id" type="text" id="aws_vpc_subnet_id_3" value="">
+											</div>
+										</div>
+										<div class="col-md-6" style="display: none;" id="aws_vpc_subnet_id_4_panel">
+											<div class="inn_space">
+												<label>Subnet ID: </label>
+												<input class="form-control" placeholder="Subnet id" type="text" id="aws_vpc_subnet_id_4" value="">
+											</div>
+										</div>
+									</div>
+									<hr>
+									<h5>Auto Scaling</h5>
+									<div class="row">
+										<div class="col-md-6">
+											<div class="inn_space">
+												<label>Min Nodes: </label>
+												<input class="form-control" placeholder="3" type="number" id="auto_scaling_min_nodes" value="1" />
+											</div>
+										</div>
+										<div class="col-md-6">
+											<div class="inn_space">
+												<label>Max Nodes: </label>
+												<input class="form-control" placeholder="10" type="number" id="auto_scaling_max_nodes" value="10"  />
+											</div>
+										</div>
+									</div>
+									<div class="inn_space">
+										<label>CPU Threshold: </label>
+										<input class="form-control" placeholder="1024" type="number" id="auto_scaling_cpu_threshold" value="75"  />
+									</div>
+									<hr>
+									<h5>Node Config</h5>
+									<div class="row">
+										<div class="col-md-6">
+											<div class="inn_space">
+												<label>Node(CPU-RAM): </label>
+												<select class="form-control" id="resource_cups_memory">
+													<option value="256-512">(.25 vCPU) 512 MiB</option>
+													<option value="256-1024">(.25 vCPU) 1 GB</option>
+													<option value="256-2048">(.25 vCPU) 2 GB</option>
+													<option value="512-1024">(.5 vCPU) 1 GB</option>
+													<option value="512-2048">(.5 vCPU) 2 GB</option>
+													<option value="512-3072">(.5 vCPU) 3 GB</option>
+													<option value="512-4096">(.5 vCPU) 4 GB</option>
+													<option value="1024-2048">(1 vCPU) 2 GB</option>
+													<option value="1024-3072">(1 vCPU) 3 GB</option>
+													<option value="1024-4096">(1 vCPU) 4 GB</option>
+													<option value="1024-5120">(1 vCPU) 5 GB</option>
+													<option value="1024-6144">(1 vCPU) 6 GB</option>
+													<option value="1024-7168">(1 vCPU) 7 GB</option>
+													<option value="1024-8192">(1 vCPU) 8 GB</option>
+													<option value="2048-4096">(2 vCPU) 4 GB</option>
+													<option value="2048-5120">(2 vCPU) 5 GB</option>
+													<option value="2048-6144">(2 vCPU) 6 GB</option>
+													<option value="2048-7168">(2 vCPU) 7 GB</option>
+													<option value="2048-8192">(2 vCPU) 8 GB</option>
+													<option value="2048-9216">(2 vCPU) 9 GB</option>
+													<option value="2048-10240">(2 vCPU) 10 GB</option>
+													<option value="2048-11264">(2 vCPU) 11 GB</option>
+													<option value="2048-12288">(2 vCPU) 12 GB</option>
+													<option value="2048-13312">(2 vCPU) 13 GB</option>
+													<option value="2048-14336">(2 vCPU) 14 GB</option>
+													<option value="2048-15360">(2 vCPU) 15 GB</option>
+													<option value="2048-16384">(2 vCPU) 16 GB</option>
+													<option value="4096-8192">(4 vCPU) 8 GB</option>
+													<option value="4096-9216">(4 vCPU) 9 GB</option>
+													<option value="4096-10240">(4 vCPU) 10 GB</option>
+													<option value="4096-11264">(4 vCPU) 11 GB</option>
+													<option value="4096-12288">(4 vCPU) 12 GB</option>
+													<option value="4096-13312">(4 vCPU) 13 GB</option>
+													<option value="4096-14336">(4 vCPU) 14 GB</option>
+													<option value="4096-15360">(4 vCPU) 15 GB</option>
+													<option value="4096-16384">(4 vCPU) 16 GB</option>
+													<option value="4096-17408">(4 vCPU) 17 GB</option>
+													<option value="4096-18432">(4 vCPU) 18 GB</option>
+													<option value="4096-19456">(4 vCPU) 19 GB</option>
+													<option value="4096-20480">(4 vCPU) 20 GB</option>
+													<option value="4096-21504">(4 vCPU) 21 GB</option>
+													<option value="4096-22528">(4 vCPU) 22 GB</option>
+													<option value="4096-23552">(4 vCPU) 23 GB</option>
+													<option value="4096-24576">(4 vCPU) 24 GB</option>
+													<option value="4096-25600">(4 vCPU) 25 GB</option>
+													<option value="4096-26624">(4 vCPU) 26 GB</option>
+													<option value="4096-27648">(4 vCPU) 28 GB</option>
+													<option value="4096-28672">(4 vCPU) 28 GB</option>
+													<option value="4096-29696">(4 vCPU) 29 GB</option>
+													<option value="4096-30720">(4 vCPU) 30 GB</option>
+													<option value="8192-16384">(8 vCPU) 16 GB</option>
+													<option value="8192-20480">(8 vCPU) 20 GB</option>
+													<option value="8192-24576">(8 vCPU) 24 GB</option>
+													<option value="8192-28672">(8 vCPU) 28 GB</option>
+													<option value="8192-32768">(8 vCPU) 32 GB</option>
+													<option value="8192-36864">(8 vCPU) 36 GB</option>
+													<option value="8192-40960">(8 vCPU) 40 GB</option>
+													<option value="8192-45056">(8 vCPU) 44 GB</option>
+													<option value="8192-49152">(8 vCPU) 48 GB</option>
+													<option value="8192-53248">(8 vCPU) 52 GB</option>
+													<option value="8192-57344">(8 vCPU) 56 GB</option>
+													<option value="8192-61440">(8 vCPU) 60 GB</option>
+
+												</select>
+											</div>
+										</div>
+									</div>
+
+									<hr>
+									<h5>Domain</h5>
+									<div class="row">
+										<div class="col-md-6">
+											<div class="inn_space">
+												<label>Domain Registrar: </label>
+												<select class="form-control" id="domain_registrar"></select>
+											</div>
+										</div>
+										<div class="col-md-6">
+											<div class="inn_space">
+												<label>Domains: </label>
+												<select class="form-control" id="hosted_domain_name"></select>
+											</div>
+										</div>
+										<div class="col-md-6">
+											<div class="inn_space">
+												<label>Alias: </label>
+												<table>
+													<td><input class="form-control" id="alias_domain_name" style="text-align: right;" value="syncloop" /></td>
+													<td>.<span id="master_domain_name">example.com</span></td>
+												</table>
+											</div>
+										</div>
+									</div>
+
+									<div class="anc_kbtn mt-4">
+										<button type="button" id="" class="btn btn-primary deploy-container" onclick="deployContainer(this, true)">Create Environment</button>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<!-- /.MultiStep Form -->
+
+				<div id="jwtModelDialog" class="modal">
+					<!-- Modal content -->
+					<div class="modal-content" style="width:650px;height:auto;">
+						<span id="closejwtModelDialog" class="close">&times;</span>
+						<h3>API token</h3>
+
+						<div class="row exp_alg">
+							<div class="col-md-3"><label>Expiration in:</label></div>
+							<div class="col-md-4">
+								<select id="jwt_expiration_in" class="form-control">
+									<option value="2">2 Hours</option>
+									<option value="4">4 Hours</option>
+									<option value="6">6 Hours</option>
+									<option value="8">8 Hours</option>
+									<option value="expir_custom">Custom</option>
+								</select>
+							</div>
+							<div id="expir_custom" class="col-md-3 cs_opt">
+								<input placeholder="Custom Value" class="form-control" type="number" min="2" max="800"
+									   id="expir_custom_hours" value="8"/>
+								<span class="h_title">hours</span>
+							</div>
+						</div>
+
+						<div class="row exp_alg">
+							<div class="col-md-3"><label>Api Endpoint:</label></div>
+							<div class="col-md-9">
+								<input id="api-endpoint-gt" class="form-control" readonly="readonly" />
+							</div>
+						</div>
+
+						<div class="row exp_alg" style="margin-top:10px; margin-bottom:15px;">
+							<div class="col-md-3"><label for="jwt_token_key">Token key:</label></div>
+							<div class="col-md-9"><input id="jwt_token_key" type="text" class="form-control" value="" /></div>
+						</div>
+
+						<div class="copy-text3" id="jwtNameDiv" style="margin-top:0; margin-bottom:15px;">
+							<a class="copy_icon" href="javascript:void(0)" id="button-copy"><img
+									src="middleware/pub/server/ui/icons/copy-svgrepo-com.svg"></a>
+							<label for="jwtInput">Bearer Token: </label>
+							<textarea id="jwtInput" name="jwtInput" value="" class="form-control"
+									  readonly="readonly"></textarea>
+						</div>
+
+						<div class="anc_kbtn">
+							<button type="button" class="btn btn-primary2" onclick="openJWTPopupTime()">Generate token
+							</button> &nbsp;
+							<button type="button" id="JWTOKButton" class="btn btn-primary">OK</button>
+						</div>
+					</div>
+				</div>
+
+
+	<div id="serviceImportedModelDialog" class="modal">
+		<!-- Modal content -->
+		<div class="modal-content" style="width:950px;height:auto;">
+			<span id="closeServiceImportedModelDialog" class="close" >&times;</span>
+			<!-- <h3>Service</h3> -->
+			<div class="service_hd">
+				<div class="exl_icon"><img src="middleware/pub/server/ui/icons/import-fl.svg"></div>
+				<div class="sv_heading">
+					<h2>List of Imported files</h2>
+				</div>
+			</div>
+			<div class="service_tree_v_Imported" id="service_tree_v_Imported">
+			</div>
+			<div class="anc_kbtn"><button class="btn btn-primary" onclick='$("#closeServiceImportedModelDialog").trigger("click")'>Okay</button></div>
+		</div>
+	</div>
+
+			</div>
+			<script src="middleware/pub/server/ui/assets/js/bootstrap.bundle.min.js"></script>
+
+				  <script>
+$(function() {
+  $('#jwt_expiration_in').change(function(){
+    $('.cs_opt').hide();
+    $('#' + $(this).val()).show();
+  });
+});
+</script>
+			<script>
+var tooltipTriggerList = [].slice.call(document.querySelectorAll('[data-bs-toggle="tooltip"]'))
+var tooltipList = tooltipTriggerList.map(function (tooltipTriggerEl) {
+  return new bootstrap.Tooltip(tooltipTriggerEl)
+})
+</script>
+			<script type="text/javascript">
+				$(document).ready(function () {
+
+					$("#environment_name").focusout(function () {
+						$("#alias_domain_name").val(getTenant() + "-" + $("#environment_name").val());
+					});
+
+					$("#hosted_domain_name").change(function () {
+						$("#master_domain_name").html($("#hosted_domain_name option:selected").text());
+					});
+					$("#domain_registrar").change(function () {
+						let value = $(this).val().split("-");
+						if (value[1] == "godaddy") {
+							asyncRestRequest("/packages.middleware.pub.environments.api.getHostedDomainGoDaddy.main?credential_id=" + value[0], null,  "GET", function (response) {
+								response = response.response;
+								$("#hosted_domain_name").html("");
+								for (let i = 0 ; i < response.length ; i++) {
+									$("#hosted_domain_name").append("<option>" + response[i].domain + "</option>");
+								}
+								$("#master_domain_name").html($("#hosted_domain_name option:selected").text());
+							});
+						} else if (value[1] == "route53") {
+							asyncRestRequest("/packages.middleware.pub.environments.api.getHostedDomainRoute53.main?credential_id=" + value[0], null,  "GET", function (response) {
+								response = response.response;
+								$("#hosted_domain_name").html("");
+								for (let i = 0 ; i < response.HostedZones.length ; i++) {
+									$("#hosted_domain_name").append("<option value='" + response.HostedZones[i].Id + "'>" + response.HostedZones[i].Name.substring(0 , response.HostedZones[i].Name.length - 1) + "</option>");
+								}
+								$("#master_domain_name").html($("#hosted_domain_name option:selected").text());
+							});
+						}
+
+					})
+				});
+				function getAllCredentials() {
+					asyncRestRequest("/packages.middleware.pub.environments.api.getCredentials.main?length=100&start=0", null,  "GET", function (response) {
+						$("#credential_id").html("");
+						$("#credential_id2").html("");
+						$("#domain_registrar").html("<option value='-1'>Do not setup an alias</option>");
+						for (var i = 0 ; i < response.credentials.length ; i++) {
+							$("#credential_id").append("<option value='" + response.credentials[i].id + "'>" + response.credentials[i].name + ":" + response.credentials[i].api_username + "</option>");
+							$("#credential_id2").append("<option value='" + response.credentials[i].id + "'>" + response.credentials[i].name + ":" + response.credentials[i].api_username + "</option>");
+							$("#domain_registrar").append("<option value='" + response.credentials[i].id + "-" + response.credentials[i].name +  "'>" + response.credentials[i].name + "</option>");
+						}
+					});
+				}
+
+				getAllCredentials();
+
+				function loadCertificates(ref) {
+					$(ref).html("...");
+					asyncRestRequest("/packages.Wrapper.AWS.acm.getCertificates.main", JSON.stringify({
+						"credential_id": $("#credential_id").val(),
+						"region": $("#environment_aws_region").val()
+					}),  "POST", function (response) {
+
+
+						$("#environment_aws_acm_arn").html("");
+
+						if (null == response.response.CertificateSummaryList) {
+							swal({
+									title: "Error.",
+									text: JSON.stringify(response.response),
+									type: "error",
+									confirmButtonColor: "#f2533e"
+								});
+
+						} else {
+							if (response.response.CertificateSummaryList.length == 0) {
+								swal({
+										title: "Error.",
+										text: "No certificate found in this region.",
+										type: "error",
+										confirmButtonColor: "#f2533e"
+									});
+
+							}
+							for (var i = 0; i < response.response.CertificateSummaryList.length; i++) {
+								$("#environment_aws_acm_arn").append("<option value='" + response.response.CertificateSummaryList[i].CertificateArn + "'>" + response.response.CertificateSummaryList[i].SubjectAlternativeNameSummaries[0] + "</option>")
+							}
+						}
+						$(ref).html("Load");
+					});
+				}
+
+				$("#aws_vpc_subnet_id_1").keyup(function () {
+					if ($(this).val().trim() != "") {
+						$("#aws_vpc_subnet_id_2_panel").show();
+					} else {
+						//$("#aws_vpc_subnet_id_2_panel").hide();
+					}
+				});
+
+				$("#aws_vpc_subnet_id_2").keyup(function () {
+					if ($(this).val().trim() != "") {
+						$("#aws_vpc_subnet_id_3_panel").show();
+					} else {
+						//$("#aws_vpc_subnet_id_1_panel").hide();
+					}
+				});
+
+				$("#aws_vpc_subnet_id_3").keyup(function () {
+					if ($(this).val().trim() != "") {
+						$("#aws_vpc_subnet_id_4_panel").show();
+					} else {
+						//$("#aws_vpc_subnet_id_1_panel").hide();
+					}
+				});
+
+				$("#environment_aws_region").change(function () {
+					loadCertificates();
+				});
+
+				function deployContainer(ref, deployStatus) {
+					if ($("#environment_name").val().trim() == "") {
+							swal({
+								title: "Environment Name",
+								text: "Field is mandatory",
+								type: "error",
+								confirmButtonColor: "#f2533e"
+							});
+
+
+						return;
+						}
+
+					if (null == $("#environment_aws_acm_arn").val()) {
+						swal({
+								title: "Certificate",
+								text: "Please select a certificate.",
+								type: "error",
+								confirmButtonColor: "#f2533e"
+							});
+
+						return ;
+					}
+
+					if ($("#aws_vpc_id").val().trim() == "") {
+						swal({
+								title: "VPC ID",
+								text: "Field is mandatory",
+								type: "error",
+								confirmButtonColor: "#f2533e"
+							});
+
+						return ;
+					}
+
+					if ($("#aws_vpc_id").val().trim() == "") {
+						swal({
+								title: "VPC ID",
+								text: "Field is mandatory",
+								type: "error",
+								confirmButtonColor: "#f2533e"
+							});
+
+						return ;
+					}
+
+					if ($("#domain_registrar").val().trim() != -1 && $("#hosted_domain_name").val() == null) {
+						swal({
+								title: "Alias name",
+								text: "Please select an alias name.",
+								type: "error",
+								confirmButtonColor: "#f2533e"
+							});
+
+						return ;
+					}
+
+					if (parseInt($("#auto_scaling_min_nodes").val()) > parseInt($("#auto_scaling_max_nodes").val()) ) {
+						swal({
+								title: "Invalid Node",
+								text: "Min node should be less than or equal max node.",
+								type: "error",
+								confirmButtonColor: "#f2533e"
+							});
+
+						return ;
+					}
+
+					var request = {
+						"name": $("#environment_name").val(),
+						"type": "AWS_ECS",
+						"credential_id": $("#credential_id").val(),
+						"data_center_region": $("#environment_aws_region").val(),
+						"port_mapping": "",
+						"protocol": "",
+						"aws_acm_arn": $("#environment_aws_acm_arn").val(),
+						"auto_scaling_min_nodes": $("#auto_scaling_min_nodes").val(),
+						"auto_scaling_max_nodes": $("#auto_scaling_max_nodes").val(),
+						"auto_scaling_cpu_threshold": $("#auto_scaling_cpu_threshold").val(),
+						"deploy": deployStatus,
+						"vpcId": $("#aws_vpc_id").val(),
+						"subnets": [],
+						"resource_cups": $("#resource_cups_memory").val().split("-")[0],
+						"resource_memory": $("#resource_cups_memory").val().split("-")[1],
+						"sub_domain": $("#alias_domain_name").val() + "." + $("#hosted_domain_name option:selected").text(),
+						"domain_registrar": $("#domain_registrar").val().split("-")[1],
+						"domain_registrar_zone_id": $("#hosted_domain_name").val(),
+						"dns_mapping": "false",
+						"tenant": "default"
+					};
+
+					if ($("#aws_vpc_subnet_id_1").val().trim() != "") {
+						request.subnets.push($("#aws_vpc_subnet_id_1").val());
+					}
+					if ($("#aws_vpc_subnet_id_2").val().trim() != "") {
+						request.subnets.push($("#aws_vpc_subnet_id_2").val());
+					}
+					if ($("#aws_vpc_subnet_id_3").val().trim() != "") {
+						request.subnets.push($("#aws_vpc_subnet_id_3").val());
+					}
+					if ($("#aws_vpc_subnet_id_4").val().trim() != "") {
+						request.subnets.push($("#aws_vpc_subnet_id_4").val());
+					}
+
+					if (request.subnets.length == 0) {
+
+						swal({
+								title: "Subnets",
+								text: "Subnets are required",
+								type: "error",
+								confirmButtonColor: "#f2533e"
+							});
+
+						return ;
+					}
+
+
+					$(".deploy-container").attr('disabled', 'disabled');
+
+					asyncRestRequest("/packages.middleware.pub.environments.api.deployContainer.main", JSON.stringify(request),  "POST", function (response) {
+						if (response.status == true && response.cf_response.Error != null) {
+							swal({
+									title: "Error Occurred. Please try again.",
+									text: JSON.stringify(response.cf_response.Error),
+									type: "error",
+									confirmButtonColor: "#f2533e"
+								});
+
+						} else if (response.status == true) {
+							location.href = "middleware/pub/server/ui/workspace/web/setting.html?tab=deployments&created=true";
+						} else {
+							swal({
+								title: "Error Occurred. Please try again.",
+								text: "",
+								type: "error",
+								confirmButtonColor: "#f2533e"
+							});
+
+						}
+						$(".deploy-container").removeAttr('disabled');
+					});
+
+				}
+
+				function getTenant(){
+					const tenant = localStorage.getItem("tenant");
+					if (tenant && typeof tenant === "string" && tenant.trim() !== "" &&
+							tenant !== "null" && tenant !== "undefined") {
+						return tenant.trim();
+					}
+					return "default";
+				}
+
+				/*function getTenant() {
+					var cookies = document.cookie.split(";");
+					for  (var i = 0 ; i < cookies.length ; i++) {
+						var coo = cookies[i].split("=");
+						if (coo[0].trim() == "tenant") {
+							return coo[1].replaceAll('"', "").split(" ")[0];
+						}
+					}
+				}*/
+
+			</script>
+
+			<script>
+		let copyText3 = document.querySelector(".copy-text3");
+    document.querySelector("#button-copy").onclick = function () {
+        document.querySelector("#jwtInput").select();
+        document.execCommand("copy");
+        copyText3.classList.add("active");
+        window.getSelection().removeAllRanges();
+        setTimeout(function () {
+        copyText3.classList.remove("active");
+    }, 2500);
+    };
+
+	  </script>
+</body>
+</html>

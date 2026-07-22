@@ -1,0 +1,75 @@
+.secondMenuXAdjustment {
+    top: -220px !important;
+}
+
+.secondMenuXAdjustment2 {
+    top: -170px !important;
+}
+
+.secondMenuYAdjustment {
+    left: -106% !important;
+    top:-28px !important;
+}
+
+.thirdMenuXAdjustment {
+    top: -60px !important;
+}
+
+#saveDetails{
+    margin-top: 5px;
+    margin-left: 5px;
+}
+
+a.test_api {
+    background: #325abf;
+    padding: 6px 15px !important;
+    color: #fff;
+    margin: 8px;
+    display: inline-block;
+    border-radius: 6px;
+}
+
+a.ed_logo img {
+    width: 144px;
+}
+
+
+.rght_sl {
+    display: flex;
+    align-items: center;
+    justify-content: right;
+}
+
+.enb_lk {
+    background: transparent;
+    border: none;
+}
+
+a.test_api:hover, a.test_api:focus{text-decoration: none;}
+
+.doc-popup {
+
+    /* min-width: 300px; */
+    position: absolute;
+    z-index: 99999;
+    margin-top: -14px;
+    box-shadow: 20px 20px 50px -29px grey;
+    display: none;
+}
+
+.doc-main-panel p {
+    margin: 0px;
+    font-size: 12px;
+    font-weight: normal;
+}
+
+.doc-main-panel {
+    border: 1px solid lightgrey;
+    border-radius: 4px;
+    padding: 6px 10px;
+    background-color: #202020;
+    margin-top: 16px;
+    word-break: break-word;
+    font-style: normal;
+    color: #fff;
+}

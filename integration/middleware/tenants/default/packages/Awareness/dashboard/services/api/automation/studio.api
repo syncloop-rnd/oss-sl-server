@@ -1,0 +1,2485 @@
+{
+  "latest" : {
+    "createdTS" : "",
+    "input" : [ {
+      "id" : "j2_1",
+      "text" : "*payload",
+      "li_attr" : {
+        "id" : "j2_1"
+      },
+      "a_attr" : {
+        "href" : "#",
+        "id" : "j2_1_anchor"
+      },
+      "state" : {
+        "loaded" : true,
+        "opened" : true,
+        "selected" : false,
+        "disabled" : false,
+        "hidden" : false
+      },
+      "data" : { },
+      "children" : [ {
+        "id" : "j2_2",
+        "text" : "app_name",
+        "li_attr" : {
+          "id" : "j2_2"
+        },
+        "a_attr" : {
+          "href" : "#",
+          "id" : "j2_2_anchor"
+        },
+        "state" : {
+          "loaded" : true,
+          "opened" : false,
+          "selected" : false,
+          "disabled" : false
+        },
+        "data" : { },
+        "children" : [ ],
+        "type" : "string"
+      }, {
+        "id" : "j2_3",
+        "text" : "description",
+        "li_attr" : {
+          "id" : "j2_3"
+        },
+        "a_attr" : {
+          "href" : "#",
+          "id" : "j2_3_anchor"
+        },
+        "state" : {
+          "loaded" : true,
+          "opened" : false,
+          "selected" : false,
+          "disabled" : false
+        },
+        "data" : { },
+        "children" : [ ],
+        "type" : "string"
+      }, {
+        "id" : "j2_4",
+        "text" : "team",
+        "li_attr" : {
+          "id" : "j2_4"
+        },
+        "a_attr" : {
+          "href" : "#",
+          "id" : "j2_4_anchor"
+        },
+        "state" : {
+          "loaded" : true,
+          "opened" : true,
+          "selected" : false,
+          "disabled" : false
+        },
+        "data" : { },
+        "children" : [ {
+          "id" : "j2_5",
+          "text" : "name",
+          "li_attr" : {
+            "id" : "j2_5"
+          },
+          "a_attr" : {
+            "href" : "#",
+            "id" : "j2_5_anchor"
+          },
+          "state" : {
+            "loaded" : true,
+            "opened" : false,
+            "selected" : false,
+            "disabled" : false
+          },
+          "data" : { },
+          "children" : [ ],
+          "type" : "string"
+        }, {
+          "id" : "j2_6",
+          "text" : "manager",
+          "li_attr" : {
+            "id" : "j2_6"
+          },
+          "a_attr" : {
+            "href" : "#",
+            "id" : "j2_6_anchor"
+          },
+          "state" : {
+            "loaded" : true,
+            "opened" : false,
+            "selected" : false,
+            "disabled" : false
+          },
+          "data" : { },
+          "children" : [ ],
+          "type" : "string"
+        }, {
+          "id" : "j2_7",
+          "text" : "members",
+          "li_attr" : {
+            "id" : "j2_7"
+          },
+          "a_attr" : {
+            "href" : "#",
+            "id" : "j2_7_anchor"
+          },
+          "state" : {
+            "loaded" : true,
+            "opened" : false,
+            "selected" : false,
+            "disabled" : false
+          },
+          "data" : {
+            "assignList" : [ {
+              "path" : "*payload/team/members",
+              "value" : "",
+              "typePath" : "document/document/stringList"
+            } ]
+          },
+          "children" : [ ],
+          "type" : "stringList"
+        }, {
+          "id" : "j2_8",
+          "text" : "description",
+          "li_attr" : {
+            "id" : "j2_8"
+          },
+          "a_attr" : {
+            "href" : "#",
+            "id" : "j2_8_anchor"
+          },
+          "state" : {
+            "loaded" : true,
+            "opened" : false,
+            "selected" : false,
+            "disabled" : false
+          },
+          "data" : { },
+          "children" : [ ],
+          "type" : "string"
+        } ],
+        "type" : "document"
+      }, {
+        "id" : "j2_9",
+        "text" : "Agents",
+        "li_attr" : {
+          "id" : "j2_9"
+        },
+        "a_attr" : {
+          "href" : "#",
+          "id" : "j2_9_anchor"
+        },
+        "state" : {
+          "loaded" : true,
+          "opened" : false,
+          "selected" : false,
+          "disabled" : false
+        },
+        "data" : { },
+        "children" : [ {
+          "id" : "j2_10",
+          "text" : "name",
+          "li_attr" : {
+            "id" : "j2_10"
+          },
+          "a_attr" : {
+            "href" : "#"
+          },
+          "state" : {
+            "loaded" : true,
+            "opened" : false,
+            "selected" : false,
+            "disabled" : false
+          },
+          "data" : { },
+          "children" : [ ],
+          "type" : "string"
+        }, {
+          "id" : "j2_11",
+          "text" : "title",
+          "li_attr" : {
+            "id" : "j2_11"
+          },
+          "a_attr" : {
+            "href" : "#"
+          },
+          "state" : {
+            "loaded" : true,
+            "opened" : false,
+            "selected" : false,
+            "disabled" : false
+          },
+          "data" : { },
+          "children" : [ ],
+          "type" : "string"
+        }, {
+          "id" : "j2_12",
+          "text" : "instructions",
+          "li_attr" : {
+            "id" : "j2_12"
+          },
+          "a_attr" : {
+            "href" : "#"
+          },
+          "state" : {
+            "loaded" : true,
+            "opened" : false,
+            "selected" : false,
+            "disabled" : false
+          },
+          "data" : { },
+          "children" : [ ],
+          "type" : "string"
+        }, {
+          "id" : "j2_13",
+          "text" : "guardrails",
+          "li_attr" : {
+            "id" : "j2_13"
+          },
+          "a_attr" : {
+            "href" : "#"
+          },
+          "state" : {
+            "loaded" : true,
+            "opened" : false,
+            "selected" : false,
+            "disabled" : false
+          },
+          "data" : { },
+          "children" : [ ],
+          "type" : "string"
+        }, {
+          "id" : "j2_14",
+          "text" : "tone",
+          "li_attr" : {
+            "id" : "j2_14"
+          },
+          "a_attr" : {
+            "href" : "#"
+          },
+          "state" : {
+            "loaded" : true,
+            "opened" : false,
+            "selected" : false,
+            "disabled" : false
+          },
+          "data" : { },
+          "children" : [ ],
+          "type" : "string"
+        }, {
+          "id" : "j2_15",
+          "text" : "required_web_search",
+          "li_attr" : {
+            "id" : "j2_15"
+          },
+          "a_attr" : {
+            "href" : "#"
+          },
+          "state" : {
+            "loaded" : true,
+            "opened" : false,
+            "selected" : false,
+            "disabled" : false
+          },
+          "data" : { },
+          "children" : [ ],
+          "type" : "boolean"
+        } ],
+        "type" : "documentList"
+      } ],
+      "type" : "document"
+    } ],
+    "output" : [ {
+      "id" : "j3_1",
+      "text" : "Agents",
+      "li_attr" : {
+        "id" : "j3_1"
+      },
+      "a_attr" : {
+        "href" : "#",
+        "id" : "j3_1_anchor"
+      },
+      "state" : {
+        "loaded" : true,
+        "opened" : false,
+        "selected" : false,
+        "disabled" : false,
+        "hidden" : false
+      },
+      "data" : { },
+      "children" : [ ],
+      "type" : "javaObject"
+    }, {
+      "id" : "j3_9",
+      "text" : "appReference",
+      "li_attr" : {
+        "id" : "j3_9"
+      },
+      "a_attr" : {
+        "href" : "#",
+        "id" : "j3_9_anchor"
+      },
+      "state" : {
+        "loaded" : true,
+        "opened" : false,
+        "selected" : false,
+        "disabled" : false,
+        "hidden" : false
+      },
+      "data" : { },
+      "children" : [ {
+        "id" : "j3_10",
+        "text" : "error",
+        "li_attr" : {
+          "id" : "j3_10"
+        },
+        "a_attr" : {
+          "href" : "#"
+        },
+        "state" : {
+          "loaded" : true,
+          "opened" : false,
+          "selected" : false,
+          "disabled" : false
+        },
+        "data" : { },
+        "children" : [ ],
+        "type" : "string"
+      }, {
+        "id" : "j3_11",
+        "text" : "operation",
+        "li_attr" : {
+          "id" : "j3_11"
+        },
+        "a_attr" : {
+          "href" : "#"
+        },
+        "state" : {
+          "loaded" : true,
+          "opened" : false,
+          "selected" : false,
+          "disabled" : false
+        },
+        "data" : { },
+        "children" : [ ],
+        "type" : "string"
+      }, {
+        "id" : "j3_12",
+        "text" : "status",
+        "li_attr" : {
+          "id" : "j3_12"
+        },
+        "a_attr" : {
+          "href" : "#"
+        },
+        "state" : {
+          "loaded" : true,
+          "opened" : false,
+          "selected" : false,
+          "disabled" : false
+        },
+        "data" : { },
+        "children" : [ ],
+        "type" : "string"
+      }, {
+        "id" : "j3_13",
+        "text" : "appId",
+        "li_attr" : {
+          "id" : "j3_13"
+        },
+        "a_attr" : {
+          "href" : "#"
+        },
+        "state" : {
+          "loaded" : true,
+          "opened" : false,
+          "selected" : false,
+          "disabled" : false
+        },
+        "data" : { },
+        "children" : [ ],
+        "type" : "string"
+      }, {
+        "id" : "j3_14",
+        "text" : "reportAgentId",
+        "li_attr" : {
+          "id" : "j3_14"
+        },
+        "a_attr" : {
+          "href" : "#"
+        },
+        "state" : {
+          "loaded" : true,
+          "opened" : false,
+          "selected" : false,
+          "disabled" : false
+        },
+        "data" : { },
+        "children" : [ ],
+        "type" : "string"
+      }, {
+        "id" : "j3_15",
+        "text" : "terminationAgentId",
+        "li_attr" : {
+          "id" : "j3_15"
+        },
+        "a_attr" : {
+          "href" : "#"
+        },
+        "state" : {
+          "loaded" : true,
+          "opened" : false,
+          "selected" : false,
+          "disabled" : false
+        },
+        "data" : { },
+        "children" : [ ],
+        "type" : "string"
+      } ],
+      "type" : "document"
+    }, {
+      "id" : "j3_16",
+      "text" : "memberAgentIDs",
+      "li_attr" : {
+        "id" : "j3_16"
+      },
+      "a_attr" : {
+        "href" : "#",
+        "id" : "j3_16_anchor"
+      },
+      "state" : {
+        "loaded" : true,
+        "opened" : false,
+        "selected" : false,
+        "disabled" : false,
+        "hidden" : false
+      },
+      "data" : { },
+      "children" : [ ],
+      "type" : "string"
+    }, {
+      "id" : "j3_17",
+      "text" : "teamReference",
+      "li_attr" : {
+        "id" : "j3_17"
+      },
+      "a_attr" : {
+        "href" : "#",
+        "id" : "j3_17_anchor"
+      },
+      "state" : {
+        "loaded" : true,
+        "opened" : false,
+        "selected" : false,
+        "disabled" : false,
+        "hidden" : false
+      },
+      "data" : { },
+      "children" : [ {
+        "id" : "j3_18",
+        "text" : "error",
+        "li_attr" : {
+          "id" : "j3_18"
+        },
+        "a_attr" : {
+          "href" : "#"
+        },
+        "state" : {
+          "loaded" : true,
+          "opened" : false,
+          "selected" : false,
+          "disabled" : false
+        },
+        "data" : { },
+        "children" : [ ],
+        "type" : "string"
+      }, {
+        "id" : "j3_19",
+        "text" : "operation",
+        "li_attr" : {
+          "id" : "j3_19"
+        },
+        "a_attr" : {
+          "href" : "#"
+        },
+        "state" : {
+          "loaded" : true,
+          "opened" : false,
+          "selected" : false,
+          "disabled" : false
+        },
+        "data" : { },
+        "children" : [ ],
+        "type" : "string"
+      }, {
+        "id" : "j3_20",
+        "text" : "status",
+        "li_attr" : {
+          "id" : "j3_20"
+        },
+        "a_attr" : {
+          "href" : "#"
+        },
+        "state" : {
+          "loaded" : true,
+          "opened" : false,
+          "selected" : false,
+          "disabled" : false
+        },
+        "data" : { },
+        "children" : [ ],
+        "type" : "string"
+      }, {
+        "id" : "j3_21",
+        "text" : "teamID",
+        "li_attr" : {
+          "id" : "j3_21"
+        },
+        "a_attr" : {
+          "href" : "#"
+        },
+        "state" : {
+          "loaded" : true,
+          "opened" : false,
+          "selected" : false,
+          "disabled" : false
+        },
+        "data" : { },
+        "children" : [ ],
+        "type" : "string"
+      } ],
+      "type" : "document"
+    } ],
+    "api" : [ {
+      "id" : "j1_1",
+      "text" : "Transformer",
+      "li_attr" : {
+        "id" : "j1_1"
+      },
+      "a_attr" : {
+        "href" : "javascript:void(0)",
+        "id" : "j1_1_anchor"
+      },
+      "state" : {
+        "loaded" : true,
+        "opened" : false,
+        "selected" : false,
+        "disabled" : false,
+        "hidden" : false
+      },
+      "data" : {
+        "guid" : "48b08fc3-0843-4d47-bf39-18c1452c69b8",
+        "columnType" : "-1",
+        "transformers" : [ {
+          "op" : "loop",
+          "from" : "/*payload/Agents/#{loop_id_638671017}",
+          "to" : "/app/Agents/#{loop_id_638671017}",
+          "loop_Id" : "loop_id_638671017",
+          "inTypePath" : "document/documentList",
+          "outTypePath" : "document/documentList"
+        }, {
+          "op" : "add",
+          "from" : "/*payload/Agents/#{loop_id_638671017}/required_web_search",
+          "to" : "/app/Agents/#{loop_id_638671017}/required_web_search",
+          "follow" : "loop_id_638671017",
+          "inTypePath" : "document/documentList/boolean",
+          "outTypePath" : "document/documentList/boolean"
+        }, {
+          "op" : "add",
+          "from" : "/*payload/Agents/#{loop_id_638671017}/tone",
+          "to" : "/app/Agents/#{loop_id_638671017}/tone",
+          "follow" : "loop_id_638671017",
+          "inTypePath" : "document/documentList/string",
+          "outTypePath" : "document/documentList/string"
+        }, {
+          "op" : "add",
+          "from" : "/*payload/Agents/#{loop_id_638671017}/guardrails",
+          "to" : "/app/Agents/#{loop_id_638671017}/guardrails",
+          "follow" : "loop_id_638671017",
+          "inTypePath" : "document/documentList/string",
+          "outTypePath" : "document/documentList/string"
+        }, {
+          "op" : "add",
+          "from" : "/*payload/Agents/#{loop_id_638671017}/instructions",
+          "to" : "/app/Agents/#{loop_id_638671017}/instructions",
+          "follow" : "loop_id_638671017",
+          "inTypePath" : "document/documentList/string",
+          "outTypePath" : "document/documentList/string"
+        }, {
+          "op" : "add",
+          "from" : "/*payload/Agents/#{loop_id_638671017}/title",
+          "to" : "/app/Agents/#{loop_id_638671017}/title",
+          "follow" : "loop_id_638671017",
+          "inTypePath" : "document/documentList/string",
+          "outTypePath" : "document/documentList/string"
+        }, {
+          "op" : "add",
+          "from" : "/*payload/Agents/#{loop_id_638671017}/name",
+          "to" : "/app/Agents/#{loop_id_638671017}/name",
+          "follow" : "loop_id_638671017",
+          "inTypePath" : "document/documentList/string",
+          "outTypePath" : "document/documentList/string"
+        }, {
+          "op" : "copy",
+          "from" : "/*payload/team/description",
+          "to" : "/app/team/description",
+          "inTypePath" : "document/document/string",
+          "outTypePath" : "document/document/string"
+        }, {
+          "op" : "copy",
+          "from" : "/*payload/team/members",
+          "to" : "/app/team/members",
+          "inTypePath" : "document/document/stringList",
+          "outTypePath" : "document/document/stringList"
+        }, {
+          "op" : "copy",
+          "from" : "/*payload/team/manager",
+          "to" : "/app/team/manager",
+          "inTypePath" : "document/document/string",
+          "outTypePath" : "document/document/string"
+        }, {
+          "op" : "copy",
+          "from" : "/*payload/team/name",
+          "to" : "/app/team/name",
+          "inTypePath" : "document/document/string",
+          "outTypePath" : "document/document/string"
+        }, {
+          "op" : "copy",
+          "from" : "/*payload/description",
+          "to" : "/app/description",
+          "inTypePath" : "document/string",
+          "outTypePath" : "document/string"
+        }, {
+          "op" : "copy",
+          "from" : "/*payload/app_name",
+          "to" : "/app/app_name",
+          "inTypePath" : "document/string",
+          "outTypePath" : "document/string"
+        } ],
+        "lines" : [ {
+          "loop_Id" : "loop_id_638671017",
+          "inputPath" : "*payload/Agents",
+          "outputPath" : "app/Agents",
+          "inpJsTree" : "#launching_arrow_jsTree",
+          "outpJsTree" : "#landing_arrow_jsTree",
+          "INPath" : "*payload/Agents/#{loop_id_638671017}",
+          "OUTPath" : "app/Agents/#{loop_id_638671017}",
+          "line" : 0,
+          "dashedLine" : true,
+          "op" : "loop",
+          "inType" : "documentList",
+          "outType" : "documentList",
+          "inTypePath" : "document/documentList",
+          "outTypePath" : "document/documentList"
+        }, {
+          "inputPath" : "*payload/Agents/required_web_search",
+          "outputPath" : "app/Agents/required_web_search",
+          "inpJsTree" : "#launching_arrow_jsTree",
+          "outpJsTree" : "#landing_arrow_jsTree",
+          "INPath" : "*payload/Agents/#{loop_id_638671017}/required_web_search",
+          "OUTPath" : "app/Agents/#{loop_id_638671017}/required_web_search",
+          "follow" : "loop_id_638671017",
+          "op" : "add",
+          "line" : 0,
+          "dashedLine" : false,
+          "inType" : "boolean",
+          "outType" : "boolean",
+          "inTypePath" : "document/documentList/boolean",
+          "outTypePath" : "document/documentList/boolean"
+        }, {
+          "inputPath" : "*payload/Agents/tone",
+          "outputPath" : "app/Agents/tone",
+          "inpJsTree" : "#launching_arrow_jsTree",
+          "outpJsTree" : "#landing_arrow_jsTree",
+          "INPath" : "*payload/Agents/#{loop_id_638671017}/tone",
+          "OUTPath" : "app/Agents/#{loop_id_638671017}/tone",
+          "follow" : "loop_id_638671017",
+          "op" : "add",
+          "line" : 0,
+          "dashedLine" : false,
+          "inType" : "string",
+          "outType" : "string",
+          "inTypePath" : "document/documentList/string",
+          "outTypePath" : "document/documentList/string"
+        }, {
+          "inputPath" : "*payload/Agents/guardrails",
+          "outputPath" : "app/Agents/guardrails",
+          "inpJsTree" : "#launching_arrow_jsTree",
+          "outpJsTree" : "#landing_arrow_jsTree",
+          "INPath" : "*payload/Agents/#{loop_id_638671017}/guardrails",
+          "OUTPath" : "app/Agents/#{loop_id_638671017}/guardrails",
+          "follow" : "loop_id_638671017",
+          "op" : "add",
+          "line" : 0,
+          "dashedLine" : false,
+          "inType" : "string",
+          "outType" : "string",
+          "inTypePath" : "document/documentList/string",
+          "outTypePath" : "document/documentList/string"
+        }, {
+          "inputPath" : "*payload/Agents/instructions",
+          "outputPath" : "app/Agents/instructions",
+          "inpJsTree" : "#launching_arrow_jsTree",
+          "outpJsTree" : "#landing_arrow_jsTree",
+          "INPath" : "*payload/Agents/#{loop_id_638671017}/instructions",
+          "OUTPath" : "app/Agents/#{loop_id_638671017}/instructions",
+          "follow" : "loop_id_638671017",
+          "op" : "add",
+          "line" : 0,
+          "dashedLine" : false,
+          "inType" : "string",
+          "outType" : "string",
+          "inTypePath" : "document/documentList/string",
+          "outTypePath" : "document/documentList/string"
+        }, {
+          "inputPath" : "*payload/Agents/title",
+          "outputPath" : "app/Agents/title",
+          "inpJsTree" : "#launching_arrow_jsTree",
+          "outpJsTree" : "#landing_arrow_jsTree",
+          "INPath" : "*payload/Agents/#{loop_id_638671017}/title",
+          "OUTPath" : "app/Agents/#{loop_id_638671017}/title",
+          "follow" : "loop_id_638671017",
+          "op" : "add",
+          "line" : 0,
+          "dashedLine" : false,
+          "inType" : "string",
+          "outType" : "string",
+          "inTypePath" : "document/documentList/string",
+          "outTypePath" : "document/documentList/string"
+        }, {
+          "inputPath" : "*payload/Agents/name",
+          "outputPath" : "app/Agents/name",
+          "inpJsTree" : "#launching_arrow_jsTree",
+          "outpJsTree" : "#landing_arrow_jsTree",
+          "INPath" : "*payload/Agents/#{loop_id_638671017}/name",
+          "OUTPath" : "app/Agents/#{loop_id_638671017}/name",
+          "follow" : "loop_id_638671017",
+          "op" : "add",
+          "line" : 0,
+          "dashedLine" : false,
+          "inType" : "string",
+          "outType" : "string",
+          "inTypePath" : "document/documentList/string",
+          "outTypePath" : "document/documentList/string"
+        }, {
+          "inputPath" : "*payload/team/description",
+          "outputPath" : "app/team/description",
+          "inpJsTree" : "#launching_arrow_jsTree",
+          "outpJsTree" : "#landing_arrow_jsTree",
+          "INPath" : "*payload/team/description",
+          "OUTPath" : "app/team/description",
+          "op" : "copy",
+          "line" : 0,
+          "dashedLine" : false,
+          "inType" : "string",
+          "outType" : "string",
+          "inTypePath" : "document/document/string",
+          "outTypePath" : "document/document/string"
+        }, {
+          "inputPath" : "*payload/team/members",
+          "outputPath" : "app/team/members",
+          "inpJsTree" : "#launching_arrow_jsTree",
+          "outpJsTree" : "#landing_arrow_jsTree",
+          "INPath" : "*payload/team/members",
+          "OUTPath" : "app/team/members",
+          "op" : "copy",
+          "line" : 0,
+          "dashedLine" : false,
+          "inType" : "stringList",
+          "outType" : "stringList",
+          "inTypePath" : "document/document/stringList",
+          "outTypePath" : "document/document/stringList"
+        }, {
+          "inputPath" : "*payload/team/manager",
+          "outputPath" : "app/team/manager",
+          "inpJsTree" : "#launching_arrow_jsTree",
+          "outpJsTree" : "#landing_arrow_jsTree",
+          "INPath" : "*payload/team/manager",
+          "OUTPath" : "app/team/manager",
+          "op" : "copy",
+          "line" : 0,
+          "dashedLine" : false,
+          "inType" : "string",
+          "outType" : "string",
+          "inTypePath" : "document/document/string",
+          "outTypePath" : "document/document/string"
+        }, {
+          "inputPath" : "*payload/team/name",
+          "outputPath" : "app/team/name",
+          "inpJsTree" : "#launching_arrow_jsTree",
+          "outpJsTree" : "#landing_arrow_jsTree",
+          "INPath" : "*payload/team/name",
+          "OUTPath" : "app/team/name",
+          "op" : "copy",
+          "line" : 0,
+          "dashedLine" : false,
+          "inType" : "string",
+          "outType" : "string",
+          "inTypePath" : "document/document/string",
+          "outTypePath" : "document/document/string"
+        }, {
+          "inputPath" : "*payload/description",
+          "outputPath" : "app/description",
+          "inpJsTree" : "#launching_arrow_jsTree",
+          "outpJsTree" : "#landing_arrow_jsTree",
+          "INPath" : "*payload/description",
+          "OUTPath" : "app/description",
+          "op" : "copy",
+          "line" : 0,
+          "dashedLine" : false,
+          "inType" : "string",
+          "outType" : "string",
+          "inTypePath" : "document/string",
+          "outTypePath" : "document/string"
+        }, {
+          "inputPath" : "*payload/app_name",
+          "outputPath" : "app/app_name",
+          "inpJsTree" : "#launching_arrow_jsTree",
+          "outpJsTree" : "#landing_arrow_jsTree",
+          "INPath" : "*payload/app_name",
+          "OUTPath" : "app/app_name",
+          "op" : "copy",
+          "line" : 0,
+          "dashedLine" : false,
+          "inType" : "string",
+          "outType" : "string",
+          "inTypePath" : "document/string",
+          "outTypePath" : "document/string"
+        } ],
+        "dropList" : [ {
+          "path" : "*payload",
+          "typePath" : "document"
+        } ],
+        "createList" : [ ],
+        "initiateList" : [ ]
+      },
+      "children" : [ ],
+      "type" : "transformer"
+    }, {
+      "id" : "j1_3",
+      "text" : "Transformer",
+      "li_attr" : {
+        "id" : "j1_3"
+      },
+      "a_attr" : {
+        "href" : "javascript:void(0)",
+        "id" : "j1_3_anchor"
+      },
+      "state" : {
+        "loaded" : true,
+        "opened" : false,
+        "selected" : false,
+        "disabled" : false,
+        "hidden" : false
+      },
+      "data" : {
+        "guid" : "f2fbe138-c48c-4119-be1d-7840710cc922",
+        "columnType" : "-1",
+        "transformers" : [ ],
+        "lines" : [ ],
+        "dropList" : [ ],
+        "createList" : [ ],
+        "initiateList" : [ {
+          "path" : "memberAgentIDs",
+          "id" : "b966bcb7-3f46-4c30-9530-ffe43f6c66f3",
+          "typePath" : "stringList"
+        } ]
+      },
+      "children" : [ ],
+      "type" : "transformer"
+    }, {
+      "id" : "j1_22",
+      "text" : "Invoke",
+      "li_attr" : {
+        "id" : "j1_22"
+      },
+      "a_attr" : {
+        "href" : "javascript:void(0)",
+        "id" : "j1_22_anchor"
+      },
+      "state" : {
+        "loaded" : true,
+        "opened" : false,
+        "selected" : false,
+        "disabled" : false,
+        "hidden" : false
+      },
+      "data" : {
+        "guid" : "bf93cde7-006f-4614-8c20-e9fa240eb851",
+        "columnType" : "-1",
+        "transformers" : [ {
+          "op" : "copy",
+          "from" : "/Model/apiKey",
+          "to" : "/Model/apiKey",
+          "inTypePath" : "document/string",
+          "outTypePath" : "document/string",
+          "direction" : "out"
+        }, {
+          "op" : "copy",
+          "from" : "/Model/displayName",
+          "to" : "/Model/displayName",
+          "inTypePath" : "document/string",
+          "outTypePath" : "document/string",
+          "direction" : "out"
+        }, {
+          "op" : "copy",
+          "from" : "/Model/enableParallelToolCalling",
+          "to" : "/Model/enableParallelToolCalling",
+          "inTypePath" : "document/boolean",
+          "outTypePath" : "document/boolean",
+          "direction" : "out"
+        }, {
+          "op" : "copy",
+          "from" : "/Model/is_verified",
+          "to" : "/Model/is_verified",
+          "inTypePath" : "document/boolean",
+          "outTypePath" : "document/boolean",
+          "direction" : "out"
+        }, {
+          "op" : "copy",
+          "from" : "/Model/modelName",
+          "to" : "/Model/modelName",
+          "inTypePath" : "document/string",
+          "outTypePath" : "document/string",
+          "direction" : "out"
+        }, {
+          "op" : "copy",
+          "from" : "/Model/LLMkey",
+          "to" : "/Model/LLMkey",
+          "inTypePath" : "document/string",
+          "outTypePath" : "document/string",
+          "direction" : "out"
+        }, {
+          "op" : "copy",
+          "from" : "/Model/baseUrl",
+          "to" : "/Model/baseUrl",
+          "inTypePath" : "document/string",
+          "outTypePath" : "document/string",
+          "direction" : "out"
+        }, {
+          "op" : "copy",
+          "from" : "/Model/provider",
+          "to" : "/Model/provider",
+          "inTypePath" : "document/string",
+          "outTypePath" : "document/string",
+          "direction" : "out"
+        }, {
+          "op" : "copy",
+          "from" : "/Model/name",
+          "to" : "/Model/name",
+          "inTypePath" : "document/string",
+          "outTypePath" : "document/string",
+          "direction" : "out"
+        }, {
+          "op" : "copy",
+          "from" : "/Model/maxTokens",
+          "to" : "/Model/maxTokens",
+          "inTypePath" : "document/number",
+          "outTypePath" : "document/number",
+          "direction" : "out"
+        }, {
+          "op" : "copy",
+          "from" : "/Model/sstc",
+          "to" : "/Model/sstc",
+          "inTypePath" : "document/boolean",
+          "outTypePath" : "document/boolean",
+          "direction" : "out"
+        } ],
+        "lines" : [ {
+          "inputPath" : "Model/apiKey",
+          "outputPath" : "Model/apiKey",
+          "inpJsTree" : "#launching_arrow_jsTree_function",
+          "outpJsTree" : "#landing_arrow_jsTree",
+          "INPath" : "Model/apiKey",
+          "OUTPath" : "Model/apiKey",
+          "direction" : "out",
+          "op" : "copy",
+          "line" : 0,
+          "dashedLine" : false,
+          "inType" : "string",
+          "outType" : "string",
+          "inTypePath" : "document/string",
+          "outTypePath" : "document/string"
+        }, {
+          "inputPath" : "Model/displayName",
+          "outputPath" : "Model/displayName",
+          "inpJsTree" : "#launching_arrow_jsTree_function",
+          "outpJsTree" : "#landing_arrow_jsTree",
+          "INPath" : "Model/displayName",
+          "OUTPath" : "Model/displayName",
+          "direction" : "out",
+          "op" : "copy",
+          "line" : 0,
+          "dashedLine" : false,
+          "inType" : "string",
+          "outType" : "string",
+          "inTypePath" : "document/string",
+          "outTypePath" : "document/string"
+        }, {
+          "inputPath" : "Model/enableParallelToolCalling",
+          "outputPath" : "Model/enableParallelToolCalling",
+          "inpJsTree" : "#launching_arrow_jsTree_function",
+          "outpJsTree" : "#landing_arrow_jsTree",
+          "INPath" : "Model/enableParallelToolCalling",
+          "OUTPath" : "Model/enableParallelToolCalling",
+          "direction" : "out",
+          "op" : "copy",
+          "line" : 0,
+          "dashedLine" : false,
+          "inType" : "boolean",
+          "outType" : "boolean",
+          "inTypePath" : "document/boolean",
+          "outTypePath" : "document/boolean"
+        }, {
+          "inputPath" : "Model/is_verified",
+          "outputPath" : "Model/is_verified",
+          "inpJsTree" : "#launching_arrow_jsTree_function",
+          "outpJsTree" : "#landing_arrow_jsTree",
+          "INPath" : "Model/is_verified",
+          "OUTPath" : "Model/is_verified",
+          "direction" : "out",
+          "op" : "copy",
+          "line" : 0,
+          "dashedLine" : false,
+          "inType" : "boolean",
+          "outType" : "boolean",
+          "inTypePath" : "document/boolean",
+          "outTypePath" : "document/boolean"
+        }, {
+          "inputPath" : "Model/modelName",
+          "outputPath" : "Model/modelName",
+          "inpJsTree" : "#launching_arrow_jsTree_function",
+          "outpJsTree" : "#landing_arrow_jsTree",
+          "INPath" : "Model/modelName",
+          "OUTPath" : "Model/modelName",
+          "direction" : "out",
+          "op" : "copy",
+          "line" : 0,
+          "dashedLine" : false,
+          "inType" : "string",
+          "outType" : "string",
+          "inTypePath" : "document/string",
+          "outTypePath" : "document/string"
+        }, {
+          "inputPath" : "Model/LLMkey",
+          "outputPath" : "Model/LLMkey",
+          "inpJsTree" : "#launching_arrow_jsTree_function",
+          "outpJsTree" : "#landing_arrow_jsTree",
+          "INPath" : "Model/LLMkey",
+          "OUTPath" : "Model/LLMkey",
+          "direction" : "out",
+          "op" : "copy",
+          "line" : 0,
+          "dashedLine" : false,
+          "inType" : "string",
+          "outType" : "string",
+          "inTypePath" : "document/string",
+          "outTypePath" : "document/string"
+        }, {
+          "inputPath" : "Model/baseUrl",
+          "outputPath" : "Model/baseUrl",
+          "inpJsTree" : "#launching_arrow_jsTree_function",
+          "outpJsTree" : "#landing_arrow_jsTree",
+          "INPath" : "Model/baseUrl",
+          "OUTPath" : "Model/baseUrl",
+          "direction" : "out",
+          "op" : "copy",
+          "line" : 0,
+          "dashedLine" : false,
+          "inType" : "string",
+          "outType" : "string",
+          "inTypePath" : "document/string",
+          "outTypePath" : "document/string"
+        }, {
+          "inputPath" : "Model/provider",
+          "outputPath" : "Model/provider",
+          "inpJsTree" : "#launching_arrow_jsTree_function",
+          "outpJsTree" : "#landing_arrow_jsTree",
+          "INPath" : "Model/provider",
+          "OUTPath" : "Model/provider",
+          "direction" : "out",
+          "op" : "copy",
+          "line" : 0,
+          "dashedLine" : false,
+          "inType" : "string",
+          "outType" : "string",
+          "inTypePath" : "document/string",
+          "outTypePath" : "document/string"
+        }, {
+          "inputPath" : "Model/name",
+          "outputPath" : "Model/name",
+          "inpJsTree" : "#launching_arrow_jsTree_function",
+          "outpJsTree" : "#landing_arrow_jsTree",
+          "INPath" : "Model/name",
+          "OUTPath" : "Model/name",
+          "direction" : "out",
+          "op" : "copy",
+          "line" : 0,
+          "dashedLine" : false,
+          "inType" : "string",
+          "outType" : "string",
+          "inTypePath" : "document/string",
+          "outTypePath" : "document/string"
+        }, {
+          "inputPath" : "Model/maxTokens",
+          "outputPath" : "Model/maxTokens",
+          "inpJsTree" : "#launching_arrow_jsTree_function",
+          "outpJsTree" : "#landing_arrow_jsTree",
+          "INPath" : "Model/maxTokens",
+          "OUTPath" : "Model/maxTokens",
+          "direction" : "out",
+          "op" : "copy",
+          "line" : 0,
+          "dashedLine" : false,
+          "inType" : "number",
+          "outType" : "number",
+          "inTypePath" : "document/number",
+          "outTypePath" : "document/number"
+        }, {
+          "inputPath" : "Model/sstc",
+          "outputPath" : "Model/sstc",
+          "inpJsTree" : "#launching_arrow_jsTree_function",
+          "outpJsTree" : "#landing_arrow_jsTree",
+          "INPath" : "Model/sstc",
+          "OUTPath" : "Model/sstc",
+          "direction" : "out",
+          "op" : "copy",
+          "line" : 0,
+          "dashedLine" : false,
+          "inType" : "boolean",
+          "outType" : "boolean",
+          "inTypePath" : "document/boolean",
+          "outTypePath" : "document/boolean"
+        } ],
+        "dropList" : [ ],
+        "createList" : [ ],
+        "initiateList" : [ ],
+        "fqn" : "packages/Awareness/dashboard/services/api/automation/getLLM",
+        "serviceType" : "api"
+      },
+      "children" : [ ],
+      "type" : "invoke"
+    }, {
+      "id" : "j1_8",
+      "text" : "Invoke",
+      "li_attr" : {
+        "id" : "j1_8"
+      },
+      "a_attr" : {
+        "href" : "javascript:void(0)",
+        "id" : "j1_8_anchor"
+      },
+      "state" : {
+        "loaded" : true,
+        "opened" : false,
+        "selected" : false,
+        "disabled" : false,
+        "hidden" : false
+      },
+      "data" : {
+        "guid" : "4e609864-f1ae-4ed9-b792-168d598f0661",
+        "columnType" : "-1",
+        "transformers" : [ {
+          "op" : "copy",
+          "from" : "/hashtable",
+          "to" : "/Agents",
+          "inTypePath" : "javaObject",
+          "outTypePath" : "javaObject",
+          "direction" : "out"
+        } ],
+        "lines" : [ {
+          "inputPath" : "hashtable",
+          "outputPath" : "Agents",
+          "inpJsTree" : "#launching_arrow_jsTree_function",
+          "outpJsTree" : "#landing_arrow_jsTree",
+          "INPath" : "hashtable",
+          "OUTPath" : "Agents",
+          "direction" : "out",
+          "op" : "copy",
+          "line" : 0,
+          "dashedLine" : false,
+          "inType" : "javaObject",
+          "outType" : "javaObject",
+          "inTypePath" : "javaObject",
+          "outTypePath" : "javaObject"
+        } ],
+        "dropList" : [ ],
+        "createList" : [ ],
+        "initiateList" : [ ],
+        "fqn" : "packages/middleware/pub/collection/map/createHashtable",
+        "serviceType" : "service"
+      },
+      "children" : [ ],
+      "type" : "invoke"
+    }, {
+      "id" : "j1_2",
+      "text" : "Foreach",
+      "li_attr" : {
+        "id" : "j1_2"
+      },
+      "a_attr" : {
+        "href" : "javascript:void(0)",
+        "id" : "j1_2_anchor"
+      },
+      "state" : {
+        "loaded" : true,
+        "opened" : true,
+        "selected" : false,
+        "disabled" : false,
+        "hidden" : false
+      },
+      "data" : {
+        "guid" : "c94c5755-c4e3-4cf1-a750-685f7e778faf",
+        "indexVar" : "*index0",
+        "columnType" : "-1",
+        "inArray" : "app/Agents"
+      },
+      "children" : [ {
+        "id" : "j1_4",
+        "text" : "Transformer",
+        "li_attr" : {
+          "id" : "j1_4"
+        },
+        "a_attr" : {
+          "href" : "#",
+          "id" : "j1_4_anchor"
+        },
+        "state" : {
+          "loaded" : true,
+          "opened" : false,
+          "selected" : false,
+          "disabled" : false
+        },
+        "data" : {
+          "guid" : "772547c3-fb90-4d42-abf1-58494d41cdc4",
+          "columnType" : "-1",
+          "transformers" : [ {
+            "op" : "copy",
+            "from" : "/Model/LLMkey",
+            "to" : "/LLMKey",
+            "inTypePath" : "document/string",
+            "outTypePath" : "string"
+          } ],
+          "lines" : [ {
+            "inputPath" : "Model/LLMkey",
+            "outputPath" : "LLMKey",
+            "inpJsTree" : "#launching_arrow_jsTree",
+            "outpJsTree" : "#landing_arrow_jsTree",
+            "INPath" : "Model/LLMkey",
+            "OUTPath" : "LLMKey",
+            "op" : "copy",
+            "line" : 0,
+            "dashedLine" : false,
+            "inType" : "string",
+            "outType" : "string",
+            "inTypePath" : "document/string",
+            "outTypePath" : "string"
+          } ],
+          "dropList" : [ ],
+          "createList" : [ {
+            "path" : "description",
+            "value" : "#{app/Agents/instructions}:::: Tone instructions are ::::#{app/Agents/tone}:::: Guardrails instructions are ::::#{app/Agents/guardrails}",
+            "id" : "4bf98093-f604-449d-b1f1-8d095d999a41",
+            "evaluate" : "EEV",
+            "typePath" : "string"
+          } ],
+          "initiateList" : [ {
+            "path" : "LLMKey",
+            "id" : "fce85ec8-a0ec-460f-a9de-b73ee5ef7402",
+            "typePath" : "string"
+          }, {
+            "path" : "description",
+            "id" : "d248e6cc-4e77-43a7-badb-4cf8fd0d9ac6",
+            "typePath" : "string"
+          } ]
+        },
+        "children" : [ ],
+        "type" : "transformer"
+      }, {
+        "id" : "j1_6",
+        "text" : "Invoke",
+        "li_attr" : {
+          "id" : "j1_6"
+        },
+        "a_attr" : {
+          "href" : "#",
+          "id" : "j1_6_anchor"
+        },
+        "state" : {
+          "loaded" : true,
+          "opened" : false,
+          "selected" : false,
+          "disabled" : false
+        },
+        "data" : {
+          "guid" : "feb2fb86-2d0f-4bb2-b62f-592a9f3f9735",
+          "columnType" : "-1",
+          "transformers" : [ {
+            "op" : "copy",
+            "from" : "/uuid",
+            "to" : "/agentID",
+            "inTypePath" : "string",
+            "outTypePath" : "string",
+            "direction" : "out"
+          } ],
+          "lines" : [ {
+            "inputPath" : "uuid",
+            "outputPath" : "agentID",
+            "inpJsTree" : "#launching_arrow_jsTree_function",
+            "outpJsTree" : "#landing_arrow_jsTree",
+            "INPath" : "uuid",
+            "OUTPath" : "agentID",
+            "direction" : "out",
+            "op" : "copy",
+            "line" : 0,
+            "dashedLine" : false,
+            "inType" : "string",
+            "outType" : "string",
+            "inTypePath" : "string",
+            "outTypePath" : "string"
+          } ],
+          "dropList" : [ ],
+          "createList" : [ ],
+          "initiateList" : [ {
+            "path" : "agentID",
+            "id" : "aeff914d-ba4e-4ab1-b808-b8bbc5a1209a",
+            "typePath" : "string"
+          } ],
+          "fqn" : "packages/middleware/pub/util/generateUUID",
+          "serviceType" : "service"
+        },
+        "children" : [ ],
+        "type" : "invoke"
+      }, {
+        "id" : "j1_5",
+        "text" : "Invoke",
+        "li_attr" : {
+          "id" : "j1_5"
+        },
+        "a_attr" : {
+          "href" : "#",
+          "id" : "j1_5_anchor"
+        },
+        "state" : {
+          "loaded" : true,
+          "opened" : false,
+          "selected" : false,
+          "disabled" : false
+        },
+        "data" : {
+          "guid" : "63f1f7c0-de54-4d27-8eb5-1ee1590b9e4f",
+          "columnType" : "-1",
+          "transformers" : [ {
+            "op" : "copy",
+            "from" : "/app/Agents/required_web_search",
+            "to" : "/*payload/webSearch",
+            "inTypePath" : "document/document/boolean",
+            "outTypePath" : "document/boolean",
+            "direction" : "in"
+          }, {
+            "op" : "copy",
+            "from" : "/app/Agents/title",
+            "to" : "/*payload/title",
+            "inTypePath" : "document/document/string",
+            "outTypePath" : "document/string",
+            "direction" : "in"
+          }, {
+            "op" : "copy",
+            "from" : "/app/Agents/name",
+            "to" : "/*payload/agentName",
+            "inTypePath" : "document/document/string",
+            "outTypePath" : "document/string",
+            "direction" : "in"
+          }, {
+            "op" : "copy",
+            "from" : "/agentID",
+            "to" : "/*payload/agentID",
+            "inTypePath" : "string",
+            "outTypePath" : "document/string",
+            "direction" : "in"
+          }, {
+            "op" : "copy",
+            "from" : "/LLMKey",
+            "to" : "/*payload/LLMKey",
+            "inTypePath" : "string",
+            "outTypePath" : "document/string",
+            "direction" : "in"
+          }, {
+            "op" : "copy",
+            "from" : "/description",
+            "to" : "/*payload/description",
+            "inTypePath" : "string",
+            "outTypePath" : "document/string",
+            "direction" : "in"
+          } ],
+          "lines" : [ {
+            "inputPath" : "app/Agents/required_web_search",
+            "outputPath" : "*payload/webSearch",
+            "inpJsTree" : "#launching_arrow_jsTree",
+            "outpJsTree" : "#landing_arrow_jsTree_function",
+            "INPath" : "app/Agents/required_web_search",
+            "OUTPath" : "*payload/webSearch",
+            "direction" : "in",
+            "op" : "copy",
+            "line" : 0,
+            "dashedLine" : false,
+            "inType" : "boolean",
+            "outType" : "boolean",
+            "inTypePath" : "document/document/boolean",
+            "outTypePath" : "document/boolean"
+          }, {
+            "inputPath" : "app/Agents/title",
+            "outputPath" : "*payload/title",
+            "inpJsTree" : "#launching_arrow_jsTree",
+            "outpJsTree" : "#landing_arrow_jsTree_function",
+            "INPath" : "app/Agents/title",
+            "OUTPath" : "*payload/title",
+            "direction" : "in",
+            "op" : "copy",
+            "line" : 0,
+            "dashedLine" : false,
+            "inType" : "string",
+            "outType" : "string",
+            "inTypePath" : "document/document/string",
+            "outTypePath" : "document/string"
+          }, {
+            "inputPath" : "app/Agents/name",
+            "outputPath" : "*payload/agentName",
+            "inpJsTree" : "#launching_arrow_jsTree",
+            "outpJsTree" : "#landing_arrow_jsTree_function",
+            "INPath" : "app/Agents/name",
+            "OUTPath" : "*payload/agentName",
+            "direction" : "in",
+            "op" : "copy",
+            "line" : 0,
+            "dashedLine" : false,
+            "inType" : "string",
+            "outType" : "string",
+            "inTypePath" : "document/document/string",
+            "outTypePath" : "document/string"
+          }, {
+            "inputPath" : "agentID",
+            "outputPath" : "*payload/agentID",
+            "inpJsTree" : "#launching_arrow_jsTree",
+            "outpJsTree" : "#landing_arrow_jsTree_function",
+            "INPath" : "agentID",
+            "OUTPath" : "*payload/agentID",
+            "direction" : "in",
+            "op" : "copy",
+            "line" : 0,
+            "dashedLine" : false,
+            "inType" : "string",
+            "outType" : "string",
+            "inTypePath" : "string",
+            "outTypePath" : "document/string"
+          }, {
+            "inputPath" : "LLMKey",
+            "outputPath" : "*payload/LLMKey",
+            "inpJsTree" : "#launching_arrow_jsTree",
+            "outpJsTree" : "#landing_arrow_jsTree_function",
+            "INPath" : "LLMKey",
+            "OUTPath" : "*payload/LLMKey",
+            "direction" : "in",
+            "op" : "copy",
+            "line" : 0,
+            "dashedLine" : false,
+            "inType" : "string",
+            "outType" : "string",
+            "inTypePath" : "string",
+            "outTypePath" : "document/string"
+          }, {
+            "inputPath" : "description",
+            "outputPath" : "*payload/description",
+            "inpJsTree" : "#launching_arrow_jsTree",
+            "outpJsTree" : "#landing_arrow_jsTree_function",
+            "INPath" : "description",
+            "OUTPath" : "*payload/description",
+            "direction" : "in",
+            "op" : "copy",
+            "line" : 0,
+            "dashedLine" : false,
+            "inType" : "string",
+            "outType" : "string",
+            "inTypePath" : "string",
+            "outTypePath" : "document/string"
+          } ],
+          "dropList" : [ {
+            "path" : "description",
+            "typePath" : "string"
+          }, {
+            "path" : "LLMKey",
+            "typePath" : "string"
+          } ],
+          "createList" : [ ],
+          "initiateList" : [ ],
+          "fqn" : "packages/Awareness/dashboard/services/api/createAgent",
+          "serviceType" : "api"
+        },
+        "children" : [ ],
+        "type" : "invoke"
+      }, {
+        "id" : "j1_9",
+        "text" : "Invoke",
+        "li_attr" : {
+          "id" : "j1_9"
+        },
+        "a_attr" : {
+          "href" : "#",
+          "id" : "j1_9_anchor"
+        },
+        "state" : {
+          "loaded" : true,
+          "opened" : false,
+          "selected" : false,
+          "disabled" : false
+        },
+        "data" : {
+          "guid" : "3e442d80-5a74-4139-8976-dc663259e3df",
+          "columnType" : "-1",
+          "transformers" : [ {
+            "op" : "copy",
+            "from" : "/app/Agents/name",
+            "to" : "/key",
+            "inTypePath" : "document/document/string",
+            "outTypePath" : "string",
+            "direction" : "in"
+          }, {
+            "op" : "copy",
+            "from" : "/agentID",
+            "to" : "/textValue",
+            "inTypePath" : "string",
+            "outTypePath" : "string",
+            "direction" : "in"
+          }, {
+            "op" : "copy",
+            "from" : "/map",
+            "to" : "/Agents",
+            "inTypePath" : "javaObject",
+            "outTypePath" : "javaObject",
+            "direction" : "out"
+          }, {
+            "op" : "copy",
+            "from" : "/Agents",
+            "to" : "/map",
+            "inTypePath" : "javaObject",
+            "outTypePath" : "javaObject",
+            "direction" : "in"
+          } ],
+          "lines" : [ {
+            "inputPath" : "app/Agents/name",
+            "outputPath" : "key",
+            "inpJsTree" : "#launching_arrow_jsTree",
+            "outpJsTree" : "#landing_arrow_jsTree_function",
+            "INPath" : "app/Agents/name",
+            "OUTPath" : "key",
+            "direction" : "in",
+            "op" : "copy",
+            "line" : 0,
+            "dashedLine" : false,
+            "inType" : "string",
+            "outType" : "string",
+            "inTypePath" : "document/document/string",
+            "outTypePath" : "string"
+          }, {
+            "inputPath" : "agentID",
+            "outputPath" : "textValue",
+            "inpJsTree" : "#launching_arrow_jsTree",
+            "outpJsTree" : "#landing_arrow_jsTree_function",
+            "INPath" : "agentID",
+            "OUTPath" : "textValue",
+            "direction" : "in",
+            "op" : "copy",
+            "line" : 0,
+            "dashedLine" : false,
+            "inType" : "string",
+            "outType" : "string",
+            "inTypePath" : "string",
+            "outTypePath" : "string"
+          }, {
+            "inputPath" : "map",
+            "outputPath" : "Agents",
+            "inpJsTree" : "#launching_arrow_jsTree_function",
+            "outpJsTree" : "#landing_arrow_jsTree",
+            "INPath" : "map",
+            "OUTPath" : "Agents",
+            "direction" : "out",
+            "op" : "copy",
+            "line" : 0,
+            "dashedLine" : false,
+            "inType" : "javaObject",
+            "outType" : "javaObject",
+            "inTypePath" : "javaObject",
+            "outTypePath" : "javaObject"
+          }, {
+            "inputPath" : "Agents",
+            "outputPath" : "map",
+            "inpJsTree" : "#launching_arrow_jsTree",
+            "outpJsTree" : "#landing_arrow_jsTree_function",
+            "INPath" : "Agents",
+            "OUTPath" : "map",
+            "direction" : "in",
+            "op" : "copy",
+            "line" : 0,
+            "dashedLine" : false,
+            "inType" : "javaObject",
+            "outType" : "javaObject",
+            "inTypePath" : "javaObject",
+            "outTypePath" : "javaObject"
+          } ],
+          "dropList" : [ {
+            "path" : "agentID",
+            "typePath" : "string"
+          } ],
+          "createList" : [ ],
+          "initiateList" : [ ],
+          "fqn" : "packages/middleware/pub/collection/map/Put",
+          "serviceType" : "service"
+        },
+        "children" : [ ],
+        "type" : "invoke"
+      } ],
+      "type" : "foreach"
+    }, {
+      "id" : "j1_11",
+      "text" : "Group",
+      "li_attr" : {
+        "id" : "j1_11"
+      },
+      "a_attr" : {
+        "href" : "javascript:void(0)",
+        "id" : "j1_11_anchor"
+      },
+      "state" : {
+        "loaded" : true,
+        "opened" : true,
+        "selected" : false,
+        "disabled" : false,
+        "hidden" : false
+      },
+      "data" : {
+        "guid" : "4aa1e2cd-5822-4bf1-be7c-f1a59d7aab0b",
+        "columnType" : "-1",
+        "status" : "enabled"
+      },
+      "children" : [ {
+        "id" : "j1_13",
+        "text" : "Invoke",
+        "li_attr" : {
+          "id" : "j1_13"
+        },
+        "a_attr" : {
+          "href" : "#",
+          "id" : "j1_13_anchor"
+        },
+        "state" : {
+          "loaded" : true,
+          "opened" : false,
+          "selected" : true,
+          "disabled" : false
+        },
+        "data" : {
+          "guid" : "c0e37f0d-e574-4adb-b705-5f36eaacf73c",
+          "columnType" : "-1",
+          "transformers" : [ {
+            "op" : "copy",
+            "from" : "/uuid",
+            "to" : "/appId",
+            "inTypePath" : "string",
+            "outTypePath" : "string",
+            "direction" : "out"
+          }, {
+            "op" : "copy",
+            "from" : "/Model/LLMkey",
+            "to" : "/appLLMKey",
+            "inTypePath" : "document/string",
+            "outTypePath" : "string"
+          } ],
+          "lines" : [ {
+            "inputPath" : "uuid",
+            "outputPath" : "appId",
+            "inpJsTree" : "#launching_arrow_jsTree_function",
+            "outpJsTree" : "#landing_arrow_jsTree",
+            "INPath" : "uuid",
+            "OUTPath" : "appId",
+            "direction" : "out",
+            "op" : "copy",
+            "line" : 0,
+            "dashedLine" : false,
+            "inType" : "string",
+            "outType" : "string",
+            "inTypePath" : "string",
+            "outTypePath" : "string"
+          }, {
+            "inputPath" : "Model/LLMkey",
+            "outputPath" : "appLLMKey",
+            "inpJsTree" : "#launching_arrow_jsTree",
+            "outpJsTree" : "#landing_arrow_jsTree",
+            "INPath" : "Model/LLMkey",
+            "OUTPath" : "appLLMKey",
+            "op" : "copy",
+            "line" : 0,
+            "dashedLine" : false,
+            "inType" : "string",
+            "outType" : "string",
+            "inTypePath" : "document/string",
+            "outTypePath" : "string"
+          } ],
+          "dropList" : [ ],
+          "createList" : [ ],
+          "initiateList" : [ {
+            "path" : "appId",
+            "id" : "c9707288-1225-48a0-94a4-ca1188bd0291",
+            "typePath" : "string"
+          }, {
+            "path" : "LLMKey",
+            "id" : "c64e3387-e4f7-41f8-9040-73f3808207a3",
+            "typePath" : "string"
+          } ],
+          "fqn" : "packages/middleware/pub/util/generateUUID",
+          "serviceType" : "service"
+        },
+        "children" : [ ],
+        "type" : "invoke"
+      }, {
+        "id" : "j1_10",
+        "text" : "Invoke",
+        "li_attr" : {
+          "id" : "j1_10"
+        },
+        "a_attr" : {
+          "href" : "#",
+          "id" : "j1_10_anchor"
+        },
+        "state" : {
+          "loaded" : true,
+          "opened" : false,
+          "selected" : false,
+          "disabled" : false
+        },
+        "data" : {
+          "guid" : "a3016a56-1240-4393-9144-86d87ae8bc6c",
+          "columnType" : "-1",
+          "transformers" : [ {
+            "op" : "copy",
+            "from" : "/appId",
+            "to" : "/*payload/appId",
+            "inTypePath" : "string",
+            "outTypePath" : "document/string",
+            "direction" : "in"
+          }, {
+            "op" : "copy",
+            "from" : "/app/app_name",
+            "to" : "/*payload/name",
+            "inTypePath" : "document/string",
+            "outTypePath" : "document/string",
+            "direction" : "in"
+          }, {
+            "op" : "copy",
+            "from" : "/app/description",
+            "to" : "/*payload/description",
+            "inTypePath" : "document/string",
+            "outTypePath" : "document/string",
+            "direction" : "in"
+          }, {
+            "op" : "copy",
+            "from" : "/appLLMKey",
+            "to" : "/*payload/llmKey",
+            "inTypePath" : "string",
+            "outTypePath" : "document/string",
+            "direction" : "in"
+          }, {
+            "op" : "copy",
+            "from" : "/error",
+            "to" : "/appReference/error",
+            "inTypePath" : "string",
+            "outTypePath" : "document/string",
+            "direction" : "out"
+          }, {
+            "op" : "copy",
+            "from" : "/operation",
+            "to" : "/appReference/operation",
+            "inTypePath" : "string",
+            "outTypePath" : "document/string",
+            "direction" : "out"
+          }, {
+            "op" : "copy",
+            "from" : "/status",
+            "to" : "/appReference/status",
+            "inTypePath" : "string",
+            "outTypePath" : "document/string",
+            "direction" : "out"
+          }, {
+            "op" : "copy",
+            "from" : "/appId",
+            "to" : "/appReference/appId",
+            "inTypePath" : "string",
+            "outTypePath" : "document/string",
+            "direction" : "out"
+          }, {
+            "op" : "copy",
+            "from" : "/reportAgentId",
+            "to" : "/appReference/reportAgentId",
+            "inTypePath" : "string",
+            "outTypePath" : "document/string",
+            "direction" : "out"
+          }, {
+            "op" : "copy",
+            "from" : "/terminationAgentId",
+            "to" : "/appReference/terminationAgentId",
+            "inTypePath" : "string",
+            "outTypePath" : "document/string",
+            "direction" : "out"
+          } ],
+          "lines" : [ {
+            "inputPath" : "appId",
+            "outputPath" : "*payload/appId",
+            "inpJsTree" : "#launching_arrow_jsTree",
+            "outpJsTree" : "#landing_arrow_jsTree_function",
+            "INPath" : "appId",
+            "OUTPath" : "*payload/appId",
+            "direction" : "in",
+            "op" : "copy",
+            "line" : 0,
+            "dashedLine" : false,
+            "inType" : "string",
+            "outType" : "string",
+            "inTypePath" : "string",
+            "outTypePath" : "document/string"
+          }, {
+            "inputPath" : "app/app_name",
+            "outputPath" : "*payload/name",
+            "inpJsTree" : "#launching_arrow_jsTree",
+            "outpJsTree" : "#landing_arrow_jsTree_function",
+            "INPath" : "app/app_name",
+            "OUTPath" : "*payload/name",
+            "direction" : "in",
+            "op" : "copy",
+            "line" : 0,
+            "dashedLine" : false,
+            "inType" : "string",
+            "outType" : "string",
+            "inTypePath" : "document/string",
+            "outTypePath" : "document/string"
+          }, {
+            "inputPath" : "app/description",
+            "outputPath" : "*payload/description",
+            "inpJsTree" : "#launching_arrow_jsTree",
+            "outpJsTree" : "#landing_arrow_jsTree_function",
+            "INPath" : "app/description",
+            "OUTPath" : "*payload/description",
+            "direction" : "in",
+            "op" : "copy",
+            "line" : 0,
+            "dashedLine" : false,
+            "inType" : "string",
+            "outType" : "string",
+            "inTypePath" : "document/string",
+            "outTypePath" : "document/string"
+          }, {
+            "inputPath" : "appLLMKey",
+            "outputPath" : "*payload/llmKey",
+            "inpJsTree" : "#launching_arrow_jsTree",
+            "outpJsTree" : "#landing_arrow_jsTree_function",
+            "INPath" : "appLLMKey",
+            "OUTPath" : "*payload/llmKey",
+            "direction" : "in",
+            "op" : "copy",
+            "line" : 0,
+            "dashedLine" : false,
+            "inType" : "string",
+            "outType" : "string",
+            "inTypePath" : "string",
+            "outTypePath" : "document/string"
+          }, {
+            "inputPath" : "error",
+            "outputPath" : "appReference/error",
+            "inpJsTree" : "#launching_arrow_jsTree_function",
+            "outpJsTree" : "#landing_arrow_jsTree",
+            "INPath" : "error",
+            "OUTPath" : "appReference/error",
+            "direction" : "out",
+            "op" : "copy",
+            "line" : 0,
+            "dashedLine" : false,
+            "inType" : "string",
+            "outType" : "string",
+            "inTypePath" : "string",
+            "outTypePath" : "document/string"
+          }, {
+            "inputPath" : "operation",
+            "outputPath" : "appReference/operation",
+            "inpJsTree" : "#launching_arrow_jsTree_function",
+            "outpJsTree" : "#landing_arrow_jsTree",
+            "INPath" : "operation",
+            "OUTPath" : "appReference/operation",
+            "direction" : "out",
+            "op" : "copy",
+            "line" : 0,
+            "dashedLine" : false,
+            "inType" : "string",
+            "outType" : "string",
+            "inTypePath" : "string",
+            "outTypePath" : "document/string"
+          }, {
+            "inputPath" : "status",
+            "outputPath" : "appReference/status",
+            "inpJsTree" : "#launching_arrow_jsTree_function",
+            "outpJsTree" : "#landing_arrow_jsTree",
+            "INPath" : "status",
+            "OUTPath" : "appReference/status",
+            "direction" : "out",
+            "op" : "copy",
+            "line" : 0,
+            "dashedLine" : false,
+            "inType" : "string",
+            "outType" : "string",
+            "inTypePath" : "string",
+            "outTypePath" : "document/string"
+          }, {
+            "inputPath" : "appId",
+            "outputPath" : "appReference/appId",
+            "inpJsTree" : "#launching_arrow_jsTree_function",
+            "outpJsTree" : "#landing_arrow_jsTree",
+            "INPath" : "appId",
+            "OUTPath" : "appReference/appId",
+            "direction" : "out",
+            "op" : "copy",
+            "line" : 0,
+            "dashedLine" : false,
+            "inType" : "string",
+            "outType" : "string",
+            "inTypePath" : "string",
+            "outTypePath" : "document/string"
+          }, {
+            "inputPath" : "reportAgentId",
+            "outputPath" : "appReference/reportAgentId",
+            "inpJsTree" : "#launching_arrow_jsTree_function",
+            "outpJsTree" : "#landing_arrow_jsTree",
+            "INPath" : "reportAgentId",
+            "OUTPath" : "appReference/reportAgentId",
+            "direction" : "out",
+            "op" : "copy",
+            "line" : 0,
+            "dashedLine" : false,
+            "inType" : "string",
+            "outType" : "string",
+            "inTypePath" : "string",
+            "outTypePath" : "document/string"
+          }, {
+            "inputPath" : "terminationAgentId",
+            "outputPath" : "appReference/terminationAgentId",
+            "inpJsTree" : "#launching_arrow_jsTree_function",
+            "outpJsTree" : "#landing_arrow_jsTree",
+            "INPath" : "terminationAgentId",
+            "OUTPath" : "appReference/terminationAgentId",
+            "direction" : "out",
+            "op" : "copy",
+            "line" : 0,
+            "dashedLine" : false,
+            "inType" : "string",
+            "outType" : "string",
+            "inTypePath" : "string",
+            "outTypePath" : "document/string"
+          } ],
+          "dropList" : [ ],
+          "createList" : [ ],
+          "initiateList" : [ {
+            "path" : "status",
+            "id" : "c7ee2c0b-6400-4359-ba2f-58d218059652",
+            "typePath" : "document"
+          } ],
+          "fqn" : "packages/Awareness/dashboard/services/api/apps/upsertApp",
+          "serviceType" : "api"
+        },
+        "children" : [ ],
+        "type" : "invoke"
+      } ],
+      "type" : "group"
+    }, {
+      "id" : "j1_14",
+      "text" : "Group",
+      "li_attr" : {
+        "id" : "j1_14"
+      },
+      "a_attr" : {
+        "href" : "javascript:void(0)",
+        "id" : "j1_14_anchor"
+      },
+      "state" : {
+        "loaded" : true,
+        "opened" : false,
+        "selected" : false,
+        "disabled" : false,
+        "hidden" : false
+      },
+      "data" : {
+        "guid" : "c5a3562c-09f8-46f7-a4a5-9d8262ff504a",
+        "columnType" : "-1",
+        "status" : "enabled"
+      },
+      "children" : [ {
+        "id" : "j1_19",
+        "text" : "Foreach",
+        "li_attr" : {
+          "id" : "j1_19"
+        },
+        "a_attr" : {
+          "href" : "#",
+          "id" : "j1_19_anchor"
+        },
+        "state" : {
+          "loaded" : true,
+          "opened" : true,
+          "selected" : false,
+          "disabled" : false
+        },
+        "data" : {
+          "guid" : "32e1bd48-6fd3-4181-90d8-4610984e345c",
+          "indexVar" : "*index0",
+          "columnType" : "-1",
+          "inArray" : "app/team/members",
+          "outArray" : "memberAgentIDs",
+          "outArrayType" : "string"
+        },
+        "children" : [ {
+          "id" : "j1_20",
+          "text" : "Invoke",
+          "li_attr" : {
+            "id" : "j1_20"
+          },
+          "a_attr" : {
+            "href" : "#",
+            "id" : "j1_20_anchor"
+          },
+          "state" : {
+            "loaded" : true,
+            "opened" : false,
+            "selected" : false,
+            "disabled" : false
+          },
+          "data" : {
+            "guid" : "0da91ce0-48de-4cba-994d-711d242a5c1f",
+            "columnType" : "-1",
+            "lines" : [ {
+              "inputPath" : "app/team/members",
+              "outputPath" : "key",
+              "inpJsTree" : "#launching_arrow_jsTree",
+              "outpJsTree" : "#landing_arrow_jsTree_function",
+              "INPath" : "app/team/members",
+              "OUTPath" : "key",
+              "direction" : "in",
+              "op" : "copy",
+              "line" : 0,
+              "dashedLine" : false,
+              "inType" : "string",
+              "outType" : "string",
+              "inTypePath" : "document/document/string",
+              "outTypePath" : "string"
+            }, {
+              "inputPath" : "Agents",
+              "outputPath" : "map",
+              "inpJsTree" : "#launching_arrow_jsTree",
+              "outpJsTree" : "#landing_arrow_jsTree_function",
+              "INPath" : "Agents",
+              "OUTPath" : "map",
+              "direction" : "in",
+              "op" : "copy",
+              "line" : 0,
+              "dashedLine" : false,
+              "inType" : "javaObject",
+              "outType" : "javaObject",
+              "inTypePath" : "javaObject",
+              "outTypePath" : "javaObject"
+            }, {
+              "inputPath" : "value",
+              "outputPath" : "memberAgentIDs",
+              "inpJsTree" : "#launching_arrow_jsTree_function",
+              "outpJsTree" : "#landing_arrow_jsTree",
+              "INPath" : "value",
+              "OUTPath" : "memberAgentIDs",
+              "direction" : "out",
+              "op" : "copy",
+              "line" : 0,
+              "dashedLine" : false,
+              "inType" : "string",
+              "outType" : "string",
+              "inTypePath" : "javaObject",
+              "outTypePath" : "string"
+            } ],
+            "transformers" : [ {
+              "op" : "copy",
+              "from" : "/app/team/members",
+              "to" : "/key",
+              "inTypePath" : "document/document/string",
+              "outTypePath" : "string",
+              "direction" : "in"
+            }, {
+              "op" : "copy",
+              "from" : "/Agents",
+              "to" : "/map",
+              "inTypePath" : "javaObject",
+              "outTypePath" : "javaObject",
+              "direction" : "in"
+            }, {
+              "op" : "copy",
+              "from" : "/value",
+              "to" : "/memberAgentIDs",
+              "inTypePath" : "javaObject",
+              "outTypePath" : "string",
+              "direction" : "out"
+            } ],
+            "fqn" : "packages/middleware/pub/collection/map/Get",
+            "serviceType" : "service",
+            "dropList" : [ ],
+            "createList" : [ ],
+            "initiateList" : [ ]
+          },
+          "children" : [ ],
+          "type" : "invoke"
+        } ],
+        "type" : "foreach"
+      }, {
+        "id" : "j1_16",
+        "text" : "Invoke",
+        "li_attr" : {
+          "id" : "j1_16"
+        },
+        "a_attr" : {
+          "href" : "#",
+          "id" : "j1_16_anchor"
+        },
+        "state" : {
+          "loaded" : true,
+          "opened" : false,
+          "selected" : false,
+          "disabled" : false
+        },
+        "data" : {
+          "guid" : "e880c3e9-5cf7-421c-83ea-c9178a962634",
+          "columnType" : "-1",
+          "transformers" : [ {
+            "op" : "copy",
+            "from" : "/app/team/manager",
+            "to" : "/key",
+            "inTypePath" : "document/document/string",
+            "outTypePath" : "string",
+            "direction" : "in"
+          }, {
+            "op" : "copy",
+            "from" : "/Agents",
+            "to" : "/map",
+            "inTypePath" : "javaObject",
+            "outTypePath" : "javaObject",
+            "direction" : "in"
+          }, {
+            "op" : "copy",
+            "from" : "/value",
+            "to" : "/managerId",
+            "inTypePath" : "javaObject",
+            "outTypePath" : "javaObject",
+            "direction" : "out"
+          } ],
+          "lines" : [ {
+            "inputPath" : "app/team/manager",
+            "outputPath" : "key",
+            "inpJsTree" : "#launching_arrow_jsTree",
+            "outpJsTree" : "#landing_arrow_jsTree_function",
+            "INPath" : "app/team/manager",
+            "OUTPath" : "key",
+            "direction" : "in",
+            "op" : "copy",
+            "line" : 0,
+            "dashedLine" : false,
+            "inType" : "string",
+            "outType" : "string",
+            "inTypePath" : "document/document/string",
+            "outTypePath" : "string"
+          }, {
+            "inputPath" : "Agents",
+            "outputPath" : "map",
+            "inpJsTree" : "#launching_arrow_jsTree",
+            "outpJsTree" : "#landing_arrow_jsTree_function",
+            "INPath" : "Agents",
+            "OUTPath" : "map",
+            "direction" : "in",
+            "op" : "copy",
+            "line" : 0,
+            "dashedLine" : false,
+            "inType" : "javaObject",
+            "outType" : "javaObject",
+            "inTypePath" : "javaObject",
+            "outTypePath" : "javaObject"
+          }, {
+            "inputPath" : "value",
+            "outputPath" : "managerId",
+            "inpJsTree" : "#launching_arrow_jsTree_function",
+            "outpJsTree" : "#landing_arrow_jsTree",
+            "INPath" : "value",
+            "OUTPath" : "managerId",
+            "direction" : "out",
+            "op" : "copy",
+            "line" : 0,
+            "dashedLine" : false,
+            "inType" : "string",
+            "outType" : "string",
+            "inTypePath" : "javaObject",
+            "outTypePath" : "javaObject"
+          } ],
+          "dropList" : [ ],
+          "createList" : [ ],
+          "initiateList" : [ {
+            "path" : "managerId",
+            "id" : "b6e75bfe-607e-43f4-8656-753051bb6af5",
+            "typePath" : "string"
+          } ],
+          "fqn" : "packages/middleware/pub/collection/map/Get",
+          "serviceType" : "service",
+          "comment" : "Extract Manager ID"
+        },
+        "children" : [ ],
+        "type" : "invoke"
+      }, {
+        "id" : "j1_15",
+        "text" : "Invoke",
+        "li_attr" : {
+          "id" : "j1_15"
+        },
+        "a_attr" : {
+          "href" : "#",
+          "id" : "j1_15_anchor"
+        },
+        "state" : {
+          "loaded" : true,
+          "opened" : false,
+          "selected" : false,
+          "disabled" : false
+        },
+        "data" : {
+          "guid" : "46ba8d3b-ab3a-474f-8fb4-9de46a88f921",
+          "columnType" : "-1",
+          "lines" : [ {
+            "inputPath" : "managerId",
+            "outputPath" : "*payload/managerId",
+            "inpJsTree" : "#launching_arrow_jsTree",
+            "outpJsTree" : "#landing_arrow_jsTree_function",
+            "INPath" : "managerId",
+            "OUTPath" : "*payload/managerId",
+            "direction" : "in",
+            "op" : "copy",
+            "line" : 0,
+            "dashedLine" : false,
+            "inType" : "string",
+            "outType" : "string",
+            "inTypePath" : "javaObject",
+            "outTypePath" : "document/string"
+          }, {
+            "inputPath" : "appId",
+            "outputPath" : "*payload/appId",
+            "inpJsTree" : "#launching_arrow_jsTree",
+            "outpJsTree" : "#landing_arrow_jsTree_function",
+            "INPath" : "appId",
+            "OUTPath" : "*payload/appId",
+            "direction" : "in",
+            "op" : "copy",
+            "line" : 0,
+            "dashedLine" : false,
+            "inType" : "string",
+            "outType" : "string",
+            "inTypePath" : "string",
+            "outTypePath" : "document/string"
+          }, {
+            "inputPath" : "app/team/description",
+            "outputPath" : "*payload/requirement",
+            "inpJsTree" : "#launching_arrow_jsTree",
+            "outpJsTree" : "#landing_arrow_jsTree_function",
+            "INPath" : "app/team/description",
+            "OUTPath" : "*payload/requirement",
+            "direction" : "in",
+            "op" : "copy",
+            "line" : 0,
+            "dashedLine" : false,
+            "inType" : "string",
+            "outType" : "string",
+            "inTypePath" : "document/document/string",
+            "outTypePath" : "document/string"
+          }, {
+            "inputPath" : "app/team/name",
+            "outputPath" : "*payload/name",
+            "inpJsTree" : "#launching_arrow_jsTree",
+            "outpJsTree" : "#landing_arrow_jsTree_function",
+            "INPath" : "app/team/name",
+            "OUTPath" : "*payload/name",
+            "direction" : "in",
+            "op" : "copy",
+            "line" : 0,
+            "dashedLine" : false,
+            "inType" : "string",
+            "outType" : "string",
+            "inTypePath" : "document/document/string",
+            "outTypePath" : "document/string"
+          }, {
+            "inputPath" : "memberAgentIDs",
+            "outputPath" : "*payload/agents",
+            "inpJsTree" : "#launching_arrow_jsTree",
+            "outpJsTree" : "#landing_arrow_jsTree_function",
+            "INPath" : "memberAgentIDs",
+            "OUTPath" : "*payload/agents",
+            "direction" : "in",
+            "op" : "copy",
+            "line" : 0,
+            "dashedLine" : false,
+            "inType" : "stringList",
+            "outType" : "stringList",
+            "inTypePath" : "stringList",
+            "outTypePath" : "document/document"
+          }, {
+            "inputPath" : "error",
+            "outputPath" : "teamReference/error",
+            "inpJsTree" : "#launching_arrow_jsTree_function",
+            "outpJsTree" : "#landing_arrow_jsTree",
+            "INPath" : "error",
+            "OUTPath" : "teamReference/error",
+            "direction" : "out",
+            "op" : "copy",
+            "line" : 0,
+            "dashedLine" : false,
+            "inType" : "string",
+            "outType" : "string",
+            "inTypePath" : "string",
+            "outTypePath" : "document/string"
+          }, {
+            "inputPath" : "operation",
+            "outputPath" : "teamReference/operation",
+            "inpJsTree" : "#launching_arrow_jsTree_function",
+            "outpJsTree" : "#landing_arrow_jsTree",
+            "INPath" : "operation",
+            "OUTPath" : "teamReference/operation",
+            "direction" : "out",
+            "op" : "copy",
+            "line" : 0,
+            "dashedLine" : false,
+            "inType" : "string",
+            "outType" : "string",
+            "inTypePath" : "string",
+            "outTypePath" : "document/string"
+          }, {
+            "inputPath" : "status",
+            "outputPath" : "teamReference/status",
+            "inpJsTree" : "#launching_arrow_jsTree_function",
+            "outpJsTree" : "#landing_arrow_jsTree",
+            "INPath" : "status",
+            "OUTPath" : "teamReference/status",
+            "direction" : "out",
+            "op" : "copy",
+            "line" : 0,
+            "dashedLine" : false,
+            "inType" : "string",
+            "outType" : "string",
+            "inTypePath" : "string",
+            "outTypePath" : "document/string"
+          }, {
+            "inputPath" : "teamID",
+            "outputPath" : "teamReference/teamID",
+            "inpJsTree" : "#launching_arrow_jsTree_function",
+            "outpJsTree" : "#landing_arrow_jsTree",
+            "INPath" : "teamID",
+            "OUTPath" : "teamReference/teamID",
+            "direction" : "out",
+            "op" : "copy",
+            "line" : 0,
+            "dashedLine" : false,
+            "inType" : "string",
+            "outType" : "string",
+            "inTypePath" : "string",
+            "outTypePath" : "document/string"
+          } ],
+          "transformers" : [ {
+            "op" : "copy",
+            "from" : "/managerId",
+            "to" : "/*payload/managerId",
+            "inTypePath" : "javaObject",
+            "outTypePath" : "document/string",
+            "direction" : "in"
+          }, {
+            "op" : "copy",
+            "from" : "/appId",
+            "to" : "/*payload/appId",
+            "inTypePath" : "string",
+            "outTypePath" : "document/string",
+            "direction" : "in"
+          }, {
+            "op" : "copy",
+            "from" : "/app/team/description",
+            "to" : "/*payload/requirement",
+            "inTypePath" : "document/document/string",
+            "outTypePath" : "document/string",
+            "direction" : "in"
+          }, {
+            "op" : "copy",
+            "from" : "/app/team/name",
+            "to" : "/*payload/name",
+            "inTypePath" : "document/document/string",
+            "outTypePath" : "document/string",
+            "direction" : "in"
+          }, {
+            "op" : "copy",
+            "from" : "/memberAgentIDs",
+            "to" : "/*payload/agents",
+            "inTypePath" : "stringList",
+            "outTypePath" : "document/document",
+            "direction" : "in"
+          }, {
+            "op" : "copy",
+            "from" : "/error",
+            "to" : "/teamReference/error",
+            "inTypePath" : "string",
+            "outTypePath" : "document/string",
+            "direction" : "out"
+          }, {
+            "op" : "copy",
+            "from" : "/operation",
+            "to" : "/teamReference/operation",
+            "inTypePath" : "string",
+            "outTypePath" : "document/string",
+            "direction" : "out"
+          }, {
+            "op" : "copy",
+            "from" : "/status",
+            "to" : "/teamReference/status",
+            "inTypePath" : "string",
+            "outTypePath" : "document/string",
+            "direction" : "out"
+          }, {
+            "op" : "copy",
+            "from" : "/teamID",
+            "to" : "/teamReference/teamID",
+            "inTypePath" : "string",
+            "outTypePath" : "document/string",
+            "direction" : "out"
+          } ],
+          "fqn" : "packages/Awareness/dashboard/services/api/teams/upsertTeam",
+          "serviceType" : "api",
+          "dropList" : [ ],
+          "createList" : [ ],
+          "initiateList" : [ {
+            "path" : "teamReference",
+            "id" : "01945d6a-0ad5-416d-b5b2-6ed60b6bd049",
+            "typePath" : "document"
+          } ]
+        },
+        "children" : [ ],
+        "type" : "invoke"
+      } ],
+      "type" : "group"
+    } ],
+    "api_info" : {
+      "title" : "",
+      "description" : ""
+    },
+    "lockedByUser" : "admin"
+  },
+  "consumers" : "",
+  "developers" : "administrators",
+  "enableServiceDocumentValidation" : false,
+  "created_on" : "1777903840501",
+  "modified_on" : 1777903840501
+}

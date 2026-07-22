@@ -1,0 +1,150 @@
+
+<html style="min-height: 100% !important;">
+<head>
+	<!-- Required meta tags -->
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+	<base href="/"><script src="env.js"></script>
+	<script>
+		window.ENV = window.env || {};
+	</script>
+
+	<link rel="shortcut icon" href="middleware/pub/server/ui/assets/img/favicon.ico" type="image/x-icon" />
+	<!-- Bootstrap CSS -->
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+	<link rel="stylesheet" href="middleware/pub/server/ui/assets/css/bootstrap.min.css">
+	<!-- Style -->
+	<link rel="stylesheet" href="middleware/pub/server/ui/assets/css/login.css">
+	<link rel="stylesheet" href="middleware/pub/server/ui/assets/css/dashboard.css">
+	<link rel="stylesheet" href="middleware/pub/server/ui/assets/img/icon_apple.png">
+
+	<title>Syncloop | Signin</title>
+
+
+	<script>
+		function getTenant(){
+			var pathName=window.location.pathname;
+			var pathTokens = pathName.split("/");
+			if(pathTokens[0]=="tenant")
+				return pathTokens[1];
+			return "default";
+		}
+		function openWorkspace(authServer){
+			location.href = location.origin.replaceAll("ekamw.org", "syncloop.com") + '/tenant/'+getTenant()+'/'+authServer+'/login';
+		}
+	</script>
+</head>
+<body>
+<script type="syncloop/body-analytics"></script>
+
+<div id="toasts"></div>
+
+<div class="d-lg-flex half">
+	<div class="bg order-1 order-md-2 eka_img"></div>
+	<div class="contents order-2 order-md-1">
+
+		<div class="container login-style">
+			<div class="login_logo"><img src="middleware/pub/server/ui/assets/img/syncloop-blue-logo.svg" alt="Image"></div>
+			<div class="row align-items-center justify-content-center">
+				<div class="col-md-9">
+
+					<!--<button data-type="error">Error</button>
+					<button data-type="successful">Sucessfull</button>
+					<button data-type="info">Info</button>
+					<button data-type="warning">Warning</button>-->
+
+					<h3>Log in with Syncloop</h3>
+
+					<div id="login_error" style="display: none; text-align: center;padding: 20px;    font-size: 14px;    border: 1px solid black;    margin-bottom: 10px;background: antiquewhite;">
+						Invalid Username & Password
+					</div>
+
+					<form onsubmit="return false;">
+					<div class="form-group first spr">
+							<input type="text" placeholder="Type your email" class="form-control icon1" name="username" id="username"/>
+							<i class="" aria-hidden="true"><img src="middleware/pub/server/ui/assets/img/icon_email.svg"></i>
+						</div>
+						<div class="form-group last spr">
+							<input id="password" type="password" placeholder="Type your password" class="form-control" name="password" />
+							<i class="us-p" aria-hidden="true"><img src="middleware/pub/server/ui/assets/img/icon_lock.svg"></i>
+							<i class="bi bi-eye-slash" id="togglePassword"></i>
+						</div>
+						<button type="button" class="btn btn-gry" onclick="tryLogin(this)">Log In</button>
+						<div class="sign_grid">
+							<!--<div class="">New to Syncloop? <a href="signup.html?utm_source=Workspace&utm_medium=signin-page&utm_id=signup-link" class="">Sign up</a></div>
+							   <a href="reset-password.html" class="">Reset password?</a>-->
+						</div>
+					</form>
+					<div class="lgn_footer">
+						<div class="join_slack"><span><img src="middleware/pub/server/ui/assets/img/discord2.png" alt="">Join us on <a target="_blank" href="https://discord.com/invite/EnazFJpGQs?">Discord</a></span></div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+</body>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+<script type="text/javascript" src="middleware/pub/server/ui/javascript/middleware.js"></script>
+<script src="middleware/pub/server/ui/assets/js/custom-dashboard.js"></script>
+<script type="text/javascript">
+	const togglePassword = document.querySelector("#togglePassword");
+	const password = document.querySelector("#password");
+
+	togglePassword.addEventListener("click", function () {
+		// toggle the type attribute
+		const type = password.getAttribute("type") === "password" ? "text" : "password";
+		password.setAttribute("type", type);
+
+		// toggle the icon
+		this.classList.toggle("bi-eye");
+	});
+
+</script>
+<script>
+	function tryLogin(ref) {
+		$(ref).addClass("disabled").text("Logging...");
+
+		$.ajax({
+			url: window.ENV.API_BASE_URL + "/jwt/basic",
+			method: "GET",
+			headers: {
+				"Authorization":
+					"Basic " + btoa(
+						$("#username").val() + ":" + $("#password").val()
+					)
+			},
+			success: function (result) {
+				$(ref).removeClass("disabled").text("Log In");
+
+				const resp = JSON.parse(result);
+
+				localStorage.setItem("AuthToken", resp.token);
+				localStorage.setItem("tenant", resp.tenant || "default");
+
+				location.href =
+					"middleware/pub/server/ui/workspace/web/dashboard.html";
+			},
+			error: function () {
+				$(ref).removeClass("disabled");
+				$(ref).text("Log In");
+				$.toast('<div class="custom-toast"><span class="tst red"><svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" viewBox="0 0 30 30"><defs><style>.cls-1 {fill: #fff;fill-rule: evenodd;}</style></defs><g id="notification_error"><path class="cls-in" d="M275.5,28A12.5,12.5,0,1,1,288,15.5,12.514,12.514,0,0,1,275.5,28Zm0-24A11.5,11.5,0,1,0,287,15.5,11.513,11.513,0,0,0,275.5,4Zm-0.473,13.867-2.241,2.241a1.339,1.339,0,0,1-1.894-1.894l2.241-2.241a0.669,0.669,0,0,0,0-.947l-2.241-2.241a1.339,1.339,0,0,1,1.894-1.894l2.241,2.241a0.67,0.67,0,0,0,.947,0l2.24-2.241a1.339,1.339,0,0,1,1.894,1.894l-2.241,2.241a0.671,0.671,0,0,0,0,.947l2.241,2.241a1.339,1.339,0,0,1-1.894,1.894l-2.24-2.241a0.67,0.67,0,0,0-.947,0h0Z" transform="translate(-260)"/></g></svg></span><div class="t_info"><h5>Oops!</h5><span>Enter the correct username and password to log in</span></div></div>');
+			}
+		});
+	}
+
+	document.addEventListener("keydown", function (event) {
+		if (event.key === "Enter") {
+			const active = document.activeElement;
+			if (active && (active.id === "username" || active.id === "password")) {
+				event.preventDefault();
+				const btn = document.querySelector(".btn.btn-gry");
+				if (!btn.classList.contains("disabled")) {
+					tryLogin(btn);
+				}
+			}
+		}
+	});
+</script>
+</html>

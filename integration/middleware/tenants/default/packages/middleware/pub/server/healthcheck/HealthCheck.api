@@ -1,0 +1,312 @@
+{
+  "latest" : {
+    "createdTS" : "",
+    "input" : [ ],
+    "output" : [ {
+      "id" : "j3_1",
+      "text" : "status",
+      "li_attr" : {
+        "id" : "j3_1"
+      },
+      "a_attr" : {
+        "href" : "#",
+        "id" : "j3_1_anchor"
+      },
+      "state" : {
+        "loaded" : true,
+        "opened" : false,
+        "selected" : false,
+        "disabled" : false
+      },
+      "data" : { },
+      "children" : [ ],
+      "type" : "boolean"
+    }, {
+      "id" : "j3_2",
+      "text" : "numberOfTenantsPending",
+      "li_attr" : {
+        "id" : "j3_2"
+      },
+      "a_attr" : {
+        "href" : "#",
+        "id" : "j3_2_anchor"
+      },
+      "state" : {
+        "loaded" : true,
+        "opened" : false,
+        "selected" : false,
+        "disabled" : false
+      },
+      "data" : { },
+      "children" : [ ],
+      "type" : "integer"
+    } ],
+    "api" : [ {
+      "id" : "j1_1",
+      "text" : "Invoke",
+      "li_attr" : {
+        "id" : "j1_1"
+      },
+      "a_attr" : {
+        "href" : "#",
+        "id" : "j1_1_anchor"
+      },
+      "state" : {
+        "loaded" : true,
+        "opened" : false,
+        "selected" : true,
+        "disabled" : false
+      },
+      "data" : {
+        "guid" : "bf9cb38c-69ac-481a-8898-65562d928c95",
+        "columnType" : "-1",
+        "transformers" : [ {
+          "op" : "copy",
+          "from" : "/numberOfTenantsPending",
+          "to" : "/numberOfTenantsPending",
+          "inTypePath" : "integer",
+          "outTypePath" : "integer",
+          "direction" : "out"
+        } ],
+        "lines" : [ {
+          "inputPath" : "numberOfTenantsPending",
+          "outputPath" : "numberOfTenantsPending",
+          "inpJsTree" : "#launching_arrow_jsTree_function",
+          "outpJsTree" : "#landing_arrow_jsTree",
+          "INPath" : "numberOfTenantsPending",
+          "OUTPath" : "numberOfTenantsPending",
+          "direction" : "out",
+          "op" : "copy",
+          "line" : 0,
+          "dashedLine" : false,
+          "inType" : "integer",
+          "outType" : "integer",
+          "inTypePath" : "integer",
+          "outTypePath" : "integer"
+        } ],
+        "dropList" : [ ],
+        "createList" : [ ],
+        "initiateList" : [ ],
+        "fqn" : "packages/middleware/pub/server/healthcheck/HealthCheckService",
+        "serviceType" : "service"
+      },
+      "children" : [ ],
+      "type" : "invoke"
+    }, {
+      "id" : "j1_2",
+      "text" : "Ifelse",
+      "li_attr" : {
+        "id" : "j1_2"
+      },
+      "a_attr" : {
+        "href" : "#",
+        "id" : "j1_2_anchor"
+      },
+      "state" : {
+        "loaded" : true,
+        "opened" : true,
+        "selected" : false,
+        "disabled" : false
+      },
+      "data" : {
+        "guid" : "59e0a43b-b9b4-4c5d-a0df-3a9ef0827eaf",
+        "columnType" : "-1"
+      },
+      "children" : [ {
+        "id" : "j1_3",
+        "text" : "CONDITION",
+        "li_attr" : {
+          "id" : "j1_3"
+        },
+        "a_attr" : {
+          "href" : "#",
+          "id" : "j1_3_anchor"
+        },
+        "state" : {
+          "loaded" : true,
+          "opened" : true,
+          "selected" : false,
+          "disabled" : false
+        },
+        "data" : {
+          "guid" : "7b43854b-5fe3-4ab5-9eae-8dcc8bc9f167",
+          "columnType" : "-1",
+          "ifcondition" : "numberOfTenantsPending > 0"
+        },
+        "children" : [ {
+          "id" : "j1_6",
+          "text" : "Transformer",
+          "li_attr" : {
+            "id" : "j1_6"
+          },
+          "a_attr" : {
+            "href" : "#",
+            "id" : "j1_6_anchor"
+          },
+          "state" : {
+            "loaded" : true,
+            "opened" : false,
+            "selected" : false,
+            "disabled" : false
+          },
+          "data" : {
+            "guid" : "153d8f19-aca0-42a8-9754-a411bc822561",
+            "columnType" : "-1",
+            "transformers" : [ ],
+            "lines" : [ ],
+            "dropList" : [ ],
+            "createList" : [ {
+              "path" : "status",
+              "value" : "false",
+              "id" : "48561d4f-a3a1-4eee-824d-e5dc42ec3987",
+              "typePath" : "boolean"
+            }, {
+              "path" : "statusCode",
+              "value" : "404",
+              "id" : "cfe0b692-d214-4511-90f1-9718b2ae5421",
+              "typePath" : "string"
+            } ],
+            "initiateList" : [ {
+              "path" : "status",
+              "id" : "c0261b95-7e3e-4975-bdf0-fca90dfd5056",
+              "typePath" : "boolean"
+            }, {
+              "path" : "statusCode",
+              "id" : "651407aa-ff41-4cab-a8d4-90c881ff740d",
+              "typePath" : "string"
+            } ]
+          },
+          "children" : [ ],
+          "type" : "transformer"
+        }, {
+          "id" : "j1_7",
+          "text" : "Invoke",
+          "li_attr" : {
+            "id" : "j1_7"
+          },
+          "a_attr" : {
+            "href" : "#",
+            "id" : "j1_7_anchor"
+          },
+          "state" : {
+            "loaded" : true,
+            "opened" : false,
+            "selected" : false,
+            "disabled" : false
+          },
+          "data" : {
+            "guid" : "20f5c761-fc01-46a5-87e5-19835c5da35d",
+            "columnType" : "-1",
+            "transformers" : [ {
+              "op" : "copy",
+              "from" : "/statusCode",
+              "to" : "/statusCode",
+              "inTypePath" : "string",
+              "outTypePath" : "string",
+              "direction" : "in"
+            } ],
+            "lines" : [ {
+              "inputPath" : "statusCode",
+              "outputPath" : "statusCode",
+              "inpJsTree" : "#launching_arrow_jsTree",
+              "outpJsTree" : "#landing_arrow_jsTree_function",
+              "INPath" : "statusCode",
+              "OUTPath" : "statusCode",
+              "direction" : "in",
+              "op" : "copy",
+              "line" : 0,
+              "dashedLine" : false,
+              "inType" : "string",
+              "outType" : "string",
+              "inTypePath" : "string",
+              "outTypePath" : "string"
+            } ],
+            "dropList" : [ ],
+            "createList" : [ ],
+            "initiateList" : [ ],
+            "fqn" : "packages/middleware/pub/client/utils/responseHeader",
+            "serviceType" : "service"
+          },
+          "children" : [ ],
+          "type" : "invoke"
+        } ],
+        "type" : "sequence"
+      }, {
+        "id" : "j1_4",
+        "text" : "CONDITION",
+        "li_attr" : {
+          "id" : "j1_4"
+        },
+        "a_attr" : {
+          "href" : "#",
+          "id" : "j1_4_anchor"
+        },
+        "state" : {
+          "loaded" : true,
+          "opened" : true,
+          "selected" : false,
+          "disabled" : false
+        },
+        "data" : {
+          "guid" : "c59d289b-ce25-463f-a326-36f085938ded",
+          "columnType" : "-1",
+          "ifcondition" : "#else"
+        },
+        "children" : [ {
+          "id" : "j1_5",
+          "text" : "Transformer",
+          "li_attr" : {
+            "id" : "j1_5"
+          },
+          "a_attr" : {
+            "href" : "#",
+            "id" : "j1_5_anchor"
+          },
+          "state" : {
+            "loaded" : true,
+            "opened" : false,
+            "selected" : false,
+            "disabled" : false
+          },
+          "data" : {
+            "guid" : "deb0cf42-bb79-4ae4-9dd2-c4abdafb706d",
+            "columnType" : "-1",
+            "transformers" : [ ],
+            "lines" : [ ],
+            "dropList" : [ ],
+            "createList" : [ {
+              "path" : "status",
+              "value" : "true",
+              "id" : "5eabd3d7-4730-43f3-b511-b9eac4ff3644",
+              "typePath" : "boolean"
+            }, {
+              "path" : "statusCode",
+              "value" : "404",
+              "id" : "1b44520b-635a-407f-a542-0f43facd0c70",
+              "typePath" : "string"
+            } ],
+            "initiateList" : [ {
+              "path" : "statusCode",
+              "id" : "c7d73158-4281-4b43-ae98-a1a5a48ca982",
+              "typePath" : "string"
+            } ]
+          },
+          "children" : [ ],
+          "type" : "transformer"
+        } ],
+        "type" : "sequence"
+      } ],
+      "type" : "ifelse"
+    } ],
+    "api_info" : {
+      "title" : "",
+      "description" : ""
+    },
+    "lockedByUser" : "admin"
+  },
+  "consumers" : "guest",
+  "developers" : "administrators",
+  "enableServiceDocumentValidation" : false,
+  "created_on" : "1737137302088",
+  "modified_on" : 1737137302088
+}

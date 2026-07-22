@@ -1,0 +1,50 @@
+{
+  "input" : [ {
+    "id" : "j1_1",
+    "text" : "text",
+    "li_attr" : {
+      "id" : "j1_1"
+    },
+    "a_attr" : {
+      "href" : "#",
+      "id" : "j1_1_anchor"
+    },
+    "state" : {
+      "loaded" : true,
+      "opened" : false,
+      "selected" : false,
+      "disabled" : false
+    },
+    "data" : { },
+    "children" : [ ],
+    "type" : "string"
+  } ],
+  "output" : [ {
+    "id" : "j2_1",
+    "text" : "result",
+    "li_attr" : {
+      "id" : "j2_1"
+    },
+    "a_attr" : {
+      "href" : "#",
+      "id" : "j2_1_anchor"
+    },
+    "state" : {
+      "loaded" : true,
+      "opened" : false,
+      "selected" : false,
+      "disabled" : false
+    },
+    "data" : { },
+    "children" : [ ],
+    "type" : "boolean"
+  } ],
+  "package" : "cGFja2FnZSBwYWNrYWdlcy5taWRkbGV3YXJlLnB1Yi5zdHJpbmc7",
+  "imports" : "aW1wb3J0IGNvbS5la2EubWlkZGxld2FyZS5zZXJ2aWNlLkRhdGFQaXBlbGluZTsKaW1wb3J0IGNvbS5la2EubWlkZGxld2FyZS50ZW1wbGF0ZS5TbmlwcGV0RXhjZXB0aW9uOwppbXBvcnQgb3JnLmFwYWNoZS5jb21tb25zLmxhbmczLlN0cmluZ1V0aWxzOw==",
+  "main" : "CnRyeSB7CiAgCQkJZGF0YVBpcGVsaW5lLmFwcExvZygiT1BFUkFUSU9OIiwgImlzQWxwYW51bWVyaWMiKTsKICAgICAgICAgICAgU3RyaW5nIHRleHQgPSBkYXRhUGlwZWxpbmUuZ2V0U3RyaW5nKCJ0ZXh0Iik7CiAgCQkJZGF0YVBpcGVsaW5lLmFwcExvZygiVEVYVCIsIHRleHQpOwogICAgICAgICAgICBib29sZWFuIHJlc3VsdDsKCiAgICAgICAgICAgIGlmIChTdHJpbmdVdGlscy5pc0JsYW5rKHRleHQpKSB7CiAgICAgICAgICAgICAgICByZXN1bHQgPSBmYWxzZTsKICAgICAgICAgICAgICAJZGF0YVBpcGVsaW5lLmFwcExvZygiVEVYVF9NQVRDSEVEIiwgImZhbHNlIik7CiAgICAgICAgICAgIH0gZWxzZSB7CiAgICAgICAgICAgICAgICByZXN1bHQgPSB0ZXh0Lm1hdGNoZXMoIl5bYS16QS1aMC05XSokIik7CiAgICAgICAgICAgICAgCWRhdGFQaXBlbGluZS5hcHBMb2coIlRFWFRfTUFUQ0hFRCIsICJ0cnVlIiApOwogICAgICAgICAgICB9CiAgICAgICAgICAgIGRhdGFQaXBlbGluZS5wdXQoInJlc3VsdCIsIHJlc3VsdCk7CiAgCQkJZGF0YVBpcGVsaW5lLmFwcExvZygiUkVTVUxUIiwgInJlc3VsdDogIiArIHJlc3VsdCk7CgogICAgICAgIH0gY2F0Y2ggKEV4Y2VwdGlvbiBlKSB7CiAgICAgICAgICAgIGRhdGFQaXBlbGluZS5jbGVhcigpOwogICAgICAgICAgICBkYXRhUGlwZWxpbmUucHV0KCJlcnJvciIsZS5nZXRNZXNzYWdlKCkpOwogIAkJCWRhdGFQaXBlbGluZS5hcHBMb2coIlNFUlZJQ0VfRVJST1IiLGUuZ2V0TWVzc2FnZSgpKTsKICAgICAgICAgICAgdGhyb3cgbmV3IFNuaXBwZXRFeGNlcHRpb24oZGF0YVBpcGVsaW5lLCJTbmlwcGV0IGV4Y2VwdGlvbiIsIG5ldyBFeGNlcHRpb24oZSkpOwogICAgICAgIH0=",
+  "staticWorkspace" : "",
+  "version" : "v1",
+  "consumers" : "",
+  "developers" : "developers",
+  "lockedByUser" : "admin"
+}

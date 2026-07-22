@@ -1,0 +1,758 @@
+{
+  "latest" : {
+    "createdTS" : "",
+    "input" : [ {
+      "id" : "j2_1",
+      "text" : "id",
+      "icon" : null,
+      "li_attr" : {
+        "id" : "j2_1"
+      },
+      "a_attr" : {
+        "href" : "#",
+        "id" : "j2_1_anchor"
+      },
+      "state" : {
+        "loaded" : true,
+        "opened" : false,
+        "selected" : false,
+        "disabled" : false
+      },
+      "data" : { },
+      "children" : [ ],
+      "type" : "integer"
+    } ],
+    "output" : [ {
+      "id" : "j3_1",
+      "text" : "DeleteStackResponse",
+      "icon" : null,
+      "li_attr" : {
+        "id" : "j3_1"
+      },
+      "a_attr" : {
+        "href" : "#",
+        "id" : "j3_1_anchor"
+      },
+      "state" : {
+        "loaded" : true,
+        "opened" : false,
+        "selected" : false,
+        "disabled" : false
+      },
+      "data" : { },
+      "children" : [ ],
+      "type" : "document"
+    }, {
+      "id" : "j3_2",
+      "text" : "error",
+      "icon" : null,
+      "li_attr" : {
+        "id" : "j3_2"
+      },
+      "a_attr" : {
+        "href" : "#",
+        "id" : "j3_2_anchor"
+      },
+      "state" : {
+        "loaded" : true,
+        "opened" : false,
+        "selected" : false,
+        "disabled" : false
+      },
+      "data" : { },
+      "children" : [ ],
+      "type" : "string"
+    }, {
+      "id" : "j3_3",
+      "text" : "status",
+      "icon" : null,
+      "li_attr" : {
+        "id" : "j3_3"
+      },
+      "a_attr" : {
+        "href" : "#",
+        "id" : "j3_3_anchor"
+      },
+      "state" : {
+        "loaded" : true,
+        "opened" : false,
+        "selected" : false,
+        "disabled" : false
+      },
+      "data" : { },
+      "children" : [ ],
+      "type" : "boolean"
+    } ],
+    "lockedByUser" : "admin",
+    "api" : [ {
+      "id" : "j1_1",
+      "text" : "Invoke",
+      "icon" : null,
+      "li_attr" : {
+        "id" : "j1_1"
+      },
+      "a_attr" : {
+        "href" : "javascript:void(0)",
+        "id" : "j1_1_anchor"
+      },
+      "state" : {
+        "loaded" : true,
+        "opened" : false,
+        "selected" : false,
+        "disabled" : false
+      },
+      "data" : {
+        "transformers" : [ {
+          "op" : "copy",
+          "from" : "/outputDocList/0/id",
+          "to" : "/environment/id",
+          "inTypePath" : "documentList/integer",
+          "outTypePath" : "document/integer",
+          "direction" : "out"
+        }, {
+          "op" : "copy",
+          "from" : "/outputDocList/0/name",
+          "to" : "/environment/name",
+          "inTypePath" : "documentList/string",
+          "outTypePath" : "document/string",
+          "direction" : "out"
+        }, {
+          "op" : "copy",
+          "from" : "/outputDocList/0/type",
+          "to" : "/environment/type",
+          "inTypePath" : "documentList/string",
+          "outTypePath" : "document/string",
+          "direction" : "out"
+        }, {
+          "op" : "copy",
+          "from" : "/outputDocList/0/credential_key",
+          "to" : "/environment/credential_key",
+          "inTypePath" : "documentList/string",
+          "outTypePath" : "document/string",
+          "direction" : "out"
+        }, {
+          "op" : "copy",
+          "from" : "/outputDocList/0/credential_secret",
+          "to" : "/environment/credential_secret",
+          "inTypePath" : "documentList/string",
+          "outTypePath" : "document/string",
+          "direction" : "out"
+        }, {
+          "op" : "copy",
+          "from" : "/outputDocList/0/data_center_region",
+          "to" : "/environment/data_center_region",
+          "inTypePath" : "documentList/string",
+          "outTypePath" : "document/string",
+          "direction" : "out"
+        }, {
+          "op" : "copy",
+          "from" : "/id",
+          "to" : "/inputDocList/0/id",
+          "inTypePath" : "integer",
+          "outTypePath" : "documentList/integer",
+          "direction" : "in"
+        }, {
+          "op" : "copy",
+          "from" : "/outputDocList/0/credential_id",
+          "to" : "/environment/credential_id",
+          "inTypePath" : "documentList/integer",
+          "outTypePath" : "document/integer",
+          "direction" : "out"
+        } ],
+        "lines" : [ {
+          "inputPath" : "outputDocList/id",
+          "outputPath" : "environment/id",
+          "inpJsTree" : "#launching_arrow_jsTree_function",
+          "outpJsTree" : "#landing_arrow_jsTree",
+          "INPath" : "outputDocList/#0/id",
+          "OUTPath" : "environment/id",
+          "direction" : "out",
+          "op" : "copy",
+          "line" : 0,
+          "dashedLine" : false,
+          "inType" : "integer",
+          "outType" : "integer",
+          "inTypePath" : "documentList/integer",
+          "outTypePath" : "document/integer"
+        }, {
+          "inputPath" : "outputDocList/name",
+          "outputPath" : "environment/name",
+          "inpJsTree" : "#launching_arrow_jsTree_function",
+          "outpJsTree" : "#landing_arrow_jsTree",
+          "INPath" : "outputDocList/#0/name",
+          "OUTPath" : "environment/name",
+          "direction" : "out",
+          "op" : "copy",
+          "line" : 0,
+          "dashedLine" : false,
+          "inType" : "string",
+          "outType" : "string",
+          "inTypePath" : "documentList/string",
+          "outTypePath" : "document/string"
+        }, {
+          "inputPath" : "outputDocList/type",
+          "outputPath" : "environment/type",
+          "inpJsTree" : "#launching_arrow_jsTree_function",
+          "outpJsTree" : "#landing_arrow_jsTree",
+          "INPath" : "outputDocList/#0/type",
+          "OUTPath" : "environment/type",
+          "direction" : "out",
+          "op" : "copy",
+          "line" : 0,
+          "dashedLine" : false,
+          "inType" : "string",
+          "outType" : "string",
+          "inTypePath" : "documentList/string",
+          "outTypePath" : "document/string"
+        }, {
+          "inputPath" : "outputDocList/credential_key",
+          "outputPath" : "environment/credential_key",
+          "inpJsTree" : "#launching_arrow_jsTree_function",
+          "outpJsTree" : "#landing_arrow_jsTree",
+          "INPath" : "outputDocList/#0/credential_key",
+          "OUTPath" : "environment/credential_key",
+          "direction" : "out",
+          "op" : "copy",
+          "line" : 0,
+          "dashedLine" : false,
+          "inType" : "string",
+          "outType" : "string",
+          "inTypePath" : "documentList/string",
+          "outTypePath" : "document/string"
+        }, {
+          "inputPath" : "outputDocList/credential_secret",
+          "outputPath" : "environment/credential_secret",
+          "inpJsTree" : "#launching_arrow_jsTree_function",
+          "outpJsTree" : "#landing_arrow_jsTree",
+          "INPath" : "outputDocList/#0/credential_secret",
+          "OUTPath" : "environment/credential_secret",
+          "direction" : "out",
+          "op" : "copy",
+          "line" : 0,
+          "dashedLine" : false,
+          "inType" : "string",
+          "outType" : "string",
+          "inTypePath" : "documentList/string",
+          "outTypePath" : "document/string"
+        }, {
+          "inputPath" : "outputDocList/data_center_region",
+          "outputPath" : "environment/data_center_region",
+          "inpJsTree" : "#launching_arrow_jsTree_function",
+          "outpJsTree" : "#landing_arrow_jsTree",
+          "INPath" : "outputDocList/#0/data_center_region",
+          "OUTPath" : "environment/data_center_region",
+          "direction" : "out",
+          "op" : "copy",
+          "line" : 0,
+          "dashedLine" : false,
+          "inType" : "string",
+          "outType" : "string",
+          "inTypePath" : "documentList/string",
+          "outTypePath" : "document/string"
+        }, {
+          "inputPath" : "id",
+          "outputPath" : "inputDocList/id",
+          "inpJsTree" : "#launching_arrow_jsTree",
+          "outpJsTree" : "#landing_arrow_jsTree_function",
+          "INPath" : "id",
+          "OUTPath" : "inputDocList/#0/id",
+          "direction" : "in",
+          "op" : "copy",
+          "line" : 0,
+          "dashedLine" : false,
+          "inType" : "integer",
+          "outType" : "integer",
+          "inTypePath" : "integer",
+          "outTypePath" : "documentList/integer"
+        }, {
+          "inputPath" : "outputDocList/credential_id",
+          "outputPath" : "environment/credential_id",
+          "inpJsTree" : "#launching_arrow_jsTree_function",
+          "outpJsTree" : "#landing_arrow_jsTree",
+          "INPath" : "outputDocList/#0/credential_id",
+          "OUTPath" : "environment/credential_id",
+          "direction" : "out",
+          "op" : "copy",
+          "line" : 0,
+          "dashedLine" : false,
+          "inType" : "integer",
+          "outType" : "integer",
+          "inTypePath" : "documentList/integer",
+          "outTypePath" : "document/integer"
+        } ],
+        "dropList" : [ ],
+        "createList" : [ ],
+        "serviceType" : "sql",
+        "fqn" : "packages/middleware/pub/environments/adapter/services/DQL/getEnvironmentById"
+      },
+      "children" : [ ],
+      "type" : "invoke"
+    }, {
+      "id" : "j1_12",
+      "text" : "Invoke",
+      "icon" : null,
+      "li_attr" : {
+        "id" : "j1_12"
+      },
+      "a_attr" : {
+        "href" : "javascript:void(0)",
+        "id" : "j1_12_anchor"
+      },
+      "state" : {
+        "loaded" : true,
+        "opened" : false,
+        "selected" : false,
+        "disabled" : false
+      },
+      "data" : {
+        "transformers" : [ {
+          "op" : "copy",
+          "from" : "/environment/credential_id",
+          "to" : "/inputDocList/0/id",
+          "inTypePath" : "document/integer",
+          "outTypePath" : "documentList/integer",
+          "direction" : "in"
+        }, {
+          "op" : "copy",
+          "from" : "/outputDocList/0/api_username",
+          "to" : "/environment/credential_key",
+          "inTypePath" : "documentList/string",
+          "outTypePath" : "document/string",
+          "direction" : "out"
+        }, {
+          "op" : "copy",
+          "from" : "/outputDocList/0/api_password",
+          "to" : "/environment/credential_secret",
+          "inTypePath" : "documentList/string",
+          "outTypePath" : "document/string",
+          "direction" : "out"
+        } ],
+        "lines" : [ {
+          "inputPath" : "environment/credential_id",
+          "outputPath" : "inputDocList/id",
+          "inpJsTree" : "#launching_arrow_jsTree",
+          "outpJsTree" : "#landing_arrow_jsTree_function",
+          "INPath" : "environment/credential_id",
+          "OUTPath" : "inputDocList/#0/id",
+          "direction" : "in",
+          "op" : "copy",
+          "line" : 0,
+          "dashedLine" : false,
+          "inType" : "integer",
+          "outType" : "integer",
+          "inTypePath" : "document/integer",
+          "outTypePath" : "documentList/integer"
+        }, {
+          "inputPath" : "outputDocList/api_username",
+          "outputPath" : "environment/credential_key",
+          "inpJsTree" : "#launching_arrow_jsTree_function",
+          "outpJsTree" : "#landing_arrow_jsTree",
+          "INPath" : "outputDocList/#0/api_username",
+          "OUTPath" : "environment/credential_key",
+          "direction" : "out",
+          "op" : "copy",
+          "line" : 0,
+          "dashedLine" : false,
+          "inType" : "string",
+          "outType" : "string",
+          "inTypePath" : "documentList/string",
+          "outTypePath" : "document/string"
+        }, {
+          "inputPath" : "outputDocList/api_password",
+          "outputPath" : "environment/credential_secret",
+          "inpJsTree" : "#launching_arrow_jsTree_function",
+          "outpJsTree" : "#landing_arrow_jsTree",
+          "INPath" : "outputDocList/#0/api_password",
+          "OUTPath" : "environment/credential_secret",
+          "direction" : "out",
+          "op" : "copy",
+          "line" : 0,
+          "dashedLine" : false,
+          "inType" : "string",
+          "outType" : "string",
+          "inTypePath" : "documentList/string",
+          "outTypePath" : "document/string"
+        } ],
+        "dropList" : [ ],
+        "createList" : [ ],
+        "serviceType" : "sql",
+        "fqn" : "packages/middleware/pub/environments/adapter/services/DQL/getCredentialById"
+      },
+      "children" : [ ],
+      "type" : "invoke"
+    }, {
+      "id" : "j1_2",
+      "text" : "SWITCH",
+      "icon" : null,
+      "li_attr" : {
+        "id" : "j1_2"
+      },
+      "a_attr" : {
+        "href" : "javascript:void(0)",
+        "id" : "j1_2_anchor"
+      },
+      "state" : {
+        "loaded" : true,
+        "opened" : false,
+        "selected" : false,
+        "disabled" : false
+      },
+      "data" : {
+        "switch" : "environment",
+        "status" : "enabled"
+      },
+      "children" : [ {
+        "id" : "j1_3",
+        "text" : "CASE",
+        "icon" : null,
+        "li_attr" : {
+          "id" : "j1_3"
+        },
+        "a_attr" : {
+          "href" : "javascript:void(0)",
+          "id" : "j1_3_anchor"
+        },
+        "state" : {
+          "loaded" : true,
+          "opened" : true,
+          "selected" : false,
+          "disabled" : false
+        },
+        "data" : {
+          "case" : "#default"
+        },
+        "children" : [ {
+          "id" : "j1_5",
+          "text" : "Invoke",
+          "icon" : null,
+          "li_attr" : {
+            "id" : "j1_5"
+          },
+          "a_attr" : {
+            "href" : "javascript:void(0)",
+            "id" : "j1_5_anchor"
+          },
+          "state" : {
+            "loaded" : true,
+            "opened" : false,
+            "selected" : false,
+            "disabled" : false
+          },
+          "data" : {
+            "transformers" : [ {
+              "op" : "copy",
+              "from" : "/id",
+              "to" : "/inputDocList/0/id",
+              "inTypePath" : "integer",
+              "outTypePath" : "documentList/integer",
+              "direction" : "in"
+            } ],
+            "lines" : [ {
+              "inputPath" : "id",
+              "outputPath" : "inputDocList/id",
+              "inpJsTree" : "#launching_arrow_jsTree",
+              "outpJsTree" : "#landing_arrow_jsTree_function",
+              "INPath" : "id",
+              "OUTPath" : "inputDocList/#0/id",
+              "direction" : "in",
+              "op" : "copy",
+              "line" : 0,
+              "dashedLine" : false,
+              "inType" : "integer",
+              "outType" : "integer",
+              "inTypePath" : "integer",
+              "outTypePath" : "documentList/integer"
+            } ],
+            "dropList" : [ {
+              "path" : "inputDocList",
+              "typePath" : "documentList"
+            } ],
+            "createList" : [ ],
+            "serviceType" : "sql",
+            "fqn" : "packages/middleware/pub/environments/adapter/services/DML/deleteEnvironment"
+          },
+          "children" : [ ],
+          "type" : "invoke"
+        }, {
+          "id" : "j1_6",
+          "text" : "Invoke",
+          "icon" : null,
+          "li_attr" : {
+            "id" : "j1_6"
+          },
+          "a_attr" : {
+            "href" : "javascript:void(0)",
+            "id" : "j1_6_anchor"
+          },
+          "state" : {
+            "loaded" : true,
+            "opened" : false,
+            "selected" : false,
+            "disabled" : false
+          },
+          "data" : {
+            "transformers" : [ {
+              "op" : "copy",
+              "from" : "/id",
+              "to" : "/inputDocList/0/environment_id",
+              "inTypePath" : "integer",
+              "outTypePath" : "documentList/integer",
+              "direction" : "in"
+            } ],
+            "lines" : [ {
+              "inputPath" : "id",
+              "outputPath" : "inputDocList/environment_id",
+              "inpJsTree" : "#launching_arrow_jsTree",
+              "outpJsTree" : "#landing_arrow_jsTree_function",
+              "INPath" : "id",
+              "OUTPath" : "inputDocList/#0/environment_id",
+              "direction" : "in",
+              "op" : "copy",
+              "line" : 0,
+              "dashedLine" : false,
+              "inType" : "integer",
+              "outType" : "integer",
+              "inTypePath" : "integer",
+              "outTypePath" : "documentList/integer"
+            } ],
+            "dropList" : [ ],
+            "createList" : [ ],
+            "serviceType" : "sql",
+            "fqn" : "packages/middleware/pub/environments/adapter/services/DML/deleteVpcSubjets"
+          },
+          "children" : [ ],
+          "type" : "invoke"
+        }, {
+          "id" : "j1_7",
+          "text" : "Invoke",
+          "icon" : null,
+          "li_attr" : {
+            "id" : "j1_7"
+          },
+          "a_attr" : {
+            "href" : "javascript:void(0)",
+            "id" : "j1_7_anchor"
+          },
+          "state" : {
+            "loaded" : true,
+            "opened" : false,
+            "selected" : false,
+            "disabled" : false
+          },
+          "data" : {
+            "transformers" : [ {
+              "op" : "copy",
+              "from" : "/environment/data_center_region",
+              "to" : "/*payload/region",
+              "inTypePath" : "document/string",
+              "outTypePath" : "document/string",
+              "direction" : "in"
+            }, {
+              "op" : "copy",
+              "from" : "/environment/credential_key",
+              "to" : "/*payload/accessKey",
+              "inTypePath" : "document/string",
+              "outTypePath" : "document/string",
+              "direction" : "in"
+            }, {
+              "op" : "copy",
+              "from" : "/environment/credential_secret",
+              "to" : "/*payload/secret",
+              "inTypePath" : "document/string",
+              "outTypePath" : "document/string",
+              "direction" : "in"
+            }, {
+              "op" : "copy",
+              "from" : "/environment/name",
+              "to" : "/*payload/stackName",
+              "inTypePath" : "document/string",
+              "outTypePath" : "document/string",
+              "direction" : "in"
+            }, {
+              "op" : "copy",
+              "from" : "/response/DeleteStackResponse",
+              "to" : "/DeleteStackResponse",
+              "inTypePath" : "document/document",
+              "outTypePath" : "document",
+              "direction" : "out"
+            } ],
+            "lines" : [ {
+              "inputPath" : "environment/data_center_region",
+              "outputPath" : "*payload/region",
+              "inpJsTree" : "#launching_arrow_jsTree",
+              "outpJsTree" : "#landing_arrow_jsTree_function",
+              "INPath" : "environment/data_center_region",
+              "OUTPath" : "*payload/region",
+              "direction" : "in",
+              "op" : "copy",
+              "line" : 0,
+              "dashedLine" : false,
+              "inType" : "string",
+              "outType" : "string",
+              "inTypePath" : "document/string",
+              "outTypePath" : "document/string"
+            }, {
+              "inputPath" : "environment/credential_key",
+              "outputPath" : "*payload/accessKey",
+              "inpJsTree" : "#launching_arrow_jsTree",
+              "outpJsTree" : "#landing_arrow_jsTree_function",
+              "INPath" : "environment/credential_key",
+              "OUTPath" : "*payload/accessKey",
+              "direction" : "in",
+              "op" : "copy",
+              "line" : 0,
+              "dashedLine" : false,
+              "inType" : "string",
+              "outType" : "string",
+              "inTypePath" : "document/string",
+              "outTypePath" : "document/string"
+            }, {
+              "inputPath" : "environment/credential_secret",
+              "outputPath" : "*payload/secret",
+              "inpJsTree" : "#launching_arrow_jsTree",
+              "outpJsTree" : "#landing_arrow_jsTree_function",
+              "INPath" : "environment/credential_secret",
+              "OUTPath" : "*payload/secret",
+              "direction" : "in",
+              "op" : "copy",
+              "line" : 0,
+              "dashedLine" : false,
+              "inType" : "string",
+              "outType" : "string",
+              "inTypePath" : "document/string",
+              "outTypePath" : "document/string"
+            }, {
+              "inputPath" : "environment/name",
+              "outputPath" : "*payload/stackName",
+              "inpJsTree" : "#launching_arrow_jsTree",
+              "outpJsTree" : "#landing_arrow_jsTree_function",
+              "INPath" : "environment/name",
+              "OUTPath" : "*payload/stackName",
+              "direction" : "in",
+              "op" : "copy",
+              "line" : 0,
+              "dashedLine" : false,
+              "inType" : "string",
+              "outType" : "string",
+              "inTypePath" : "document/string",
+              "outTypePath" : "document/string"
+            }, {
+              "inputPath" : "response/DeleteStackResponse",
+              "outputPath" : "DeleteStackResponse",
+              "inpJsTree" : "#launching_arrow_jsTree_function",
+              "outpJsTree" : "#landing_arrow_jsTree",
+              "INPath" : "response/DeleteStackResponse",
+              "OUTPath" : "DeleteStackResponse",
+              "direction" : "out",
+              "op" : "copy",
+              "line" : 0,
+              "dashedLine" : false,
+              "inType" : "document",
+              "outType" : "document",
+              "inTypePath" : "document/document",
+              "outTypePath" : "document"
+            } ],
+            "dropList" : [ ],
+            "createList" : [ ],
+            "serviceType" : "api",
+            "fqn" : "packages/Wrapper/AWS/Cloudformation/DeleteStacks"
+          },
+          "children" : [ ],
+          "type" : "invoke"
+        }, {
+          "id" : "j1_10",
+          "text" : "Transformer",
+          "icon" : null,
+          "li_attr" : {
+            "id" : "j1_10"
+          },
+          "a_attr" : {
+            "href" : "javascript:void(0)",
+            "id" : "j1_10_anchor"
+          },
+          "state" : {
+            "loaded" : true,
+            "opened" : false,
+            "selected" : false,
+            "disabled" : false
+          },
+          "data" : {
+            "transformers" : [ ],
+            "lines" : [ ],
+            "dropList" : [ ],
+            "createList" : [ {
+              "path" : "status",
+              "value" : "true",
+              "evaluate" : null,
+              "typePath" : "boolean"
+            } ]
+          },
+          "children" : [ ],
+          "type" : "transformer"
+        } ],
+        "type" : "group"
+      }, {
+        "id" : "j1_4",
+        "text" : "CASE",
+        "icon" : null,
+        "li_attr" : {
+          "id" : "j1_4"
+        },
+        "a_attr" : {
+          "href" : "javascript:void(0)",
+          "id" : "j1_4_anchor"
+        },
+        "state" : {
+          "loaded" : true,
+          "opened" : true,
+          "selected" : false,
+          "disabled" : false
+        },
+        "data" : {
+          "case" : "#null"
+        },
+        "children" : [ {
+          "id" : "j1_9",
+          "text" : "Transformer",
+          "icon" : null,
+          "li_attr" : {
+            "id" : "j1_9"
+          },
+          "a_attr" : {
+            "href" : "javascript:void(0)",
+            "id" : "j1_9_anchor"
+          },
+          "state" : {
+            "loaded" : true,
+            "opened" : false,
+            "selected" : false,
+            "disabled" : false
+          },
+          "data" : {
+            "transformers" : [ ],
+            "lines" : [ ],
+            "dropList" : [ ],
+            "createList" : [ {
+              "path" : "error",
+              "value" : "Environment Doesn't Exists.",
+              "evaluate" : null,
+              "typePath" : "string"
+            }, {
+              "path" : "status",
+              "value" : "false",
+              "evaluate" : null,
+              "typePath" : "boolean"
+            } ]
+          },
+          "children" : [ ],
+          "type" : "transformer"
+        } ],
+        "type" : "group"
+      } ],
+      "type" : "switch"
+    } ]
+  },
+  "consumers" : "",
+  "developers" : "developers",
+  "enableServiceDocumentValidation" : false
+}

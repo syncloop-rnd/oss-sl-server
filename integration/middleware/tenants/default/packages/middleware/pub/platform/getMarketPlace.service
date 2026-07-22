@@ -1,0 +1,147 @@
+{
+  "input" : [ {
+    "id" : "j1_1",
+    "text" : "start",
+    "li_attr" : {
+      "id" : "j1_1"
+    },
+    "a_attr" : {
+      "href" : "#",
+      "id" : "j1_1_anchor"
+    },
+    "state" : {
+      "loaded" : true,
+      "opened" : false,
+      "selected" : false,
+      "disabled" : false,
+      "hidden" : false
+    },
+    "data" : {
+      "guid" : "45ec06da-7209-4e1d-a72f-2e2b1bf0d1ef",
+      "columnType" : "-1"
+    },
+    "children" : [ ],
+    "type" : "integer"
+  }, {
+    "id" : "j1_2",
+    "text" : "length",
+    "li_attr" : {
+      "id" : "j1_2"
+    },
+    "a_attr" : {
+      "href" : "#",
+      "id" : "j1_2_anchor"
+    },
+    "state" : {
+      "loaded" : true,
+      "opened" : false,
+      "selected" : false,
+      "disabled" : false,
+      "hidden" : false
+    },
+    "data" : {
+      "guid" : "38a7ed1f-9a3b-461f-8d4c-77dff8794d84",
+      "columnType" : "-1"
+    },
+    "children" : [ ],
+    "type" : "integer"
+  }, {
+    "id" : "j1_3",
+    "text" : "category",
+    "li_attr" : {
+      "id" : "j1_3"
+    },
+    "a_attr" : {
+      "href" : "#",
+      "id" : "j1_3_anchor"
+    },
+    "state" : {
+      "loaded" : true,
+      "opened" : false,
+      "selected" : false,
+      "disabled" : false,
+      "hidden" : false
+    },
+    "data" : {
+      "guid" : "86efb4aa-6355-414e-b48c-489b3495ddbe",
+      "columnType" : "-1"
+    },
+    "children" : [ ],
+    "type" : "integer"
+  }, {
+    "id" : "j1_4",
+    "text" : "sortBy",
+    "li_attr" : {
+      "id" : "j1_4"
+    },
+    "a_attr" : {
+      "href" : "#",
+      "id" : "j1_4_anchor"
+    },
+    "state" : {
+      "loaded" : true,
+      "opened" : false,
+      "selected" : false,
+      "disabled" : false,
+      "hidden" : false
+    },
+    "data" : {
+      "guid" : "634b8f6e-8347-4050-b5ae-46322a4cd7f8",
+      "columnType" : "-1"
+    },
+    "children" : [ ],
+    "type" : "string"
+  }, {
+    "id" : "j1_5",
+    "text" : "name",
+    "li_attr" : {
+      "id" : "j1_5"
+    },
+    "a_attr" : {
+      "href" : "#",
+      "id" : "j1_5_anchor"
+    },
+    "state" : {
+      "loaded" : true,
+      "opened" : false,
+      "selected" : false,
+      "disabled" : false,
+      "hidden" : false
+    },
+    "data" : {
+      "guid" : "511e5140-3d3f-4ff0-b7ad-a6deab23a75c",
+      "columnType" : "-1"
+    },
+    "children" : [ ],
+    "type" : "string"
+  } ],
+  "output" : [ {
+    "id" : "j2_1",
+    "text" : "marketplace",
+    "li_attr" : {
+      "id" : "j2_1"
+    },
+    "a_attr" : {
+      "href" : "#",
+      "id" : "j2_1_anchor"
+    },
+    "state" : {
+      "loaded" : true,
+      "opened" : false,
+      "selected" : false,
+      "disabled" : false,
+      "hidden" : false
+    },
+    "data" : { },
+    "children" : [ ],
+    "type" : "javaObject"
+  } ],
+  "package" : "cGFja2FnZSBwYWNrYWdlcy5taWRkbGV3YXJlLnB1Yi5wbGF0Zm9ybTs=",
+  "imports" : "aW1wb3J0IGNvbS5la2EubWlkZGxld2FyZS5zZXJ2aWNlLkRhdGFQaXBlbGluZTsKaW1wb3J0IGNvbS5la2EubWlkZGxld2FyZS50ZW1wbGF0ZS5TbmlwcGV0RXhjZXB0aW9uOwo=",
+  "main" : "dHJ5ewogIAkJaW50IHN0YXJ0ID0gZGF0YVBpcGVsaW5lLmdldEludGVnZXIoInN0YXJ0Iik7CiAgICAgICAgaW50IGxlbmd0aCA9IGRhdGFQaXBlbGluZS5nZXRJbnRlZ2VyKCJsZW5ndGgiKTsKICAJCUludGVnZXIgY2F0ZWdvcnkgPSBkYXRhUGlwZWxpbmUuZ2V0SW50ZWdlcigiY2F0ZWdvcnkiKTsKICAJCVN0cmluZyBzb3J0QnkgPSBkYXRhUGlwZWxpbmUuZ2V0U3RyaW5nKCJzb3J0QnkiKTsKICAJCVN0cmluZyBuYW1lID0gZGF0YVBpcGVsaW5lLmdldFN0cmluZygibmFtZSIpOwoKICBkYXRhUGlwZWxpbmUucHV0KCJtYXJrZXRwbGFjZSIsIGNvbS5la2EubWlkZGxld2FyZS51cGRhdGUuUGx1Z2luSW5zdGFsbGVyLmdldE1hcmtldFBsYWNlVjIoZGF0YVBpcGVsaW5lLCBzdGFydCwgbGVuZ3RoLCBjYXRlZ29yeSwgbmFtZSwgc29ydEJ5KSk7CiAgfSBjYXRjaCAoRXhjZXB0aW9uIGUpIHsKICAgICAgZGF0YVBpcGVsaW5lLmNsZWFyKCk7CiAgICAgIGRhdGFQaXBlbGluZS5wdXQoImVycm9yIixlLmdldE1lc3NhZ2UoKSk7CiAgICAgIG5ldyBTbmlwcGV0RXhjZXB0aW9uKGRhdGFQaXBlbGluZSwiU25pcHBldCBleGNlcHRpb24iLCBlKTsKICB9",
+  "staticWorkspace" : "",
+  "version" : "v1",
+  "consumers" : "",
+  "developers" : "developers",
+  "lockedByUser" : "admin"
+}

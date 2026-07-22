@@ -1,0 +1,346 @@
+<!-- shared-llm-form-other.html -->
+<form name="llmFormNg"
+      novalidate
+      ng-submit="completeLLMEdit()"
+      class="llm-config-form">
+
+    <!-- Model -->
+    <div class="form-group row align-items-center">
+        <label class="col-sm-3 entire_toggletitle">Model
+            <a href="javascript:void(0)" class="info_tooltip">
+                <img ng-src="/Awareness/pub/images/info.svg"><span class="tooltiptext">Select the language model version to use for responses</span>
+            </a>
+        </label>
+        <div class="col-sm-9 position-rel">
+            <input type="text" class="input_form"
+                   name="LLM_modelName"
+                   ng-model="llmEdit.otheragent.modelName"
+                   placeholder="Enter model name"
+                   ng-required="activeProvider==='otheragent'"
+                   ng-class="{'input_formerror': (llmFormNg.LLM_modelName.$touched || llmFormNg.$submitted) && llmFormNg.LLM_modelName.$invalid}">
+            <div class="help-block form_error input_error error_tooltip"
+                 ng-if="(llmFormNg.LLM_modelName.$touched || llmFormNg.$submitted) && llmFormNg.LLM_modelName.$error.required">
+                <span class="tooltiptext">Model is required</span>
+            </div>
+        </div>
+    </div>
+
+    <!-- Provider -->
+    <div class="form-group row align-items-center">
+        <label class="col-sm-3 entire_toggletitle">Provider
+            <a href="javascript:void(0)" class="info_tooltip">
+                <img ng-src="/Awareness/pub/images/info.svg"><span class="tooltiptext">Select a LLM provider from the given list of options we support.</span>
+            </a>
+        </label>
+        <div class="col-sm-9 position-rel">
+            <select class="input_form"
+                    name="LLM_provider"
+                    ng-model="llmEdit.otheragent.providerChoice"
+                    ng-required="activeProvider==='otheragent'"
+                    ng-class="{'input_formerror': (llmFormNg.LLM_modelName.$touched || llmFormNg.$submitted) && llmFormNg.LLM_modelName.$invalid}">
+                <option value="" disabled selected hidden>Select provider</option>
+                <option value="openAI">OpenAI</option>
+                <option value="Google">Google</option>
+                <option value="claude">Claude</option>
+            </select>
+            <div class="help-block form_error select_error error_tooltip"
+                 ng-if="(llmFormNg.LLM_provider.$touched || llmFormNg.$submitted) && llmFormNg.LLM_provider.$error.required">
+                <span class="tooltiptext">Provider is required</span>
+            </div>
+        </div>
+    </div>
+
+
+    <!-- Display Name -->
+    <div class="form-group row align-items-center">
+        <label class="col-sm-3 entire_toggletitle">Name
+            <a href="javascript:void(0)" class="info_tooltip">
+                <img ng-src="/Awareness/pub/images/info.svg"><span class="tooltiptext">Provide a Name to identify this model configuration.</span>
+            </a>
+        </label>
+        <div class="col-sm-9 position-rel">
+            <input type="text" class="input_form"
+                   name="LLM_displayName"
+                   ng-model="llmEdit.otheragent.displayName"
+                   placeholder="Add model name"
+                   ng-required="activeProvider==='otheragent'"
+                   ng-class="{'input_formerror': (llmFormNg.LLM_displayName.$touched || llmFormNg.$submitted) && llmFormNg.LLM_displayName.$invalid}">
+            <div class="help-block form_error input_error error_tooltip"
+                 ng-if="(llmFormNg.LLM_displayName.$touched || llmFormNg.$submitted) && llmFormNg.LLM_displayName.$error.required">
+                <span class="tooltiptext">Name is required</span>
+            </div>
+        </div>
+    </div>
+
+    <!-- Base URL -->
+    <div class="form-group row align-items-center">
+        <label class="col-sm-3 entire_toggletitle">Base URL
+            <a href="javascript:void(0)" class="info_tooltip">
+                <img ng-src="/Awareness/pub/images/info.svg"><span class="tooltiptext">Specify the API endpoint provided by your LLM service.</span>
+            </a>
+        </label>
+        <div class="col-sm-9 position-rel">
+            <input type="url" class="input_form"
+                   name="LLM_baseUrl"
+                   ng-model="llmEdit.otheragent.baseUrl"
+                   placeholder="https://api.custom-llm.com"
+                   ng-required="activeProvider==='otheragent'"
+                   ng-class="{'input_formerror': (llmFormNg.LLM_baseUrl.$touched || llmFormNg.$submitted) && llmFormNg.LLM_baseUrl.$invalid}">
+            <div class="help-block form_error input_error error_tooltip"
+                 ng-if="(llmFormNg.LLM_baseUrl.$touched || llmFormNg.$submitted) && llmFormNg.LLM_baseUrl.$error.required">
+                <span class="tooltiptext">Base URL is required</span>
+            </div>
+        </div>
+    </div>
+
+    <!-- Temperature -->
+    <div class="form-group row align-items-center">
+        <label class="col-sm-3 entire_toggletitle">Temperature
+            <a href="javascript:void(0)" class="info_tooltip">
+                <img ng-src="/Awareness/pub/images/info.svg">
+                <span class="tooltiptext">Adjust randomness of responses (low = focused, high = creative).</span>
+            </a>
+        </label>
+
+        <div class="col-sm-9 d-flex align-items-center gap-10">
+            <label class="switch entire_toggle mr-3" style="margin-right: 12px;">
+                <input type="checkbox"
+                       ng-model="llmEdit.otheragent.useTemperature"
+                       ng-change="!llmEdit.otheragent.useTemperature && (llmEdit.otheragent.temperature = null)">
+                <span class="slider round"></span>
+            </label>
+            <input type="range"
+                   class="input_range"
+                   name="LLM_temperature"
+                   min="0" max="2" step="0.1"
+                   ng-disabled="!llmEdit.otheragent.useTemperature"
+                   ng-model="llmEdit.otheragent.temperature"
+                   ng-style="rangeFill(llmEdit.otheragent.useTemperature ? llmEdit.otheragent.temperature : 0, 0, 2)"
+                   aria-label="Temperature">
+            <span class="range_value_badge">
+      {{ llmEdit.otheragent.useTemperature ? (llmEdit.otheragent.temperature || 0).toFixed(1) : 'null' }}
+    </span>
+        </div>
+    </div>
+
+    <!-- Top P -->
+    <div class="form-group row align-items-center">
+        <label class="col-sm-3 entire_toggletitle">Top P
+            <a href="javascript:void(0)" class="info_tooltip">
+                <img ng-src="/Awareness/pub/images/info.svg">
+                <span class="tooltiptext">Controls randomness by limiting token probability range.</span>
+            </a>
+        </label>
+
+        <div class="col-sm-9 d-flex align-items-center gap-10">
+            <label class="switch entire_toggle mr-3" style="margin-right: 12px;">
+                <input type="checkbox"
+                       ng-model="llmEdit.otheragent.useTopP"
+                       ng-change="!llmEdit.otheragent.useTopP && (llmEdit.otheragent.topP = null)">
+                <span class="slider round"></span>
+            </label>
+            <input type="range"
+                   class="input_range"
+                   name="LLM_topP"
+                   min="0" max="1" step="0.01"
+                   ng-disabled="!llmEdit.otheragent.useTopP"
+                   ng-model="llmEdit.otheragent.topP"
+                   ng-style="rangeFill(llmEdit.otheragent.useTopP ? llmEdit.otheragent.topP : 0, 0, 1)"
+                   aria-label="Top P">
+            <span class="range_value_badge">
+      {{ llmEdit.otheragent.useTopP ? (llmEdit.otheragent.topP || 0).toFixed(2) : 'null' }}
+    </span>
+        </div>
+    </div>
+
+    <!-- Max Tokens -->
+    <div class="form-group row align-items-center">
+        <label class="col-sm-3 entire_toggletitle">Max Tokens
+            <a href="javascript:void(0)" class="info_tooltip">
+                <img ng-src="/Awareness/pub/images/info.svg"><span class="tooltiptext">Set the maximum response length in tokens (approx. words/characters).</span>
+            </a>
+        </label>
+        <div class="col-sm-9 position-rel">
+            <input type="number" class="input_form"
+                   name="LLM_maxTokens"
+                   ng-model="llmEdit.otheragent.maxTokens"
+                   placeholder="4096 (Optional)">
+            <!--            ng-required="activeProvider==='otheragent'"-->
+            <!--            ng-class="{'input_formerror': (llmFormNg.LLM_maxTokens.$touched || llmFormNg.$submitted) && llmFormNg.LLM_maxTokens.$invalid}">-->
+            <!--<div class="help-block form_error select_error error_tooltip"
+                 ng-if="(llmFormNg.LLM_maxTokens.$touched || llmFormNg.$submitted) && llmFormNg.LLM_maxTokens.$error.required">
+                    <span class="tooltiptext">Max Tokens is required</span>
+            </div>-->
+        </div>
+    </div>
+
+    <!-- API Key -->
+    <div class="form-group row align-items-center">
+        <label class="col-sm-3 entire_toggletitle">
+            API Key
+            <a href="javascript:void(0)" class="info_tooltip">
+                <img ng-src="/Awareness/pub/images/info.svg">
+                <span class="tooltiptext">
+                Your provider-issued authentication key for secure access.
+            </span>
+            </a>
+        </label>
+
+        <div class="col-sm-9 position-rel">
+
+            <input ng-attr-type="{{ showApiKey['otheragent-edit'] ? 'text' : 'password' }}"
+                   class="input_form"
+                   name="LLM_ApiKey"
+                   ng-model="llmEdit.otheragent.apiKey"
+                   placeholder="Enter API key"
+                   ng-required="activeProvider==='otheragent'"
+                   ng-class="{'input_formerror': (llmFormNg.LLM_ApiKey.$touched || llmFormNg.$submitted) && llmFormNg.LLM_ApiKey.$invalid}"
+                   style="padding-right:41px;">
+
+            <!-- Eye Toggle -->
+            <span ng-click="toggleApiKeyVisibility('otheragent-edit')" class="password-icon" ng-show="llmEdit.otheragent.apiKey"  ng-if="!((llmFormNg.LLM_ApiKey.$touched || llmFormNg.$submitted) && llmFormNg.LLM_ApiKey.$error.required)">
+            <i class="fa"
+               ng-class="showApiKey['otheragent-edit'] ? 'fa-eye-slash' : 'fa-eye'"></i>
+        </span>
+
+            <div class="help-block form_error input_error error_tooltip"
+                 ng-if="(llmFormNg.LLM_ApiKey.$touched || llmFormNg.$submitted) && llmFormNg.LLM_ApiKey.$error.required">
+                <span class="tooltiptext">API Key is required</span>
+            </div>
+
+        </div>
+    </div>
+
+
+    <div class="row">
+
+        <div class="col-md-6">
+            <div class="form-group row align-items-center">
+                <label class="col-sm-7 entire_toggletitle">Tool Calling
+                    <a href="javascript:void(0)" class="info_tooltip">
+                        <img ng-src="/Awareness/pub/images/info.svg"><span class="tooltiptext">Allow LLM to auto-call connected tools in responses.</span>
+                    </a>
+                </label>
+                <div class="col-sm-5">
+
+                    <label class="switch entire_toggle" for="otheragent_tool_calling">
+                        <input
+                                type="checkbox"
+                                id="otheragent_tool_calling"
+                                name="otheragent_tool_calling"
+                                ng-model="llmEdit.otheragent.toolCalling"
+                                aria-label="Supports Tool Calling"
+                                role="switch">
+                        <span class="slider round"></span>
+                    </label>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-6">
+            <div class="form-group row align-items-center">
+                <label class="col-sm-5 entire_toggletitle">Enable PFC
+                    <a href="javascript:void(0)" class="info_tooltip">
+                        <img ng-src="/Awareness/pub/images/info.svg">
+                        <span class="tooltiptext" style="left: auto;right: 0;">Toggle Prompt Flow Control to optimize how prompts are structured.</span>
+                    </a>
+                </label>
+                <div class="col-sm-6">
+                    <label class="switch entire_toggle" for="otheragent_pfc">
+                        <input
+                                type="checkbox"
+                                id="otheragent_pfc"
+                                name="LLM_pfc"
+                                ng-model="llmEdit.otheragent.pfc"
+                                ng-disabled="pfcDisabled"
+                                aria-label="Enable PFC"
+                                role="switch"
+                                ng-attr-aria-checked="{{ !!llmEdit.otheragent.pfc }}"
+                        >
+                        <span class="slider round"></span>
+                    </label>
+
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="form-group row align-items-center">
+        <label class="col-sm-3 entire_toggletitle">I/O Token Rates
+            <a href="javascript:void(0)" class="info_tooltip">
+                <img ng-src="/Awareness/pub/images/info.svg" />
+                <span class="tooltiptext">Mention Input & Output token cost per million.</span>
+            </a>
+        </label>
+        <div class="col-sm-9 position-rel">
+            <div class="row g-2">
+                <div class="col-md-4">
+                    <input ng-model="llmEdit.otheragent.ppmInput" type="number" class="input_form" placeholder="Input Rate " />
+                </div>
+                <div class="col-md-4">
+                    <input ng-model="llmEdit.otheragent.ppmOutput" type="number" class="input_form" placeholder="Output Rate " />
+                </div>
+                <div class="col-md-4">
+                    <select ng-model="llmEdit.otheragent.currency" class="input_form">
+                        <option value="" disabled selected hidden>Select Currency</option>
+                        <option value="INR">Indian Rupee (INR)</option>
+                        <option value="USD">US Dollar (USD)</option>
+                        <option value="EUR">Euro (EUR)</option>
+                        <option value="GBP">British Pound (GBP)</option>
+                        <option value="JPY">Japanese Yen (JPY)</option>
+                        <option value="AUD">Australian Dollar (AUD)</option>
+                        <option value="CAD">Canadian Dollar (CAD)</option>
+                        <option value="CHF">Swiss Franc (CHF)</option>
+                        <option value="CNY">Chinese Yuan (CNY)</option>
+                        <option value="HKD">Hong Kong Dollar (HKD)</option>
+                        <option value="SGD">Singapore Dollar (SGD)</option>
+                        <option value="NZD">New Zealand Dollar (NZD)</option>
+                        <option value="KRW">South Korean Won (KRW)</option>
+                        <option value="AED">UAE Dirham (AED)</option>
+                        <option value="SAR">Saudi Riyal (SAR)</option>
+                        <option value="ZAR">South African Rand (ZAR)</option>
+                        <option value="SEK">Swedish Krona (SEK)</option>
+                        <option value="NOK">Norwegian Krone (NOK)</option>
+                        <option value="DKK">Danish Krone (DKK)</option>
+                        <option value="THB">Thai Baht (THB)</option>
+                        <option value="MYR">Malaysian Ringgit (MYR)</option>
+                        <option value="IDR">Indonesian Rupiah (IDR)</option>
+                        <option value="PHP">Philippine Peso (PHP)</option>
+                        <option value="VND">Vietnamese Dong (VND)</option>
+                        <option value="PKR">Pakistani Rupee (PKR)</option>
+                        <option value="BDT">Bangladeshi Taka (BDT)</option>
+                        <option value="LKR">Sri Lankan Rupee (LKR)</option>
+                        <option value="NPR">Nepalese Rupee (NPR)</option>
+                        <option value="KWD">Kuwaiti Dinar (KWD)</option>
+                        <option value="BHD">Bahraini Dinar (BHD)</option>
+                        <option value="OMR">Omani Rial (OMR)</option>
+                        <option value="QAR">Qatari Riyal (QAR)</option>
+                        <option value="TRY">Turkish Lira (TRY)</option>
+                        <option value="ILS">Israeli Shekel (ILS)</option>
+                        <option value="EGP">Egyptian Pound (EGP)</option>
+                        <option value="KES">Kenyan Shilling (KES)</option>
+                        <option value="NGN">Nigerian Naira (NGN)</option>
+                        <option value="BRL">Brazilian Real (BRL)</option>
+                        <option value="MXN">Mexican Peso (MXN)</option>
+                        <option value="ARS">Argentine Peso (ARS)</option>
+                        <option value="CLP">Chilean Peso (CLP)</option>
+                        <option value="COP">Colombian Peso (COP)</option>
+                        <option value="PEN">Peruvian Sol (PEN)</option>
+                        <option value="RUB">Russian Ruble (RUB)</option>
+                        <option value="PLN">Polish Zloty (PLN)</option>
+                        <option value="CZK">Czech Koruna (CZK)</option>
+                        <option value="HUF">Hungarian Forint (HUF)</option>
+                    </select>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Submit -->
+    <div class="text-center mt-4">
+        <button type="submit" class="create_btn" ng-disabled="isUIBusy()">
+            <span ng-if="!isUIBusy()">Save LLM</span>
+            <span ng-if="isUIBusy()" class="btn-spinner"></span>
+        </button>
+    </div>
+
+</form>

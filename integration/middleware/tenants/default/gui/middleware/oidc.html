@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Syncloop Authorization Channel</title>
+    <script src="https://dev-pt.syncloop.com/env.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/js-cookie@2.2.1/src/js.cookie.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/js-cookie@2/src/js.cookie.min.js"></script>
+    <script src="/files/gui/middleware/pub/server/ui/javascript/middleware.js"></script>
+    <script>
+        window.ENV = window.env || {};
+    </script>
+
+    <!-- jQuery CDN -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script type="syncloop/analytics"></script>
+</head>
+<body>
+<script type="syncloop/body-analytics"></script>
+<div id="result">verifying your details...</div>
+
+<script>
+    $(document).ready(function () {
+
+        var tenant = localStorage.getItem("tenant");
+        /*var tenant = '';
+        var cookies = document.cookie.split(";");
+        for (var i = 0; i < cookies.length; i++) {
+            var coo = cookies[i].split("=");
+            if (coo[0].trim() == "tenant") {
+                tenant = coo[1].replaceAll('"', "").split(" ")[0];
+            }
+        }*/
+
+        $.ajax({
+            url: "/tenant/default/packages.middleware.pub.service.getCurrentUserAccount.main",
+            method: "GET",
+            success: function (profile) {
+
+                $.ajax({
+                    url: "/jwt?expiration_time=2&userID=" + profile.userId + "&token_key=" + profile.userId,
+                    method: "GET",
+                    success: function (data) {
+                        window.opener.postMessage(
+                            {
+                                action: "installLoggingKeys",
+                                payload: {
+                                    token: data,
+                                    tenant: profile.profile.tenant
+                                }
+                            },
+                            window.env.CDN_API_BASE_URL
+                        );
+                        softLogout();
+                        window.close();
+                    },
+                    error: function (xhr, status, error) {
+                        console.log(error);
+                    }
+                });
+
+
+            },
+            error: function (xhr, status, error) {
+                console.log(error);
+            }
+        });
+    });
+</script>
+
+</body>
+</html>

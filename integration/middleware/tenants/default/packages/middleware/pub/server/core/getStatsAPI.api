@@ -1,0 +1,1514 @@
+{
+  "latest" : {
+    "createdTS" : "",
+    "input" : [ ],
+    "output" : [ {
+      "id" : "j3_2",
+      "text" : "nodes",
+      "li_attr" : {
+        "id" : "j3_2"
+      },
+      "a_attr" : {
+        "href" : "#",
+        "id" : "j3_2_anchor"
+      },
+      "state" : {
+        "loaded" : true,
+        "opened" : true,
+        "selected" : false,
+        "disabled" : false,
+        "hidden" : false
+      },
+      "data" : { },
+      "children" : [ {
+        "id" : "j3_3",
+        "text" : "NODENAME",
+        "li_attr" : {
+          "id" : "j3_3"
+        },
+        "a_attr" : {
+          "href" : "#",
+          "id" : "j3_3_anchor"
+        },
+        "state" : {
+          "loaded" : true,
+          "opened" : false,
+          "selected" : false,
+          "disabled" : false
+        },
+        "data" : { },
+        "children" : [ ],
+        "type" : "string"
+      }, {
+        "id" : "j3_4",
+        "text" : "os",
+        "li_attr" : {
+          "id" : "j3_4"
+        },
+        "a_attr" : {
+          "href" : "#",
+          "id" : "j3_4_anchor"
+        },
+        "state" : {
+          "loaded" : true,
+          "opened" : false,
+          "selected" : false,
+          "disabled" : false
+        },
+        "data" : { },
+        "children" : [ {
+          "id" : "j3_5",
+          "text" : "name",
+          "li_attr" : {
+            "id" : "j3_5"
+          },
+          "a_attr" : {
+            "href" : "#"
+          },
+          "state" : {
+            "loaded" : true,
+            "opened" : false,
+            "selected" : false,
+            "disabled" : false
+          },
+          "data" : { },
+          "children" : [ ],
+          "type" : "string"
+        }, {
+          "id" : "j3_6",
+          "text" : "version",
+          "li_attr" : {
+            "id" : "j3_6"
+          },
+          "a_attr" : {
+            "href" : "#"
+          },
+          "state" : {
+            "loaded" : true,
+            "opened" : false,
+            "selected" : false,
+            "disabled" : false
+          },
+          "data" : { },
+          "children" : [ ],
+          "type" : "string"
+        }, {
+          "id" : "j3_7",
+          "text" : "arch",
+          "li_attr" : {
+            "id" : "j3_7"
+          },
+          "a_attr" : {
+            "href" : "#"
+          },
+          "state" : {
+            "loaded" : true,
+            "opened" : false,
+            "selected" : false,
+            "disabled" : false
+          },
+          "data" : { },
+          "children" : [ ],
+          "type" : "string"
+        }, {
+          "id" : "j3_8",
+          "text" : "availableProcessors",
+          "li_attr" : {
+            "id" : "j3_8"
+          },
+          "a_attr" : {
+            "href" : "#"
+          },
+          "state" : {
+            "loaded" : true,
+            "opened" : false,
+            "selected" : false,
+            "disabled" : false
+          },
+          "data" : { },
+          "children" : [ ],
+          "type" : "number"
+        }, {
+          "id" : "j3_9",
+          "text" : "processCount",
+          "li_attr" : {
+            "id" : "j3_9"
+          },
+          "a_attr" : {
+            "href" : "#"
+          },
+          "state" : {
+            "loaded" : true,
+            "opened" : false,
+            "selected" : false,
+            "disabled" : false
+          },
+          "data" : { },
+          "children" : [ ],
+          "type" : "number"
+        }, {
+          "id" : "j3_10",
+          "text" : "threadCount",
+          "li_attr" : {
+            "id" : "j3_10"
+          },
+          "a_attr" : {
+            "href" : "#"
+          },
+          "state" : {
+            "loaded" : true,
+            "opened" : false,
+            "selected" : false,
+            "disabled" : false
+          },
+          "data" : { },
+          "children" : [ ],
+          "type" : "number"
+        }, {
+          "id" : "j3_11",
+          "text" : "hostname",
+          "li_attr" : {
+            "id" : "j3_11"
+          },
+          "a_attr" : {
+            "href" : "#"
+          },
+          "state" : {
+            "loaded" : true,
+            "opened" : false,
+            "selected" : false,
+            "disabled" : false
+          },
+          "data" : { },
+          "children" : [ ],
+          "type" : "string"
+        }, {
+          "id" : "j3_12",
+          "text" : "domainName",
+          "li_attr" : {
+            "id" : "j3_12"
+          },
+          "a_attr" : {
+            "href" : "#"
+          },
+          "state" : {
+            "loaded" : true,
+            "opened" : false,
+            "selected" : false,
+            "disabled" : false
+          },
+          "data" : { },
+          "children" : [ ],
+          "type" : "string"
+        } ],
+        "type" : "document"
+      }, {
+        "id" : "j3_13",
+        "text" : "system",
+        "li_attr" : {
+          "id" : "j3_13"
+        },
+        "a_attr" : {
+          "href" : "#",
+          "id" : "j3_13_anchor"
+        },
+        "state" : {
+          "loaded" : true,
+          "opened" : false,
+          "selected" : false,
+          "disabled" : false
+        },
+        "data" : { },
+        "children" : [ {
+          "id" : "j3_14",
+          "text" : "systemLoadAverage",
+          "li_attr" : {
+            "id" : "j3_14"
+          },
+          "a_attr" : {
+            "href" : "#"
+          },
+          "state" : {
+            "loaded" : true,
+            "opened" : false,
+            "selected" : false,
+            "disabled" : false
+          },
+          "data" : { },
+          "children" : [ ],
+          "type" : "number"
+        }, {
+          "id" : "j3_15",
+          "text" : "systemCpuLoad",
+          "li_attr" : {
+            "id" : "j3_15"
+          },
+          "a_attr" : {
+            "href" : "#"
+          },
+          "state" : {
+            "loaded" : true,
+            "opened" : false,
+            "selected" : false,
+            "disabled" : false
+          },
+          "data" : { },
+          "children" : [ ],
+          "type" : "number"
+        }, {
+          "id" : "j3_16",
+          "text" : "processCpuLoad",
+          "li_attr" : {
+            "id" : "j3_16"
+          },
+          "a_attr" : {
+            "href" : "#"
+          },
+          "state" : {
+            "loaded" : true,
+            "opened" : false,
+            "selected" : false,
+            "disabled" : false
+          },
+          "data" : { },
+          "children" : [ ],
+          "type" : "number"
+        }, {
+          "id" : "j3_17",
+          "text" : "processCpuTimeNs",
+          "li_attr" : {
+            "id" : "j3_17"
+          },
+          "a_attr" : {
+            "href" : "#"
+          },
+          "state" : {
+            "loaded" : true,
+            "opened" : false,
+            "selected" : false,
+            "disabled" : false
+          },
+          "data" : { },
+          "children" : [ ],
+          "type" : "number"
+        }, {
+          "id" : "j3_18",
+          "text" : "totalPhysicalBytes",
+          "li_attr" : {
+            "id" : "j3_18"
+          },
+          "a_attr" : {
+            "href" : "#"
+          },
+          "state" : {
+            "loaded" : true,
+            "opened" : false,
+            "selected" : false,
+            "disabled" : false
+          },
+          "data" : { },
+          "children" : [ ],
+          "type" : "number"
+        }, {
+          "id" : "j3_19",
+          "text" : "freePhysicalBytes",
+          "li_attr" : {
+            "id" : "j3_19"
+          },
+          "a_attr" : {
+            "href" : "#"
+          },
+          "state" : {
+            "loaded" : true,
+            "opened" : false,
+            "selected" : false,
+            "disabled" : false
+          },
+          "data" : { },
+          "children" : [ ],
+          "type" : "number"
+        }, {
+          "id" : "j3_20",
+          "text" : "usedPhysicalBytes",
+          "li_attr" : {
+            "id" : "j3_20"
+          },
+          "a_attr" : {
+            "href" : "#"
+          },
+          "state" : {
+            "loaded" : true,
+            "opened" : false,
+            "selected" : false,
+            "disabled" : false
+          },
+          "data" : { },
+          "children" : [ ],
+          "type" : "number"
+        }, {
+          "id" : "j3_21",
+          "text" : "physicalUsedPercent",
+          "li_attr" : {
+            "id" : "j3_21"
+          },
+          "a_attr" : {
+            "href" : "#"
+          },
+          "state" : {
+            "loaded" : true,
+            "opened" : false,
+            "selected" : false,
+            "disabled" : false
+          },
+          "data" : { },
+          "children" : [ ],
+          "type" : "number"
+        }, {
+          "id" : "j3_22",
+          "text" : "totalSwapBytes",
+          "li_attr" : {
+            "id" : "j3_22"
+          },
+          "a_attr" : {
+            "href" : "#"
+          },
+          "state" : {
+            "loaded" : true,
+            "opened" : false,
+            "selected" : false,
+            "disabled" : false
+          },
+          "data" : { },
+          "children" : [ ],
+          "type" : "number"
+        }, {
+          "id" : "j3_23",
+          "text" : "freeSwapBytes",
+          "li_attr" : {
+            "id" : "j3_23"
+          },
+          "a_attr" : {
+            "href" : "#"
+          },
+          "state" : {
+            "loaded" : true,
+            "opened" : false,
+            "selected" : false,
+            "disabled" : false
+          },
+          "data" : { },
+          "children" : [ ],
+          "type" : "number"
+        }, {
+          "id" : "j3_24",
+          "text" : "usedSwapBytes",
+          "li_attr" : {
+            "id" : "j3_24"
+          },
+          "a_attr" : {
+            "href" : "#"
+          },
+          "state" : {
+            "loaded" : true,
+            "opened" : false,
+            "selected" : false,
+            "disabled" : false
+          },
+          "data" : { },
+          "children" : [ ],
+          "type" : "number"
+        }, {
+          "id" : "j3_25",
+          "text" : "memAvailableBytes",
+          "li_attr" : {
+            "id" : "j3_25"
+          },
+          "a_attr" : {
+            "href" : "#"
+          },
+          "state" : {
+            "loaded" : true,
+            "opened" : false,
+            "selected" : false,
+            "disabled" : false
+          },
+          "data" : { },
+          "children" : [ ],
+          "type" : "number"
+        }, {
+          "id" : "j3_26",
+          "text" : "memTotalBytes",
+          "li_attr" : {
+            "id" : "j3_26"
+          },
+          "a_attr" : {
+            "href" : "#"
+          },
+          "state" : {
+            "loaded" : true,
+            "opened" : false,
+            "selected" : false,
+            "disabled" : false
+          },
+          "data" : { },
+          "children" : [ ],
+          "type" : "number"
+        } ],
+        "type" : "document"
+      }, {
+        "id" : "j3_27",
+        "text" : "cpuPerCore",
+        "li_attr" : {
+          "id" : "j3_27"
+        },
+        "a_attr" : {
+          "href" : "#",
+          "id" : "j3_27_anchor"
+        },
+        "state" : {
+          "loaded" : true,
+          "opened" : false,
+          "selected" : false,
+          "disabled" : false
+        },
+        "data" : { },
+        "children" : [ ],
+        "type" : "numberList"
+      }, {
+        "id" : "j3_28",
+        "text" : "diskIObps",
+        "li_attr" : {
+          "id" : "j3_28"
+        },
+        "a_attr" : {
+          "href" : "#",
+          "id" : "j3_28_anchor"
+        },
+        "state" : {
+          "loaded" : true,
+          "opened" : false,
+          "selected" : false,
+          "disabled" : false
+        },
+        "data" : { },
+        "children" : [ {
+          "id" : "j3_29",
+          "text" : "readBytesPerSec",
+          "li_attr" : {
+            "id" : "j3_29"
+          },
+          "a_attr" : {
+            "href" : "#"
+          },
+          "state" : {
+            "loaded" : true,
+            "opened" : false,
+            "selected" : false,
+            "disabled" : false
+          },
+          "data" : { },
+          "children" : [ ],
+          "type" : "number"
+        }, {
+          "id" : "j3_30",
+          "text" : "writeBytesPerSec",
+          "li_attr" : {
+            "id" : "j3_30"
+          },
+          "a_attr" : {
+            "href" : "#"
+          },
+          "state" : {
+            "loaded" : true,
+            "opened" : false,
+            "selected" : false,
+            "disabled" : false
+          },
+          "data" : { },
+          "children" : [ ],
+          "type" : "number"
+        }, {
+          "id" : "j3_31",
+          "text" : "totalBytesPerSec",
+          "li_attr" : {
+            "id" : "j3_31"
+          },
+          "a_attr" : {
+            "href" : "#"
+          },
+          "state" : {
+            "loaded" : true,
+            "opened" : false,
+            "selected" : false,
+            "disabled" : false
+          },
+          "data" : { },
+          "children" : [ ],
+          "type" : "number"
+        }, {
+          "id" : "j3_32",
+          "text" : "model",
+          "li_attr" : {
+            "id" : "j3_32"
+          },
+          "a_attr" : {
+            "href" : "#"
+          },
+          "state" : {
+            "loaded" : true,
+            "opened" : false,
+            "selected" : false,
+            "disabled" : false
+          },
+          "data" : { },
+          "children" : [ ],
+          "type" : "string"
+        }, {
+          "id" : "j3_33",
+          "text" : "serial",
+          "li_attr" : {
+            "id" : "j3_33"
+          },
+          "a_attr" : {
+            "href" : "#"
+          },
+          "state" : {
+            "loaded" : true,
+            "opened" : false,
+            "selected" : false,
+            "disabled" : false
+          },
+          "data" : { },
+          "children" : [ ],
+          "type" : "string"
+        }, {
+          "id" : "j3_34",
+          "text" : "sizeBytes",
+          "li_attr" : {
+            "id" : "j3_34"
+          },
+          "a_attr" : {
+            "href" : "#"
+          },
+          "state" : {
+            "loaded" : true,
+            "opened" : false,
+            "selected" : false,
+            "disabled" : false
+          },
+          "data" : { },
+          "children" : [ ],
+          "type" : "number"
+        }, {
+          "id" : "j3_35",
+          "text" : "diskName",
+          "li_attr" : {
+            "id" : "j3_35"
+          },
+          "a_attr" : {
+            "href" : "#"
+          },
+          "state" : {
+            "loaded" : true,
+            "opened" : false,
+            "selected" : false,
+            "disabled" : false
+          },
+          "data" : { },
+          "children" : [ ],
+          "type" : "string"
+        } ],
+        "type" : "documentList"
+      }, {
+        "id" : "j3_36",
+        "text" : "jvm",
+        "li_attr" : {
+          "id" : "j3_36"
+        },
+        "a_attr" : {
+          "href" : "#",
+          "id" : "j3_36_anchor"
+        },
+        "state" : {
+          "loaded" : true,
+          "opened" : false,
+          "selected" : false,
+          "disabled" : false
+        },
+        "data" : { },
+        "children" : [ {
+          "id" : "j3_37",
+          "text" : "memory",
+          "li_attr" : {
+            "id" : "j3_37"
+          },
+          "a_attr" : {
+            "href" : "#"
+          },
+          "state" : {
+            "loaded" : true,
+            "opened" : false,
+            "selected" : false,
+            "disabled" : false
+          },
+          "data" : { },
+          "children" : [ {
+            "id" : "j3_38",
+            "text" : "heapInit",
+            "li_attr" : {
+              "id" : "j3_38"
+            },
+            "a_attr" : {
+              "href" : "#"
+            },
+            "state" : {
+              "loaded" : true,
+              "opened" : false,
+              "selected" : false,
+              "disabled" : false
+            },
+            "data" : { },
+            "children" : [ ],
+            "type" : "number"
+          }, {
+            "id" : "j3_39",
+            "text" : "heapUsed",
+            "li_attr" : {
+              "id" : "j3_39"
+            },
+            "a_attr" : {
+              "href" : "#"
+            },
+            "state" : {
+              "loaded" : true,
+              "opened" : false,
+              "selected" : false,
+              "disabled" : false
+            },
+            "data" : { },
+            "children" : [ ],
+            "type" : "number"
+          }, {
+            "id" : "j3_40",
+            "text" : "heapCommitted",
+            "li_attr" : {
+              "id" : "j3_40"
+            },
+            "a_attr" : {
+              "href" : "#"
+            },
+            "state" : {
+              "loaded" : true,
+              "opened" : false,
+              "selected" : false,
+              "disabled" : false
+            },
+            "data" : { },
+            "children" : [ ],
+            "type" : "number"
+          }, {
+            "id" : "j3_41",
+            "text" : "heapMax",
+            "li_attr" : {
+              "id" : "j3_41"
+            },
+            "a_attr" : {
+              "href" : "#"
+            },
+            "state" : {
+              "loaded" : true,
+              "opened" : false,
+              "selected" : false,
+              "disabled" : false
+            },
+            "data" : { },
+            "children" : [ ],
+            "type" : "number"
+          }, {
+            "id" : "j3_42",
+            "text" : "nonHeapInit",
+            "li_attr" : {
+              "id" : "j3_42"
+            },
+            "a_attr" : {
+              "href" : "#"
+            },
+            "state" : {
+              "loaded" : true,
+              "opened" : false,
+              "selected" : false,
+              "disabled" : false
+            },
+            "data" : { },
+            "children" : [ ],
+            "type" : "number"
+          }, {
+            "id" : "j3_43",
+            "text" : "nonHeapUsed",
+            "li_attr" : {
+              "id" : "j3_43"
+            },
+            "a_attr" : {
+              "href" : "#"
+            },
+            "state" : {
+              "loaded" : true,
+              "opened" : false,
+              "selected" : false,
+              "disabled" : false
+            },
+            "data" : { },
+            "children" : [ ],
+            "type" : "number"
+          }, {
+            "id" : "j3_44",
+            "text" : "nonHeapCommitted",
+            "li_attr" : {
+              "id" : "j3_44"
+            },
+            "a_attr" : {
+              "href" : "#"
+            },
+            "state" : {
+              "loaded" : true,
+              "opened" : false,
+              "selected" : false,
+              "disabled" : false
+            },
+            "data" : { },
+            "children" : [ ],
+            "type" : "number"
+          }, {
+            "id" : "j3_45",
+            "text" : "nonHeapMax",
+            "li_attr" : {
+              "id" : "j3_45"
+            },
+            "a_attr" : {
+              "href" : "#"
+            },
+            "state" : {
+              "loaded" : true,
+              "opened" : false,
+              "selected" : false,
+              "disabled" : false
+            },
+            "data" : { },
+            "children" : [ ],
+            "type" : "number"
+          } ],
+          "type" : "document"
+        }, {
+          "id" : "j3_46",
+          "text" : "threads",
+          "li_attr" : {
+            "id" : "j3_46"
+          },
+          "a_attr" : {
+            "href" : "#"
+          },
+          "state" : {
+            "loaded" : true,
+            "opened" : false,
+            "selected" : false,
+            "disabled" : false
+          },
+          "data" : { },
+          "children" : [ {
+            "id" : "j3_47",
+            "text" : "live",
+            "li_attr" : {
+              "id" : "j3_47"
+            },
+            "a_attr" : {
+              "href" : "#"
+            },
+            "state" : {
+              "loaded" : true,
+              "opened" : false,
+              "selected" : false,
+              "disabled" : false
+            },
+            "data" : { },
+            "children" : [ ],
+            "type" : "number"
+          }, {
+            "id" : "j3_48",
+            "text" : "daemon",
+            "li_attr" : {
+              "id" : "j3_48"
+            },
+            "a_attr" : {
+              "href" : "#"
+            },
+            "state" : {
+              "loaded" : true,
+              "opened" : false,
+              "selected" : false,
+              "disabled" : false
+            },
+            "data" : { },
+            "children" : [ ],
+            "type" : "number"
+          }, {
+            "id" : "j3_49",
+            "text" : "peak",
+            "li_attr" : {
+              "id" : "j3_49"
+            },
+            "a_attr" : {
+              "href" : "#"
+            },
+            "state" : {
+              "loaded" : true,
+              "opened" : false,
+              "selected" : false,
+              "disabled" : false
+            },
+            "data" : { },
+            "children" : [ ],
+            "type" : "number"
+          }, {
+            "id" : "j3_50",
+            "text" : "totalStarted",
+            "li_attr" : {
+              "id" : "j3_50"
+            },
+            "a_attr" : {
+              "href" : "#"
+            },
+            "state" : {
+              "loaded" : true,
+              "opened" : false,
+              "selected" : false,
+              "disabled" : false
+            },
+            "data" : { },
+            "children" : [ ],
+            "type" : "number"
+          } ],
+          "type" : "document"
+        }, {
+          "id" : "j3_51",
+          "text" : "garbageCollectors",
+          "li_attr" : {
+            "id" : "j3_51"
+          },
+          "a_attr" : {
+            "href" : "#"
+          },
+          "state" : {
+            "loaded" : true,
+            "opened" : false,
+            "selected" : false,
+            "disabled" : false
+          },
+          "data" : { },
+          "children" : [ {
+            "id" : "j3_52",
+            "text" : "name",
+            "li_attr" : {
+              "id" : "j3_52"
+            },
+            "a_attr" : {
+              "href" : "#"
+            },
+            "state" : {
+              "loaded" : true,
+              "opened" : false,
+              "selected" : false,
+              "disabled" : false
+            },
+            "data" : { },
+            "children" : [ ],
+            "type" : "string"
+          }, {
+            "id" : "j3_53",
+            "text" : "collectionCount",
+            "li_attr" : {
+              "id" : "j3_53"
+            },
+            "a_attr" : {
+              "href" : "#"
+            },
+            "state" : {
+              "loaded" : true,
+              "opened" : false,
+              "selected" : false,
+              "disabled" : false
+            },
+            "data" : { },
+            "children" : [ ],
+            "type" : "number"
+          }, {
+            "id" : "j3_54",
+            "text" : "collectionTimeMs",
+            "li_attr" : {
+              "id" : "j3_54"
+            },
+            "a_attr" : {
+              "href" : "#"
+            },
+            "state" : {
+              "loaded" : true,
+              "opened" : false,
+              "selected" : false,
+              "disabled" : false
+            },
+            "data" : { },
+            "children" : [ ],
+            "type" : "number"
+          } ],
+          "type" : "documentList"
+        }, {
+          "id" : "j3_55",
+          "text" : "uptimeMs",
+          "li_attr" : {
+            "id" : "j3_55"
+          },
+          "a_attr" : {
+            "href" : "#"
+          },
+          "state" : {
+            "loaded" : true,
+            "opened" : false,
+            "selected" : false,
+            "disabled" : false
+          },
+          "data" : { },
+          "children" : [ ],
+          "type" : "number"
+        }, {
+          "id" : "j3_56",
+          "text" : "vmName",
+          "li_attr" : {
+            "id" : "j3_56"
+          },
+          "a_attr" : {
+            "href" : "#"
+          },
+          "state" : {
+            "loaded" : true,
+            "opened" : false,
+            "selected" : false,
+            "disabled" : false
+          },
+          "data" : { },
+          "children" : [ ],
+          "type" : "string"
+        }, {
+          "id" : "j3_57",
+          "text" : "vmVendor",
+          "li_attr" : {
+            "id" : "j3_57"
+          },
+          "a_attr" : {
+            "href" : "#"
+          },
+          "state" : {
+            "loaded" : true,
+            "opened" : false,
+            "selected" : false,
+            "disabled" : false
+          },
+          "data" : { },
+          "children" : [ ],
+          "type" : "string"
+        }, {
+          "id" : "j3_58",
+          "text" : "vmVersion",
+          "li_attr" : {
+            "id" : "j3_58"
+          },
+          "a_attr" : {
+            "href" : "#"
+          },
+          "state" : {
+            "loaded" : true,
+            "opened" : false,
+            "selected" : false,
+            "disabled" : false
+          },
+          "data" : { },
+          "children" : [ ],
+          "type" : "string"
+        }, {
+          "id" : "j3_59",
+          "text" : "startTimeMs",
+          "li_attr" : {
+            "id" : "j3_59"
+          },
+          "a_attr" : {
+            "href" : "#"
+          },
+          "state" : {
+            "loaded" : true,
+            "opened" : false,
+            "selected" : false,
+            "disabled" : false
+          },
+          "data" : { },
+          "children" : [ ],
+          "type" : "number"
+        }, {
+          "id" : "j3_60",
+          "text" : "cpuUsagePercent",
+          "li_attr" : {
+            "id" : "j3_60"
+          },
+          "a_attr" : {
+            "href" : "#"
+          },
+          "state" : {
+            "loaded" : true,
+            "opened" : false,
+            "selected" : false,
+            "disabled" : false
+          },
+          "data" : { },
+          "children" : [ ],
+          "type" : "number"
+        } ],
+        "type" : "document"
+      } ],
+      "type" : "documentList"
+    } ],
+    "api" : [ {
+      "id" : "j1_13",
+      "text" : "Transformer",
+      "li_attr" : {
+        "id" : "j1_13"
+      },
+      "a_attr" : {
+        "href" : "javascript:void(0)",
+        "id" : "j1_13_anchor"
+      },
+      "state" : {
+        "loaded" : true,
+        "opened" : false,
+        "selected" : false,
+        "disabled" : false,
+        "hidden" : false
+      },
+      "data" : {
+        "guid" : "a5109d64-6a12-4303-9a9c-751a0644267f",
+        "columnType" : "-1",
+        "transformers" : [ ],
+        "lines" : [ ],
+        "dropList" : [ ],
+        "createList" : [ {
+          "path" : "resetBaseline",
+          "value" : "true",
+          "id" : "7d29dae6-a407-433d-90dc-b4c87c60e221",
+          "typePath" : "boolean"
+        } ],
+        "initiateList" : [ ]
+      },
+      "children" : [ ],
+      "type" : "transformer"
+    }, {
+      "id" : "j1_10",
+      "text" : "Redo",
+      "li_attr" : {
+        "id" : "j1_10"
+      },
+      "a_attr" : {
+        "href" : "javascript:void(0)",
+        "id" : "j1_10_anchor"
+      },
+      "state" : {
+        "loaded" : true,
+        "opened" : true,
+        "selected" : false,
+        "disabled" : false,
+        "hidden" : false
+      },
+      "data" : {
+        "guid" : "3f79b99e-cd0c-449b-9e84-cbafe5c321e0",
+        "indexVar" : "*index0",
+        "columnType" : "-1",
+        "redo" : "-1",
+        "interval" : "1000",
+        "repeatOn" : "success",
+        "condition" : ""
+      },
+      "children" : [ {
+        "id" : "j1_9",
+        "text" : "Group",
+        "li_attr" : {
+          "id" : "j1_9"
+        },
+        "a_attr" : {
+          "href" : "#",
+          "id" : "j1_9_anchor"
+        },
+        "state" : {
+          "loaded" : true,
+          "opened" : true,
+          "selected" : false,
+          "disabled" : false
+        },
+        "data" : {
+          "guid" : "9243a563-337c-46f4-a797-c181cde5f384",
+          "columnType" : "-1",
+          "status" : "enabled"
+        },
+        "children" : [ {
+          "id" : "j1_2",
+          "text" : "Transformer",
+          "li_attr" : {
+            "id" : "j1_2"
+          },
+          "a_attr" : {
+            "href" : "javascript:void(0)",
+            "id" : "j1_2_anchor"
+          },
+          "state" : {
+            "loaded" : true,
+            "opened" : false,
+            "selected" : false,
+            "disabled" : false,
+            "hidden" : false
+          },
+          "data" : {
+            "guid" : "0f6af2a8-73f0-44a0-8d71-d6ea7769a366",
+            "columnType" : "-1",
+            "transformers" : [ ],
+            "lines" : [ ],
+            "dropList" : [ ],
+            "createList" : [ {
+              "path" : "*runOnAllNodes",
+              "value" : "true",
+              "id" : "79b83165-5532-44cc-aa10-243053956844",
+              "typePath" : "boolean"
+            }, {
+              "path" : "milli",
+              "value" : "10000",
+              "id" : "5a3292a6-e582-43bd-9aa7-11e847951c2e",
+              "typePath" : "string"
+            } ],
+            "initiateList" : [ {
+              "path" : "*runOnAllNodes",
+              "id" : "378b4ebf-1a67-40d4-a548-926870aa9cde",
+              "typePath" : "boolean"
+            }, {
+              "path" : "milli",
+              "id" : "0fc28a34-2c3d-485c-b60e-24471a5b0e13",
+              "typePath" : "string"
+            } ]
+          },
+          "children" : [ ],
+          "type" : "transformer"
+        }, {
+          "id" : "j1_1",
+          "text" : "Invoke",
+          "li_attr" : {
+            "id" : "j1_1"
+          },
+          "a_attr" : {
+            "href" : "javascript:void(0)",
+            "id" : "j1_1_anchor"
+          },
+          "state" : {
+            "loaded" : true,
+            "opened" : false,
+            "selected" : false,
+            "disabled" : false,
+            "hidden" : false
+          },
+          "data" : {
+            "guid" : "f5d2c072-4e81-4a39-a3d7-ec79cc6b589d",
+            "columnType" : "-1",
+            "transformers" : [ {
+              "op" : "copy",
+              "from" : "/stats",
+              "to" : "/rootDoc/stats",
+              "inTypePath" : "document",
+              "outTypePath" : "document/document",
+              "direction" : "out"
+            }, {
+              "op" : "copy",
+              "from" : "/resetBaseline",
+              "to" : "/resetBaseline",
+              "inTypePath" : "boolean",
+              "outTypePath" : "boolean",
+              "direction" : "in"
+            } ],
+            "lines" : [ {
+              "inputPath" : "stats",
+              "outputPath" : "rootDoc/stats",
+              "inpJsTree" : "#launching_arrow_jsTree_function",
+              "outpJsTree" : "#landing_arrow_jsTree",
+              "INPath" : "stats",
+              "OUTPath" : "rootDoc/stats",
+              "direction" : "out",
+              "op" : "copy",
+              "line" : 0,
+              "dashedLine" : false,
+              "inType" : "document",
+              "outType" : "document",
+              "inTypePath" : "document",
+              "outTypePath" : "document/document"
+            }, {
+              "inputPath" : "resetBaseline",
+              "outputPath" : "resetBaseline",
+              "inpJsTree" : "#launching_arrow_jsTree",
+              "outpJsTree" : "#landing_arrow_jsTree_function",
+              "INPath" : "resetBaseline",
+              "OUTPath" : "resetBaseline",
+              "direction" : "in",
+              "op" : "copy",
+              "line" : 0,
+              "dashedLine" : false,
+              "inType" : "boolean",
+              "outType" : "boolean",
+              "inTypePath" : "boolean",
+              "outTypePath" : "boolean"
+            } ],
+            "dropList" : [ ],
+            "createList" : [ ],
+            "initiateList" : [ {
+              "path" : "rootDoc",
+              "id" : "9c86cc37-3f34-40b4-be57-a2606fd70634",
+              "typePath" : "document"
+            } ],
+            "fqn" : "packages/middleware/pub/server/core/getStats",
+            "serviceType" : "service",
+            "requestMethod" : "asyncQueue",
+            "status" : "enabled"
+          },
+          "children" : [ ],
+          "type" : "invoke"
+        }, {
+          "id" : "j1_6",
+          "text" : "Await",
+          "li_attr" : {
+            "id" : "j1_6"
+          },
+          "a_attr" : {
+            "href" : "javascript:void(0)",
+            "id" : "j1_6_anchor"
+          },
+          "state" : {
+            "loaded" : true,
+            "opened" : false,
+            "selected" : false,
+            "disabled" : false,
+            "hidden" : false
+          },
+          "data" : {
+            "guid" : "f70e3c6f-016c-424d-a94f-ac741bd36f6a",
+            "columnType" : "-1",
+            "status" : "enabled"
+          },
+          "children" : [ {
+            "id" : "j1_7",
+            "text" : "Invoke",
+            "li_attr" : {
+              "id" : "j1_7"
+            },
+            "a_attr" : {
+              "href" : "#",
+              "id" : "j1_7_anchor"
+            },
+            "state" : {
+              "loaded" : true,
+              "opened" : false,
+              "selected" : false,
+              "disabled" : false
+            },
+            "data" : {
+              "guid" : "8215b499-b89a-40ef-8e81-71ce2ed5eaf5",
+              "columnType" : "-1",
+              "lines" : [ {
+                "inputPath" : "docList",
+                "outputPath" : "nodes",
+                "inpJsTree" : "#launching_arrow_jsTree_function",
+                "outpJsTree" : "#landing_arrow_jsTree",
+                "INPath" : "docList",
+                "OUTPath" : "nodes",
+                "direction" : "out",
+                "op" : "copy",
+                "line" : 0,
+                "dashedLine" : false,
+                "inType" : "documentList",
+                "outType" : "documentList",
+                "inTypePath" : "documentList",
+                "outTypePath" : "documentList"
+              }, {
+                "inputPath" : "nodes",
+                "outputPath" : "docList",
+                "inpJsTree" : "#launching_arrow_jsTree",
+                "outpJsTree" : "#landing_arrow_jsTree_function",
+                "INPath" : "nodes",
+                "OUTPath" : "docList",
+                "direction" : "in",
+                "op" : "copy",
+                "line" : 0,
+                "dashedLine" : false,
+                "inType" : "documentList",
+                "outType" : "documentList",
+                "inTypePath" : "documentList",
+                "outTypePath" : "documentList"
+              }, {
+                "inputPath" : "rootDoc/stats",
+                "outputPath" : "addDoc",
+                "inpJsTree" : "#launching_arrow_jsTree",
+                "outpJsTree" : "#landing_arrow_jsTree_function",
+                "INPath" : "rootDoc/stats",
+                "OUTPath" : "addDoc",
+                "direction" : "in",
+                "op" : "copy",
+                "line" : 0,
+                "dashedLine" : false,
+                "inType" : "document",
+                "outType" : "document",
+                "inTypePath" : "document/document",
+                "outTypePath" : "document"
+              } ],
+              "transformers" : [ {
+                "op" : "copy",
+                "from" : "/docList",
+                "to" : "/nodes",
+                "inTypePath" : "documentList",
+                "outTypePath" : "documentList",
+                "direction" : "out"
+              }, {
+                "op" : "copy",
+                "from" : "/nodes",
+                "to" : "/docList",
+                "inTypePath" : "documentList",
+                "outTypePath" : "documentList",
+                "direction" : "in"
+              }, {
+                "op" : "copy",
+                "from" : "/rootDoc/stats",
+                "to" : "/addDoc",
+                "inTypePath" : "document/document",
+                "outTypePath" : "document",
+                "direction" : "in"
+              } ],
+              "fqn" : "packages/middleware/pub/docList/addDoc",
+              "serviceType" : "service",
+              "dropList" : [ ],
+              "createList" : [ ],
+              "initiateList" : [ ]
+            },
+            "children" : [ ],
+            "type" : "invoke"
+          } ],
+          "type" : "await"
+        } ],
+        "type" : "group"
+      }, {
+        "id" : "j1_12",
+        "text" : "Invoke",
+        "li_attr" : {
+          "id" : "j1_12"
+        },
+        "a_attr" : {
+          "href" : "javascript:void(0)",
+          "id" : "j1_12_anchor"
+        },
+        "state" : {
+          "loaded" : true,
+          "opened" : false,
+          "selected" : false,
+          "disabled" : false,
+          "hidden" : false
+        },
+        "data" : {
+          "guid" : "1a32368f-cff2-49ca-91d8-1b11fc961811",
+          "columnType" : "-1",
+          "transformers" : [ {
+            "op" : "copy",
+            "from" : "/nodes",
+            "to" : "/doc/nodes",
+            "inTypePath" : "documentList",
+            "outTypePath" : "document/documentList",
+            "direction" : "in"
+          } ],
+          "lines" : [ {
+            "inputPath" : "nodes",
+            "outputPath" : "doc/nodes",
+            "inpJsTree" : "#launching_arrow_jsTree",
+            "outpJsTree" : "#landing_arrow_jsTree_function",
+            "INPath" : "nodes",
+            "OUTPath" : "doc/nodes",
+            "direction" : "in",
+            "op" : "copy",
+            "line" : 0,
+            "dashedLine" : false,
+            "inType" : "documentList",
+            "outType" : "documentList",
+            "inTypePath" : "documentList",
+            "outTypePath" : "document/documentList"
+          } ],
+          "dropList" : [ ],
+          "createList" : [ {
+            "path" : "resetBaseline",
+            "value" : "false",
+            "id" : "f4ec0cb2-aba3-45cc-8ac8-26a6319b13fc",
+            "typePath" : "boolean"
+          } ],
+          "initiateList" : [ ],
+          "fqn" : "packages/middleware/pub/client/webSocket/send",
+          "serviceType" : "service"
+        },
+        "children" : [ ],
+        "type" : "invoke"
+      }, {
+        "id" : "j1_11",
+        "text" : "Transformer",
+        "li_attr" : {
+          "id" : "j1_11"
+        },
+        "a_attr" : {
+          "href" : "javascript:void(0)",
+          "id" : "j1_11_anchor"
+        },
+        "state" : {
+          "loaded" : true,
+          "opened" : false,
+          "selected" : false,
+          "disabled" : false,
+          "hidden" : false
+        },
+        "data" : {
+          "guid" : "33f10750-f48a-45ed-b266-1fa218ce90fb",
+          "columnType" : "-1",
+          "transformers" : [ ],
+          "lines" : [ ],
+          "dropList" : [ {
+            "path" : "rootDoc",
+            "typePath" : "document"
+          }, {
+            "path" : "milli",
+            "typePath" : "string"
+          }, {
+            "path" : "*runOnAllNodes",
+            "typePath" : "boolean"
+          }, {
+            "path" : "nodes",
+            "typePath" : "documentList"
+          } ],
+          "createList" : [ ],
+          "initiateList" : [ ]
+        },
+        "children" : [ ],
+        "type" : "transformer"
+      } ],
+      "type" : "redo"
+    } ],
+    "api_info" : {
+      "title" : "",
+      "description" : ""
+    },
+    "lockedByUser" : "admin"
+  },
+  "consumers" : "",
+  "developers" : "administrators,developers",
+  "enableServiceDocumentValidation" : false,
+  "created_on" : "1760564783995",
+  "modified_on" : 1760564783995
+}

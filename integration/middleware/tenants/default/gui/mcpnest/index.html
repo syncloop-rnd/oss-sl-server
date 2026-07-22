@@ -1,0 +1,2451 @@
+<!doctype html>
+<html lang="en" ng-app="mcpManagerApp">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>MCP Nest</title>
+  <link rel="preconnect" href="https://cdn.jsdelivr.net">
+  <link rel="preconnect" href="https://cdnjs.cloudflare.com">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/@phosphor-icons/web@2.1.1/src/regular/style.css" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/@phosphor-icons/web@2.1.1/src/bold/style.css" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/@phosphor-icons/web@2.1.1/src/fill/style.css" rel="stylesheet">
+  <link href="styles.css?v=20260627ah" rel="stylesheet">
+</head>
+<body ng-controller="AppController as app" ng-class="{'theme-dark': app.theme === 'dark'}">
+  <div class="top-progress" ng-class="{active: app.loadingCount > 0}"><span></span></div>
+
+  <div class="toast-stack">
+    <div class="app-toast" ng-repeat="toast in app.toasts track by toast.id" ng-class="'toast-' + toast.type">
+      <i class="ph-fill toast-icon" ng-class="toast.icon"></i>
+      <div>
+        <strong>{{toast.title}}</strong>
+        <p>{{toast.message}}</p>
+      </div>
+      <button type="button" ng-click="app.dismissToast(toast.id)" aria-label="Dismiss"><i class="ph-bold ph-x"></i></button>
+    </div>
+  </div>
+
+  <section class="login-shell" ng-if="!app.isConnected()">
+    <div class="login-visual">
+      <div class="brand-row">
+        <div class="brand-mark"><i class="ph-fill ph-hexagon"></i></div>
+        <span class="brand-badge"><i class="ph-bold ph-sparkle"></i> Developer Control Plane</span>
+      </div>
+      <h1>MCP Nest</h1>
+      <p>Connect to a Syncloop tenant, manage MCP endpoints, curate tool collections, and test tool calls from one focused workspace.</p>
+      <div class="login-pills">
+        <span><i class="ph-bold ph-shield-check"></i> Bearer auth</span>
+        <span><i class="ph-bold ph-magic-wand"></i> Swagger driven</span>
+        <span><i class="ph-bold ph-terminal-window"></i> Tool execution</span>
+        <span><i class="ph-bold ph-moon-stars"></i> Day and night themes</span>
+      </div>
+      <div class="server-endpoint-fields">
+        <label class="form-label endpoint-title">Target Server</label>
+        <div class="endpoint-row">
+          <select class="form-select endpoint-protocol" ng-model="app.login.protocol">
+            <option value="https">https</option>
+            <option value="http">http</option>
+          </select>
+          <span class="endpoint-sep">://</span>
+          <input class="form-control endpoint-host" ng-model="app.login.host" placeholder="dev-new-api.syncloop.com" required>
+          <span class="endpoint-sep">:</span>
+          <input class="form-control endpoint-port" ng-model="app.login.port" placeholder="443">
+        </div>
+      </div>
+      <div class="setup-steps">
+        <div class="setup-step">
+          <span class="setup-step-num">1</span>
+          <div>
+            <strong>Enter server endpoint</strong>
+            <p>Protocol, host, and port of your Syncloop tenant server.</p>
+          </div>
+        </div>
+        <div class="setup-step">
+          <span class="setup-step-num">2</span>
+          <div>
+            <strong>Authenticate</strong>
+            <p>Sign in with user credentials or use a bearer token directly.</p>
+          </div>
+        </div>
+        <div class="setup-step">
+          <span class="setup-step-num">3</span>
+          <div>
+            <strong>Select tenant</strong>
+            <p>Choose from available tenants and start managing your MCP workspace.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <form class="login-card" ng-submit="app.loginMode === 'token' ? app.connect() : null">
+      <div class="d-flex align-items-start justify-content-between gap-3 mb-4">
+        <div>
+          <p class="eyebrow">Authenticate</p>
+          <h2>Sign in to continue</h2>
+        </div>
+        <button class="icon-btn" type="button" ng-click="app.toggleTheme()" title="Toggle theme">
+          <i class="ph-bold" ng-class="app.theme === 'dark' ? 'ph-sun' : 'ph-moon'"></i>
+        </button>
+      </div>
+
+      <div class="login-mode-toggle">
+        <button type="button" class="login-mode-btn" ng-class="{active: app.loginMode === 'auth'}" ng-click="app.setLoginMode('auth')">Sign In</button>
+        <button type="button" class="login-mode-btn" ng-class="{active: app.loginMode === 'token'}" ng-click="app.setLoginMode('token')">Bearer Token</button>
+      </div>
+
+      <!-- Sign In: Step 1 - Credentials -->
+      <div ng-if="app.loginMode === 'auth' && app.authLogin.step === 1">
+        <div class="row g-3">
+          <div class="col-12">
+            <label class="form-label">User ID</label>
+            <input class="form-control" ng-model="app.authLogin.userId" placeholder="your-user-id" required>
+          </div>
+          <div class="col-12">
+            <label class="form-label">Password</label>
+            <div class="input-group">
+              <input class="form-control" type="password" ng-model="app.authLogin.password" autocomplete="off" required>
+            </div>
+          </div>
+        </div>
+        <div class="auth-error" ng-if="app.authLogin.error">{{app.authLogin.error}}</div>
+        <button class="btn btn-primary btn-lg w-100 mt-4" type="button" ng-click="app.basicAuthLogin()" ng-disabled="app.authLogin.busy">
+          <i class="ph-bold ph-sign-in me-2" ng-if="!app.authLogin.busy"></i>
+          <i class="ph-bold ph-spinner ph-spin me-2" ng-if="app.authLogin.busy"></i>
+          {{app.authLogin.busy ? 'Signing in...' : 'Sign In'}}
+        </button>
+      </div>
+
+      <!-- Sign In: Step 2 - Select tenant -->
+      <div ng-if="app.loginMode === 'auth' && app.authLogin.step === 2">
+        <div class="auth-step-info">
+          <i class="ph-bold ph-check-circle"></i>
+          <span>Authenticated as <strong>{{app.authLogin.userId}}</strong></span>
+        </div>
+        <label class="form-label">Select a tenant to connect</label>
+        <div class="tenant-list">
+          <button type="button" class="tenant-btn" ng-repeat="t in app.authLogin.tenants" ng-disabled="app.authLogin.busy" ng-click="app.selectTenant(t.name)" title="{{t.displayName ? t.name : ''}}">
+            <i class="ph-bold ph-buildings"></i>
+            <span class="tenant-btn-label">{{t.displayName || t.name}}</span>
+            <span class="tenant-btn-sub" ng-if="t.displayName && t.displayName !== t.name">{{t.name}}</span>
+          </button>
+        </div>
+        <div class="auth-error" ng-if="app.authLogin.error">{{app.authLogin.error}}</div>
+        <button class="btn btn-soft w-100 mt-3" type="button" ng-click="app.resetAuthLogin()" ng-disabled="app.authLogin.busy">Back</button>
+      </div>
+
+      <!-- Bearer Token -->
+      <div ng-if="app.loginMode === 'token'">
+        <div class="row g-3">
+          <div class="col-12">
+            <label class="form-label">Tenant name or id</label>
+            <input class="form-control" ng-model="app.login.tenant" placeholder="1782168784544462123" required>
+          </div>
+          <div class="col-12">
+            <label class="form-label">Bearer token</label>
+            <div class="input-group">
+              <input class="form-control" ng-attr-type="{{app.showToken ? 'text' : 'password'}}" ng-model="app.login.token" autocomplete="off" required>
+              <button class="btn btn-outline-secondary" type="button" ng-click="app.showToken = !app.showToken">
+                <i class="ph-bold" ng-class="app.showToken ? 'ph-eye-slash' : 'ph-eye'"></i>
+              </button>
+            </div>
+          </div>
+        </div>
+        <button class="btn btn-primary btn-lg w-100 mt-4" type="submit" ng-disabled="app.loadingCount > 0">
+          <i class="ph-bold ph-plugs-connected me-2"></i>Connect Workspace
+        </button>
+      </div>
+
+      <!-- Step indicators -->
+      <div class="auth-steps" ng-if="app.loginMode === 'auth' && app.authLogin.step === 1">
+        <span class="auth-step-dot active"></span>
+        <span class="auth-step-line"></span>
+        <span class="auth-step-dot"></span>
+      </div>
+
+      <div class="login-security-note">
+        <i class="ph-bold ph-lock-key"></i>
+        <span>Token stays in this browser session and is used only for tenant API calls.</span>
+      </div>
+    </form>
+  </section>
+
+  <div ng-if="app.isConnected()" class="app-shell">
+    <aside class="app-sidebar" aria-label="Workspace navigation">
+      <div class="sidebar-brand">
+        <div class="topbar-mark"><i class="ph-fill ph-hexagon"></i></div>
+        <div><strong>MCP</strong><span>Nest</span></div>
+      </div>
+      <nav class="sidebar-nav">
+        <div class="sidebar-group">
+          <div class="sidebar-group-title">Application Menu</div>
+          <button type="button" class="sidebar-tile" ng-class="{active: app.tab==='dashboard'}" ng-click="app.openDashboard()">
+            <span class="tile-main"><i class="ph-bold ph-chart-donut"></i><span class="tile-label">Dashboard</span></span>
+            <span class="tile-meta" ng-if="app.dashboard.zoom.zoomLevel">{{app.dashboard.zoom.zoomLevel}}</span>
+            <span class="tile-action muted" aria-hidden="true"><i class="ph-bold ph-chart-line-up"></i></span>
+          </button>
+          <button type="button" class="sidebar-tile" ng-class="{active: app.tab==='mcps'}" ng-click="app.openMcps()">
+            <span class="tile-main"><i class="ph-bold ph-hard-drives"></i><span class="tile-label">APPs</span></span>
+            <span class="tile-meta" ng-if="app.sidebarCounts.mcpCount > 0">{{app.sidebarCounts.mcpCount}}</span>
+            <span class="tile-action" data-bs-toggle="modal" data-bs-target="#addMcpModal" ng-click="$event.stopPropagation(); app.startAddMcp()" title="Add APP" aria-label="Add APP"><i class="ph-bold ph-plus"></i></span>
+          </button>
+          <button type="button" class="sidebar-tile" ng-class="{active: app.tab==='collections'}" ng-click="app.openCollections()">
+            <span class="tile-main"><i class="ph-bold ph-stack"></i><span class="tile-label">Collections</span></span>
+            <span class="tile-meta" ng-if="app.sidebarCounts.collectionCount > 0">{{app.sidebarCounts.collectionCount}}</span>
+            <span class="tile-action" data-bs-toggle="modal" data-bs-target="#collectionWizardModal" ng-click="$event.stopPropagation(); app.startCollectionWizard()" title="Create collection" aria-label="Create collection"><i class="ph-bold ph-plus"></i></span>
+          </button>
+          <button type="button" class="sidebar-tile" ng-class="{active: app.tab==='interceptors'}" ng-click="app.openInterceptors()">
+            <span class="tile-main"><i class="ph-bold ph-lightning"></i><span class="tile-label">Interceptors</span></span>
+            <span class="tile-meta" ng-if="app.interceptors.list.length > 0">{{app.interceptors.list.length}}</span>
+            <span class="tile-action" data-bs-toggle="modal" data-bs-target="#addInterceptorModal" ng-click="$event.stopPropagation(); app.startAddInterceptor()" title="Add interceptor" aria-label="Add interceptor"><i class="ph-bold ph-plus"></i></span>
+          </button>
+        </div>
+
+        <div class="sidebar-group">
+          <div class="sidebar-group-title">Admin Menu</div>
+          <button type="button" class="sidebar-tile" ng-class="{active: app.tab==='oauth'}" ng-click="app.openOAuthManager()">
+            <span class="tile-main"><i class="ph-bold ph-shield-check"></i><span class="tile-label">OAuth Manager</span></span>
+            <span class="tile-meta" ng-if="app.oauth.setups.length > 0">{{app.oauth.setups.length}}</span>
+            <span class="tile-action" ng-click="$event.stopPropagation(); app.openAddOAuthSetup()" title="Add credential" aria-label="Add credential"><i class="ph-bold ph-plus"></i></span>
+            <span class="tile-action" ng-click="$event.stopPropagation(); app.openMappingProfiles()" title="Mapping profiles" aria-label="Mapping profiles"><i class="ph-bold ph-tree-structure"></i></span>
+          </button>
+          <button type="button" class="sidebar-tile" ng-class="{active: app.tab==='productManager'}" ng-click="app.tab='productManager'">
+            <span class="tile-main"><i class="ph-bold ph-database"></i><span class="tile-label">Product Manager</span></span>
+            <span class="tile-meta" ng-if="5 > 0">5</span>
+            <span class="tile-action muted" aria-hidden="true"><i class="ph-bold ph-wrench"></i></span>
+          </button>
+          <button type="button" class="sidebar-tile" ng-class="{active: app.tab==='explorer'}" ng-click="app.tab='explorer'">
+            <span class="tile-main"><i class="ph-bold ph-code"></i><span class="tile-label">API Explorer</span></span>
+            <span class="tile-meta">{{app.operations.length || 0}}</span>
+            <span class="tile-action muted" aria-hidden="true"><i class="ph-bold ph-plus"></i></span>
+          </button>
+        </div>
+      </nav>
+      <div class="sidebar-card">
+        <i class="ph-fill ph-lightning"></i>
+        <strong>Ready to execute</strong>
+        <span>{{app.operations.length || 0}} API operations indexed</span>
+      </div>
+    </aside>
+    <div class="app-main">
+    <header class="app-topbar">
+      <div class="d-flex align-items-center gap-3">
+        <div class="topbar-mark"><i class="ph-fill ph-hexagon"></i></div>
+        <div>
+          <h1>MCP Nest</h1>
+          <p>{{app.baseUrl}}</p>
+        </div>
+      </div>
+      <div class="topbar-actions">
+        <button class="icon-action-btn" ng-click="app.toggleTheme()" title="Toggle theme">
+          <i class="ph-bold" ng-class="app.theme === 'dark' ? 'ph-sun' : 'ph-moon'"></i>
+        </button>
+        <button class="icon-action-btn" ng-click="app.refreshAll()" title="Refresh workspace">
+          <i class="ph-bold ph-arrows-clockwise"></i>
+        </button>
+        <div class="user-chip">
+          <i class="ph-fill ph-shield-check"></i>
+          <span>{{app.login.tenant}}</span>
+        </div>
+        <button class="btn btn-outline-danger" ng-click="app.logout()">
+          <i class="ph-bold ph-sign-out me-2"></i>Logout
+        </button>
+      </div>
+    </header>
+
+    <main class="container-fluid page-wrap">
+      <section class="command-strip">
+        <div class="command-endpoint-card">
+          <i class="ph-bold ph-link-simple"></i>
+          <span>MCP endpoint</span>
+          <div class="command-value-row">
+            <strong>{{app.mcpEndpointUrl()}}</strong>
+            <button type="button" class="command-copy-icon" ng-click="app.copyMcpEndpoint()" title="Copy MCP endpoint" aria-label="Copy MCP endpoint">
+              <i class="ph-bold ph-copy"></i>
+            </button>
+          </div>
+        </div>
+        <div class="d-flex align-items-center gap-2" ng-if="app.tab==='mcps'">
+          <div class="active-pills">
+            <button type="button" class="active-pill" ng-class="{on: app.filters.mcpActive === 'active'}" ng-click="app.filters.mcpActive = 'active'; app.filters.mcpPage = 1; app.reloadMcpsList()">Active</button>
+            <button type="button" class="active-pill" ng-class="{on: app.filters.mcpActive === 'available'}" ng-click="app.filters.mcpActive = 'available'; app.filters.mcpPage = 1; app.reloadMcpsList()">Available</button>
+            <button type="button" class="active-pill" ng-class="{on: app.filters.mcpActive === 'all'}" ng-click="app.filters.mcpActive = 'all'; app.filters.mcpPage = 1; app.reloadMcpsList()">All</button>
+          </div>
+          <button type="button" class="command-copy-icon accent" ng-click="app.loadMcpCategories(); app.showModal('mcpCategoryFilterModal')" title="Filter by category" aria-label="Filter by category" ng-class="{active: app.categoryFilter.selectedMcpCategories.length}"><i class="ph-bold ph-tag"></i></button>
+          <button type="button" class="command-copy-icon accent" ng-click="app.reloadMcpsList()" title="Refresh MCPs" aria-label="Refresh MCPs"><i class="ph-bold ph-arrows-clockwise"></i></button>
+        </div>
+        <div class="d-flex align-items-center gap-2" ng-if="app.tab==='oauth'">
+          <div class="active-pills">
+            <button type="button" class="active-pill" ng-class="{on: app.filters.oauthActive === 'active'}" ng-click="app.filters.oauthActive = 'active'">Active</button>
+            <button type="button" class="active-pill" ng-class="{on: app.filters.oauthActive === 'inactive'}" ng-click="app.filters.oauthActive = 'inactive'">Inactive</button>
+          </div>
+          <button type="button" class="command-copy-icon accent" ng-click="app.openAddOAuthSetup()" title="Add credential" aria-label="Add credential"><i class="ph-bold ph-plus"></i></button>
+          <button type="button" class="command-copy-icon accent" ng-click="app.mergeDefaultOAuthCatalog()" title="Merge default OAuth catalog" aria-label="Merge default OAuth catalog"><i class="ph-bold ph-database"></i></button>
+          <button type="button" class="command-copy-icon accent" ng-click="app.loadOAuthCategories(); app.showModal('oauthCategoryFilterModal')" title="Filter by category" aria-label="Filter by category" ng-class="{active: app.categoryFilter.selectedOAuthCategories.length}"><i class="ph-bold ph-tag"></i></button>
+          <button type="button" class="command-copy-icon accent" ng-click="app.listOAuthSetups()" title="Refresh setups" aria-label="Refresh setups"><i class="ph-bold ph-arrows-clockwise"></i></button>
+        </div>
+        <div class="d-flex align-items-center gap-2" ng-if="app.tab==='dashboard'">
+          <button type="button" class="command-copy-icon accent" ng-click="app.refreshDashboard()" title="Refresh dashboard" aria-label="Refresh dashboard"><i class="ph-bold ph-arrows-clockwise"></i></button>
+        </div>
+      </section>
+
+      <section ng-show="app.tab==='mcps'" class="content-grid">
+        <div class="panel">
+          <div class="panel-head">
+            <div>
+              <h3>MCP APPs</h3>
+              <p>{{app.mcpPagination.filtered}} endpoint(s)</p>
+            </div>
+            <div class="d-flex align-items-center gap-2">
+              <div class="selected-category-tags" ng-if="app.categoryFilter.selectedMcpCategories.length">
+                <span class="category-tag selected" ng-repeat="cat in app.categoryFilter.selectedMcpCategories track by $index" ng-click="app.toggleMcpCategory(cat); app.reloadMcpsList()">{{cat}} <i class="ph-bold ph-x"></i></span>
+              </div>
+              <div class="search-box">
+                <i class="ph-bold ph-magnifying-glass"></i>
+                <input ng-model="app.filters.mcp" placeholder="Search MCPs" ng-change="app.filters.mcpPage = 1; app.reloadMcpsList()">
+              </div>
+            </div>
+          </div>
+          <div class="empty-state" ng-if="!app.filteredMcps().length">
+            <i class="ph-bold ph-folder-open"></i>
+            <h4>No MCP APPs loaded</h4>
+            <p>Add an MCP APP or refresh the current tenant.</p>
+          </div>
+          <div class="mcp-list">
+            <article class="mcp-card" ng-repeat="mcp in app.paginatedMcps().items track by mcp.mcpId" ng-class="{selected: app.selectedMcp && app.selectedMcp.mcpId === mcp.mcpId, inactive: !app.isMcpReady(mcp)}" ng-click="app.selectMcp(mcp)">
+              <button type="button" class="mcp-edit-icon-btn" ng-if="app.isMcpReady(mcp)" ng-click="$event.stopPropagation(); app.editMcp(mcp)" title="Edit MCP" aria-label="Edit MCP">
+                <i class="ph-bold ph-pencil-simple"></i>
+              </button>
+              <button type="button" class="mcp-edit-icon-btn mcp-clone-icon-btn" ng-if="app.isMcpReady(mcp)" ng-click="$event.stopPropagation(); app.openCloneMcp(mcp)" title="Clone MCP" aria-label="Clone MCP">
+                <i class="ph-bold ph-copy-simple"></i>
+              </button>
+              <button type="button" class="mcp-edit-icon-btn mcp-clone-icon-btn" ng-if="!app.isMcpReady(mcp)" ng-click="$event.stopPropagation(); app.openCloneMcp(mcp)" title="Use this app" aria-label="Use this app">
+                <i class="ph-bold ph-plus"></i>
+              </button>
+              <button type="button" class="mcp-edit-icon-btn mcp-oauth-icon-btn" ng-if="app.isMcpReady(mcp) && mcp.authType === 'OIDC'" ng-click="$event.stopPropagation(); app.startOAuthAuthorizationForMcp(mcp)" title="Authorize OAuth" aria-label="Authorize OAuth">
+                <i class="ph-bold ph-arrow-square-out"></i>
+              </button>
+              <button type="button" class="mcp-edit-icon-btn mcp-delete-icon-btn" ng-if="app.isMcpReady(mcp)" ng-click="$event.stopPropagation(); app.deleteMcpEndpoint(mcp)" title="Delete MCP" aria-label="Delete MCP">
+                <i class="ph-bold ph-trash"></i>
+              </button>
+              <div>
+                <div class="d-flex align-items-center gap-2">
+                  <span class="status-dot oauth-setup-ready-dot" ng-class="{on: mcp.ready}"></span>
+                  <h4>{{mcp.alias || mcp.name || 'Unnamed MCP'}}</h4>
+                </div>
+                <p title="{{mcp.description || ''}}">{{app.truncateText(mcp.description || 'No description available', 50)}}</p>
+                <div class="mcp-endpoint-row" title="{{mcp.endpoint}}">
+                  <button type="button" class="mcp-copy-icon-btn" ng-click="$event.stopPropagation(); app.copyText(mcp.endpoint)" title="Copy endpoint" aria-label="Copy endpoint">
+                    <i class="ph-bold ph-copy"></i>
+                  </button>
+                  <code class="mcp-endpoint-text">{{app.truncateText(mcp.endpoint, 35)}}</code>
+                  <span class="mcp-categories-icon" ng-if="mcp.categories && mcp.categories.length" title="{{mcp.categories.join(', ')}}">
+                    <i class="ph-bold ph-tag"></i>
+                    <span class="mcp-categories-count">{{mcp.categories.length}}</span>
+                  </span>
+                </div>
+              </div>
+            </article>
+          </div>
+          <div class="panel-footer pagination-footer" ng-if="app.paginatedMcps().total > 0">
+            <span class="pagination-info">{{app.mcpPageRange()}}</span>
+            <div class="pagination-controls">
+              <button type="button" class="btn btn-sm btn-outline-secondary" ng-disabled="app.filters.mcpPage <= 1" ng-click="app.mcpPrevPage()"><i class="ph-bold ph-caret-left"></i></button>
+              <span class="pagination-page">{{app.paginatedMcps().page}} / {{app.paginatedMcps().totalPages}}</span>
+              <button type="button" class="btn btn-sm btn-outline-secondary" ng-disabled="app.filters.mcpPage >= app.paginatedMcps().totalPages" ng-click="app.mcpNextPage()"><i class="ph-bold ph-caret-right"></i></button>
+            </div>
+          </div>
+        </div>
+
+        <div class="panel">
+          <div class="panel-head">
+            <div>
+              <h3>{{app.selectedMcp ? app.selectedMcp.alias + ' Tools' : 'Tools'}}</h3>
+              <p>{{app.filteredTools().length}} tool(s)</p>
+            </div>
+            <div class="search-row" ng-if="app.selectedMcp">
+              <button type="button" class="icon-action-btn" ng-if="app.isMcpReady(app.selectedMcp)" ng-click="app.refreshMcpTools(app.selectedMcp)" ng-disabled="app.refreshingMcpTools[app.selectedMcp.mcpId]" title="Re-fetch tools from the MCP endpoint" aria-label="Re-fetch tools">
+                <i class="ph-bold" ng-class="app.refreshingMcpTools[app.selectedMcp.mcpId] ? 'ph-spinner ph-spin' : 'ph-arrows-clockwise'"></i>
+                <span>Re-fetch Tools</span>
+              </button>
+              <div class="search-box">
+                <i class="ph-bold ph-magnifying-glass"></i>
+                <input ng-model="app.filters.tool" placeholder="Search tools">
+              </div>
+            </div>
+            <div class="search-box" ng-if="!app.selectedMcp">
+              <i class="ph-bold ph-magnifying-glass"></i>
+              <input ng-model="app.filters.tool" placeholder="Search tools" disabled>
+            </div>
+          </div>
+          <div class="empty-state" ng-if="!app.selectedMcp">
+            <i class="ph-bold ph-cursor-click"></i>
+            <h4>Select an MCP</h4>
+            <p>Choose an endpoint to load and inspect its tools.</p>
+          </div>
+          <div class="tool-table" ng-if="app.selectedMcp">
+            <div class="tool-row header">
+              <span>Name</span><span>Description</span><span>Status</span><span>Actions</span>
+            </div>
+            <div class="tool-row" ng-repeat="tool in app.filteredTools() track by tool.toolId">
+              <div class="tool-name-cell">
+                <strong>{{tool.name}}</strong>
+                <code class="tool-id-subline" title="{{tool.toolId}}">{{tool.toolId}}</code>
+              </div>
+              <div class="tool-description-cell">
+                <span class="tool-description-text" title="{{tool.description || ''}}">{{app.truncateText(tool.description, 200) || 'No description'}}</span>
+                <button class="icon-btn-sm tool-expand-btn" ng-if="tool.description && tool.description.length > 200" ng-click="app.showDescription(tool)" title="View full description"><i class="ph-bold ph-arrows-out"></i></button>
+              </div>
+              <span>
+                <label class="android-switch" title="{{tool.enabled ? 'Disable tool' : 'Enable tool'}}">
+                  <input type="checkbox" ng-checked="tool.enabled" ng-click="app.toggleTool(tool)">
+                  <span class="android-slider"></span>
+                </label>
+              </span>
+              <span class="row-actions">
+                <button class="icon-btn-sm" ng-click="app.showUsage(tool)" title="Usage"><i class="ph-bold ph-file-text"></i></button>
+                <button class="icon-btn-sm primary" ng-click="app.openCallTool(tool)" title="Run tool"><i class="ph-bold ph-terminal-window"></i></button>
+                <button class="icon-btn-sm danger" ng-click="app.deleteMcpTool(tool, app.selectedMcp.mcpId)" title="Delete tool"><i class="ph-bold ph-trash"></i></button>
+              </span>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section ng-show="app.tab==='collections'" class="content-grid">
+        <div class="panel">
+          <div class="panel-head">
+            <div>
+              <h3>Tool Collections</h3>
+              <p>{{app.filteredCollections().length}} collection(s)</p>
+            </div>
+            <div class="d-flex align-items-center gap-2">
+              <button type="button" class="command-copy-icon accent" ng-click="app.reloadCollectionsList()" title="Refresh collections" aria-label="Refresh collections"><i class="ph-bold ph-arrows-clockwise"></i></button>
+              <div class="search-box">
+                <i class="ph-bold ph-magnifying-glass"></i>
+                <input ng-model="app.filters.collection" placeholder="Search collections">
+              </div>
+            </div>
+          </div>
+
+          <div class="empty-state" ng-if="!app.filteredCollections().length">
+            <i class="ph-bold ph-stack"></i>
+            <h4>No collections loaded</h4>
+            <p>Create a collection or refresh to load available collection ids.</p>
+          </div>
+
+          <div class="mcp-list" ng-if="app.filteredCollections().length">
+            <article class="mcp-card collection-card" ng-repeat="collection in app.filteredCollections() track by collection.collectionId" ng-class="{selected: app.collectionLookup.id === collection.collectionId}" ng-click="app.selectCollection(collection)">
+              <button type="button" class="mcp-edit-icon-btn" ng-click="$event.stopPropagation(); app.editCollectionFromList(collection)" title="Edit collection" aria-label="Edit collection">
+                <i class="ph-bold ph-pencil-simple"></i>
+              </button>
+              <button type="button" class="mcp-edit-icon-btn mcp-clone-icon-btn" ng-click="$event.stopPropagation(); app.cloneCollectionFromList(collection)" title="Clone collection" aria-label="Clone collection">
+                <i class="ph-bold ph-copy-simple"></i>
+              </button>
+              <button type="button" class="mcp-edit-icon-btn mcp-delete-icon-btn" ng-click="$event.stopPropagation(); app.deleteToolCollection(collection)" title="Delete collection" aria-label="Delete collection">
+                <i class="ph-bold ph-trash"></i>
+              </button>
+              <div>
+                <div class="d-flex align-items-center gap-2">
+                  <span class="status-dot" ng-class="{on: collection.enabled}"></span>
+                  <h4>{{collection.collectionName || collection.collectionId}}</h4>
+                </div>
+                <p title="{{collection.description || ''}}">{{app.truncateText(collection.description || 'No description available', 70)}}</p>
+                <div class="mcp-endpoint-row" title="{{collection.collectionId}}">
+                  <button type="button" class="mcp-copy-icon-btn" ng-click="$event.stopPropagation(); app.copyText('**Collection name:** ' + (collection.collectionName || collection.collectionId) + ' (id: ' + collection.collectionId + '):\n**Description:** ' + (collection.description || ''))" title="Copy collection info" aria-label="Copy collection info">
+                    <i class="ph-bold ph-copy"></i>
+                  </button>
+                  <code class="mcp-endpoint-text">{{app.truncateText(collection.collectionId, 36)}}</code>
+                </div>
+              </div>
+            </article>
+          </div>
+        </div>
+
+        <div class="panel">
+          <div class="panel-head">
+            <div>
+              <h3>{{app.collectionLookup.id ? (app.truncateText(app.collectionLookup.id, 16) + ' Tools') : 'Collection Tools'}}</h3>
+              <p>{{app.filteredCollectionTools().length}} tool(s)</p>
+            </div>
+            <div class="search-row" ng-if="app.collectionLookup.id">
+              <button type="button" class="icon-action-btn" ng-click="app.loadCollectionTools(app.collectionLookup.id)" title="Refresh collection tools" aria-label="Refresh collection tools">
+                <i class="ph-bold ph-arrows-clockwise"></i>
+                <span>Refresh Tools</span>
+              </button>
+              <div class="search-box">
+                <i class="ph-bold ph-magnifying-glass"></i>
+                <input ng-model="app.filters.collectionTool" placeholder="Search collection tools">
+              </div>
+            </div>
+          </div>
+
+          <div class="empty-state" ng-if="!app.collectionLookup.id">
+            <i class="ph-bold ph-cursor-click"></i>
+            <h4>Select a collection</h4>
+            <p>Choose a collection to inspect and manage its tools.</p>
+          </div>
+
+          <div class="tool-table collection-tool-table" ng-if="app.collectionLookup.id">
+            <div class="tool-row header"><span>Tool</span><span>Description</span><span>Status</span><span>Actions</span></div>
+            <div class="tool-row" ng-repeat="tool in app.filteredCollectionTools() track by (tool.collectionToolId || tool.toolId)">
+              <div class="tool-name-cell">
+                <strong>{{tool.alias || tool.name}}</strong>
+                <code class="tool-id-subline" title="{{tool.collectionToolId || tool.toolId}}">{{tool.collectionToolId || tool.toolId}}</code>
+              </div>
+              <div class="tool-description-cell">
+                <span class="tool-description-text" title="{{tool.description || ''}}">{{app.truncateText(tool.description, 200) || 'No description'}}</span>
+                <button class="icon-btn-sm tool-expand-btn" ng-if="tool.description && tool.description.length > 200" ng-click="app.showDescription(tool)" title="View full description"><i class="ph-bold ph-arrows-out"></i></button>
+              </div>
+              <span>
+                <label class="android-switch" title="{{tool.enabled ? 'Disable tool in collection' : 'Enable tool in collection'}}">
+                  <input type="checkbox" ng-checked="tool.enabled" ng-click="app.toggleToolInCollection(app.collectionLookup.id, tool)">
+                  <span class="android-slider"></span>
+                </label>
+              </span>
+              <span class="row-actions">
+                <button class="icon-btn-sm" ng-click="app.showUsage(tool)" title="Usage"><i class="ph-bold ph-file-text"></i></button>
+                <button class="icon-btn-sm primary" ng-click="app.openCallTool(tool, { collectionToolId: tool.collectionToolId })" title="Run tool"><i class="ph-bold ph-terminal-window"></i></button>
+                <button class="icon-btn-sm" ng-click="app.openEditCollectionTool(tool)" title="Edit mapping"><i class="ph-bold ph-pencil-simple"></i></button>
+                <button class="icon-btn-sm" ng-click="app.openCloneCollectionTool(tool)" title="Clone mapping"><i class="ph-bold ph-copy"></i></button>
+                <button class="icon-btn-sm danger" ng-click="app.removeToolFromCollection(app.collectionLookup.id, tool)" title="Remove"><i class="ph-bold ph-trash"></i></button>
+              </span>
+            </div>
+            <div class="empty-state compact" ng-if="!app.filteredCollectionTools().length">
+              <i class="ph-bold ph-package"></i>
+              <h4>No collection tools loaded</h4>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section ng-show="app.tab==='interceptors'" class="content-grid">
+        <div class="panel">
+          <div class="panel-head">
+            <div>
+              <h3>Interceptors</h3>
+              <p>{{app.interceptors.list.length}} interceptor(s)</p>
+            </div>
+            <div class="d-flex align-items-center gap-2">
+              <button type="button" class="command-copy-icon accent" ng-click="app.listInterceptors()" title="Refresh interceptors" aria-label="Refresh interceptors"><i class="ph-bold ph-arrows-clockwise"></i></button>
+              <div class="search-box">
+                <i class="ph-bold ph-magnifying-glass"></i>
+                <input ng-model="app.interceptors.filter" placeholder="Search interceptors">
+              </div>
+            </div>
+          </div>
+
+          <div class="empty-state" ng-if="!app.interceptors.list.length && !app.interceptors.loading">
+            <i class="ph-bold ph-lightning"></i>
+            <h4>No interceptors</h4>
+            <p>Add an interceptor to get started.</p>
+          </div>
+
+          <div class="dashboard-status" ng-if="app.interceptors.loading">
+            <div class="spinner-border spinner-border-sm me-2" role="status"></div>
+            <span>Loading interceptors&hellip;</span>
+          </div>
+
+          <div class="mcp-list">
+            <article class="mcp-card interceptor-card" ng-repeat="interceptor in app.filteredInterceptors() track by interceptor.apiId" ng-class="{selected: app.interceptors.selected && app.interceptors.selected.apiId === interceptor.apiId}" ng-click="app.selectInterceptor(interceptor)">
+              <button type="button" class="mcp-edit-icon-btn" ng-click="$event.stopPropagation(); app.editInterceptor(interceptor)" title="Edit interceptor" aria-label="Edit interceptor">
+                <i class="ph-bold ph-pencil-simple"></i>
+              </button>
+              <button type="button" class="mcp-edit-icon-btn mcp-delete-icon-btn" ng-click="$event.stopPropagation(); app.deleteInterceptor(interceptor)" title="Delete interceptor" aria-label="Delete interceptor">
+                <i class="ph-bold ph-trash"></i>
+              </button>
+              <div>
+                <div class="d-flex align-items-center gap-2">
+                  <h4>{{interceptor.apiId || 'Unnamed Interceptor'}}</h4>
+                </div>
+                <p title="{{interceptor.direction || ''}}">Direction: {{interceptor.direction || 'N/A'}}</p>
+                <div class="mcp-endpoint-row" title="{{interceptor.mcpToolId}}">
+                  <code class="mcp-endpoint-text">{{app.truncateText(interceptor.mcpToolId, 35) || 'No tool assigned'}}</code>
+                </div>
+              </div>
+            </article>
+          </div>
+        </div>
+
+        <div class="panel">
+          <div class="panel-head">
+            <div>
+              <h3>{{app.interceptors.selected ? 'Interceptor Details' : 'Select an Interceptor'}}</h3>
+              <p ng-if="app.interceptors.selected">{{app.interceptors.selected.apiId}}</p>
+            </div>
+          </div>
+          <div class="empty-state" ng-if="!app.interceptors.selected">
+            <i class="ph-bold ph-cursor-click"></i>
+            <h4>No interceptor selected</h4>
+            <p>Choose an interceptor from the list to view its details.</p>
+          </div>
+        </div>
+      </section>
+
+      <section ng-show="app.tab==='productManager'" class="panel full-panel">
+        <div class="panel-head">
+          <div>
+            <h3>Product Manager</h3>
+            <p>Run MCP Nest database export, import, recreate, and migration services.</p>
+          </div>
+        </div>
+
+        <div class="product-manager-grid">
+          <article class="sub-panel product-card">
+            <h4><i class="ph-bold ph-export me-2"></i>Export database</h4>
+            <p>Export all MCP Nest tables into a response payload.</p>
+            <button class="btn btn-primary" type="button" ng-click="app.exportProductDatabase()"><i class="ph-bold ph-export me-2"></i>Run export</button>
+            <pre class="json-view compact" ng-if="app.productManager.exportResult">{{app.productManager.exportResult | json}}</pre>
+          </article>
+
+          <article class="sub-panel product-card">
+            <h4><i class="ph-bold ph-download-simple me-2"></i>Import database</h4>
+            <p>Import exported table payload into MCP Nest database.</p>
+            <label class="form-label">Import request JSON</label>
+            <textarea class="form-control code-input" rows="9" ng-model="app.productManager.importPayloadText" spellcheck="false"></textarea>
+            <div class="d-flex gap-2 mt-3">
+              <button class="btn btn-soft" type="button" ng-click="app.useExportForImport()"><i class="ph-bold ph-arrow-bend-down-left me-2"></i>Use latest export</button>
+              <button class="btn btn-primary" type="button" ng-click="app.importProductDatabase()"><i class="ph-bold ph-download-simple me-2"></i>Run import</button>
+            </div>
+            <pre class="json-view compact" ng-if="app.productManager.importResult">{{app.productManager.importResult | json}}</pre>
+          </article>
+
+          <article class="sub-panel product-card">
+            <h4><i class="ph-bold ph-trash me-2"></i>Recreate database</h4>
+            <p>Drop and recreate MCP Nest tables, then seed default terminal MCP if enabled.</p>
+            <div class="row g-3">
+              <div class="col-12">
+                <label class="wizard-switch android-switch-row">
+                  <span class="android-switch">
+                    <input type="checkbox" ng-model="app.productManager.recreate.includeDefaultTerminal">
+                    <span class="android-slider"></span>
+                  </span>
+                  <span><strong>Include default terminal</strong><small>Create default terminal MCP if missing</small></span>
+                </label>
+              </div>
+              <div class="col-12">
+                <label class="form-label">Default terminal root</label>
+                <input class="form-control" ng-model="app.productManager.recreate.defaultTerminalRoot" placeholder="C:\\workspace\\project">
+              </div>
+            </div>
+            <button class="btn btn-danger mt-3" type="button" ng-click="app.recreateProductDatabase()"><i class="ph-bold ph-arrows-counter-clockwise me-2"></i>Run recreate</button>
+            <pre class="json-view compact" ng-if="app.productManager.recreate.result">{{app.productManager.recreate.result | json}}</pre>
+          </article>
+
+          <article class="sub-panel product-card">
+            <h4><i class="ph-bold ph-arrow-fat-lines-right me-2"></i>Migrate database</h4>
+            <p>Run export + recreate + import sequence and initialize default data.</p>
+            <div class="row g-3">
+              <div class="col-12">
+                <label class="wizard-switch android-switch-row">
+                  <span class="android-switch">
+                    <input type="checkbox" ng-model="app.productManager.migrate.includeDefaultTerminal">
+                    <span class="android-slider"></span>
+                  </span>
+                  <span><strong>Include default terminal</strong><small>Create default terminal MCP if missing</small></span>
+                </label>
+              </div>
+              <div class="col-12">
+                <label class="form-label">Default terminal root</label>
+                <input class="form-control" ng-model="app.productManager.migrate.defaultTerminalRoot" placeholder="C:\\workspace\\project">
+              </div>
+            </div>
+            <button class="btn btn-warning mt-3" type="button" ng-click="app.migrateProductDatabase()"><i class="ph-bold ph-arrows-left-right me-2"></i>Run migration</button>
+            <pre class="json-view compact" ng-if="app.productManager.migrate.result">{{app.productManager.migrate.result | json}}</pre>
+          </article>
+
+          <article class="sub-panel product-card">
+            <h4><i class="ph-bold ph-broom me-2"></i>Purge tool call logs</h4>
+            <p>Delete tool call audit logs older than the retention window.</p>
+            <label class="form-label">Retain days</label>
+            <input class="form-control" type="number" min="0" ng-model="app.productManager.purge.retainDays">
+            <button class="btn btn-outline-danger mt-3" type="button" ng-click="app.purgeToolLogs()"><i class="ph-bold ph-trash me-2"></i>Run purge</button>
+            <pre class="json-view compact" ng-if="app.productManager.purge.result">{{app.productManager.purge.result | json}}</pre>
+          </article>
+        </div>
+      </section>
+
+      <section ng-show="app.tab==='dashboard'" class="panel full-panel dashboard-panel">
+        <div class="panel-head">
+          <div>
+            <h3>MCPNest Dashboard</h3>
+            <p>Transaction analytics across MCPs, collections, and tools.</p>
+          </div>
+          <div class="dashboard-zoom">
+            <div class="zoom-pills" role="tablist">
+              <button type="button" class="zoom-pill" ng-class="{on: app.dashboard.zoom.zoomLevel==='1day'}" ng-click="app.setDashboardZoom('1day')">1 day</button>
+              <button type="button" class="zoom-pill" ng-class="{on: app.dashboard.zoom.zoomLevel==='1week'}" ng-click="app.setDashboardZoom('1week')">1 week</button>
+              <button type="button" class="zoom-pill" ng-class="{on: app.dashboard.zoom.zoomLevel==='1month'}" ng-click="app.setDashboardZoom('1month')">1 month</button>
+              <button type="button" class="zoom-pill" ng-class="{on: app.dashboard.zoom.zoomLevel==='custom'}" ng-click="app.setDashboardZoom('custom')">Custom</button>
+            </div>
+            <div class="zoom-custom" ng-if="app.dashboard.zoom.zoomLevel==='custom'">
+              <input type="datetime-local" class="form-control form-control-sm" ng-model="app.dashboard.zoom.startDate" ng-change="app.applyDashboardZoom()" title="Start date">
+              <span class="zoom-sep">to</span>
+              <input type="datetime-local" class="form-control form-control-sm" ng-model="app.dashboard.zoom.endDate" ng-change="app.applyDashboardZoom()" title="End date">
+            </div>
+          </div>
+        </div>
+
+        <nav class="dashboard-breadcrumbs" aria-label="Dashboard drill-down">
+          <button type="button" class="crumb" ng-class="{current: $index===app.dashboard.stack.length-1}" ng-repeat="level in app.dashboard.stack track by $index" ng-click="app.popDashboardTo($index)">
+            <i class="ph-bold" ng-class="$index===0 ? 'ph-chart-donut' : ($index===1 ? 'ph-hard-drives' : ($index===2 ? 'ph-stack' : 'ph-wrench'))"></i>
+            <span ng-if="$index===0">Overview</span>
+            <span ng-if="$index===1">{{level.label}}</span>
+            <span ng-if="$index===2">{{level.label}}</span>
+            <span ng-if="$index===3">{{level.label}}</span>
+          </button>
+          <button type="button" class="crumb back-crumb" ng-if="app.dashboard.stack.length>1" ng-click="app.popDashboard()" title="Back">
+            <i class="ph-bold ph-arrow-left"></i>
+            <span>Back</span>
+          </button>
+        </nav>
+
+        <div class="dashboard-status" ng-if="app.dashboard.current.loading">
+          <div class="spinner-border spinner-border-sm me-2" role="status"></div>
+          <span>Loading {{app.dashboard.current.level}}&hellip;</span>
+        </div>
+        <div class="alert alert-danger dashboard-error" ng-if="app.dashboard.current.error">
+          <i class="ph-bold ph-warning-circle me-2"></i>{{app.dashboard.current.error}}
+          <button type="button" class="btn btn-sm btn-outline-danger ms-3" ng-click="app.reloadDashboardCurrent()">Retry</button>
+        </div>
+
+        <div ng-if="app.dashboard.current.level==='overview'">
+          <div class="dashboard-kpis">
+            <div class="kpi-card"><span class="kpi-label">Total transactions</span><strong class="kpi-value">{{app.dashboard.current.data.totalTransactions || 0}}</strong></div>
+            <div class="kpi-card success"><span class="kpi-label">Success</span><strong class="kpi-value">{{app.dashboard.current.data.successCount || 0}}</strong></div>
+            <div class="kpi-card danger"><span class="kpi-label">Failures</span><strong class="kpi-value">{{app.dashboard.current.data.failureCount || 0}}</strong></div>
+            <div class="kpi-card"><span class="kpi-label">MCPs</span><strong class="kpi-value">{{app.dashboard.current.data.mcpCount || 0}}</strong></div>
+            <div class="kpi-card"><span class="kpi-label">Collections</span><strong class="kpi-value">{{app.dashboard.current.data.collectionCount || 0}}</strong></div>
+          </div>
+
+          <div class="dashboard-empty" ng-if="!app.dashboard.current.loading && !app.dashboardItemsWithTransactions(app.dashboard.current.data.collections).length && !app.dashboardItemsWithTransactions(app.dashboard.current.data.mcps).length">
+            <i class="ph-bold ph-chart-donut"></i>
+            <p>{{app.dashboardNoDataNote()}} Adjust the zoom window or explore a different period.</p>
+          </div>
+
+          <h5 class="dashboard-section-title" ng-if="app.dashboardItemsWithTransactions(app.dashboard.current.data.collections).length">Collection distribution</h5>
+          <div class="dashboard-grid" ng-if="app.dashboardItemsWithTransactions(app.dashboard.current.data.collections).length">
+            <article class="dashboard-card" ng-repeat="col in app.dashboardItemsWithTransactions(app.dashboard.current.data.collections) track by col.collectionId" ng-click="app.drillDashboard('collection', col)">
+              <div class="dashboard-card-canvas">
+                <canvas ng-attr-id="overview-col-{{$index}}"></canvas>
+                <div class="dashboard-card-center">
+                  <strong>{{col.totalTransactions || 0}}</strong>
+                  <span>transactions</span>
+                </div>
+              </div>
+              <div class="dashboard-card-body">
+                <h6>{{col.collectionName || col.collectionId}}</h6>
+                <div class="dashboard-card-stats">
+                  <span class="stat-pill success">{{col.successCount || 0}} ok</span>
+                  <span class="stat-pill danger">{{col.failureCount || 0}} fail</span>
+                </div>
+                <div class="dashboard-card-meta">
+                  <span>{{(col.transactionPercent || 0).toFixed(1)}}% share</span>
+                  <span>{{(col.successPercent || 0).toFixed(1)}}% success</span>
+                </div>
+              </div>
+            </article>
+          </div>
+
+          <h5 class="dashboard-section-title" ng-if="app.dashboardItemsWithTransactions(app.dashboard.current.data.mcps).length">MCP distribution</h5>
+          <div class="dashboard-grid" ng-if="app.dashboardItemsWithTransactions(app.dashboard.current.data.mcps).length">
+            <article class="dashboard-card" ng-repeat="mcp in app.dashboardItemsWithTransactions(app.dashboard.current.data.mcps) track by mcp.mcpId" ng-click="app.drillDashboard('mcp', mcp)">
+              <div class="dashboard-card-canvas">
+                <canvas ng-attr-id="overview-mcp-{{$index}}"></canvas>
+                <div class="dashboard-card-center">
+                  <strong>{{mcp.totalTransactions || 0}}</strong>
+                  <span>transactions</span>
+                </div>
+              </div>
+              <div class="dashboard-card-body">
+                <h6 title="{{mcp.mcpName || mcp.mcpAlias}}">{{mcp.mcpAlias || mcp.mcpName || mcp.mcpId}}</h6>
+                <div class="dashboard-card-stats">
+                  <span class="stat-pill success">{{mcp.successCount || 0}} ok</span>
+                  <span class="stat-pill danger">{{mcp.failureCount || 0}} fail</span>
+                </div>
+                <div class="dashboard-card-meta">
+                  <span>{{(mcp.transactionPercent || 0).toFixed(1)}}% share</span>
+                  <span>{{(mcp.successPercent || 0).toFixed(1)}}% success</span>
+                </div>
+              </div>
+            </article>
+          </div>
+        </div>
+
+        <div ng-if="app.dashboard.current.level==='mcp'">
+          <div class="dashboard-kpis">
+            <div class="kpi-card"><span class="kpi-label">MCP</span><strong class="kpi-value">{{app.dashboard.current.label}}</strong></div>
+            <div class="kpi-card"><span class="kpi-label">Total transactions</span><strong class="kpi-value">{{app.dashboard.current.data.totalTransactions || 0}}</strong></div>
+            <div class="kpi-card success"><span class="kpi-label">Success</span><strong class="kpi-value">{{app.dashboard.current.data.successCount || 0}}</strong></div>
+            <div class="kpi-card danger"><span class="kpi-label">Failures</span><strong class="kpi-value">{{app.dashboard.current.data.failureCount || 0}}</strong></div>
+            <div class="kpi-card"><span class="kpi-label">Collections</span><strong class="kpi-value">{{app.dashboard.current.data.collectionCount || 0}}</strong></div>
+            <div class="kpi-card"><span class="kpi-label">Tools</span><strong class="kpi-value">{{(app.dashboard.current.data.tools || []).length}}</strong></div>
+          </div>
+          <h5 class="dashboard-section-title">Collections in this MCP</h5>
+          <div class="dashboard-empty" ng-if="!app.dashboard.current.loading && !app.dashboardItemsWithTransactions(app.dashboard.current.data.collections).length">
+            <i class="ph-bold ph-stack"></i>
+            <p>{{app.dashboardNoDataNote()}}</p>
+          </div>
+          <div class="dashboard-grid" ng-if="app.dashboardItemsWithTransactions(app.dashboard.current.data.collections).length">
+            <article class="dashboard-card" ng-repeat="col in app.dashboardItemsWithTransactions(app.dashboard.current.data.collections) track by col.collectionId" ng-click="app.drillDashboard('collection', col)">
+              <div class="dashboard-card-canvas">
+                <canvas ng-attr-id="mcp-col-{{$index}}"></canvas>
+                <div class="dashboard-card-center">
+                  <strong>{{col.totalTransactions || 0}}</strong>
+                  <span>transactions</span>
+                </div>
+              </div>
+              <div class="dashboard-card-body">
+                <h6>{{col.collectionName || col.collectionId}}</h6>
+                <div class="dashboard-card-stats">
+                  <span class="stat-pill success">{{col.successCount || 0}} ok</span>
+                  <span class="stat-pill danger">{{col.failureCount || 0}} fail</span>
+                </div>
+                <div class="dashboard-card-meta">
+                  <span>{{(col.transactionPercent || 0).toFixed(1)}}% share</span>
+                  <span>{{(col.successPercent || 0).toFixed(1)}}% success</span>
+                </div>
+              </div>
+            </article>
+          </div>
+          <h5 class="dashboard-section-title" ng-if="app.dashboardItemsWithTransactions(app.dashboard.current.data.tools).length">Tools in this MCP</h5>
+          <div class="dashboard-empty" ng-if="!app.dashboard.current.loading && app.dashboardItemsWithTransactions(app.dashboard.current.data.collections).length && !app.dashboardItemsWithTransactions(app.dashboard.current.data.tools).length">
+            <i class="ph-bold ph-wrench"></i>
+            <p>{{app.dashboardNoDataNote()}}</p>
+          </div>
+          <div class="dashboard-grid" ng-if="app.dashboardItemsWithTransactions(app.dashboard.current.data.tools).length">
+            <article class="dashboard-card" ng-repeat="tool in app.dashboardItemsWithTransactions(app.dashboard.current.data.tools) track by tool.toolId" ng-click="app.drillDashboard('tool', tool)">
+              <div class="dashboard-card-canvas">
+                <canvas ng-attr-id="mcp-tool-{{$index}}"></canvas>
+                <div class="dashboard-card-center">
+                  <strong>{{tool.totalTransactions || 0}}</strong>
+                  <span>transactions</span>
+                </div>
+              </div>
+              <div class="dashboard-card-body">
+                <h6>{{tool.toolName || tool.toolId}}</h6>
+                <div class="dashboard-card-stats">
+                  <span class="stat-pill success">{{tool.successCount || 0}} ok</span>
+                  <span class="stat-pill danger">{{tool.failureCount || 0}} fail</span>
+                </div>
+                <div class="dashboard-card-meta">
+                  <span>{{(tool.transactionPercent || 0).toFixed(1)}}% share</span>
+                  <span>{{(tool.successPercent || 0).toFixed(1)}}% success</span>
+                </div>
+              </div>
+            </article>
+          </div>
+        </div>
+
+        <div ng-if="app.dashboard.current.level==='collection'">
+          <div class="dashboard-kpis">
+            <div class="kpi-card"><span class="kpi-label">Collection</span><strong class="kpi-value">{{app.dashboard.current.label}}</strong></div>
+            <div class="kpi-card"><span class="kpi-label">Total transactions</span><strong class="kpi-value">{{app.dashboard.current.data.totalTransactions || 0}}</strong></div>
+            <div class="kpi-card success"><span class="kpi-label">Success</span><strong class="kpi-value">{{app.dashboard.current.data.successCount || 0}}</strong></div>
+            <div class="kpi-card danger"><span class="kpi-label">Failures</span><strong class="kpi-value">{{app.dashboard.current.data.failureCount || 0}}</strong></div>
+            <div class="kpi-card"><span class="kpi-label">Tools</span><strong class="kpi-value">{{app.dashboard.current.data.toolCount || 0}}</strong></div>
+          </div>
+          <h5 class="dashboard-section-title">Tools in this collection</h5>
+          <div class="dashboard-empty" ng-if="!app.dashboard.current.loading && !app.dashboardItemsWithTransactions(app.dashboard.current.data.tools).length">
+            <i class="ph-bold ph-wrench"></i>
+            <p>{{app.dashboardNoDataNote()}}</p>
+          </div>
+          <div class="dashboard-grid" ng-if="app.dashboardItemsWithTransactions(app.dashboard.current.data.tools).length">
+            <article class="dashboard-card" ng-repeat="tool in app.dashboardItemsWithTransactions(app.dashboard.current.data.tools) track by tool.collectionToolId" ng-click="app.drillDashboard('tool', tool)">
+              <div class="dashboard-card-canvas">
+                <canvas ng-attr-id="collection-tool-{{$index}}"></canvas>
+                <div class="dashboard-card-center">
+                  <strong>{{tool.totalTransactions || 0}}</strong>
+                  <span>transactions</span>
+                </div>
+              </div>
+              <div class="dashboard-card-body">
+                <h6>{{tool.alias || tool.toolName || tool.collectionToolId}}</h6>
+                <span class="muted" ng-if="tool.toolName && tool.alias !== tool.toolName">{{tool.toolName}}</span>
+                <div class="dashboard-card-stats">
+                  <span class="stat-pill success">{{tool.successCount || 0}} ok</span>
+                  <span class="stat-pill danger">{{tool.failureCount || 0}} fail</span>
+                </div>
+                <div class="dashboard-card-meta">
+                  <span>{{(tool.successPercent || 0).toFixed(1)}}% success</span>
+                </div>
+              </div>
+            </article>
+          </div>
+        </div>
+
+        <div ng-if="app.dashboard.current.level==='tool'">
+          <div class="dashboard-kpis">
+            <div class="kpi-card"><span class="kpi-label">Tool</span><strong class="kpi-value">{{app.dashboard.current.label}}</strong></div>
+            <div class="kpi-card"><span class="kpi-label">Total</span><strong class="kpi-value">{{app.dashboard.current.data.totalTransactions || 0}}</strong></div>
+            <div class="kpi-card success"><span class="kpi-label">Local success</span><strong class="kpi-value">{{app.dashboard.current.data.successCount || 0}}</strong></div>
+            <div class="kpi-card danger"><span class="kpi-label">Local failures</span><strong class="kpi-value">{{app.dashboard.current.data.failureCount || 0}}</strong></div>
+            <div class="kpi-card"><span class="kpi-label">Global success</span><strong class="kpi-value">{{app.dashboard.current.data.globalSuccessCount || 0}}</strong></div>
+            <div class="kpi-card"><span class="kpi-label">Global failure</span><strong class="kpi-value">{{app.dashboard.current.data.globalFailureCount || 0}}</strong></div>
+          </div>
+
+          <div class="tool-log-status" role="tablist">
+            <button type="button" class="status-pill" ng-class="{on: !app.dashboard.toolLogStatus || app.dashboard.toolLogStatus==='all'}" ng-click="app.setToolLogStatus('all')">All</button>
+            <button type="button" class="status-pill on" ng-class="{on: app.dashboard.toolLogStatus==='success'}" ng-click="app.setToolLogStatus('success')">Success</button>
+            <button type="button" class="status-pill off" ng-class="{on: app.dashboard.toolLogStatus==='error'}" ng-click="app.setToolLogStatus('error')">Error</button>
+          </div>
+
+          <div class="dashboard-empty" ng-if="!app.dashboard.current.loading && !(app.dashboard.current.data.logs || []).length">
+            <i class="ph-bold ph-list-magnifying-glass"></i>
+            <p>No log entries match this filter.</p>
+          </div>
+          <div class="tool-log-list" ng-if="(app.dashboard.current.data.logs || []).length">
+            <article class="tool-log-entry" ng-repeat="log in app.dashboard.current.data.logs track by $index" ng-class="{'is-error': log.status && log.status!=='success'}">
+              <header>
+                <span class="status-dot" ng-class="{'on': !log.status || log.status==='success'}"></span>
+                <strong>{{log.status || 'unknown'}}</strong>
+                <span class="muted">{{log.timestamp || log.createdAt || log.time || ''}}</span>
+              </header>
+              <pre class="json-view">{{log | json}}</pre>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section ng-show="app.tab==='mappingProfiles'" class="content-grid">
+        <div class="panel">
+          <div class="panel-head">
+            <div>
+              <h3>Mapping Profiles</h3>
+              <p>{{app.filteredMappingProfiles().length}} profile(s)</p>
+            </div>
+            <div class="d-flex align-items-center gap-2">
+              <button type="button" class="command-copy-icon accent" ng-click="app.openAddMappingProfile()" title="Add mapping profile" aria-label="Add mapping profile"><i class="ph-bold ph-plus"></i></button>
+              <button type="button" class="command-copy-icon accent" ng-click="app.listMappingProfiles()" title="Refresh profiles" aria-label="Refresh profiles"><i class="ph-bold ph-arrows-clockwise"></i></button>
+              <div class="search-box">
+                <i class="ph-bold ph-magnifying-glass"></i>
+                <input ng-model="app.mappingProfiles.filterKeyword" placeholder="Search profiles" ng-change="app.listMappingProfiles()">
+              </div>
+            </div>
+          </div>
+          <div class="dashboard-status" ng-if="app.mappingProfiles.loading">
+            <div class="spinner-border spinner-border-sm me-2" role="status"></div>
+            <span>Loading mapping profiles&hellip;</span>
+          </div>
+          <div class="alert alert-danger dashboard-error" ng-if="app.mappingProfiles.error">
+            <i class="ph-bold ph-warning-circle me-2"></i>{{app.mappingProfiles.error}}
+            <button type="button" class="btn btn-sm btn-outline-danger ms-3" ng-click="app.listMappingProfiles()">Retry</button>
+          </div>
+          <div class="empty-state" ng-if="!app.mappingProfiles.loading && !app.mappingProfiles.profiles.length && !app.mappingProfiles.error">
+            <i class="ph-bold ph-tree-structure"></i>
+            <h4>No mapping profiles yet</h4>
+            <p>Create a profile to map provider token data into a neutral identity shape.</p>
+          </div>
+          <div class="mcp-list" ng-if="app.filteredMappingProfiles().length">
+            <article class="mcp-card" ng-repeat="profile in app.filteredMappingProfiles() track by (app.pickProfileField(profile, 'profileId') || app.pickProfileField(profile, 'mappingProfileId') || app.pickProfileField(profile, 'profileName'))" ng-class="{selected: app.mappingProfiles.selected && (app.pickProfileField(app.mappingProfiles.selected, 'profileId') || app.pickProfileField(app.mappingProfiles.selected, 'profileName')) === (app.pickProfileField(profile, 'profileId') || app.pickProfileField(profile, 'profileName'))}" ng-click="app.selectMappingProfile(profile)">
+              <button type="button" class="mcp-edit-icon-btn" ng-click="$event.stopPropagation(); app.openEditMappingProfile(profile)" title="Edit profile" aria-label="Edit profile"><i class="ph-bold ph-pencil-simple"></i></button>
+              <div>
+                <div class="d-flex align-items-center gap-2">
+                  <span class="status-dot" ng-class="{on: app.pickProfileField(profile, 'status') === 'enabled' || app.pickProfileField(profile, 'status') === 'active'}"></span>
+                  <h4>{{app.pickProfileField(profile, 'profileName') || 'Unnamed profile'}}</h4>
+                </div>
+                <p title="{{app.pickProfileField(profile, 'description') || ''}}">{{app.truncateText(app.pickProfileField(profile, 'description') || 'No description', 50)}}</p>
+                <div class="profile-meta-row">
+                  <span class="status-pill on">{{app.pickProfileField(profile, 'providerCode') || 'Provider'}}</span>
+                  <span class="muted small">{{app.pickProfileField(profile, 'createdAt') || '—'}}</span>
+                </div>
+              </div>
+            </article>
+          </div>
+        </div>
+
+        <div class="panel">
+          <div class="panel-head">
+            <div>
+              <h3>{{app.mappingProfiles.selected ? app.pickProfileField(app.mappingProfiles.selected, 'profileName') : 'Profile Details'}}</h3>
+              <p>{{app.mappingProfiles.selected ? app.pickProfileField(app.mappingProfiles.selected, 'providerCode') : 'Select a mapping profile'}}</p>
+            </div>
+            <span class="row-actions" ng-if="app.mappingProfiles.selected">
+              <button type="button" class="icon-btn-sm" ng-click="app.openEditMappingProfile(app.mappingProfiles.selected)" title="Edit profile" aria-label="Edit profile"><i class="ph-bold ph-pencil-simple"></i></button>
+              <button type="button" class="icon-btn-sm danger" ng-click="app.deleteMappingProfile(app.mappingProfiles.selected)" title="Delete profile" aria-label="Delete profile"><i class="ph-bold ph-trash"></i></button>
+            </span>
+          </div>
+          <div class="empty-state" ng-if="!app.mappingProfiles.selected">
+            <i class="ph-bold ph-cursor-click"></i>
+            <h4>Select a mapping profile</h4>
+            <p>Choose a profile to inspect its identity mapping details.</p>
+          </div>
+          <div ng-if="app.mappingProfiles.selected" class="profile-detail">
+            <div class="oauth-kv-grid">
+              <div class="oauth-kv"><span class="oauth-kv-label">Provider</span><strong>{{app.pickProfileField(app.mappingProfiles.selected, 'providerCode') || '—'}}</strong></div>
+              <div class="oauth-kv"><span class="oauth-kv-label">Status</span><span class="status-pill" ng-class="(app.pickProfileField(app.mappingProfiles.selected, 'status') === 'enabled' || app.pickProfileField(app.mappingProfiles.selected, 'status') === 'active') ? 'on' : 'off'">{{app.pickProfileField(app.mappingProfiles.selected, 'status') || 'unknown'}}</span></div>
+              <div class="oauth-kv"><span class="oauth-kv-label">Created</span><strong>{{app.pickProfileField(app.mappingProfiles.selected, 'createdAt') || '—'}}</strong></div>
+              <div class="oauth-kv"><span class="oauth-kv-label">Updated</span><strong>{{app.pickProfileField(app.mappingProfiles.selected, 'updatedAt') || '—'}}</strong></div>
+            </div>
+            <div class="oauth-kv"><span class="oauth-kv-label">Description</span><p>{{app.pickProfileField(app.mappingProfiles.selected, 'description') || 'No description'}}</p></div>
+            <div class="oauth-kv"><span class="oauth-kv-label">Profile ID</span><code>{{app.pickProfileField(app.mappingProfiles.selected, 'profileId') || '—'}}</code></div>
+            <div class="oauth-details" ng-if="app.mappingProfiles.selected.mapping">
+              <div class="oauth-kv-label mb-2">Mapping JSON</div>
+              <pre class="json-view">{{app.mappingProfiles.selected.mapping | json}}</pre>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section ng-show="app.tab==='oauth'" class="content-grid">
+
+              <div class="panel">
+                <div class="panel-head">
+                  <div>
+                    <h3>Credentials</h3>
+                    <p>{{app.filteredOAuthSetups().length}} setup(s)</p>
+                  </div>
+                  <div class="d-flex align-items-center gap-2">
+                    <div class="selected-category-tags" ng-if="app.categoryFilter.selectedOAuthCategories.length">
+                      <span class="category-tag selected" ng-repeat="cat in app.categoryFilter.selectedOAuthCategories track by $index" ng-click="app.toggleOAuthCategory(cat); app.listOAuthSetups()">{{cat}} <i class="ph-bold ph-x"></i></span>
+                    </div>
+                    <div class="search-box">
+                      <i class="ph-bold ph-magnifying-glass"></i>
+                      <input ng-model="app.oauth.filterKeyword" placeholder="Search setups" ng-change="app.listOAuthSetups()">
+                    </div>
+                  </div>
+                </div>
+
+                <div class="dashboard-status" ng-if="app.oauth.setupsLoading">
+                  <div class="spinner-border spinner-border-sm me-2" role="status"></div>
+                  <span>Loading credentials&hellip;</span>
+                </div>
+                <div class="alert alert-danger dashboard-error" ng-if="app.oauth.setupsError">
+                  <i class="ph-bold ph-warning-circle me-2"></i>{{app.oauth.setupsError}}
+                  <button type="button" class="btn btn-sm btn-outline-danger ms-3" ng-click="app.listOAuthSetups()">Retry</button>
+                </div>
+
+                <div class="empty-state" ng-if="!app.oauth.setupsLoading && !app.oauth.setups.length && !app.oauth.setupsError">
+                  <i class="ph-bold ph-shield-check"></i>
+                  <h4>No credentials yet</h4>
+                  <p>Create your first OAuth provider setup to start authorizing MCP access.</p>
+                </div>
+
+                <div class="mcp-list" ng-if="app.filteredOAuthSetups().length">
+                  <article class="mcp-card oauth-setup-card" ng-repeat="setup in app.filteredOAuthSetups() track by (setup.uniqueName || setup.oauthId)" ng-class="{selected: app.oauth.selectedSetup && (app.oauth.selectedSetup.uniqueName || app.oauth.selectedSetup.oauthId) === (setup.uniqueName || setup.oauthId)}" ng-click="app.selectOAuthSetup(setup)">
+                    <button type="button" class="oauth-tile-action edit" ng-click="$event.stopPropagation(); app.openEditOAuthSetup(setup)" title="Edit setup" aria-label="Edit setup"><i class="ph-bold ph-pencil-simple"></i></button>
+                    <button type="button" class="oauth-tile-action authorize" ng-if="app.isOAuthSetupReady(setup)" ng-click="$event.stopPropagation(); app.openAuthorizeOAuthSetup(setup)" title="Start authorization" aria-label="Start authorization"><i class="ph-bold ph-arrow-square-out"></i></button>
+                    <button type="button" class="oauth-tile-action callback" ng-click="$event.stopPropagation(); app.openOAuthCallback(setup)" title="Process OAuth callback" aria-label="Process OAuth callback"><i class="ph-bold ph-arrow-u-down-left"></i></button>
+                    <button type="button" class="oauth-tile-action remap" ng-click="$event.stopPropagation(); app.applyOAuthMappingProfile(setup)" title="Regenerate token information" aria-label="Regenerate token information"><i class="ph-bold ph-arrows-clockwise"></i></button>
+                    <button type="button" class="oauth-tile-action danger" ng-click="$event.stopPropagation(); app.deleteOAuthSetup(setup)" title="Delete setup" aria-label="Delete setup"><i class="ph-bold ph-trash"></i></button>
+                    <div>
+                      <div class="d-flex align-items-center gap-2">
+                        <span class="status-dot oauth-setup-ready-dot" ng-class="{on: app.isOAuthSetupReady(setup)}"></span>
+                        <h4>{{setup.uniqueName || setup.oauthId}}</h4>
+                      </div>
+                      <p class="oauth-tile-provider-app" title="Provider: {{app.pickOAuthField(setup, 'providerName') || '—'}}, App: {{app.pickOAuthField(setup, 'appName') || '—'}}"><strong>Provider:</strong> {{app.pickOAuthField(setup, 'providerName') || '—'}}, <strong>App:</strong> {{app.pickOAuthField(setup, 'appName') || '—'}}</p>
+                      <p class="oauth-tile-provider-app" ng-if="app.oauthSetupCategories(setup).length"><strong>Categories:</strong> {{app.oauthSetupCategories(setup).join(', ')}}</p>
+                      <div class="mcp-endpoint-row" ng-if="app.pickOAuthField(setup, 'authorizeUrl')" title="{{app.pickOAuthField(setup, 'authorizeUrl')}}">
+                        <button type="button" class="mcp-copy-icon-btn" ng-click="$event.stopPropagation(); app.copyText(app.pickOAuthField(setup, 'authorizeUrl'))" title="Copy authorize URL" aria-label="Copy authorize URL">
+                          <i class="ph-bold ph-copy"></i>
+                        </button>
+                        <span class="oauth-url-label authorize-label">Authorize:</span>
+                        <code class="mcp-endpoint-text oauth-url-value authorize-value">{{app.truncateText(app.trimOAuthEndpoint(app.pickOAuthField(setup, 'authorizeUrl'), app.pickOAuthField(setup, 'baseEndpoint')), 30)}}</code>
+                      </div>
+                      <div class="mcp-endpoint-row" ng-if="app.pickOAuthField(setup, 'redirectUri')" title="{{app.pickOAuthField(setup, 'redirectUri')}}">
+                        <button type="button" class="mcp-copy-icon-btn" ng-click="$event.stopPropagation(); app.copyText(app.pickOAuthField(setup, 'redirectUri'))" title="Copy callback URL" aria-label="Copy callback URL">
+                          <i class="ph-bold ph-copy"></i>
+                        </button>
+                        <span class="oauth-url-label callback-label">Callback:</span>
+                        <code class="mcp-endpoint-text oauth-url-value callback-value">{{app.truncateText(app.trimOAuthEndpoint(app.pickOAuthField(setup, 'redirectUri'), app.pickOAuthField(setup, 'baseEndpoint')), 30)}}</code>
+                      </div>
+                    </div>
+            </article>
+          </div>
+        </div>
+
+              <div class="panel">
+                <div class="panel-head">
+                  <div>
+                    <h3 ng-if="!app.oauth.selectedSetup">Tokens</h3>
+                    <h3 ng-if="app.oauth.selectedSetup">{{app.pickOAuthField(app.oauth.selectedSetup, 'uniqueName') || app.oauth.selectedSetup.uniqueName || app.oauth.selectedSetup.oauthId}} · Tokens</h3>
+                    <p ng-if="!app.oauth.selectedSetup">All OAuth-issued MCP tokens across setups.</p>
+                    <p ng-if="app.oauth.selectedSetup">Tokens issued for this credential.</p>
+                  </div>
+                  <div class="d-flex align-items-center gap-2 flex-wrap">
+                    <div class="search-box in-form" style="min-width: 220px;">
+                      <i class="ph-bold ph-magnifying-glass"></i>
+                      <input ng-model="app.oauth.tokenFilter.search" placeholder="Filter by token, mcpId, name" ng-change="app.listOAuthTokens()">
+                    </div>
+                  </div>
+                  <div class="oauth-flow-demo" ng-if="app.oauth.selectedSetup">
+                    <oauth-flow-button setup="app.oauth.selectedSetup" on-complete="app.onOauthFlowComplete(result)"></oauth-flow-button>
+                  </div>
+                </div>
+
+                <div class="dashboard-status" ng-if="app.oauth.tokensLoading">
+                  <div class="spinner-border spinner-border-sm me-2" role="status"></div>
+                  <span>Loading OAuth tokens&hellip;</span>
+                </div>
+                <div class="alert alert-danger dashboard-error" ng-if="app.oauth.tokensError">
+                  <i class="ph-bold ph-warning-circle me-2"></i>{{app.oauth.tokensError}}
+                  <button type="button" class="btn btn-sm btn-outline-danger ms-3" ng-click="app.listOAuthTokens()">Retry</button>
+                </div>
+
+                <div class="oauth-empty" ng-if="!app.oauth.tokensLoading && !app.oauth.tokens.length && !app.oauth.tokensError">
+                  <i class="ph-bold ph-key-return"></i>
+                  <h4>No OAuth tokens issued</h4>
+                  <p ng-if="!app.oauth.selectedSetup">Complete an authorization flow on a setup to issue your first token.</p>
+                  <p ng-if="app.oauth.selectedSetup">No tokens issued for this setup yet.</p>
+                </div>
+
+                <div class="oauth-table" ng-if="app.oauth.tokens.length">
+                  <div class="oauth-row header">
+                    <span>Name</span><span>Status</span><span>Access</span><span>Updated</span><span>Action</span>
+                  </div>
+                  <div class="oauth-row" ng-repeat="token in app.oauth.tokens track by token.tokenId">
+                    <div class="oauth-name-cell">
+                      <strong title="{{app.oauthTokenIdentity(token).provider_email || app.oauthTokenIdentity(token).display_name || token.name || token.userId || 'OAuth token'}}">{{app.oauthTokenIdentity(token).display_name || app.oauthTokenIdentity(token).provider_email || token.name || token.userId || 'OAuth token'}}</strong>
+                      <span class="muted small">{{app.oauthTokenIdentity(token).provider_email || app.oauthTokenIdentity(token).connection_key || token.userId || '—'}}</span>
+                    </div>
+                    <span><span class="status-pill" ng-class="token.status === 'active' ? 'on' : 'off'">{{token.status || 'unknown'}}</span></span>
+                    <span class="oauth-access-cell">
+                      <select class="form-select form-select-sm" ng-model="token.visibility" ng-change="app.changeOAuthTokenAccess(token, token.visibility)" title="Change token access">
+                        <option value="private">private</option>
+                        <option value="public">public</option>
+                      </select>
+                    </span>
+                    <span class="muted small">{{token.updatedAt || token.createdAt || '—'}}</span>
+                    <span class="row-actions">
+                      <button type="button" class="icon-btn-sm" ng-click="app.openShowOAuthToken(token)" title="Verify auth token" aria-label="Verify auth token"><i class="ph-bold ph-seal-check"></i></button>
+                      <button type="button" class="icon-btn-sm" ng-click="app.applyOAuthMappingProfile(token)" title="Regenerate token information" aria-label="Regenerate token information"><i class="ph-bold ph-arrows-clockwise"></i></button>
+                      <button type="button" class="icon-btn-sm danger" ng-click="app.deleteOAuthToken(token)" title="Delete token" aria-label="Delete token"><i class="ph-bold ph-trash"></i></button>
+                    </span>
+                  </div>
+                </div>
+              </div>
+
+            </div>
+          </div>
+      </section>
+
+      <section ng-show="app.tab==='explorer'" class="panel full-panel">
+        <div class="panel-head">
+          <div>
+            <h3>Swagger API Explorer</h3>
+            <p>Quick visibility into every operation exported by <code>MCPNest-swagger.json</code>.</p>
+          </div>
+        </div>
+        <div class="api-grid">
+          <article class="api-card" ng-repeat="op in app.operations track by op.operationId">
+            <span class="method">{{op.method}}</span>
+            <h4>{{op.operationId}}</h4>
+            <code>{{op.path}}</code>
+            <button class="btn btn-sm btn-outline-primary mt-3" ng-click="app.openExplorer(op)">Try Request</button>
+          </article>
+        </div>
+      </section>
+    </main>
+    </div>
+  </div>
+
+  <div class="modal fade" id="internalTerminalMcpModal" tabindex="-1">
+    <div class="modal-dialog modal-lg modal-dialog-centered modal-dialog-scrollable">
+      <form class="modal-content" ng-submit="app.addInternalTerminalMcp()">
+        <div class="modal-header">
+          <div class="modal-title-group">
+            <span class="modal-icon"><i class="ph-bold ph-terminal-window"></i></span>
+            <div>
+              <p class="eyebrow">Internal Terminal</p>
+              <h5 class="modal-title">Add Internal Terminal MCP</h5>
+            </div>
+          </div>
+          <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+        </div>
+        <div class="modal-body">
+          <div class="form-section">
+            <div class="form-section-title"><i class="ph-bold ph-gear-six"></i>Terminal configuration</div>
+            <div class="row g-3">
+              <div class="col-md-6"><label class="form-label">Alias</label><input class="form-control" ng-model="app.forms.internalTerminal.request.mcpAlias" required></div>
+              <div class="col-md-6"><label class="form-label">Name</label><input class="form-control" ng-model="app.forms.internalTerminal.request.mcpName" required></div>
+              <div class="col-12"><label class="form-label">Working directory</label><input class="form-control" ng-model="app.forms.internalTerminal.request.workingDirectory" placeholder="C:\\workspace\\project"></div>
+              <div class="col-12"><label class="form-label">Description</label><textarea class="form-control" rows="2" ng-model="app.forms.internalTerminal.request.description"></textarea></div>
+              <div class="col-12">
+                <label class="wizard-switch android-switch-row" for="internalTerminalEnabled">
+                  <span class="android-switch">
+                    <input type="checkbox" ng-model="app.forms.internalTerminal.request.enabled" id="internalTerminalEnabled">
+                    <span class="android-slider"></span>
+                  </span>
+                  <span><strong>Enabled after creation</strong><small>Keep this MCP active immediately</small></span>
+                </label>
+              </div>
+            </div>
+          </div>
+          <div class="form-section">
+            <div class="form-section-title"><i class="ph-bold ph-stack"></i>Internal tool details <span class="form-section-hint">optional</span></div>
+            <div class="row g-3">
+              <div class="col-md-6"><label class="form-label">Collection id</label><input class="form-control" ng-model="app.forms.internalTerminal.request.collectionId"></div>
+              <div class="col-md-6"><label class="form-label">Collection name</label><input class="form-control" ng-model="app.forms.internalTerminal.request.collectionName"></div>
+              <div class="col-12"><label class="form-label">Collection description</label><textarea class="form-control" rows="2" ng-model="app.forms.internalTerminal.request.collectionDescription"></textarea></div>
+              <div class="col-12"><label class="form-label">Tool description</label><textarea class="form-control" rows="2" ng-model="app.forms.internalTerminal.request.toolDescription"></textarea></div>
+            </div>
+          </div>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-light" data-bs-dismiss="modal">Cancel</button>
+          <button type="submit" class="btn btn-primary"><i class="ph-bold ph-terminal-window me-2"></i>Save Internal MCP</button>
+        </div>
+      </form>
+    </div>
+  </div>
+
+  <div class="modal fade" id="addMcpModal" tabindex="-1">
+    <div class="modal-dialog modal-lg modal-dialog-centered modal-dialog-scrollable">
+      <form class="modal-content" ng-submit="app.addMcp()" autocomplete="off">
+        <div class="autofill-guard" aria-hidden="true">
+          <input type="text" name="username" autocomplete="username" tabindex="-1">
+          <input type="password" name="password" autocomplete="current-password" tabindex="-1">
+        </div>
+        <div class="modal-header">
+          <div class="modal-title-group">
+            <span class="modal-icon"><i class="ph-bold" ng-class="app.mcpEditMode ? 'ph-pencil-simple' : 'ph-plug'"></i></span>
+            <div>
+              <p class="eyebrow">{{app.mcpEditMode ? 'Edit Endpoint' : 'New Endpoint'}}</p>
+              <h5 class="modal-title">{{app.mcpEditMode ? 'Edit MCP endpoint' : 'Add MCP endpoint'}}</h5>
+            </div>
+          </div>
+          <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+        </div>
+        <div class="modal-body">
+          <div class="row g-3">
+            <div class="col-md-6"><label class="form-label">Alias</label><input class="form-control" ng-model="app.forms.mcp.request.mcpAlias" required></div>
+            <div class="col-md-6">
+              <label class="form-label">Name</label>
+              <div class="input-group">
+                <input class="form-control" ng-model="app.forms.mcp.request.mcpName" ng-readonly="app.forms.mcp.request.authType === 'OIDC'">
+                <button type="button" class="btn btn-outline-primary" ng-if="app.forms.mcp.request.authType === 'OIDC'" ng-click="app.openProviderNameSelector()" title="Choose provider name"><i class="ph-bold ph-magnifying-glass"></i> Choose</button>
+              </div>
+            </div>
+            <div class="col-12"><label class="form-label">Endpoint URL</label><input class="form-control" ng-model="app.forms.mcp.request.endpointUrl" placeholder="https://mcp.example.com/api/v1/connect" required></div>
+            <div class="col-md-6">
+              <label class="form-label">Endpoint type</label>
+              <select class="form-select" ng-model="app.forms.mcp.request.endpointType">
+                <option value="STANDARD">STANDARD</option>
+                <option value="SSE">SSE</option>
+                <option value="STREAMABLE_HTTP">STREAMABLE_HTTP</option>
+              </select>
+            </div>
+            <div class="col-md-6">
+              <label class="form-label">Auth type</label>
+              <select class="form-select" ng-model="app.forms.mcp.request.authType" ng-change="app.onMcpAuthTypeChange()">
+                <option value="NONE">NONE</option>
+                <option value="BEARER">BEARER</option>
+                <option value="API_KEY">API_KEY</option>
+                <option value="BASIC">BASIC</option>
+                <option value="OIDC">OIDC</option>
+              </select>
+            </div>
+            <div class="col-12">
+              <label class="form-label">Categories</label>
+              <div class="category-dual-picker">
+                <div class="category-dual-picker-top">
+                  <div class="category-picker-left">
+                    <div class="category-picker-header">Available</div>
+                    <div class="category-picker-list">
+                      <div class="category-picker-item" ng-repeat="cat in app.getFormAvailableCategories() track by cat" ng-click="app.addFormCategory(cat)">
+                        <span>{{cat}}</span>
+                        <i class="ph-bold ph-arrow-right"></i>
+                      </div>
+                      <div class="category-picker-empty" ng-if="!app.getFormAvailableCategories().length">No available categories</div>
+                    </div>
+                  </div>
+                  <div class="category-picker-right">
+                    <div class="category-picker-header">Selected</div>
+                    <div class="category-picker-list">
+                      <div class="category-picker-item selected" ng-repeat="cat in app.getFormSelectedCategories() track by cat" ng-click="app.removeFormCategory(cat)">
+                        <span>{{cat}}</span>
+                        <i class="ph-bold ph-x"></i>
+                      </div>
+                      <div class="category-picker-empty" ng-if="!app.getFormSelectedCategories().length">No categories selected</div>
+                    </div>
+                  </div>
+                </div>
+                <div class="category-dual-picker-bottom">
+                  <input type="text" class="form-control form-control-sm" ng-model="app.formCategoryPicker.newCategory" placeholder="New category name" ng-keydown="$event.keyCode === 13 && app.addNewFormCategory()">
+                  <button type="button" class="btn btn-sm btn-outline-primary" ng-click="app.addNewFormCategory()" title="Add category"><i class="ph-bold ph-plus"></i> Add</button>
+                </div>
+              </div>
+            </div>
+            <div class="col-12"><label class="form-label">Description</label><textarea class="form-control" rows="2" ng-model="app.forms.mcp.request.description"></textarea></div>
+            <div class="col-12">
+              <label class="wizard-switch android-switch-row" for="mcpEnabled">
+                <span class="android-switch">
+                  <input type="checkbox" ng-model="app.forms.mcp.request.enabled" id="mcpEnabled">
+                  <span class="android-slider"></span>
+                </span>
+                <span><strong>Enabled after creation</strong><small>Keep this MCP active immediately</small></span>
+              </label>
+            </div>
+          </div>
+
+          <div class="form-section" ng-if="app.forms.mcp.request.authType !== 'NONE'">
+            <div class="form-section-title"><i class="ph-bold ph-lock-key"></i>AuthInfo payload (schema editor)</div>
+            <ul class="nav nav-tabs calltool-tabs" role="tablist">
+              <li class="nav-item" role="presentation"><button class="nav-link active" data-bs-toggle="tab" data-bs-target="#mcpauth-editor" type="button" role="tab">Editor</button></li>
+              <li class="nav-item" role="presentation"><button class="nav-link" data-bs-toggle="tab" data-bs-target="#mcpauth-payload" type="button" role="tab">Payload</button></li>
+            </ul>
+            <div class="tab-content calltool-tab-content">
+              <div class="tab-pane fade show active" id="mcpauth-editor" role="tabpanel">
+                <div class="tool-jsonform-host" ng-class="{empty: !app.mcpAuthEditor.schema}">
+                  <div class="tool-arg-builder" ng-if="app.mcpAuthEditor.schema && app.mcpAuthEditor.openEpoch" ng-include="'mcpAuthNodeTemplate'" ng-init="schema=app.mcpAuthEditor.schema; model=app.mcpAuthEditor.model; path='root'; label='authInfo'; depth=0"></div>
+                  <div class="muted" ng-if="!app.mcpAuthEditor.schema">Preparing auth schema...</div>
+                </div>
+              </div>
+              <div class="tab-pane fade" id="mcpauth-payload" role="tabpanel">
+                <textarea class="form-control code-input" rows="14" ng-value="app.renderMcpAuthJson()" readonly></textarea>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-light" data-bs-dismiss="modal">Cancel</button>
+          <button type="submit" class="btn btn-primary"><i class="ph-bold" ng-class="app.mcpEditMode ? 'ph-floppy-disk me-2' : 'ph-plus me-2'"></i>{{app.mcpEditMode ? 'Save MCP' : 'Add MCP'}}</button>
+        </div>
+      </form>
+    </div>
+  </div>
+
+  <!-- Provider Name Selector Modal -->
+  <div class="modal fade" id="providerNameSelectorModal" tabindex="-1">
+    <div class="modal-dialog modal-md modal-dialog-centered modal-dialog-scrollable">
+      <div class="modal-content">
+        <div class="modal-header">
+          <div class="modal-title-group">
+            <span class="modal-icon"><i class="ph-bold ph-magnifying-glass"></i></span>
+            <div>
+              <p class="eyebrow">Select Provider</p>
+              <h5 class="modal-title">Choose Provider Name</h5>
+            </div>
+          </div>
+          <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+        </div>
+        <div class="modal-body">
+          <div class="mb-3">
+            <input type="text" class="form-control" ng-model="app.providerNameSearch" placeholder="Search providers...">
+          </div>
+          <div class="provider-name-list" style="max-height: 300px; overflow-y: auto;">
+            <div class="provider-name-item" ng-repeat="setup in app.getFilteredProviderNames() track by (setup.uniqueName || setup.oauthId)" ng-click="app.selectProviderName(setup)" ng-class="{selected: app.selectedProviderName === (setup.uniqueName || setup.oauthId)}">
+              <span>{{setup.uniqueName || setup.oauthId}}</span>
+              <i class="ph-bold ph-check" ng-if="app.selectedProviderName === (setup.uniqueName || setup.oauthId)"></i>
+            </div>
+            <div class="provider-name-empty" ng-if="!app.getFilteredProviderNames().length">No providers found</div>
+          </div>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-light" data-bs-dismiss="modal">Cancel</button>
+          <button type="button" class="btn btn-primary" ng-click="app.applyProviderName()" ng-disabled="!app.selectedProviderName"><i class="ph-bold ph-check me-2"></i>OK</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="modal fade" id="mcpCategoryFilterModal" tabindex="-1">
+    <div class="modal-dialog modal-dialog-centered modal-sm">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title">Filter by Category</h5>
+          <button type="button" class="btn-close" ng-click="app.closeMcpCategoryFilter()"></button>
+        </div>
+        <div class="modal-body">
+          <input type="text" class="form-control form-control-sm mb-2" ng-model="app.categoryFilter.mcpSearch" placeholder="Search categories...">
+          <div class="category-filter-selected" ng-if="app.getSelectedMcpCategoriesForDisplay().length">
+            <span class="category-tag selected" ng-repeat="cat in app.getSelectedMcpCategoriesForDisplay() track by $index" ng-click="app.toggleMcpCategory(cat)">{{cat}} <i class="ph-bold ph-x"></i></span>
+          </div>
+          <div class="category-filter-list">
+            <label class="category-filter-item" ng-repeat="cat in app.getFilteredMcpCategories() track by $index">
+              <input type="checkbox" ng-checked="app.isMcpCategorySelected(cat)" ng-click="app.toggleMcpCategory(cat)">
+              <span>{{cat}}</span>
+            </label>
+            <p class="category-filter-empty" ng-if="!app.getFilteredMcpCategories().length">No categories available</p>
+          </div>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-sm btn-outline-secondary" ng-click="app.clearMcpCategoryFilter()">Clear</button>
+          <button type="button" class="btn btn-sm btn-primary" ng-click="app.applyMcpCategoryFilter()">Apply</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="modal fade" id="oauthCategoryFilterModal" tabindex="-1">
+    <div class="modal-dialog modal-dialog-centered modal-sm">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title">Filter by Category</h5>
+          <button type="button" class="btn-close" ng-click="app.closeOAuthCategoryFilter()"></button>
+        </div>
+        <div class="modal-body">
+          <input type="text" class="form-control form-control-sm mb-2" ng-model="app.categoryFilter.oauthSearch" placeholder="Search categories...">
+          <div class="category-filter-selected" ng-if="app.getSelectedOAuthCategoriesForDisplay().length">
+            <span class="category-tag selected" ng-repeat="cat in app.getSelectedOAuthCategoriesForDisplay() track by $index" ng-click="app.toggleOAuthCategory(cat)">{{cat}} <i class="ph-bold ph-x"></i></span>
+          </div>
+          <div class="category-filter-list">
+            <label class="category-filter-item" ng-repeat="cat in app.getFilteredOAuthCategories() track by $index">
+              <input type="checkbox" ng-checked="app.isOAuthCategorySelected(cat)" ng-click="app.toggleOAuthCategory(cat)">
+              <span>{{cat}}</span>
+            </label>
+            <p class="category-filter-empty" ng-if="!app.getFilteredOAuthCategories().length">No categories available</p>
+          </div>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-sm btn-outline-secondary" ng-click="app.clearOAuthCategoryFilter()">Clear</button>
+          <button type="button" class="btn btn-sm btn-primary" ng-click="app.applyOAuthCategoryFilter()">Apply</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="modal fade" id="cloneMcpModal" tabindex="-1">
+    <div class="modal-dialog modal-lg modal-dialog-centered modal-dialog-scrollable">
+      <form class="modal-content" ng-submit="app.cloneMcpEndpoint()">
+        <div class="modal-header">
+          <div class="modal-title-group">
+            <span class="modal-icon"><i class="ph-bold ph-copy-simple"></i></span>
+            <div><p class="eyebrow">Clone</p><h5 class="modal-title">Clone MCP endpoint</h5></div>
+          </div>
+          <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+        </div>
+        <div class="modal-body">
+          <div class="row g-3">
+            <div class="col-md-6"><label class="form-label">Source MCP id</label><input class="form-control" ng-model="app.forms.cloneMcp.request.mcpId" readonly></div>
+            <div class="col-md-6"><label class="form-label">New MCP alias</label><input class="form-control" ng-model="app.forms.cloneMcp.request.newMcpAlias" required></div>
+            <div class="col-md-6"><label class="form-label">Name</label><input class="form-control" ng-model="app.forms.cloneMcp.request.mcpName" readonly></div>
+            <div class="col-md-6"><label class="form-label">Endpoint type</label><input class="form-control" ng-model="app.forms.cloneMcp.request.endpointType" readonly></div>
+            <div class="col-12"><label class="form-label">Endpoint URL</label><input class="form-control" ng-model="app.forms.cloneMcp.request.endpointUrl" readonly></div>
+            <div class="col-12"><label class="form-label">Description</label><textarea class="form-control" rows="2" ng-model="app.forms.cloneMcp.request.description"></textarea></div>
+            <div class="col-12">
+              <label class="wizard-switch android-switch-row">
+                <span class="android-switch"><input type="checkbox" ng-model="app.forms.cloneMcp.request.enabled"><span class="android-slider"></span></span>
+                <span><strong>Enabled</strong><small>Enable cloned MCP immediately</small></span>
+              </label>
+            </div>
+          </div>
+        </div>
+        <div class="modal-footer"><button type="button" class="btn btn-light" data-bs-dismiss="modal">Cancel</button><button type="submit" class="btn btn-primary"><i class="ph-bold ph-copy me-2"></i>Clone MCP</button></div>
+      </form>
+    </div>
+  </div>
+
+  <div class="modal fade" id="cloneCollectionModal" tabindex="-1">
+    <div class="modal-dialog modal-md modal-dialog-centered modal-dialog-scrollable">
+      <form class="modal-content" ng-submit="app.cloneCollection()">
+        <div class="modal-header">
+          <div class="modal-title-group"><span class="modal-icon"><i class="ph-bold ph-copy"></i></span><div><p class="eyebrow">Clone</p><h5 class="modal-title">Clone collection</h5></div></div>
+          <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+        </div>
+        <div class="modal-body">
+          <div class="row g-3">
+            <div class="col-12"><label class="form-label">Source collection id</label><input class="form-control" ng-model="app.forms.cloneCollection.request.collectionId" readonly></div>
+            <div class="col-12"><label class="form-label">New collection name</label><input class="form-control" ng-model="app.forms.cloneCollection.request.newCollectionName" required></div>
+            <div class="col-12"><label class="form-label">Description</label><textarea class="form-control" rows="2" ng-model="app.forms.cloneCollection.request.description"></textarea></div>
+            <div class="col-12"><label class="wizard-switch android-switch-row"><span class="android-switch"><input type="checkbox" ng-model="app.forms.cloneCollection.request.enabled"><span class="android-slider"></span></span><span><strong>Enabled</strong><small>Enable cloned collection immediately</small></span></label></div>
+          </div>
+        </div>
+        <div class="modal-footer"><button type="button" class="btn btn-light" data-bs-dismiss="modal">Cancel</button><button type="submit" class="btn btn-primary"><i class="ph-bold ph-copy me-2"></i>Clone collection</button></div>
+      </form>
+    </div>
+  </div>
+
+  <div class="modal fade" id="editCollectionToolModal" tabindex="-1">
+    <div class="modal-dialog modal-lg modal-dialog-centered modal-dialog-scrollable">
+      <form class="modal-content" ng-submit="app.editCollectionTool()">
+        <div class="modal-header">
+          <div class="modal-title-group"><span class="modal-icon"><i class="ph-bold ph-pencil-simple"></i></span><div><p class="eyebrow">Collection Tool</p><h5 class="modal-title">Edit tool mapping</h5></div></div>
+          <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+        </div>
+        <div class="modal-body">
+          <div class="row g-3">
+            <div class="col-md-6"><label class="form-label">Collection tool id</label><input class="form-control" ng-model="app.forms.editCollectionTool.request.collectionToolId" readonly></div>
+            <div class="col-md-6"><label class="form-label">Alias</label><input class="form-control" ng-model="app.forms.editCollectionTool.request.alias"></div>
+            <div class="col-12"><label class="form-label">Description</label><textarea class="form-control" rows="2" ng-model="app.forms.editCollectionTool.request.description"></textarea></div>
+            <div class="col-12">
+              <div class="d-flex gap-4">
+                <div class="form-check form-switch">
+                  <input class="form-check-input" type="checkbox" id="captureInputCheck" ng-model="app.forms.editCollectionTool.request.captureInput">
+                  <label class="form-check-label" for="captureInputCheck">Capture input</label>
+                </div>
+                <div class="form-check form-switch">
+                  <input class="form-check-input" type="checkbox" id="captureOutputCheck" ng-model="app.forms.editCollectionTool.request.captureOutput">
+                  <label class="form-check-label" for="captureOutputCheck">Capture output</label>
+                </div>
+              </div>
+            </div>
+            <div class="col-12">
+              <ul class="nav nav-tabs calltool-tabs" role="tablist">
+                <li class="nav-item" role="presentation"><button class="nav-link active" data-bs-toggle="tab" data-bs-target="#collectiontool-editor" type="button" role="tab">Editor</button></li>
+                <li class="nav-item" role="presentation"><button class="nav-link" data-bs-toggle="tab" data-bs-target="#collectiontool-payload" type="button" role="tab">Payload</button></li>
+              </ul>
+              <div class="tab-content calltool-tab-content">
+                <div class="tab-pane fade show active" id="collectiontool-editor" role="tabpanel">
+                  <div class="tool-jsonform-host" ng-class="{empty: !app.forms.editCollectionTool.managedPayloadEditor.schema}">
+                    <div class="tool-arg-builder" ng-if="app.forms.editCollectionTool.managedPayloadEditor.visible && app.forms.editCollectionTool.managedPayloadEditor.schema && app.forms.editCollectionTool.managedPayloadEditor.openEpoch" ng-include="'collectionToolPayloadNodeTemplate'" ng-init="schema=app.forms.editCollectionTool.managedPayloadEditor.schema; model=app.forms.editCollectionTool.managedPayloadEditor.model; path='root'; label='managedPayload'; depth=0"></div>
+                    <div class="muted" ng-if="!app.forms.editCollectionTool.managedPayloadEditor.schema">Preparing payload schema...</div>
+                  </div>
+                </div>
+                <div class="tab-pane fade" id="collectiontool-payload" role="tabpanel">
+                  <textarea class="form-control code-input" rows="10" ng-value="app.renderEditManagedPayloadJson()" readonly></textarea>
+                </div>
+              </div>
+              <div class="alert alert-warning mt-2 mb-0" ng-if="app.forms.editCollectionTool.managedPayloadEditor.error">{{app.forms.editCollectionTool.managedPayloadEditor.error}}</div>
+            </div>
+            <div class="col-12">
+              <label class="form-label">Success condition</label>
+              <div class="row g-2 align-items-end">
+                <div class="col-md-5"><input class="form-control form-control-sm" ng-model="app.forms.editCollectionTool.request.assertion.success.KeyPath" placeholder="KeyPath (JSON xPath)"></div>
+                <div class="col-md-3"><input class="form-control form-control-sm" ng-model="app.forms.editCollectionTool.request.assertion.success.value" placeholder="Expected value"></div>
+                <div class="col-md-2">
+                  <div class="form-check">
+                    <input class="form-check-input" type="checkbox" id="successIgnoreCase" ng-model="app.forms.editCollectionTool.request.assertion.success.ignoreCase">
+                    <label class="form-check-label" for="successIgnoreCase">Ignore case</label>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col-12">
+              <label class="form-label">Failed condition</label>
+              <div class="row g-2 align-items-end">
+                <div class="col-md-5"><input class="form-control form-control-sm" ng-model="app.forms.editCollectionTool.request.assertion.failed.KeyPath" placeholder="KeyPath (JSON xPath)"></div>
+                <div class="col-md-3"><input class="form-control form-control-sm" ng-model="app.forms.editCollectionTool.request.assertion.failed.value" placeholder="Expected value"></div>
+                <div class="col-md-2">
+                  <div class="form-check">
+                    <input class="form-check-input" type="checkbox" id="failedIgnoreCase" ng-model="app.forms.editCollectionTool.request.assertion.failed.ignoreCase">
+                    <label class="form-check-label" for="failedIgnoreCase">Ignore case</label>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="modal-footer"><button type="button" class="btn btn-light" data-bs-dismiss="modal">Cancel</button><button type="submit" class="btn btn-primary"><i class="ph-bold ph-floppy-disk me-2"></i>Save mapping</button></div>
+      </form>
+    </div>
+  </div>
+
+  <div class="modal fade" id="cloneCollectionToolModal" tabindex="-1">
+    <div class="modal-dialog modal-md modal-dialog-centered modal-dialog-scrollable">
+      <form class="modal-content" ng-submit="app.cloneCollectionTool()">
+        <div class="modal-header">
+          <div class="modal-title-group"><span class="modal-icon"><i class="ph-bold ph-copy"></i></span><div><p class="eyebrow">Collection Tool</p><h5 class="modal-title">Clone tool mapping</h5></div></div>
+          <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+        </div>
+        <div class="modal-body">
+          <div class="row g-3">
+            <div class="col-12"><label class="form-label">Source collection tool id</label><input class="form-control" ng-model="app.forms.cloneCollectionTool.request.collectionToolId" readonly></div>
+            <div class="col-12"><label class="form-label">New alias</label><input class="form-control" ng-model="app.forms.cloneCollectionTool.request.newAlias" required></div>
+            <div class="col-12"><label class="form-label">Description</label><textarea class="form-control" rows="2" ng-model="app.forms.cloneCollectionTool.request.description"></textarea></div>
+          </div>
+        </div>
+        <div class="modal-footer"><button type="button" class="btn btn-light" data-bs-dismiss="modal">Cancel</button><button type="submit" class="btn btn-primary"><i class="ph-bold ph-copy me-2"></i>Clone mapping</button></div>
+      </form>
+    </div>
+  </div>
+
+  <div class="modal fade" id="collectionWizardModal" tabindex="-1">
+    <div class="modal-dialog modal-xl modal-dialog-centered modal-dialog-scrollable">
+      <form class="modal-content wizard-modal" ng-submit="app.submitCollectionWizard()">
+        <div class="modal-header wizard-header">
+          <div class="modal-title-group">
+            <span class="modal-icon"><i class="ph-bold ph-stack"></i></span>
+            <div>
+              <p class="eyebrow">{{app.collectionWizard.mode === 'update' ? 'Update collection' : 'New collection'}}</p>
+              <h5 class="modal-title">Collection Wizard</h5>
+            </div>
+          </div>
+          <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+        </div>
+
+        <div class="wizard-stepper">
+          <button type="button" class="wizard-step" ng-class="{active: app.collectionWizard.step === 1, done: app.collectionWizard.step > 1}" ng-click="app.collectionWizard.step = 1">
+            <span class="wizard-step-dot"><i class="ph-bold" ng-class="app.collectionWizard.step > 1 ? 'ph-check' : 'ph-folder-simple-plus'"></i></span>
+            <span class="wizard-step-text"><small>Step 1</small><strong>Collection</strong></span>
+          </button>
+          <span class="wizard-step-line" ng-class="{filled: app.collectionWizard.step > 1}"></span>
+          <button type="button" class="wizard-step" ng-class="{active: app.collectionWizard.step === 2, done: app.collectionWizard.step > 2}" ng-click="app.collectionWizard.step = 2">
+            <span class="wizard-step-dot"><i class="ph-bold" ng-class="app.collectionWizard.step > 2 ? 'ph-check' : 'ph-wrench'"></i></span>
+            <span class="wizard-step-text"><small>Step 2</small><strong>Select tools</strong></span>
+          </button>
+          <span class="wizard-step-line" ng-class="{filled: app.collectionWizard.step > 2}"></span>
+          <button type="button" class="wizard-step" ng-class="{active: app.collectionWizard.step === 3}" ng-click="app.collectionWizard.step = 3">
+            <span class="wizard-step-dot"><i class="ph-bold ph-rocket-launch"></i></span>
+            <span class="wizard-step-text"><small>Step 3</small><strong>Review</strong></span>
+          </button>
+        </div>
+
+        <div class="modal-body wizard-body">
+          <!-- STEP 1 -->
+          <div ng-show="app.collectionWizard.step === 1" class="wizard-page">
+            <div class="form-section">
+              <div class="form-section-title"><i class="ph-bold ph-identification-card"></i>Collection details</div>
+              <div class="row g-3">
+                <div class="col-12" ng-if="app.collectionWizard.mode === 'update'">
+                  <label class="form-label">Collection id</label>
+                  <input class="form-control" ng-model="app.collectionWizard.collectionId" ng-disabled="app.collectionWizard.collectionNameLocked" placeholder="col_xxxxxxxx">
+                </div>
+                <div class="col-12">
+                  <label class="form-label">Collection name</label>
+                  <input class="form-control" ng-model="app.collectionWizard.collectionName" ng-disabled="app.collectionWizard.collectionNameLocked" placeholder="Customer onboarding tools">
+                </div>
+                <div class="col-12">
+                  <label class="form-label">Description</label>
+                  <textarea class="form-control" rows="3" ng-model="app.collectionWizard.description" placeholder="What is this collection used for?"></textarea>
+                </div>
+                <div class="col-12" ng-if="app.collectionWizard.mode === 'create'">
+                  <label class="wizard-switch">
+                    <span class="android-switch">
+                      <input type="checkbox" ng-model="app.collectionWizard.enabled">
+                      <span class="android-slider"></span>
+                    </span>
+                    <span><strong>Enabled</strong><small>Make this collection active immediately</small></span>
+                  </label>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- STEP 2 -->
+          <div ng-show="app.collectionWizard.step === 2" class="wizard-page">
+            <div class="wizard-toolbar">
+              <div class="wizard-toolbar-field">
+                <label class="form-label">MCP source</label>
+                <select class="form-select" ng-model="app.collectionWizard.mcpId" ng-change="app.loadWizardTools()">
+                  <option value="">Select MCP endpoint</option>
+                  <option ng-repeat="mcp in app.mcps track by mcp.mcpId" value="{{mcp.mcpId}}">{{mcp.alias || mcp.name}}</option>
+                </select>
+              </div>
+              <div class="wizard-toolbar-field grow">
+                <label class="form-label">Search tools</label>
+                <div class="search-box in-form"><i class="ph-bold ph-magnifying-glass"></i><input ng-model="app.collectionWizard.toolSearch" placeholder="Filter loaded tools"></div>
+              </div>
+              <button type="button" class="btn btn-soft wizard-selectall" ng-click="app.toggleAllWizardTools()"><i class="ph-bold ph-check-square me-2"></i>Toggle all</button>
+            </div>
+
+            <div class="wizard-selection-bar">
+              <span><i class="ph-fill ph-check-circle"></i> {{app.selectedWizardToolIds().length}} selected</span>
+              <span class="muted">{{app.filteredWizardTools().length}} available</span>
+            </div>
+
+            <div class="empty-state compact" ng-if="!app.filteredWizardTools().length">
+              <i class="ph-bold ph-wrench"></i>
+              <h4>No tools loaded</h4>
+              <p>Pick an MCP source above to load its tools.</p>
+            </div>
+
+            <div class="selectable-tools" ng-if="app.filteredWizardTools().length">
+              <label class="selectable-tool" ng-repeat="tool in app.filteredWizardTools() track by tool.toolId" ng-class="{picked: app.collectionWizard.selected[tool.toolId]}">
+                <input type="checkbox" ng-model="app.collectionWizard.selected[tool.toolId]">
+                <span>
+                  <strong>{{tool.name}}</strong>
+                  <small>{{tool.description || tool.toolId}}</small>
+                </span>
+                <em class="status-pill" ng-class="tool.enabled ? 'on' : 'off'">{{tool.enabled ? 'Enabled' : 'Disabled'}}</em>
+              </label>
+            </div>
+          </div>
+
+          <!-- STEP 3 -->
+          <div ng-show="app.collectionWizard.step === 3" class="wizard-page">
+            <div class="wizard-review">
+              <div class="wizard-review-head">
+                <span class="wizard-review-icon"><i class="ph-bold" ng-class="app.collectionWizard.mode === 'create' ? 'ph-plus-circle' : 'ph-pencil-simple'"></i></span>
+                <div>
+                  <h4>{{app.collectionWizard.collectionName || app.collectionWizard.collectionId || 'Untitled collection'}}</h4>
+                  <p>{{app.collectionWizard.description || 'No description provided'}}</p>
+                </div>
+              </div>
+
+              <div class="wizard-stats">
+                <div class="wizard-stat">
+                  <i class="ph-bold ph-lightning"></i>
+                  <strong>{{app.collectionWizard.mode === 'create' ? 'Create' : 'Update'}}</strong>
+                  <small>Action</small>
+                </div>
+                <div class="wizard-stat">
+                  <i class="ph-bold ph-wrench"></i>
+                  <strong>{{app.selectedWizardToolIds().length}}</strong>
+                  <small>Tools selected</small>
+                </div>
+                <div class="wizard-stat">
+                  <i class="ph-bold" ng-class="app.collectionWizard.enabled ? 'ph-toggle-right' : 'ph-toggle-left'"></i>
+                  <strong>{{app.collectionWizard.enabled ? 'Enabled' : 'Disabled'}}</strong>
+                  <small>State</small>
+                </div>
+              </div>
+
+              <div class="wizard-review-tools" ng-if="app.selectedWizardTools().length">
+                <label class="form-label">Tools in this collection</label>
+                <div class="selected-chip-wrap">
+                  <span ng-repeat="tool in app.selectedWizardTools() track by tool.toolId"><i class="ph-bold ph-wrench"></i>{{tool.name}}</span>
+                </div>
+              </div>
+              <div class="wizard-empty-note" ng-if="!app.selectedWizardTools().length">
+                <i class="ph-bold ph-warning"></i> No tools selected yet. Go back to Step 2 to add some.
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="modal-footer wizard-footer">
+          <button type="button" class="btn btn-light me-auto" data-bs-dismiss="modal">Cancel</button>
+          <button type="button" class="btn btn-soft" ng-disabled="app.collectionWizard.step === 1" ng-click="app.collectionWizard.step = app.collectionWizard.step - 1"><i class="ph-bold ph-arrow-left me-2"></i>Back</button>
+          <button type="button" class="btn btn-primary" ng-if="app.collectionWizard.step < 3" ng-click="app.collectionWizard.step = app.collectionWizard.step + 1">Continue<i class="ph-bold ph-arrow-right ms-2"></i></button>
+          <button type="submit" class="btn btn-success" ng-if="app.collectionWizard.step === 3"><i class="ph-bold ph-rocket-launch me-2"></i>{{app.collectionWizard.mode === 'create' ? 'Create collection' : 'Apply changes'}}</button>
+        </div>
+      </form>
+    </div>
+  </div>
+
+  <div class="modal fade" id="oauthCallbackModal" tabindex="-1">
+    <div class="modal-dialog modal-md modal-dialog-centered modal-dialog-scrollable">
+      <div class="modal-content">
+        <div class="modal-header">
+          <div class="modal-title-group">
+            <span class="modal-icon"><i class="ph-bold ph-arrow-u-down-left"></i></span>
+            <div>
+              <p class="eyebrow">OAuth callback</p>
+              <h5 class="modal-title">Process OAuth callback</h5>
+            </div>
+          </div>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          <div class="form-section">
+            <div class="form-section-title"><i class="ph-bold ph-key"></i>Callback parameters</div>
+            <div class="row g-3">
+              <div class="col-12"><label class="form-label">Setup name <span class="text-danger">*</span></label><input class="form-control" ng-model="app.oauth.callbackForm.name" placeholder="google-workspace"></div>
+              <div class="col-md-6"><label class="form-label">Code <span class="text-danger">*</span></label><input class="form-control" ng-model="app.oauth.callbackForm.code" placeholder="authorization code"></div>
+              <div class="col-md-6"><label class="form-label">State <span class="text-danger">*</span></label><input class="form-control" ng-model="app.oauth.callbackForm.state" placeholder="state token"></div>
+            </div>
+          </div>
+          <div ng-if="app.oauth.callbackResult">
+            <div class="alert" ng-class="app.oauth.callbackResult.error ? 'alert-danger' : 'alert-success'">
+              <i class="ph-bold me-2" ng-class="app.oauth.callbackResult.error ? 'ph-x-circle' : 'ph-check-circle'"></i>
+              <strong ng-if="!app.oauth.callbackResult.error">{{app.oauth.callbackResult.message || 'Callback succeeded'}}</strong>
+              <strong ng-if="app.oauth.callbackResult.error">{{app.oauth.callbackResult.error}}</strong>
+            </div>
+            <pre class="json-view compact">{{app.oauth.callbackResult | json}}</pre>
+          </div>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-light" data-bs-dismiss="modal">Close</button>
+          <button type="button" class="btn btn-primary" ng-click="app.runOAuthCallback()" ng-disabled="app.oauth.callbackBusy"><span class="spinner-border spinner-border-sm me-2" ng-if="app.oauth.callbackBusy" role="status"></span><i class="ph-bold ph-paper-plane-tilt me-2" ng-if="!app.oauth.callbackBusy"></i>Submit callback</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="modal fade" id="oauthProgressModal" tabindex="-1" data-bs-backdrop="static" data-bs-keyboard="false">
+    <div class="modal-dialog modal-sm modal-dialog-centered">
+      <div class="modal-content">
+        <div class="modal-body text-center py-4">
+          <div class="oauth-progress-spinner">
+            <div class="spinner-border text-primary" role="status" style="width: 3rem; height: 3rem;"></div>
+          </div>
+          <h5 class="mt-3 mb-1">In progress</h5>
+          <p class="muted small mb-3">Complete the authorization in the popup window, then close it when done.</p>
+          <button type="button" class="btn btn-light btn-sm" ng-click="app.cancelOauthProgress()">
+            <i class="ph-bold ph-x me-1"></i>Cancel
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="modal fade" id="oauthShowTokenModal" tabindex="-1">
+    <div class="modal-dialog modal-lg modal-dialog-centered modal-dialog-scrollable">
+      <div class="modal-content">
+        <div class="modal-header">
+          <div class="modal-title-group">
+            <span class="modal-icon"><i class="ph-bold ph-seal-check"></i></span>
+            <div>
+              <p class="eyebrow">OAuth Token</p>
+              <h5 class="modal-title">Verify auth token</h5>
+            </div>
+          </div>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          <div class="dashboard-status" ng-if="app.oauth.showAuthTokenBusy">
+            <div class="spinner-border spinner-border-sm me-2" role="status"></div>
+            <span>Verifying token&hellip;</span>
+          </div>
+
+          <div ng-if="!app.oauth.showAuthTokenBusy && app.oauth.showAuthTokenResult">
+            <div class="alert" ng-class="app.oauth.showAuthTokenResult.error ? 'alert-danger' : 'alert-success'">
+              <i class="ph-bold me-2" ng-class="app.oauth.showAuthTokenResult.error ? 'ph-x-circle' : 'ph-check-circle'"></i>
+              <strong ng-if="!app.oauth.showAuthTokenResult.error">{{app.oauth.showAuthTokenResult.message || 'Verification complete'}}</strong>
+              <strong ng-if="app.oauth.showAuthTokenResult.error">{{app.oauth.showAuthTokenResult.error}}</strong>
+            </div>
+
+            <div class="oauth-kv-grid" ng-if="!app.oauth.showAuthTokenResult.error">
+              <div class="oauth-kv"><span class="oauth-kv-label">Token ID</span><code>{{app.oauth.showAuthTokenResult.tokenId || '—'}}</code></div>
+              <div class="oauth-kv"><span class="oauth-kv-label">Setup Ready</span><span class="status-pill" ng-class="app.oauth.showAuthTokenResult.setupReady ? 'on' : 'off'">{{app.oauth.showAuthTokenResult.setupReady ? 'ready' : 'not ready'}}</span></div>
+              <div class="oauth-kv"><span class="oauth-kv-label">Auth sourcePath</span><code>{{app.oauth.showAuthTokenResult.auth.sourcePath || '—'}}</code></div>
+              <div class="oauth-kv"><span class="oauth-kv-label">Token Found</span><span class="status-pill" ng-class="app.oauth.showAuthTokenResult.auth.tokenFound ? 'on' : 'off'">{{app.oauth.showAuthTokenResult.auth.tokenFound ? 'yes' : 'no'}}</span></div>
+              <div class="oauth-kv"><span class="oauth-kv-label">Auth Value</span><code>{{app.oauth.showAuthTokenResult.auth.value || '—'}}</code></div>
+            </div>
+
+            <div class="oauth-details" ng-if="!app.oauth.showAuthTokenResult.error">
+              <div class="oauth-kv-label mb-2">Token payload</div>
+              <pre class="json-view compact">{{app.oauth.showAuthTokenResult.token | json}}</pre>
+            </div>
+
+            <div class="oauth-details" ng-if="!app.oauth.showAuthTokenResult.error">
+              <div class="oauth-kv-label mb-2">Token information</div>
+              <pre class="json-view compact">{{app.oauth.showAuthTokenResult.tokenInformation | json}}</pre>
+            </div>
+          </div>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-light" data-bs-dismiss="modal">Close</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="modal fade" id="usageModal" tabindex="-1">
+    <div class="modal-dialog modal-lg modal-dialog-centered modal-dialog-scrollable">
+      <div class="modal-content">
+        <div class="modal-header">
+          <div class="modal-title-group">
+            <span class="modal-icon"><i class="ph-bold ph-file-text"></i></span>
+            <div><p class="eyebrow">Inspect</p><h5 class="modal-title">Tool usage</h5></div>
+          </div>
+          <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+        </div>
+        <div class="modal-body">
+          <pre class="json-view">{{app.usageDetails | json}}</pre>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="modal fade" id="mappingProfileModal" tabindex="-1">
+    <div class="modal-dialog modal-xl modal-dialog-centered modal-dialog-scrollable">
+      <form class="modal-content" ng-submit="app.saveMappingProfile()">
+        <div class="modal-header">
+          <div class="modal-title-group">
+            <span class="modal-icon"><i class="ph-bold ph-tree-structure"></i></span>
+            <div>
+              <p class="eyebrow">Mapping Profiles</p>
+              <h5 class="modal-title">{{app.mappingProfiles.formMode === 'edit' ? 'Edit mapping profile' : 'Create mapping profile'}}</h5>
+            </div>
+          </div>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          <div class="alert alert-danger" ng-if="app.mappingProfiles.formError"><i class="ph-bold ph-warning-circle me-2"></i>{{app.mappingProfiles.formError}}</div>
+          <div class="row g-3">
+            <div class="col-md-6"><label class="form-label">Profile name <span class="text-danger">*</span></label><input class="form-control" ng-model="app.mappingProfiles.form.profileName" required placeholder="Google Default"></div>
+            <div class="col-md-3"><label class="form-label">Provider code <span class="text-danger">*</span></label><input class="form-control" ng-model="app.mappingProfiles.form.providerCode" required placeholder="GOOGLE"></div>
+            <div class="col-md-3">
+              <label class="form-label">Status</label>
+              <select class="form-select" ng-model="app.mappingProfiles.form.status">
+                <option value="enabled">enabled</option>
+                <option value="disabled">disabled</option>
+              </select>
+            </div>
+            <div class="col-12"><label class="form-label">Description</label><input class="form-control" ng-model="app.mappingProfiles.form.description" placeholder="Google ID token identity mapping"></div>
+            <div class="col-12">
+              <label class="form-label">Mapping JSON</label>
+              <textarea class="form-control code-input" rows="11" ng-model="app.mappingProfiles.form.mappingText" required></textarea>
+            </div>
+          </div>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-light" data-bs-dismiss="modal">Cancel</button>
+          <button type="submit" class="btn btn-primary" ng-disabled="app.mappingProfiles.formBusy"><span class="spinner-border spinner-border-sm me-2" ng-if="app.mappingProfiles.formBusy" role="status"></span><i class="ph-bold ph-floppy-disk me-2" ng-if="!app.mappingProfiles.formBusy"></i>{{app.mappingProfiles.formMode === 'edit' ? 'Save changes' : 'Create profile'}}</button>
+        </div>
+      </form>
+    </div>
+  </div>
+
+  <div class="modal fade" id="oauthEditModal" tabindex="-1">
+    <div class="modal-dialog modal-lg modal-dialog-centered modal-dialog-scrollable">
+      <form class="modal-content oauth-detail-form" ng-submit="app.saveOAuthSetup()">
+        <div class="modal-header">
+          <div class="modal-title-group">
+            <span class="modal-icon"><i class="ph-bold ph-shield-check"></i></span>
+            <div>
+              <p class="eyebrow">OAuth Manager</p>
+              <h5 class="modal-title">{{app.oauth.formMode === 'edit' ? 'Edit credential' : 'New credential'}}</h5>
+            </div>
+          </div>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close" ng-click="app.cancelOAuthEditModal()"></button>
+        </div>
+        <div class="modal-body">
+          <div class="alert alert-danger" ng-if="app.oauth.formError"><i class="ph-bold ph-warning-circle me-2"></i>{{app.oauth.formError}}</div>
+
+          <div class="form-section" ng-class="{collapsed: app.oauth.collapsed['setup-details']}">
+            <div class="form-section-title form-section-toggle" ng-click="app.toggleOAuthSection('setup-details')" role="button" tabindex="0" ng-keydown="$event.key==='Enter' && app.toggleOAuthSection('setup-details')">
+              <i class="ph-bold ph-caret-down section-chevron" ng-class="{rotated: app.oauth.collapsed['setup-details']}"></i>
+              <i class="ph-bold ph-tag"></i>Setup details
+            </div>
+            <div class="form-section-body" ng-show="!app.oauth.collapsed['setup-details']">
+              <div class="row g-3">
+                <div class="col-md-6"><label class="form-label">Unique name <span class="text-danger">*</span></label><input class="form-control" ng-model="app.oauth.form.uniqueName" required placeholder="google-workspace"></div>
+                <div class="col-md-6"><label class="form-label">Provider name</label><input class="form-control" ng-model="app.oauth.form.providerName" placeholder="Google"></div>
+                <div class="col-md-6"><label class="form-label">App name</label><input class="form-control" ng-model="app.oauth.form.appName" placeholder="Workspace App"></div>
+                <div class="col-md-6"><label class="form-label">Status</label>
+                  <select class="form-select" ng-model="app.oauth.form.status">
+                    <option value="active">active</option>
+                    <option value="inactive">inactive</option>
+                    <option value="draft">draft</option>
+                  </select>
+                </div>
+                <div class="col-md-6"><label class="form-label">App logo URL</label><input class="form-control" ng-model="app.oauth.form.appLogo" placeholder="https://..."></div>
+                <div class="col-md-6"><label class="form-label">Privacy policy URL</label><input class="form-control" ng-model="app.oauth.form.privacyPolicyUrl" placeholder="https://..."></div>
+                <div class="col-12">
+                  <label class="form-label">Categories</label>
+                  <div class="category-dual-picker">
+                    <div class="category-dual-picker-top">
+                      <div class="category-picker-left">
+                        <div class="category-picker-header">Available</div>
+                        <div class="category-picker-list">
+                          <div class="category-picker-item" ng-repeat="cat in app.getOAuthFormAvailableCategories() track by cat" ng-click="app.addOAuthFormCategory(cat)">
+                            <span>{{cat}}</span>
+                            <i class="ph-bold ph-arrow-right"></i>
+                          </div>
+                          <div class="category-picker-empty" ng-if="!app.getOAuthFormAvailableCategories().length">No available categories</div>
+                        </div>
+                      </div>
+                      <div class="category-picker-right">
+                        <div class="category-picker-header">Selected</div>
+                        <div class="category-picker-list">
+                          <div class="category-picker-item selected" ng-repeat="cat in app.getOAuthFormSelectedCategories() track by cat" ng-click="app.removeOAuthFormCategory(cat)">
+                            <span>{{cat}}</span>
+                            <i class="ph-bold ph-x"></i>
+                          </div>
+                          <div class="category-picker-empty" ng-if="!app.getOAuthFormSelectedCategories().length">No categories selected</div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="category-dual-picker-bottom">
+                      <input type="text" class="form-control form-control-sm" ng-model="app.oauthCategoryPicker.newCategory" placeholder="New category name" ng-keydown="$event.keyCode === 13 && app.addNewOAuthFormCategory()">
+                      <button type="button" class="btn btn-sm btn-outline-primary" ng-click="app.addNewOAuthFormCategory()" title="Add category"><i class="ph-bold ph-plus"></i> Add</button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="form-section" ng-class="{collapsed: app.oauth.collapsed['endpoints']}">
+            <div class="form-section-title form-section-toggle" ng-click="app.toggleOAuthSection('endpoints')" role="button" tabindex="0" ng-keydown="$event.key==='Enter' && app.toggleOAuthSection('endpoints')">
+              <i class="ph-bold ph-caret-down section-chevron" ng-class="{rotated: app.oauth.collapsed['endpoints']}"></i>
+              <i class="ph-bold ph-globe"></i>Endpoints
+            </div>
+            <div class="form-section-body" ng-show="!app.oauth.collapsed['endpoints']">
+              <div class="row g-3">
+                <div class="col-md-6"><label class="form-label">Base endpoint <span class="text-danger">*</span></label><input class="form-control" ng-model="app.oauth.form.baseEndpoint" required placeholder="https://api.example.com"></div>
+                <div class="col-md-6"><label class="form-label">Well-known URL <span class="form-section-hint">optional</span></label><input class="form-control" ng-model="app.oauth.form.wellKnownUrl" placeholder="https://example.com/.well-known/openid-configuration"></div>
+                <div class="col-md-6"><label class="form-label">Authorization URL</label><input class="form-control" ng-model="app.oauth.form.authorizationUrl" placeholder="https://example.com/oauth/authorize"></div>
+                <div class="col-md-6"><label class="form-label">Token URL</label><input class="form-control" ng-model="app.oauth.form.tokenUrl" placeholder="https://example.com/oauth/token"></div>
+                <div class="col-12"><span class="muted small"><i class="ph-bold ph-info me-1"></i>Redirect URI and Callback URI are calculated by the server after save.</span></div>
+              </div>
+            </div>
+          </div>
+
+          <div class="form-section" ng-class="{collapsed: app.oauth.collapsed['credentials']}">
+            <div class="form-section-title form-section-toggle" ng-click="app.toggleOAuthSection('credentials')" role="button" tabindex="0" ng-keydown="$event.key==='Enter' && app.toggleOAuthSection('credentials')">
+              <i class="ph-bold ph-caret-down section-chevron" ng-class="{rotated: app.oauth.collapsed['credentials']}"></i>
+              <i class="ph-bold ph-lock-key"></i>Client credentials
+            </div>
+            <div class="form-section-body" ng-show="!app.oauth.collapsed['credentials']">
+              <div class="row g-3">
+                <div class="col-md-6"><label class="form-label">Client id</label><input class="form-control" ng-model="app.oauth.form.clientId" placeholder="client id" autocomplete="off" autocorrect="off" spellcheck="false" autocapitalize="off"></div>
+                <div class="col-md-6"><label class="form-label">Client secret <span class="form-section-hint">masked</span></label>
+                  <div class="input-group">
+                    <input class="form-control" ng-model="app.oauth.form.clientSecret" placeholder="client secret" type="password" autocomplete="off" autocorrect="off" spellcheck="false" autocapitalize="off">
+                    <button type="button" class="btn btn-light oauth-input-action" ng-click="app.oauth.form.showSecret = !app.oauth.form.showSecret" title="Toggle visibility" aria-label="Toggle secret visibility"><i class="ph-bold" ng-class="app.oauth.form.showSecret ? 'ph-eye-slash' : 'ph-eye'"></i></button>
+                  </div>
+                </div>
+                <div class="col-md-6"><label class="form-label">Scopes</label><input class="form-control" ng-model="app.oauth.form.scopes" placeholder="openid profile email"></div>
+                <div class="col-md-6"><label class="form-label">Grant types</label><input class="form-control" ng-model="app.oauth.form.grantTypes" placeholder="authorization_code"></div>
+              </div>
+            </div>
+          </div>
+
+          <div class="form-section" ng-class="{collapsed: app.oauth.collapsed['token-mapping']}">
+            <div class="form-section-title form-section-toggle" ng-click="app.toggleOAuthSection('token-mapping')" role="button" tabindex="0" ng-keydown="$event.key==='Enter' && app.toggleOAuthSection('token-mapping')">
+              <i class="ph-bold ph-caret-down section-chevron" ng-class="{rotated: app.oauth.collapsed['token-mapping']}"></i>
+              <i class="ph-bold ph-tree-structure"></i>Token mapping <span class="form-section-hint">optional</span>
+            </div>
+            <div class="form-section-body" ng-show="!app.oauth.collapsed['token-mapping']">
+              <div class="row g-3">
+                <div class="col-md-6">
+                  <label class="form-label">Mapping profile</label>
+                  <select class="form-select" ng-model="app.oauth.form.mappingProfileId">
+                    <option value="">No mapping profile</option>
+                    <option ng-repeat="profile in app.mappingProfiles.profiles track by (app.pickProfileField(profile, 'profileId') || app.pickProfileField(profile, 'mappingProfileId') || app.pickProfileField(profile, 'profileName'))" value="{{app.pickProfileField(profile, 'profileId') || app.pickProfileField(profile, 'mappingProfileId') || app.pickProfileField(profile, 'profileName')}}">{{app.pickProfileField(profile, 'profileName') || app.pickProfileField(profile, 'providerCode')}}</option>
+                  </select>
+                </div>
+                <div class="col-md-6 d-flex align-items-end">
+                  <button type="button" class="btn btn-light w-100" ng-click="app.openAddMappingProfile()"><i class="ph-bold ph-plus me-2"></i>Create mapping profile</button>
+                </div>
+                <div class="col-12">
+                  <label class="form-label">Token usage (JSON)</label>
+                  <textarea class="form-control code-input" rows="5" ng-model="app.oauth.form.tokenUsage" placeholder='{"sourcePath":"/access_token","mode":"HEADER","key":"Authorization","valueTemplate":"Bearer ${token}"}'></textarea>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="form-section" ng-class="{collapsed: app.oauth.collapsed['advanced']}">
+            <div class="form-section-title form-section-toggle" ng-click="app.toggleOAuthSection('advanced')" role="button" tabindex="0" ng-keydown="$event.key==='Enter' && app.toggleOAuthSection('advanced')">
+              <i class="ph-bold ph-caret-down section-chevron" ng-class="{rotated: app.oauth.collapsed['advanced']}"></i>
+              <i class="ph-bold ph-sliders-horizontal"></i>Advanced <span class="form-section-hint">optional</span>
+            </div>
+            <div class="form-section-body" ng-show="!app.oauth.collapsed['advanced']">
+              <label class="form-label">Extra auth params (JSON)</label>
+              <textarea class="form-control code-input" rows="3" ng-model="app.oauth.form.extraAuthParams" placeholder='{"prompt":"consent","access_type":"offline"}'></textarea>
+            </div>
+          </div>
+
+          <div class="form-section" ng-if="app.oauth.savedAuthorizeUrl || app.oauth.savedRedirectUri">
+            <div class="form-section-title"><i class="ph-bold ph-link"></i>Generated URLs</div>
+            <div class="oauth-kv" ng-if="app.oauth.savedAuthorizeUrl">
+              <span class="oauth-kv-label">authorizeUrl</span>
+              <div class="oauth-url-cell">
+                <code title="{{app.oauth.savedAuthorizeUrl}}">{{app.truncateText(app.oauth.savedAuthorizeUrl, 110)}}</code>
+                <button type="button" class="command-copy-icon" ng-click="app.copyText(app.oauth.savedAuthorizeUrl)" title="Copy authorizeUrl" aria-label="Copy authorizeUrl"><i class="ph-bold ph-copy"></i></button>
+              </div>
+            </div>
+            <div class="oauth-kv" ng-if="app.oauth.savedRedirectUri">
+              <span class="oauth-kv-label">redirectUri</span>
+              <div class="oauth-url-cell">
+                <code title="{{app.oauth.savedRedirectUri}}">{{app.truncateText(app.oauth.savedRedirectUri, 110)}}</code>
+                <button type="button" class="command-copy-icon" ng-click="app.copyText(app.oauth.savedRedirectUri)" title="Copy redirectUri" aria-label="Copy redirectUri"><i class="ph-bold ph-copy"></i></button>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-light" data-bs-dismiss="modal" ng-click="app.cancelOAuthEditModal()">Cancel</button>
+          <button type="submit" class="btn btn-primary" ng-disabled="app.oauth.formBusy"><span class="spinner-border spinner-border-sm me-2" ng-if="app.oauth.formBusy" role="status"></span><i class="ph-bold ph-floppy-disk me-2" ng-if="!app.oauth.formBusy"></i>{{app.oauth.formMode === 'edit' ? 'Save changes' : 'Create setup'}}</button>
+        </div>
+      </form>
+    </div>
+  </div>
+
+  <div class="modal fade" id="oauthAuthorizeModal" tabindex="-1">
+    <div class="modal-dialog modal-xl modal-dialog-centered modal-dialog-scrollable">
+      <div class="modal-content">
+        <div class="modal-header">
+          <div class="modal-title-group">
+            <span class="modal-icon"><i class="ph-bold ph-arrow-square-out"></i></span>
+            <div>
+              <p class="eyebrow">OAuth Manager</p>
+              <h5 class="modal-title">Authorization Test · {{app.oauth.testForm.name || '—'}}</h5>
+            </div>
+          </div>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          <div class="oauth-auth-grid">
+            <div class="form-section">
+              <div class="form-section-title"><i class="ph-bold ph-flask"></i>Authorization test inputs</div>
+              <div class="row g-3">
+                <div class="col-md-6"><label class="form-label">Setup unique name <span class="text-danger">*</span></label><input class="form-control" ng-model="app.oauth.testForm.name" placeholder="google-workspace"></div>
+                <div class="col-md-6"><label class="form-label">MCP id <span class="text-danger">*</span></label><input class="form-control" ng-model="app.oauth.testForm.mcpId" placeholder="mcp-uuid"></div>
+                <div class="col-md-6"><label class="form-label">Visibility</label><input class="form-control" ng-model="app.oauth.testForm.visibility" placeholder="public | private | team"></div>
+                <div class="col-12 d-flex flex-wrap gap-2 mt-2">
+                  <button type="button" class="btn btn-primary" ng-click="app.runOAuthAuthorizationTest()" ng-disabled="app.oauth.testBusy"><i class="ph-bold ph-flask me-2"></i>Test Authorization URL</button>
+                  <button type="button" class="btn btn-success" ng-click="app.startOAuthAuthorization()" ng-disabled="app.oauth.testBusy"><i class="ph-bold ph-arrow-square-out me-2"></i>Start Authorization</button>
+                  <span class="spinner-border spinner-border-sm align-self-center ms-2" role="status" ng-if="app.oauth.testBusy"></span>
+                </div>
+              </div>
+            </div>
+            <div class="form-section">
+              <div class="form-section-title"><i class="ph-bold ph-file-text"></i>Response</div>
+              <div class="oauth-empty" ng-if="!app.oauth.testResult">
+                <i class="ph-bold ph-magnifying-glass"></i>
+                <p>Run a test to preview the generated authorize URL.</p>
+              </div>
+              <div ng-if="app.oauth.testResult">
+                <div class="oauth-kv" ng-if="app.oauth.testResult.authorizeUrl">
+                  <span class="oauth-kv-label">authorizeUrl</span>
+                  <div class="oauth-url-cell">
+                    <code title="{{app.oauth.testResult.authorizeUrl}}">{{app.truncateText(app.oauth.testResult.authorizeUrl, 90)}}</code>
+                    <button type="button" class="command-copy-icon" ng-click="app.copyText(app.oauth.testResult.authorizeUrl)" title="Copy authorize URL" aria-label="Copy authorize URL"><i class="ph-bold ph-copy"></i></button>
+                  </div>
+                </div>
+                <div class="oauth-kv" ng-if="app.oauth.testResult.redirectUri">
+                  <span class="oauth-kv-label">redirectUri</span>
+                  <div class="oauth-url-cell">
+                    <code title="{{app.oauth.testResult.redirectUri}}">{{app.truncateText(app.oauth.testResult.redirectUri, 90)}}</code>
+                    <button type="button" class="command-copy-icon" ng-click="app.copyText(app.oauth.testResult.redirectUri)" title="Copy redirect URI" aria-label="Copy redirect URI"><i class="ph-bold ph-copy"></i></button>
+                  </div>
+                </div>
+                <details class="oauth-details" open>
+                  <summary>Full response JSON</summary>
+                  <pre class="json-view compact">{{app.oauth.testResult | json}}</pre>
+                </details>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-light" data-bs-dismiss="modal">Close</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="modal fade" id="descriptionModal" tabindex="-1">
+    <div class="modal-dialog modal-md modal-dialog-centered modal-dialog-scrollable">
+      <div class="modal-content">
+        <div class="modal-header">
+          <div class="modal-title-group">
+            <span class="modal-icon"><i class="ph-bold ph-text-aa"></i></span>
+            <div><p class="eyebrow">Description</p><h5 class="modal-title">{{app.descriptionModal.title}}</h5></div>
+          </div>
+          <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+        </div>
+        <div class="modal-body">
+          <p class="description-full-text">{{app.descriptionModal.text}}</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="modal fade" id="callToolModal" tabindex="-1">
+    <div class="modal-dialog modal-xl modal-dialog-centered modal-dialog-scrollable">
+      <div class="modal-content">
+        <div class="modal-header">
+          <div class="modal-title-group">
+            <span class="modal-icon"><i class="ph-bold ph-terminal-window"></i></span>
+            <div><p class="eyebrow">Execute</p><h5 class="modal-title">Call {{app.callToolForm.tool.name}}</h5></div>
+          </div>
+          <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+        </div>
+        <div class="modal-body">
+          <ul class="nav nav-tabs calltool-tabs" role="tablist">
+            <li class="nav-item" role="presentation"><button class="nav-link active" data-bs-toggle="tab" data-bs-target="#calltool-editor" type="button" role="tab">Editor</button></li>
+            <li class="nav-item" role="presentation"><button class="nav-link" data-bs-toggle="tab" data-bs-target="#calltool-payload" type="button" role="tab">Payload</button></li>
+          </ul>
+          <div class="tab-content calltool-tab-content">
+            <div class="tab-pane fade show active" id="calltool-editor" role="tabpanel">
+              <div class="tool-jsonform-host" ng-class="{empty: !app.callToolForm.argumentSchema}">
+                <div class="tool-arg-builder" ng-if="app.callToolEditorVisible && app.callToolForm.argumentSchema && app.callToolForm.openEpoch" ng-include="'toolArgNodeTemplate'" ng-init="schema=app.callToolForm.argumentSchema; model=app.callToolForm.argumentsModel; path='root'; label='arguments'; depth=0"></div>
+                <div class="muted" ng-if="!app.callToolForm.argumentSchema">Preparing form from argument schema...</div>
+              </div>
+            </div>
+            <div class="tab-pane fade" id="calltool-payload" role="tabpanel">
+              <textarea class="form-control code-input" rows="17" ng-value="app.renderPayloadJson()" readonly></textarea>
+            </div>
+          </div>
+          <div class="alert alert-warning mt-3 mb-0" ng-if="app.callToolForm.renderError">{{app.callToolForm.renderError}}</div>
+          <label class="form-label mt-3">Result</label>
+          <pre class="json-view">{{app.callToolForm.result}}</pre>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-light" data-bs-dismiss="modal">Close</button>
+          <button class="btn btn-soft" type="button" ng-click="app.submitToolDebugForm()" ng-disabled="app.callToolForm.busy">
+            <span class="spinner-border spinner-border-sm me-2" ng-if="app.callToolForm.busy" role="status"></span>
+            <i class="ph-bold ph-bug me-2" ng-if="!app.callToolForm.busy"></i>Debug
+          </button>
+          <button class="btn btn-primary" type="button" ng-click="app.submitToolArgumentsForm()" ng-disabled="app.callToolForm.busy">
+            <span class="spinner-border spinner-border-sm me-2" ng-if="app.callToolForm.busy" role="status"></span>
+            <i class="ph-bold ph-play me-2" ng-if="!app.callToolForm.busy"></i>Run
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script type="text/ng-template" id="toolArgNodeTemplate">
+    <div class="arg-node" ng-if="app.isObjectSchema(schema)">
+      <div class="arg-table-head" ng-if="path === 'root'"><span>Variable</span><span>Value</span></div>
+      <div class="arg-field" ng-repeat="(fieldKey, fieldSchema) in (schema.properties || {}) track by fieldKey">
+        <div class="arg-field-row">
+          <div class="arg-label-row arg-cell-var" ng-style="{'padding-left': ((depth || 0) * 7) + 'px'}">
+            <button type="button" class="arg-toggle" ng-if="app.isComplexSchema(fieldSchema)" ng-click="app.toggleArgNode(app.childArgPath(path, fieldKey))">
+              <i class="ph-bold" ng-class="app.isArgNodeOpen(app.childArgPath(path, fieldKey)) ? 'ph-caret-down' : 'ph-caret-right'"></i>
+            </button>
+            <span class="arg-key">{{fieldKey}}</span>
+          </div>
+          <div class="arg-cell-val">
+            <div ng-if="app.isArraySchema(fieldSchema)">
+              <div class="arg-array-head">
+                <span class="arg-array-count">{{(model[fieldKey] || []).length}} item(s)</span>
+                <button type="button" class="arg-array-btn add" ng-click="app.addToolArgArrayItem(model[fieldKey], fieldSchema.items, app.childArgPath(path, fieldKey))" title="Add item" aria-label="Add item"><i class="ph-bold ph-plus-circle"></i></button>
+              </div>
+            </div>
+            <div class="arg-primitive" ng-if="!app.isObjectSchema(fieldSchema) && !app.isArraySchema(fieldSchema)">
+              <select class="form-select form-select-sm" ng-if="fieldSchema.enum" ng-model="model[fieldKey]" ng-change="app.onArgValueChange(app.childArgPath(path, fieldKey), model[fieldKey], $event)">
+                <option ng-value="undefined" ng-show="model[fieldKey] === undefined" disabled>&#8203;</option>
+                <option ng-repeat="option in fieldSchema.enum" ng-value="option">{{option}}</option>
+              </select>
+              <input class="form-control form-control-sm" ng-if="app.isNumberSchema(fieldSchema)" type="number" placeholder="{{fieldSchema.type || 'number'}}" ng-model="model[fieldKey]" ng-change="app.onArgValueChange(app.childArgPath(path, fieldKey), model[fieldKey], $event)">
+              <input class="form-check-input" ng-if="app.isBooleanSchema(fieldSchema)" type="checkbox" ng-model="model[fieldKey]" ng-change="app.onArgValueChange(app.childArgPath(path, fieldKey), model[fieldKey], $event)">
+              <input class="form-control form-control-sm" ng-if="!fieldSchema.enum && !app.isNumberSchema(fieldSchema) && !app.isBooleanSchema(fieldSchema)" type="text" placeholder="{{fieldSchema.type || 'string'}}" ng-model="model[fieldKey]" ng-change="app.onArgValueChange(app.childArgPath(path, fieldKey), model[fieldKey], $event)">
+            </div>
+          </div>
+        </div>
+
+        <div ng-if="app.isObjectSchema(fieldSchema) && app.isArgNodeOpen(app.childArgPath(path, fieldKey))">
+          <div class="arg-nested" ng-include="'toolArgNodeTemplate'" ng-init="schema=fieldSchema; model=model[fieldKey]; path=app.childArgPath(path, fieldKey); label=fieldKey; depth=(depth || 0) + 1"></div>
+        </div>
+
+        <div ng-if="app.isArraySchema(fieldSchema) && app.isArgNodeOpen(app.childArgPath(path, fieldKey))">
+          <div class="arg-array-item" ng-repeat="item in model[fieldKey] track by $index">
+            <div class="arg-field-row">
+              <div class="arg-label-row arg-cell-var" ng-style="{'padding-left': (((depth || 0) + 1) * 7) + 'px'}">
+                <button type="button" class="arg-toggle" ng-if="app.isComplexSchema(fieldSchema.items)" ng-click="app.toggleArgNode(app.arrayItemArgPath(app.childArgPath(path, fieldKey), $index))">
+                  <i class="ph-bold" ng-class="app.isArgNodeOpen(app.arrayItemArgPath(app.childArgPath(path, fieldKey), $index)) ? 'ph-caret-down' : 'ph-caret-right'"></i>
+                </button>
+                <span class="arg-key">{{fieldKey}}[{{$index}}]</span>
+              </div>
+              <div class="arg-cell-val arg-cell-with-del">
+                <div class="arg-primitive" ng-if="!app.isObjectSchema(fieldSchema.items)">
+                  <select class="form-select form-select-sm" ng-if="fieldSchema.items.enum" ng-model="model[fieldKey][$index]" ng-change="app.onArgValueChange(app.arrayItemArgPath(app.childArgPath(path, fieldKey), $index), model[fieldKey][$index], $event)">
+                    <option ng-value="undefined" ng-show="model[fieldKey][$index] === undefined" disabled>&#8203;</option>
+                    <option ng-repeat="itemOption in fieldSchema.items.enum" ng-value="itemOption">{{itemOption}}</option>
+                  </select>
+                  <input class="form-control form-control-sm" ng-if="app.isNumberSchema(fieldSchema.items)" type="number" placeholder="{{fieldSchema.items.type || 'number'}}" ng-model="model[fieldKey][$index]" ng-change="app.onArgValueChange(app.arrayItemArgPath(app.childArgPath(path, fieldKey), $index), model[fieldKey][$index], $event)">
+                  <input class="form-check-input" ng-if="app.isBooleanSchema(fieldSchema.items)" type="checkbox" ng-model="model[fieldKey][$index]" ng-change="app.onArgValueChange(app.arrayItemArgPath(app.childArgPath(path, fieldKey), $index), model[fieldKey][$index], $event)">
+                  <input class="form-control form-control-sm" ng-if="!fieldSchema.items.enum && !app.isNumberSchema(fieldSchema.items) && !app.isBooleanSchema(fieldSchema.items)" type="text" placeholder="{{fieldSchema.items.type || 'string'}}" ng-model="model[fieldKey][$index]" ng-change="app.onArgValueChange(app.arrayItemArgPath(app.childArgPath(path, fieldKey), $index), model[fieldKey][$index], $event)">
+                </div>
+                <button type="button" class="arg-array-btn del" ng-click="app.removeToolArgArrayItem(model[fieldKey], $index, item, app.childArgPath(path, fieldKey))" title="Remove item" aria-label="Remove item"><i class="ph-bold ph-trash"></i></button>
+              </div>
+            </div>
+            <div ng-if="app.isObjectSchema(fieldSchema.items) && app.isArgNodeOpen(app.arrayItemArgPath(app.childArgPath(path, fieldKey), $index))">
+              <div class="arg-nested" ng-include="'toolArgNodeTemplate'" ng-init="schema=fieldSchema.items; model=model[fieldKey][$index]; path=app.arrayItemArgPath(app.childArgPath(path, fieldKey), $index); label=fieldKey + '[' + $index + ']'; depth=(depth || 0) + 2"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </script>
+
+  <script type="text/ng-template" id="mcpAuthNodeTemplate">
+    <div class="arg-node" ng-if="app.isObjectSchema(schema)">
+      <div class="arg-table-head" ng-if="path === 'root'"><span>Variable</span><span>Value</span></div>
+      <div class="arg-field" ng-repeat="(fieldKey, fieldSchema) in (schema.properties || {}) track by fieldKey">
+        <div class="arg-field-row">
+          <div class="arg-label-row arg-cell-var" ng-style="{'padding-left': ((depth || 0) * 7) + 'px'}">
+            <button type="button" class="arg-toggle" ng-if="app.isComplexSchema(fieldSchema)" ng-click="app.toggleMcpAuthNode(app.childArgPath(path, fieldKey))">
+              <i class="ph-bold" ng-class="app.isMcpAuthNodeOpen(app.childArgPath(path, fieldKey)) ? 'ph-caret-down' : 'ph-caret-right'"></i>
+            </button>
+            <span class="arg-key">{{fieldKey}}</span>
+          </div>
+          <div class="arg-cell-val">
+            <div ng-if="app.isArraySchema(fieldSchema)">
+              <div class="arg-array-head">
+                <span class="arg-array-count">{{(model[fieldKey] || []).length}} item(s)</span>
+                <button type="button" class="arg-array-btn add" ng-click="app.addMcpAuthArrayItem(model[fieldKey], fieldSchema.items, app.childArgPath(path, fieldKey))" title="Add item" aria-label="Add item"><i class="ph-bold ph-plus-circle"></i></button>
+              </div>
+            </div>
+            <div class="arg-primitive" ng-if="!app.isObjectSchema(fieldSchema) && !app.isArraySchema(fieldSchema)">
+              <select class="form-select form-select-sm" ng-if="fieldSchema.enum" ng-model="model[fieldKey]" ng-change="app.onMcpAuthValueChange(app.childArgPath(path, fieldKey), model[fieldKey], $event)">
+                <option ng-value="undefined" ng-show="model[fieldKey] === undefined" disabled>&#8203;</option>
+                <option ng-repeat="option in fieldSchema.enum" ng-value="option">{{option}}</option>
+              </select>
+              <input class="form-control form-control-sm" ng-if="app.isNumberSchema(fieldSchema)" type="number" placeholder="{{fieldSchema.type || 'number'}}" ng-model="model[fieldKey]" ng-change="app.onMcpAuthValueChange(app.childArgPath(path, fieldKey), model[fieldKey], $event)">
+              <input class="form-check-input" ng-if="app.isBooleanSchema(fieldSchema)" type="checkbox" ng-model="model[fieldKey]" ng-change="app.onMcpAuthValueChange(app.childArgPath(path, fieldKey), model[fieldKey], $event)">
+              <input class="form-control form-control-sm" ng-if="!fieldSchema.enum && !app.isNumberSchema(fieldSchema) && !app.isBooleanSchema(fieldSchema)" type="text" placeholder="{{fieldSchema.type || 'string'}}" ng-model="model[fieldKey]" ng-change="app.onMcpAuthValueChange(app.childArgPath(path, fieldKey), model[fieldKey], $event)">
+            </div>
+          </div>
+        </div>
+
+        <div ng-if="app.isObjectSchema(fieldSchema) && app.isMcpAuthNodeOpen(app.childArgPath(path, fieldKey))">
+          <div class="arg-nested" ng-include="'mcpAuthNodeTemplate'" ng-init="schema=fieldSchema; model=model[fieldKey]; path=app.childArgPath(path, fieldKey); label=fieldKey; depth=(depth || 0) + 1"></div>
+        </div>
+
+        <div ng-if="app.isArraySchema(fieldSchema) && app.isMcpAuthNodeOpen(app.childArgPath(path, fieldKey))">
+          <div class="arg-array-item" ng-repeat="item in model[fieldKey] track by $index">
+            <div class="arg-field-row">
+              <div class="arg-label-row arg-cell-var" ng-style="{'padding-left': (((depth || 0) + 1) * 7) + 'px'}">
+                <button type="button" class="arg-toggle" ng-if="app.isComplexSchema(fieldSchema.items)" ng-click="app.toggleMcpAuthNode(app.arrayItemArgPath(app.childArgPath(path, fieldKey), $index))">
+                  <i class="ph-bold" ng-class="app.isMcpAuthNodeOpen(app.arrayItemArgPath(app.childArgPath(path, fieldKey), $index)) ? 'ph-caret-down' : 'ph-caret-right'"></i>
+                </button>
+                <span class="arg-key">{{fieldKey}}[{{$index}}]</span>
+              </div>
+              <div class="arg-cell-val arg-cell-with-del">
+                <div class="arg-primitive" ng-if="!app.isObjectSchema(fieldSchema.items)">
+                  <select class="form-select form-select-sm" ng-if="fieldSchema.items.enum" ng-model="model[fieldKey][$index]" ng-change="app.onMcpAuthValueChange(app.arrayItemArgPath(app.childArgPath(path, fieldKey), $index), model[fieldKey][$index], $event)">
+                    <option ng-value="undefined" ng-show="model[fieldKey][$index] === undefined" disabled>&#8203;</option>
+                    <option ng-repeat="itemOption in fieldSchema.items.enum" ng-value="itemOption">{{itemOption}}</option>
+                  </select>
+                  <input class="form-control form-control-sm" ng-if="app.isNumberSchema(fieldSchema.items)" type="number" placeholder="{{fieldSchema.items.type || 'number'}}" ng-model="model[fieldKey][$index]" ng-change="app.onMcpAuthValueChange(app.arrayItemArgPath(app.childArgPath(path, fieldKey), $index), model[fieldKey][$index], $event)">
+                  <input class="form-check-input" ng-if="app.isBooleanSchema(fieldSchema.items)" type="checkbox" ng-model="model[fieldKey][$index]" ng-change="app.onMcpAuthValueChange(app.arrayItemArgPath(app.childArgPath(path, fieldKey), $index), model[fieldKey][$index], $event)">
+                  <input class="form-control form-control-sm" ng-if="!fieldSchema.items.enum && !app.isNumberSchema(fieldSchema.items) && !app.isBooleanSchema(fieldSchema.items)" type="text" placeholder="{{fieldSchema.items.type || 'string'}}" ng-model="model[fieldKey][$index]" ng-change="app.onMcpAuthValueChange(app.arrayItemArgPath(app.childArgPath(path, fieldKey), $index), model[fieldKey][$index], $event)">
+                </div>
+                <button type="button" class="arg-array-btn del" ng-click="app.removeMcpAuthArrayItem(model[fieldKey], $index, item, app.childArgPath(path, fieldKey))" title="Remove item" aria-label="Remove item"><i class="ph-bold ph-trash"></i></button>
+              </div>
+            </div>
+            <div ng-if="app.isObjectSchema(fieldSchema.items) && app.isMcpAuthNodeOpen(app.arrayItemArgPath(app.childArgPath(path, fieldKey), $index))">
+              <div class="arg-nested" ng-include="'mcpAuthNodeTemplate'" ng-init="schema=fieldSchema.items; model=model[fieldKey][$index]; path=app.arrayItemArgPath(app.childArgPath(path, fieldKey), $index); label=fieldKey + '[' + $index + ']'; depth=(depth || 0) + 2"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </script>
+
+  <script type="text/ng-template" id="collectionToolPayloadNodeTemplate">
+    <div class="arg-node" ng-if="app.isObjectSchema(schema)">
+      <div class="arg-table-head" ng-if="path === 'root'"><span>Variable</span><span>Value</span></div>
+      <div class="arg-field" ng-repeat="(fieldKey, fieldSchema) in (schema.properties || {}) track by fieldKey">
+        <div class="arg-field-row">
+          <div class="arg-label-row arg-cell-var" ng-style="{'padding-left': ((depth || 0) * 7) + 'px'}">
+            <button type="button" class="arg-toggle" ng-if="app.isComplexSchema(fieldSchema)" ng-click="app.toggleEditManagedPayloadNode(app.childArgPath(path, fieldKey))">
+              <i class="ph-bold" ng-class="app.isEditManagedPayloadNodeOpen(app.childArgPath(path, fieldKey)) ? 'ph-caret-down' : 'ph-caret-right'"></i>
+            </button>
+            <span class="arg-key">{{fieldKey}}</span>
+          </div>
+          <div class="arg-cell-val">
+            <div ng-if="app.isArraySchema(fieldSchema)">
+              <div class="arg-array-head">
+                <span class="arg-array-count">{{(model[fieldKey] || []).length}} item(s)</span>
+                <button type="button" class="arg-array-btn add" ng-click="app.addEditManagedPayloadArrayItem(model[fieldKey], fieldSchema.items, app.childArgPath(path, fieldKey))" title="Add item" aria-label="Add item"><i class="ph-bold ph-plus-circle"></i></button>
+              </div>
+            </div>
+            <div class="arg-primitive" ng-if="!app.isObjectSchema(fieldSchema) && !app.isArraySchema(fieldSchema)">
+              <select class="form-select form-select-sm" ng-if="fieldSchema.enum" ng-model="model[fieldKey]" ng-change="app.onEditManagedPayloadValueChange(app.childArgPath(path, fieldKey), model[fieldKey], $event)">
+                <option ng-value="undefined" ng-show="model[fieldKey] === undefined" disabled>&#8203;</option>
+                <option ng-repeat="option in fieldSchema.enum" ng-value="option">{{option}}</option>
+              </select>
+              <input class="form-control form-control-sm" ng-if="app.isNumberSchema(fieldSchema)" type="number" placeholder="{{fieldSchema.type || 'number'}}" ng-model="model[fieldKey]" ng-change="app.onEditManagedPayloadValueChange(app.childArgPath(path, fieldKey), model[fieldKey], $event)">
+              <input class="form-check-input" ng-if="app.isBooleanSchema(fieldSchema)" type="checkbox" ng-model="model[fieldKey]" ng-change="app.onEditManagedPayloadValueChange(app.childArgPath(path, fieldKey), model[fieldKey], $event)">
+              <input class="form-control form-control-sm" ng-if="!fieldSchema.enum && !app.isNumberSchema(fieldSchema) && !app.isBooleanSchema(fieldSchema)" type="text" placeholder="{{fieldSchema.type || 'string'}}" ng-model="model[fieldKey]" ng-change="app.onEditManagedPayloadValueChange(app.childArgPath(path, fieldKey), model[fieldKey], $event)">
+            </div>
+          </div>
+        </div>
+
+        <div ng-if="app.isObjectSchema(fieldSchema) && app.isEditManagedPayloadNodeOpen(app.childArgPath(path, fieldKey))">
+          <div class="arg-nested" ng-include="'collectionToolPayloadNodeTemplate'" ng-init="schema=fieldSchema; model=model[fieldKey]; path=app.childArgPath(path, fieldKey); label=fieldKey; depth=(depth || 0) + 1"></div>
+        </div>
+
+        <div ng-if="app.isArraySchema(fieldSchema) && app.isEditManagedPayloadNodeOpen(app.childArgPath(path, fieldKey))">
+          <div class="arg-array-item" ng-repeat="item in model[fieldKey] track by $index">
+            <div class="arg-field-row">
+              <div class="arg-label-row arg-cell-var" ng-style="{'padding-left': (((depth || 0) + 1) * 7) + 'px'}">
+                <button type="button" class="arg-toggle" ng-if="app.isComplexSchema(fieldSchema.items)" ng-click="app.toggleEditManagedPayloadNode(app.arrayItemArgPath(app.childArgPath(path, fieldKey), $index))">
+                  <i class="ph-bold" ng-class="app.isEditManagedPayloadNodeOpen(app.arrayItemArgPath(app.childArgPath(path, fieldKey), $index)) ? 'ph-caret-down' : 'ph-caret-right'"></i>
+                </button>
+                <span class="arg-key">{{fieldKey}}[{{$index}}]</span>
+              </div>
+              <div class="arg-cell-val arg-cell-with-del">
+                <div class="arg-primitive" ng-if="!app.isObjectSchema(fieldSchema.items)">
+                  <select class="form-select form-select-sm" ng-if="fieldSchema.items.enum" ng-model="model[fieldKey][$index]" ng-change="app.onEditManagedPayloadValueChange(app.arrayItemArgPath(app.childArgPath(path, fieldKey), $index), model[fieldKey][$index], $event)">
+                    <option ng-value="undefined" ng-show="model[fieldKey][$index] === undefined" disabled>&#8203;</option>
+                    <option ng-repeat="itemOption in fieldSchema.items.enum" ng-value="itemOption">{{itemOption}}</option>
+                  </select>
+                  <input class="form-control form-control-sm" ng-if="app.isNumberSchema(fieldSchema.items)" type="number" placeholder="{{fieldSchema.items.type || 'number'}}" ng-model="model[fieldKey][$index]" ng-change="app.onEditManagedPayloadValueChange(app.arrayItemArgPath(app.childArgPath(path, fieldKey), $index), model[fieldKey][$index], $event)">
+                  <input class="form-check-input" ng-if="app.isBooleanSchema(fieldSchema.items)" type="checkbox" ng-model="model[fieldKey][$index]" ng-change="app.onEditManagedPayloadValueChange(app.arrayItemArgPath(app.childArgPath(path, fieldKey), $index), model[fieldKey][$index], $event)">
+                  <input class="form-control form-control-sm" ng-if="!fieldSchema.items.enum && !app.isNumberSchema(fieldSchema.items) && !app.isBooleanSchema(fieldSchema.items)" type="text" placeholder="{{fieldSchema.items.type || 'string'}}" ng-model="model[fieldKey][$index]" ng-change="app.onEditManagedPayloadValueChange(app.arrayItemArgPath(app.childArgPath(path, fieldKey), $index), model[fieldKey][$index], $event)">
+                </div>
+                <button type="button" class="arg-array-btn del" ng-click="app.removeEditManagedPayloadArrayItem(model[fieldKey], $index, item, app.childArgPath(path, fieldKey))" title="Remove item" aria-label="Remove item"><i class="ph-bold ph-trash"></i></button>
+              </div>
+            </div>
+            <div ng-if="app.isObjectSchema(fieldSchema.items) && app.isEditManagedPayloadNodeOpen(app.arrayItemArgPath(app.childArgPath(path, fieldKey), $index))">
+              <div class="arg-nested" ng-include="'collectionToolPayloadNodeTemplate'" ng-init="schema=fieldSchema.items; model=model[fieldKey][$index]; path=app.arrayItemArgPath(app.childArgPath(path, fieldKey), $index); label=fieldKey + '[' + $index + ']'; depth=(depth || 0) + 2"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </script>
+
+  <div class="modal fade" id="addInterceptorModal" tabindex="-1">
+    <div class="modal-dialog modal-lg modal-dialog-centered modal-dialog-scrollable">
+      <form class="modal-content" ng-submit="app.saveInterceptor()" autocomplete="off">
+        <div class="modal-header">
+          <div class="modal-title-group">
+            <span class="modal-icon"><i class="ph-bold" ng-class="app.interceptors.editMode ? 'ph-pencil-simple' : 'ph-lightning'"></i></span>
+            <div>
+              <p class="eyebrow">{{app.interceptors.editMode ? 'Edit Interceptor' : 'New Interceptor'}}</p>
+              <h5 class="modal-title">{{app.interceptors.editMode ? 'Edit Interceptor' : 'Add Interceptor'}}</h5>
+            </div>
+          </div>
+          <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+        </div>
+        <div class="modal-body">
+          <div class="row g-3">
+            <div class="col-md-6">
+              <label class="form-label">API ID</label>
+              <input class="form-control" ng-model="app.interceptors.form.apiId" required placeholder="unique-interceptor-id">
+            </div>
+            <div class="col-md-6">
+              <label class="form-label">Direction</label>
+              <select class="form-select" ng-model="app.interceptors.form.direction" required>
+                <option value="input">Input</option>
+                <option value="output">Output</option>
+              </select>
+            </div>
+            <div class="col-12">
+              <label class="form-label">MCP Tool ID</label>
+              <input class="form-control" ng-model="app.interceptors.form.mcpToolId" placeholder="UUID of the MCP tool">
+            </div>
+            <div class="col-12">
+              <label class="form-label">API Text (JSON)</label>
+              <textarea class="form-control code-input" rows="10" ng-model="app.interceptors.form.apiText" placeholder='{"method":"POST","url":"...","headers":{},"body":{}}' required></textarea>
+            </div>
+          </div>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-light" data-bs-dismiss="modal">Cancel</button>
+          <button type="submit" class="btn btn-primary"><i class="ph-bold" ng-class="app.interceptors.editMode ? 'ph-floppy-disk me-2' : 'ph-plus me-2'"></i>{{app.interceptors.editMode ? 'Save' : 'Add Interceptor'}}</button>
+        </div>
+      </form>
+    </div>
+  </div>
+
+  <div class="modal fade" id="explorerModal" tabindex="-1">
+    <div class="modal-dialog modal-lg modal-dialog-centered modal-dialog-scrollable">
+      <form class="modal-content" ng-submit="app.runExplorer()">
+        <div class="modal-header">
+          <div class="modal-title-group">
+            <span class="modal-icon"><i class="ph-bold ph-code"></i></span>
+            <div><p class="eyebrow">API Explorer</p><h5 class="modal-title">{{app.explorer.operation.operationId}}</h5></div>
+          </div>
+          <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+        </div>
+        <div class="modal-body">
+          <p><span class="method me-2">{{app.explorer.operation.method}}</span><code>{{app.explorer.operation.path}}</code></p>
+          <label class="form-label">Payload JSON</label>
+          <textarea class="form-control code-input" rows="8" ng-model="app.explorer.payloadText"></textarea>
+          <label class="form-label mt-3">Response</label>
+          <pre class="json-view">{{app.explorer.result | json}}</pre>
+        </div>
+        <div class="modal-footer"><button type="button" class="btn btn-light" data-bs-dismiss="modal">Close</button><button class="btn btn-primary" type="submit">Send</button></div>
+      </form>
+    </div>
+  </div>
+
+  <!-- Delete Confirmation Modal -->
+  <div class="modal fade" id="deleteConfirmModal" tabindex="-1">
+    <div class="modal-dialog modal-sm modal-dialog-centered">
+      <div class="modal-content">
+        <div class="modal-header">
+          <div class="modal-title-group">
+            <span class="modal-icon" style="background: color-mix(in srgb, var(--danger) 12%, transparent); color: var(--danger);"><i class="ph-bold ph-warning"></i></span>
+            <div>
+              <p class="eyebrow">Confirm Delete</p>
+              <h5 class="modal-title">Delete Item</h5>
+            </div>
+          </div>
+          <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+        </div>
+        <div class="modal-body">
+          <p class="mb-0">{{app.deleteConfirm.message}}</p>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-light" data-bs-dismiss="modal">Cancel</button>
+          <button type="button" class="btn btn-danger" ng-click="app.confirmDelete()"><i class="ph-bold ph-trash me-2"></i>Delete</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script src="https://cdn.jsdelivr.net/npm/jquery@3.7.1/dist/jquery.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/angular@1.8.3/angular.min.js"></script>
+  <script src="vendor/chart.umd.min.js"></script>
+  <script src="app.js?v=20260702as"></script>
+</body>
+</html>

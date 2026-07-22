@@ -1,0 +1,69 @@
+{
+  "input" : [ {
+    "id" : "j1_1",
+    "text" : "text",
+    "li_attr" : {
+      "id" : "j1_1"
+    },
+    "a_attr" : {
+      "href" : "#",
+      "id" : "j1_1_anchor"
+    },
+    "state" : {
+      "loaded" : true,
+      "opened" : false,
+      "selected" : false,
+      "disabled" : false
+    },
+    "data" : { },
+    "children" : [ ],
+    "type" : "string"
+  }, {
+    "id" : "j1_2",
+    "text" : "delimiterChar",
+    "li_attr" : {
+      "id" : "j1_2"
+    },
+    "a_attr" : {
+      "href" : "#",
+      "id" : "j1_2_anchor"
+    },
+    "state" : {
+      "loaded" : true,
+      "opened" : false,
+      "selected" : false,
+      "disabled" : false
+    },
+    "data" : { },
+    "children" : [ ],
+    "type" : "string"
+  } ],
+  "output" : [ {
+    "id" : "j2_1",
+    "text" : "result",
+    "li_attr" : {
+      "id" : "j2_1"
+    },
+    "a_attr" : {
+      "href" : "#",
+      "id" : "j2_1_anchor"
+    },
+    "state" : {
+      "loaded" : true,
+      "opened" : false,
+      "selected" : false,
+      "disabled" : false
+    },
+    "data" : { },
+    "children" : [ ],
+    "type" : "stringList"
+  } ],
+  "package" : "cGFja2FnZSBwYWNrYWdlcy5taWRkbGV3YXJlLnB1Yi5zdHJpbmc7",
+  "imports" : "aW1wb3J0IGNvbS5la2EubWlkZGxld2FyZS5zZXJ2aWNlLkRhdGFQaXBlbGluZTsKaW1wb3J0IGNvbS5la2EubWlkZGxld2FyZS5zZXJ2aWNlLlNlcnZpY2VVdGlsczsKaW1wb3J0IGNvbS5la2EubWlkZGxld2FyZS50ZW1wbGF0ZS5TbmlwcGV0RXhjZXB0aW9uOwppbXBvcnQgamF2YS51dGlsLkFycmF5czsKaW1wb3J0IGphdmEudXRpbC5MaXN0Ow==",
+  "main" : "dHJ5IHsKICAJCWRhdGFQaXBlbGluZS5hcHBMb2coIk9QRVJBVElPTiIsICJ0b2tlbml6ZSIpOwoJCVN0cmluZyB0ZXh0ID0gZGF0YVBpcGVsaW5lLmdldFN0cmluZygidGV4dCIpOwogIAkJZGF0YVBpcGVsaW5lLmFwcExvZygiSU5QVVRfVEVYVCIsICJJbnB1dCBUZXh0OiAiICsgdGV4dCk7CiAgCQlTdHJpbmcgZGVsaW1pdGVyQ2hhciA9IGRhdGFQaXBlbGluZS5nZXRTdHJpbmcoImRlbGltaXRlckNoYXIiKTsKICAJCWRhdGFQaXBlbGluZS5hcHBMb2coIkRFTElNSVRFUiIsICJEZWxpbWl0ZXIgQ2hhcmFjdGVyOiAiICsgZGVsaW1pdGVyQ2hhcik7CiAgCQlTdHJpbmdbXSB0b2tlbnMgPSB0ZXh0LnNwbGl0KGRlbGltaXRlckNoYXIpOwogIAkJZGF0YVBpcGVsaW5lLmFwcExvZygiVE9LRU5TIiwgIlRva2VuczogIiArIHRva2Vucyk7CiAgCQlMaXN0PFN0cmluZz4gdG9rZW5MaXN0ID0gQXJyYXlzLmFzTGlzdCh0b2tlbnMpOwogIAogIAkJZGF0YVBpcGVsaW5lLnB1dCgicmVzdWx0IiwgdG9rZW5MaXN0KTsKICAJCWRhdGFQaXBlbGluZS5hcHBMb2coIlJFU1VMVCIsIHRva2VuTGlzdC50b1N0cmluZygpKTsKICAKICB9IGNhdGNoIChFeGNlcHRpb24gZSkgewoJCWRhdGFQaXBlbGluZS5jbGVhcigpOwogIAkJZGF0YVBpcGVsaW5lLnB1dCgiZXJyb3IiLGUuZ2V0TWVzc2FnZSgpKTsKICAJCWRhdGFQaXBlbGluZS5hcHBMb2coIlNFUlZJQ0VfRVJST1IiLCBlLmdldE1lc3NhZ2UoKSk7CiAgICAJdGhyb3cgbmV3IFNuaXBwZXRFeGNlcHRpb24oZGF0YVBpcGVsaW5lLCJTbmlwcGV0IGV4Y2VwdGlvbiIsIG5ldyBFeGNlcHRpb24oZSkpOwogIH0=",
+  "staticWorkspace" : "",
+  "version" : "v1",
+  "consumers" : "",
+  "developers" : "developers",
+  "lockedByUser" : "admin"
+}

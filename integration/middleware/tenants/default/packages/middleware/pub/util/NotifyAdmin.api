@@ -1,0 +1,1683 @@
+{
+  "latest" : {
+    "createdTS" : "",
+    "input" : [ {
+      "id" : "j2_1",
+      "text" : "EmailParams",
+      "li_attr" : {
+        "id" : "j2_1"
+      },
+      "a_attr" : {
+        "href" : "#",
+        "id" : "j2_1_anchor"
+      },
+      "state" : {
+        "loaded" : true,
+        "opened" : true,
+        "selected" : false,
+        "disabled" : false,
+        "hidden" : false
+      },
+      "data" : { },
+      "children" : [ {
+        "id" : "j2_2",
+        "text" : "to",
+        "li_attr" : {
+          "id" : "j2_2"
+        },
+        "a_attr" : {
+          "href" : "#",
+          "id" : "j2_2_anchor"
+        },
+        "state" : {
+          "loaded" : true,
+          "opened" : false,
+          "selected" : false,
+          "disabled" : false
+        },
+        "data" : { },
+        "children" : [ ],
+        "type" : "stringList"
+      }, {
+        "id" : "j2_3",
+        "text" : "subject",
+        "li_attr" : {
+          "id" : "j2_3"
+        },
+        "a_attr" : {
+          "href" : "#",
+          "id" : "j2_3_anchor"
+        },
+        "state" : {
+          "loaded" : true,
+          "opened" : false,
+          "selected" : false,
+          "disabled" : false
+        },
+        "data" : { },
+        "children" : [ ],
+        "type" : "string"
+      }, {
+        "id" : "j2_4",
+        "text" : "message",
+        "li_attr" : {
+          "id" : "j2_4"
+        },
+        "a_attr" : {
+          "href" : "#",
+          "id" : "j2_4_anchor"
+        },
+        "state" : {
+          "loaded" : true,
+          "opened" : false,
+          "selected" : false,
+          "disabled" : false
+        },
+        "data" : { },
+        "children" : [ ],
+        "type" : "string"
+      } ],
+      "type" : "document"
+    }, {
+      "id" : "j2_5",
+      "text" : "Activity",
+      "li_attr" : {
+        "id" : "j2_5"
+      },
+      "a_attr" : {
+        "href" : "#",
+        "id" : "j2_5_anchor"
+      },
+      "state" : {
+        "loaded" : true,
+        "opened" : false,
+        "selected" : false,
+        "disabled" : false,
+        "hidden" : false
+      },
+      "data" : { },
+      "children" : [ ],
+      "type" : "string"
+    }, {
+      "id" : "j2_6",
+      "text" : "the_email_id",
+      "li_attr" : {
+        "id" : "j2_6"
+      },
+      "a_attr" : {
+        "href" : "#",
+        "id" : "j2_6_anchor"
+      },
+      "state" : {
+        "loaded" : true,
+        "opened" : false,
+        "selected" : false,
+        "disabled" : false,
+        "hidden" : false
+      },
+      "data" : { },
+      "children" : [ ],
+      "type" : "string"
+    }, {
+      "id" : "j2_7",
+      "text" : "tenant",
+      "li_attr" : {
+        "id" : "j2_7"
+      },
+      "a_attr" : {
+        "href" : "#",
+        "id" : "j2_7_anchor"
+      },
+      "state" : {
+        "loaded" : true,
+        "opened" : false,
+        "selected" : false,
+        "disabled" : false,
+        "hidden" : false
+      },
+      "data" : { },
+      "children" : [ ],
+      "type" : "string"
+    } ],
+    "output" : [ {
+      "id" : "j3_2",
+      "text" : "SendEmailResponse",
+      "li_attr" : {
+        "id" : "j3_2"
+      },
+      "a_attr" : {
+        "href" : "#",
+        "id" : "j3_2_anchor"
+      },
+      "state" : {
+        "loaded" : true,
+        "opened" : false,
+        "selected" : false,
+        "disabled" : false,
+        "hidden" : false
+      },
+      "data" : { },
+      "children" : [ {
+        "id" : "j3_3",
+        "text" : "ResponseMetadata",
+        "li_attr" : {
+          "id" : "j3_3"
+        },
+        "a_attr" : {
+          "href" : "#"
+        },
+        "state" : {
+          "loaded" : true,
+          "opened" : false,
+          "selected" : false,
+          "disabled" : false
+        },
+        "data" : { },
+        "children" : [ {
+          "id" : "j3_4",
+          "text" : "RequestId",
+          "li_attr" : {
+            "id" : "j3_4"
+          },
+          "a_attr" : {
+            "href" : "#"
+          },
+          "state" : {
+            "loaded" : true,
+            "opened" : false,
+            "selected" : false,
+            "disabled" : false
+          },
+          "data" : { },
+          "children" : [ ],
+          "type" : "string"
+        } ],
+        "type" : "document"
+      }, {
+        "id" : "j3_5",
+        "text" : "SendEmailResult",
+        "li_attr" : {
+          "id" : "j3_5"
+        },
+        "a_attr" : {
+          "href" : "#"
+        },
+        "state" : {
+          "loaded" : true,
+          "opened" : false,
+          "selected" : false,
+          "disabled" : false
+        },
+        "data" : { },
+        "children" : [ {
+          "id" : "j3_6",
+          "text" : "MessageId",
+          "li_attr" : {
+            "id" : "j3_6"
+          },
+          "a_attr" : {
+            "href" : "#"
+          },
+          "state" : {
+            "loaded" : true,
+            "opened" : false,
+            "selected" : false,
+            "disabled" : false
+          },
+          "data" : { },
+          "children" : [ ],
+          "type" : "string"
+        } ],
+        "type" : "document"
+      } ],
+      "type" : "document"
+    } ],
+    "api" : [ {
+      "id" : "j1_13",
+      "text" : "Transformer",
+      "li_attr" : {
+        "id" : "j1_13"
+      },
+      "a_attr" : {
+        "href" : "javascript:void(0)",
+        "id" : "j1_13_anchor"
+      },
+      "state" : {
+        "loaded" : true,
+        "opened" : false,
+        "selected" : false,
+        "disabled" : false,
+        "hidden" : false
+      },
+      "data" : {
+        "transformers" : [ ],
+        "lines" : [ ],
+        "dropList" : [ ],
+        "createList" : [ {
+          "path" : "pattern",
+          "value" : "dd-MM-yyyy HH:mm:ss",
+          "typePath" : "string"
+        }, {
+          "path" : "EmailParams/subject",
+          "value" : "New notification from Syncloop WSP [#{Activity}]",
+          "evaluate" : "EEV",
+          "typePath" : "document/string"
+        }, {
+          "path" : "infoAdmin",
+          "value" : "#{admin}",
+          "typePath" : "string",
+          "evaluate" : "EGV"
+        }, {
+          "path" : "Empty",
+          "value" : "",
+          "typePath" : "string"
+        }, {
+          "path" : "indoAdmin2",
+          "value" : "#{support}",
+          "typePath" : "string",
+          "evaluate" : "EGV"
+        } ],
+        "guid" : "29c2a315-ce93-4923-b8fd-047146d6f116",
+        "initiateList" : [ ]
+      },
+      "children" : [ ],
+      "type" : "transformer"
+    }, {
+      "id" : "j1_21",
+      "text" : "Transformer",
+      "li_attr" : {
+        "id" : "j1_21"
+      },
+      "a_attr" : {
+        "href" : "javascript:void(0)",
+        "id" : "j1_21_anchor"
+      },
+      "state" : {
+        "loaded" : true,
+        "opened" : false,
+        "selected" : false,
+        "disabled" : false,
+        "hidden" : false
+      },
+      "data" : {
+        "guid" : "193982ce-38ef-4883-a81c-893457ea961b",
+        "transformers" : [ ],
+        "lines" : [ ],
+        "dropList" : [ ],
+        "createList" : [ ],
+        "initiateList" : [ ]
+      },
+      "children" : [ ],
+      "type" : "transformer"
+    }, {
+      "id" : "j1_20",
+      "text" : "Invoke",
+      "li_attr" : {
+        "id" : "j1_20"
+      },
+      "a_attr" : {
+        "href" : "javascript:void(0)",
+        "id" : "j1_20_anchor"
+      },
+      "state" : {
+        "loaded" : true,
+        "opened" : false,
+        "selected" : false,
+        "disabled" : false,
+        "hidden" : false
+      },
+      "data" : {
+        "guid" : "10e298da-d357-49f4-8809-56a8c7b646d0",
+        "transformers" : [ {
+          "op" : "copy",
+          "from" : "/operation",
+          "to" : "/key",
+          "inTypePath" : "string",
+          "outTypePath" : "string",
+          "direction" : "in"
+        }, {
+          "op" : "copy",
+          "from" : "/EmailParams",
+          "to" : "/value",
+          "inTypePath" : "document",
+          "outTypePath" : "javaObject",
+          "direction" : "in"
+        } ],
+        "lines" : [ {
+          "inputPath" : "operation",
+          "outputPath" : "key",
+          "inpJsTree" : "#launching_arrow_jsTree",
+          "outpJsTree" : "#landing_arrow_jsTree_function",
+          "INPath" : "operation",
+          "OUTPath" : "key",
+          "direction" : "in",
+          "op" : "copy",
+          "line" : 0,
+          "dashedLine" : false,
+          "inType" : "string",
+          "outType" : "string",
+          "inTypePath" : "string",
+          "outTypePath" : "string"
+        }, {
+          "inputPath" : "EmailParams",
+          "outputPath" : "value",
+          "inpJsTree" : "#launching_arrow_jsTree",
+          "outpJsTree" : "#landing_arrow_jsTree_function",
+          "INPath" : "EmailParams",
+          "OUTPath" : "value",
+          "direction" : "in",
+          "op" : "copy",
+          "line" : 0,
+          "dashedLine" : false,
+          "inType" : "document",
+          "outType" : "document",
+          "inTypePath" : "document",
+          "outTypePath" : "javaObject"
+        } ],
+        "dropList" : [ ],
+        "createList" : [ {
+          "path" : "operation",
+          "value" : "OPERATION",
+          "typePath" : "string"
+        } ],
+        "serviceType" : "service",
+        "comment" : "for EmailParams",
+        "fqn" : "packages/middleware/pub/service/keyLogger",
+        "initiateList" : [ ]
+      },
+      "children" : [ ],
+      "type" : "invoke"
+    }, {
+      "id" : "j1_24",
+      "text" : "Invoke",
+      "li_attr" : {
+        "id" : "j1_24"
+      },
+      "a_attr" : {
+        "href" : "javascript:void(0)",
+        "id" : "j1_24_anchor"
+      },
+      "state" : {
+        "loaded" : true,
+        "opened" : false,
+        "selected" : false,
+        "disabled" : false,
+        "hidden" : false
+      },
+      "data" : {
+        "guid" : "102c42bb-281a-4cc9-a281-f29d2d140fda",
+        "transformers" : [ {
+          "op" : "copy",
+          "from" : "/operation",
+          "to" : "/key",
+          "inTypePath" : "string",
+          "outTypePath" : "string",
+          "direction" : "in"
+        }, {
+          "op" : "copy",
+          "from" : "/the_email_id",
+          "to" : "/value",
+          "inTypePath" : "string",
+          "outTypePath" : "string",
+          "direction" : "in"
+        } ],
+        "lines" : [ {
+          "inputPath" : "operation",
+          "outputPath" : "key",
+          "inpJsTree" : "#launching_arrow_jsTree",
+          "outpJsTree" : "#landing_arrow_jsTree_function",
+          "INPath" : "operation",
+          "OUTPath" : "key",
+          "direction" : "in",
+          "op" : "copy",
+          "line" : 0,
+          "dashedLine" : false,
+          "inType" : "string",
+          "outType" : "string",
+          "inTypePath" : "string",
+          "outTypePath" : "string"
+        }, {
+          "inputPath" : "the_email_id",
+          "outputPath" : "value",
+          "inpJsTree" : "#launching_arrow_jsTree",
+          "outpJsTree" : "#landing_arrow_jsTree_function",
+          "INPath" : "the_email_id",
+          "OUTPath" : "value",
+          "direction" : "in",
+          "op" : "copy",
+          "line" : 0,
+          "dashedLine" : false,
+          "inType" : "string",
+          "outType" : "string",
+          "inTypePath" : "string",
+          "outTypePath" : "string"
+        } ],
+        "dropList" : [ ],
+        "createList" : [ {
+          "path" : "operation",
+          "value" : "OPERATION",
+          "typePath" : "string"
+        } ],
+        "serviceType" : "service",
+        "comment" : "for email_id",
+        "fqn" : "packages/middleware/pub/service/keyLogger"
+      },
+      "children" : [ ],
+      "type" : "invoke"
+    }, {
+      "id" : "j1_26",
+      "text" : "Invoke",
+      "li_attr" : {
+        "id" : "j1_26"
+      },
+      "a_attr" : {
+        "href" : "javascript:void(0)",
+        "id" : "j1_26_anchor"
+      },
+      "state" : {
+        "loaded" : true,
+        "opened" : false,
+        "selected" : false,
+        "disabled" : false,
+        "hidden" : false
+      },
+      "data" : {
+        "guid" : "b7d7bd3b-ce1b-4ac1-9f2b-cd13879a5c50",
+        "transformers" : [ {
+          "op" : "copy",
+          "from" : "/operation",
+          "to" : "/key",
+          "inTypePath" : "string",
+          "outTypePath" : "string",
+          "direction" : "in"
+        }, {
+          "op" : "copy",
+          "from" : "/tenant",
+          "to" : "/value",
+          "inTypePath" : "string",
+          "outTypePath" : "string",
+          "direction" : "in"
+        } ],
+        "lines" : [ {
+          "inputPath" : "operation",
+          "outputPath" : "key",
+          "inpJsTree" : "#launching_arrow_jsTree",
+          "outpJsTree" : "#landing_arrow_jsTree_function",
+          "INPath" : "operation",
+          "OUTPath" : "key",
+          "direction" : "in",
+          "op" : "copy",
+          "line" : 0,
+          "dashedLine" : false,
+          "inType" : "string",
+          "outType" : "string",
+          "inTypePath" : "string",
+          "outTypePath" : "string"
+        }, {
+          "inputPath" : "tenant",
+          "outputPath" : "value",
+          "inpJsTree" : "#launching_arrow_jsTree",
+          "outpJsTree" : "#landing_arrow_jsTree_function",
+          "INPath" : "tenant",
+          "OUTPath" : "value",
+          "direction" : "in",
+          "op" : "copy",
+          "line" : 0,
+          "dashedLine" : false,
+          "inType" : "string",
+          "outType" : "string",
+          "inTypePath" : "string",
+          "outTypePath" : "string"
+        } ],
+        "dropList" : [ ],
+        "createList" : [ {
+          "path" : "operation",
+          "value" : "OPERATION",
+          "typePath" : "string"
+        } ],
+        "serviceType" : "service",
+        "comment" : "for tenant",
+        "fqn" : "packages/middleware/pub/service/keyLogger"
+      },
+      "children" : [ ],
+      "type" : "invoke"
+    }, {
+      "id" : "j1_28",
+      "text" : "Invoke",
+      "li_attr" : {
+        "id" : "j1_28"
+      },
+      "a_attr" : {
+        "href" : "javascript:void(0)",
+        "id" : "j1_28_anchor"
+      },
+      "state" : {
+        "loaded" : true,
+        "opened" : false,
+        "selected" : false,
+        "disabled" : false,
+        "hidden" : false
+      },
+      "data" : {
+        "guid" : "bc13d028-6d9e-4497-9460-0d0dcc77f5cd",
+        "transformers" : [ {
+          "op" : "copy",
+          "from" : "/operation",
+          "to" : "/key",
+          "inTypePath" : "string",
+          "outTypePath" : "string",
+          "direction" : "in"
+        }, {
+          "op" : "copy",
+          "from" : "/pattern",
+          "to" : "/value",
+          "inTypePath" : "string",
+          "outTypePath" : "string",
+          "direction" : "in"
+        } ],
+        "lines" : [ {
+          "inputPath" : "operation",
+          "outputPath" : "key",
+          "inpJsTree" : "#launching_arrow_jsTree",
+          "outpJsTree" : "#landing_arrow_jsTree_function",
+          "INPath" : "operation",
+          "OUTPath" : "key",
+          "direction" : "in",
+          "op" : "copy",
+          "line" : 0,
+          "dashedLine" : false,
+          "inType" : "string",
+          "outType" : "string",
+          "inTypePath" : "string",
+          "outTypePath" : "string"
+        }, {
+          "inputPath" : "pattern",
+          "outputPath" : "value",
+          "inpJsTree" : "#launching_arrow_jsTree",
+          "outpJsTree" : "#landing_arrow_jsTree_function",
+          "INPath" : "pattern",
+          "OUTPath" : "value",
+          "direction" : "in",
+          "op" : "copy",
+          "line" : 0,
+          "dashedLine" : false,
+          "inType" : "string",
+          "outType" : "string",
+          "inTypePath" : "string",
+          "outTypePath" : "string"
+        } ],
+        "dropList" : [ ],
+        "createList" : [ {
+          "path" : "operation",
+          "value" : "OPERATION",
+          "typePath" : "string"
+        } ],
+        "serviceType" : "service",
+        "comment" : "for pattern",
+        "fqn" : "packages/middleware/pub/service/keyLogger"
+      },
+      "children" : [ ],
+      "type" : "invoke"
+    }, {
+      "id" : "j1_30",
+      "text" : "Invoke",
+      "li_attr" : {
+        "id" : "j1_30"
+      },
+      "a_attr" : {
+        "href" : "javascript:void(0)",
+        "id" : "j1_30_anchor"
+      },
+      "state" : {
+        "loaded" : true,
+        "opened" : false,
+        "selected" : false,
+        "disabled" : false,
+        "hidden" : false
+      },
+      "data" : {
+        "guid" : "36640b10-dd3a-4987-9888-08ea3a424886",
+        "transformers" : [ {
+          "op" : "copy",
+          "from" : "/operation",
+          "to" : "/key",
+          "inTypePath" : "string",
+          "outTypePath" : "string",
+          "direction" : "in"
+        }, {
+          "op" : "copy",
+          "from" : "/infoAdmin",
+          "to" : "/value",
+          "inTypePath" : "string",
+          "outTypePath" : "string",
+          "direction" : "in"
+        } ],
+        "lines" : [ {
+          "inputPath" : "operation",
+          "outputPath" : "key",
+          "inpJsTree" : "#launching_arrow_jsTree",
+          "outpJsTree" : "#landing_arrow_jsTree_function",
+          "INPath" : "operation",
+          "OUTPath" : "key",
+          "direction" : "in",
+          "op" : "copy",
+          "line" : 0,
+          "dashedLine" : false,
+          "inType" : "string",
+          "outType" : "string",
+          "inTypePath" : "string",
+          "outTypePath" : "string"
+        }, {
+          "inputPath" : "infoAdmin",
+          "outputPath" : "value",
+          "inpJsTree" : "#launching_arrow_jsTree",
+          "outpJsTree" : "#landing_arrow_jsTree_function",
+          "INPath" : "infoAdmin",
+          "OUTPath" : "value",
+          "direction" : "in",
+          "op" : "copy",
+          "line" : 0,
+          "dashedLine" : false,
+          "inType" : "string",
+          "outType" : "string",
+          "inTypePath" : "string",
+          "outTypePath" : "string"
+        } ],
+        "dropList" : [ ],
+        "createList" : [ {
+          "path" : "operation",
+          "value" : "OPERATION",
+          "typePath" : "string"
+        } ],
+        "serviceType" : "service",
+        "comment" : "for infoAdmin",
+        "fqn" : "packages/middleware/pub/service/keyLogger"
+      },
+      "children" : [ ],
+      "type" : "invoke"
+    }, {
+      "id" : "j1_32",
+      "text" : "Invoke",
+      "li_attr" : {
+        "id" : "j1_32"
+      },
+      "a_attr" : {
+        "href" : "javascript:void(0)",
+        "id" : "j1_32_anchor"
+      },
+      "state" : {
+        "loaded" : true,
+        "opened" : false,
+        "selected" : false,
+        "disabled" : false,
+        "hidden" : false
+      },
+      "data" : {
+        "guid" : "1fefd60c-d2cf-4848-8b52-8f802f177351",
+        "transformers" : [ {
+          "op" : "copy",
+          "from" : "/operation",
+          "to" : "/key",
+          "inTypePath" : "string",
+          "outTypePath" : "string",
+          "direction" : "in"
+        }, {
+          "op" : "copy",
+          "from" : "/indoAdmin2",
+          "to" : "/value",
+          "inTypePath" : "string",
+          "outTypePath" : "string",
+          "direction" : "in"
+        } ],
+        "lines" : [ {
+          "inputPath" : "operation",
+          "outputPath" : "key",
+          "inpJsTree" : "#launching_arrow_jsTree",
+          "outpJsTree" : "#landing_arrow_jsTree_function",
+          "INPath" : "operation",
+          "OUTPath" : "key",
+          "direction" : "in",
+          "op" : "copy",
+          "line" : 0,
+          "dashedLine" : false,
+          "inType" : "string",
+          "outType" : "string",
+          "inTypePath" : "string",
+          "outTypePath" : "string"
+        }, {
+          "inputPath" : "indoAdmin2",
+          "outputPath" : "value",
+          "inpJsTree" : "#launching_arrow_jsTree",
+          "outpJsTree" : "#landing_arrow_jsTree_function",
+          "INPath" : "indoAdmin2",
+          "OUTPath" : "value",
+          "direction" : "in",
+          "op" : "copy",
+          "line" : 0,
+          "dashedLine" : false,
+          "inType" : "string",
+          "outType" : "string",
+          "inTypePath" : "string",
+          "outTypePath" : "string"
+        } ],
+        "dropList" : [ ],
+        "createList" : [ {
+          "path" : "operation",
+          "value" : "OPERATION",
+          "typePath" : "string"
+        } ],
+        "serviceType" : "service",
+        "comment" : "for indoAdmin2",
+        "fqn" : "packages/middleware/pub/service/keyLogger"
+      },
+      "children" : [ ],
+      "type" : "invoke"
+    }, {
+      "id" : "j1_17",
+      "text" : "Invoke",
+      "li_attr" : {
+        "id" : "j1_17"
+      },
+      "a_attr" : {
+        "href" : "javascript:void(0)",
+        "id" : "j1_17_anchor"
+      },
+      "state" : {
+        "loaded" : true,
+        "opened" : false,
+        "selected" : false,
+        "disabled" : false,
+        "hidden" : false
+      },
+      "data" : {
+        "transformers" : [ {
+          "op" : "copy",
+          "from" : "/Empty",
+          "to" : "/addDoc",
+          "inTypePath" : "string",
+          "outTypePath" : "document",
+          "direction" : "in"
+        }, {
+          "op" : "copy",
+          "from" : "/docList",
+          "to" : "/EmailParams/to",
+          "inTypePath" : "documentList",
+          "outTypePath" : "document/stringList",
+          "direction" : "out"
+        } ],
+        "lines" : [ {
+          "inputPath" : "Empty",
+          "outputPath" : "addDoc",
+          "inpJsTree" : "#launching_arrow_jsTree",
+          "outpJsTree" : "#landing_arrow_jsTree_function",
+          "INPath" : "Empty",
+          "OUTPath" : "addDoc",
+          "direction" : "in",
+          "op" : "copy",
+          "line" : 0,
+          "dashedLine" : false,
+          "inType" : "string",
+          "outType" : "string",
+          "inTypePath" : "string",
+          "outTypePath" : "document"
+        }, {
+          "inputPath" : "docList",
+          "outputPath" : "EmailParams/to",
+          "inpJsTree" : "#launching_arrow_jsTree_function",
+          "outpJsTree" : "#landing_arrow_jsTree",
+          "INPath" : "docList",
+          "OUTPath" : "EmailParams/to",
+          "direction" : "out",
+          "op" : "copy",
+          "line" : 0,
+          "dashedLine" : false,
+          "inType" : "stringList",
+          "outType" : "stringList",
+          "inTypePath" : "documentList",
+          "outTypePath" : "document/stringList"
+        } ],
+        "dropList" : [ ],
+        "createList" : [ ],
+        "serviceType" : "service",
+        "guid" : "5f945a55-ca2c-44ab-8551-f2de25c03934",
+        "fqn" : "packages/middleware/pub/collection/List/Add",
+        "initiateList" : [ ]
+      },
+      "children" : [ ],
+      "type" : "invoke"
+    }, {
+      "id" : "j1_16",
+      "text" : "Invoke",
+      "li_attr" : {
+        "id" : "j1_16"
+      },
+      "a_attr" : {
+        "href" : "javascript:void(0)",
+        "id" : "j1_16_anchor"
+      },
+      "state" : {
+        "loaded" : true,
+        "opened" : false,
+        "selected" : false,
+        "disabled" : false,
+        "hidden" : false
+      },
+      "data" : {
+        "transformers" : [ {
+          "op" : "copy",
+          "from" : "/docList",
+          "to" : "/EmailParams/to",
+          "inTypePath" : "documentList",
+          "outTypePath" : "document/stringList",
+          "direction" : "out"
+        }, {
+          "op" : "copy",
+          "from" : "/infoAdmin",
+          "to" : "/addDoc",
+          "inTypePath" : "string",
+          "outTypePath" : "document",
+          "direction" : "in"
+        }, {
+          "op" : "copy",
+          "from" : "/EmailParams/to",
+          "to" : "/docList",
+          "inTypePath" : "document/stringList",
+          "outTypePath" : "documentList",
+          "direction" : "in"
+        } ],
+        "lines" : [ {
+          "inputPath" : "docList",
+          "outputPath" : "EmailParams/to",
+          "inpJsTree" : "#launching_arrow_jsTree_function",
+          "outpJsTree" : "#landing_arrow_jsTree",
+          "INPath" : "docList",
+          "OUTPath" : "EmailParams/to",
+          "direction" : "out",
+          "op" : "copy",
+          "line" : 0,
+          "dashedLine" : false,
+          "inType" : "stringList",
+          "outType" : "stringList",
+          "inTypePath" : "documentList",
+          "outTypePath" : "document/stringList"
+        }, {
+          "inputPath" : "infoAdmin",
+          "outputPath" : "addDoc",
+          "inpJsTree" : "#launching_arrow_jsTree",
+          "outpJsTree" : "#landing_arrow_jsTree_function",
+          "INPath" : "infoAdmin",
+          "OUTPath" : "addDoc",
+          "direction" : "in",
+          "op" : "copy",
+          "line" : 0,
+          "dashedLine" : false,
+          "inType" : "string",
+          "outType" : "string",
+          "inTypePath" : "string",
+          "outTypePath" : "document"
+        }, {
+          "inputPath" : "EmailParams/to",
+          "outputPath" : "docList",
+          "inpJsTree" : "#launching_arrow_jsTree",
+          "outpJsTree" : "#landing_arrow_jsTree_function",
+          "INPath" : "EmailParams/to",
+          "OUTPath" : "docList",
+          "direction" : "in",
+          "op" : "copy",
+          "line" : 0,
+          "dashedLine" : false,
+          "inType" : "stringList",
+          "outType" : "stringList",
+          "inTypePath" : "document/stringList",
+          "outTypePath" : "documentList"
+        } ],
+        "dropList" : [ ],
+        "createList" : [ ],
+        "serviceType" : "service",
+        "status" : "enabled",
+        "guid" : "5dbf8d2b-7e6d-4abf-a6da-7beb05d53b6d",
+        "fqn" : "packages/middleware/pub/collection/List/Add",
+        "initiateList" : [ ]
+      },
+      "children" : [ ],
+      "type" : "invoke"
+    }, {
+      "id" : "j1_18",
+      "text" : "Invoke",
+      "li_attr" : {
+        "id" : "j1_18"
+      },
+      "a_attr" : {
+        "href" : "javascript:void(0)",
+        "id" : "j1_18_anchor"
+      },
+      "state" : {
+        "loaded" : true,
+        "opened" : false,
+        "selected" : false,
+        "disabled" : false,
+        "hidden" : false
+      },
+      "data" : {
+        "transformers" : [ {
+          "op" : "copy",
+          "from" : "/indoAdmin2",
+          "to" : "/addDoc",
+          "inTypePath" : "string",
+          "outTypePath" : "document",
+          "direction" : "in"
+        }, {
+          "op" : "copy",
+          "from" : "/EmailParams/to",
+          "to" : "/docList",
+          "inTypePath" : "document/stringList",
+          "outTypePath" : "documentList",
+          "direction" : "in"
+        }, {
+          "op" : "copy",
+          "from" : "/docList",
+          "to" : "/EmailParams/to",
+          "inTypePath" : "documentList",
+          "outTypePath" : "document/stringList",
+          "direction" : "out"
+        } ],
+        "lines" : [ {
+          "inputPath" : "indoAdmin2",
+          "outputPath" : "addDoc",
+          "inpJsTree" : "#launching_arrow_jsTree",
+          "outpJsTree" : "#landing_arrow_jsTree_function",
+          "INPath" : "indoAdmin2",
+          "OUTPath" : "addDoc",
+          "direction" : "in",
+          "op" : "copy",
+          "line" : 0,
+          "dashedLine" : false,
+          "inType" : "string",
+          "outType" : "string",
+          "inTypePath" : "string",
+          "outTypePath" : "document"
+        }, {
+          "inputPath" : "EmailParams/to",
+          "outputPath" : "docList",
+          "inpJsTree" : "#launching_arrow_jsTree",
+          "outpJsTree" : "#landing_arrow_jsTree_function",
+          "INPath" : "EmailParams/to",
+          "OUTPath" : "docList",
+          "direction" : "in",
+          "op" : "copy",
+          "line" : 0,
+          "dashedLine" : false,
+          "inType" : "stringList",
+          "outType" : "stringList",
+          "inTypePath" : "document/stringList",
+          "outTypePath" : "documentList"
+        }, {
+          "inputPath" : "docList",
+          "outputPath" : "EmailParams/to",
+          "inpJsTree" : "#launching_arrow_jsTree_function",
+          "outpJsTree" : "#landing_arrow_jsTree",
+          "INPath" : "docList",
+          "OUTPath" : "EmailParams/to",
+          "direction" : "out",
+          "op" : "copy",
+          "line" : 0,
+          "dashedLine" : false,
+          "inType" : "stringList",
+          "outType" : "stringList",
+          "inTypePath" : "documentList",
+          "outTypePath" : "document/stringList"
+        } ],
+        "dropList" : [ ],
+        "createList" : [ ],
+        "serviceType" : "service",
+        "guid" : "7c9c7777-0a82-4a03-9809-9a553f051629",
+        "fqn" : "packages/middleware/pub/collection/List/Add",
+        "initiateList" : [ ]
+      },
+      "children" : [ ],
+      "type" : "invoke"
+    }, {
+      "id" : "j1_14",
+      "text" : "Invoke",
+      "li_attr" : {
+        "id" : "j1_14"
+      },
+      "a_attr" : {
+        "href" : "javascript:void(0)",
+        "id" : "j1_14_anchor"
+      },
+      "state" : {
+        "loaded" : true,
+        "opened" : false,
+        "selected" : false,
+        "disabled" : false,
+        "hidden" : false
+      },
+      "data" : {
+        "transformers" : [ {
+          "op" : "copy",
+          "from" : "/pattern",
+          "to" : "/pattern",
+          "inTypePath" : "string",
+          "outTypePath" : "string",
+          "direction" : "in"
+        }, {
+          "op" : "copy",
+          "from" : "/dateStr",
+          "to" : "/the_date",
+          "inTypePath" : "string",
+          "outTypePath" : "string",
+          "direction" : "out"
+        } ],
+        "lines" : [ {
+          "inputPath" : "pattern",
+          "outputPath" : "pattern",
+          "inpJsTree" : "#launching_arrow_jsTree",
+          "outpJsTree" : "#landing_arrow_jsTree_function",
+          "INPath" : "pattern",
+          "OUTPath" : "pattern",
+          "direction" : "in",
+          "op" : "copy",
+          "line" : 0,
+          "dashedLine" : false,
+          "inType" : "string",
+          "outType" : "string",
+          "inTypePath" : "string",
+          "outTypePath" : "string"
+        }, {
+          "inputPath" : "dateStr",
+          "outputPath" : "the_date",
+          "inpJsTree" : "#launching_arrow_jsTree_function",
+          "outpJsTree" : "#landing_arrow_jsTree",
+          "INPath" : "dateStr",
+          "OUTPath" : "the_date",
+          "direction" : "out",
+          "op" : "copy",
+          "line" : 0,
+          "dashedLine" : false,
+          "inType" : "string",
+          "outType" : "string",
+          "inTypePath" : "string",
+          "outTypePath" : "string"
+        } ],
+        "dropList" : [ {
+          "path" : "pattern",
+          "typePath" : "string"
+        } ],
+        "createList" : [ ],
+        "serviceType" : "service",
+        "status" : "enabled",
+        "guid" : "c472e82a-82d9-4af8-b9d3-48de076bcce6",
+        "fqn" : "packages/middleware/pub/date/dateToString",
+        "initiateList" : [ ]
+      },
+      "children" : [ ],
+      "type" : "invoke"
+    }, {
+      "id" : "j1_15",
+      "text" : "Invoke",
+      "li_attr" : {
+        "id" : "j1_15"
+      },
+      "a_attr" : {
+        "href" : "javascript:void(0)",
+        "id" : "j1_15_anchor"
+      },
+      "state" : {
+        "loaded" : true,
+        "opened" : false,
+        "selected" : true,
+        "disabled" : false,
+        "hidden" : false
+      },
+      "data" : {
+        "transformers" : [ {
+          "op" : "copy",
+          "from" : "/remoteIpAddr",
+          "to" : "/the_ip",
+          "inTypePath" : "string",
+          "outTypePath" : "string",
+          "direction" : "out"
+        } ],
+        "lines" : [ {
+          "inputPath" : "remoteIpAddr",
+          "outputPath" : "the_ip",
+          "inpJsTree" : "#launching_arrow_jsTree_function",
+          "outpJsTree" : "#landing_arrow_jsTree",
+          "INPath" : "remoteIpAddr",
+          "OUTPath" : "the_ip",
+          "direction" : "out",
+          "op" : "copy",
+          "line" : 0,
+          "dashedLine" : false,
+          "inType" : "string",
+          "outType" : "string",
+          "inTypePath" : "string",
+          "outTypePath" : "string"
+        } ],
+        "dropList" : [ ],
+        "createList" : [ {
+          "path" : "the_portal",
+          "value" : "#{*pub.middleware.cdn.endpoint}",
+          "evaluate" : "EEV",
+          "typePath" : "string",
+          "id" : "e5b4caab-0635-4536-b6e5-685a03738dc7"
+        } ],
+        "serviceType" : "service",
+        "status" : "enabled",
+        "guid" : "48a30c4f-4f41-46d6-b922-ee002b3d4e3a",
+        "fqn" : "packages/middleware/pub/client/utils/getCurrentBasePath",
+        "initiateList" : [ ]
+      },
+      "children" : [ ],
+      "type" : "invoke"
+    }, {
+      "id" : "j1_2",
+      "text" : "Transformer",
+      "li_attr" : {
+        "id" : "j1_2"
+      },
+      "a_attr" : {
+        "href" : "javascript:void(0)",
+        "id" : "j1_2_anchor"
+      },
+      "state" : {
+        "loaded" : true,
+        "opened" : false,
+        "selected" : false,
+        "disabled" : false,
+        "hidden" : false
+      },
+      "data" : {
+        "transformers" : [ ],
+        "lines" : [ ],
+        "dropList" : [ ],
+        "createList" : [ {
+          "path" : "region",
+          "value" : "us-west-2",
+          "typePath" : "string"
+        }, {
+          "path" : "accessKey",
+          "value" : "#{accessKey}",
+          "evaluate" : "ELV",
+          "typePath" : "string"
+        }, {
+          "path" : "secret",
+          "value" : "#{secret}",
+          "evaluate" : "ELV",
+          "typePath" : "string"
+        }, {
+          "path" : "source",
+          "value" : "info@syncloop.com",
+          "typePath" : "string"
+        }, {
+          "path" : "EmailParams/message",
+          "value" : "User IP Address: #{the_ip} Tenant: #{tenant} Email: #{the_email_id} Portal: #{the_portal} Time(UTC): #{the_date}",
+          "evaluate" : "EEV",
+          "typePath" : "document/string"
+        } ],
+        "status" : "enabled",
+        "guid" : "b94f2fad-3db8-41b1-8b38-ba1d9c1d1a7f",
+        "initiateList" : [ ]
+      },
+      "children" : [ ],
+      "type" : "transformer"
+    }, {
+      "id" : "j1_4",
+      "text" : "Transformer",
+      "li_attr" : {
+        "id" : "j1_4"
+      },
+      "a_attr" : {
+        "href" : "javascript:void(0)",
+        "id" : "j1_4_anchor"
+      },
+      "state" : {
+        "loaded" : true,
+        "opened" : false,
+        "selected" : false,
+        "disabled" : false,
+        "hidden" : false
+      },
+      "data" : {
+        "transformers" : [ {
+          "op" : "copy",
+          "from" : "/EmailParams/subject",
+          "to" : "/emailRequest/Message.Subject.Data",
+          "inTypePath" : "document/string",
+          "outTypePath" : "document/string"
+        }, {
+          "op" : "copy",
+          "from" : "/EmailParams/message",
+          "to" : "/emailRequest/Message.Body.Text.Data",
+          "inTypePath" : "document/string",
+          "outTypePath" : "document/string"
+        }, {
+          "op" : "copy",
+          "from" : "/region",
+          "to" : "/emailRequest/region",
+          "inTypePath" : "string",
+          "outTypePath" : "document/string"
+        }, {
+          "op" : "copy",
+          "from" : "/source",
+          "to" : "/emailRequest/Source",
+          "inTypePath" : "string",
+          "outTypePath" : "document/string"
+        }, {
+          "op" : "copy",
+          "from" : "/accessKey",
+          "to" : "/emailRequest/accessKey",
+          "inTypePath" : "string",
+          "outTypePath" : "document/string"
+        }, {
+          "op" : "copy",
+          "from" : "/secret",
+          "to" : "/emailRequest/secret",
+          "inTypePath" : "string",
+          "outTypePath" : "document/string"
+        } ],
+        "lines" : [ {
+          "inputPath" : "EmailParams/subject",
+          "outputPath" : "emailRequest/Message.Subject.Data",
+          "inpJsTree" : "#launching_arrow_jsTree",
+          "outpJsTree" : "#landing_arrow_jsTree",
+          "INPath" : "EmailParams/subject",
+          "OUTPath" : "emailRequest/Message.Subject.Data",
+          "op" : "copy",
+          "line" : 0,
+          "dashedLine" : false,
+          "inType" : "string",
+          "outType" : "string",
+          "inTypePath" : "document/string",
+          "outTypePath" : "document/string"
+        }, {
+          "inputPath" : "EmailParams/message",
+          "outputPath" : "emailRequest/Message.Body.Text.Data",
+          "inpJsTree" : "#launching_arrow_jsTree",
+          "outpJsTree" : "#landing_arrow_jsTree",
+          "INPath" : "EmailParams/message",
+          "OUTPath" : "emailRequest/Message.Body.Text.Data",
+          "op" : "copy",
+          "line" : 0,
+          "dashedLine" : false,
+          "inType" : "string",
+          "outType" : "string",
+          "inTypePath" : "document/string",
+          "outTypePath" : "document/string"
+        }, {
+          "inputPath" : "region",
+          "outputPath" : "emailRequest/region",
+          "inpJsTree" : "#launching_arrow_jsTree",
+          "outpJsTree" : "#landing_arrow_jsTree",
+          "INPath" : "region",
+          "OUTPath" : "emailRequest/region",
+          "op" : "copy",
+          "line" : 0,
+          "dashedLine" : false,
+          "inType" : "string",
+          "outType" : "string",
+          "inTypePath" : "string",
+          "outTypePath" : "document/string"
+        }, {
+          "inputPath" : "source",
+          "outputPath" : "emailRequest/Source",
+          "inpJsTree" : "#launching_arrow_jsTree",
+          "outpJsTree" : "#landing_arrow_jsTree",
+          "INPath" : "source",
+          "OUTPath" : "emailRequest/Source",
+          "op" : "copy",
+          "line" : 0,
+          "dashedLine" : false,
+          "inType" : "string",
+          "outType" : "string",
+          "inTypePath" : "string",
+          "outTypePath" : "document/string"
+        }, {
+          "inputPath" : "accessKey",
+          "outputPath" : "emailRequest/accessKey",
+          "inpJsTree" : "#launching_arrow_jsTree",
+          "outpJsTree" : "#landing_arrow_jsTree",
+          "INPath" : "accessKey",
+          "OUTPath" : "emailRequest/accessKey",
+          "op" : "copy",
+          "line" : 0,
+          "dashedLine" : false,
+          "inType" : "string",
+          "outType" : "string",
+          "inTypePath" : "string",
+          "outTypePath" : "document/string"
+        }, {
+          "inputPath" : "secret",
+          "outputPath" : "emailRequest/secret",
+          "inpJsTree" : "#launching_arrow_jsTree",
+          "outpJsTree" : "#landing_arrow_jsTree",
+          "INPath" : "secret",
+          "OUTPath" : "emailRequest/secret",
+          "op" : "copy",
+          "line" : 0,
+          "dashedLine" : false,
+          "inType" : "string",
+          "outType" : "string",
+          "inTypePath" : "string",
+          "outTypePath" : "document/string"
+        } ],
+        "dropList" : [ ],
+        "createList" : [ ],
+        "status" : "enabled",
+        "guid" : "1860c4fb-ab85-45c2-9396-d73a7dc34232",
+        "initiateList" : [ ]
+      },
+      "children" : [ ],
+      "type" : "transformer"
+    }, {
+      "id" : "j1_6",
+      "text" : "Foreach",
+      "li_attr" : {
+        "id" : "j1_6"
+      },
+      "a_attr" : {
+        "href" : "javascript:void(0)",
+        "id" : "j1_6_anchor"
+      },
+      "state" : {
+        "loaded" : true,
+        "opened" : true,
+        "selected" : false,
+        "disabled" : false,
+        "hidden" : false
+      },
+      "data" : {
+        "inArray" : "EmailParams/to",
+        "outArrayType" : "string",
+        "status" : "enabled",
+        "guid" : "99773a36-8334-482c-b4b3-768e6261d29b"
+      },
+      "children" : [ {
+        "id" : "j1_8",
+        "text" : "Transformer",
+        "li_attr" : {
+          "id" : "j1_8"
+        },
+        "a_attr" : {
+          "href" : "#",
+          "id" : "j1_8_anchor"
+        },
+        "state" : {
+          "loaded" : true,
+          "opened" : false,
+          "selected" : false,
+          "disabled" : false
+        },
+        "data" : {
+          "transformers" : [ {
+            "op" : "copy",
+            "from" : "/EmailParams/to",
+            "to" : "/EValue",
+            "inTypePath" : "document/string",
+            "outTypePath" : "string"
+          } ],
+          "lines" : [ {
+            "inputPath" : "EmailParams/to",
+            "outputPath" : "EValue",
+            "inpJsTree" : "#launching_arrow_jsTree",
+            "outpJsTree" : "#landing_arrow_jsTree",
+            "INPath" : "EmailParams/to",
+            "OUTPath" : "EValue",
+            "op" : "copy",
+            "line" : 0,
+            "dashedLine" : false,
+            "inType" : "string",
+            "outType" : "string",
+            "inTypePath" : "document/string",
+            "outTypePath" : "string"
+          } ],
+          "dropList" : [ ],
+          "createList" : [ {
+            "path" : "EKey",
+            "value" : "Destination.ToAddresses.member.#{*index}",
+            "evaluate" : "EEV",
+            "typePath" : "string"
+          } ],
+          "guid" : "ff8bc2a4-1577-4778-bd8d-57e17da299a3"
+        },
+        "children" : [ ],
+        "type" : "transformer"
+      }, {
+        "id" : "j1_10",
+        "text" : "Invoke",
+        "li_attr" : {
+          "id" : "j1_10"
+        },
+        "a_attr" : {
+          "href" : "javascript:void(0)",
+          "id" : "j1_10_anchor"
+        },
+        "state" : {
+          "loaded" : true,
+          "opened" : false,
+          "selected" : false,
+          "disabled" : false
+        },
+        "data" : {
+          "transformers" : [ {
+            "op" : "copy",
+            "from" : "/EValue",
+            "to" : "/textValue",
+            "inTypePath" : "string",
+            "outTypePath" : "string",
+            "direction" : "in"
+          }, {
+            "op" : "copy",
+            "from" : "/EKey",
+            "to" : "/key",
+            "inTypePath" : "string",
+            "outTypePath" : "string",
+            "direction" : "in"
+          }, {
+            "op" : "copy",
+            "from" : "/map",
+            "to" : "/map",
+            "inTypePath" : "javaObject",
+            "outTypePath" : "javaObject",
+            "direction" : "out"
+          }, {
+            "op" : "copy",
+            "from" : "/emailRequest",
+            "to" : "/map",
+            "inTypePath" : "document",
+            "outTypePath" : "javaObject",
+            "direction" : "in"
+          } ],
+          "lines" : [ {
+            "inputPath" : "EValue",
+            "outputPath" : "textValue",
+            "inpJsTree" : "#launching_arrow_jsTree",
+            "outpJsTree" : "#landing_arrow_jsTree_function",
+            "INPath" : "EValue",
+            "OUTPath" : "textValue",
+            "direction" : "in",
+            "op" : "copy",
+            "line" : 0,
+            "dashedLine" : false,
+            "inType" : "string",
+            "outType" : "string",
+            "inTypePath" : "string",
+            "outTypePath" : "string"
+          }, {
+            "inputPath" : "EKey",
+            "outputPath" : "key",
+            "inpJsTree" : "#launching_arrow_jsTree",
+            "outpJsTree" : "#landing_arrow_jsTree_function",
+            "INPath" : "EKey",
+            "OUTPath" : "key",
+            "direction" : "in",
+            "op" : "copy",
+            "line" : 0,
+            "dashedLine" : false,
+            "inType" : "string",
+            "outType" : "string",
+            "inTypePath" : "string",
+            "outTypePath" : "string"
+          }, {
+            "inputPath" : "map",
+            "outputPath" : "map",
+            "inpJsTree" : "#launching_arrow_jsTree_function",
+            "outpJsTree" : "#landing_arrow_jsTree",
+            "INPath" : "map",
+            "OUTPath" : "map",
+            "direction" : "out",
+            "op" : "copy",
+            "line" : 0,
+            "dashedLine" : false,
+            "inType" : "javaObject",
+            "outType" : "javaObject",
+            "inTypePath" : "javaObject",
+            "outTypePath" : "javaObject"
+          }, {
+            "inputPath" : "emailRequest",
+            "outputPath" : "map",
+            "inpJsTree" : "#launching_arrow_jsTree",
+            "outpJsTree" : "#landing_arrow_jsTree_function",
+            "INPath" : "emailRequest",
+            "OUTPath" : "map",
+            "direction" : "in",
+            "op" : "copy",
+            "line" : 0,
+            "dashedLine" : false,
+            "inType" : "document",
+            "outType" : "document",
+            "inTypePath" : "document",
+            "outTypePath" : "javaObject"
+          } ],
+          "dropList" : [ {
+            "path" : "EValue",
+            "typePath" : "string"
+          }, {
+            "path" : "EKey",
+            "typePath" : "string"
+          } ],
+          "createList" : [ ],
+          "serviceType" : "service",
+          "guid" : "ab531f26-2ccd-4005-a0aa-ff513376fef8",
+          "fqn" : "packages/middleware/pub/collection/map/Put",
+          "initiateList" : [ ]
+        },
+        "children" : [ ],
+        "type" : "invoke"
+      } ],
+      "type" : "foreach"
+    }, {
+      "id" : "j1_11",
+      "text" : "Transformer",
+      "li_attr" : {
+        "id" : "j1_11"
+      },
+      "a_attr" : {
+        "href" : "javascript:void(0)",
+        "id" : "j1_11_anchor"
+      },
+      "state" : {
+        "loaded" : true,
+        "opened" : false,
+        "selected" : false,
+        "disabled" : false,
+        "hidden" : false
+      },
+      "data" : {
+        "transformers" : [ ],
+        "lines" : [ ],
+        "dropList" : [ ],
+        "createList" : [ ],
+        "status" : "enabled",
+        "guid" : "a8f77c1e-1070-42b4-a19f-1dbb12de88c2"
+      },
+      "children" : [ ],
+      "type" : "transformer"
+    }, {
+      "id" : "j1_1",
+      "text" : "Invoke",
+      "li_attr" : {
+        "id" : "j1_1"
+      },
+      "a_attr" : {
+        "href" : "javascript:void(0)",
+        "id" : "j1_1_anchor"
+      },
+      "state" : {
+        "loaded" : true,
+        "opened" : false,
+        "selected" : false,
+        "disabled" : false,
+        "hidden" : false
+      },
+      "data" : {
+        "transformers" : [ {
+          "op" : "copy",
+          "from" : "/emailRequest",
+          "to" : "/request",
+          "inTypePath" : "document",
+          "outTypePath" : "document",
+          "direction" : "in"
+        }, {
+          "op" : "copy",
+          "from" : "/SendEmailResponse",
+          "to" : "/SendEmailResponse",
+          "inTypePath" : "document",
+          "outTypePath" : "document",
+          "direction" : "out"
+        } ],
+        "lines" : [ {
+          "inputPath" : "emailRequest",
+          "outputPath" : "request",
+          "inpJsTree" : "#launching_arrow_jsTree",
+          "outpJsTree" : "#landing_arrow_jsTree_function",
+          "INPath" : "emailRequest",
+          "OUTPath" : "request",
+          "direction" : "in",
+          "op" : "copy",
+          "line" : 0,
+          "dashedLine" : false,
+          "inType" : "document",
+          "outType" : "document",
+          "inTypePath" : "document",
+          "outTypePath" : "document"
+        }, {
+          "inputPath" : "SendEmailResponse",
+          "outputPath" : "SendEmailResponse",
+          "inpJsTree" : "#launching_arrow_jsTree_function",
+          "outpJsTree" : "#landing_arrow_jsTree",
+          "INPath" : "SendEmailResponse",
+          "OUTPath" : "SendEmailResponse",
+          "direction" : "out",
+          "op" : "copy",
+          "line" : 0,
+          "dashedLine" : false,
+          "inType" : "document",
+          "outType" : "document",
+          "inTypePath" : "document",
+          "outTypePath" : "document"
+        } ],
+        "dropList" : [ ],
+        "createList" : [ ],
+        "serviceType" : "api",
+        "status" : "enabled",
+        "guid" : "b4d5f398-cdb4-44a8-94a9-b7c3d68c3d9f",
+        "initiateList" : [ ],
+        "fqn" : "packages/Wrapper/AWS/SES/SendEmail"
+      },
+      "children" : [ ],
+      "type" : "invoke"
+    } ],
+    "api_info" : {
+      "title" : "",
+      "description" : ""
+    },
+    "lockedByUser" : "admin"
+  },
+  "consumers" : "",
+  "developers" : "developers",
+  "enableServiceDocumentValidation" : false,
+  "created_on" : "1779701105412",
+  "modified_on" : 1779701105412
+}

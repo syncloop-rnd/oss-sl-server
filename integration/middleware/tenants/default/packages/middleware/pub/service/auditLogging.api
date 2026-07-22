@@ -1,0 +1,2291 @@
+{
+  "latest" : {
+    "createdTS" : "",
+    "input" : [ {
+      "id" : "j2_1",
+      "text" : "auditLog",
+      "li_attr" : {
+        "id" : "j2_1"
+      },
+      "a_attr" : {
+        "href" : "#",
+        "id" : "j2_1_anchor"
+      },
+      "state" : {
+        "loaded" : true,
+        "opened" : true,
+        "selected" : false,
+        "disabled" : false,
+        "hidden" : false
+      },
+      "data" : { },
+      "children" : [ {
+        "id" : "j2_2",
+        "text" : "correlationId",
+        "li_attr" : {
+          "id" : "j2_2"
+        },
+        "a_attr" : {
+          "href" : "#",
+          "id" : "j2_2_anchor"
+        },
+        "state" : {
+          "loaded" : true,
+          "opened" : false,
+          "selected" : false,
+          "disabled" : false
+        },
+        "data" : { },
+        "children" : [ ],
+        "type" : "string"
+      }, {
+        "id" : "j2_3",
+        "text" : "sessionId",
+        "li_attr" : {
+          "id" : "j2_3"
+        },
+        "a_attr" : {
+          "href" : "#",
+          "id" : "j2_3_anchor"
+        },
+        "state" : {
+          "loaded" : true,
+          "opened" : false,
+          "selected" : false,
+          "disabled" : false
+        },
+        "data" : { },
+        "children" : [ ],
+        "type" : "string"
+      }, {
+        "id" : "j2_4",
+        "text" : "dateTimeStmp",
+        "li_attr" : {
+          "id" : "j2_4"
+        },
+        "a_attr" : {
+          "href" : "#",
+          "id" : "j2_4_anchor"
+        },
+        "state" : {
+          "loaded" : true,
+          "opened" : false,
+          "selected" : false,
+          "disabled" : false
+        },
+        "data" : { },
+        "children" : [ ],
+        "type" : "string"
+      }, {
+        "id" : "j2_5",
+        "text" : "duration",
+        "li_attr" : {
+          "id" : "j2_5"
+        },
+        "a_attr" : {
+          "href" : "#",
+          "id" : "j2_5_anchor"
+        },
+        "state" : {
+          "loaded" : true,
+          "opened" : false,
+          "selected" : false,
+          "disabled" : false
+        },
+        "data" : { },
+        "children" : [ ],
+        "type" : "string"
+      }, {
+        "id" : "j2_6",
+        "text" : "error",
+        "li_attr" : {
+          "id" : "j2_6"
+        },
+        "a_attr" : {
+          "href" : "#",
+          "id" : "j2_6_anchor"
+        },
+        "state" : {
+          "loaded" : true,
+          "opened" : false,
+          "selected" : false,
+          "disabled" : false
+        },
+        "data" : { },
+        "children" : [ ],
+        "type" : "string"
+      }, {
+        "id" : "j2_7",
+        "text" : "fqn",
+        "li_attr" : {
+          "id" : "j2_7"
+        },
+        "a_attr" : {
+          "href" : "#",
+          "id" : "j2_7_anchor"
+        },
+        "state" : {
+          "loaded" : true,
+          "opened" : false,
+          "selected" : false,
+          "disabled" : false
+        },
+        "data" : { },
+        "children" : [ ],
+        "type" : "string"
+      }, {
+        "id" : "j2_9",
+        "text" : "request",
+        "li_attr" : {
+          "id" : "j2_9"
+        },
+        "a_attr" : {
+          "href" : "#",
+          "id" : "j2_9_anchor"
+        },
+        "state" : {
+          "loaded" : true,
+          "opened" : false,
+          "selected" : false,
+          "disabled" : false
+        },
+        "data" : { },
+        "children" : [ ],
+        "type" : "string"
+      }, {
+        "id" : "j2_10",
+        "text" : "response",
+        "li_attr" : {
+          "id" : "j2_10"
+        },
+        "a_attr" : {
+          "href" : "#",
+          "id" : "j2_10_anchor"
+        },
+        "state" : {
+          "loaded" : true,
+          "opened" : false,
+          "selected" : false,
+          "disabled" : false
+        },
+        "data" : { },
+        "children" : [ ],
+        "type" : "string"
+      }, {
+        "id" : "j2_11",
+        "text" : "nanoInstance",
+        "li_attr" : {
+          "id" : "j2_11"
+        },
+        "a_attr" : {
+          "href" : "#",
+          "id" : "j2_11_anchor"
+        },
+        "state" : {
+          "loaded" : true,
+          "opened" : false,
+          "selected" : false,
+          "disabled" : false
+        },
+        "data" : { },
+        "children" : [ ],
+        "type" : "string"
+      }, {
+        "id" : "j2_12",
+        "text" : "hostName",
+        "li_attr" : {
+          "id" : "j2_12"
+        },
+        "a_attr" : {
+          "href" : "#",
+          "id" : "j2_12_anchor"
+        },
+        "state" : {
+          "loaded" : true,
+          "opened" : false,
+          "selected" : false,
+          "disabled" : false
+        },
+        "data" : { },
+        "children" : [ ],
+        "type" : "string"
+      }, {
+        "id" : "j2_13",
+        "text" : "nodeName",
+        "li_attr" : {
+          "id" : "j2_13"
+        },
+        "a_attr" : {
+          "href" : "#",
+          "id" : "j2_13_anchor"
+        },
+        "state" : {
+          "loaded" : true,
+          "opened" : false,
+          "selected" : false,
+          "disabled" : false
+        },
+        "data" : { },
+        "children" : [ ],
+        "type" : "string"
+      }, {
+        "id" : "j2_14",
+        "text" : "remoteAddr",
+        "li_attr" : {
+          "id" : "j2_14"
+        },
+        "a_attr" : {
+          "href" : "#",
+          "id" : "j2_14_anchor"
+        },
+        "state" : {
+          "loaded" : true,
+          "opened" : false,
+          "selected" : false,
+          "disabled" : false
+        },
+        "data" : { },
+        "children" : [ ],
+        "type" : "string"
+      }, {
+        "id" : "j2_15",
+        "text" : "userId",
+        "li_attr" : {
+          "id" : "j2_15"
+        },
+        "a_attr" : {
+          "href" : "#",
+          "id" : "j2_15_anchor"
+        },
+        "state" : {
+          "loaded" : true,
+          "opened" : false,
+          "selected" : false,
+          "disabled" : false
+        },
+        "data" : { },
+        "children" : [ ],
+        "type" : "string"
+      }, {
+        "id" : "j2_16",
+        "text" : "urlPath",
+        "li_attr" : {
+          "id" : "j2_16"
+        },
+        "a_attr" : {
+          "href" : "#",
+          "id" : "j2_16_anchor"
+        },
+        "state" : {
+          "loaded" : true,
+          "opened" : false,
+          "selected" : false,
+          "disabled" : false
+        },
+        "data" : { },
+        "children" : [ ],
+        "type" : "string"
+      }, {
+        "id" : "j2_19",
+        "text" : "*trackingJson",
+        "li_attr" : {
+          "id" : "j2_19"
+        },
+        "a_attr" : {
+          "href" : "#",
+          "id" : "j2_19_anchor"
+        },
+        "state" : {
+          "loaded" : true,
+          "opened" : false,
+          "selected" : false,
+          "disabled" : false
+        },
+        "data" : {
+          "guid" : "4bc1bf18-a580-4d5c-abce-6b11c53afdfe",
+          "columnType" : "-1"
+        },
+        "children" : [ ],
+        "type" : "string"
+      } ],
+      "type" : "document"
+    }, {
+      "id" : "j2_8",
+      "text" : "stopRecursiveLogging",
+      "li_attr" : {
+        "id" : "j2_8"
+      },
+      "a_attr" : {
+        "href" : "#",
+        "id" : "j2_8_anchor"
+      },
+      "state" : {
+        "loaded" : true,
+        "opened" : false,
+        "selected" : false,
+        "disabled" : false,
+        "hidden" : false
+      },
+      "data" : { },
+      "children" : [ ],
+      "type" : "string"
+    }, {
+      "id" : "j2_18",
+      "text" : "*trackingData",
+      "li_attr" : {
+        "id" : "j2_18"
+      },
+      "a_attr" : {
+        "href" : "#",
+        "id" : "j2_18_anchor"
+      },
+      "state" : {
+        "loaded" : true,
+        "opened" : false,
+        "selected" : false,
+        "disabled" : false,
+        "hidden" : false
+      },
+      "data" : {
+        "guid" : "5ec0c4a3-a6a3-4810-b1ca-801a64d800ed",
+        "columnType" : "-1"
+      },
+      "children" : [ ],
+      "type" : "document"
+    } ],
+    "output" : [ ],
+    "api" : [ {
+      "id" : "j1_32",
+      "text" : "Transformer",
+      "li_attr" : {
+        "id" : "j1_32"
+      },
+      "a_attr" : {
+        "href" : "javascript:void(0)",
+        "id" : "j1_32_anchor"
+      },
+      "state" : {
+        "loaded" : true,
+        "opened" : false,
+        "selected" : false,
+        "disabled" : false,
+        "hidden" : false
+      },
+      "data" : {
+        "guid" : "9132032e-aebf-4413-bb32-eda89d4e870d",
+        "transformers" : [ ],
+        "lines" : [ ],
+        "dropList" : [ ],
+        "createList" : [ {
+          "path" : "jd",
+          "value" : "{\"id\": 10}",
+          "id" : "e861fcda-7b21-4199-85ec-e651f7bb6597",
+          "typePath" : "string"
+        } ],
+        "initiateList" : [ {
+          "path" : "*trackingData",
+          "id" : "6d926a91-e2c1-49e3-ac32-8f05e484fccb",
+          "typePath" : "document"
+        }, {
+          "path" : "jd",
+          "id" : "20604658-91be-4b0a-a233-6fe3c1c34d2c",
+          "typePath" : "string"
+        } ]
+      },
+      "children" : [ ],
+      "type" : "transformer"
+    }, {
+      "id" : "j1_31",
+      "text" : "Invoke",
+      "li_attr" : {
+        "id" : "j1_31"
+      },
+      "a_attr" : {
+        "href" : "javascript:void(0)",
+        "id" : "j1_31_anchor"
+      },
+      "state" : {
+        "loaded" : true,
+        "opened" : false,
+        "selected" : false,
+        "disabled" : false,
+        "hidden" : false
+      },
+      "data" : {
+        "guid" : "eede1586-2bac-4431-a2bc-1e8180ad9c92",
+        "transformers" : [ {
+          "op" : "copy",
+          "from" : "/operation",
+          "to" : "/key",
+          "inTypePath" : "string",
+          "outTypePath" : "string",
+          "direction" : "in"
+        }, {
+          "op" : "copy",
+          "from" : "/auditLog",
+          "to" : "/value",
+          "inTypePath" : "document",
+          "outTypePath" : "document",
+          "direction" : "in"
+        } ],
+        "lines" : [ {
+          "inputPath" : "operation",
+          "outputPath" : "key",
+          "inpJsTree" : "#launching_arrow_jsTree",
+          "outpJsTree" : "#landing_arrow_jsTree_function",
+          "INPath" : "operation",
+          "OUTPath" : "key",
+          "direction" : "in",
+          "op" : "copy",
+          "line" : 0,
+          "dashedLine" : false,
+          "inType" : "string",
+          "outType" : "string",
+          "inTypePath" : "string",
+          "outTypePath" : "string"
+        }, {
+          "inputPath" : "auditLog",
+          "outputPath" : "value",
+          "inpJsTree" : "#launching_arrow_jsTree",
+          "outpJsTree" : "#landing_arrow_jsTree_function",
+          "INPath" : "auditLog",
+          "OUTPath" : "value",
+          "direction" : "in",
+          "op" : "copy",
+          "line" : 0,
+          "dashedLine" : false,
+          "inType" : "document",
+          "outType" : "document",
+          "inTypePath" : "document",
+          "outTypePath" : "document"
+        } ],
+        "dropList" : [ ],
+        "createList" : [ {
+          "path" : "operation",
+          "value" : "OPERATION",
+          "typePath" : "string"
+        } ],
+        "serviceType" : "service",
+        "comment" : "for auditLog",
+        "fqn" : "packages/middleware/pub/service/keyLogger"
+      },
+      "children" : [ ],
+      "type" : "invoke"
+    }, {
+      "id" : "j1_33",
+      "text" : "Invoke",
+      "li_attr" : {
+        "id" : "j1_33"
+      },
+      "a_attr" : {
+        "href" : "javascript:void(0)",
+        "id" : "j1_33_anchor"
+      },
+      "state" : {
+        "loaded" : true,
+        "opened" : false,
+        "selected" : false,
+        "disabled" : false,
+        "hidden" : false
+      },
+      "data" : {
+        "guid" : "7026f5d5-87c4-4bae-a181-a8a2bcfca7e2",
+        "transformers" : [ {
+          "op" : "copy",
+          "from" : "/operation",
+          "to" : "/key",
+          "inTypePath" : "string",
+          "outTypePath" : "string",
+          "direction" : "in"
+        }, {
+          "op" : "copy",
+          "from" : "/stopRecursiveLogging",
+          "to" : "/value",
+          "inTypePath" : "string",
+          "outTypePath" : "javaObject",
+          "direction" : "in"
+        } ],
+        "lines" : [ {
+          "inputPath" : "operation",
+          "outputPath" : "key",
+          "inpJsTree" : "#launching_arrow_jsTree",
+          "outpJsTree" : "#landing_arrow_jsTree_function",
+          "INPath" : "operation",
+          "OUTPath" : "key",
+          "direction" : "in",
+          "op" : "copy",
+          "line" : 0,
+          "dashedLine" : false,
+          "inType" : "string",
+          "outType" : "string",
+          "inTypePath" : "string",
+          "outTypePath" : "string"
+        }, {
+          "inputPath" : "stopRecursiveLogging",
+          "outputPath" : "value",
+          "inpJsTree" : "#launching_arrow_jsTree",
+          "outpJsTree" : "#landing_arrow_jsTree_function",
+          "INPath" : "stopRecursiveLogging",
+          "OUTPath" : "value",
+          "direction" : "in",
+          "op" : "copy",
+          "line" : 0,
+          "dashedLine" : false,
+          "inType" : "string",
+          "outType" : "string",
+          "inTypePath" : "string",
+          "outTypePath" : "javaObject"
+        } ],
+        "dropList" : [ ],
+        "createList" : [ {
+          "path" : "operation",
+          "value" : "OPERATION",
+          "typePath" : "string"
+        } ],
+        "serviceType" : "service",
+        "comment" : "for stopRecursiveLogging",
+        "fqn" : "packages/middleware/pub/service/keyLogger"
+      },
+      "children" : [ ],
+      "type" : "invoke"
+    }, {
+      "id" : "j1_6",
+      "text" : "Transformer",
+      "li_attr" : {
+        "id" : "j1_6"
+      },
+      "a_attr" : {
+        "href" : "javascript:void(0)",
+        "id" : "j1_6_anchor"
+      },
+      "state" : {
+        "loaded" : true,
+        "opened" : false,
+        "selected" : false,
+        "disabled" : false,
+        "hidden" : false
+      },
+      "data" : {
+        "transformers" : [ ],
+        "lines" : [ ],
+        "dropList" : [ ],
+        "createList" : [ {
+          "path" : "msg",
+          "value" : "correlationId",
+          "typePath" : "string"
+        }, {
+          "path" : "logging_service",
+          "value" : "#{audit.log.service}",
+          "evaluate" : "EGV",
+          "typePath" : "string"
+        }, {
+          "path" : "tenant",
+          "value" : "#{*tenant}",
+          "evaluate" : "EEV",
+          "typePath" : "string"
+        } ],
+        "comment" : "Initialize",
+        "guid" : "15c431a1-5a0b-4337-ae3a-f9e1a23d0ad4"
+      },
+      "children" : [ ],
+      "type" : "transformer"
+    }, {
+      "id" : "j1_15",
+      "text" : "Group",
+      "li_attr" : {
+        "id" : "j1_15"
+      },
+      "a_attr" : {
+        "href" : "javascript:void(0)",
+        "id" : "j1_15_anchor"
+      },
+      "state" : {
+        "loaded" : true,
+        "opened" : false,
+        "selected" : false,
+        "disabled" : false,
+        "hidden" : false
+      },
+      "data" : {
+        "status" : "disabled",
+        "guid" : "5787f8b1-3296-48d8-b0ca-f40bddee5b1c"
+      },
+      "children" : [ {
+        "id" : "j1_1",
+        "text" : "Invoke",
+        "li_attr" : {
+          "id" : "j1_1"
+        },
+        "a_attr" : {
+          "href" : "javascript:void(0)",
+          "id" : "j1_1_anchor"
+        },
+        "state" : {
+          "loaded" : true,
+          "opened" : false,
+          "selected" : false,
+          "disabled" : false
+        },
+        "data" : {
+          "transformers" : [ {
+            "op" : "copy",
+            "from" : "/auditLog/correlationId",
+            "to" : "/log",
+            "inTypePath" : "document/string",
+            "outTypePath" : "string"
+          }, {
+            "op" : "copy",
+            "from" : "/msg",
+            "to" : "/msg",
+            "inTypePath" : "string",
+            "outTypePath" : "string"
+          } ],
+          "lines" : [ {
+            "inputPath" : "auditLog/correlationId",
+            "outputPath" : "log",
+            "inpJsTree" : "#launching_arrow_jsTree",
+            "outpJsTree" : "#landing_arrow_jsTree_function",
+            "INPath" : "auditLog/correlationId",
+            "OUTPath" : "log",
+            "op" : "copy",
+            "line" : 0,
+            "dashedLine" : false,
+            "inType" : "string",
+            "outType" : "string",
+            "inTypePath" : "document/string",
+            "outTypePath" : "string"
+          }, {
+            "inputPath" : "msg",
+            "outputPath" : "msg",
+            "inpJsTree" : "#launching_arrow_jsTree",
+            "outpJsTree" : "#landing_arrow_jsTree_function",
+            "INPath" : "msg",
+            "OUTPath" : "msg",
+            "op" : "copy",
+            "line" : 0,
+            "dashedLine" : false,
+            "inType" : "string",
+            "outType" : "string",
+            "inTypePath" : "string",
+            "outTypePath" : "string"
+          } ],
+          "dropList" : [ ],
+          "createList" : [ {
+            "path" : "msg",
+            "value" : "sessionId",
+            "typePath" : "string"
+          } ],
+          "serviceType" : "service",
+          "guid" : "ff35f00e-7c03-4a76-83e3-fbdd2a3f12b7",
+          "fqn" : "packages/middleware/pub/service/debugLog"
+        },
+        "children" : [ ],
+        "type" : "invoke"
+      }, {
+        "id" : "j1_2",
+        "text" : "Invoke",
+        "li_attr" : {
+          "id" : "j1_2"
+        },
+        "a_attr" : {
+          "href" : "javascript:void(0)",
+          "id" : "j1_2_anchor"
+        },
+        "state" : {
+          "loaded" : true,
+          "opened" : false,
+          "selected" : false,
+          "disabled" : false
+        },
+        "data" : {
+          "transformers" : [ {
+            "op" : "copy",
+            "from" : "/auditLog/sessionId",
+            "to" : "/log",
+            "inTypePath" : "document/string",
+            "outTypePath" : "string"
+          }, {
+            "op" : "copy",
+            "from" : "/msg",
+            "to" : "/msg",
+            "inTypePath" : "string",
+            "outTypePath" : "string"
+          } ],
+          "lines" : [ {
+            "inputPath" : "auditLog/sessionId",
+            "outputPath" : "log",
+            "inpJsTree" : "#launching_arrow_jsTree",
+            "outpJsTree" : "#landing_arrow_jsTree_function",
+            "INPath" : "auditLog/sessionId",
+            "OUTPath" : "log",
+            "op" : "copy",
+            "line" : 0,
+            "dashedLine" : false,
+            "inType" : "string",
+            "outType" : "string",
+            "inTypePath" : "document/string",
+            "outTypePath" : "string"
+          }, {
+            "inputPath" : "msg",
+            "outputPath" : "msg",
+            "inpJsTree" : "#launching_arrow_jsTree",
+            "outpJsTree" : "#landing_arrow_jsTree_function",
+            "INPath" : "msg",
+            "OUTPath" : "msg",
+            "op" : "copy",
+            "line" : 0,
+            "dashedLine" : false,
+            "inType" : "string",
+            "outType" : "string",
+            "inTypePath" : "string",
+            "outTypePath" : "string"
+          } ],
+          "dropList" : [ ],
+          "createList" : [ {
+            "path" : "msg",
+            "value" : "dateTimeStmp",
+            "typePath" : "string"
+          } ],
+          "serviceType" : "service",
+          "guid" : "7f1ca608-a987-45d5-8efe-a133c0e120ac",
+          "fqn" : "packages/middleware/pub/service/debugLog"
+        },
+        "children" : [ ],
+        "type" : "invoke"
+      }, {
+        "id" : "j1_3",
+        "text" : "Invoke",
+        "li_attr" : {
+          "id" : "j1_3"
+        },
+        "a_attr" : {
+          "href" : "javascript:void(0)",
+          "id" : "j1_3_anchor"
+        },
+        "state" : {
+          "loaded" : true,
+          "opened" : false,
+          "selected" : false,
+          "disabled" : false
+        },
+        "data" : {
+          "transformers" : [ {
+            "op" : "copy",
+            "from" : "/auditLog/dateTimeStmp",
+            "to" : "/log",
+            "inTypePath" : "document/string",
+            "outTypePath" : "string"
+          }, {
+            "op" : "copy",
+            "from" : "/msg",
+            "to" : "/msg",
+            "inTypePath" : "string",
+            "outTypePath" : "string"
+          } ],
+          "lines" : [ {
+            "inputPath" : "auditLog/dateTimeStmp",
+            "outputPath" : "log",
+            "inpJsTree" : "#launching_arrow_jsTree",
+            "outpJsTree" : "#landing_arrow_jsTree_function",
+            "INPath" : "auditLog/dateTimeStmp",
+            "OUTPath" : "log",
+            "op" : "copy",
+            "line" : 0,
+            "dashedLine" : false,
+            "inType" : "string",
+            "outType" : "string",
+            "inTypePath" : "document/string",
+            "outTypePath" : "string"
+          }, {
+            "inputPath" : "msg",
+            "outputPath" : "msg",
+            "inpJsTree" : "#launching_arrow_jsTree",
+            "outpJsTree" : "#landing_arrow_jsTree_function",
+            "INPath" : "msg",
+            "OUTPath" : "msg",
+            "op" : "copy",
+            "line" : 0,
+            "dashedLine" : false,
+            "inType" : "string",
+            "outType" : "string",
+            "inTypePath" : "string",
+            "outTypePath" : "string"
+          } ],
+          "dropList" : [ ],
+          "createList" : [ {
+            "path" : "msg",
+            "value" : "duration",
+            "typePath" : "string"
+          } ],
+          "serviceType" : "service",
+          "status" : "enabled",
+          "guid" : "7a0986e1-7c99-43fa-9d07-0c116dde9a27",
+          "fqn" : "packages/middleware/pub/service/debugLog"
+        },
+        "children" : [ ],
+        "type" : "invoke"
+      }, {
+        "id" : "j1_5",
+        "text" : "Invoke",
+        "li_attr" : {
+          "id" : "j1_5"
+        },
+        "a_attr" : {
+          "href" : "javascript:void(0)",
+          "id" : "j1_5_anchor"
+        },
+        "state" : {
+          "loaded" : true,
+          "opened" : false,
+          "selected" : false,
+          "disabled" : false
+        },
+        "data" : {
+          "transformers" : [ {
+            "op" : "copy",
+            "from" : "/msg",
+            "to" : "/msg",
+            "inTypePath" : "string",
+            "outTypePath" : "string"
+          }, {
+            "op" : "copy",
+            "from" : "/auditLog/duration",
+            "to" : "/log",
+            "inTypePath" : "document/string",
+            "outTypePath" : "string"
+          } ],
+          "lines" : [ {
+            "inputPath" : "msg",
+            "outputPath" : "msg",
+            "inpJsTree" : "#launching_arrow_jsTree",
+            "outpJsTree" : "#landing_arrow_jsTree_function",
+            "INPath" : "msg",
+            "OUTPath" : "msg",
+            "op" : "copy",
+            "line" : 0,
+            "dashedLine" : false,
+            "inType" : "string",
+            "outType" : "string",
+            "inTypePath" : "string",
+            "outTypePath" : "string"
+          }, {
+            "inputPath" : "auditLog/duration",
+            "outputPath" : "log",
+            "inpJsTree" : "#launching_arrow_jsTree",
+            "outpJsTree" : "#landing_arrow_jsTree_function",
+            "INPath" : "auditLog/duration",
+            "OUTPath" : "log",
+            "op" : "copy",
+            "line" : 0,
+            "dashedLine" : false,
+            "inType" : "string",
+            "outType" : "string",
+            "inTypePath" : "document/string",
+            "outTypePath" : "string"
+          } ],
+          "dropList" : [ ],
+          "createList" : [ {
+            "path" : "msg",
+            "value" : "error",
+            "typePath" : "string"
+          } ],
+          "serviceType" : "service",
+          "status" : "enabled",
+          "guid" : "ca95e1b4-e9ca-4e15-ae12-7c7afbb8eb96",
+          "fqn" : "packages/middleware/pub/service/debugLog"
+        },
+        "children" : [ ],
+        "type" : "invoke"
+      }, {
+        "id" : "j1_4",
+        "text" : "Invoke",
+        "li_attr" : {
+          "id" : "j1_4"
+        },
+        "a_attr" : {
+          "href" : "javascript:void(0)",
+          "id" : "j1_4_anchor"
+        },
+        "state" : {
+          "loaded" : true,
+          "opened" : false,
+          "selected" : false,
+          "disabled" : false
+        },
+        "data" : {
+          "transformers" : [ {
+            "op" : "copy",
+            "from" : "/auditLog/error",
+            "to" : "/log",
+            "inTypePath" : "document/string",
+            "outTypePath" : "string"
+          }, {
+            "op" : "copy",
+            "from" : "/msg",
+            "to" : "/msg",
+            "inTypePath" : "string",
+            "outTypePath" : "string"
+          } ],
+          "lines" : [ {
+            "inputPath" : "auditLog/error",
+            "outputPath" : "log",
+            "inpJsTree" : "#launching_arrow_jsTree",
+            "outpJsTree" : "#landing_arrow_jsTree_function",
+            "INPath" : "auditLog/error",
+            "OUTPath" : "log",
+            "op" : "copy",
+            "line" : 0,
+            "dashedLine" : false,
+            "inType" : "string",
+            "outType" : "string",
+            "inTypePath" : "document/string",
+            "outTypePath" : "string"
+          }, {
+            "inputPath" : "msg",
+            "outputPath" : "msg",
+            "inpJsTree" : "#launching_arrow_jsTree",
+            "outpJsTree" : "#landing_arrow_jsTree_function",
+            "INPath" : "msg",
+            "OUTPath" : "msg",
+            "op" : "copy",
+            "line" : 0,
+            "dashedLine" : false,
+            "inType" : "string",
+            "outType" : "string",
+            "inTypePath" : "string",
+            "outTypePath" : "string"
+          } ],
+          "dropList" : [ ],
+          "createList" : [ {
+            "path" : "msg",
+            "value" : "fqn",
+            "typePath" : "string"
+          } ],
+          "serviceType" : "service",
+          "status" : "enabled",
+          "guid" : "0a3046e2-2a1d-4fdc-bef8-c8da730c4e28",
+          "fqn" : "packages/middleware/pub/service/debugLog"
+        },
+        "children" : [ ],
+        "type" : "invoke"
+      }, {
+        "id" : "j1_7",
+        "text" : "Invoke",
+        "li_attr" : {
+          "id" : "j1_7"
+        },
+        "a_attr" : {
+          "href" : "javascript:void(0)",
+          "id" : "j1_7_anchor"
+        },
+        "state" : {
+          "loaded" : true,
+          "opened" : false,
+          "selected" : false,
+          "disabled" : false
+        },
+        "data" : {
+          "transformers" : [ {
+            "op" : "copy",
+            "from" : "/msg",
+            "to" : "/msg",
+            "inTypePath" : "string",
+            "outTypePath" : "string"
+          }, {
+            "op" : "copy",
+            "from" : "/auditLog/fqn",
+            "to" : "/log",
+            "inTypePath" : "document/string",
+            "outTypePath" : "string"
+          } ],
+          "lines" : [ {
+            "inputPath" : "msg",
+            "outputPath" : "msg",
+            "inpJsTree" : "#launching_arrow_jsTree",
+            "outpJsTree" : "#landing_arrow_jsTree_function",
+            "INPath" : "msg",
+            "OUTPath" : "msg",
+            "op" : "copy",
+            "line" : 0,
+            "dashedLine" : false,
+            "inType" : "string",
+            "outType" : "string",
+            "inTypePath" : "string",
+            "outTypePath" : "string"
+          }, {
+            "inputPath" : "auditLog/fqn",
+            "outputPath" : "log",
+            "inpJsTree" : "#launching_arrow_jsTree",
+            "outpJsTree" : "#landing_arrow_jsTree_function",
+            "INPath" : "auditLog/fqn",
+            "OUTPath" : "log",
+            "op" : "copy",
+            "line" : 0,
+            "dashedLine" : false,
+            "inType" : "string",
+            "outType" : "string",
+            "inTypePath" : "document/string",
+            "outTypePath" : "string"
+          } ],
+          "dropList" : [ ],
+          "createList" : [ {
+            "path" : "msg",
+            "value" : "request",
+            "typePath" : "string"
+          } ],
+          "serviceType" : "service",
+          "status" : "enabled",
+          "guid" : "1547b17a-d2a6-4a8b-8ad1-f1ca8f4cec25",
+          "fqn" : "packages/middleware/pub/service/debugLog"
+        },
+        "children" : [ ],
+        "type" : "invoke"
+      }, {
+        "id" : "j1_8",
+        "text" : "Invoke",
+        "li_attr" : {
+          "id" : "j1_8"
+        },
+        "a_attr" : {
+          "href" : "javascript:void(0)",
+          "id" : "j1_8_anchor"
+        },
+        "state" : {
+          "loaded" : true,
+          "opened" : false,
+          "selected" : false,
+          "disabled" : false
+        },
+        "data" : {
+          "transformers" : [ {
+            "op" : "copy",
+            "from" : "/msg",
+            "to" : "/msg",
+            "inTypePath" : "string",
+            "outTypePath" : "string"
+          }, {
+            "op" : "copy",
+            "from" : "/auditLog/request",
+            "to" : "/log",
+            "inTypePath" : "document/string",
+            "outTypePath" : "string"
+          } ],
+          "lines" : [ {
+            "inputPath" : "msg",
+            "outputPath" : "msg",
+            "inpJsTree" : "#launching_arrow_jsTree",
+            "outpJsTree" : "#landing_arrow_jsTree_function",
+            "INPath" : "msg",
+            "OUTPath" : "msg",
+            "op" : "copy",
+            "line" : 0,
+            "dashedLine" : false,
+            "inType" : "string",
+            "outType" : "string",
+            "inTypePath" : "string",
+            "outTypePath" : "string"
+          }, {
+            "inputPath" : "auditLog/request",
+            "outputPath" : "log",
+            "inpJsTree" : "#launching_arrow_jsTree",
+            "outpJsTree" : "#landing_arrow_jsTree_function",
+            "INPath" : "auditLog/request",
+            "OUTPath" : "log",
+            "op" : "copy",
+            "line" : 0,
+            "dashedLine" : false,
+            "inType" : "string",
+            "outType" : "string",
+            "inTypePath" : "document/string",
+            "outTypePath" : "string"
+          } ],
+          "dropList" : [ ],
+          "createList" : [ {
+            "path" : "msg",
+            "value" : "response",
+            "typePath" : "string"
+          } ],
+          "serviceType" : "service",
+          "status" : "enabled",
+          "guid" : "6f95129b-1d95-44ef-b27d-f298c0eb1acc",
+          "fqn" : "packages/middleware/pub/service/debugLog"
+        },
+        "children" : [ ],
+        "type" : "invoke"
+      }, {
+        "id" : "j1_9",
+        "text" : "Invoke",
+        "li_attr" : {
+          "id" : "j1_9"
+        },
+        "a_attr" : {
+          "href" : "javascript:void(0)",
+          "id" : "j1_9_anchor"
+        },
+        "state" : {
+          "loaded" : true,
+          "opened" : false,
+          "selected" : false,
+          "disabled" : false
+        },
+        "data" : {
+          "transformers" : [ {
+            "op" : "copy",
+            "from" : "/msg",
+            "to" : "/msg",
+            "inTypePath" : "string",
+            "outTypePath" : "string"
+          }, {
+            "op" : "copy",
+            "from" : "/auditLog/response",
+            "to" : "/log",
+            "inTypePath" : "document/string",
+            "outTypePath" : "string"
+          } ],
+          "lines" : [ {
+            "inputPath" : "msg",
+            "outputPath" : "msg",
+            "inpJsTree" : "#launching_arrow_jsTree",
+            "outpJsTree" : "#landing_arrow_jsTree_function",
+            "INPath" : "msg",
+            "OUTPath" : "msg",
+            "op" : "copy",
+            "line" : 0,
+            "dashedLine" : false,
+            "inType" : "string",
+            "outType" : "string",
+            "inTypePath" : "string",
+            "outTypePath" : "string"
+          }, {
+            "inputPath" : "auditLog/response",
+            "outputPath" : "log",
+            "inpJsTree" : "#launching_arrow_jsTree",
+            "outpJsTree" : "#landing_arrow_jsTree_function",
+            "INPath" : "auditLog/response",
+            "OUTPath" : "log",
+            "op" : "copy",
+            "line" : 0,
+            "dashedLine" : false,
+            "inType" : "string",
+            "outType" : "string",
+            "inTypePath" : "document/string",
+            "outTypePath" : "string"
+          } ],
+          "dropList" : [ ],
+          "createList" : [ {
+            "path" : "msg",
+            "value" : "nanoInstance",
+            "typePath" : "string"
+          } ],
+          "serviceType" : "service",
+          "status" : "enabled",
+          "guid" : "72b93c3f-7a8d-41b5-b93a-0e905fa5ae09",
+          "fqn" : "packages/middleware/pub/service/debugLog"
+        },
+        "children" : [ ],
+        "type" : "invoke"
+      }, {
+        "id" : "j1_10",
+        "text" : "Invoke",
+        "li_attr" : {
+          "id" : "j1_10"
+        },
+        "a_attr" : {
+          "href" : "javascript:void(0)",
+          "id" : "j1_10_anchor"
+        },
+        "state" : {
+          "loaded" : true,
+          "opened" : false,
+          "selected" : false,
+          "disabled" : false
+        },
+        "data" : {
+          "transformers" : [ {
+            "op" : "copy",
+            "from" : "/msg",
+            "to" : "/msg",
+            "inTypePath" : "string",
+            "outTypePath" : "string"
+          }, {
+            "op" : "copy",
+            "from" : "/auditLog/nanoInstance",
+            "to" : "/log",
+            "inTypePath" : "document/string",
+            "outTypePath" : "string"
+          } ],
+          "lines" : [ {
+            "inputPath" : "msg",
+            "outputPath" : "msg",
+            "inpJsTree" : "#launching_arrow_jsTree",
+            "outpJsTree" : "#landing_arrow_jsTree_function",
+            "INPath" : "msg",
+            "OUTPath" : "msg",
+            "op" : "copy",
+            "line" : 0,
+            "dashedLine" : false,
+            "inType" : "string",
+            "outType" : "string",
+            "inTypePath" : "string",
+            "outTypePath" : "string"
+          }, {
+            "inputPath" : "auditLog/nanoInstance",
+            "outputPath" : "log",
+            "inpJsTree" : "#launching_arrow_jsTree",
+            "outpJsTree" : "#landing_arrow_jsTree_function",
+            "INPath" : "auditLog/nanoInstance",
+            "OUTPath" : "log",
+            "op" : "copy",
+            "line" : 0,
+            "dashedLine" : false,
+            "inType" : "string",
+            "outType" : "string",
+            "inTypePath" : "document/string",
+            "outTypePath" : "string"
+          } ],
+          "dropList" : [ ],
+          "createList" : [ {
+            "path" : "msg",
+            "value" : "hostName",
+            "typePath" : "string"
+          } ],
+          "serviceType" : "service",
+          "status" : "enabled",
+          "guid" : "14d55ccf-abe9-45e5-9081-aca6824e77ea",
+          "fqn" : "packages/middleware/pub/service/debugLog"
+        },
+        "children" : [ ],
+        "type" : "invoke"
+      }, {
+        "id" : "j1_13",
+        "text" : "Invoke",
+        "li_attr" : {
+          "id" : "j1_13"
+        },
+        "a_attr" : {
+          "href" : "javascript:void(0)",
+          "id" : "j1_13_anchor"
+        },
+        "state" : {
+          "loaded" : true,
+          "opened" : false,
+          "selected" : false,
+          "disabled" : false
+        },
+        "data" : {
+          "transformers" : [ {
+            "op" : "copy",
+            "from" : "/auditLog/hostName",
+            "to" : "/log",
+            "inTypePath" : "document/string",
+            "outTypePath" : "string",
+            "direction" : "in"
+          }, {
+            "op" : "copy",
+            "from" : "/msg",
+            "to" : "/msg",
+            "inTypePath" : "string",
+            "outTypePath" : "string",
+            "direction" : "in"
+          } ],
+          "lines" : [ {
+            "inputPath" : "auditLog/hostName",
+            "outputPath" : "log",
+            "inpJsTree" : "#launching_arrow_jsTree",
+            "outpJsTree" : "#landing_arrow_jsTree_function",
+            "INPath" : "auditLog/hostName",
+            "OUTPath" : "log",
+            "direction" : "in",
+            "op" : "copy",
+            "line" : 0,
+            "dashedLine" : false,
+            "inType" : "string",
+            "outType" : "string",
+            "inTypePath" : "document/string",
+            "outTypePath" : "string"
+          }, {
+            "inputPath" : "msg",
+            "outputPath" : "msg",
+            "inpJsTree" : "#launching_arrow_jsTree",
+            "outpJsTree" : "#landing_arrow_jsTree_function",
+            "INPath" : "msg",
+            "OUTPath" : "msg",
+            "direction" : "in",
+            "op" : "copy",
+            "line" : 0,
+            "dashedLine" : false,
+            "inType" : "string",
+            "outType" : "string",
+            "inTypePath" : "string",
+            "outTypePath" : "string"
+          } ],
+          "dropList" : [ ],
+          "createList" : [ {
+            "path" : "msg",
+            "value" : "nodeName",
+            "typePath" : "string"
+          } ],
+          "serviceType" : "service",
+          "guid" : "251cebc9-6c4c-4d78-9576-2ad171d11c66",
+          "fqn" : "packages/middleware/pub/service/debugLog"
+        },
+        "children" : [ ],
+        "type" : "invoke"
+      }, {
+        "id" : "j1_14",
+        "text" : "Invoke",
+        "li_attr" : {
+          "id" : "j1_14"
+        },
+        "a_attr" : {
+          "href" : "javascript:void(0)",
+          "id" : "j1_14_anchor"
+        },
+        "state" : {
+          "loaded" : true,
+          "opened" : false,
+          "selected" : false,
+          "disabled" : false
+        },
+        "data" : {
+          "transformers" : [ {
+            "op" : "copy",
+            "from" : "/msg",
+            "to" : "/msg",
+            "inTypePath" : "string",
+            "outTypePath" : "string",
+            "direction" : "in"
+          }, {
+            "op" : "copy",
+            "from" : "/auditLog/nodeName",
+            "to" : "/log",
+            "inTypePath" : "document/string",
+            "outTypePath" : "string",
+            "direction" : "in"
+          } ],
+          "lines" : [ {
+            "inputPath" : "msg",
+            "outputPath" : "msg",
+            "inpJsTree" : "#launching_arrow_jsTree",
+            "outpJsTree" : "#landing_arrow_jsTree_function",
+            "INPath" : "msg",
+            "OUTPath" : "msg",
+            "direction" : "in",
+            "op" : "copy",
+            "line" : 0,
+            "dashedLine" : false,
+            "inType" : "string",
+            "outType" : "string",
+            "inTypePath" : "string",
+            "outTypePath" : "string"
+          }, {
+            "inputPath" : "auditLog/nodeName",
+            "outputPath" : "log",
+            "inpJsTree" : "#launching_arrow_jsTree",
+            "outpJsTree" : "#landing_arrow_jsTree_function",
+            "INPath" : "auditLog/nodeName",
+            "OUTPath" : "log",
+            "direction" : "in",
+            "op" : "copy",
+            "line" : 0,
+            "dashedLine" : false,
+            "inType" : "string",
+            "outType" : "string",
+            "inTypePath" : "document/string",
+            "outTypePath" : "string"
+          } ],
+          "dropList" : [ ],
+          "createList" : [ {
+            "path" : "msg",
+            "value" : "remoteAddr",
+            "typePath" : "string"
+          } ],
+          "serviceType" : "service",
+          "guid" : "dc9bd497-73ec-42e9-ace8-44ba6b7cae82",
+          "fqn" : "packages/middleware/pub/service/debugLog"
+        },
+        "children" : [ ],
+        "type" : "invoke"
+      }, {
+        "id" : "j1_18",
+        "text" : "Invoke",
+        "li_attr" : {
+          "id" : "j1_18"
+        },
+        "a_attr" : {
+          "href" : "javascript:void(0)",
+          "id" : "j1_18_anchor"
+        },
+        "state" : {
+          "loaded" : true,
+          "opened" : false,
+          "selected" : false,
+          "disabled" : false
+        },
+        "data" : {
+          "transformers" : [ {
+            "op" : "copy",
+            "from" : "/auditLog/remoteAddr",
+            "to" : "/log",
+            "inTypePath" : "document/string",
+            "outTypePath" : "string",
+            "direction" : "in"
+          }, {
+            "op" : "copy",
+            "from" : "/msg",
+            "to" : "/msg",
+            "inTypePath" : "string",
+            "outTypePath" : "string",
+            "direction" : "in"
+          } ],
+          "lines" : [ {
+            "inputPath" : "auditLog/remoteAddr",
+            "outputPath" : "log",
+            "inpJsTree" : "#launching_arrow_jsTree",
+            "outpJsTree" : "#landing_arrow_jsTree_function",
+            "INPath" : "auditLog/remoteAddr",
+            "OUTPath" : "log",
+            "direction" : "in",
+            "op" : "copy",
+            "line" : 0,
+            "dashedLine" : false,
+            "inType" : "string",
+            "outType" : "string",
+            "inTypePath" : "document/string",
+            "outTypePath" : "string"
+          }, {
+            "inputPath" : "msg",
+            "outputPath" : "msg",
+            "inpJsTree" : "#launching_arrow_jsTree",
+            "outpJsTree" : "#landing_arrow_jsTree_function",
+            "INPath" : "msg",
+            "OUTPath" : "msg",
+            "direction" : "in",
+            "op" : "copy",
+            "line" : 0,
+            "dashedLine" : false,
+            "inType" : "string",
+            "outType" : "string",
+            "inTypePath" : "string",
+            "outTypePath" : "string"
+          } ],
+          "dropList" : [ ],
+          "createList" : [ {
+            "path" : "msg",
+            "value" : "userId",
+            "typePath" : "string"
+          } ],
+          "serviceType" : "service",
+          "guid" : "b0f49d01-9f4d-420e-b2c2-eddd01d79022",
+          "fqn" : "packages/middleware/pub/service/debugLog"
+        },
+        "children" : [ ],
+        "type" : "invoke"
+      }, {
+        "id" : "j1_19",
+        "text" : "Invoke",
+        "li_attr" : {
+          "id" : "j1_19"
+        },
+        "a_attr" : {
+          "href" : "javascript:void(0)",
+          "id" : "j1_19_anchor"
+        },
+        "state" : {
+          "loaded" : true,
+          "opened" : false,
+          "selected" : false,
+          "disabled" : false
+        },
+        "data" : {
+          "transformers" : [ {
+            "op" : "copy",
+            "from" : "/msg",
+            "to" : "/msg",
+            "inTypePath" : "string",
+            "outTypePath" : "string",
+            "direction" : "in"
+          }, {
+            "op" : "copy",
+            "from" : "/auditLog/userId",
+            "to" : "/log",
+            "inTypePath" : "document/string",
+            "outTypePath" : "string",
+            "direction" : "in"
+          } ],
+          "lines" : [ {
+            "inputPath" : "msg",
+            "outputPath" : "msg",
+            "inpJsTree" : "#launching_arrow_jsTree",
+            "outpJsTree" : "#landing_arrow_jsTree_function",
+            "INPath" : "msg",
+            "OUTPath" : "msg",
+            "direction" : "in",
+            "op" : "copy",
+            "line" : 0,
+            "dashedLine" : false,
+            "inType" : "string",
+            "outType" : "string",
+            "inTypePath" : "string",
+            "outTypePath" : "string"
+          }, {
+            "inputPath" : "auditLog/userId",
+            "outputPath" : "log",
+            "inpJsTree" : "#launching_arrow_jsTree",
+            "outpJsTree" : "#landing_arrow_jsTree_function",
+            "INPath" : "auditLog/userId",
+            "OUTPath" : "log",
+            "direction" : "in",
+            "op" : "copy",
+            "line" : 0,
+            "dashedLine" : false,
+            "inType" : "string",
+            "outType" : "string",
+            "inTypePath" : "document/string",
+            "outTypePath" : "string"
+          } ],
+          "dropList" : [ ],
+          "createList" : [ {
+            "path" : "msg",
+            "value" : "uriPath",
+            "typePath" : "string"
+          } ],
+          "serviceType" : "service",
+          "guid" : "e109d6b8-01d5-4a3c-bca9-adbf5fb58cea",
+          "fqn" : "packages/middleware/pub/service/debugLog"
+        },
+        "children" : [ ],
+        "type" : "invoke"
+      }, {
+        "id" : "j1_21",
+        "text" : "Invoke",
+        "li_attr" : {
+          "id" : "j1_21"
+        },
+        "a_attr" : {
+          "href" : "javascript:void(0)",
+          "id" : "j1_21_anchor"
+        },
+        "state" : {
+          "loaded" : true,
+          "opened" : false,
+          "selected" : false,
+          "disabled" : false
+        },
+        "data" : {
+          "transformers" : [ {
+            "op" : "copy",
+            "from" : "/auditLog/urlPath",
+            "to" : "/log",
+            "inTypePath" : "document/string",
+            "outTypePath" : "string",
+            "direction" : "in"
+          }, {
+            "op" : "copy",
+            "from" : "/msg",
+            "to" : "/msg",
+            "inTypePath" : "string",
+            "outTypePath" : "string",
+            "direction" : "in"
+          } ],
+          "lines" : [ {
+            "inputPath" : "auditLog/urlPath",
+            "outputPath" : "log",
+            "inpJsTree" : "#launching_arrow_jsTree",
+            "outpJsTree" : "#landing_arrow_jsTree_function",
+            "INPath" : "auditLog/urlPath",
+            "OUTPath" : "log",
+            "direction" : "in",
+            "op" : "copy",
+            "line" : 0,
+            "dashedLine" : false,
+            "inType" : "string",
+            "outType" : "string",
+            "inTypePath" : "document/string",
+            "outTypePath" : "string"
+          }, {
+            "inputPath" : "msg",
+            "outputPath" : "msg",
+            "inpJsTree" : "#launching_arrow_jsTree",
+            "outpJsTree" : "#landing_arrow_jsTree_function",
+            "INPath" : "msg",
+            "OUTPath" : "msg",
+            "direction" : "in",
+            "op" : "copy",
+            "line" : 0,
+            "dashedLine" : false,
+            "inType" : "string",
+            "outType" : "string",
+            "inTypePath" : "string",
+            "outTypePath" : "string"
+          } ],
+          "dropList" : [ ],
+          "createList" : [ ],
+          "serviceType" : "service",
+          "guid" : "5499ce37-fdbf-4d87-a3dc-59fce5a394f1",
+          "fqn" : "packages/middleware/pub/service/debugLog"
+        },
+        "children" : [ ],
+        "type" : "invoke"
+      }, {
+        "id" : "j1_29",
+        "text" : "Invoke",
+        "li_attr" : {
+          "id" : "j1_29"
+        },
+        "a_attr" : {
+          "href" : "javascript:void(0)",
+          "id" : "j1_29_anchor"
+        },
+        "state" : {
+          "loaded" : true,
+          "opened" : false,
+          "selected" : false,
+          "disabled" : false
+        },
+        "data" : {
+          "transformers" : [ {
+            "op" : "copy",
+            "from" : "/logging_service",
+            "to" : "/msg",
+            "inTypePath" : "string",
+            "outTypePath" : "string",
+            "direction" : "in"
+          }, {
+            "op" : "copy",
+            "from" : "/logging_service",
+            "to" : "/log",
+            "inTypePath" : "string",
+            "outTypePath" : "string",
+            "direction" : "in"
+          } ],
+          "lines" : [ {
+            "inputPath" : "logging_service",
+            "outputPath" : "msg",
+            "inpJsTree" : "#launching_arrow_jsTree",
+            "outpJsTree" : "#landing_arrow_jsTree_function",
+            "INPath" : "logging_service",
+            "OUTPath" : "msg",
+            "direction" : "in",
+            "op" : "copy",
+            "line" : 0,
+            "dashedLine" : false,
+            "inType" : "string",
+            "outType" : "string",
+            "inTypePath" : "string",
+            "outTypePath" : "string"
+          }, {
+            "inputPath" : "logging_service",
+            "outputPath" : "log",
+            "inpJsTree" : "#launching_arrow_jsTree",
+            "outpJsTree" : "#landing_arrow_jsTree_function",
+            "INPath" : "logging_service",
+            "OUTPath" : "log",
+            "direction" : "in",
+            "op" : "copy",
+            "line" : 0,
+            "dashedLine" : false,
+            "inType" : "string",
+            "outType" : "string",
+            "inTypePath" : "string",
+            "outTypePath" : "string"
+          } ],
+          "dropList" : [ ],
+          "createList" : [ ],
+          "serviceType" : "service",
+          "guid" : "8debf770-6a98-4009-84ac-b79fc5a7d6f9",
+          "fqn" : "packages/middleware/pub/service/debugLog"
+        },
+        "children" : [ ],
+        "type" : "invoke"
+      } ],
+      "type" : "group"
+    }, {
+      "id" : "j1_23",
+      "text" : "Group",
+      "li_attr" : {
+        "id" : "j1_23"
+      },
+      "a_attr" : {
+        "href" : "javascript:void(0)",
+        "id" : "j1_23_anchor"
+      },
+      "state" : {
+        "loaded" : true,
+        "opened" : true,
+        "selected" : false,
+        "disabled" : false,
+        "hidden" : false
+      },
+      "data" : {
+        "status" : "enabled",
+        "snap" : "disabled",
+        "guid" : "07e32803-0740-49a8-b1d6-ee7bf3c753fa"
+      },
+      "children" : [ {
+        "id" : "j1_26",
+        "text" : "SWITCH",
+        "li_attr" : {
+          "id" : "j1_26"
+        },
+        "a_attr" : {
+          "href" : "javascript:void(0)",
+          "id" : "j1_26_anchor"
+        },
+        "state" : {
+          "loaded" : true,
+          "opened" : true,
+          "selected" : false,
+          "disabled" : false
+        },
+        "data" : {
+          "switch" : "logging_service",
+          "snap" : "disabled",
+          "status" : "enabled",
+          "guid" : "bd1a49b5-6c8b-4c34-bd73-0f763865dde1"
+        },
+        "children" : [ {
+          "id" : "j1_27",
+          "text" : "CASE",
+          "li_attr" : {
+            "id" : "j1_27"
+          },
+          "a_attr" : {
+            "href" : "javascript:void(0)",
+            "id" : "j1_27_anchor"
+          },
+          "state" : {
+            "loaded" : true,
+            "opened" : true,
+            "selected" : false,
+            "disabled" : false
+          },
+          "data" : {
+            "case" : "local",
+            "guid" : "91b23c4b-f599-4542-b6dc-79b06631a173"
+          },
+          "children" : [ {
+            "id" : "j1_12",
+            "text" : "Invoke",
+            "li_attr" : {
+              "id" : "j1_12"
+            },
+            "a_attr" : {
+              "href" : "javascript:void(0)",
+              "id" : "j1_12_anchor"
+            },
+            "state" : {
+              "loaded" : true,
+              "opened" : false,
+              "selected" : false,
+              "disabled" : false
+            },
+            "data" : {
+              "transformers" : [ {
+                "op" : "copy",
+                "from" : "/auditLog/error",
+                "to" : "/input",
+                "inTypePath" : "document/string",
+                "outTypePath" : "string"
+              }, {
+                "op" : "copy",
+                "from" : "/output",
+                "to" : "/auditLog/error",
+                "inTypePath" : "string",
+                "outTypePath" : "document/string"
+              } ],
+              "lines" : [ {
+                "inputPath" : "auditLog/error",
+                "outputPath" : "input",
+                "inpJsTree" : "#launching_arrow_jsTree",
+                "outpJsTree" : "#landing_arrow_jsTree_function",
+                "INPath" : "auditLog/error",
+                "OUTPath" : "input",
+                "op" : "copy",
+                "line" : 0,
+                "dashedLine" : false,
+                "inType" : "string",
+                "outType" : "string",
+                "inTypePath" : "document/string",
+                "outTypePath" : "string"
+              }, {
+                "inputPath" : "output",
+                "outputPath" : "auditLog/error",
+                "inpJsTree" : "#launching_arrow_jsTree_function",
+                "outpJsTree" : "#landing_arrow_jsTree",
+                "INPath" : "output",
+                "OUTPath" : "auditLog/error",
+                "op" : "copy",
+                "line" : 0,
+                "dashedLine" : false,
+                "inType" : "string",
+                "outType" : "string",
+                "inTypePath" : "string",
+                "outTypePath" : "document/string"
+              } ],
+              "dropList" : [ ],
+              "createList" : [ ],
+              "serviceType" : "service",
+              "guid" : "23dcf25d-da00-4978-aac9-3590d5b9d07c",
+              "initiateList" : [ ],
+              "status" : "enabled",
+              "fqn" : "packages/middleware/pub/string/escapeSQL"
+            },
+            "children" : [ ],
+            "type" : "invoke"
+          }, {
+            "id" : "j1_11",
+            "text" : "Invoke",
+            "li_attr" : {
+              "id" : "j1_11"
+            },
+            "a_attr" : {
+              "href" : "javascript:void(0)",
+              "id" : "j1_11_anchor"
+            },
+            "state" : {
+              "loaded" : true,
+              "opened" : false,
+              "selected" : false,
+              "disabled" : false
+            },
+            "data" : {
+              "transformers" : [ {
+                "op" : "copy",
+                "from" : "/auditLog/correlationId",
+                "to" : "/inputDocList/0/correlationId",
+                "inTypePath" : "document/string",
+                "outTypePath" : "documentList/string"
+              }, {
+                "op" : "copy",
+                "from" : "/auditLog/sessionId",
+                "to" : "/inputDocList/0/sessionId",
+                "inTypePath" : "document/string",
+                "outTypePath" : "documentList/string"
+              }, {
+                "op" : "copy",
+                "from" : "/auditLog/dateTimeStmp",
+                "to" : "/inputDocList/0/dateTimeStmp",
+                "inTypePath" : "document/string",
+                "outTypePath" : "documentList/string"
+              }, {
+                "op" : "copy",
+                "from" : "/auditLog/duration",
+                "to" : "/inputDocList/0/duration",
+                "inTypePath" : "document/string",
+                "outTypePath" : "documentList/string"
+              }, {
+                "op" : "copy",
+                "from" : "/auditLog/error",
+                "to" : "/inputDocList/0/error",
+                "inTypePath" : "document/string",
+                "outTypePath" : "documentList/string"
+              }, {
+                "op" : "copy",
+                "from" : "/auditLog/fqn",
+                "to" : "/inputDocList/0/fqn",
+                "inTypePath" : "document/string",
+                "outTypePath" : "documentList/string"
+              }, {
+                "op" : "copy",
+                "from" : "/auditLog/request",
+                "to" : "/inputDocList/0/request",
+                "inTypePath" : "document/string",
+                "outTypePath" : "documentList/string"
+              }, {
+                "op" : "copy",
+                "from" : "/auditLog/response",
+                "to" : "/inputDocList/0/response",
+                "inTypePath" : "document/string",
+                "outTypePath" : "documentList/string"
+              }, {
+                "op" : "copy",
+                "from" : "/auditLog/nanoInstance",
+                "to" : "/inputDocList/0/nanoInstance",
+                "inTypePath" : "document/string",
+                "outTypePath" : "documentList/string"
+              }, {
+                "op" : "copy",
+                "from" : "/auditLog/hostName",
+                "to" : "/inputDocList/0/hostName",
+                "inTypePath" : "document/string",
+                "outTypePath" : "documentList/string",
+                "direction" : "in"
+              }, {
+                "op" : "copy",
+                "from" : "/auditLog/nodeName",
+                "to" : "/inputDocList/0/nodeName",
+                "inTypePath" : "document/string",
+                "outTypePath" : "documentList/string",
+                "direction" : "in"
+              }, {
+                "op" : "copy",
+                "from" : "/auditLog/remoteAddr",
+                "to" : "/inputDocList/0/remoteAddr",
+                "inTypePath" : "document/string",
+                "outTypePath" : "documentList/string",
+                "direction" : "in"
+              }, {
+                "op" : "copy",
+                "from" : "/auditLog/userId",
+                "to" : "/inputDocList/0/userId",
+                "inTypePath" : "document/string",
+                "outTypePath" : "documentList/string",
+                "direction" : "in"
+              }, {
+                "op" : "copy",
+                "from" : "/auditLog/urlPath",
+                "to" : "/inputDocList/0/urlPath",
+                "inTypePath" : "document/string",
+                "outTypePath" : "documentList/string",
+                "direction" : "in"
+              }, {
+                "op" : "copy",
+                "from" : "/auditLog/*trackingJson",
+                "to" : "/substitute/jsonData",
+                "inTypePath" : "document/string",
+                "outTypePath" : "document/string",
+                "direction" : "in"
+              } ],
+              "lines" : [ {
+                "inputPath" : "auditLog/correlationId",
+                "outputPath" : "inputDocList/correlationId",
+                "inpJsTree" : "#launching_arrow_jsTree",
+                "outpJsTree" : "#landing_arrow_jsTree_function",
+                "INPath" : "auditLog/correlationId",
+                "OUTPath" : "inputDocList/#0/correlationId",
+                "op" : "copy",
+                "line" : 0,
+                "dashedLine" : false,
+                "inType" : "string",
+                "outType" : "string",
+                "inTypePath" : "document/string",
+                "outTypePath" : "documentList/string"
+              }, {
+                "inputPath" : "auditLog/sessionId",
+                "outputPath" : "inputDocList/sessionId",
+                "inpJsTree" : "#launching_arrow_jsTree",
+                "outpJsTree" : "#landing_arrow_jsTree_function",
+                "INPath" : "auditLog/sessionId",
+                "OUTPath" : "inputDocList/#0/sessionId",
+                "op" : "copy",
+                "line" : 0,
+                "dashedLine" : false,
+                "inType" : "string",
+                "outType" : "string",
+                "inTypePath" : "document/string",
+                "outTypePath" : "documentList/string"
+              }, {
+                "inputPath" : "auditLog/dateTimeStmp",
+                "outputPath" : "inputDocList/dateTimeStmp",
+                "inpJsTree" : "#launching_arrow_jsTree",
+                "outpJsTree" : "#landing_arrow_jsTree_function",
+                "INPath" : "auditLog/dateTimeStmp",
+                "OUTPath" : "inputDocList/#0/dateTimeStmp",
+                "op" : "copy",
+                "line" : 0,
+                "dashedLine" : false,
+                "inType" : "string",
+                "outType" : "string",
+                "inTypePath" : "document/string",
+                "outTypePath" : "documentList/string"
+              }, {
+                "inputPath" : "auditLog/duration",
+                "outputPath" : "inputDocList/duration",
+                "inpJsTree" : "#launching_arrow_jsTree",
+                "outpJsTree" : "#landing_arrow_jsTree_function",
+                "INPath" : "auditLog/duration",
+                "OUTPath" : "inputDocList/#0/duration",
+                "op" : "copy",
+                "line" : 0,
+                "dashedLine" : false,
+                "inType" : "string",
+                "outType" : "string",
+                "inTypePath" : "document/string",
+                "outTypePath" : "documentList/string"
+              }, {
+                "inputPath" : "auditLog/error",
+                "outputPath" : "inputDocList/error",
+                "inpJsTree" : "#launching_arrow_jsTree",
+                "outpJsTree" : "#landing_arrow_jsTree_function",
+                "INPath" : "auditLog/error",
+                "OUTPath" : "inputDocList/#0/error",
+                "op" : "copy",
+                "line" : 0,
+                "dashedLine" : false,
+                "inType" : "string",
+                "outType" : "string",
+                "inTypePath" : "document/string",
+                "outTypePath" : "documentList/string"
+              }, {
+                "inputPath" : "auditLog/fqn",
+                "outputPath" : "inputDocList/fqn",
+                "inpJsTree" : "#launching_arrow_jsTree",
+                "outpJsTree" : "#landing_arrow_jsTree_function",
+                "INPath" : "auditLog/fqn",
+                "OUTPath" : "inputDocList/#0/fqn",
+                "op" : "copy",
+                "line" : 0,
+                "dashedLine" : false,
+                "inType" : "string",
+                "outType" : "string",
+                "inTypePath" : "document/string",
+                "outTypePath" : "documentList/string"
+              }, {
+                "inputPath" : "auditLog/request",
+                "outputPath" : "inputDocList/request",
+                "inpJsTree" : "#launching_arrow_jsTree",
+                "outpJsTree" : "#landing_arrow_jsTree_function",
+                "INPath" : "auditLog/request",
+                "OUTPath" : "inputDocList/#0/request",
+                "op" : "copy",
+                "line" : 0,
+                "dashedLine" : false,
+                "inType" : "string",
+                "outType" : "string",
+                "inTypePath" : "document/string",
+                "outTypePath" : "documentList/string"
+              }, {
+                "inputPath" : "auditLog/response",
+                "outputPath" : "inputDocList/response",
+                "inpJsTree" : "#launching_arrow_jsTree",
+                "outpJsTree" : "#landing_arrow_jsTree_function",
+                "INPath" : "auditLog/response",
+                "OUTPath" : "inputDocList/#0/response",
+                "op" : "copy",
+                "line" : 0,
+                "dashedLine" : false,
+                "inType" : "string",
+                "outType" : "string",
+                "inTypePath" : "document/string",
+                "outTypePath" : "documentList/string"
+              }, {
+                "inputPath" : "auditLog/nanoInstance",
+                "outputPath" : "inputDocList/nanoInstance",
+                "inpJsTree" : "#launching_arrow_jsTree",
+                "outpJsTree" : "#landing_arrow_jsTree_function",
+                "INPath" : "auditLog/nanoInstance",
+                "OUTPath" : "inputDocList/#0/nanoInstance",
+                "op" : "copy",
+                "line" : 0,
+                "dashedLine" : false,
+                "inType" : "string",
+                "outType" : "string",
+                "inTypePath" : "document/string",
+                "outTypePath" : "documentList/string"
+              }, {
+                "inputPath" : "auditLog/hostName",
+                "outputPath" : "inputDocList/hostName",
+                "inpJsTree" : "#launching_arrow_jsTree",
+                "outpJsTree" : "#landing_arrow_jsTree_function",
+                "INPath" : "auditLog/hostName",
+                "OUTPath" : "inputDocList/#0/hostName",
+                "direction" : "in",
+                "op" : "copy",
+                "line" : 0,
+                "dashedLine" : false,
+                "inType" : "string",
+                "outType" : "string",
+                "inTypePath" : "document/string",
+                "outTypePath" : "documentList/string"
+              }, {
+                "inputPath" : "auditLog/nodeName",
+                "outputPath" : "inputDocList/nodeName",
+                "inpJsTree" : "#launching_arrow_jsTree",
+                "outpJsTree" : "#landing_arrow_jsTree_function",
+                "INPath" : "auditLog/nodeName",
+                "OUTPath" : "inputDocList/#0/nodeName",
+                "direction" : "in",
+                "op" : "copy",
+                "line" : 0,
+                "dashedLine" : false,
+                "inType" : "string",
+                "outType" : "string",
+                "inTypePath" : "document/string",
+                "outTypePath" : "documentList/string"
+              }, {
+                "inputPath" : "auditLog/remoteAddr",
+                "outputPath" : "inputDocList/remoteAddr",
+                "inpJsTree" : "#launching_arrow_jsTree",
+                "outpJsTree" : "#landing_arrow_jsTree_function",
+                "INPath" : "auditLog/remoteAddr",
+                "OUTPath" : "inputDocList/#0/remoteAddr",
+                "direction" : "in",
+                "op" : "copy",
+                "line" : 0,
+                "dashedLine" : false,
+                "inType" : "string",
+                "outType" : "string",
+                "inTypePath" : "document/string",
+                "outTypePath" : "documentList/string"
+              }, {
+                "inputPath" : "auditLog/userId",
+                "outputPath" : "inputDocList/userId",
+                "inpJsTree" : "#launching_arrow_jsTree",
+                "outpJsTree" : "#landing_arrow_jsTree_function",
+                "INPath" : "auditLog/userId",
+                "OUTPath" : "inputDocList/#0/userId",
+                "direction" : "in",
+                "op" : "copy",
+                "line" : 0,
+                "dashedLine" : false,
+                "inType" : "string",
+                "outType" : "string",
+                "inTypePath" : "document/string",
+                "outTypePath" : "documentList/string"
+              }, {
+                "inputPath" : "auditLog/urlPath",
+                "outputPath" : "inputDocList/urlPath",
+                "inpJsTree" : "#launching_arrow_jsTree",
+                "outpJsTree" : "#landing_arrow_jsTree_function",
+                "INPath" : "auditLog/urlPath",
+                "OUTPath" : "inputDocList/#0/urlPath",
+                "direction" : "in",
+                "op" : "copy",
+                "line" : 0,
+                "dashedLine" : false,
+                "inType" : "string",
+                "outType" : "string",
+                "inTypePath" : "document/string",
+                "outTypePath" : "documentList/string"
+              }, {
+                "inputPath" : "auditLog/*trackingJson",
+                "outputPath" : "substitute/jsonData",
+                "inpJsTree" : "#launching_arrow_jsTree",
+                "outpJsTree" : "#landing_arrow_jsTree_function",
+                "INPath" : "auditLog/*trackingJson",
+                "OUTPath" : "substitute/jsonData",
+                "direction" : "in",
+                "op" : "copy",
+                "line" : 0,
+                "dashedLine" : false,
+                "inType" : "string",
+                "outType" : "string",
+                "inTypePath" : "document/string",
+                "outTypePath" : "document/string"
+              } ],
+              "dropList" : [ {
+                "path" : "*trackingData",
+                "typePath" : "document"
+              } ],
+              "createList" : [ ],
+              "serviceType" : "sql",
+              "status" : "enabled",
+              "guid" : "e1fe2a80-0e30-417d-b5e8-59c61850d3a6",
+              "initiateList" : [ ],
+              "fqn" : "packages/middleware/pub/adapter/services/DML/insertAuditLogging"
+            },
+            "children" : [ ],
+            "type" : "invoke"
+          } ],
+          "type" : "group"
+        }, {
+          "id" : "j1_16",
+          "text" : "CASE",
+          "li_attr" : {
+            "id" : "j1_16"
+          },
+          "a_attr" : {
+            "href" : "javascript:void(0)",
+            "id" : "j1_16_anchor"
+          },
+          "state" : {
+            "loaded" : true,
+            "opened" : false,
+            "selected" : false,
+            "disabled" : false
+          },
+          "data" : {
+            "case" : "elastic-search",
+            "guid" : "064fc41b-e146-4e88-996b-65407bbbe6b4"
+          },
+          "children" : [ {
+            "id" : "j1_24",
+            "text" : "Invoke",
+            "li_attr" : {
+              "id" : "j1_24"
+            },
+            "a_attr" : {
+              "href" : "javascript:void(0)",
+              "id" : "j1_24_anchor"
+            },
+            "state" : {
+              "loaded" : true,
+              "opened" : false,
+              "selected" : false,
+              "disabled" : false
+            },
+            "data" : {
+              "transformers" : [ {
+                "op" : "copy",
+                "from" : "/auditLog",
+                "to" : "/data",
+                "inTypePath" : "document",
+                "outTypePath" : "document",
+                "direction" : "in"
+              }, {
+                "op" : "copy",
+                "from" : "/tenant",
+                "to" : "/tenant",
+                "inTypePath" : "string",
+                "outTypePath" : "string",
+                "direction" : "in"
+              } ],
+              "lines" : [ {
+                "inputPath" : "auditLog",
+                "outputPath" : "data",
+                "inpJsTree" : "#launching_arrow_jsTree",
+                "outpJsTree" : "#landing_arrow_jsTree_function",
+                "INPath" : "auditLog",
+                "OUTPath" : "data",
+                "direction" : "in",
+                "op" : "copy",
+                "line" : 0,
+                "dashedLine" : false,
+                "inType" : "document",
+                "outType" : "document",
+                "inTypePath" : "document",
+                "outTypePath" : "document"
+              }, {
+                "inputPath" : "tenant",
+                "outputPath" : "tenant",
+                "inpJsTree" : "#launching_arrow_jsTree",
+                "outpJsTree" : "#landing_arrow_jsTree_function",
+                "INPath" : "tenant",
+                "OUTPath" : "tenant",
+                "direction" : "in",
+                "op" : "copy",
+                "line" : 0,
+                "dashedLine" : false,
+                "inType" : "string",
+                "outType" : "string",
+                "inTypePath" : "string",
+                "outTypePath" : "string"
+              } ],
+              "dropList" : [ ],
+              "createList" : [ ],
+              "serviceType" : "api",
+              "guid" : "a8beb6cf-6dff-4197-885e-a4c118ad1d97",
+              "fqn" : "packages/Wrapper/elasticsearch/PutContent"
+            },
+            "children" : [ ],
+            "type" : "invoke"
+          } ],
+          "type" : "group"
+        } ],
+        "type" : "switch"
+      } ],
+      "type" : "group"
+    } ],
+    "api_info" : {
+      "title" : "",
+      "description" : ""
+    },
+    "lockedByUser" : "admin"
+  },
+  "consumers" : "",
+  "developers" : "developers",
+  "enableServiceDocumentValidation" : false,
+  "created_on" : "1764091918450",
+  "modified_on" : 1764091918450
+}

@@ -1,0 +1,526 @@
+{
+  "latest" : {
+    "createdTS" : "",
+    "input" : [ {
+      "id" : "j2_2",
+      "text" : "numberOfLines",
+      "li_attr" : {
+        "id" : "j2_2"
+      },
+      "a_attr" : {
+        "href" : "#",
+        "id" : "j2_2_anchor"
+      },
+      "state" : {
+        "loaded" : true,
+        "opened" : false,
+        "selected" : false,
+        "disabled" : false
+      },
+      "data" : {
+        "isRequiredField" : true,
+        "fieldDescription" : "VGhpcyBwcm9wZXJ0eSBpcyByZXF1aXJlZCB0byBhdm9pZCBzZW5kaW5nIGVudGlyZSBsb2cgaW4gcmV0dXJuLiBMb2dzIGNvdWxkIGNyb3NzIG92ZXIgR0JzIHNvbWUgdGltZS4="
+      },
+      "children" : [ ],
+      "type" : "integer"
+    } ],
+    "output" : [ {
+      "id" : "j3_1",
+      "text" : "logs",
+      "li_attr" : {
+        "id" : "j3_1"
+      },
+      "a_attr" : {
+        "href" : "#",
+        "id" : "j3_1_anchor"
+      },
+      "state" : {
+        "loaded" : true,
+        "opened" : false,
+        "selected" : false,
+        "disabled" : false
+      },
+      "data" : { },
+      "children" : [ ],
+      "type" : "stringList"
+    }, {
+      "id" : "j3_2",
+      "text" : "filePath",
+      "li_attr" : {
+        "id" : "j3_2"
+      },
+      "a_attr" : {
+        "href" : "#",
+        "id" : "j3_2_anchor"
+      },
+      "state" : {
+        "loaded" : true,
+        "opened" : false,
+        "selected" : false,
+        "disabled" : false
+      },
+      "data" : { },
+      "children" : [ ],
+      "type" : "string"
+    } ],
+    "api_info" : {
+      "title" : "",
+      "description" : ""
+    },
+    "lockedByUser" : "admin",
+    "api" : [ {
+      "id" : "j1_12",
+      "text" : "Invoke",
+      "li_attr" : {
+        "id" : "j1_12"
+      },
+      "a_attr" : {
+        "href" : "#",
+        "id" : "j1_12_anchor"
+      },
+      "state" : {
+        "loaded" : true,
+        "opened" : false,
+        "selected" : true,
+        "disabled" : false
+      },
+      "data" : {
+        "guid" : "a5c8153f-7345-49d1-90d9-ccdecf182923",
+        "transformers" : [ {
+          "op" : "copy",
+          "from" : "/operation",
+          "to" : "/key",
+          "inTypePath" : "string",
+          "outTypePath" : "string",
+          "direction" : "in"
+        }, {
+          "op" : "copy",
+          "from" : "/numberOfLines",
+          "to" : "/value",
+          "inTypePath" : "integer",
+          "outTypePath" : "integer",
+          "direction" : "in"
+        } ],
+        "lines" : [ {
+          "inputPath" : "operation",
+          "outputPath" : "key",
+          "inpJsTree" : "#launching_arrow_jsTree",
+          "outpJsTree" : "#landing_arrow_jsTree_function",
+          "INPath" : "operation",
+          "OUTPath" : "key",
+          "direction" : "in",
+          "op" : "copy",
+          "line" : 0,
+          "dashedLine" : false,
+          "inType" : "string",
+          "outType" : "string",
+          "inTypePath" : "string",
+          "outTypePath" : "string"
+        }, {
+          "inputPath" : "numberOfLines",
+          "outputPath" : "value",
+          "inpJsTree" : "#launching_arrow_jsTree",
+          "outpJsTree" : "#landing_arrow_jsTree_function",
+          "INPath" : "numberOfLines",
+          "OUTPath" : "value",
+          "direction" : "in",
+          "op" : "copy",
+          "line" : 0,
+          "dashedLine" : false,
+          "inType" : "integer",
+          "outType" : "integer",
+          "inTypePath" : "integer",
+          "outTypePath" : "integer"
+        } ],
+        "dropList" : [ ],
+        "createList" : [ {
+          "path" : "operation",
+          "value" : "OPERATION",
+          "typePath" : "string"
+        } ],
+        "serviceType" : "service",
+        "comment" : "for numberOfLines",
+        "fqn" : "packages/middleware/pub/service/keyLogger"
+      },
+      "children" : [ ],
+      "type" : "invoke"
+    }, {
+      "id" : "j1_2",
+      "text" : "Transformer",
+      "li_attr" : {
+        "id" : "j1_2"
+      },
+      "a_attr" : {
+        "href" : "javascript:void(0)",
+        "id" : "j1_2_anchor"
+      },
+      "state" : {
+        "loaded" : true,
+        "opened" : false,
+        "selected" : false,
+        "disabled" : false
+      },
+      "data" : {
+        "transformers" : [ ],
+        "lines" : [ ],
+        "dropList" : [ ],
+        "createList" : [ {
+          "path" : "filePath",
+          "value" : "#{*ContextLocalPath}/integration/middleware/tenants/#{*tenant}/logs/default.log",
+          "evaluate" : "EEV",
+          "typePath" : "string"
+        }, {
+          "path" : "lines",
+          "value" : "1",
+          "typePath" : "string"
+        } ],
+        "guid" : "4b0c5ec5-e369-4d2c-84ba-4f6637df07fd"
+      },
+      "children" : [ ],
+      "type" : "transformer"
+    }, {
+      "id" : "j1_3",
+      "text" : "Invoke",
+      "li_attr" : {
+        "id" : "j1_3"
+      },
+      "a_attr" : {
+        "href" : "javascript:void(0)",
+        "id" : "j1_3_anchor"
+      },
+      "state" : {
+        "loaded" : true,
+        "opened" : false,
+        "selected" : false,
+        "disabled" : false
+      },
+      "data" : {
+        "transformers" : [ {
+          "op" : "copy",
+          "from" : "/filePath",
+          "to" : "/filePathWithName",
+          "inTypePath" : "string",
+          "outTypePath" : "string",
+          "direction" : "in"
+        }, {
+          "op" : "copy",
+          "from" : "/bufferedReader",
+          "to" : "/bufferedReader",
+          "inTypePath" : "javaObject",
+          "outTypePath" : "javaObject",
+          "direction" : "out"
+        } ],
+        "lines" : [ {
+          "inputPath" : "filePath",
+          "outputPath" : "filePathWithName",
+          "inpJsTree" : "#launching_arrow_jsTree",
+          "outpJsTree" : "#landing_arrow_jsTree_function",
+          "INPath" : "filePath",
+          "OUTPath" : "filePathWithName",
+          "direction" : "in",
+          "op" : "copy",
+          "line" : 0,
+          "dashedLine" : false,
+          "inType" : "string",
+          "outType" : "string",
+          "inTypePath" : "string",
+          "outTypePath" : "string"
+        }, {
+          "inputPath" : "bufferedReader",
+          "outputPath" : "bufferedReader",
+          "inpJsTree" : "#launching_arrow_jsTree_function",
+          "outpJsTree" : "#landing_arrow_jsTree",
+          "INPath" : "bufferedReader",
+          "OUTPath" : "bufferedReader",
+          "direction" : "out",
+          "op" : "copy",
+          "line" : 0,
+          "dashedLine" : false,
+          "inType" : "javaObject",
+          "outType" : "javaObject",
+          "inTypePath" : "javaObject",
+          "outTypePath" : "javaObject"
+        } ],
+        "dropList" : [ ],
+        "createList" : [ ],
+        "serviceType" : "service",
+        "guid" : "b03f6d06-7b01-4106-b979-c929030345db",
+        "fqn" : "packages/middleware/pub/file/getBufferedReader"
+      },
+      "children" : [ ],
+      "type" : "invoke"
+    }, {
+      "id" : "j1_4",
+      "text" : "Redo",
+      "li_attr" : {
+        "id" : "j1_4"
+      },
+      "a_attr" : {
+        "href" : "javascript:void(0)",
+        "id" : "j1_4_anchor"
+      },
+      "state" : {
+        "loaded" : true,
+        "opened" : true,
+        "selected" : false,
+        "disabled" : false
+      },
+      "data" : {
+        "repeatOn" : "success",
+        "repeat" : "-1",
+        "status" : "enabled",
+        "guid" : "b0f31e5a-529b-49cb-a77f-20ee7e893639"
+      },
+      "children" : [ {
+        "id" : "j1_5",
+        "text" : "SWITCH",
+        "li_attr" : {
+          "id" : "j1_5"
+        },
+        "a_attr" : {
+          "href" : "javascript:void(0)",
+          "id" : "j1_5_anchor"
+        },
+        "state" : {
+          "loaded" : true,
+          "opened" : true,
+          "selected" : false,
+          "disabled" : false
+        },
+        "data" : {
+          "switch" : "lines",
+          "status" : "enabled",
+          "guid" : "18c77338-f7ef-41a6-af0c-54395e26312c"
+        },
+        "children" : [ {
+          "id" : "j1_6",
+          "text" : "CASE",
+          "li_attr" : {
+            "id" : "j1_6"
+          },
+          "a_attr" : {
+            "href" : "javascript:void(0)",
+            "id" : "j1_6_anchor"
+          },
+          "state" : {
+            "loaded" : true,
+            "opened" : false,
+            "selected" : false,
+            "disabled" : false
+          },
+          "data" : {
+            "case" : "#null",
+            "guid" : "e0e53466-3f3a-450f-8709-b22adb04c94e"
+          },
+          "children" : [ {
+            "id" : "j1_7",
+            "text" : "Invoke",
+            "li_attr" : {
+              "id" : "j1_7"
+            },
+            "a_attr" : {
+              "href" : "javascript:void(0)",
+              "id" : "j1_7_anchor"
+            },
+            "state" : {
+              "loaded" : true,
+              "opened" : false,
+              "selected" : false,
+              "disabled" : false
+            },
+            "data" : {
+              "transformers" : [ ],
+              "lines" : [ ],
+              "dropList" : [ ],
+              "createList" : [ ],
+              "serviceType" : "service",
+              "guid" : "4eac7c36-8b37-4806-b3bf-3608d5038411",
+              "fqn" : "packages/middleware/pub/service/exitRepeat"
+            },
+            "children" : [ ],
+            "type" : "invoke"
+          } ],
+          "type" : "group"
+        }, {
+          "id" : "j1_8",
+          "text" : "CASE",
+          "li_attr" : {
+            "id" : "j1_8"
+          },
+          "a_attr" : {
+            "href" : "javascript:void(0)",
+            "id" : "j1_8_anchor"
+          },
+          "state" : {
+            "loaded" : true,
+            "opened" : true,
+            "selected" : false,
+            "disabled" : false
+          },
+          "data" : {
+            "case" : "#default",
+            "guid" : "ce58752d-2c47-4b35-a40d-7797232cffa9"
+          },
+          "children" : [ {
+            "id" : "j1_9",
+            "text" : "Transformer",
+            "li_attr" : {
+              "id" : "j1_9"
+            },
+            "a_attr" : {
+              "href" : "javascript:void(0)",
+              "id" : "j1_9_anchor"
+            },
+            "state" : {
+              "loaded" : true,
+              "opened" : false,
+              "selected" : false,
+              "disabled" : false
+            },
+            "data" : {
+              "transformers" : [ ],
+              "lines" : [ ],
+              "dropList" : [ {
+                "path" : "lines",
+                "typePath" : "string"
+              } ],
+              "createList" : [ ],
+              "guid" : "621601fd-12a1-4fa7-afdb-e9886c64b246"
+            },
+            "children" : [ ],
+            "type" : "transformer"
+          }, {
+            "id" : "j1_1",
+            "text" : "Invoke",
+            "li_attr" : {
+              "id" : "j1_1"
+            },
+            "a_attr" : {
+              "href" : "javascript:void(0)",
+              "id" : "j1_1_anchor"
+            },
+            "state" : {
+              "loaded" : true,
+              "opened" : false,
+              "selected" : false,
+              "disabled" : false
+            },
+            "data" : {
+              "transformers" : [ {
+                "op" : "copy",
+                "from" : "/numberOfLines",
+                "to" : "/number",
+                "inTypePath" : "integer",
+                "outTypePath" : "integer",
+                "direction" : "in"
+              }, {
+                "op" : "copy",
+                "from" : "/lines",
+                "to" : "/lines",
+                "inTypePath" : "stringList",
+                "outTypePath" : "stringList",
+                "direction" : "out"
+              } ],
+              "lines" : [ {
+                "inputPath" : "numberOfLines",
+                "outputPath" : "number",
+                "inpJsTree" : "#launching_arrow_jsTree",
+                "outpJsTree" : "#landing_arrow_jsTree_function",
+                "INPath" : "numberOfLines",
+                "OUTPath" : "number",
+                "direction" : "in",
+                "op" : "copy",
+                "line" : 0,
+                "dashedLine" : false,
+                "inType" : "integer",
+                "outType" : "integer",
+                "inTypePath" : "integer",
+                "outTypePath" : "integer"
+              }, {
+                "inputPath" : "lines",
+                "outputPath" : "lines",
+                "inpJsTree" : "#launching_arrow_jsTree_function",
+                "outpJsTree" : "#landing_arrow_jsTree",
+                "INPath" : "lines",
+                "OUTPath" : "lines",
+                "direction" : "out",
+                "op" : "copy",
+                "line" : 0,
+                "dashedLine" : false,
+                "inType" : "stringList",
+                "outType" : "stringList",
+                "inTypePath" : "stringList",
+                "outTypePath" : "stringList"
+              } ],
+              "dropList" : [ {
+                "path" : "filePathWithName",
+                "typePath" : "string"
+              }, {
+                "path" : "number",
+                "typePath" : "integer"
+              } ],
+              "createList" : [ ],
+              "serviceType" : "service",
+              "guid" : "1126045c-fc1a-4e7c-931f-ec6292787b83",
+              "fqn" : "packages/middleware/pub/file/readLines"
+            },
+            "children" : [ ],
+            "type" : "invoke"
+          } ],
+          "type" : "group"
+        } ],
+        "type" : "switch"
+      }, {
+        "id" : "j1_10",
+        "text" : "Transformer",
+        "li_attr" : {
+          "id" : "j1_10"
+        },
+        "a_attr" : {
+          "href" : "javascript:void(0)",
+          "id" : "j1_10_anchor"
+        },
+        "state" : {
+          "loaded" : true,
+          "opened" : false,
+          "selected" : false,
+          "disabled" : false
+        },
+        "data" : {
+          "transformers" : [ {
+            "op" : "copy",
+            "from" : "/lines",
+            "to" : "/logs",
+            "inTypePath" : "stringList",
+            "outTypePath" : "stringList"
+          } ],
+          "lines" : [ {
+            "inputPath" : "lines",
+            "outputPath" : "logs",
+            "inpJsTree" : "#launching_arrow_jsTree",
+            "outpJsTree" : "#landing_arrow_jsTree",
+            "INPath" : "lines",
+            "OUTPath" : "logs",
+            "op" : "copy",
+            "line" : 0,
+            "dashedLine" : false,
+            "inType" : "stringList",
+            "outType" : "stringList",
+            "inTypePath" : "stringList",
+            "outTypePath" : "stringList"
+          } ],
+          "dropList" : [ ],
+          "createList" : [ ],
+          "status" : "enabled",
+          "guid" : "3753a5aa-46d6-492c-be7e-6f97f192caf8"
+        },
+        "children" : [ ],
+        "type" : "transformer"
+      } ],
+      "type" : "redo"
+    } ]
+  },
+  "consumers" : "",
+  "developers" : "rnd",
+  "enableServiceDocumentValidation" : true
+}

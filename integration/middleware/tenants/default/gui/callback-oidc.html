@@ -1,0 +1,122 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>OIDC Callback</title>
+</head>
+<body>
+<script>
+    (async function () {
+        var params = new URLSearchParams(window.location.search || "");
+        var hashParams = new URLSearchParams((window.location.hash || "").replace(/^#/, ""));
+        var state = params.get("state") || hashParams.get("state") || "";
+        var code = params.get("code") || hashParams.get("code") || "";
+        var error = params.get("error") || hashParams.get("error") || "";
+        var errorDescription = params.get("error_description") || hashParams.get("error_description") || "";
+
+        function notifyOpener(payload) {
+            if (window.opener && !window.opener.closed) {
+                window.opener.postMessage(payload, window.location.origin);
+            }
+        }
+
+        if (error) {
+            console.error("OIDC callback error:", errorDescription || error);
+            notifyOpener({
+                type: "mcp-oidc-token",
+                state: state,
+                error: error,
+                error_description: errorDescription
+            });
+            //window.close();
+            return;
+        }
+
+        if (!state || !code) {
+            console.error("OIDC callback missing state or code.");
+            notifyOpener({
+                type: "mcp-oidc-token",
+                state: state,
+                error: "invalid_callback",
+                error_description: "Missing authorization state or code."
+            });
+            //window.close();
+            return;
+        }
+
+        var contextRaw = localStorage.getItem("mcp_oidc_ctx_" + state);
+        var codeVerifierString = localStorage.getItem("syncloop.mcp.oauth.pkce." + state);
+        if (!contextRaw) {
+            console.error("Missing OIDC context for state:", state);
+            notifyOpener({
+                type: "mcp-oidc-token",
+                state: state,
+                error: "missing_context",
+                error_description: "OIDC context not found for this callback."
+            });
+            //window.close();
+            return;
+        }
+
+        var context = JSON.parse(contextRaw);
+        var codeVerifier = JSON.parse(codeVerifierString);
+
+        try {
+            var body = new URLSearchParams();
+            body.set("grant_type", context.grant_type || "authorization_code");
+            body.set("code", code);
+            body.set("redirect_uri", context.redirect_uri || window.location.origin + "/callback-oidc.html");
+            body.set("client_id", context.client_id || "");
+            body.set("client_secret", context.client_secret || "");
+            body.set("code_verifier", codeVerifier.codeVerifier);
+
+            var response = await fetch(context.token_endpoint, {
+                method: "POST",
+                headers: {
+                    "Content-Type": "application/x-www-form-urlencoded;charset=UTF-8"
+                },
+                body: body.toString()
+            });
+
+            var tokenResponse = await response.json();
+
+            if (!response.ok) {
+                throw new Error(tokenResponse.error_description || tokenResponse.error || "Failed to exchange authorization code.");
+            }
+
+            var expiresIn = tokenResponse.expires_in || "";
+            var expiresAt = expiresIn ? Math.floor(Date.now() / 1000) + Number(expiresIn) : "";
+            var tokenJson = {
+                access_token: tokenResponse.access_token || "",
+                refresh_token: tokenResponse.refresh_token || "",
+                token_type: tokenResponse.token_type || "",
+                expires_in: expiresIn,
+                expires_at: expiresAt,
+                scope: tokenResponse.scope || context.scope || ""
+            };
+
+            console.log("OIDC token JSON:", tokenJson);
+
+            localStorage.setItem("latest_oidc_token", JSON.stringify(tokenJson));
+
+            notifyOpener({
+                type: "mcp-oidc-token",
+                state: state,
+                tokens: tokenJson
+            });
+        } catch (exchangeError) {
+            console.error("OIDC token exchange failed:", exchangeError);
+            notifyOpener({
+                type: "mcp-oidc-token",
+                state: state,
+                error: "token_exchange_failed",
+                error_description: exchangeError.message || "Failed to exchange authorization code."
+            });
+        } finally {
+            localStorage.removeItem("mcp_oidc_ctx_" + state);
+            //window.close();
+        }
+    })();
+</script>
+</body>
+</html>

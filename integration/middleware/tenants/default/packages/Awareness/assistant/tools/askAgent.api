@@ -1,0 +1,601 @@
+{
+  "latest" : {
+    "createdTS" : "",
+    "input" : [ {
+      "id" : "j2_1",
+      "text" : "requesterAID",
+      "li_attr" : {
+        "id" : "j2_1"
+      },
+      "a_attr" : {
+        "href" : "#",
+        "id" : "j2_1_anchor"
+      },
+      "state" : {
+        "loaded" : true,
+        "opened" : false,
+        "selected" : false,
+        "disabled" : false,
+        "hidden" : false
+      },
+      "data" : {
+        "guid" : "12091e2d-f680-41d2-993b-fde4237ffb78",
+        "columnType" : "-1"
+      },
+      "children" : [ ],
+      "type" : "string"
+    }, {
+      "id" : "j2_2",
+      "text" : "servingAID",
+      "li_attr" : {
+        "id" : "j2_2"
+      },
+      "a_attr" : {
+        "href" : "#",
+        "id" : "j2_2_anchor"
+      },
+      "state" : {
+        "loaded" : true,
+        "opened" : false,
+        "selected" : false,
+        "disabled" : false,
+        "hidden" : false
+      },
+      "data" : {
+        "guid" : "204969f9-6ddc-43a8-b795-481941658cb8",
+        "columnType" : "-1"
+      },
+      "children" : [ ],
+      "type" : "string"
+    }, {
+      "id" : "j2_3",
+      "text" : "disableMemory",
+      "li_attr" : {
+        "id" : "j2_3"
+      },
+      "a_attr" : {
+        "href" : "#",
+        "id" : "j2_3_anchor"
+      },
+      "state" : {
+        "loaded" : true,
+        "opened" : false,
+        "selected" : false,
+        "disabled" : false,
+        "hidden" : false
+      },
+      "data" : {
+        "assignList" : [ {
+          "path" : "disableMemory",
+          "value" : "true",
+          "typePath" : "boolean"
+        } ]
+      },
+      "children" : [ ],
+      "type" : "boolean"
+    }, {
+      "id" : "j2_4",
+      "text" : "disableRAG",
+      "li_attr" : {
+        "id" : "j2_4"
+      },
+      "a_attr" : {
+        "href" : "#",
+        "id" : "j2_4_anchor"
+      },
+      "state" : {
+        "loaded" : true,
+        "opened" : false,
+        "selected" : false,
+        "disabled" : false,
+        "hidden" : false
+      },
+      "data" : {
+        "assignList" : [ {
+          "path" : "disableRAG",
+          "value" : "false",
+          "typePath" : "boolean"
+        } ]
+      },
+      "children" : [ ],
+      "type" : "boolean"
+    }, {
+      "id" : "j2_5",
+      "text" : "disableTools",
+      "li_attr" : {
+        "id" : "j2_5"
+      },
+      "a_attr" : {
+        "href" : "#",
+        "id" : "j2_5_anchor"
+      },
+      "state" : {
+        "loaded" : true,
+        "opened" : false,
+        "selected" : false,
+        "disabled" : false,
+        "hidden" : false
+      },
+      "data" : {
+        "assignList" : [ {
+          "path" : "disableTools",
+          "value" : "false",
+          "typePath" : "boolean"
+        } ]
+      },
+      "children" : [ ],
+      "type" : "boolean"
+    }, {
+      "id" : "j2_7",
+      "text" : "prompt",
+      "li_attr" : {
+        "id" : "j2_7"
+      },
+      "a_attr" : {
+        "href" : "#",
+        "id" : "j2_7_anchor"
+      },
+      "state" : {
+        "loaded" : true,
+        "opened" : false,
+        "selected" : false,
+        "disabled" : false,
+        "hidden" : false
+      },
+      "data" : {
+        "guid" : "3d7b935c-2587-4abb-815b-b96f259e2a45",
+        "columnType" : "-1"
+      },
+      "children" : [ ],
+      "type" : "string"
+    }, {
+      "id" : "j2_8",
+      "text" : "name",
+      "li_attr" : {
+        "id" : "j2_8"
+      },
+      "a_attr" : {
+        "href" : "#",
+        "id" : "j2_8_anchor"
+      },
+      "state" : {
+        "loaded" : true,
+        "opened" : false,
+        "selected" : false,
+        "disabled" : false,
+        "hidden" : false
+      },
+      "data" : {
+        "assignList" : [ {
+          "path" : "name",
+          "value" : "default",
+          "typePath" : "string"
+        } ]
+      },
+      "children" : [ ],
+      "type" : "string"
+    }, {
+      "id" : "j2_9",
+      "text" : "agentTeamID",
+      "li_attr" : {
+        "id" : "j2_9"
+      },
+      "a_attr" : {
+        "href" : "#",
+        "id" : "j2_9_anchor"
+      },
+      "state" : {
+        "loaded" : true,
+        "opened" : false,
+        "selected" : false,
+        "disabled" : false,
+        "hidden" : false
+      },
+      "data" : { },
+      "children" : [ ],
+      "type" : "string"
+    } ],
+    "output" : [ {
+      "id" : "j3_1",
+      "text" : "resp",
+      "li_attr" : {
+        "id" : "j3_1"
+      },
+      "a_attr" : {
+        "href" : "#",
+        "id" : "j3_1_anchor"
+      },
+      "state" : {
+        "loaded" : true,
+        "opened" : false,
+        "selected" : false,
+        "disabled" : false,
+        "hidden" : false
+      },
+      "data" : { },
+      "children" : [ ],
+      "type" : "string"
+    }, {
+      "id" : "j3_2",
+      "text" : "error",
+      "li_attr" : {
+        "id" : "j3_2"
+      },
+      "a_attr" : {
+        "href" : "#",
+        "id" : "j3_2_anchor"
+      },
+      "state" : {
+        "loaded" : true,
+        "opened" : false,
+        "selected" : false,
+        "disabled" : false,
+        "hidden" : false
+      },
+      "data" : { },
+      "children" : [ ],
+      "type" : "string"
+    } ],
+    "api" : [ {
+      "id" : "j1_2",
+      "text" : "TCF-Block",
+      "li_attr" : {
+        "id" : "j1_2"
+      },
+      "a_attr" : {
+        "href" : "javascript:void(0)",
+        "id" : "j1_2_anchor"
+      },
+      "state" : {
+        "loaded" : true,
+        "opened" : true,
+        "selected" : false,
+        "disabled" : false,
+        "hidden" : false
+      },
+      "data" : {
+        "guid" : "8c8b3280-7aea-4191-8f4e-fa4e012c8aba",
+        "columnType" : "-1",
+        "status" : "enabled"
+      },
+      "children" : [ {
+        "id" : "j1_3",
+        "text" : "TRY",
+        "li_attr" : {
+          "id" : "j1_3"
+        },
+        "a_attr" : {
+          "href" : "#",
+          "id" : "j1_3_anchor"
+        },
+        "state" : {
+          "loaded" : true,
+          "opened" : true,
+          "selected" : false,
+          "disabled" : false
+        },
+        "data" : {
+          "guid" : "594e48cb-b326-4800-ac3b-0737d764efd9",
+          "columnType" : "-1"
+        },
+        "children" : [ {
+          "id" : "j1_1",
+          "text" : "Invoke",
+          "li_attr" : {
+            "id" : "j1_1"
+          },
+          "a_attr" : {
+            "href" : "#",
+            "id" : "j1_1_anchor"
+          },
+          "state" : {
+            "loaded" : true,
+            "opened" : false,
+            "selected" : true,
+            "disabled" : false
+          },
+          "data" : {
+            "guid" : "e512e80f-05a4-47ec-964c-9bc8cbe34eee",
+            "columnType" : "-1",
+            "transformers" : [ {
+              "op" : "copy",
+              "from" : "/servingAID",
+              "to" : "/*payload/agentID",
+              "inTypePath" : "string",
+              "outTypePath" : "document/string",
+              "direction" : "in"
+            }, {
+              "op" : "copy",
+              "from" : "/disableMemory",
+              "to" : "/*payload/disableMemory",
+              "inTypePath" : "boolean",
+              "outTypePath" : "document/boolean",
+              "direction" : "in"
+            }, {
+              "op" : "copy",
+              "from" : "/disableRAG",
+              "to" : "/*payload/disableRAG",
+              "inTypePath" : "boolean",
+              "outTypePath" : "document/boolean",
+              "direction" : "in"
+            }, {
+              "op" : "copy",
+              "from" : "/disableTools",
+              "to" : "/*payload/disableTools",
+              "inTypePath" : "boolean",
+              "outTypePath" : "document/boolean",
+              "direction" : "in"
+            }, {
+              "op" : "copy",
+              "from" : "/prompt",
+              "to" : "/*payload/prompt",
+              "inTypePath" : "string",
+              "outTypePath" : "document/string",
+              "direction" : "in"
+            }, {
+              "op" : "copy",
+              "from" : "/resp",
+              "to" : "/resp",
+              "inTypePath" : "string",
+              "outTypePath" : "string",
+              "direction" : "out"
+            }, {
+              "op" : "copy",
+              "from" : "/requesterAID",
+              "to" : "/*payload/chatID",
+              "inTypePath" : "string",
+              "outTypePath" : "document/string",
+              "direction" : "in"
+            }, {
+              "op" : "copy",
+              "from" : "/name",
+              "to" : "/*payload/name",
+              "inTypePath" : "string",
+              "outTypePath" : "document/string",
+              "direction" : "in"
+            } ],
+            "lines" : [ {
+              "inputPath" : "servingAID",
+              "outputPath" : "*payload/agentID",
+              "inpJsTree" : "#launching_arrow_jsTree",
+              "outpJsTree" : "#landing_arrow_jsTree_function",
+              "INPath" : "servingAID",
+              "OUTPath" : "*payload/agentID",
+              "direction" : "in",
+              "op" : "copy",
+              "line" : 0,
+              "dashedLine" : false,
+              "inType" : "string",
+              "outType" : "string",
+              "inTypePath" : "string",
+              "outTypePath" : "document/string"
+            }, {
+              "inputPath" : "disableMemory",
+              "outputPath" : "*payload/disableMemory",
+              "inpJsTree" : "#launching_arrow_jsTree",
+              "outpJsTree" : "#landing_arrow_jsTree_function",
+              "INPath" : "disableMemory",
+              "OUTPath" : "*payload/disableMemory",
+              "direction" : "in",
+              "op" : "copy",
+              "line" : 0,
+              "dashedLine" : false,
+              "inType" : "boolean",
+              "outType" : "boolean",
+              "inTypePath" : "boolean",
+              "outTypePath" : "document/boolean"
+            }, {
+              "inputPath" : "disableRAG",
+              "outputPath" : "*payload/disableRAG",
+              "inpJsTree" : "#launching_arrow_jsTree",
+              "outpJsTree" : "#landing_arrow_jsTree_function",
+              "INPath" : "disableRAG",
+              "OUTPath" : "*payload/disableRAG",
+              "direction" : "in",
+              "op" : "copy",
+              "line" : 0,
+              "dashedLine" : false,
+              "inType" : "boolean",
+              "outType" : "boolean",
+              "inTypePath" : "boolean",
+              "outTypePath" : "document/boolean"
+            }, {
+              "inputPath" : "disableTools",
+              "outputPath" : "*payload/disableTools",
+              "inpJsTree" : "#launching_arrow_jsTree",
+              "outpJsTree" : "#landing_arrow_jsTree_function",
+              "INPath" : "disableTools",
+              "OUTPath" : "*payload/disableTools",
+              "direction" : "in",
+              "op" : "copy",
+              "line" : 0,
+              "dashedLine" : false,
+              "inType" : "boolean",
+              "outType" : "boolean",
+              "inTypePath" : "boolean",
+              "outTypePath" : "document/boolean"
+            }, {
+              "inputPath" : "prompt",
+              "outputPath" : "*payload/prompt",
+              "inpJsTree" : "#launching_arrow_jsTree",
+              "outpJsTree" : "#landing_arrow_jsTree_function",
+              "INPath" : "prompt",
+              "OUTPath" : "*payload/prompt",
+              "direction" : "in",
+              "op" : "copy",
+              "line" : 0,
+              "dashedLine" : false,
+              "inType" : "string",
+              "outType" : "string",
+              "inTypePath" : "string",
+              "outTypePath" : "document/string"
+            }, {
+              "inputPath" : "resp",
+              "outputPath" : "resp",
+              "inpJsTree" : "#launching_arrow_jsTree_function",
+              "outpJsTree" : "#landing_arrow_jsTree",
+              "INPath" : "resp",
+              "OUTPath" : "resp",
+              "direction" : "out",
+              "op" : "copy",
+              "line" : 0,
+              "dashedLine" : false,
+              "inType" : "string",
+              "outType" : "string",
+              "inTypePath" : "string",
+              "outTypePath" : "string"
+            }, {
+              "inputPath" : "requesterAID",
+              "outputPath" : "*payload/chatID",
+              "inpJsTree" : "#launching_arrow_jsTree",
+              "outpJsTree" : "#landing_arrow_jsTree_function",
+              "INPath" : "requesterAID",
+              "OUTPath" : "*payload/chatID",
+              "direction" : "in",
+              "op" : "copy",
+              "line" : 0,
+              "dashedLine" : false,
+              "inType" : "string",
+              "outType" : "string",
+              "inTypePath" : "string",
+              "outTypePath" : "document/string"
+            }, {
+              "inputPath" : "name",
+              "outputPath" : "*payload/name",
+              "inpJsTree" : "#launching_arrow_jsTree",
+              "outpJsTree" : "#landing_arrow_jsTree_function",
+              "INPath" : "name",
+              "OUTPath" : "*payload/name",
+              "direction" : "in",
+              "op" : "copy",
+              "line" : 0,
+              "dashedLine" : false,
+              "inType" : "string",
+              "outType" : "string",
+              "inTypePath" : "string",
+              "outTypePath" : "document/string"
+            } ],
+            "dropList" : [ ],
+            "createList" : [ ],
+            "initiateList" : [ ],
+            "fqn" : "packages/Awareness/assistant/api/chat",
+            "serviceType" : "api"
+          },
+          "children" : [ ],
+          "type" : "invoke"
+        } ],
+        "type" : "group"
+      }, {
+        "id" : "j1_4",
+        "text" : "CATCH",
+        "li_attr" : {
+          "id" : "j1_4"
+        },
+        "a_attr" : {
+          "href" : "#",
+          "id" : "j1_4_anchor"
+        },
+        "state" : {
+          "loaded" : true,
+          "opened" : true,
+          "selected" : false,
+          "disabled" : false
+        },
+        "data" : {
+          "guid" : "2f465bb6-625a-4f3a-8923-89073fadf7c4",
+          "columnType" : "-1"
+        },
+        "children" : [ {
+          "id" : "j1_7",
+          "text" : "Invoke",
+          "li_attr" : {
+            "id" : "j1_7"
+          },
+          "a_attr" : {
+            "href" : "#",
+            "id" : "j1_7_anchor"
+          },
+          "state" : {
+            "loaded" : true,
+            "opened" : false,
+            "selected" : false,
+            "disabled" : false
+          },
+          "data" : {
+            "guid" : "ebc6298e-ce69-4db4-83c8-4d8c46b0cb99",
+            "columnType" : "-1",
+            "transformers" : [ {
+              "op" : "copy",
+              "from" : "/lastErrorDump/message",
+              "to" : "/error",
+              "inTypePath" : "document/string",
+              "outTypePath" : "string",
+              "direction" : "out"
+            } ],
+            "lines" : [ {
+              "inputPath" : "lastErrorDump/message",
+              "outputPath" : "error",
+              "inpJsTree" : "#launching_arrow_jsTree_function",
+              "outpJsTree" : "#landing_arrow_jsTree",
+              "INPath" : "lastErrorDump/message",
+              "OUTPath" : "error",
+              "direction" : "out",
+              "op" : "copy",
+              "line" : 0,
+              "dashedLine" : false,
+              "inType" : "string",
+              "outType" : "string",
+              "inTypePath" : "document/string",
+              "outTypePath" : "string"
+            } ],
+            "dropList" : [ ],
+            "createList" : [ ],
+            "initiateList" : [ {
+              "path" : "error",
+              "id" : "9ff64a2b-f393-43ff-b559-83f0d849a623",
+              "typePath" : "string"
+            } ],
+            "fqn" : "packages/middleware/pub/service/utils/getLastErrorDump",
+            "serviceType" : "service"
+          },
+          "children" : [ ],
+          "type" : "invoke"
+        } ],
+        "type" : "group"
+      }, {
+        "id" : "j1_5",
+        "text" : "FINALLY",
+        "li_attr" : {
+          "id" : "j1_5"
+        },
+        "a_attr" : {
+          "href" : "#",
+          "id" : "j1_5_anchor"
+        },
+        "state" : {
+          "loaded" : true,
+          "opened" : false,
+          "selected" : false,
+          "disabled" : false
+        },
+        "data" : {
+          "guid" : "a524ea95-7a62-47ba-81b3-af95a194a3f3",
+          "columnType" : "-1"
+        },
+        "children" : [ ],
+        "type" : "group"
+      } ],
+      "type" : "try-catch"
+    } ],
+    "api_info" : {
+      "title" : "",
+      "description" : "Allow AI agents to talk to each other."
+    },
+    "lockedByUser" : "admin"
+  },
+  "consumers" : "",
+  "developers" : "developers",
+  "enableServiceDocumentValidation" : false,
+  "created_on" : "1750045587363",
+  "modified_on" : 1750045587363
+}

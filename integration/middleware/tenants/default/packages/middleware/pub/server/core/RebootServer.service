@@ -1,0 +1,12 @@
+{
+  "input" : [ ],
+  "output" : [ ],
+  "package" : "cGFja2FnZSBwYWNrYWdlcy5taWRkbGV3YXJlLnB1Yi5zZXJ2ZXIuY29yZTs=",
+  "imports" : "aW1wb3J0IGNvbS5la2EubWlkZGxld2FyZS5zZXJ2ZXIuQXBwbGljYXRpb25TaHV0ZG93bkhvb2s7CmltcG9ydCBjb20uZWthLm1pZGRsZXdhcmUuc2VydmljZS5EYXRhUGlwZWxpbmU7CmltcG9ydCBjb20uZWthLm1pZGRsZXdhcmUudGVtcGxhdGUuU25pcHBldEV4Y2VwdGlvbjsK",
+  "main" : "CQl0cnkgewogICAgICAgICAgCWRhdGFQaXBlbGluZS5hcHBMb2coIk9QRVJBVElPTiIsICJSZWJvb3RTZXJ2ZXIiKTsKICAgICAgICAgICAgQXBwbGljYXRpb25TaHV0ZG93bkhvb2sucmVzdGFydFNlcnZlcihkYXRhUGlwZWxpbmUpOwogICAgICAgICAgCWRhdGFQaXBlbGluZS5hcHBMb2coIlNFUlZFUl9TVEFUVVMiLCAiU2VydmVyIHJlc3RhcnRlZCBzdWNjZXNzZnVsbHkiKTsKICAgICAgICB9IGNhdGNoIChFeGNlcHRpb24gZSkgewogICAgICAgICAgICBkYXRhUGlwZWxpbmUuY2xlYXIoKTsKICAgICAgICAgICAgZGF0YVBpcGVsaW5lLnB1dCgiZXJyb3IiLCBlLmdldE1lc3NhZ2UoKSk7CiAgICAgICAgICAJZGF0YVBpcGVsaW5lLmFwcExvZygiU0VSVklDRV9FUlJPUiIsIGUuZ2V0TWVzc2FnZSgpKTsKICAgICAgICAgICAgdGhyb3cgbmV3IFNuaXBwZXRFeGNlcHRpb24oZGF0YVBpcGVsaW5lLCAiU25pcHBldCBleGNlcHRpb24iLCBlKTsKICAgICAgICB9",
+  "staticWorkspace" : "",
+  "version" : "v1",
+  "consumers" : "",
+  "developers" : "developers",
+  "lockedByUser" : "admin"
+}

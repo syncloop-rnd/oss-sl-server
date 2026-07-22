@@ -1,0 +1,95 @@
+{
+  "input" : [ {
+    "id" : "j1_1",
+    "text" : "inputStream",
+    "li_attr" : {
+      "id" : "j1_1"
+    },
+    "a_attr" : {
+      "href" : "#",
+      "id" : "j1_1_anchor"
+    },
+    "state" : {
+      "loaded" : true,
+      "opened" : false,
+      "selected" : false,
+      "disabled" : false,
+      "hidden" : false
+    },
+    "data" : { },
+    "children" : [ ],
+    "type" : "javaObject"
+  }, {
+    "id" : "j1_2",
+    "text" : "diskPath",
+    "li_attr" : {
+      "id" : "j1_2"
+    },
+    "a_attr" : {
+      "href" : "#",
+      "id" : "j1_2_anchor"
+    },
+    "state" : {
+      "loaded" : true,
+      "opened" : false,
+      "selected" : false,
+      "disabled" : false,
+      "hidden" : false
+    },
+    "data" : { },
+    "children" : [ ],
+    "type" : "string"
+  }, {
+    "id" : "j1_3",
+    "text" : "createParentPath",
+    "li_attr" : {
+      "id" : "j1_3"
+    },
+    "a_attr" : {
+      "href" : "#",
+      "id" : "j1_3_anchor"
+    },
+    "state" : {
+      "loaded" : true,
+      "opened" : false,
+      "selected" : false,
+      "disabled" : false,
+      "hidden" : false
+    },
+    "data" : {
+      "guid" : "ea02f1d6-09ec-4d46-a43a-0582728419f3",
+      "columnType" : "-1"
+    },
+    "children" : [ ],
+    "type" : "boolean"
+  } ],
+  "output" : [ {
+    "id" : "j2_1",
+    "text" : "bytesWritten",
+    "li_attr" : {
+      "id" : "j2_1"
+    },
+    "a_attr" : {
+      "href" : "#",
+      "id" : "j2_1_anchor"
+    },
+    "state" : {
+      "loaded" : true,
+      "opened" : false,
+      "selected" : false,
+      "disabled" : false,
+      "hidden" : false
+    },
+    "data" : { },
+    "children" : [ ],
+    "type" : "number"
+  } ],
+  "package" : "cGFja2FnZSBwYWNrYWdlcy5taWRkbGV3YXJlLnB1Yi5pbzs=",
+  "imports" : "aW1wb3J0IGNvbS5la2EubWlkZGxld2FyZS5zZXJ2aWNlLkRhdGFQaXBlbGluZTsKaW1wb3J0IGNvbS5la2EubWlkZGxld2FyZS5zZXJ2aWNlLlNlcnZpY2VVdGlsczsKaW1wb3J0IGNvbS5la2EubWlkZGxld2FyZS50ZW1wbGF0ZS5TbmlwcGV0RXhjZXB0aW9uOwppbXBvcnQgamF2YS5pby5JbnB1dFN0cmVhbTsKaW1wb3J0IGphdmEuaW8uRmlsZTsKaW1wb3J0IGphdmEubmlvLmZpbGUuRmlsZXM7CmltcG9ydCBqYXZhLm5pby5maWxlLlBhdGhzOwppbXBvcnQgamF2YS5uaW8uZmlsZS5TdGFuZGFyZENvcHlPcHRpb247Cg==",
+  "main" : "dHJ5IChJbnB1dFN0cmVhbSBpbnB1dFN0cmVhbSA9IChJbnB1dFN0cmVhbSkgZGF0YVBpcGVsaW5lLmdldCgiaW5wdXRTdHJlYW0iKTspIHsKICBTeXN0ZW0ub3V0LnByaW50bG4oImFzZD09PT09PT09PT09PT09PT09PT4iICsgZGF0YVBpcGVsaW5lLmdldCgiaW5wdXRTdHJlYW0iKSk7CiAgICAgICAgICAgIFN0cmluZyBkaXNrUGF0aCA9IGRhdGFQaXBlbGluZS5nZXRTdHJpbmcoImRpc2tQYXRoIik7CiAgCQkJQm9vbGVhbiBjcmVhdGVQYXRoID0gZGF0YVBpcGVsaW5lLmdldEFzQm9vbGVhbigiY3JlYXRlUGFyZW50UGF0aCIpOwogIAkJCWlmKGNyZWF0ZVBhdGghPW51bGwgJiYgY3JlYXRlUGF0aCl7CiAgICAgICAgICAgIAluZXcgRmlsZShkaXNrUGF0aCkuZ2V0UGFyZW50RmlsZSgpLm1rZGlycygpOwogICAgICAgICAgICB9CiAgICAgICAgICAgIGxvbmcgYnl0ZXNXcml0dGVuID0gRmlsZXMuY29weShpbnB1dFN0cmVhbSwgUGF0aHMuZ2V0KGRpc2tQYXRoKSwgU3RhbmRhcmRDb3B5T3B0aW9uLlJFUExBQ0VfRVhJU1RJTkcpOwogICAgICAgICAgICBkYXRhUGlwZWxpbmUucHV0KCJieXRlc1dyaXR0ZW4iLCBieXRlc1dyaXR0ZW4pOwogICAgICAgIH0gY2F0Y2ggKEV4Y2VwdGlvbiBlKSB7CiAgZS5wcmludFN0YWNrVHJhY2UoKTsKICAgICAgICAgICAgZGF0YVBpcGVsaW5lLmNsZWFyKCk7CiAgICAgICAgICAgIGRhdGFQaXBlbGluZS5wdXQoImVycm9yIixlLmdldE1lc3NhZ2UoKSk7CiAgICAgICAgICAgIHRocm93IG5ldyBTbmlwcGV0RXhjZXB0aW9uKGRhdGFQaXBlbGluZSwiU25pcHBldCBleGNlcHRpb24iLCBuZXcgRXhjZXB0aW9uKGUpKTsKICAgICAgICB9",
+  "staticWorkspace" : "",
+  "version" : "v1",
+  "consumers" : "",
+  "developers" : "developers",
+  "lockedByUser" : "rupeshgupta@syncloop.com"
+}

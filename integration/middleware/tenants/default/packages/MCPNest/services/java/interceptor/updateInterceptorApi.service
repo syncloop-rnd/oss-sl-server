@@ -1,0 +1,212 @@
+{
+  "input" : [ {
+    "id" : "j_request",
+    "text" : "request",
+    "li_attr" : {
+      "id" : "j_request"
+    },
+    "a_attr" : {
+      "href" : "#",
+      "id" : "j_request_anchor"
+    },
+    "state" : {
+      "loaded" : true,
+      "opened" : true,
+      "selected" : false,
+      "disabled" : false,
+      "hidden" : false
+    },
+    "data" : { },
+    "children" : [ {
+      "id" : "j_apiId",
+      "text" : "apiId",
+      "li_attr" : {
+        "id" : "j_apiId"
+      },
+      "a_attr" : {
+        "href" : "#",
+        "id" : "j_apiId_anchor"
+      },
+      "state" : {
+        "loaded" : true,
+        "opened" : false,
+        "selected" : false,
+        "disabled" : false,
+        "hidden" : false
+      },
+      "data" : { },
+      "children" : [ ],
+      "type" : "string"
+    }, {
+      "id" : "j_mcpToolId",
+      "text" : "mcpToolId",
+      "li_attr" : {
+        "id" : "j_mcpToolId"
+      },
+      "a_attr" : {
+        "href" : "#",
+        "id" : "j_mcpToolId_anchor"
+      },
+      "state" : {
+        "loaded" : true,
+        "opened" : false,
+        "selected" : false,
+        "disabled" : false,
+        "hidden" : false
+      },
+      "data" : { },
+      "children" : [ ],
+      "type" : "string"
+    }, {
+      "id" : "j_apiText",
+      "text" : "apiText",
+      "li_attr" : {
+        "id" : "j_apiText"
+      },
+      "a_attr" : {
+        "href" : "#",
+        "id" : "j_apiText_anchor"
+      },
+      "state" : {
+        "loaded" : true,
+        "opened" : false,
+        "selected" : false,
+        "disabled" : false,
+        "hidden" : false
+      },
+      "data" : { },
+      "children" : [ ],
+      "type" : "string"
+    }, {
+      "id" : "j_direction",
+      "text" : "direction",
+      "li_attr" : {
+        "id" : "j_direction"
+      },
+      "a_attr" : {
+        "href" : "#",
+        "id" : "j_direction_anchor"
+      },
+      "state" : {
+        "loaded" : true,
+        "opened" : false,
+        "selected" : false,
+        "disabled" : false,
+        "hidden" : false
+      },
+      "data" : { },
+      "children" : [ ],
+      "type" : "string"
+    } ],
+    "type" : "document"
+  } ],
+  "output" : [ {
+    "id" : "j_status",
+    "text" : "status",
+    "li_attr" : {
+      "id" : "j_status"
+    },
+    "a_attr" : {
+      "href" : "#",
+      "id" : "j_status_anchor"
+    },
+    "state" : {
+      "loaded" : true,
+      "opened" : false,
+      "selected" : false,
+      "disabled" : false,
+      "hidden" : false
+    },
+    "data" : { },
+    "children" : [ ],
+    "type" : "string"
+  }, {
+    "id" : "j_error",
+    "text" : "error",
+    "li_attr" : {
+      "id" : "j_error"
+    },
+    "a_attr" : {
+      "href" : "#",
+      "id" : "j_error_anchor"
+    },
+    "state" : {
+      "loaded" : true,
+      "opened" : false,
+      "selected" : false,
+      "disabled" : false,
+      "hidden" : false
+    },
+    "data" : { },
+    "children" : [ ],
+    "type" : "string"
+  }, {
+    "id" : "j_result",
+    "text" : "result",
+    "li_attr" : {
+      "id" : "j_result"
+    },
+    "a_attr" : {
+      "href" : "#",
+      "id" : "j_result_anchor"
+    },
+    "state" : {
+      "loaded" : true,
+      "opened" : true,
+      "selected" : false,
+      "disabled" : false,
+      "hidden" : false
+    },
+    "data" : { },
+    "children" : [ {
+      "id" : "j_success",
+      "text" : "success",
+      "li_attr" : {
+        "id" : "j_success"
+      },
+      "a_attr" : {
+        "href" : "#",
+        "id" : "j_success_anchor"
+      },
+      "state" : {
+        "loaded" : true,
+        "opened" : false,
+        "selected" : false,
+        "disabled" : false,
+        "hidden" : false
+      },
+      "data" : { },
+      "children" : [ ],
+      "type" : "boolean"
+    }, {
+      "id" : "j_message",
+      "text" : "message",
+      "li_attr" : {
+        "id" : "j_message"
+      },
+      "a_attr" : {
+        "href" : "#",
+        "id" : "j_message_anchor"
+      },
+      "state" : {
+        "loaded" : true,
+        "opened" : false,
+        "selected" : false,
+        "disabled" : false,
+        "hidden" : false
+      },
+      "data" : { },
+      "children" : [ ],
+      "type" : "string"
+    } ],
+    "type" : "document"
+  } ],
+  "package" : "cGFja2FnZSBwYWNrYWdlcy5NQ1BOZXN0LnNlcnZpY2VzLmphdmEuaW50ZXJjZXB0b3I7",
+  "imports" : "aW1wb3J0IG1jcG5lc3QuY29yZS50b29scy5hcGkuTUNQR2F0ZXdheTsKaW1wb3J0IGNvbS5la2EubWlkZGxld2FyZS5zZXJ2aWNlLkRhdGFQaXBlbGluZTsKaW1wb3J0IGNvbS5la2EubWlkZGxld2FyZS50ZW1wbGF0ZS5TbmlwcGV0RXhjZXB0aW9uOwppbXBvcnQgamF2YS51dGlsLkxpbmtlZEhhc2hNYXA7CmltcG9ydCBqYXZhLnV0aWwuTWFwOw==",
+  "main" : "dHJ5IHsKICAgIE1hcDxTdHJpbmcsIE9iamVjdD4gcmVxdWVzdCA9IG5ldyBMaW5rZWRIYXNoTWFwPD4oKTsKICAgIE9iamVjdCB2YWx1ZSA9IGRhdGFQaXBlbGluZS5nZXQoInJlcXVlc3QiKTsKICAgIGlmICh2YWx1ZSBpbnN0YW5jZW9mIE1hcDw/LCA/PiBzb3VyY2UpIHsKICAgICAgICBzb3VyY2UuZm9yRWFjaCgoa2V5LCBpdGVtKSAtPiByZXF1ZXN0LnB1dChTdHJpbmcudmFsdWVPZihrZXkpLCBpdGVtKSk7CiAgICB9CiAgICBkYXRhUGlwZWxpbmUucHV0KCJyZXN1bHQiLCBNQ1BHYXRld2F5LnVwZGF0ZUludGVyY2VwdG9yQXBpKHJlcXVlc3QpKTsKICAgIGRhdGFQaXBlbGluZS5wdXQoInN0YXR1cyIsICJzdWNjZXNzIik7Cn0gY2F0Y2ggKEV4Y2VwdGlvbiBlKSB7CiAgICBkYXRhUGlwZWxpbmUuY2xlYXIoKTsKICAgIGRhdGFQaXBlbGluZS5wdXQoInN0YXR1cyIsICJmYWlsZWQiKTsKICAgIGRhdGFQaXBlbGluZS5wdXQoImVycm9yIiwgZS5nZXRNZXNzYWdlKCkpOwogICAgdGhyb3cgbmV3IFNuaXBwZXRFeGNlcHRpb24oZGF0YVBpcGVsaW5lLCAidXBkYXRlSW50ZXJjZXB0b3JBcGkgZmFpbGVkIiwgZSk7Cn0=",
+  "staticWorkspace" : "",
+  "version" : "v1",
+  "consumers" : "",
+  "developers" : "",
+  "lockedByUser" : "admin"
+}

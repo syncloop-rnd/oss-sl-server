@@ -1,0 +1,4269 @@
+{
+  "latest" : {
+    "createdTS" : "",
+    "input" : [ {
+      "id" : "j2_1",
+      "text" : "*payload",
+      "li_attr" : {
+        "id" : "j2_1"
+      },
+      "a_attr" : {
+        "href" : "#",
+        "id" : "j2_1_anchor"
+      },
+      "state" : {
+        "loaded" : true,
+        "opened" : true,
+        "selected" : false,
+        "disabled" : false
+      },
+      "data" : { },
+      "children" : [ {
+        "id" : "j2_2",
+        "text" : "name",
+        "li_attr" : {
+          "id" : "j2_2"
+        },
+        "a_attr" : {
+          "href" : "#",
+          "id" : "j2_2_anchor"
+        },
+        "state" : {
+          "loaded" : true,
+          "opened" : false,
+          "selected" : false,
+          "disabled" : false
+        },
+        "data" : { },
+        "children" : [ ],
+        "type" : "string"
+      }, {
+        "id" : "j2_3",
+        "text" : "type",
+        "li_attr" : {
+          "id" : "j2_3"
+        },
+        "a_attr" : {
+          "href" : "#",
+          "id" : "j2_3_anchor"
+        },
+        "state" : {
+          "loaded" : true,
+          "opened" : false,
+          "selected" : false,
+          "disabled" : false
+        },
+        "data" : { },
+        "children" : [ ],
+        "type" : "string"
+      }, {
+        "id" : "j2_4",
+        "text" : "credential_key",
+        "li_attr" : {
+          "id" : "j2_4"
+        },
+        "a_attr" : {
+          "href" : "#",
+          "id" : "j2_4_anchor"
+        },
+        "state" : {
+          "loaded" : true,
+          "opened" : false,
+          "selected" : false,
+          "disabled" : false
+        },
+        "data" : { },
+        "children" : [ ],
+        "type" : "string"
+      }, {
+        "id" : "j2_5",
+        "text" : "credential_secret",
+        "li_attr" : {
+          "id" : "j2_5"
+        },
+        "a_attr" : {
+          "href" : "#",
+          "id" : "j2_5_anchor"
+        },
+        "state" : {
+          "loaded" : true,
+          "opened" : false,
+          "selected" : false,
+          "disabled" : false
+        },
+        "data" : { },
+        "children" : [ ],
+        "type" : "string"
+      }, {
+        "id" : "j2_6",
+        "text" : "data_center_region",
+        "li_attr" : {
+          "id" : "j2_6"
+        },
+        "a_attr" : {
+          "href" : "#",
+          "id" : "j2_6_anchor"
+        },
+        "state" : {
+          "loaded" : true,
+          "opened" : false,
+          "selected" : false,
+          "disabled" : false
+        },
+        "data" : { },
+        "children" : [ ],
+        "type" : "string"
+      }, {
+        "id" : "j2_7",
+        "text" : "port_mapping",
+        "li_attr" : {
+          "id" : "j2_7"
+        },
+        "a_attr" : {
+          "href" : "#",
+          "id" : "j2_7_anchor"
+        },
+        "state" : {
+          "loaded" : true,
+          "opened" : false,
+          "selected" : false,
+          "disabled" : false
+        },
+        "data" : { },
+        "children" : [ ],
+        "type" : "string"
+      }, {
+        "id" : "j2_8",
+        "text" : "protocol",
+        "li_attr" : {
+          "id" : "j2_8"
+        },
+        "a_attr" : {
+          "href" : "#",
+          "id" : "j2_8_anchor"
+        },
+        "state" : {
+          "loaded" : true,
+          "opened" : false,
+          "selected" : false,
+          "disabled" : false
+        },
+        "data" : { },
+        "children" : [ ],
+        "type" : "string"
+      }, {
+        "id" : "j2_9",
+        "text" : "aws_acm_arn",
+        "li_attr" : {
+          "id" : "j2_9"
+        },
+        "a_attr" : {
+          "href" : "#",
+          "id" : "j2_9_anchor"
+        },
+        "state" : {
+          "loaded" : true,
+          "opened" : false,
+          "selected" : false,
+          "disabled" : false
+        },
+        "data" : { },
+        "children" : [ ],
+        "type" : "string"
+      }, {
+        "id" : "j2_10",
+        "text" : "auto_scaling_min_nodes",
+        "li_attr" : {
+          "id" : "j2_10"
+        },
+        "a_attr" : {
+          "href" : "#",
+          "id" : "j2_10_anchor"
+        },
+        "state" : {
+          "loaded" : true,
+          "opened" : false,
+          "selected" : false,
+          "disabled" : false
+        },
+        "data" : { },
+        "children" : [ ],
+        "type" : "string"
+      }, {
+        "id" : "j2_11",
+        "text" : "auto_scaling_max_nodes",
+        "li_attr" : {
+          "id" : "j2_11"
+        },
+        "a_attr" : {
+          "href" : "#",
+          "id" : "j2_11_anchor"
+        },
+        "state" : {
+          "loaded" : true,
+          "opened" : false,
+          "selected" : false,
+          "disabled" : false
+        },
+        "data" : { },
+        "children" : [ ],
+        "type" : "string"
+      }, {
+        "id" : "j2_12",
+        "text" : "auto_scaling_cpu_threshold",
+        "li_attr" : {
+          "id" : "j2_12"
+        },
+        "a_attr" : {
+          "href" : "#",
+          "id" : "j2_12_anchor"
+        },
+        "state" : {
+          "loaded" : true,
+          "opened" : false,
+          "selected" : false,
+          "disabled" : false
+        },
+        "data" : { },
+        "children" : [ ],
+        "type" : "string"
+      }, {
+        "id" : "j2_13",
+        "text" : "deploy",
+        "li_attr" : {
+          "id" : "j2_13"
+        },
+        "a_attr" : {
+          "href" : "#",
+          "id" : "j2_13_anchor"
+        },
+        "state" : {
+          "loaded" : true,
+          "opened" : false,
+          "selected" : false,
+          "disabled" : false
+        },
+        "data" : { },
+        "children" : [ ],
+        "type" : "boolean"
+      }, {
+        "id" : "j2_14",
+        "text" : "vpcId",
+        "li_attr" : {
+          "id" : "j2_14"
+        },
+        "a_attr" : {
+          "href" : "#",
+          "id" : "j2_14_anchor"
+        },
+        "state" : {
+          "loaded" : true,
+          "opened" : false,
+          "selected" : false,
+          "disabled" : false
+        },
+        "data" : { },
+        "children" : [ ],
+        "type" : "string"
+      }, {
+        "id" : "j2_15",
+        "text" : "subnets",
+        "li_attr" : {
+          "id" : "j2_15"
+        },
+        "a_attr" : {
+          "href" : "#",
+          "id" : "j2_15_anchor"
+        },
+        "state" : {
+          "loaded" : true,
+          "opened" : false,
+          "selected" : false,
+          "disabled" : false
+        },
+        "data" : { },
+        "children" : [ ],
+        "type" : "stringList"
+      }, {
+        "id" : "j2_16",
+        "text" : "resource_cups",
+        "li_attr" : {
+          "id" : "j2_16"
+        },
+        "a_attr" : {
+          "href" : "#",
+          "id" : "j2_16_anchor"
+        },
+        "state" : {
+          "loaded" : true,
+          "opened" : false,
+          "selected" : false,
+          "disabled" : false
+        },
+        "data" : { },
+        "children" : [ ],
+        "type" : "number"
+      }, {
+        "id" : "j2_17",
+        "text" : "resource_memory",
+        "li_attr" : {
+          "id" : "j2_17"
+        },
+        "a_attr" : {
+          "href" : "#",
+          "id" : "j2_17_anchor"
+        },
+        "state" : {
+          "loaded" : true,
+          "opened" : false,
+          "selected" : false,
+          "disabled" : false
+        },
+        "data" : { },
+        "children" : [ ],
+        "type" : "integer"
+      }, {
+        "id" : "j2_18",
+        "text" : "sub_domain",
+        "li_attr" : {
+          "id" : "j2_18"
+        },
+        "a_attr" : {
+          "href" : "#",
+          "id" : "j2_18_anchor"
+        },
+        "state" : {
+          "loaded" : true,
+          "opened" : false,
+          "selected" : false,
+          "disabled" : false
+        },
+        "data" : { },
+        "children" : [ ],
+        "type" : "string"
+      }, {
+        "id" : "j2_19",
+        "text" : "domain_registrar",
+        "li_attr" : {
+          "id" : "j2_19"
+        },
+        "a_attr" : {
+          "href" : "#",
+          "id" : "j2_19_anchor"
+        },
+        "state" : {
+          "loaded" : true,
+          "opened" : false,
+          "selected" : false,
+          "disabled" : false
+        },
+        "data" : { },
+        "children" : [ ],
+        "type" : "string"
+      }, {
+        "id" : "j2_20",
+        "text" : "dns_mapping",
+        "li_attr" : {
+          "id" : "j2_20"
+        },
+        "a_attr" : {
+          "href" : "#",
+          "id" : "j2_20_anchor"
+        },
+        "state" : {
+          "loaded" : true,
+          "opened" : false,
+          "selected" : false,
+          "disabled" : false
+        },
+        "data" : { },
+        "children" : [ ],
+        "type" : "boolean"
+      }, {
+        "id" : "j2_21",
+        "text" : "credential_id",
+        "li_attr" : {
+          "id" : "j2_21"
+        },
+        "a_attr" : {
+          "href" : "#",
+          "id" : "j2_21_anchor"
+        },
+        "state" : {
+          "loaded" : true,
+          "opened" : false,
+          "selected" : false,
+          "disabled" : false
+        },
+        "data" : { },
+        "children" : [ ],
+        "type" : "integer"
+      }, {
+        "id" : "j2_22",
+        "text" : "tenant",
+        "li_attr" : {
+          "id" : "j2_22"
+        },
+        "a_attr" : {
+          "href" : "#",
+          "id" : "j2_22_anchor"
+        },
+        "state" : {
+          "loaded" : true,
+          "opened" : false,
+          "selected" : false,
+          "disabled" : false
+        },
+        "data" : { },
+        "children" : [ ],
+        "type" : "string"
+      }, {
+        "id" : "j2_23",
+        "text" : "api_key",
+        "li_attr" : {
+          "id" : "j2_23"
+        },
+        "a_attr" : {
+          "href" : "#",
+          "id" : "j2_23_anchor"
+        },
+        "state" : {
+          "loaded" : true,
+          "opened" : false,
+          "selected" : false,
+          "disabled" : false
+        },
+        "data" : { },
+        "children" : [ ],
+        "type" : "string"
+      }, {
+        "id" : "j2_24",
+        "text" : "domain_registrar_zone_id",
+        "li_attr" : {
+          "id" : "j2_24"
+        },
+        "a_attr" : {
+          "href" : "#",
+          "id" : "j2_24_anchor"
+        },
+        "state" : {
+          "loaded" : true,
+          "opened" : false,
+          "selected" : false,
+          "disabled" : false
+        },
+        "data" : { },
+        "children" : [ ],
+        "type" : "string"
+      } ],
+      "type" : "document"
+    } ],
+    "output" : [ {
+      "id" : "j3_1",
+      "text" : "doDeployed",
+      "li_attr" : {
+        "id" : "j3_1"
+      },
+      "a_attr" : {
+        "href" : "#",
+        "id" : "j3_1_anchor"
+      },
+      "state" : {
+        "loaded" : true,
+        "opened" : false,
+        "selected" : false,
+        "disabled" : false
+      },
+      "data" : { },
+      "children" : [ ],
+      "type" : "boolean"
+    }, {
+      "id" : "j3_3",
+      "text" : "cf_response",
+      "li_attr" : {
+        "id" : "j3_3"
+      },
+      "a_attr" : {
+        "href" : "#",
+        "id" : "j3_3_anchor"
+      },
+      "state" : {
+        "loaded" : true,
+        "opened" : false,
+        "selected" : false,
+        "disabled" : false
+      },
+      "data" : { },
+      "children" : [ ],
+      "type" : "document"
+    }, {
+      "id" : "j3_4",
+      "text" : "status",
+      "li_attr" : {
+        "id" : "j3_4"
+      },
+      "a_attr" : {
+        "href" : "#",
+        "id" : "j3_4_anchor"
+      },
+      "state" : {
+        "loaded" : true,
+        "opened" : false,
+        "selected" : false,
+        "disabled" : false
+      },
+      "data" : { },
+      "children" : [ ],
+      "type" : "boolean"
+    } ],
+    "api_info" : {
+      "title" : "",
+      "description" : ""
+    },
+    "lockedByUser" : "admin",
+    "api" : [ {
+      "id" : "j1_15",
+      "text" : "Group",
+      "li_attr" : {
+        "id" : "j1_15"
+      },
+      "a_attr" : {
+        "href" : "javascript:void(0)",
+        "id" : "j1_15_anchor"
+      },
+      "state" : {
+        "loaded" : true,
+        "opened" : true,
+        "selected" : false,
+        "disabled" : false
+      },
+      "data" : {
+        "guid" : "ef756ddb-786c-4654-b7a6-daefbe42496f"
+      },
+      "children" : [ {
+        "id" : "j1_1",
+        "text" : "Transformer",
+        "li_attr" : {
+          "id" : "j1_1"
+        },
+        "a_attr" : {
+          "href" : "javascript:void(0)",
+          "id" : "j1_1_anchor"
+        },
+        "state" : {
+          "loaded" : true,
+          "opened" : false,
+          "selected" : false,
+          "disabled" : false
+        },
+        "data" : {
+          "transformers" : [ {
+            "op" : "copy",
+            "from" : "/*payload/name",
+            "to" : "/containerParams/name",
+            "inTypePath" : "document/string",
+            "outTypePath" : "document/string"
+          }, {
+            "op" : "copy",
+            "from" : "/*payload/type",
+            "to" : "/containerParams/type",
+            "inTypePath" : "document/string",
+            "outTypePath" : "document/string"
+          }, {
+            "op" : "copy",
+            "from" : "/*payload/credential_key",
+            "to" : "/containerParams/credential_key",
+            "inTypePath" : "document/string",
+            "outTypePath" : "document/string"
+          }, {
+            "op" : "copy",
+            "from" : "/*payload/credential_secret",
+            "to" : "/containerParams/credential_secret",
+            "inTypePath" : "document/string",
+            "outTypePath" : "document/string"
+          }, {
+            "op" : "copy",
+            "from" : "/*payload/data_center_region",
+            "to" : "/containerParams/data_center_region",
+            "inTypePath" : "document/string",
+            "outTypePath" : "document/string"
+          }, {
+            "op" : "copy",
+            "from" : "/*payload/aws_acm_arn",
+            "to" : "/containerParams/aws_acm_arn",
+            "inTypePath" : "document/string",
+            "outTypePath" : "document/string"
+          }, {
+            "op" : "copy",
+            "from" : "/*payload/deploy",
+            "to" : "/containerParams/deploy",
+            "inTypePath" : "document/boolean",
+            "outTypePath" : "document/boolean"
+          }, {
+            "op" : "copy",
+            "from" : "/*payload/vpcId",
+            "to" : "/containerParams/vpcId",
+            "inTypePath" : "document/string",
+            "outTypePath" : "document/string"
+          }, {
+            "op" : "copy",
+            "from" : "/*payload/subnets",
+            "to" : "/containerParams/subnets",
+            "inTypePath" : "document/stringList",
+            "outTypePath" : "document/stringList"
+          }, {
+            "op" : "copy",
+            "from" : "/*payload/sub_domain",
+            "to" : "/containerParams/sub_domain",
+            "inTypePath" : "document/string",
+            "outTypePath" : "document/string"
+          }, {
+            "op" : "copy",
+            "from" : "/*payload/domain_registrar",
+            "to" : "/containerParams/domain_registrar",
+            "inTypePath" : "document/string",
+            "outTypePath" : "document/string"
+          }, {
+            "op" : "copy",
+            "from" : "/*payload/dns_mapping",
+            "to" : "/containerParams/dns_mapping",
+            "inTypePath" : "document/boolean",
+            "outTypePath" : "document/boolean"
+          }, {
+            "op" : "copy",
+            "from" : "/*payload/credential_id",
+            "to" : "/containerParams/credential_id",
+            "inTypePath" : "document/integer",
+            "outTypePath" : "document/integer"
+          }, {
+            "op" : "copy",
+            "from" : "/*payload/tenant",
+            "to" : "/containerParams/tenant",
+            "inTypePath" : "document/string",
+            "outTypePath" : "document/string"
+          }, {
+            "op" : "copy",
+            "from" : "/*payload/api_key",
+            "to" : "/containerParams/api_key",
+            "inTypePath" : "document/string",
+            "outTypePath" : "document/string"
+          }, {
+            "op" : "copy",
+            "from" : "/*payload/domain_registrar_zone_id",
+            "to" : "/containerParams/domain_registrar_zone_id",
+            "inTypePath" : "document/string",
+            "outTypePath" : "document/string"
+          }, {
+            "op" : "copy",
+            "from" : "/*payload/auto_scaling_cpu_threshold",
+            "to" : "/containerParams/auto_scaling_cpu_threshold",
+            "inTypePath" : "document/string",
+            "outTypePath" : "document/string"
+          }, {
+            "op" : "copy",
+            "from" : "/*payload/auto_scaling_max_nodes",
+            "to" : "/containerParams/auto_scaling_max_nodes",
+            "inTypePath" : "document/string",
+            "outTypePath" : "document/string"
+          }, {
+            "op" : "copy",
+            "from" : "/*payload/auto_scaling_min_nodes",
+            "to" : "/containerParams/auto_scaling_min_nodes",
+            "inTypePath" : "document/string",
+            "outTypePath" : "document/string"
+          }, {
+            "op" : "copy",
+            "from" : "/*payload/resource_memory",
+            "to" : "/containerParams/resource_memory",
+            "inTypePath" : "document/integer",
+            "outTypePath" : "document/integer"
+          }, {
+            "op" : "copy",
+            "from" : "/*payload/resource_cups",
+            "to" : "/containerParams/resource_cups",
+            "inTypePath" : "document/number",
+            "outTypePath" : "document/number"
+          } ],
+          "lines" : [ {
+            "inputPath" : "*payload/name",
+            "outputPath" : "containerParams/name",
+            "inpJsTree" : "#launching_arrow_jsTree",
+            "outpJsTree" : "#landing_arrow_jsTree",
+            "INPath" : "*payload/name",
+            "OUTPath" : "containerParams/name",
+            "op" : "copy",
+            "line" : 0,
+            "dashedLine" : false,
+            "inType" : "string",
+            "outType" : "string",
+            "inTypePath" : "document/string",
+            "outTypePath" : "document/string"
+          }, {
+            "inputPath" : "*payload/type",
+            "outputPath" : "containerParams/type",
+            "inpJsTree" : "#launching_arrow_jsTree",
+            "outpJsTree" : "#landing_arrow_jsTree",
+            "INPath" : "*payload/type",
+            "OUTPath" : "containerParams/type",
+            "op" : "copy",
+            "line" : 0,
+            "dashedLine" : false,
+            "inType" : "string",
+            "outType" : "string",
+            "inTypePath" : "document/string",
+            "outTypePath" : "document/string"
+          }, {
+            "inputPath" : "*payload/credential_key",
+            "outputPath" : "containerParams/credential_key",
+            "inpJsTree" : "#launching_arrow_jsTree",
+            "outpJsTree" : "#landing_arrow_jsTree",
+            "INPath" : "*payload/credential_key",
+            "OUTPath" : "containerParams/credential_key",
+            "op" : "copy",
+            "line" : 0,
+            "dashedLine" : false,
+            "inType" : "string",
+            "outType" : "string",
+            "inTypePath" : "document/string",
+            "outTypePath" : "document/string"
+          }, {
+            "inputPath" : "*payload/credential_secret",
+            "outputPath" : "containerParams/credential_secret",
+            "inpJsTree" : "#launching_arrow_jsTree",
+            "outpJsTree" : "#landing_arrow_jsTree",
+            "INPath" : "*payload/credential_secret",
+            "OUTPath" : "containerParams/credential_secret",
+            "op" : "copy",
+            "line" : 0,
+            "dashedLine" : false,
+            "inType" : "string",
+            "outType" : "string",
+            "inTypePath" : "document/string",
+            "outTypePath" : "document/string"
+          }, {
+            "inputPath" : "*payload/data_center_region",
+            "outputPath" : "containerParams/data_center_region",
+            "inpJsTree" : "#launching_arrow_jsTree",
+            "outpJsTree" : "#landing_arrow_jsTree",
+            "INPath" : "*payload/data_center_region",
+            "OUTPath" : "containerParams/data_center_region",
+            "op" : "copy",
+            "line" : 0,
+            "dashedLine" : false,
+            "inType" : "string",
+            "outType" : "string",
+            "inTypePath" : "document/string",
+            "outTypePath" : "document/string"
+          }, {
+            "inputPath" : "*payload/aws_acm_arn",
+            "outputPath" : "containerParams/aws_acm_arn",
+            "inpJsTree" : "#launching_arrow_jsTree",
+            "outpJsTree" : "#landing_arrow_jsTree",
+            "INPath" : "*payload/aws_acm_arn",
+            "OUTPath" : "containerParams/aws_acm_arn",
+            "op" : "copy",
+            "line" : 0,
+            "dashedLine" : false,
+            "inType" : "string",
+            "outType" : "string",
+            "inTypePath" : "document/string",
+            "outTypePath" : "document/string"
+          }, {
+            "inputPath" : "*payload/deploy",
+            "outputPath" : "containerParams/deploy",
+            "inpJsTree" : "#launching_arrow_jsTree",
+            "outpJsTree" : "#landing_arrow_jsTree",
+            "INPath" : "*payload/deploy",
+            "OUTPath" : "containerParams/deploy",
+            "op" : "copy",
+            "line" : 0,
+            "dashedLine" : false,
+            "inType" : "boolean",
+            "outType" : "boolean",
+            "inTypePath" : "document/boolean",
+            "outTypePath" : "document/boolean"
+          }, {
+            "inputPath" : "*payload/vpcId",
+            "outputPath" : "containerParams/vpcId",
+            "inpJsTree" : "#launching_arrow_jsTree",
+            "outpJsTree" : "#landing_arrow_jsTree",
+            "INPath" : "*payload/vpcId",
+            "OUTPath" : "containerParams/vpcId",
+            "op" : "copy",
+            "line" : 0,
+            "dashedLine" : false,
+            "inType" : "string",
+            "outType" : "string",
+            "inTypePath" : "document/string",
+            "outTypePath" : "document/string"
+          }, {
+            "inputPath" : "*payload/subnets",
+            "outputPath" : "containerParams/subnets",
+            "inpJsTree" : "#launching_arrow_jsTree",
+            "outpJsTree" : "#landing_arrow_jsTree",
+            "INPath" : "*payload/subnets",
+            "OUTPath" : "containerParams/subnets",
+            "op" : "copy",
+            "line" : 0,
+            "dashedLine" : false,
+            "inType" : "stringList",
+            "outType" : "stringList",
+            "inTypePath" : "document/stringList",
+            "outTypePath" : "document/stringList"
+          }, {
+            "inputPath" : "*payload/sub_domain",
+            "outputPath" : "containerParams/sub_domain",
+            "inpJsTree" : "#launching_arrow_jsTree",
+            "outpJsTree" : "#landing_arrow_jsTree",
+            "INPath" : "*payload/sub_domain",
+            "OUTPath" : "containerParams/sub_domain",
+            "op" : "copy",
+            "line" : 0,
+            "dashedLine" : false,
+            "inType" : "string",
+            "outType" : "string",
+            "inTypePath" : "document/string",
+            "outTypePath" : "document/string"
+          }, {
+            "inputPath" : "*payload/domain_registrar",
+            "outputPath" : "containerParams/domain_registrar",
+            "inpJsTree" : "#launching_arrow_jsTree",
+            "outpJsTree" : "#landing_arrow_jsTree",
+            "INPath" : "*payload/domain_registrar",
+            "OUTPath" : "containerParams/domain_registrar",
+            "op" : "copy",
+            "line" : 0,
+            "dashedLine" : false,
+            "inType" : "string",
+            "outType" : "string",
+            "inTypePath" : "document/string",
+            "outTypePath" : "document/string"
+          }, {
+            "inputPath" : "*payload/dns_mapping",
+            "outputPath" : "containerParams/dns_mapping",
+            "inpJsTree" : "#launching_arrow_jsTree",
+            "outpJsTree" : "#landing_arrow_jsTree",
+            "INPath" : "*payload/dns_mapping",
+            "OUTPath" : "containerParams/dns_mapping",
+            "op" : "copy",
+            "line" : 0,
+            "dashedLine" : false,
+            "inType" : "boolean",
+            "outType" : "boolean",
+            "inTypePath" : "document/boolean",
+            "outTypePath" : "document/boolean"
+          }, {
+            "inputPath" : "*payload/credential_id",
+            "outputPath" : "containerParams/credential_id",
+            "inpJsTree" : "#launching_arrow_jsTree",
+            "outpJsTree" : "#landing_arrow_jsTree",
+            "INPath" : "*payload/credential_id",
+            "OUTPath" : "containerParams/credential_id",
+            "op" : "copy",
+            "line" : 0,
+            "dashedLine" : false,
+            "inType" : "integer",
+            "outType" : "integer",
+            "inTypePath" : "document/integer",
+            "outTypePath" : "document/integer"
+          }, {
+            "inputPath" : "*payload/tenant",
+            "outputPath" : "containerParams/tenant",
+            "inpJsTree" : "#launching_arrow_jsTree",
+            "outpJsTree" : "#landing_arrow_jsTree",
+            "INPath" : "*payload/tenant",
+            "OUTPath" : "containerParams/tenant",
+            "op" : "copy",
+            "line" : 0,
+            "dashedLine" : false,
+            "inType" : "string",
+            "outType" : "string",
+            "inTypePath" : "document/string",
+            "outTypePath" : "document/string"
+          }, {
+            "inputPath" : "*payload/api_key",
+            "outputPath" : "containerParams/api_key",
+            "inpJsTree" : "#launching_arrow_jsTree",
+            "outpJsTree" : "#landing_arrow_jsTree",
+            "INPath" : "*payload/api_key",
+            "OUTPath" : "containerParams/api_key",
+            "op" : "copy",
+            "line" : 0,
+            "dashedLine" : false,
+            "inType" : "string",
+            "outType" : "string",
+            "inTypePath" : "document/string",
+            "outTypePath" : "document/string"
+          }, {
+            "inputPath" : "*payload/domain_registrar_zone_id",
+            "outputPath" : "containerParams/domain_registrar_zone_id",
+            "inpJsTree" : "#launching_arrow_jsTree",
+            "outpJsTree" : "#landing_arrow_jsTree",
+            "INPath" : "*payload/domain_registrar_zone_id",
+            "OUTPath" : "containerParams/domain_registrar_zone_id",
+            "op" : "copy",
+            "line" : 0,
+            "dashedLine" : false,
+            "inType" : "string",
+            "outType" : "string",
+            "inTypePath" : "document/string",
+            "outTypePath" : "document/string"
+          }, {
+            "inputPath" : "*payload/auto_scaling_cpu_threshold",
+            "outputPath" : "containerParams/auto_scaling_cpu_threshold",
+            "inpJsTree" : "#launching_arrow_jsTree",
+            "outpJsTree" : "#landing_arrow_jsTree",
+            "INPath" : "*payload/auto_scaling_cpu_threshold",
+            "OUTPath" : "containerParams/auto_scaling_cpu_threshold",
+            "op" : "copy",
+            "line" : 0,
+            "dashedLine" : false,
+            "inType" : "string",
+            "outType" : "string",
+            "inTypePath" : "document/string",
+            "outTypePath" : "document/string"
+          }, {
+            "inputPath" : "*payload/auto_scaling_max_nodes",
+            "outputPath" : "containerParams/auto_scaling_max_nodes",
+            "inpJsTree" : "#launching_arrow_jsTree",
+            "outpJsTree" : "#landing_arrow_jsTree",
+            "INPath" : "*payload/auto_scaling_max_nodes",
+            "OUTPath" : "containerParams/auto_scaling_max_nodes",
+            "op" : "copy",
+            "line" : 0,
+            "dashedLine" : false,
+            "inType" : "string",
+            "outType" : "string",
+            "inTypePath" : "document/string",
+            "outTypePath" : "document/string"
+          }, {
+            "inputPath" : "*payload/auto_scaling_min_nodes",
+            "outputPath" : "containerParams/auto_scaling_min_nodes",
+            "inpJsTree" : "#launching_arrow_jsTree",
+            "outpJsTree" : "#landing_arrow_jsTree",
+            "INPath" : "*payload/auto_scaling_min_nodes",
+            "OUTPath" : "containerParams/auto_scaling_min_nodes",
+            "op" : "copy",
+            "line" : 0,
+            "dashedLine" : false,
+            "inType" : "string",
+            "outType" : "string",
+            "inTypePath" : "document/string",
+            "outTypePath" : "document/string"
+          }, {
+            "inputPath" : "*payload/resource_memory",
+            "outputPath" : "containerParams/resource_memory",
+            "inpJsTree" : "#launching_arrow_jsTree",
+            "outpJsTree" : "#landing_arrow_jsTree",
+            "INPath" : "*payload/resource_memory",
+            "OUTPath" : "containerParams/resource_memory",
+            "op" : "copy",
+            "line" : 0,
+            "dashedLine" : false,
+            "inType" : "integer",
+            "outType" : "integer",
+            "inTypePath" : "document/integer",
+            "outTypePath" : "document/integer"
+          }, {
+            "inputPath" : "*payload/resource_cups",
+            "outputPath" : "containerParams/resource_cups",
+            "inpJsTree" : "#launching_arrow_jsTree",
+            "outpJsTree" : "#landing_arrow_jsTree",
+            "INPath" : "*payload/resource_cups",
+            "OUTPath" : "containerParams/resource_cups",
+            "op" : "copy",
+            "line" : 0,
+            "dashedLine" : false,
+            "inType" : "number",
+            "outType" : "number",
+            "inTypePath" : "document/number",
+            "outTypePath" : "document/number"
+          } ],
+          "dropList" : [ {
+            "path" : "*payload",
+            "typePath" : "document"
+          } ],
+          "createList" : [ {
+            "path" : "containerParams/port_mapping",
+            "value" : "80:80",
+            "typePath" : "document/string"
+          }, {
+            "path" : "jdbcUrl",
+            "value" : "/middleware/pub/environments/adapter/connection/environment",
+            "typePath" : "string"
+          }, {
+            "path" : "zoneid",
+            "value" : "aws_zoneid",
+            "typePath" : "string"
+          }, {
+            "path" : "containerParams/protocol",
+            "value" : "#{*payload/protocol}",
+            "evaluate" : "EEV",
+            "typePath" : "document/string"
+          } ],
+          "guid" : "d35184d8-24fc-40bb-adb9-7d7d2d332a49"
+        },
+        "children" : [ ],
+        "type" : "transformer"
+      }, {
+        "id" : "j1_7",
+        "text" : "Invoke",
+        "li_attr" : {
+          "id" : "j1_7"
+        },
+        "a_attr" : {
+          "href" : "javascript:void(0)",
+          "id" : "j1_7_anchor"
+        },
+        "state" : {
+          "loaded" : true,
+          "opened" : false,
+          "selected" : false,
+          "disabled" : false
+        },
+        "data" : {
+          "transformers" : [ {
+            "op" : "copy",
+            "from" : "/txConn",
+            "to" : "/dcTxnConn",
+            "inTypePath" : "javaObject",
+            "outTypePath" : "javaObject",
+            "direction" : "out"
+          } ],
+          "lines" : [ {
+            "inputPath" : "txConn",
+            "outputPath" : "dcTxnConn",
+            "inpJsTree" : "#launching_arrow_jsTree_function",
+            "outpJsTree" : "#landing_arrow_jsTree",
+            "INPath" : "txConn",
+            "OUTPath" : "dcTxnConn",
+            "direction" : "out",
+            "op" : "copy",
+            "line" : 0,
+            "dashedLine" : false,
+            "inType" : "javaObject",
+            "outType" : "javaObject",
+            "inTypePath" : "javaObject",
+            "outTypePath" : "javaObject"
+          } ],
+          "dropList" : [ {
+            "path" : "jdbcUrl",
+            "typePath" : "string"
+          }, {
+            "path" : "jdbcConnection",
+            "typePath" : "string"
+          } ],
+          "createList" : [ ],
+          "serviceType" : "service",
+          "status" : "disabled",
+          "guid" : "65fe7771-1699-4d0f-947a-a67f4e35294c",
+          "fqn" : "packages/middleware/pub/client/database/startTransaction"
+        },
+        "children" : [ ],
+        "type" : "invoke"
+      }, {
+        "id" : "j1_22",
+        "text" : "Group",
+        "li_attr" : {
+          "id" : "j1_22"
+        },
+        "a_attr" : {
+          "href" : "javascript:void(0)",
+          "id" : "j1_22_anchor"
+        },
+        "state" : {
+          "loaded" : true,
+          "opened" : true,
+          "selected" : false,
+          "disabled" : false
+        },
+        "data" : {
+          "guid" : "eb27b0a5-2461-4e3f-b5d3-5d8cba720aff"
+        },
+        "children" : [ {
+          "id" : "j1_24",
+          "text" : "Invoke",
+          "li_attr" : {
+            "id" : "j1_24"
+          },
+          "a_attr" : {
+            "href" : "javascript:void(0)",
+            "id" : "j1_24_anchor"
+          },
+          "state" : {
+            "loaded" : true,
+            "opened" : false,
+            "selected" : true,
+            "disabled" : false
+          },
+          "data" : {
+            "transformers" : [ {
+              "op" : "copy",
+              "from" : "/outputDocList/0/exist",
+              "to" : "/is_existed",
+              "inTypePath" : "documentList/boolean",
+              "outTypePath" : "boolean",
+              "direction" : "out"
+            }, {
+              "op" : "copy",
+              "from" : "/rows",
+              "to" : "/rows",
+              "inTypePath" : "integer",
+              "outTypePath" : "integer",
+              "direction" : "out"
+            }, {
+              "op" : "copy",
+              "from" : "/success",
+              "to" : "/success",
+              "inTypePath" : "boolean",
+              "outTypePath" : "boolean",
+              "direction" : "out"
+            }, {
+              "op" : "copy",
+              "from" : "/error",
+              "to" : "/error",
+              "inTypePath" : "string",
+              "outTypePath" : "string",
+              "direction" : "out"
+            } ],
+            "lines" : [ {
+              "inputPath" : "outputDocList/exist",
+              "outputPath" : "is_existed",
+              "inpJsTree" : "#launching_arrow_jsTree_function",
+              "outpJsTree" : "#landing_arrow_jsTree",
+              "INPath" : "outputDocList/#0/exist",
+              "OUTPath" : "is_existed",
+              "direction" : "out",
+              "op" : "copy",
+              "line" : 0,
+              "dashedLine" : false,
+              "inType" : "boolean",
+              "outType" : "boolean",
+              "inTypePath" : "documentList/boolean",
+              "outTypePath" : "boolean"
+            }, {
+              "inputPath" : "rows",
+              "outputPath" : "rows",
+              "inpJsTree" : "#launching_arrow_jsTree_function",
+              "outpJsTree" : "#landing_arrow_jsTree",
+              "INPath" : "rows",
+              "OUTPath" : "rows",
+              "direction" : "out",
+              "op" : "copy",
+              "line" : 0,
+              "dashedLine" : false,
+              "inType" : "integer",
+              "outType" : "integer",
+              "inTypePath" : "integer",
+              "outTypePath" : "integer"
+            }, {
+              "inputPath" : "success",
+              "outputPath" : "success",
+              "inpJsTree" : "#launching_arrow_jsTree_function",
+              "outpJsTree" : "#landing_arrow_jsTree",
+              "INPath" : "success",
+              "OUTPath" : "success",
+              "direction" : "out",
+              "op" : "copy",
+              "line" : 0,
+              "dashedLine" : false,
+              "inType" : "boolean",
+              "outType" : "boolean",
+              "inTypePath" : "boolean",
+              "outTypePath" : "boolean"
+            }, {
+              "inputPath" : "error",
+              "outputPath" : "error",
+              "inpJsTree" : "#launching_arrow_jsTree_function",
+              "outpJsTree" : "#landing_arrow_jsTree",
+              "INPath" : "error",
+              "OUTPath" : "error",
+              "direction" : "out",
+              "op" : "copy",
+              "line" : 0,
+              "dashedLine" : false,
+              "inType" : "string",
+              "outType" : "string",
+              "inTypePath" : "string",
+              "outTypePath" : "string"
+            } ],
+            "dropList" : [ ],
+            "createList" : [ ],
+            "serviceType" : "sql",
+            "guid" : "f3949ea8-e87e-4356-a5d9-b545ac1518d1",
+            "snap" : "disabled",
+            "fqn" : "packages/middleware/pub/environments/adapter/services/DQL/isEnvironmentExistsByName"
+          },
+          "children" : [ ],
+          "type" : "invoke"
+        }, {
+          "id" : "j1_37",
+          "text" : "SWITCH",
+          "li_attr" : {
+            "id" : "j1_37"
+          },
+          "a_attr" : {
+            "href" : "javascript:void(0)",
+            "id" : "j1_37_anchor"
+          },
+          "state" : {
+            "loaded" : true,
+            "opened" : false,
+            "selected" : false,
+            "disabled" : false
+          },
+          "data" : {
+            "switch" : "is_existed",
+            "guid" : "e2efa96c-6954-44cb-ad3c-224ebe73d933",
+            "snap" : "disabled"
+          },
+          "children" : [ {
+            "id" : "j1_39",
+            "text" : "CASE",
+            "li_attr" : {
+              "id" : "j1_39"
+            },
+            "a_attr" : {
+              "href" : "javascript:void(0)",
+              "id" : "j1_39_anchor"
+            },
+            "state" : {
+              "loaded" : true,
+              "opened" : true,
+              "selected" : false,
+              "disabled" : false
+            },
+            "data" : {
+              "case" : "true",
+              "guid" : "202978d6-96df-4432-b1d6-5acdefdb9b97",
+              "snap" : "enabled"
+            },
+            "children" : [ {
+              "id" : "j1_42",
+              "text" : "Transformer",
+              "li_attr" : {
+                "id" : "j1_42"
+              },
+              "a_attr" : {
+                "href" : "javascript:void(0)",
+                "id" : "j1_42_anchor"
+              },
+              "state" : {
+                "loaded" : true,
+                "opened" : false,
+                "selected" : false,
+                "disabled" : false
+              },
+              "data" : {
+                "transformers" : [ ],
+                "lines" : [ ],
+                "dropList" : [ ],
+                "createList" : [ {
+                  "path" : "error_message",
+                  "value" : "Environment name is already existed.",
+                  "typePath" : "string"
+                } ],
+                "guid" : "8d287dcc-b9c4-42ef-a15b-585869aff3b2"
+              },
+              "children" : [ ],
+              "type" : "transformer"
+            }, {
+              "id" : "j1_25",
+              "text" : "Invoke",
+              "li_attr" : {
+                "id" : "j1_25"
+              },
+              "a_attr" : {
+                "href" : "javascript:void(0)",
+                "id" : "j1_25_anchor"
+              },
+              "state" : {
+                "loaded" : true,
+                "opened" : false,
+                "selected" : false,
+                "disabled" : false
+              },
+              "data" : {
+                "transformers" : [ {
+                  "op" : "copy",
+                  "from" : "/error_message",
+                  "to" : "/msg",
+                  "inTypePath" : "string",
+                  "outTypePath" : "string",
+                  "direction" : "in"
+                } ],
+                "lines" : [ {
+                  "inputPath" : "error_message",
+                  "outputPath" : "msg",
+                  "inpJsTree" : "#launching_arrow_jsTree",
+                  "outpJsTree" : "#landing_arrow_jsTree_function",
+                  "INPath" : "error_message",
+                  "OUTPath" : "msg",
+                  "direction" : "in",
+                  "op" : "copy",
+                  "line" : 0,
+                  "dashedLine" : false,
+                  "inType" : "string",
+                  "outType" : "string",
+                  "inTypePath" : "string",
+                  "outTypePath" : "string"
+                } ],
+                "dropList" : [ {
+                  "path" : "error_message",
+                  "typePath" : "string"
+                } ],
+                "createList" : [ ],
+                "serviceType" : "service",
+                "guid" : "d689cf52-c845-4a2b-aa2c-02a9855e6169",
+                "fqn" : "packages/middleware/pub/service/throwExecption"
+              },
+              "children" : [ ],
+              "type" : "invoke"
+            } ],
+            "type" : "group"
+          } ],
+          "type" : "switch"
+        }, {
+          "id" : "j1_26",
+          "text" : "Invoke",
+          "li_attr" : {
+            "id" : "j1_26"
+          },
+          "a_attr" : {
+            "href" : "javascript:void(0)",
+            "id" : "j1_26_anchor"
+          },
+          "state" : {
+            "loaded" : true,
+            "opened" : false,
+            "selected" : false,
+            "disabled" : false
+          },
+          "data" : {
+            "transformers" : [ {
+              "op" : "copy",
+              "from" : "/msg",
+              "to" : "/msg",
+              "inTypePath" : "string",
+              "outTypePath" : "string",
+              "direction" : "in"
+            } ],
+            "lines" : [ {
+              "inputPath" : "msg",
+              "outputPath" : "msg",
+              "inpJsTree" : "#launching_arrow_jsTree",
+              "outpJsTree" : "#landing_arrow_jsTree_function",
+              "INPath" : "msg",
+              "OUTPath" : "msg",
+              "direction" : "in",
+              "op" : "copy",
+              "line" : 0,
+              "dashedLine" : false,
+              "inType" : "string",
+              "outType" : "string",
+              "inTypePath" : "string",
+              "outTypePath" : "string"
+            } ],
+            "dropList" : [ ],
+            "createList" : [ ],
+            "serviceType" : "service",
+            "guid" : "b53cda51-15cf-4c88-a6eb-03f02631622f",
+            "fqn" : "packages/middleware/pub/service/debugLog"
+          },
+          "children" : [ ],
+          "type" : "invoke"
+        } ],
+        "type" : "group"
+      }, {
+        "id" : "j1_9",
+        "text" : "SWITCH",
+        "li_attr" : {
+          "id" : "j1_9"
+        },
+        "a_attr" : {
+          "href" : "javascript:void(0)",
+          "id" : "j1_9_anchor"
+        },
+        "state" : {
+          "loaded" : true,
+          "opened" : true,
+          "selected" : false,
+          "disabled" : false
+        },
+        "data" : {
+          "switch" : "containerParams/type",
+          "guid" : "4e9ef319-8938-496e-becc-052b6391512b",
+          "snap" : "disabled"
+        },
+        "children" : [ {
+          "id" : "j1_14",
+          "text" : "CASE",
+          "li_attr" : {
+            "id" : "j1_14"
+          },
+          "a_attr" : {
+            "href" : "javascript:void(0)",
+            "id" : "j1_14_anchor"
+          },
+          "state" : {
+            "loaded" : true,
+            "opened" : false,
+            "selected" : false,
+            "disabled" : false
+          },
+          "data" : {
+            "case" : "AWS_ECS",
+            "guid" : "916a57f2-cc61-42eb-bdd9-01ebeb3c5159"
+          },
+          "children" : [ {
+            "id" : "j1_2",
+            "text" : "Invoke",
+            "li_attr" : {
+              "id" : "j1_2"
+            },
+            "a_attr" : {
+              "href" : "javascript:void(0)",
+              "id" : "j1_2_anchor"
+            },
+            "state" : {
+              "loaded" : true,
+              "opened" : false,
+              "selected" : false,
+              "disabled" : false
+            },
+            "data" : {
+              "transformers" : [ {
+                "op" : "copy",
+                "from" : "/containerParams/name",
+                "to" : "/inputDocList/0/name",
+                "inTypePath" : "document/string",
+                "outTypePath" : "documentList/string",
+                "direction" : "in"
+              }, {
+                "op" : "copy",
+                "from" : "/containerParams/type",
+                "to" : "/inputDocList/0/type",
+                "inTypePath" : "document/string",
+                "outTypePath" : "documentList/string",
+                "direction" : "in"
+              }, {
+                "op" : "copy",
+                "from" : "/containerParams/credential_key",
+                "to" : "/inputDocList/0/credential_key",
+                "inTypePath" : "document/string",
+                "outTypePath" : "documentList/string",
+                "direction" : "in"
+              }, {
+                "op" : "copy",
+                "from" : "/containerParams/credential_secret",
+                "to" : "/inputDocList/0/credential_secret",
+                "inTypePath" : "document/string",
+                "outTypePath" : "documentList/string",
+                "direction" : "in"
+              }, {
+                "op" : "copy",
+                "from" : "/containerParams/data_center_region",
+                "to" : "/inputDocList/0/data_center_region",
+                "inTypePath" : "document/string",
+                "outTypePath" : "documentList/string",
+                "direction" : "in"
+              }, {
+                "op" : "copy",
+                "from" : "/containerParams/protocol",
+                "to" : "/inputDocList/0/protocol",
+                "inTypePath" : "document/string",
+                "outTypePath" : "documentList/string",
+                "direction" : "in"
+              }, {
+                "op" : "copy",
+                "from" : "/containerParams/port_mapping",
+                "to" : "/inputDocList/0/port_mapping",
+                "inTypePath" : "document/string",
+                "outTypePath" : "documentList/string",
+                "direction" : "in"
+              }, {
+                "op" : "copy",
+                "from" : "/containerParams/aws_acm_arn",
+                "to" : "/inputDocList/0/aws_acm_arn",
+                "inTypePath" : "document/string",
+                "outTypePath" : "documentList/string",
+                "direction" : "in"
+              }, {
+                "op" : "copy",
+                "from" : "/containerParams/auto_scaling_min_nodes",
+                "to" : "/inputDocList/0/auto_scaling_min_nodes",
+                "inTypePath" : "document/string",
+                "outTypePath" : "documentList/integer",
+                "direction" : "in"
+              }, {
+                "op" : "copy",
+                "from" : "/containerParams/auto_scaling_max_nodes",
+                "to" : "/inputDocList/0/auto_scaling_max_nodes",
+                "inTypePath" : "document/string",
+                "outTypePath" : "documentList/integer",
+                "direction" : "in"
+              }, {
+                "op" : "copy",
+                "from" : "/containerParams/auto_scaling_cpu_threshold",
+                "to" : "/inputDocList/0/auto_scaling_cpu_threshold",
+                "inTypePath" : "document/string",
+                "outTypePath" : "documentList/number",
+                "direction" : "in"
+              }, {
+                "op" : "copy",
+                "from" : "/containerParams/vpcId",
+                "to" : "/inputDocList/0/vpc_id",
+                "inTypePath" : "document/string",
+                "outTypePath" : "documentList/string",
+                "direction" : "in"
+              }, {
+                "op" : "copy",
+                "from" : "/containerParams/deploy",
+                "to" : "/inputDocList/0/deployed",
+                "inTypePath" : "document/boolean",
+                "outTypePath" : "documentList/boolean",
+                "direction" : "in"
+              }, {
+                "op" : "copy",
+                "from" : "/keys/#0",
+                "to" : "/customer_id",
+                "inTypePath" : "stringList",
+                "outTypePath" : "string",
+                "direction" : "out"
+              }, {
+                "op" : "copy",
+                "from" : "/containerParams/dns_mapping",
+                "to" : "/inputDocList/0/dns_mapping",
+                "inTypePath" : "document/boolean",
+                "outTypePath" : "documentList/boolean",
+                "direction" : "in"
+              }, {
+                "op" : "copy",
+                "from" : "/containerParams/domain_registrar",
+                "to" : "/inputDocList/0/domain_registrar",
+                "inTypePath" : "document/string",
+                "outTypePath" : "documentList/string",
+                "direction" : "in"
+              }, {
+                "op" : "copy",
+                "from" : "/containerParams/sub_domain",
+                "to" : "/inputDocList/0/sub_domain",
+                "inTypePath" : "document/string",
+                "outTypePath" : "documentList/string",
+                "direction" : "in"
+              }, {
+                "op" : "copy",
+                "from" : "/containerParams/resource_memory",
+                "to" : "/inputDocList/0/resource_memory",
+                "inTypePath" : "document/string",
+                "outTypePath" : "documentList/number",
+                "direction" : "in"
+              }, {
+                "op" : "copy",
+                "from" : "/containerParams/resource_cups",
+                "to" : "/inputDocList/0/resource_cups",
+                "inTypePath" : "document/string",
+                "outTypePath" : "documentList/number",
+                "direction" : "in"
+              }, {
+                "op" : "copy",
+                "from" : "/containerParams/credential_id",
+                "to" : "/inputDocList/0/credential_id",
+                "inTypePath" : "document/integer",
+                "outTypePath" : "documentList/integer",
+                "direction" : "in"
+              }, {
+                "op" : "copy",
+                "from" : "/containerParams/tenant",
+                "to" : "/inputDocList/0/tenant",
+                "inTypePath" : "document/string",
+                "outTypePath" : "documentList/string",
+                "direction" : "in"
+              }, {
+                "op" : "copy",
+                "from" : "/success",
+                "to" : "/status",
+                "inTypePath" : "boolean",
+                "outTypePath" : "boolean",
+                "direction" : "out"
+              }, {
+                "op" : "copy",
+                "from" : "/containerParams/api_key",
+                "to" : "/inputDocList/0/api_key",
+                "inTypePath" : "document/string",
+                "outTypePath" : "documentList/string",
+                "direction" : "in"
+              }, {
+                "op" : "copy",
+                "from" : "/error",
+                "to" : "/error",
+                "inTypePath" : "string",
+                "outTypePath" : "string",
+                "direction" : "out"
+              }, {
+                "op" : "copy",
+                "from" : "/rows",
+                "to" : "/rows",
+                "inTypePath" : "integer",
+                "outTypePath" : "integer",
+                "direction" : "out"
+              }, {
+                "op" : "copy",
+                "from" : "/outputDocList",
+                "to" : "/outputDocList",
+                "inTypePath" : "documentList",
+                "outTypePath" : "documentList",
+                "direction" : "out"
+              } ],
+              "lines" : [ {
+                "inputPath" : "containerParams/name",
+                "outputPath" : "inputDocList/name",
+                "inpJsTree" : "#launching_arrow_jsTree",
+                "outpJsTree" : "#landing_arrow_jsTree_function",
+                "INPath" : "containerParams/name",
+                "OUTPath" : "inputDocList/#0/name",
+                "direction" : "in",
+                "op" : "copy",
+                "line" : 0,
+                "dashedLine" : false,
+                "inType" : "string",
+                "outType" : "string",
+                "inTypePath" : "document/string",
+                "outTypePath" : "documentList/string"
+              }, {
+                "inputPath" : "containerParams/type",
+                "outputPath" : "inputDocList/type",
+                "inpJsTree" : "#launching_arrow_jsTree",
+                "outpJsTree" : "#landing_arrow_jsTree_function",
+                "INPath" : "containerParams/type",
+                "OUTPath" : "inputDocList/#0/type",
+                "direction" : "in",
+                "op" : "copy",
+                "line" : 0,
+                "dashedLine" : false,
+                "inType" : "string",
+                "outType" : "string",
+                "inTypePath" : "document/string",
+                "outTypePath" : "documentList/string"
+              }, {
+                "inputPath" : "containerParams/credential_key",
+                "outputPath" : "inputDocList/credential_key",
+                "inpJsTree" : "#launching_arrow_jsTree",
+                "outpJsTree" : "#landing_arrow_jsTree_function",
+                "INPath" : "containerParams/credential_key",
+                "OUTPath" : "inputDocList/#0/credential_key",
+                "direction" : "in",
+                "op" : "copy",
+                "line" : 0,
+                "dashedLine" : false,
+                "inType" : "string",
+                "outType" : "string",
+                "inTypePath" : "document/string",
+                "outTypePath" : "documentList/string"
+              }, {
+                "inputPath" : "containerParams/credential_secret",
+                "outputPath" : "inputDocList/credential_secret",
+                "inpJsTree" : "#launching_arrow_jsTree",
+                "outpJsTree" : "#landing_arrow_jsTree_function",
+                "INPath" : "containerParams/credential_secret",
+                "OUTPath" : "inputDocList/#0/credential_secret",
+                "direction" : "in",
+                "op" : "copy",
+                "line" : 0,
+                "dashedLine" : false,
+                "inType" : "string",
+                "outType" : "string",
+                "inTypePath" : "document/string",
+                "outTypePath" : "documentList/string"
+              }, {
+                "inputPath" : "containerParams/data_center_region",
+                "outputPath" : "inputDocList/data_center_region",
+                "inpJsTree" : "#launching_arrow_jsTree",
+                "outpJsTree" : "#landing_arrow_jsTree_function",
+                "INPath" : "containerParams/data_center_region",
+                "OUTPath" : "inputDocList/#0/data_center_region",
+                "direction" : "in",
+                "op" : "copy",
+                "line" : 0,
+                "dashedLine" : false,
+                "inType" : "string",
+                "outType" : "string",
+                "inTypePath" : "document/string",
+                "outTypePath" : "documentList/string"
+              }, {
+                "inputPath" : "containerParams/protocol",
+                "outputPath" : "inputDocList/protocol",
+                "inpJsTree" : "#launching_arrow_jsTree",
+                "outpJsTree" : "#landing_arrow_jsTree_function",
+                "INPath" : "containerParams/protocol",
+                "OUTPath" : "inputDocList/#0/protocol",
+                "direction" : "in",
+                "op" : "copy",
+                "line" : 0,
+                "dashedLine" : false,
+                "inType" : "string",
+                "outType" : "string",
+                "inTypePath" : "document/string",
+                "outTypePath" : "documentList/string"
+              }, {
+                "inputPath" : "containerParams/port_mapping",
+                "outputPath" : "inputDocList/port_mapping",
+                "inpJsTree" : "#launching_arrow_jsTree",
+                "outpJsTree" : "#landing_arrow_jsTree_function",
+                "INPath" : "containerParams/port_mapping",
+                "OUTPath" : "inputDocList/#0/port_mapping",
+                "direction" : "in",
+                "op" : "copy",
+                "line" : 0,
+                "dashedLine" : false,
+                "inType" : "string",
+                "outType" : "string",
+                "inTypePath" : "document/string",
+                "outTypePath" : "documentList/string"
+              }, {
+                "inputPath" : "containerParams/aws_acm_arn",
+                "outputPath" : "inputDocList/aws_acm_arn",
+                "inpJsTree" : "#launching_arrow_jsTree",
+                "outpJsTree" : "#landing_arrow_jsTree_function",
+                "INPath" : "containerParams/aws_acm_arn",
+                "OUTPath" : "inputDocList/#0/aws_acm_arn",
+                "direction" : "in",
+                "op" : "copy",
+                "line" : 0,
+                "dashedLine" : false,
+                "inType" : "string",
+                "outType" : "string",
+                "inTypePath" : "document/string",
+                "outTypePath" : "documentList/string"
+              }, {
+                "inputPath" : "containerParams/auto_scaling_min_nodes",
+                "outputPath" : "inputDocList/auto_scaling_min_nodes",
+                "inpJsTree" : "#launching_arrow_jsTree",
+                "outpJsTree" : "#landing_arrow_jsTree_function",
+                "INPath" : "containerParams/auto_scaling_min_nodes",
+                "OUTPath" : "inputDocList/#0/auto_scaling_min_nodes",
+                "direction" : "in",
+                "op" : "copy",
+                "line" : 0,
+                "dashedLine" : false,
+                "inType" : "integer",
+                "outType" : "integer",
+                "inTypePath" : "document/string",
+                "outTypePath" : "documentList/integer"
+              }, {
+                "inputPath" : "containerParams/auto_scaling_max_nodes",
+                "outputPath" : "inputDocList/auto_scaling_max_nodes",
+                "inpJsTree" : "#launching_arrow_jsTree",
+                "outpJsTree" : "#landing_arrow_jsTree_function",
+                "INPath" : "containerParams/auto_scaling_max_nodes",
+                "OUTPath" : "inputDocList/#0/auto_scaling_max_nodes",
+                "direction" : "in",
+                "op" : "copy",
+                "line" : 0,
+                "dashedLine" : false,
+                "inType" : "integer",
+                "outType" : "integer",
+                "inTypePath" : "document/string",
+                "outTypePath" : "documentList/integer"
+              }, {
+                "inputPath" : "containerParams/auto_scaling_cpu_threshold",
+                "outputPath" : "inputDocList/auto_scaling_cpu_threshold",
+                "inpJsTree" : "#launching_arrow_jsTree",
+                "outpJsTree" : "#landing_arrow_jsTree_function",
+                "INPath" : "containerParams/auto_scaling_cpu_threshold",
+                "OUTPath" : "inputDocList/#0/auto_scaling_cpu_threshold",
+                "direction" : "in",
+                "op" : "copy",
+                "line" : 0,
+                "dashedLine" : false,
+                "inType" : "number",
+                "outType" : "number",
+                "inTypePath" : "document/string",
+                "outTypePath" : "documentList/number"
+              }, {
+                "inputPath" : "containerParams/vpcId",
+                "outputPath" : "inputDocList/vpc_id",
+                "inpJsTree" : "#launching_arrow_jsTree",
+                "outpJsTree" : "#landing_arrow_jsTree_function",
+                "INPath" : "containerParams/vpcId",
+                "OUTPath" : "inputDocList/#0/vpc_id",
+                "direction" : "in",
+                "op" : "copy",
+                "line" : 0,
+                "dashedLine" : false,
+                "inType" : "string",
+                "outType" : "string",
+                "inTypePath" : "document/string",
+                "outTypePath" : "documentList/string"
+              }, {
+                "inputPath" : "containerParams/deploy",
+                "outputPath" : "inputDocList/deployed",
+                "inpJsTree" : "#launching_arrow_jsTree",
+                "outpJsTree" : "#landing_arrow_jsTree_function",
+                "INPath" : "containerParams/deploy",
+                "OUTPath" : "inputDocList/#0/deployed",
+                "direction" : "in",
+                "op" : "copy",
+                "line" : 0,
+                "dashedLine" : false,
+                "inType" : "boolean",
+                "outType" : "boolean",
+                "inTypePath" : "document/boolean",
+                "outTypePath" : "documentList/boolean"
+              }, {
+                "inputPath" : "keys",
+                "outputPath" : "customer_id",
+                "inpJsTree" : "#launching_arrow_jsTree_function",
+                "outpJsTree" : "#landing_arrow_jsTree",
+                "INPath" : "keys/#0",
+                "OUTPath" : "customer_id",
+                "direction" : "out",
+                "op" : "copy",
+                "line" : 0,
+                "dashedLine" : false,
+                "inType" : "stringList",
+                "outType" : "string",
+                "inTypePath" : "stringList",
+                "outTypePath" : "string"
+              }, {
+                "inputPath" : "containerParams/dns_mapping",
+                "outputPath" : "inputDocList/dns_mapping",
+                "inpJsTree" : "#launching_arrow_jsTree",
+                "outpJsTree" : "#landing_arrow_jsTree_function",
+                "INPath" : "containerParams/dns_mapping",
+                "OUTPath" : "inputDocList/#0/dns_mapping",
+                "direction" : "in",
+                "op" : "copy",
+                "line" : 0,
+                "dashedLine" : false,
+                "inType" : "string",
+                "outType" : "string",
+                "inTypePath" : "document/boolean",
+                "outTypePath" : "documentList/boolean"
+              }, {
+                "inputPath" : "containerParams/domain_registrar",
+                "outputPath" : "inputDocList/domain_registrar",
+                "inpJsTree" : "#launching_arrow_jsTree",
+                "outpJsTree" : "#landing_arrow_jsTree_function",
+                "INPath" : "containerParams/domain_registrar",
+                "OUTPath" : "inputDocList/#0/domain_registrar",
+                "direction" : "in",
+                "op" : "copy",
+                "line" : 0,
+                "dashedLine" : false,
+                "inType" : "string",
+                "outType" : "string",
+                "inTypePath" : "document/string",
+                "outTypePath" : "documentList/string"
+              }, {
+                "inputPath" : "containerParams/sub_domain",
+                "outputPath" : "inputDocList/sub_domain",
+                "inpJsTree" : "#launching_arrow_jsTree",
+                "outpJsTree" : "#landing_arrow_jsTree_function",
+                "INPath" : "containerParams/sub_domain",
+                "OUTPath" : "inputDocList/#0/sub_domain",
+                "direction" : "in",
+                "op" : "copy",
+                "line" : 0,
+                "dashedLine" : false,
+                "inType" : "string",
+                "outType" : "string",
+                "inTypePath" : "document/string",
+                "outTypePath" : "documentList/string"
+              }, {
+                "inputPath" : "containerParams/resource_memory",
+                "outputPath" : "inputDocList/resource_memory",
+                "inpJsTree" : "#launching_arrow_jsTree",
+                "outpJsTree" : "#landing_arrow_jsTree_function",
+                "INPath" : "containerParams/resource_memory",
+                "OUTPath" : "inputDocList/#0/resource_memory",
+                "direction" : "in",
+                "op" : "copy",
+                "line" : 0,
+                "dashedLine" : false,
+                "inType" : "number",
+                "outType" : "number",
+                "inTypePath" : "document/string",
+                "outTypePath" : "documentList/number"
+              }, {
+                "inputPath" : "containerParams/resource_cups",
+                "outputPath" : "inputDocList/resource_cups",
+                "inpJsTree" : "#launching_arrow_jsTree",
+                "outpJsTree" : "#landing_arrow_jsTree_function",
+                "INPath" : "containerParams/resource_cups",
+                "OUTPath" : "inputDocList/#0/resource_cups",
+                "direction" : "in",
+                "op" : "copy",
+                "line" : 0,
+                "dashedLine" : false,
+                "inType" : "number",
+                "outType" : "number",
+                "inTypePath" : "document/string",
+                "outTypePath" : "documentList/number"
+              }, {
+                "inputPath" : "containerParams/credential_id",
+                "outputPath" : "inputDocList/credential_id",
+                "inpJsTree" : "#launching_arrow_jsTree",
+                "outpJsTree" : "#landing_arrow_jsTree_function",
+                "INPath" : "containerParams/credential_id",
+                "OUTPath" : "inputDocList/#0/credential_id",
+                "direction" : "in",
+                "op" : "copy",
+                "line" : 0,
+                "dashedLine" : false,
+                "inType" : "integer",
+                "outType" : "integer",
+                "inTypePath" : "document/integer",
+                "outTypePath" : "documentList/integer"
+              }, {
+                "inputPath" : "containerParams/tenant",
+                "outputPath" : "inputDocList/tenant",
+                "inpJsTree" : "#launching_arrow_jsTree",
+                "outpJsTree" : "#landing_arrow_jsTree_function",
+                "INPath" : "containerParams/tenant",
+                "OUTPath" : "inputDocList/#0/tenant",
+                "direction" : "in",
+                "op" : "copy",
+                "line" : 0,
+                "dashedLine" : false,
+                "inType" : "string",
+                "outType" : "string",
+                "inTypePath" : "document/string",
+                "outTypePath" : "documentList/string"
+              }, {
+                "inputPath" : "success",
+                "outputPath" : "status",
+                "inpJsTree" : "#launching_arrow_jsTree_function",
+                "outpJsTree" : "#landing_arrow_jsTree",
+                "INPath" : "success",
+                "OUTPath" : "status",
+                "direction" : "out",
+                "op" : "copy",
+                "line" : 0,
+                "dashedLine" : false,
+                "inType" : "boolean",
+                "outType" : "boolean",
+                "inTypePath" : "boolean",
+                "outTypePath" : "boolean"
+              }, {
+                "inputPath" : "containerParams/api_key",
+                "outputPath" : "inputDocList/api_key",
+                "inpJsTree" : "#launching_arrow_jsTree",
+                "outpJsTree" : "#landing_arrow_jsTree_function",
+                "INPath" : "containerParams/api_key",
+                "OUTPath" : "inputDocList/#0/api_key",
+                "direction" : "in",
+                "op" : "copy",
+                "line" : 0,
+                "dashedLine" : false,
+                "inType" : "string",
+                "outType" : "string",
+                "inTypePath" : "document/string",
+                "outTypePath" : "documentList/string"
+              }, {
+                "inputPath" : "error",
+                "outputPath" : "error",
+                "inpJsTree" : "#launching_arrow_jsTree_function",
+                "outpJsTree" : "#landing_arrow_jsTree",
+                "INPath" : "error",
+                "OUTPath" : "error",
+                "direction" : "out",
+                "op" : "copy",
+                "line" : 0,
+                "dashedLine" : false,
+                "inType" : "string",
+                "outType" : "string",
+                "inTypePath" : "string",
+                "outTypePath" : "string"
+              }, {
+                "inputPath" : "rows",
+                "outputPath" : "rows",
+                "inpJsTree" : "#launching_arrow_jsTree_function",
+                "outpJsTree" : "#landing_arrow_jsTree",
+                "INPath" : "rows",
+                "OUTPath" : "rows",
+                "direction" : "out",
+                "op" : "copy",
+                "line" : 0,
+                "dashedLine" : false,
+                "inType" : "integer",
+                "outType" : "integer",
+                "inTypePath" : "integer",
+                "outTypePath" : "integer"
+              }, {
+                "inputPath" : "outputDocList",
+                "outputPath" : "outputDocList",
+                "inpJsTree" : "#launching_arrow_jsTree_function",
+                "outpJsTree" : "#landing_arrow_jsTree",
+                "INPath" : "outputDocList",
+                "OUTPath" : "outputDocList",
+                "direction" : "out",
+                "op" : "copy",
+                "line" : 0,
+                "dashedLine" : false,
+                "inType" : "documentList",
+                "outType" : "documentList",
+                "inTypePath" : "documentList",
+                "outTypePath" : "documentList"
+              } ],
+              "dropList" : [ {
+                "path" : "inputDocList",
+                "typePath" : "documentList"
+              } ],
+              "createList" : [ ],
+              "serviceType" : "sql",
+              "guid" : "4d865d14-0f95-4dfb-9304-5b55c1b6a9cd",
+              "fqn" : "packages/middleware/pub/environments/adapter/services/DML/insertEnvironments"
+            },
+            "children" : [ ],
+            "type" : "invoke"
+          }, {
+            "id" : "j1_28",
+            "text" : "Invoke",
+            "li_attr" : {
+              "id" : "j1_28"
+            },
+            "a_attr" : {
+              "href" : "javascript:void(0)",
+              "id" : "j1_28_anchor"
+            },
+            "state" : {
+              "loaded" : true,
+              "opened" : false,
+              "selected" : false,
+              "disabled" : false
+            },
+            "data" : {
+              "transformers" : [ {
+                "op" : "copy",
+                "from" : "/zoneid",
+                "to" : "/inputDocList/0/name",
+                "inTypePath" : "string",
+                "outTypePath" : "documentList/string",
+                "direction" : "in"
+              }, {
+                "op" : "copy",
+                "from" : "/containerParams/domain_registrar_zone_id",
+                "to" : "/inputDocList/0/value",
+                "inTypePath" : "document/string",
+                "outTypePath" : "documentList/string",
+                "direction" : "in"
+              }, {
+                "op" : "copy",
+                "from" : "/customer_id",
+                "to" : "/inputDocList/0/environment_id",
+                "inTypePath" : "string",
+                "outTypePath" : "documentList/string",
+                "direction" : "in"
+              }, {
+                "op" : "copy",
+                "from" : "/outputDocList",
+                "to" : "/outputDocList",
+                "inTypePath" : "documentList",
+                "outTypePath" : "documentList",
+                "direction" : "out"
+              }, {
+                "op" : "copy",
+                "from" : "/rows",
+                "to" : "/rows",
+                "inTypePath" : "integer",
+                "outTypePath" : "integer",
+                "direction" : "out"
+              }, {
+                "op" : "copy",
+                "from" : "/success",
+                "to" : "/success",
+                "inTypePath" : "boolean",
+                "outTypePath" : "boolean",
+                "direction" : "out"
+              }, {
+                "op" : "copy",
+                "from" : "/error",
+                "to" : "/msg",
+                "inTypePath" : "string",
+                "outTypePath" : "string",
+                "direction" : "out"
+              }, {
+                "op" : "copy",
+                "from" : "/keys",
+                "to" : "/keys",
+                "inTypePath" : "stringList",
+                "outTypePath" : "stringList",
+                "direction" : "out"
+              } ],
+              "lines" : [ {
+                "inputPath" : "zoneid",
+                "outputPath" : "inputDocList/name",
+                "inpJsTree" : "#launching_arrow_jsTree",
+                "outpJsTree" : "#landing_arrow_jsTree_function",
+                "INPath" : "zoneid",
+                "OUTPath" : "inputDocList/#0/name",
+                "direction" : "in",
+                "op" : "copy",
+                "line" : 0,
+                "dashedLine" : false,
+                "inType" : "string",
+                "outType" : "string",
+                "inTypePath" : "string",
+                "outTypePath" : "documentList/string"
+              }, {
+                "inputPath" : "containerParams/domain_registrar_zone_id",
+                "outputPath" : "inputDocList/value",
+                "inpJsTree" : "#launching_arrow_jsTree",
+                "outpJsTree" : "#landing_arrow_jsTree_function",
+                "INPath" : "containerParams/domain_registrar_zone_id",
+                "OUTPath" : "inputDocList/#0/value",
+                "direction" : "in",
+                "op" : "copy",
+                "line" : 0,
+                "dashedLine" : false,
+                "inType" : "string",
+                "outType" : "string",
+                "inTypePath" : "document/string",
+                "outTypePath" : "documentList/string"
+              }, {
+                "inputPath" : "customer_id",
+                "outputPath" : "inputDocList/environment_id",
+                "inpJsTree" : "#launching_arrow_jsTree",
+                "outpJsTree" : "#landing_arrow_jsTree_function",
+                "INPath" : "customer_id",
+                "OUTPath" : "inputDocList/#0/environment_id",
+                "direction" : "in",
+                "op" : "copy",
+                "line" : 0,
+                "dashedLine" : false,
+                "inType" : "string",
+                "outType" : "string",
+                "inTypePath" : "string",
+                "outTypePath" : "documentList/string"
+              }, {
+                "inputPath" : "outputDocList",
+                "outputPath" : "outputDocList",
+                "inpJsTree" : "#launching_arrow_jsTree_function",
+                "outpJsTree" : "#landing_arrow_jsTree",
+                "INPath" : "outputDocList",
+                "OUTPath" : "outputDocList",
+                "direction" : "out",
+                "op" : "copy",
+                "line" : 0,
+                "dashedLine" : false,
+                "inType" : "documentList",
+                "outType" : "documentList",
+                "inTypePath" : "documentList",
+                "outTypePath" : "documentList"
+              }, {
+                "inputPath" : "rows",
+                "outputPath" : "rows",
+                "inpJsTree" : "#launching_arrow_jsTree_function",
+                "outpJsTree" : "#landing_arrow_jsTree",
+                "INPath" : "rows",
+                "OUTPath" : "rows",
+                "direction" : "out",
+                "op" : "copy",
+                "line" : 0,
+                "dashedLine" : false,
+                "inType" : "integer",
+                "outType" : "integer",
+                "inTypePath" : "integer",
+                "outTypePath" : "integer"
+              }, {
+                "inputPath" : "success",
+                "outputPath" : "success",
+                "inpJsTree" : "#launching_arrow_jsTree_function",
+                "outpJsTree" : "#landing_arrow_jsTree",
+                "INPath" : "success",
+                "OUTPath" : "success",
+                "direction" : "out",
+                "op" : "copy",
+                "line" : 0,
+                "dashedLine" : false,
+                "inType" : "boolean",
+                "outType" : "boolean",
+                "inTypePath" : "boolean",
+                "outTypePath" : "boolean"
+              }, {
+                "inputPath" : "error",
+                "outputPath" : "msg",
+                "inpJsTree" : "#launching_arrow_jsTree_function",
+                "outpJsTree" : "#landing_arrow_jsTree",
+                "INPath" : "error",
+                "OUTPath" : "msg",
+                "direction" : "out",
+                "op" : "copy",
+                "line" : 0,
+                "dashedLine" : false,
+                "inType" : "string",
+                "outType" : "string",
+                "inTypePath" : "string",
+                "outTypePath" : "string"
+              }, {
+                "inputPath" : "keys",
+                "outputPath" : "keys",
+                "inpJsTree" : "#launching_arrow_jsTree_function",
+                "outpJsTree" : "#landing_arrow_jsTree",
+                "INPath" : "keys",
+                "OUTPath" : "keys",
+                "direction" : "out",
+                "op" : "copy",
+                "line" : 0,
+                "dashedLine" : false,
+                "inType" : "stringList",
+                "outType" : "stringList",
+                "inTypePath" : "stringList",
+                "outTypePath" : "stringList"
+              } ],
+              "dropList" : [ ],
+              "createList" : [ ],
+              "serviceType" : "sql",
+              "guid" : "3b238688-2af0-4899-929b-a2ad02afba59",
+              "fqn" : "packages/middleware/pub/environments/adapter/services/DML/addEnvironmentMeta"
+            },
+            "children" : [ ],
+            "type" : "invoke"
+          }, {
+            "id" : "j1_17",
+            "text" : "Foreach",
+            "li_attr" : {
+              "id" : "j1_17"
+            },
+            "a_attr" : {
+              "href" : "javascript:void(0)",
+              "id" : "j1_17_anchor"
+            },
+            "state" : {
+              "loaded" : true,
+              "opened" : true,
+              "selected" : false,
+              "disabled" : false
+            },
+            "data" : {
+              "inArray" : "containerParams/subnets",
+              "guid" : "26271b86-c5c3-4602-96a6-6a6d0a45a4cc"
+            },
+            "children" : [ {
+              "id" : "j1_16",
+              "text" : "Invoke",
+              "li_attr" : {
+                "id" : "j1_16"
+              },
+              "a_attr" : {
+                "href" : "javascript:void(0)",
+                "id" : "j1_16_anchor"
+              },
+              "state" : {
+                "loaded" : true,
+                "opened" : false,
+                "selected" : false,
+                "disabled" : false
+              },
+              "data" : {
+                "transformers" : [ {
+                  "op" : "copy",
+                  "from" : "/containerParams/subnets",
+                  "to" : "/inputDocList/0/subnet_id",
+                  "inTypePath" : "document/string",
+                  "outTypePath" : "documentList/string",
+                  "direction" : "in"
+                }, {
+                  "op" : "copy",
+                  "from" : "/customer_id",
+                  "to" : "/inputDocList/0/environment_id",
+                  "inTypePath" : "string",
+                  "outTypePath" : "documentList/string",
+                  "direction" : "in"
+                }, {
+                  "op" : "copy",
+                  "from" : "/outputDocList",
+                  "to" : "/outputDocList",
+                  "inTypePath" : "documentList",
+                  "outTypePath" : "documentList",
+                  "direction" : "out"
+                }, {
+                  "op" : "copy",
+                  "from" : "/rows",
+                  "to" : "/rows",
+                  "inTypePath" : "integer",
+                  "outTypePath" : "integer",
+                  "direction" : "out"
+                }, {
+                  "op" : "copy",
+                  "from" : "/success",
+                  "to" : "/success",
+                  "inTypePath" : "boolean",
+                  "outTypePath" : "boolean",
+                  "direction" : "out"
+                }, {
+                  "op" : "copy",
+                  "from" : "/error",
+                  "to" : "/error",
+                  "inTypePath" : "string",
+                  "outTypePath" : "string",
+                  "direction" : "out"
+                } ],
+                "lines" : [ {
+                  "inputPath" : "containerParams/subnets",
+                  "outputPath" : "inputDocList/subnet_id",
+                  "inpJsTree" : "#launching_arrow_jsTree",
+                  "outpJsTree" : "#landing_arrow_jsTree_function",
+                  "INPath" : "containerParams/subnets",
+                  "OUTPath" : "inputDocList/#0/subnet_id",
+                  "direction" : "in",
+                  "op" : "copy",
+                  "line" : 0,
+                  "dashedLine" : false,
+                  "inType" : "string",
+                  "outType" : "string",
+                  "inTypePath" : "document/string",
+                  "outTypePath" : "documentList/string"
+                }, {
+                  "inputPath" : "customer_id",
+                  "outputPath" : "inputDocList/environment_id",
+                  "inpJsTree" : "#launching_arrow_jsTree",
+                  "outpJsTree" : "#landing_arrow_jsTree_function",
+                  "INPath" : "customer_id",
+                  "OUTPath" : "inputDocList/#0/environment_id",
+                  "direction" : "in",
+                  "op" : "copy",
+                  "line" : 0,
+                  "dashedLine" : false,
+                  "inType" : "string",
+                  "outType" : "string",
+                  "inTypePath" : "string",
+                  "outTypePath" : "documentList/string"
+                }, {
+                  "inputPath" : "outputDocList",
+                  "outputPath" : "outputDocList",
+                  "inpJsTree" : "#launching_arrow_jsTree_function",
+                  "outpJsTree" : "#landing_arrow_jsTree",
+                  "INPath" : "outputDocList",
+                  "OUTPath" : "outputDocList",
+                  "direction" : "out",
+                  "op" : "copy",
+                  "line" : 0,
+                  "dashedLine" : false,
+                  "inType" : "documentList",
+                  "outType" : "documentList",
+                  "inTypePath" : "documentList",
+                  "outTypePath" : "documentList"
+                }, {
+                  "inputPath" : "rows",
+                  "outputPath" : "rows",
+                  "inpJsTree" : "#launching_arrow_jsTree_function",
+                  "outpJsTree" : "#landing_arrow_jsTree",
+                  "INPath" : "rows",
+                  "OUTPath" : "rows",
+                  "direction" : "out",
+                  "op" : "copy",
+                  "line" : 0,
+                  "dashedLine" : false,
+                  "inType" : "integer",
+                  "outType" : "integer",
+                  "inTypePath" : "integer",
+                  "outTypePath" : "integer"
+                }, {
+                  "inputPath" : "success",
+                  "outputPath" : "success",
+                  "inpJsTree" : "#launching_arrow_jsTree_function",
+                  "outpJsTree" : "#landing_arrow_jsTree",
+                  "INPath" : "success",
+                  "OUTPath" : "success",
+                  "direction" : "out",
+                  "op" : "copy",
+                  "line" : 0,
+                  "dashedLine" : false,
+                  "inType" : "boolean",
+                  "outType" : "boolean",
+                  "inTypePath" : "boolean",
+                  "outTypePath" : "boolean"
+                }, {
+                  "inputPath" : "error",
+                  "outputPath" : "error",
+                  "inpJsTree" : "#launching_arrow_jsTree_function",
+                  "outpJsTree" : "#landing_arrow_jsTree",
+                  "INPath" : "error",
+                  "OUTPath" : "error",
+                  "direction" : "out",
+                  "op" : "copy",
+                  "line" : 0,
+                  "dashedLine" : false,
+                  "inType" : "string",
+                  "outType" : "string",
+                  "inTypePath" : "string",
+                  "outTypePath" : "string"
+                } ],
+                "dropList" : [ {
+                  "path" : "customer_id",
+                  "typePath" : "string"
+                } ],
+                "createList" : [ ],
+                "serviceType" : "sql",
+                "guid" : "bd4ddb65-7524-4149-8837-0c7a75056365",
+                "fqn" : "packages/middleware/pub/environments/adapter/services/DML/insertVpcSubnet"
+              },
+              "children" : [ ],
+              "type" : "invoke"
+            } ],
+            "type" : "foreach"
+          }, {
+            "id" : "j1_3",
+            "text" : "SWITCH",
+            "li_attr" : {
+              "id" : "j1_3"
+            },
+            "a_attr" : {
+              "href" : "javascript:void(0)",
+              "id" : "j1_3_anchor"
+            },
+            "state" : {
+              "loaded" : true,
+              "opened" : true,
+              "selected" : false,
+              "disabled" : false
+            },
+            "data" : {
+              "switch" : "containerParams/deploy",
+              "guid" : "83ae7371-6011-4c6f-8224-2ed80c98e31e"
+            },
+            "children" : [ {
+              "id" : "j1_19",
+              "text" : "CASE",
+              "li_attr" : {
+                "id" : "j1_19"
+              },
+              "a_attr" : {
+                "href" : "javascript:void(0)",
+                "id" : "j1_19_anchor"
+              },
+              "state" : {
+                "loaded" : true,
+                "opened" : true,
+                "selected" : false,
+                "disabled" : false
+              },
+              "data" : {
+                "case" : "#default",
+                "evaluate" : false,
+                "guid" : "faf555b8-19cf-4302-867e-6fd1924d082e"
+              },
+              "children" : [ {
+                "id" : "j1_21",
+                "text" : "Transformer",
+                "li_attr" : {
+                  "id" : "j1_21"
+                },
+                "a_attr" : {
+                  "href" : "javascript:void(0)",
+                  "id" : "j1_21_anchor"
+                },
+                "state" : {
+                  "loaded" : true,
+                  "opened" : false,
+                  "selected" : false,
+                  "disabled" : false
+                },
+                "data" : {
+                  "transformers" : [ {
+                    "op" : "copy",
+                    "from" : "/containerParams/deploy",
+                    "to" : "/doDeployed",
+                    "inTypePath" : "document/boolean",
+                    "outTypePath" : "boolean"
+                  } ],
+                  "lines" : [ {
+                    "inputPath" : "containerParams/deploy",
+                    "outputPath" : "doDeployed",
+                    "inpJsTree" : "#launching_arrow_jsTree",
+                    "outpJsTree" : "#landing_arrow_jsTree",
+                    "INPath" : "containerParams/deploy",
+                    "OUTPath" : "doDeployed",
+                    "op" : "copy",
+                    "line" : 0,
+                    "dashedLine" : false,
+                    "inType" : "boolean",
+                    "outType" : "boolean",
+                    "inTypePath" : "document/boolean",
+                    "outTypePath" : "boolean"
+                  } ],
+                  "dropList" : [ ],
+                  "createList" : [ ],
+                  "guid" : "d277fc5d-0be3-471a-a69e-18009b333723"
+                },
+                "children" : [ ],
+                "type" : "transformer"
+              } ],
+              "type" : "group"
+            }, {
+              "id" : "j1_4",
+              "text" : "CASE",
+              "li_attr" : {
+                "id" : "j1_4"
+              },
+              "a_attr" : {
+                "href" : "javascript:void(0)",
+                "id" : "j1_4_anchor"
+              },
+              "state" : {
+                "loaded" : true,
+                "opened" : true,
+                "selected" : false,
+                "disabled" : false
+              },
+              "data" : {
+                "switch" : "",
+                "case" : "true",
+                "guid" : "7177a579-be35-4c3c-b4f0-faf069c59ae2"
+              },
+              "children" : [ {
+                "id" : "j1_29",
+                "text" : "Invoke",
+                "li_attr" : {
+                  "id" : "j1_29"
+                },
+                "a_attr" : {
+                  "href" : "javascript:void(0)",
+                  "id" : "j1_29_anchor"
+                },
+                "state" : {
+                  "loaded" : true,
+                  "opened" : false,
+                  "selected" : false,
+                  "disabled" : false
+                },
+                "data" : {
+                  "transformers" : [ {
+                    "op" : "copy",
+                    "from" : "/containerParams/credential_id",
+                    "to" : "/inputDocList/0/id",
+                    "inTypePath" : "document/integer",
+                    "outTypePath" : "documentList/integer",
+                    "direction" : "in"
+                  }, {
+                    "op" : "copy",
+                    "from" : "/outputDocList/0/api_username",
+                    "to" : "/containerParams/credential_key",
+                    "inTypePath" : "documentList/string",
+                    "outTypePath" : "document/string",
+                    "direction" : "out"
+                  }, {
+                    "op" : "copy",
+                    "from" : "/outputDocList/0/api_password",
+                    "to" : "/containerParams/credential_secret",
+                    "inTypePath" : "documentList/string",
+                    "outTypePath" : "document/string",
+                    "direction" : "out"
+                  }, {
+                    "op" : "copy",
+                    "from" : "/rows",
+                    "to" : "/rows",
+                    "inTypePath" : "integer",
+                    "outTypePath" : "integer",
+                    "direction" : "out"
+                  }, {
+                    "op" : "copy",
+                    "from" : "/success",
+                    "to" : "/success",
+                    "inTypePath" : "boolean",
+                    "outTypePath" : "boolean",
+                    "direction" : "out"
+                  }, {
+                    "op" : "copy",
+                    "from" : "/error",
+                    "to" : "/error",
+                    "inTypePath" : "string",
+                    "outTypePath" : "string",
+                    "direction" : "out"
+                  } ],
+                  "lines" : [ {
+                    "inputPath" : "containerParams/credential_id",
+                    "outputPath" : "inputDocList/id",
+                    "inpJsTree" : "#launching_arrow_jsTree",
+                    "outpJsTree" : "#landing_arrow_jsTree_function",
+                    "INPath" : "containerParams/credential_id",
+                    "OUTPath" : "inputDocList/#0/id",
+                    "direction" : "in",
+                    "op" : "copy",
+                    "line" : 0,
+                    "dashedLine" : false,
+                    "inType" : "integer",
+                    "outType" : "integer",
+                    "inTypePath" : "document/integer",
+                    "outTypePath" : "documentList/integer"
+                  }, {
+                    "inputPath" : "outputDocList/api_username",
+                    "outputPath" : "containerParams/credential_key",
+                    "inpJsTree" : "#launching_arrow_jsTree_function",
+                    "outpJsTree" : "#landing_arrow_jsTree",
+                    "INPath" : "outputDocList/#0/api_username",
+                    "OUTPath" : "containerParams/credential_key",
+                    "direction" : "out",
+                    "op" : "copy",
+                    "line" : 0,
+                    "dashedLine" : false,
+                    "inType" : "string",
+                    "outType" : "string",
+                    "inTypePath" : "documentList/string",
+                    "outTypePath" : "document/string"
+                  }, {
+                    "inputPath" : "outputDocList/api_password",
+                    "outputPath" : "containerParams/credential_secret",
+                    "inpJsTree" : "#launching_arrow_jsTree_function",
+                    "outpJsTree" : "#landing_arrow_jsTree",
+                    "INPath" : "outputDocList/#0/api_password",
+                    "OUTPath" : "containerParams/credential_secret",
+                    "direction" : "out",
+                    "op" : "copy",
+                    "line" : 0,
+                    "dashedLine" : false,
+                    "inType" : "string",
+                    "outType" : "string",
+                    "inTypePath" : "documentList/string",
+                    "outTypePath" : "document/string"
+                  }, {
+                    "inputPath" : "rows",
+                    "outputPath" : "rows",
+                    "inpJsTree" : "#launching_arrow_jsTree_function",
+                    "outpJsTree" : "#landing_arrow_jsTree",
+                    "INPath" : "rows",
+                    "OUTPath" : "rows",
+                    "direction" : "out",
+                    "op" : "copy",
+                    "line" : 0,
+                    "dashedLine" : false,
+                    "inType" : "integer",
+                    "outType" : "integer",
+                    "inTypePath" : "integer",
+                    "outTypePath" : "integer"
+                  }, {
+                    "inputPath" : "success",
+                    "outputPath" : "success",
+                    "inpJsTree" : "#launching_arrow_jsTree_function",
+                    "outpJsTree" : "#landing_arrow_jsTree",
+                    "INPath" : "success",
+                    "OUTPath" : "success",
+                    "direction" : "out",
+                    "op" : "copy",
+                    "line" : 0,
+                    "dashedLine" : false,
+                    "inType" : "boolean",
+                    "outType" : "boolean",
+                    "inTypePath" : "boolean",
+                    "outTypePath" : "boolean"
+                  }, {
+                    "inputPath" : "error",
+                    "outputPath" : "error",
+                    "inpJsTree" : "#launching_arrow_jsTree_function",
+                    "outpJsTree" : "#landing_arrow_jsTree",
+                    "INPath" : "error",
+                    "OUTPath" : "error",
+                    "direction" : "out",
+                    "op" : "copy",
+                    "line" : 0,
+                    "dashedLine" : false,
+                    "inType" : "string",
+                    "outType" : "string",
+                    "inTypePath" : "string",
+                    "outTypePath" : "string"
+                  } ],
+                  "dropList" : [ ],
+                  "createList" : [ ],
+                  "serviceType" : "sql",
+                  "guid" : "b9edcc3d-dc78-47ee-a0a0-55cb4e115e8c",
+                  "fqn" : "packages/middleware/pub/environments/adapter/services/DQL/getCredentialById"
+                },
+                "children" : [ ],
+                "type" : "invoke"
+              }, {
+                "id" : "j1_5",
+                "text" : "Transformer",
+                "li_attr" : {
+                  "id" : "j1_5"
+                },
+                "a_attr" : {
+                  "href" : "javascript:void(0)",
+                  "id" : "j1_5_anchor"
+                },
+                "state" : {
+                  "loaded" : true,
+                  "opened" : false,
+                  "selected" : false,
+                  "disabled" : false
+                },
+                "data" : {
+                  "transformers" : [ ],
+                  "lines" : [ ],
+                  "dropList" : [ ],
+                  "createList" : [ {
+                    "path" : "doDeployed",
+                    "value" : "true",
+                    "typePath" : "boolean"
+                  } ],
+                  "guid" : "db745077-81de-44d8-94fc-6ce8310709c3"
+                },
+                "children" : [ ],
+                "type" : "transformer"
+              }, {
+                "id" : "j1_6",
+                "text" : "Invoke",
+                "li_attr" : {
+                  "id" : "j1_6"
+                },
+                "a_attr" : {
+                  "href" : "javascript:void(0)",
+                  "id" : "j1_6_anchor"
+                },
+                "state" : {
+                  "loaded" : true,
+                  "opened" : false,
+                  "selected" : false,
+                  "disabled" : false
+                },
+                "data" : {
+                  "transformers" : [ {
+                    "op" : "copy",
+                    "from" : "/containerParams/credential_key",
+                    "to" : "/*payload/accessKey",
+                    "inTypePath" : "document/string",
+                    "outTypePath" : "document/string",
+                    "direction" : "in"
+                  }, {
+                    "op" : "copy",
+                    "from" : "/containerParams/credential_secret",
+                    "to" : "/*payload/secret",
+                    "inTypePath" : "document/string",
+                    "outTypePath" : "document/string",
+                    "direction" : "in"
+                  }, {
+                    "op" : "copy",
+                    "from" : "/containerParams/data_center_region",
+                    "to" : "/*payload/region",
+                    "inTypePath" : "document/string",
+                    "outTypePath" : "document/string",
+                    "direction" : "in"
+                  }, {
+                    "op" : "copy",
+                    "from" : "/containerParams/aws_acm_arn",
+                    "to" : "/*payload/certificateArn",
+                    "inTypePath" : "document/string",
+                    "outTypePath" : "document/string",
+                    "direction" : "in"
+                  }, {
+                    "op" : "copy",
+                    "from" : "/containerParams/vpcId",
+                    "to" : "/*payload/vpcId",
+                    "inTypePath" : "document/string",
+                    "outTypePath" : "document/string",
+                    "direction" : "in"
+                  }, {
+                    "op" : "copy",
+                    "from" : "/containerParams/subnets",
+                    "to" : "/*payload/subnets",
+                    "inTypePath" : "document/stringList",
+                    "outTypePath" : "document/stringList",
+                    "direction" : "in"
+                  }, {
+                    "op" : "copy",
+                    "from" : "/cf_response",
+                    "to" : "/cf_response",
+                    "inTypePath" : "document",
+                    "outTypePath" : "document",
+                    "direction" : "out"
+                  }, {
+                    "op" : "copy",
+                    "from" : "/template",
+                    "to" : "/template",
+                    "inTypePath" : "string",
+                    "outTypePath" : "string",
+                    "direction" : "out"
+                  }, {
+                    "op" : "copy",
+                    "from" : "/containerParams/name",
+                    "to" : "/*payload/stackName",
+                    "inTypePath" : "document/string",
+                    "outTypePath" : "document/string",
+                    "direction" : "in"
+                  }, {
+                    "op" : "copy",
+                    "from" : "/containerParams/auto_scaling_min_nodes",
+                    "to" : "/*payload/auto_scaling_min_nodes",
+                    "inTypePath" : "document/string",
+                    "outTypePath" : "document/string",
+                    "direction" : "in"
+                  }, {
+                    "op" : "copy",
+                    "from" : "/containerParams/auto_scaling_max_nodes",
+                    "to" : "/*payload/auto_scaling_max_nodes",
+                    "inTypePath" : "document/string",
+                    "outTypePath" : "document/string",
+                    "direction" : "in"
+                  }, {
+                    "op" : "copy",
+                    "from" : "/containerParams/auto_scaling_cpu_threshold",
+                    "to" : "/*payload/auto_scaling_cpu_threshold",
+                    "inTypePath" : "document/string",
+                    "outTypePath" : "document/string",
+                    "direction" : "in"
+                  }, {
+                    "op" : "copy",
+                    "from" : "/containerParams/resource_cups",
+                    "to" : "/*payload/resource_cups",
+                    "inTypePath" : "document/string",
+                    "outTypePath" : "document/string",
+                    "direction" : "in"
+                  }, {
+                    "op" : "copy",
+                    "from" : "/containerParams/resource_memory",
+                    "to" : "/*payload/resource_memory",
+                    "inTypePath" : "document/string",
+                    "outTypePath" : "document/string",
+                    "direction" : "in"
+                  }, {
+                    "op" : "copy",
+                    "from" : "/efs",
+                    "to" : "/efs",
+                    "inTypePath" : "document",
+                    "outTypePath" : "document",
+                    "direction" : "out"
+                  } ],
+                  "lines" : [ {
+                    "inputPath" : "containerParams/credential_key",
+                    "outputPath" : "*payload/accessKey",
+                    "inpJsTree" : "#launching_arrow_jsTree",
+                    "outpJsTree" : "#landing_arrow_jsTree_function",
+                    "INPath" : "containerParams/credential_key",
+                    "OUTPath" : "*payload/accessKey",
+                    "direction" : "in",
+                    "op" : "copy",
+                    "line" : 0,
+                    "dashedLine" : false,
+                    "inType" : "string",
+                    "outType" : "string",
+                    "inTypePath" : "document/string",
+                    "outTypePath" : "document/string"
+                  }, {
+                    "inputPath" : "containerParams/credential_secret",
+                    "outputPath" : "*payload/secret",
+                    "inpJsTree" : "#launching_arrow_jsTree",
+                    "outpJsTree" : "#landing_arrow_jsTree_function",
+                    "INPath" : "containerParams/credential_secret",
+                    "OUTPath" : "*payload/secret",
+                    "direction" : "in",
+                    "op" : "copy",
+                    "line" : 0,
+                    "dashedLine" : false,
+                    "inType" : "string",
+                    "outType" : "string",
+                    "inTypePath" : "document/string",
+                    "outTypePath" : "document/string"
+                  }, {
+                    "inputPath" : "containerParams/data_center_region",
+                    "outputPath" : "*payload/region",
+                    "inpJsTree" : "#launching_arrow_jsTree",
+                    "outpJsTree" : "#landing_arrow_jsTree_function",
+                    "INPath" : "containerParams/data_center_region",
+                    "OUTPath" : "*payload/region",
+                    "direction" : "in",
+                    "op" : "copy",
+                    "line" : 0,
+                    "dashedLine" : false,
+                    "inType" : "string",
+                    "outType" : "string",
+                    "inTypePath" : "document/string",
+                    "outTypePath" : "document/string"
+                  }, {
+                    "inputPath" : "containerParams/aws_acm_arn",
+                    "outputPath" : "*payload/certificateArn",
+                    "inpJsTree" : "#launching_arrow_jsTree",
+                    "outpJsTree" : "#landing_arrow_jsTree_function",
+                    "INPath" : "containerParams/aws_acm_arn",
+                    "OUTPath" : "*payload/certificateArn",
+                    "direction" : "in",
+                    "op" : "copy",
+                    "line" : 0,
+                    "dashedLine" : false,
+                    "inType" : "string",
+                    "outType" : "string",
+                    "inTypePath" : "document/string",
+                    "outTypePath" : "document/string"
+                  }, {
+                    "inputPath" : "containerParams/vpcId",
+                    "outputPath" : "*payload/vpcId",
+                    "inpJsTree" : "#launching_arrow_jsTree",
+                    "outpJsTree" : "#landing_arrow_jsTree_function",
+                    "INPath" : "containerParams/vpcId",
+                    "OUTPath" : "*payload/vpcId",
+                    "direction" : "in",
+                    "op" : "copy",
+                    "line" : 0,
+                    "dashedLine" : false,
+                    "inType" : "string",
+                    "outType" : "string",
+                    "inTypePath" : "document/string",
+                    "outTypePath" : "document/string"
+                  }, {
+                    "inputPath" : "containerParams/subnets",
+                    "outputPath" : "*payload/subnets",
+                    "inpJsTree" : "#launching_arrow_jsTree",
+                    "outpJsTree" : "#landing_arrow_jsTree_function",
+                    "INPath" : "containerParams/subnets",
+                    "OUTPath" : "*payload/subnets",
+                    "direction" : "in",
+                    "op" : "copy",
+                    "line" : 0,
+                    "dashedLine" : false,
+                    "inType" : "stringList",
+                    "outType" : "stringList",
+                    "inTypePath" : "document/stringList",
+                    "outTypePath" : "document/stringList"
+                  }, {
+                    "inputPath" : "cf_response",
+                    "outputPath" : "cf_response",
+                    "inpJsTree" : "#launching_arrow_jsTree_function",
+                    "outpJsTree" : "#landing_arrow_jsTree",
+                    "INPath" : "cf_response",
+                    "OUTPath" : "cf_response",
+                    "direction" : "out",
+                    "op" : "copy",
+                    "line" : 0,
+                    "dashedLine" : false,
+                    "inType" : "document",
+                    "outType" : "document",
+                    "inTypePath" : "document",
+                    "outTypePath" : "document"
+                  }, {
+                    "inputPath" : "template",
+                    "outputPath" : "template",
+                    "inpJsTree" : "#launching_arrow_jsTree_function",
+                    "outpJsTree" : "#landing_arrow_jsTree",
+                    "INPath" : "template",
+                    "OUTPath" : "template",
+                    "direction" : "out",
+                    "op" : "copy",
+                    "line" : 0,
+                    "dashedLine" : false,
+                    "inType" : "string",
+                    "outType" : "string",
+                    "inTypePath" : "string",
+                    "outTypePath" : "string"
+                  }, {
+                    "inputPath" : "containerParams/name",
+                    "outputPath" : "*payload/stackName",
+                    "inpJsTree" : "#launching_arrow_jsTree",
+                    "outpJsTree" : "#landing_arrow_jsTree_function",
+                    "INPath" : "containerParams/name",
+                    "OUTPath" : "*payload/stackName",
+                    "direction" : "in",
+                    "op" : "copy",
+                    "line" : 0,
+                    "dashedLine" : false,
+                    "inType" : "string",
+                    "outType" : "string",
+                    "inTypePath" : "document/string",
+                    "outTypePath" : "document/string"
+                  }, {
+                    "inputPath" : "containerParams/auto_scaling_min_nodes",
+                    "outputPath" : "*payload/auto_scaling_min_nodes",
+                    "inpJsTree" : "#launching_arrow_jsTree",
+                    "outpJsTree" : "#landing_arrow_jsTree_function",
+                    "INPath" : "containerParams/auto_scaling_min_nodes",
+                    "OUTPath" : "*payload/auto_scaling_min_nodes",
+                    "direction" : "in",
+                    "op" : "copy",
+                    "line" : 0,
+                    "dashedLine" : false,
+                    "inType" : "string",
+                    "outType" : "string",
+                    "inTypePath" : "document/string",
+                    "outTypePath" : "document/string"
+                  }, {
+                    "inputPath" : "containerParams/auto_scaling_max_nodes",
+                    "outputPath" : "*payload/auto_scaling_max_nodes",
+                    "inpJsTree" : "#launching_arrow_jsTree",
+                    "outpJsTree" : "#landing_arrow_jsTree_function",
+                    "INPath" : "containerParams/auto_scaling_max_nodes",
+                    "OUTPath" : "*payload/auto_scaling_max_nodes",
+                    "direction" : "in",
+                    "op" : "copy",
+                    "line" : 0,
+                    "dashedLine" : false,
+                    "inType" : "string",
+                    "outType" : "string",
+                    "inTypePath" : "document/string",
+                    "outTypePath" : "document/string"
+                  }, {
+                    "inputPath" : "containerParams/auto_scaling_cpu_threshold",
+                    "outputPath" : "*payload/auto_scaling_cpu_threshold",
+                    "inpJsTree" : "#launching_arrow_jsTree",
+                    "outpJsTree" : "#landing_arrow_jsTree_function",
+                    "INPath" : "containerParams/auto_scaling_cpu_threshold",
+                    "OUTPath" : "*payload/auto_scaling_cpu_threshold",
+                    "direction" : "in",
+                    "op" : "copy",
+                    "line" : 0,
+                    "dashedLine" : false,
+                    "inType" : "string",
+                    "outType" : "string",
+                    "inTypePath" : "document/string",
+                    "outTypePath" : "document/string"
+                  }, {
+                    "inputPath" : "containerParams/resource_cups",
+                    "outputPath" : "*payload/resource_cups",
+                    "inpJsTree" : "#launching_arrow_jsTree",
+                    "outpJsTree" : "#landing_arrow_jsTree_function",
+                    "INPath" : "containerParams/resource_cups",
+                    "OUTPath" : "*payload/resource_cups",
+                    "direction" : "in",
+                    "op" : "copy",
+                    "line" : 0,
+                    "dashedLine" : false,
+                    "inType" : "string",
+                    "outType" : "string",
+                    "inTypePath" : "document/string",
+                    "outTypePath" : "document/string"
+                  }, {
+                    "inputPath" : "containerParams/resource_memory",
+                    "outputPath" : "*payload/resource_memory",
+                    "inpJsTree" : "#launching_arrow_jsTree",
+                    "outpJsTree" : "#landing_arrow_jsTree_function",
+                    "INPath" : "containerParams/resource_memory",
+                    "OUTPath" : "*payload/resource_memory",
+                    "direction" : "in",
+                    "op" : "copy",
+                    "line" : 0,
+                    "dashedLine" : false,
+                    "inType" : "string",
+                    "outType" : "string",
+                    "inTypePath" : "document/string",
+                    "outTypePath" : "document/string"
+                  }, {
+                    "inputPath" : "efs",
+                    "outputPath" : "efs",
+                    "inpJsTree" : "#launching_arrow_jsTree_function",
+                    "outpJsTree" : "#landing_arrow_jsTree",
+                    "INPath" : "efs",
+                    "OUTPath" : "efs",
+                    "direction" : "out",
+                    "op" : "copy",
+                    "line" : 0,
+                    "dashedLine" : false,
+                    "inType" : "document",
+                    "outType" : "document",
+                    "inTypePath" : "document",
+                    "outTypePath" : "document"
+                  } ],
+                  "dropList" : [ {
+                    "path" : "stackName",
+                    "typePath" : "string"
+                  }, {
+                    "path" : "doDeployed",
+                    "typePath" : "boolean"
+                  } ],
+                  "createList" : [ ],
+                  "serviceType" : "api",
+                  "guid" : "ffc99514-89a5-4c9b-bb3d-e8fb703326fb",
+                  "fqn" : "packages/Wrapper/AWS/Cloudformation/CreateStack"
+                },
+                "children" : [ ],
+                "type" : "invoke"
+              }, {
+                "id" : "j1_11",
+                "text" : "SWITCH",
+                "li_attr" : {
+                  "id" : "j1_11"
+                },
+                "a_attr" : {
+                  "href" : "javascript:void(0)",
+                  "id" : "j1_11_anchor"
+                },
+                "state" : {
+                  "loaded" : true,
+                  "opened" : true,
+                  "selected" : false,
+                  "disabled" : false
+                },
+                "data" : {
+                  "switch" : "cf_response/Error",
+                  "status" : "disabled",
+                  "guid" : "03f419c3-a12a-41d8-9057-7be0298a9a69"
+                },
+                "children" : [ {
+                  "id" : "j1_13",
+                  "text" : "CASE",
+                  "li_attr" : {
+                    "id" : "j1_13"
+                  },
+                  "a_attr" : {
+                    "href" : "javascript:void(0)",
+                    "id" : "j1_13_anchor"
+                  },
+                  "state" : {
+                    "loaded" : true,
+                    "opened" : true,
+                    "selected" : false,
+                    "disabled" : false
+                  },
+                  "data" : {
+                    "case" : "#default",
+                    "guid" : "867ffdba-79de-41c3-b384-9200892bfeeb"
+                  },
+                  "children" : [ {
+                    "id" : "j1_10",
+                    "text" : "Invoke",
+                    "li_attr" : {
+                      "id" : "j1_10"
+                    },
+                    "a_attr" : {
+                      "href" : "javascript:void(0)",
+                      "id" : "j1_10_anchor"
+                    },
+                    "state" : {
+                      "loaded" : true,
+                      "opened" : false,
+                      "selected" : false,
+                      "disabled" : false
+                    },
+                    "data" : {
+                      "transformers" : [ {
+                        "op" : "copy",
+                        "from" : "/dcTxnConn",
+                        "to" : "/txConn",
+                        "inTypePath" : "javaObject",
+                        "outTypePath" : "javaObject",
+                        "direction" : "in"
+                      } ],
+                      "lines" : [ {
+                        "inputPath" : "dcTxnConn",
+                        "outputPath" : "txConn",
+                        "inpJsTree" : "#launching_arrow_jsTree",
+                        "outpJsTree" : "#landing_arrow_jsTree_function",
+                        "INPath" : "dcTxnConn",
+                        "OUTPath" : "txConn",
+                        "direction" : "in",
+                        "op" : "copy",
+                        "line" : 0,
+                        "dashedLine" : false,
+                        "inType" : "javaObject",
+                        "outType" : "javaObject",
+                        "inTypePath" : "javaObject",
+                        "outTypePath" : "javaObject"
+                      } ],
+                      "dropList" : [ ],
+                      "createList" : [ ],
+                      "serviceType" : "service",
+                      "status" : "disabled",
+                      "guid" : "bf07458b-cf3d-4d3b-b559-7ddcffc1f383",
+                      "fqn" : "packages/middleware/pub/client/database/rollbackTransaction"
+                    },
+                    "children" : [ ],
+                    "type" : "invoke"
+                  } ],
+                  "type" : "group"
+                }, {
+                  "id" : "j1_12",
+                  "text" : "CASE",
+                  "li_attr" : {
+                    "id" : "j1_12"
+                  },
+                  "a_attr" : {
+                    "href" : "javascript:void(0)",
+                    "id" : "j1_12_anchor"
+                  },
+                  "state" : {
+                    "loaded" : true,
+                    "opened" : true,
+                    "selected" : false,
+                    "disabled" : false
+                  },
+                  "data" : {
+                    "case" : "#null",
+                    "guid" : "ddfaeed2-da13-46a2-97af-34a30686fd0b"
+                  },
+                  "children" : [ {
+                    "id" : "j1_8",
+                    "text" : "Invoke",
+                    "li_attr" : {
+                      "id" : "j1_8"
+                    },
+                    "a_attr" : {
+                      "href" : "javascript:void(0)",
+                      "id" : "j1_8_anchor"
+                    },
+                    "state" : {
+                      "loaded" : true,
+                      "opened" : false,
+                      "selected" : false,
+                      "disabled" : false
+                    },
+                    "data" : {
+                      "transformers" : [ ],
+                      "lines" : [ ],
+                      "dropList" : [ ],
+                      "createList" : [ ],
+                      "serviceType" : "service",
+                      "status" : "disabled",
+                      "guid" : "b136c780-8578-4444-9eb7-ef9ae7eb6197",
+                      "fqn" : "packages/middleware/pub/client/database/commitTransaction"
+                    },
+                    "children" : [ ],
+                    "type" : "invoke"
+                  } ],
+                  "type" : "group"
+                } ],
+                "type" : "switch"
+              } ],
+              "type" : "group"
+            } ],
+            "type" : "switch"
+          }, {
+            "id" : "j1_23",
+            "text" : "Transformer",
+            "li_attr" : {
+              "id" : "j1_23"
+            },
+            "a_attr" : {
+              "href" : "javascript:void(0)",
+              "id" : "j1_23_anchor"
+            },
+            "state" : {
+              "loaded" : true,
+              "opened" : false,
+              "selected" : false,
+              "disabled" : false
+            },
+            "data" : {
+              "transformers" : [ ],
+              "lines" : [ ],
+              "dropList" : [ ],
+              "createList" : [ ],
+              "guid" : "f5ad9c8c-91f9-4b7e-8f40-909b08420fe8"
+            },
+            "children" : [ ],
+            "type" : "transformer"
+          } ],
+          "type" : "group"
+        }, {
+          "id" : "j1_18",
+          "text" : "CASE",
+          "li_attr" : {
+            "id" : "j1_18"
+          },
+          "a_attr" : {
+            "href" : "javascript:void(0)",
+            "id" : "j1_18_anchor"
+          },
+          "state" : {
+            "loaded" : true,
+            "opened" : true,
+            "selected" : false,
+            "disabled" : false
+          },
+          "data" : {
+            "case" : "EKA_ENV",
+            "guid" : "3d3236fb-2b65-4c64-ac14-22a4a913a1a5"
+          },
+          "children" : [ {
+            "id" : "j1_32",
+            "text" : "Transformer",
+            "li_attr" : {
+              "id" : "j1_32"
+            },
+            "a_attr" : {
+              "href" : "javascript:void(0)",
+              "id" : "j1_32_anchor"
+            },
+            "state" : {
+              "loaded" : true,
+              "opened" : false,
+              "selected" : false,
+              "disabled" : false
+            },
+            "data" : {
+              "transformers" : [ {
+                "op" : "copy",
+                "from" : "/containerParams",
+                "to" : "/containerParams",
+                "inTypePath" : "document",
+                "outTypePath" : "document"
+              }, {
+                "op" : "copy",
+                "from" : "/zoneid",
+                "to" : "/zoneid",
+                "inTypePath" : "string",
+                "outTypePath" : "string"
+              }, {
+                "op" : "copy",
+                "from" : "/dcTxnConn",
+                "to" : "/dcTxnConn",
+                "inTypePath" : "javaObject",
+                "outTypePath" : "javaObject"
+              }, {
+                "op" : "copy",
+                "from" : "/is_existed",
+                "to" : "/is_existed",
+                "inTypePath" : "boolean",
+                "outTypePath" : "boolean"
+              }, {
+                "op" : "copy",
+                "from" : "/rows",
+                "to" : "/rows",
+                "inTypePath" : "integer",
+                "outTypePath" : "integer"
+              }, {
+                "op" : "copy",
+                "from" : "/success",
+                "to" : "/success",
+                "inTypePath" : "boolean",
+                "outTypePath" : "boolean"
+              }, {
+                "op" : "copy",
+                "from" : "/error",
+                "to" : "/error",
+                "inTypePath" : "string",
+                "outTypePath" : "string"
+              }, {
+                "op" : "copy",
+                "from" : "/msg",
+                "to" : "/msg",
+                "inTypePath" : "string",
+                "outTypePath" : "string"
+              }, {
+                "op" : "copy",
+                "from" : "/status",
+                "to" : "/status",
+                "inTypePath" : "boolean",
+                "outTypePath" : "boolean"
+              }, {
+                "op" : "copy",
+                "from" : "/outputDocList",
+                "to" : "/outputDocList",
+                "inTypePath" : "documentList",
+                "outTypePath" : "documentList"
+              }, {
+                "op" : "copy",
+                "from" : "/keys",
+                "to" : "/keys",
+                "inTypePath" : "stringList",
+                "outTypePath" : "stringList"
+              }, {
+                "op" : "copy",
+                "from" : "/cf_response",
+                "to" : "/cf_response",
+                "inTypePath" : "document",
+                "outTypePath" : "document"
+              }, {
+                "op" : "copy",
+                "from" : "/template",
+                "to" : "/template",
+                "inTypePath" : "string",
+                "outTypePath" : "string"
+              }, {
+                "op" : "copy",
+                "from" : "/efs",
+                "to" : "/efs",
+                "inTypePath" : "document",
+                "outTypePath" : "document"
+              }, {
+                "op" : "copy",
+                "from" : "/txConn",
+                "to" : "/txConn",
+                "inTypePath" : "javaObject",
+                "outTypePath" : "javaObject"
+              } ],
+              "lines" : [ {
+                "inputPath" : "containerParams",
+                "outputPath" : "containerParams",
+                "inpJsTree" : "#launching_arrow_jsTree",
+                "outpJsTree" : "#landing_arrow_jsTree",
+                "INPath" : "containerParams",
+                "OUTPath" : "containerParams",
+                "op" : "copy",
+                "line" : 0,
+                "dashedLine" : false,
+                "inType" : "document",
+                "outType" : "document",
+                "inTypePath" : "document",
+                "outTypePath" : "document"
+              }, {
+                "inputPath" : "zoneid",
+                "outputPath" : "zoneid",
+                "inpJsTree" : "#launching_arrow_jsTree",
+                "outpJsTree" : "#landing_arrow_jsTree",
+                "INPath" : "zoneid",
+                "OUTPath" : "zoneid",
+                "op" : "copy",
+                "line" : 0,
+                "dashedLine" : false,
+                "inType" : "string",
+                "outType" : "string",
+                "inTypePath" : "string",
+                "outTypePath" : "string"
+              }, {
+                "inputPath" : "dcTxnConn",
+                "outputPath" : "dcTxnConn",
+                "inpJsTree" : "#launching_arrow_jsTree",
+                "outpJsTree" : "#landing_arrow_jsTree",
+                "INPath" : "dcTxnConn",
+                "OUTPath" : "dcTxnConn",
+                "op" : "copy",
+                "line" : 0,
+                "dashedLine" : false,
+                "inType" : "javaObject",
+                "outType" : "javaObject",
+                "inTypePath" : "javaObject",
+                "outTypePath" : "javaObject"
+              }, {
+                "inputPath" : "is_existed",
+                "outputPath" : "is_existed",
+                "inpJsTree" : "#launching_arrow_jsTree",
+                "outpJsTree" : "#landing_arrow_jsTree",
+                "INPath" : "is_existed",
+                "OUTPath" : "is_existed",
+                "op" : "copy",
+                "line" : 0,
+                "dashedLine" : false,
+                "inType" : "boolean",
+                "outType" : "boolean",
+                "inTypePath" : "boolean",
+                "outTypePath" : "boolean"
+              }, {
+                "inputPath" : "rows",
+                "outputPath" : "rows",
+                "inpJsTree" : "#launching_arrow_jsTree",
+                "outpJsTree" : "#landing_arrow_jsTree",
+                "INPath" : "rows",
+                "OUTPath" : "rows",
+                "op" : "copy",
+                "line" : 0,
+                "dashedLine" : false,
+                "inType" : "integer",
+                "outType" : "integer",
+                "inTypePath" : "integer",
+                "outTypePath" : "integer"
+              }, {
+                "inputPath" : "success",
+                "outputPath" : "success",
+                "inpJsTree" : "#launching_arrow_jsTree",
+                "outpJsTree" : "#landing_arrow_jsTree",
+                "INPath" : "success",
+                "OUTPath" : "success",
+                "op" : "copy",
+                "line" : 0,
+                "dashedLine" : false,
+                "inType" : "boolean",
+                "outType" : "boolean",
+                "inTypePath" : "boolean",
+                "outTypePath" : "boolean"
+              }, {
+                "inputPath" : "error",
+                "outputPath" : "error",
+                "inpJsTree" : "#launching_arrow_jsTree",
+                "outpJsTree" : "#landing_arrow_jsTree",
+                "INPath" : "error",
+                "OUTPath" : "error",
+                "op" : "copy",
+                "line" : 0,
+                "dashedLine" : false,
+                "inType" : "string",
+                "outType" : "string",
+                "inTypePath" : "string",
+                "outTypePath" : "string"
+              }, {
+                "inputPath" : "msg",
+                "outputPath" : "msg",
+                "inpJsTree" : "#launching_arrow_jsTree",
+                "outpJsTree" : "#landing_arrow_jsTree",
+                "INPath" : "msg",
+                "OUTPath" : "msg",
+                "op" : "copy",
+                "line" : 0,
+                "dashedLine" : false,
+                "inType" : "string",
+                "outType" : "string",
+                "inTypePath" : "string",
+                "outTypePath" : "string"
+              }, {
+                "inputPath" : "status",
+                "outputPath" : "status",
+                "inpJsTree" : "#launching_arrow_jsTree",
+                "outpJsTree" : "#landing_arrow_jsTree",
+                "INPath" : "status",
+                "OUTPath" : "status",
+                "op" : "copy",
+                "line" : 0,
+                "dashedLine" : false,
+                "inType" : "boolean",
+                "outType" : "boolean",
+                "inTypePath" : "boolean",
+                "outTypePath" : "boolean"
+              }, {
+                "inputPath" : "outputDocList",
+                "outputPath" : "outputDocList",
+                "inpJsTree" : "#launching_arrow_jsTree",
+                "outpJsTree" : "#landing_arrow_jsTree",
+                "INPath" : "outputDocList",
+                "OUTPath" : "outputDocList",
+                "op" : "copy",
+                "line" : 0,
+                "dashedLine" : false,
+                "inType" : "documentList",
+                "outType" : "documentList",
+                "inTypePath" : "documentList",
+                "outTypePath" : "documentList"
+              }, {
+                "inputPath" : "keys",
+                "outputPath" : "keys",
+                "inpJsTree" : "#launching_arrow_jsTree",
+                "outpJsTree" : "#landing_arrow_jsTree",
+                "INPath" : "keys",
+                "OUTPath" : "keys",
+                "op" : "copy",
+                "line" : 0,
+                "dashedLine" : false,
+                "inType" : "stringList",
+                "outType" : "stringList",
+                "inTypePath" : "stringList",
+                "outTypePath" : "stringList"
+              }, {
+                "inputPath" : "cf_response",
+                "outputPath" : "cf_response",
+                "inpJsTree" : "#launching_arrow_jsTree",
+                "outpJsTree" : "#landing_arrow_jsTree",
+                "INPath" : "cf_response",
+                "OUTPath" : "cf_response",
+                "op" : "copy",
+                "line" : 0,
+                "dashedLine" : false,
+                "inType" : "document",
+                "outType" : "document",
+                "inTypePath" : "document",
+                "outTypePath" : "document"
+              }, {
+                "inputPath" : "template",
+                "outputPath" : "template",
+                "inpJsTree" : "#launching_arrow_jsTree",
+                "outpJsTree" : "#landing_arrow_jsTree",
+                "INPath" : "template",
+                "OUTPath" : "template",
+                "op" : "copy",
+                "line" : 0,
+                "dashedLine" : false,
+                "inType" : "string",
+                "outType" : "string",
+                "inTypePath" : "string",
+                "outTypePath" : "string"
+              }, {
+                "inputPath" : "efs",
+                "outputPath" : "efs",
+                "inpJsTree" : "#launching_arrow_jsTree",
+                "outpJsTree" : "#landing_arrow_jsTree",
+                "INPath" : "efs",
+                "OUTPath" : "efs",
+                "op" : "copy",
+                "line" : 0,
+                "dashedLine" : false,
+                "inType" : "document",
+                "outType" : "document",
+                "inTypePath" : "document",
+                "outTypePath" : "document"
+              }, {
+                "inputPath" : "txConn",
+                "outputPath" : "txConn",
+                "inpJsTree" : "#launching_arrow_jsTree",
+                "outpJsTree" : "#landing_arrow_jsTree",
+                "INPath" : "txConn",
+                "OUTPath" : "txConn",
+                "op" : "copy",
+                "line" : 0,
+                "dashedLine" : false,
+                "inType" : "javaObject",
+                "outType" : "javaObject",
+                "inTypePath" : "javaObject",
+                "outTypePath" : "javaObject"
+              } ],
+              "dropList" : [ ],
+              "createList" : [ ],
+              "guid" : "4a3b466e-0996-4126-8028-5c1a0ec9648c"
+            },
+            "children" : [ ],
+            "type" : "transformer"
+          }, {
+            "id" : "j1_20",
+            "text" : "Invoke",
+            "li_attr" : {
+              "id" : "j1_20"
+            },
+            "a_attr" : {
+              "href" : "javascript:void(0)",
+              "id" : "j1_20_anchor"
+            },
+            "state" : {
+              "loaded" : true,
+              "opened" : false,
+              "selected" : false,
+              "disabled" : false
+            },
+            "data" : {
+              "transformers" : [ {
+                "op" : "copy",
+                "from" : "/host",
+                "to" : "/containerParams/sub_domain",
+                "inTypePath" : "string",
+                "outTypePath" : "document/string",
+                "direction" : "out"
+              }, {
+                "op" : "copy",
+                "from" : "/domain",
+                "to" : "/domain",
+                "inTypePath" : "string",
+                "outTypePath" : "string",
+                "direction" : "out"
+              }, {
+                "op" : "copy",
+                "from" : "/parts",
+                "to" : "/parts",
+                "inTypePath" : "stringList",
+                "outTypePath" : "stringList",
+                "direction" : "out"
+              } ],
+              "lines" : [ {
+                "inputPath" : "host",
+                "outputPath" : "containerParams/sub_domain",
+                "inpJsTree" : "#launching_arrow_jsTree_function",
+                "outpJsTree" : "#landing_arrow_jsTree",
+                "INPath" : "host",
+                "OUTPath" : "containerParams/sub_domain",
+                "direction" : "out",
+                "op" : "copy",
+                "line" : 0,
+                "dashedLine" : false,
+                "inType" : "string",
+                "outType" : "string",
+                "inTypePath" : "string",
+                "outTypePath" : "document/string"
+              }, {
+                "inputPath" : "domain",
+                "outputPath" : "domain",
+                "inpJsTree" : "#launching_arrow_jsTree_function",
+                "outpJsTree" : "#landing_arrow_jsTree",
+                "INPath" : "domain",
+                "OUTPath" : "domain",
+                "direction" : "out",
+                "op" : "copy",
+                "line" : 0,
+                "dashedLine" : false,
+                "inType" : "string",
+                "outType" : "string",
+                "inTypePath" : "string",
+                "outTypePath" : "string"
+              }, {
+                "inputPath" : "parts",
+                "outputPath" : "parts",
+                "inpJsTree" : "#launching_arrow_jsTree_function",
+                "outpJsTree" : "#landing_arrow_jsTree",
+                "INPath" : "parts",
+                "OUTPath" : "parts",
+                "direction" : "out",
+                "op" : "copy",
+                "line" : 0,
+                "dashedLine" : false,
+                "inType" : "stringList",
+                "outType" : "stringList",
+                "inTypePath" : "stringList",
+                "outTypePath" : "stringList"
+              } ],
+              "dropList" : [ ],
+              "createList" : [ ],
+              "serviceType" : "service",
+              "guid" : "9aa699b9-7022-42d3-9ab4-45dfff884425",
+              "fqn" : "packages/middleware/pub/client/http/urlMeta"
+            },
+            "children" : [ ],
+            "type" : "invoke"
+          }, {
+            "id" : "j1_27",
+            "text" : "Invoke",
+            "li_attr" : {
+              "id" : "j1_27"
+            },
+            "a_attr" : {
+              "href" : "javascript:void(0)",
+              "id" : "j1_27_anchor"
+            },
+            "state" : {
+              "loaded" : true,
+              "opened" : false,
+              "selected" : false,
+              "disabled" : false
+            },
+            "data" : {
+              "transformers" : [ {
+                "op" : "copy",
+                "from" : "/containerParams/name",
+                "to" : "/inputDocList/0/name",
+                "inTypePath" : "document/string",
+                "outTypePath" : "documentList/string",
+                "direction" : "in"
+              }, {
+                "op" : "copy",
+                "from" : "/containerParams/type",
+                "to" : "/inputDocList/0/type",
+                "inTypePath" : "document/string",
+                "outTypePath" : "documentList/string",
+                "direction" : "in"
+              }, {
+                "op" : "copy",
+                "from" : "/containerParams/credential_secret",
+                "to" : "/inputDocList/0/credential_secret",
+                "inTypePath" : "document/string",
+                "outTypePath" : "documentList/string",
+                "direction" : "in"
+              }, {
+                "op" : "copy",
+                "from" : "/containerParams/sub_domain",
+                "to" : "/inputDocList/0/sub_domain",
+                "inTypePath" : "document/string",
+                "outTypePath" : "documentList/string",
+                "direction" : "in"
+              }, {
+                "op" : "copy",
+                "from" : "/containerParams/dns_mapping",
+                "to" : "/inputDocList/0/dns_mapping",
+                "inTypePath" : "document/boolean",
+                "outTypePath" : "documentList/boolean",
+                "direction" : "in"
+              }, {
+                "op" : "copy",
+                "from" : "/containerParams/data_center_region",
+                "to" : "/inputDocList/0/data_center_region",
+                "inTypePath" : "document/string",
+                "outTypePath" : "documentList/string",
+                "direction" : "in"
+              }, {
+                "op" : "copy",
+                "from" : "/containerParams/credential_key",
+                "to" : "/inputDocList/0/credential_key",
+                "inTypePath" : "document/string",
+                "outTypePath" : "documentList/string",
+                "direction" : "in"
+              }, {
+                "op" : "copy",
+                "from" : "/containerParams/port_mapping",
+                "to" : "/inputDocList/0/port_mapping",
+                "inTypePath" : "document/string",
+                "outTypePath" : "documentList/string",
+                "direction" : "in"
+              }, {
+                "op" : "copy",
+                "from" : "/containerParams/protocol",
+                "to" : "/inputDocList/0/protocol",
+                "inTypePath" : "document/string",
+                "outTypePath" : "documentList/string",
+                "direction" : "in"
+              }, {
+                "op" : "copy",
+                "from" : "/containerParams/aws_acm_arn",
+                "to" : "/inputDocList/0/aws_acm_arn",
+                "inTypePath" : "document/string",
+                "outTypePath" : "documentList/string",
+                "direction" : "in"
+              }, {
+                "op" : "copy",
+                "from" : "/containerParams/deploy",
+                "to" : "/inputDocList/0/deployed",
+                "inTypePath" : "document/boolean",
+                "outTypePath" : "documentList/boolean",
+                "direction" : "in"
+              }, {
+                "op" : "copy",
+                "from" : "/containerParams/vpcId",
+                "to" : "/inputDocList/0/vpc_id",
+                "inTypePath" : "document/string",
+                "outTypePath" : "documentList/string",
+                "direction" : "in"
+              }, {
+                "op" : "copy",
+                "from" : "/containerParams/resource_memory",
+                "to" : "/inputDocList/0/resource_memory",
+                "inTypePath" : "document/integer",
+                "outTypePath" : "documentList/integer",
+                "direction" : "in"
+              }, {
+                "op" : "copy",
+                "from" : "/containerParams/domain_registrar",
+                "to" : "/inputDocList/0/domain_registrar",
+                "inTypePath" : "document/string",
+                "outTypePath" : "documentList/string",
+                "direction" : "in"
+              }, {
+                "op" : "copy",
+                "from" : "/containerParams/auto_scaling_min_nodes",
+                "to" : "/inputDocList/0/auto_scaling_min_nodes",
+                "inTypePath" : "document/string",
+                "outTypePath" : "documentList/integer",
+                "direction" : "in"
+              }, {
+                "op" : "copy",
+                "from" : "/containerParams/auto_scaling_max_nodes",
+                "to" : "/inputDocList/0/auto_scaling_max_nodes",
+                "inTypePath" : "document/string",
+                "outTypePath" : "documentList/integer",
+                "direction" : "in"
+              }, {
+                "op" : "copy",
+                "from" : "/containerParams/auto_scaling_cpu_threshold",
+                "to" : "/inputDocList/0/auto_scaling_cpu_threshold",
+                "inTypePath" : "document/string",
+                "outTypePath" : "documentList/integer",
+                "direction" : "in"
+              }, {
+                "op" : "copy",
+                "from" : "/containerParams/credential_id",
+                "to" : "/inputDocList/0/credential_id",
+                "inTypePath" : "document/integer",
+                "outTypePath" : "documentList/integer",
+                "direction" : "in"
+              }, {
+                "op" : "copy",
+                "from" : "/containerParams/tenant",
+                "to" : "/inputDocList/0/tenant",
+                "inTypePath" : "document/string",
+                "outTypePath" : "documentList/string",
+                "direction" : "in"
+              }, {
+                "op" : "copy",
+                "from" : "/containerParams/api_key",
+                "to" : "/inputDocList/0/api_key",
+                "inTypePath" : "document/string",
+                "outTypePath" : "documentList/string",
+                "direction" : "in"
+              }, {
+                "op" : "copy",
+                "from" : "/success",
+                "to" : "/status",
+                "inTypePath" : "boolean",
+                "outTypePath" : "boolean",
+                "direction" : "out"
+              }, {
+                "op" : "copy",
+                "from" : "/outputDocList",
+                "to" : "/outputDocList",
+                "inTypePath" : "documentList",
+                "outTypePath" : "documentList",
+                "direction" : "out"
+              }, {
+                "op" : "copy",
+                "from" : "/rows",
+                "to" : "/rows",
+                "inTypePath" : "integer",
+                "outTypePath" : "integer",
+                "direction" : "out"
+              }, {
+                "op" : "copy",
+                "from" : "/error",
+                "to" : "/error",
+                "inTypePath" : "string",
+                "outTypePath" : "string",
+                "direction" : "out"
+              }, {
+                "op" : "copy",
+                "from" : "/containerParams/resource_cups",
+                "to" : "/inputDocList/0/resource_cups",
+                "inTypePath" : "document/number",
+                "outTypePath" : "documentList/number",
+                "direction" : "in"
+              } ],
+              "lines" : [ {
+                "inputPath" : "containerParams/name",
+                "outputPath" : "inputDocList/name",
+                "inpJsTree" : "#launching_arrow_jsTree",
+                "outpJsTree" : "#landing_arrow_jsTree_function",
+                "INPath" : "containerParams/name",
+                "OUTPath" : "inputDocList/#0/name",
+                "direction" : "in",
+                "op" : "copy",
+                "line" : 0,
+                "dashedLine" : false,
+                "inType" : "string",
+                "outType" : "string",
+                "inTypePath" : "document/string",
+                "outTypePath" : "documentList/string"
+              }, {
+                "inputPath" : "containerParams/type",
+                "outputPath" : "inputDocList/type",
+                "inpJsTree" : "#launching_arrow_jsTree",
+                "outpJsTree" : "#landing_arrow_jsTree_function",
+                "INPath" : "containerParams/type",
+                "OUTPath" : "inputDocList/#0/type",
+                "direction" : "in",
+                "op" : "copy",
+                "line" : 0,
+                "dashedLine" : false,
+                "inType" : "string",
+                "outType" : "string",
+                "inTypePath" : "document/string",
+                "outTypePath" : "documentList/string"
+              }, {
+                "inputPath" : "containerParams/credential_secret",
+                "outputPath" : "inputDocList/credential_secret",
+                "inpJsTree" : "#launching_arrow_jsTree",
+                "outpJsTree" : "#landing_arrow_jsTree_function",
+                "INPath" : "containerParams/credential_secret",
+                "OUTPath" : "inputDocList/#0/credential_secret",
+                "direction" : "in",
+                "op" : "copy",
+                "line" : 0,
+                "dashedLine" : false,
+                "inType" : "string",
+                "outType" : "string",
+                "inTypePath" : "document/string",
+                "outTypePath" : "documentList/string"
+              }, {
+                "inputPath" : "containerParams/sub_domain",
+                "outputPath" : "inputDocList/sub_domain",
+                "inpJsTree" : "#launching_arrow_jsTree",
+                "outpJsTree" : "#landing_arrow_jsTree_function",
+                "INPath" : "containerParams/sub_domain",
+                "OUTPath" : "inputDocList/#0/sub_domain",
+                "direction" : "in",
+                "op" : "copy",
+                "line" : 0,
+                "dashedLine" : false,
+                "inType" : "string",
+                "outType" : "string",
+                "inTypePath" : "document/string",
+                "outTypePath" : "documentList/string"
+              }, {
+                "inputPath" : "containerParams/dns_mapping",
+                "outputPath" : "inputDocList/dns_mapping",
+                "inpJsTree" : "#launching_arrow_jsTree",
+                "outpJsTree" : "#landing_arrow_jsTree_function",
+                "INPath" : "containerParams/dns_mapping",
+                "OUTPath" : "inputDocList/#0/dns_mapping",
+                "direction" : "in",
+                "op" : "copy",
+                "line" : 0,
+                "dashedLine" : false,
+                "inType" : "boolean",
+                "outType" : "boolean",
+                "inTypePath" : "document/boolean",
+                "outTypePath" : "documentList/boolean"
+              }, {
+                "inputPath" : "containerParams/data_center_region",
+                "outputPath" : "inputDocList/data_center_region",
+                "inpJsTree" : "#launching_arrow_jsTree",
+                "outpJsTree" : "#landing_arrow_jsTree_function",
+                "INPath" : "containerParams/data_center_region",
+                "OUTPath" : "inputDocList/#0/data_center_region",
+                "direction" : "in",
+                "op" : "copy",
+                "line" : 0,
+                "dashedLine" : false,
+                "inType" : "string",
+                "outType" : "string",
+                "inTypePath" : "document/string",
+                "outTypePath" : "documentList/string"
+              }, {
+                "inputPath" : "containerParams/credential_key",
+                "outputPath" : "inputDocList/credential_key",
+                "inpJsTree" : "#launching_arrow_jsTree",
+                "outpJsTree" : "#landing_arrow_jsTree_function",
+                "INPath" : "containerParams/credential_key",
+                "OUTPath" : "inputDocList/#0/credential_key",
+                "direction" : "in",
+                "op" : "copy",
+                "line" : 0,
+                "dashedLine" : false,
+                "inType" : "string",
+                "outType" : "string",
+                "inTypePath" : "document/string",
+                "outTypePath" : "documentList/string"
+              }, {
+                "inputPath" : "containerParams/port_mapping",
+                "outputPath" : "inputDocList/port_mapping",
+                "inpJsTree" : "#launching_arrow_jsTree",
+                "outpJsTree" : "#landing_arrow_jsTree_function",
+                "INPath" : "containerParams/port_mapping",
+                "OUTPath" : "inputDocList/#0/port_mapping",
+                "direction" : "in",
+                "op" : "copy",
+                "line" : 0,
+                "dashedLine" : false,
+                "inType" : "string",
+                "outType" : "string",
+                "inTypePath" : "document/string",
+                "outTypePath" : "documentList/string"
+              }, {
+                "inputPath" : "containerParams/protocol",
+                "outputPath" : "inputDocList/protocol",
+                "inpJsTree" : "#launching_arrow_jsTree",
+                "outpJsTree" : "#landing_arrow_jsTree_function",
+                "INPath" : "containerParams/protocol",
+                "OUTPath" : "inputDocList/#0/protocol",
+                "direction" : "in",
+                "op" : "copy",
+                "line" : 0,
+                "dashedLine" : false,
+                "inType" : "string",
+                "outType" : "string",
+                "inTypePath" : "document/string",
+                "outTypePath" : "documentList/string"
+              }, {
+                "inputPath" : "containerParams/aws_acm_arn",
+                "outputPath" : "inputDocList/aws_acm_arn",
+                "inpJsTree" : "#launching_arrow_jsTree",
+                "outpJsTree" : "#landing_arrow_jsTree_function",
+                "INPath" : "containerParams/aws_acm_arn",
+                "OUTPath" : "inputDocList/#0/aws_acm_arn",
+                "direction" : "in",
+                "op" : "copy",
+                "line" : 0,
+                "dashedLine" : false,
+                "inType" : "string",
+                "outType" : "string",
+                "inTypePath" : "document/string",
+                "outTypePath" : "documentList/string"
+              }, {
+                "inputPath" : "containerParams/deploy",
+                "outputPath" : "inputDocList/deployed",
+                "inpJsTree" : "#launching_arrow_jsTree",
+                "outpJsTree" : "#landing_arrow_jsTree_function",
+                "INPath" : "containerParams/deploy",
+                "OUTPath" : "inputDocList/#0/deployed",
+                "direction" : "in",
+                "op" : "copy",
+                "line" : 0,
+                "dashedLine" : false,
+                "inType" : "boolean",
+                "outType" : "boolean",
+                "inTypePath" : "document/boolean",
+                "outTypePath" : "documentList/boolean"
+              }, {
+                "inputPath" : "containerParams/vpcId",
+                "outputPath" : "inputDocList/vpc_id",
+                "inpJsTree" : "#launching_arrow_jsTree",
+                "outpJsTree" : "#landing_arrow_jsTree_function",
+                "INPath" : "containerParams/vpcId",
+                "OUTPath" : "inputDocList/#0/vpc_id",
+                "direction" : "in",
+                "op" : "copy",
+                "line" : 0,
+                "dashedLine" : false,
+                "inType" : "string",
+                "outType" : "string",
+                "inTypePath" : "document/string",
+                "outTypePath" : "documentList/string"
+              }, {
+                "inputPath" : "containerParams/resource_memory",
+                "outputPath" : "inputDocList/resource_memory",
+                "inpJsTree" : "#launching_arrow_jsTree",
+                "outpJsTree" : "#landing_arrow_jsTree_function",
+                "INPath" : "containerParams/resource_memory",
+                "OUTPath" : "inputDocList/#0/resource_memory",
+                "direction" : "in",
+                "op" : "copy",
+                "line" : 0,
+                "dashedLine" : false,
+                "inType" : "number",
+                "outType" : "number",
+                "inTypePath" : "document/integer",
+                "outTypePath" : "documentList/integer"
+              }, {
+                "inputPath" : "containerParams/domain_registrar",
+                "outputPath" : "inputDocList/domain_registrar",
+                "inpJsTree" : "#launching_arrow_jsTree",
+                "outpJsTree" : "#landing_arrow_jsTree_function",
+                "INPath" : "containerParams/domain_registrar",
+                "OUTPath" : "inputDocList/#0/domain_registrar",
+                "direction" : "in",
+                "op" : "copy",
+                "line" : 0,
+                "dashedLine" : false,
+                "inType" : "string",
+                "outType" : "string",
+                "inTypePath" : "document/string",
+                "outTypePath" : "documentList/string"
+              }, {
+                "inputPath" : "containerParams/auto_scaling_min_nodes",
+                "outputPath" : "inputDocList/auto_scaling_min_nodes",
+                "inpJsTree" : "#launching_arrow_jsTree",
+                "outpJsTree" : "#landing_arrow_jsTree_function",
+                "INPath" : "containerParams/auto_scaling_min_nodes",
+                "OUTPath" : "inputDocList/#0/auto_scaling_min_nodes",
+                "direction" : "in",
+                "op" : "copy",
+                "line" : 0,
+                "dashedLine" : false,
+                "inType" : "integer",
+                "outType" : "integer",
+                "inTypePath" : "document/string",
+                "outTypePath" : "documentList/integer"
+              }, {
+                "inputPath" : "containerParams/auto_scaling_max_nodes",
+                "outputPath" : "inputDocList/auto_scaling_max_nodes",
+                "inpJsTree" : "#launching_arrow_jsTree",
+                "outpJsTree" : "#landing_arrow_jsTree_function",
+                "INPath" : "containerParams/auto_scaling_max_nodes",
+                "OUTPath" : "inputDocList/#0/auto_scaling_max_nodes",
+                "direction" : "in",
+                "op" : "copy",
+                "line" : 0,
+                "dashedLine" : false,
+                "inType" : "integer",
+                "outType" : "integer",
+                "inTypePath" : "document/string",
+                "outTypePath" : "documentList/integer"
+              }, {
+                "inputPath" : "containerParams/auto_scaling_cpu_threshold",
+                "outputPath" : "inputDocList/auto_scaling_cpu_threshold",
+                "inpJsTree" : "#launching_arrow_jsTree",
+                "outpJsTree" : "#landing_arrow_jsTree_function",
+                "INPath" : "containerParams/auto_scaling_cpu_threshold",
+                "OUTPath" : "inputDocList/#0/auto_scaling_cpu_threshold",
+                "direction" : "in",
+                "op" : "copy",
+                "line" : 0,
+                "dashedLine" : false,
+                "inType" : "number",
+                "outType" : "number",
+                "inTypePath" : "document/string",
+                "outTypePath" : "documentList/integer"
+              }, {
+                "inputPath" : "containerParams/credential_id",
+                "outputPath" : "inputDocList/credential_id",
+                "inpJsTree" : "#launching_arrow_jsTree",
+                "outpJsTree" : "#landing_arrow_jsTree_function",
+                "INPath" : "containerParams/credential_id",
+                "OUTPath" : "inputDocList/#0/credential_id",
+                "direction" : "in",
+                "op" : "copy",
+                "line" : 0,
+                "dashedLine" : false,
+                "inType" : "integer",
+                "outType" : "integer",
+                "inTypePath" : "document/integer",
+                "outTypePath" : "documentList/integer"
+              }, {
+                "inputPath" : "containerParams/tenant",
+                "outputPath" : "inputDocList/tenant",
+                "inpJsTree" : "#launching_arrow_jsTree",
+                "outpJsTree" : "#landing_arrow_jsTree_function",
+                "INPath" : "containerParams/tenant",
+                "OUTPath" : "inputDocList/#0/tenant",
+                "direction" : "in",
+                "op" : "copy",
+                "line" : 0,
+                "dashedLine" : false,
+                "inType" : "string",
+                "outType" : "string",
+                "inTypePath" : "document/string",
+                "outTypePath" : "documentList/string"
+              }, {
+                "inputPath" : "containerParams/api_key",
+                "outputPath" : "inputDocList/api_key",
+                "inpJsTree" : "#launching_arrow_jsTree",
+                "outpJsTree" : "#landing_arrow_jsTree_function",
+                "INPath" : "containerParams/api_key",
+                "OUTPath" : "inputDocList/#0/api_key",
+                "direction" : "in",
+                "op" : "copy",
+                "line" : 0,
+                "dashedLine" : false,
+                "inType" : "string",
+                "outType" : "string",
+                "inTypePath" : "document/string",
+                "outTypePath" : "documentList/string"
+              }, {
+                "inputPath" : "success",
+                "outputPath" : "status",
+                "inpJsTree" : "#launching_arrow_jsTree_function",
+                "outpJsTree" : "#landing_arrow_jsTree",
+                "INPath" : "success",
+                "OUTPath" : "status",
+                "direction" : "out",
+                "op" : "copy",
+                "line" : 0,
+                "dashedLine" : false,
+                "inType" : "boolean",
+                "outType" : "boolean",
+                "inTypePath" : "boolean",
+                "outTypePath" : "boolean"
+              }, {
+                "inputPath" : "outputDocList",
+                "outputPath" : "outputDocList",
+                "inpJsTree" : "#launching_arrow_jsTree_function",
+                "outpJsTree" : "#landing_arrow_jsTree",
+                "INPath" : "outputDocList",
+                "OUTPath" : "outputDocList",
+                "direction" : "out",
+                "op" : "copy",
+                "line" : 0,
+                "dashedLine" : false,
+                "inType" : "documentList",
+                "outType" : "documentList",
+                "inTypePath" : "documentList",
+                "outTypePath" : "documentList"
+              }, {
+                "inputPath" : "rows",
+                "outputPath" : "rows",
+                "inpJsTree" : "#launching_arrow_jsTree_function",
+                "outpJsTree" : "#landing_arrow_jsTree",
+                "INPath" : "rows",
+                "OUTPath" : "rows",
+                "direction" : "out",
+                "op" : "copy",
+                "line" : 0,
+                "dashedLine" : false,
+                "inType" : "integer",
+                "outType" : "integer",
+                "inTypePath" : "integer",
+                "outTypePath" : "integer"
+              }, {
+                "inputPath" : "error",
+                "outputPath" : "error",
+                "inpJsTree" : "#launching_arrow_jsTree_function",
+                "outpJsTree" : "#landing_arrow_jsTree",
+                "INPath" : "error",
+                "OUTPath" : "error",
+                "direction" : "out",
+                "op" : "copy",
+                "line" : 0,
+                "dashedLine" : false,
+                "inType" : "string",
+                "outType" : "string",
+                "inTypePath" : "string",
+                "outTypePath" : "string"
+              }, {
+                "inputPath" : "containerParams/resource_cups",
+                "outputPath" : "inputDocList/resource_cups",
+                "inpJsTree" : "#launching_arrow_jsTree",
+                "outpJsTree" : "#landing_arrow_jsTree_function",
+                "INPath" : "containerParams/resource_cups",
+                "OUTPath" : "inputDocList/#0/resource_cups",
+                "direction" : "in",
+                "op" : "copy",
+                "line" : 0,
+                "dashedLine" : false,
+                "inType" : "number",
+                "outType" : "number",
+                "inTypePath" : "document/number",
+                "outTypePath" : "documentList/number"
+              } ],
+              "dropList" : [ ],
+              "createList" : [ ],
+              "serviceType" : "sql",
+              "guid" : "173b502f-c882-4cd4-b2b1-3c179fa19873",
+              "fqn" : "packages/middleware/pub/environments/adapter/services/DML/insertEnvironments"
+            },
+            "children" : [ ],
+            "type" : "invoke"
+          } ],
+          "type" : "group"
+        } ],
+        "type" : "switch"
+      } ],
+      "type" : "group"
+    } ]
+  },
+  "consumers" : "",
+  "developers" : "developers",
+  "enableServiceDocumentValidation" : false
+}

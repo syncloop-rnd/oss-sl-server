@@ -1,0 +1,482 @@
+{
+  "latest" : {
+    "createdTS" : "",
+    "input" : [ ],
+    "output" : [ {
+      "id" : "j3_1",
+      "text" : "msg",
+      "li_attr" : {
+        "id" : "j3_1"
+      },
+      "a_attr" : {
+        "href" : "#",
+        "id" : "j3_1_anchor"
+      },
+      "state" : {
+        "loaded" : true,
+        "opened" : false,
+        "selected" : false,
+        "disabled" : false
+      },
+      "data" : { },
+      "children" : [ ],
+      "type" : "string"
+    } ],
+    "api_info" : {
+      "title" : "",
+      "description" : ""
+    },
+    "lockedByUser" : "admin",
+    "api" : [ {
+      "id" : "j1_2",
+      "text" : "Group",
+      "li_attr" : {
+        "id" : "j1_2"
+      },
+      "a_attr" : {
+        "href" : "javascript:void(0)",
+        "id" : "j1_2_anchor"
+      },
+      "state" : {
+        "loaded" : true,
+        "opened" : true,
+        "selected" : false,
+        "disabled" : false
+      },
+      "data" : {
+        "comment" : "Add Google OIDC profile on startup"
+      },
+      "children" : [ {
+        "id" : "j1_1",
+        "text" : "Invoke",
+        "li_attr" : {
+          "id" : "j1_1"
+        },
+        "a_attr" : {
+          "href" : "#",
+          "id" : "j1_1_anchor"
+        },
+        "state" : {
+          "loaded" : true,
+          "opened" : false,
+          "selected" : false,
+          "disabled" : false
+        },
+        "data" : {
+          "transformers" : [ {
+            "op" : "copy",
+            "from" : "/msg",
+            "to" : "/msg",
+            "inTypePath" : "string",
+            "outTypePath" : "string",
+            "direction" : "out"
+          } ],
+          "lines" : [ {
+            "inputPath" : "msg",
+            "outputPath" : "msg",
+            "inpJsTree" : "#launching_arrow_jsTree_function",
+            "outpJsTree" : "#landing_arrow_jsTree",
+            "INPath" : "msg",
+            "OUTPath" : "msg",
+            "direction" : "out",
+            "op" : "copy",
+            "line" : 0,
+            "dashedLine" : false,
+            "inType" : "string",
+            "outType" : "string",
+            "inTypePath" : "string",
+            "outTypePath" : "string"
+          } ],
+          "dropList" : [ ],
+          "createList" : [ {
+            "path" : "googleOidcStartup",
+            "value" : "googleOidcStartup",
+            "typePath" : "string"
+          } ],
+          "serviceType" : "api",
+          "fqn" : "packages/middleware/pub/security/OIDCLogin/Google/OIDCProfile"
+        },
+        "children" : [ ],
+        "type" : "invoke"
+      }, {
+        "id" : "j1_7",
+        "text" : "Invoke",
+        "li_attr" : {
+          "id" : "j1_7"
+        },
+        "a_attr" : {
+          "href" : "#",
+          "id" : "j1_7_anchor"
+        },
+        "state" : {
+          "loaded" : true,
+          "opened" : false,
+          "selected" : false,
+          "disabled" : false
+        },
+        "data" : {
+          "transformers" : [ {
+            "op" : "copy",
+            "from" : "/googleOidcStartup",
+            "to" : "/key",
+            "inTypePath" : "string",
+            "outTypePath" : "string",
+            "direction" : "in"
+          }, {
+            "op" : "copy",
+            "from" : "/msg",
+            "to" : "/value",
+            "inTypePath" : "string",
+            "outTypePath" : "javaObject",
+            "direction" : "in"
+          } ],
+          "lines" : [ {
+            "inputPath" : "googleOidcStartup",
+            "outputPath" : "key",
+            "inpJsTree" : "#launching_arrow_jsTree",
+            "outpJsTree" : "#landing_arrow_jsTree_function",
+            "INPath" : "googleOidcStartup",
+            "OUTPath" : "key",
+            "direction" : "in",
+            "op" : "copy",
+            "line" : 0,
+            "dashedLine" : false,
+            "inType" : "string",
+            "outType" : "string",
+            "inTypePath" : "string",
+            "outTypePath" : "string"
+          }, {
+            "inputPath" : "msg",
+            "outputPath" : "value",
+            "inpJsTree" : "#launching_arrow_jsTree",
+            "outpJsTree" : "#landing_arrow_jsTree_function",
+            "INPath" : "msg",
+            "OUTPath" : "value",
+            "direction" : "in",
+            "op" : "copy",
+            "line" : 0,
+            "dashedLine" : false,
+            "inType" : "string",
+            "outType" : "string",
+            "inTypePath" : "string",
+            "outTypePath" : "javaObject"
+          } ],
+          "dropList" : [ {
+            "path" : "googleOidcStartup",
+            "typePath" : "string"
+          }, {
+            "path" : "msg",
+            "typePath" : "string"
+          }, {
+            "path" : "key",
+            "typePath" : "string"
+          }, {
+            "path" : "value",
+            "typePath" : "string"
+          } ],
+          "createList" : [ ],
+          "serviceType" : "service",
+          "fqn" : "packages/middleware/pub/service/keyLogger"
+        },
+        "children" : [ ],
+        "type" : "invoke"
+      } ],
+      "type" : "group"
+    }, {
+      "id" : "j1_3",
+      "text" : "Group",
+      "li_attr" : {
+        "id" : "j1_3"
+      },
+      "a_attr" : {
+        "href" : "javascript:void(0)",
+        "id" : "j1_3_anchor"
+      },
+      "state" : {
+        "loaded" : true,
+        "opened" : true,
+        "selected" : false,
+        "disabled" : false
+      },
+      "data" : {
+        "comment" : "Add Keycloak OIDC profile on startup"
+      },
+      "children" : [ {
+        "id" : "j1_4",
+        "text" : "Invoke",
+        "li_attr" : {
+          "id" : "j1_4"
+        },
+        "a_attr" : {
+          "href" : "#",
+          "id" : "j1_4_anchor"
+        },
+        "state" : {
+          "loaded" : true,
+          "opened" : false,
+          "selected" : false,
+          "disabled" : false
+        },
+        "data" : {
+          "transformers" : [ {
+            "op" : "copy",
+            "from" : "/msg",
+            "to" : "/msg1",
+            "inTypePath" : "string",
+            "outTypePath" : "string",
+            "direction" : "out"
+          } ],
+          "lines" : [ {
+            "inputPath" : "msg",
+            "outputPath" : "msg1",
+            "inpJsTree" : "#launching_arrow_jsTree_function",
+            "outpJsTree" : "#landing_arrow_jsTree",
+            "INPath" : "msg",
+            "OUTPath" : "msg1",
+            "direction" : "out",
+            "op" : "copy",
+            "line" : 0,
+            "dashedLine" : false,
+            "inType" : "string",
+            "outType" : "string",
+            "inTypePath" : "string",
+            "outTypePath" : "string"
+          } ],
+          "dropList" : [ ],
+          "createList" : [ {
+            "path" : "googleKeycloakOidcStartup",
+            "value" : "googleKeycloakOidcStartup",
+            "typePath" : "string"
+          } ],
+          "serviceType" : "api",
+          "fqn" : "packages/middleware/pub/security/OIDCLogin/Keycloak/OIDCProfile"
+        },
+        "children" : [ ],
+        "type" : "invoke"
+      }, {
+        "id" : "j1_8",
+        "text" : "Invoke",
+        "li_attr" : {
+          "id" : "j1_8"
+        },
+        "a_attr" : {
+          "href" : "#",
+          "id" : "j1_8_anchor"
+        },
+        "state" : {
+          "loaded" : true,
+          "opened" : false,
+          "selected" : false,
+          "disabled" : false
+        },
+        "data" : {
+          "transformers" : [ {
+            "op" : "copy",
+            "from" : "/googleKeycloakOidcStartup",
+            "to" : "/key",
+            "inTypePath" : "string",
+            "outTypePath" : "string",
+            "direction" : "in"
+          }, {
+            "op" : "copy",
+            "from" : "/msg1",
+            "to" : "/value",
+            "inTypePath" : "string",
+            "outTypePath" : "string",
+            "direction" : "in"
+          } ],
+          "lines" : [ {
+            "inputPath" : "googleKeycloakOidcStartup",
+            "outputPath" : "key",
+            "inpJsTree" : "#launching_arrow_jsTree",
+            "outpJsTree" : "#landing_arrow_jsTree_function",
+            "INPath" : "googleKeycloakOidcStartup",
+            "OUTPath" : "key",
+            "direction" : "in",
+            "op" : "copy",
+            "line" : 0,
+            "dashedLine" : false,
+            "inType" : "string",
+            "outType" : "string",
+            "inTypePath" : "string",
+            "outTypePath" : "string"
+          }, {
+            "inputPath" : "msg1",
+            "outputPath" : "value",
+            "inpJsTree" : "#launching_arrow_jsTree",
+            "outpJsTree" : "#landing_arrow_jsTree_function",
+            "INPath" : "msg1",
+            "OUTPath" : "value",
+            "direction" : "in",
+            "op" : "copy",
+            "line" : 0,
+            "dashedLine" : false,
+            "inType" : "string",
+            "outType" : "string",
+            "inTypePath" : "string",
+            "outTypePath" : "string"
+          } ],
+          "dropList" : [ {
+            "path" : "msg1",
+            "typePath" : "string"
+          }, {
+            "path" : "googleKeycloakOidcStartup",
+            "typePath" : "string"
+          } ],
+          "createList" : [ ],
+          "serviceType" : "service",
+          "fqn" : "packages/middleware/pub/service/keyLogger"
+        },
+        "children" : [ ],
+        "type" : "invoke"
+      } ],
+      "type" : "group"
+    }, {
+      "id" : "j1_5",
+      "text" : "Group",
+      "li_attr" : {
+        "id" : "j1_5"
+      },
+      "a_attr" : {
+        "href" : "javascript:void(0)",
+        "id" : "j1_5_anchor"
+      },
+      "state" : {
+        "loaded" : true,
+        "opened" : true,
+        "selected" : false,
+        "disabled" : false
+      },
+      "data" : {
+        "comment" : "Add Okta OIDC profile on startup"
+      },
+      "children" : [ {
+        "id" : "j1_6",
+        "text" : "Invoke",
+        "li_attr" : {
+          "id" : "j1_6"
+        },
+        "a_attr" : {
+          "href" : "#",
+          "id" : "j1_6_anchor"
+        },
+        "state" : {
+          "loaded" : true,
+          "opened" : false,
+          "selected" : true,
+          "disabled" : false
+        },
+        "data" : {
+          "transformers" : [ {
+            "op" : "copy",
+            "from" : "/msg",
+            "to" : "/msg2",
+            "inTypePath" : "string",
+            "outTypePath" : "string",
+            "direction" : "out"
+          } ],
+          "lines" : [ {
+            "inputPath" : "msg",
+            "outputPath" : "msg2",
+            "inpJsTree" : "#launching_arrow_jsTree_function",
+            "outpJsTree" : "#landing_arrow_jsTree",
+            "INPath" : "msg",
+            "OUTPath" : "msg2",
+            "direction" : "out",
+            "op" : "copy",
+            "line" : 0,
+            "dashedLine" : false,
+            "inType" : "string",
+            "outType" : "string",
+            "inTypePath" : "string",
+            "outTypePath" : "string"
+          } ],
+          "dropList" : [ ],
+          "createList" : [ {
+            "path" : "googleOktaOidcStartup",
+            "value" : "googleOktaOidcStartup",
+            "typePath" : "string"
+          } ],
+          "serviceType" : "api",
+          "fqn" : "packages/middleware/pub/security/OIDCLogin/Okta/OIDCProfile"
+        },
+        "children" : [ ],
+        "type" : "invoke"
+      }, {
+        "id" : "j1_9",
+        "text" : "Invoke",
+        "li_attr" : {
+          "id" : "j1_9"
+        },
+        "a_attr" : {
+          "href" : "#",
+          "id" : "j1_9_anchor"
+        },
+        "state" : {
+          "loaded" : true,
+          "opened" : false,
+          "selected" : false,
+          "disabled" : false
+        },
+        "data" : {
+          "transformers" : [ {
+            "op" : "copy",
+            "from" : "/googleOktaOidcStartup",
+            "to" : "/key",
+            "inTypePath" : "string",
+            "outTypePath" : "string",
+            "direction" : "in"
+          }, {
+            "op" : "copy",
+            "from" : "/msg2",
+            "to" : "/value",
+            "inTypePath" : "string",
+            "outTypePath" : "javaObject",
+            "direction" : "in"
+          } ],
+          "lines" : [ {
+            "inputPath" : "googleOktaOidcStartup",
+            "outputPath" : "key",
+            "inpJsTree" : "#launching_arrow_jsTree",
+            "outpJsTree" : "#landing_arrow_jsTree_function",
+            "INPath" : "googleOktaOidcStartup",
+            "OUTPath" : "key",
+            "direction" : "in",
+            "op" : "copy",
+            "line" : 0,
+            "dashedLine" : false,
+            "inType" : "string",
+            "outType" : "string",
+            "inTypePath" : "string",
+            "outTypePath" : "string"
+          }, {
+            "inputPath" : "msg2",
+            "outputPath" : "value",
+            "inpJsTree" : "#launching_arrow_jsTree",
+            "outpJsTree" : "#landing_arrow_jsTree_function",
+            "INPath" : "msg2",
+            "OUTPath" : "value",
+            "direction" : "in",
+            "op" : "copy",
+            "line" : 0,
+            "dashedLine" : false,
+            "inType" : "string",
+            "outType" : "string",
+            "inTypePath" : "string",
+            "outTypePath" : "javaObject"
+          } ],
+          "dropList" : [ ],
+          "createList" : [ ],
+          "serviceType" : "service",
+          "fqn" : "packages/middleware/pub/service/keyLogger"
+        },
+        "children" : [ ],
+        "type" : "invoke"
+      } ],
+      "type" : "group"
+    } ]
+  },
+  "consumers" : "",
+  "developers" : "",
+  "enableServiceDocumentValidation" : false
+}

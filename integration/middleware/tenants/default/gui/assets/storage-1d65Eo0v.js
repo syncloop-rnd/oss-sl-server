@@ -1,0 +1,1 @@
+var e=`syncloop_kbs`,t=`syncloop_selected_kb`;function n(e){try{localStorage.setItem(t,JSON.stringify(e))}catch{}}function r(){try{let e=localStorage.getItem(t);if(!e)return null;let n=JSON.parse(e);return!n||typeof n!=`object`||!n.kbId||!n.name||!n.id?null:{id:String(n.id),kbId:String(n.kbId),name:String(n.name)}}catch{return null}}export{r as n,n as r,e as t};

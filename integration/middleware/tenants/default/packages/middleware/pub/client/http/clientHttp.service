@@ -1,0 +1,192 @@
+{
+  "input" : [ {
+    "id" : "j1_1",
+    "text" : "url",
+    "icon" : null,
+    "li_attr" : {
+      "id" : "j1_1"
+    },
+    "a_attr" : {
+      "href" : "#",
+      "id" : "j1_1_anchor"
+    },
+    "state" : {
+      "loaded" : true,
+      "opened" : false,
+      "selected" : false,
+      "disabled" : false
+    },
+    "data" : { },
+    "children" : [ ],
+    "type" : "string"
+  }, {
+    "id" : "j1_2",
+    "text" : "method",
+    "icon" : null,
+    "li_attr" : {
+      "id" : "j1_2"
+    },
+    "a_attr" : {
+      "href" : "#",
+      "id" : "j1_2_anchor"
+    },
+    "state" : {
+      "loaded" : true,
+      "opened" : false,
+      "selected" : false,
+      "disabled" : false
+    },
+    "data" : { },
+    "children" : [ ],
+    "type" : "string"
+  }, {
+    "id" : "j1_3",
+    "text" : "formData",
+    "icon" : null,
+    "li_attr" : {
+      "id" : "j1_3"
+    },
+    "a_attr" : {
+      "href" : "#",
+      "id" : "j1_3_anchor"
+    },
+    "state" : {
+      "loaded" : true,
+      "opened" : false,
+      "selected" : false,
+      "disabled" : false
+    },
+    "data" : { },
+    "children" : [ ],
+    "type" : "document"
+  }, {
+    "id" : "j1_4",
+    "text" : "headers",
+    "icon" : null,
+    "li_attr" : {
+      "id" : "j1_4"
+    },
+    "a_attr" : {
+      "href" : "#",
+      "id" : "j1_4_anchor"
+    },
+    "state" : {
+      "loaded" : true,
+      "opened" : false,
+      "selected" : false,
+      "disabled" : false
+    },
+    "data" : { },
+    "children" : [ ],
+    "type" : "document"
+  }, {
+    "id" : "j1_5",
+    "text" : "reqPayload",
+    "icon" : null,
+    "li_attr" : {
+      "id" : "j1_5"
+    },
+    "a_attr" : {
+      "href" : "#",
+      "id" : "j1_5_anchor"
+    },
+    "state" : {
+      "loaded" : true,
+      "opened" : false,
+      "selected" : false,
+      "disabled" : false
+    },
+    "data" : { },
+    "children" : [ ],
+    "type" : "string"
+  }, {
+    "id" : "j1_6",
+    "text" : "queryParameters",
+    "icon" : null,
+    "li_attr" : {
+      "id" : "j1_6"
+    },
+    "a_attr" : {
+      "href" : "#",
+      "id" : "j1_6_anchor"
+    },
+    "state" : {
+      "loaded" : true,
+      "opened" : false,
+      "selected" : false,
+      "disabled" : false
+    },
+    "data" : { },
+    "children" : [ ],
+    "type" : "document"
+  } ],
+  "output" : [ {
+    "id" : "j2_1",
+    "text" : "statusCode",
+    "icon" : null,
+    "li_attr" : {
+      "id" : "j2_1"
+    },
+    "a_attr" : {
+      "href" : "#",
+      "id" : "j2_1_anchor"
+    },
+    "state" : {
+      "loaded" : true,
+      "opened" : false,
+      "selected" : false,
+      "disabled" : false
+    },
+    "data" : { },
+    "children" : [ ],
+    "type" : "string"
+  }, {
+    "id" : "j2_2",
+    "text" : "respPayload",
+    "icon" : null,
+    "li_attr" : {
+      "id" : "j2_2"
+    },
+    "a_attr" : {
+      "href" : "#",
+      "id" : "j2_2_anchor"
+    },
+    "state" : {
+      "loaded" : true,
+      "opened" : false,
+      "selected" : false,
+      "disabled" : false
+    },
+    "data" : { },
+    "children" : [ ],
+    "type" : "string"
+  }, {
+    "id" : "j2_3",
+    "text" : "respHeaders",
+    "icon" : null,
+    "li_attr" : {
+      "id" : "j2_3"
+    },
+    "a_attr" : {
+      "href" : "#",
+      "id" : "j2_3_anchor"
+    },
+    "state" : {
+      "loaded" : true,
+      "opened" : false,
+      "selected" : false,
+      "disabled" : false
+    },
+    "data" : { },
+    "children" : [ ],
+    "type" : "document"
+  } ],
+  "package" : "cGFja2FnZSBwYWNrYWdlcy5taWRkbGV3YXJlLnB1Yi5jbGllbnQuaHR0cDs=",
+  "imports" : "aW1wb3J0IGNvbS5la2EubWlkZGxld2FyZS5wdWIudXRpbC5yZXN0LkNsaWVudDsKaW1wb3J0IGNvbS5la2EubWlkZGxld2FyZS5zZXJ2aWNlLkRhdGFQaXBlbGluZTsKaW1wb3J0IGNvbS5la2EubWlkZGxld2FyZS50ZW1wbGF0ZS5TbmlwcGV0RXhjZXB0aW9uOwoKaW1wb3J0IGphdmEubmV0LlVSTEVuY29kZXI7CmltcG9ydCBqYXZhLm5pby5jaGFyc2V0LlN0YW5kYXJkQ2hhcnNldHM7CmltcG9ydCBqYXZhLnV0aWwuQXJyYXlMaXN0OwppbXBvcnQgamF2YS51dGlsLkNvbGxlY3Rpb247CmltcG9ydCBqYXZhLnV0aWwuTGlzdDsKaW1wb3J0IGphdmEudXRpbC5NYXA7CmltcG9ydCBqYXZhLnV0aWwuc3RyZWFtLkNvbGxlY3RvcnM7",
+  "main" : "CXRyeSB7CiAgICAgIAlTdHJpbmcgbWV0aG9kID0gZGF0YVBpcGVsaW5lLmdldFN0cmluZygibWV0aG9kIik7CgogICAgICAgICAgICBTdHJpbmcgdXJsID0gZGF0YVBpcGVsaW5lLmdldFN0cmluZygidXJsIik7CiAgICAgICAgICAgIFN0cmluZyByZXFQYXlsb2FkID0gZGF0YVBpcGVsaW5lLmdldFN0cmluZygicmVxUGF5bG9hZCIpOwogICAgICAgICAgICBNYXA8U3RyaW5nLCBPYmplY3Q+IGZvcm1EYXRhID0gZGF0YVBpcGVsaW5lLmdldEFzTWFwKCJmb3JtRGF0YSIpOwogICAgICAgICAgICBNYXA8U3RyaW5nLCBPYmplY3Q+IHF1ZXJ5UGFyYW1ldGVycyA9IGRhdGFQaXBlbGluZS5nZXRBc01hcCgicXVlcnlQYXJhbWV0ZXJzIik7CiAgICAgICAgICAgIE1hcDxTdHJpbmcsIFN0cmluZz4gcmVxSGVhZGVycyA9IGRhdGFQaXBlbGluZS5nZXRBc01hcCgiaGVhZGVycyIpOwoKICAgICAgICAgICAgU3RyaW5nIGZvcm0gPSBxdWVyeVBhcmFtZXRlcnMuZW50cnlTZXQoKQogICAgICAgICAgICAgICAgICAgIC5zdHJlYW0oKQogICAgICAgICAgICAgICAgICAgIC5mbGF0TWFwKGUgLT4gewoKICAgICAgICAgICAgICAgICAgICAgICAgTGlzdDxTdHJpbmc+IGxpc3QgPSBuZXcgQXJyYXlMaXN0PD4oKTsKICAgICAgICAgICAgICAgICAgICAgICAgaWYgKGUuZ2V0VmFsdWUoKSBpbnN0YW5jZW9mIENvbGxlY3Rpb24pIHsKCiAgICAgICAgICAgICAgICAgICAgICAgICAgICBBcnJheUxpc3Q8Pz4gYXJyYXlMaXN0ID0gKEFycmF5TGlzdDw/PikgZS5nZXRWYWx1ZSgpOwoKICAgICAgICAgICAgICAgICAgICAgICAgICAgIGxpc3QuYWRkQWxsKGFycmF5TGlzdC5zdHJlYW0oKS5tYXAobSAtPiBlLmdldEtleSgpICsgIj0iICsgVVJMRW5jb2Rlci5lbmNvZGUobS50b1N0cmluZygpLCBTdGFuZGFyZENoYXJzZXRzLlVURl84KSkuCiAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIG1hcChtIC0+IG0udG9TdHJpbmcoKSkuY29sbGVjdChDb2xsZWN0b3JzLnRvTGlzdCgpKSk7CgogICAgICAgICAgICAgICAgICAgICAgICB9IGVsc2UgewogICAgICAgICAgICAgICAgICAgICAgICAgICAgbGlzdC5hZGQoZS5nZXRLZXkoKSArICI9IiArIFVSTEVuY29kZXIuZW5jb2RlKChTdHJpbmcpIGUuZ2V0VmFsdWUoKSwgU3RhbmRhcmRDaGFyc2V0cy5VVEZfOCkpOwogICAgICAgICAgICAgICAgICAgICAgICB9CiAgICAgICAgICAgICAgICAgICAgICAgIHJldHVybiBsaXN0LnN0cmVhbSgpOwogICAgICAgICAgICAgICAgICAgIH0pCiAgICAgICAgICAgICAgICAgICAgLmNvbGxlY3QoQ29sbGVjdG9ycy5qb2luaW5nKCImIikpOwoKICAgICAgICAgICAgTWFwPFN0cmluZywgT2JqZWN0PiByZXNwb25zZSA9IENsaWVudC5pbnZva2UoU3RyaW5nLmZvcm1hdCgiJXM/JXMiLCB1cmwsIGZvcm0pLCBtZXRob2QsIGZvcm1EYXRhLCByZXFIZWFkZXJzLCByZXFQYXlsb2FkLCB0cnVlKTsKICAgICAgICAgICAgZGF0YVBpcGVsaW5lLnB1dCgic3RhdHVzQ29kZSIsIHJlc3BvbnNlLmdldCgic3RhdHVzQ29kZSIpKTsKICAgICAgICAgICAgZGF0YVBpcGVsaW5lLnB1dCgicmVzcFBheWxvYWQiLCByZXNwb25zZS5nZXQoInJlc3BQYXlsb2FkIikpOwogICAgICAgICAgICBkYXRhUGlwZWxpbmUucHV0KCJyZXNwSGVhZGVycyIsIHJlc3BvbnNlLmdldCgicmVzcEhlYWRlcnMiKSk7CiAgICAgIAogIAl9IGNhdGNoIChFeGNlcHRpb24gZSkgewoJCWRhdGFQaXBlbGluZS5jbGVhcigpOwoJCWRhdGFQaXBlbGluZS5wdXQoImVycm9yIiwgZS5nZXRNZXNzYWdlKCkpOwoJCW5ldyBTbmlwcGV0RXhjZXB0aW9uKGRhdGFQaXBlbGluZSwgIlNuZXBwZXQgZXhjZXB0aW9uIiwgbmV3IEV4Y2VwdGlvbihlKSk7Cgl9",
+  "staticWorkspace" : "",
+  "version" : "v1",
+  "consumers" : "",
+  "developers" : "",
+  "lockedByUser" : "admin"
+}

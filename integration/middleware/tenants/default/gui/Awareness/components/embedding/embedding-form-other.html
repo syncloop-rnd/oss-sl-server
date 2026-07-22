@@ -1,0 +1,329 @@
+<form name="embeddingFormOther"
+      novalidate
+      ng-submit="saveEmbeddingModel(embeddingFormOther)"
+      class="embedding-config-form">
+
+    <!-- EM PROVIDER TYPE -->
+    <input type="hidden"
+           ng-model="embeddingEdit.emProviderType"
+           value="EXTERNAL">
+
+    <!-- MODEL NAME -->
+    <div class="form-group row align-items-center">
+        <label class="col-sm-3 entire_toggletitle">
+            Model Name
+            <sup class="field_important">*</sup>
+            <a href="javascript:void(0)" class="info_tooltip">
+                <img src="/Awareness/pub/images/info.svg">
+                <span class="tooltiptext">Technical name of the embedding model.</span>
+            </a>
+        </label>
+
+        <div class="col-sm-9 position-rel">
+            <input type="text"
+                   class="input_form"
+                   name="emModelName"
+                   ng-model="embeddingEdit.modelName"
+                   placeholder="Enter model name"
+                   ng-required="emActiveProvider==='other'"
+                   ng-class="{'input_formerror': (embeddingFormOther.emModelName.$touched || embeddingFormOther.$submitted) && embeddingFormOther.emModelName.$invalid }">
+
+            <div class="help-block form_error input_error error_tooltip"
+                 ng-if="(embeddingFormOther.emModelName.$touched || embeddingFormOther.$submitted) && embeddingFormOther.emModelName.$error.required">
+                <span class="tooltiptext">Model Name is required</span>
+            </div>
+        </div>
+    </div>
+
+    <!-- DISPLAY NAME -->
+    <div class="form-group row align-items-center">
+        <label class="col-sm-3 entire_toggletitle">
+            Display Name
+            <sup class="field_important">*</sup>
+            <a href="javascript:void(0)" class="info_tooltip">
+                <img src="/Awareness/pub/images/info.svg">
+                <span class="tooltiptext">Friendly name shown in Syncloop.</span>
+            </a>
+        </label>
+
+        <div class="col-sm-9 position-rel">
+            <input type="text"
+                   class="input_form"
+                   name="emDisplayName"
+                   ng-model="embeddingEdit.displayName"
+                   placeholder="Enter display name"
+                   ng-required="emActiveProvider==='other'"
+                   ng-class="{'input_formerror': (embeddingFormOther.emDisplayName.$touched || embeddingFormOther.$submitted) && embeddingFormOther.emDisplayName.$invalid }">
+
+            <div class="help-block form_error input_error error_tooltip"
+                 ng-if="(embeddingFormOther.emDisplayName.$touched || embeddingFormOther.$submitted) && embeddingFormOther.emDisplayName.$error.required">
+                <span class="tooltiptext">Display Name is required</span>
+            </div>
+        </div>
+    </div>
+
+    <!-- EXTERNAL PROVIDER CONFIG -->
+    <div ng-if="!embeddingEdit.emProviderType || embeddingEdit.emProviderType === 'EXTERNAL'">
+
+        <!-- PROVIDER -->
+        <div class="form-group row align-items-center">
+            <label class="col-sm-3 entire_toggletitle">
+                Provider
+                <a href="javascript:void(0)" class="info_tooltip">
+                    <img src="/Awareness/pub/images/info.svg">
+                    <span class="tooltiptext">Provider name.</span>
+                </a>
+            </label>
+
+            <div class="col-sm-9 position-rel">
+                <select class="input_form"
+                        name="emProvider"
+                        ng-model="embeddingEdit.provider"
+                        ng-required="emActiveProvider==='other'">
+
+                    <option value="" >Select Provider</option>
+                    <option value="OpenAI">OpenAI</option>
+                    <option value="Google">Google</option>
+                    <option value="claude">Claude</option>
+                </select>
+            </div>
+        </div>
+
+        <!-- BASE URL -->
+        <div class="form-group row align-items-center">
+            <label class="col-sm-3 entire_toggletitle">
+                Base URL
+                <a href="javascript:void(0)" class="info_tooltip">
+                    <img src="/Awareness/pub/images/info.svg">
+                    <span class="tooltiptext">API endpoint for the embedding service.</span>
+                </a>
+            </label>
+
+            <div class="col-sm-9 position-rel">
+                <input type="url"
+                       class="input_form"
+                       name="emBaseUrl"
+                       ng-model="embeddingEdit.baseUrl"
+                       placeholder="https://api.example.com"
+                       ng-required="emActiveProvider==='other'">
+            </div>
+        </div>
+
+        <!-- API KEY -->
+        <div class="form-group row align-items-center">
+            <label class="col-sm-3 entire_toggletitle">
+                API Key
+                <a href="javascript:void(0)" class="info_tooltip">
+                    <img src="/Awareness/pub/images/info.svg">
+                    <span class="tooltiptext">Authentication key for API access.</span>
+                </a>
+            </label>
+
+            <div class="col-sm-9 position-rel">
+                <input ng-attr-type="{{ showApiKey['embedding'] ? 'text' : 'password' }}"
+                       class="input_form"
+                       name="emApiKey"
+                       ng-model="embeddingEdit.apiKey"
+                       placeholder="{{ embeddingEdit.EMKey ? '•••••••• (unchanged)' : 'Enter API Key' }}"
+                       ng-required="emActiveProvider==='other' && !embeddingEdit.EMKey"
+                       style="padding-right:41px;">
+
+                <span ng-click="toggleApiKeyVisibility('embedding')" class="password-icon" ng-show="embeddingEdit.apiKey || embeddingEdit.EMKey">
+                    <i class="fa" ng-class="showApiKey['embedding'] ? 'fa-eye-slash' : 'fa-eye'"></i>
+                </span>
+
+                <div class="help-block form_error input_error error_tooltip"
+                     ng-if="(embeddingFormOther.emApiKey.$touched || embeddingFormOther.$submitted) && embeddingFormOther.emApiKey.$error.required">
+                    <span class="tooltiptext">API Key is required</span>
+                </div>
+            </div>
+        </div>
+
+        <!-- VECTOR DIMENSIONS -->
+        <div class="form-group row align-items-center">
+            <label class="col-sm-3 entire_toggletitle">
+                Vector Dimensions
+                <a href="javascript:void(0)" class="info_tooltip">
+                    <img src="/Awareness/pub/images/info.svg">
+                    <span class="tooltiptext">Size of the generated vector.</span>
+                </a>
+            </label>
+
+            <div class="col-sm-9 position-rel">
+                <input type="number"
+                       class="input_form"
+                       name="emDimensions"
+                       ng-model="embeddingEdit.dimensions"
+                       placeholder="Enter vector size (e.g. 1536)"
+                       min="1"
+                       ng-required="emActiveProvider==='other'">
+            </div>
+        </div>
+
+        <!-- TOKEN PRICING -->
+        <div class="form-group row align-items-center">
+            <label class="col-sm-3 entire_toggletitle">
+                I/O Token Rates
+                <a href="javascript:void(0)" class="info_tooltip">
+                    <img src="/Awareness/pub/images/info.svg">
+                    <span class="tooltiptext">Cost per million input and output tokens.</span>
+                </a>
+            </label>
+
+            <div class="col-sm-9">
+                <div class="row g-2">
+                    <div class="col-md-4">
+                        <input type="number"
+                               class="input_form"
+                               id="ppm_input"
+                               placeholder="PPM Input"
+                               ng-model="embeddingEdit.properties.ppm_input">
+                    </div>
+
+                    <div class="col-md-4">
+                        <input type="number"
+                               class="input_form"
+                               id="ppm_output"
+                               placeholder="PPM Output"
+                               ng-model="embeddingEdit.properties.ppm_output">
+                    </div>
+
+                    <div class="col-md-4">
+                        <select class="input_form" ng-model="embeddingEdit.properties.currency">
+                            <option value="">Select Currency</option>
+                            <option value="INR">Indian Rupee (INR)</option>
+                            <option value="USD">US Dollar (USD)</option>
+                            <option value="EUR">Euro (EUR)</option>
+                            <option value="GBP">British Pound (GBP)</option>
+                            <option value="JPY">Japanese Yen (JPY)</option>
+                            <option value="AUD">Australian Dollar (AUD)</option>
+                            <option value="CAD">Canadian Dollar (CAD)</option>
+                            <option value="CHF">Swiss Franc (CHF)</option>
+                            <option value="CNY">Chinese Yuan (CNY)</option>
+                            <option value="HKD">Hong Kong Dollar (HKD)</option>
+                            <option value="SGD">Singapore Dollar (SGD)</option>
+                            <option value="NZD">New Zealand Dollar (NZD)</option>
+                            <option value="KRW">South Korean Won (KRW)</option>
+                            <option value="AED">UAE Dirham (AED)</option>
+                            <option value="SAR">Saudi Riyal (SAR)</option>
+                            <option value="ZAR">South African Rand (ZAR)</option>
+                            <option value="SEK">Swedish Krona (SEK)</option>
+                            <option value="NOK">Norwegian Krone (NOK)</option>
+                            <option value="DKK">Danish Krone (DKK)</option>
+                            <option value="THB">Thai Baht (THB)</option>
+                            <option value="MYR">Malaysian Ringgit (MYR)</option>
+                            <option value="IDR">Indonesian Rupiah (IDR)</option>
+                            <option value="PHP">Philippine Peso (PHP)</option>
+                            <option value="VND">Vietnamese Dong (VND)</option>
+                            <option value="PKR">Pakistani Rupee (PKR)</option>
+                            <option value="BDT">Bangladeshi Taka (BDT)</option>
+                            <option value="LKR">Sri Lankan Rupee (LKR)</option>
+                            <option value="NPR">Nepalese Rupee (NPR)</option>
+                            <option value="KWD">Kuwaiti Dinar (KWD)</option>
+                            <option value="BHD">Bahraini Dinar (BHD)</option>
+                            <option value="OMR">Omani Rial (OMR)</option>
+                            <option value="QAR">Qatari Riyal (QAR)</option>
+                            <option value="TRY">Turkish Lira (TRY)</option>
+                            <option value="ILS">Israeli Shekel (ILS)</option>
+                            <option value="EGP">Egyptian Pound (EGP)</option>
+                            <option value="KES">Kenyan Shilling (KES)</option>
+                            <option value="NGN">Nigerian Naira (NGN)</option>
+                            <option value="BRL">Brazilian Real (BRL)</option>
+                            <option value="MXN">Mexican Peso (MXN)</option>
+                            <option value="ARS">Argentine Peso (ARS)</option>
+                            <option value="CLP">Chilean Peso (CLP)</option>
+                            <option value="COP">Colombian Peso (COP)</option>
+                            <option value="PEN">Peruvian Sol (PEN)</option>
+                            <option value="RUB">Russian Ruble (RUB)</option>
+                            <option value="PLN">Polish Zloty (PLN)</option>
+                            <option value="CZK">Czech Koruna (CZK)</option>
+                            <option value="HUF">Hungarian Forint (HUF)</option>
+                        </select>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div> <!-- end EXTERNAL -->
+
+    <!-- EM STORE -->
+    <div class="form-group row align-items-center">
+        <label class="col-sm-3 entire_toggletitle">
+            EM Store
+            <a href="javascript:void(0)" class="info_tooltip">
+                <img src="/Awareness/pub/images/info.svg">
+                <span class="tooltiptext">Vector database used for embeddings.</span>
+            </a>
+        </label>
+
+        <div class="col-sm-9">
+
+            <select class="input_form"
+                    name="emStoreType"
+                    ng-model="embeddingEdit.emStoreType"
+                    ng-options="s as s for s in (embeddingStores || [])">
+
+                <option value="">Select store</option>
+
+            </select>
+
+        </div>
+    </div>
+
+    <!-- VECTOR STORE CONFIG -->
+    <div ng-if="embeddingEdit.emStoreType">
+
+        <div class="form-group row">
+            <label class="col-sm-3 entire_toggletitle">Host</label>
+            <div class="col-sm-9">
+                <input class="input_form"
+                       ng-model="embeddingEdit.store.host"
+                       placeholder="Keep blank to use syncloop configuration">
+            </div>
+        </div>
+
+        <div class="form-group row">
+            <label class="col-sm-3 entire_toggletitle">Port</label>
+            <div class="col-sm-9">
+                <input type="number"
+                       class="input_form"
+                       ng-model="embeddingEdit.store.port"
+                       placeholder="Keep blank to use syncloop configuration">
+            </div>
+        </div>
+
+        <div class="form-group row align-items-center">
+            <label class="col-sm-3 entire_toggletitle">TLS</label>
+            <div class="col-sm-9">
+                <label class="switch entire_toggle">
+                    <input type="checkbox"
+                           ng-model="embeddingEdit.store.tls">
+                    <span class="slider round"></span>
+                </label>
+            </div>
+        </div>
+
+        <div class="form-group row">
+            <label class="col-sm-3 entire_toggletitle">Store API Key</label>
+            <div class="col-sm-9 position-rel">
+                <input ng-attr-type="{{ showApiKey['store'] ? 'text' : 'password' }}"
+                       class="input_form"
+                       ng-model="embeddingEdit.store.api_key"
+                       placeholder="Keep blank to use syncloop configuration"
+                       style="padding-right:41px;">
+                <span ng-click="toggleApiKeyVisibility('store')" class="password-icon">
+                <i class="fa"
+                   ng-class="showApiKey['store'] ? 'fa-eye-slash' : 'fa-eye'"></i>
+            </span>
+            </div>
+        </div>
+
+    </div>
+
+    <!-- SUBMIT -->
+    <div class="text-center mt-4 mb-2">
+        <button type="submit" class="create_btn" ng-disabled="isUIBusy && isUIBusy()">
+            Save Embedding Model
+        </button>
+    </div>
+
+</form>

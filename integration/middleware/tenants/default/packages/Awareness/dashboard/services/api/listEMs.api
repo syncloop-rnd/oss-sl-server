@@ -1,0 +1,316 @@
+{
+  "latest" : {
+    "createdTS" : "",
+    "input" : [ ],
+    "output" : [ {
+      "id" : "j3_15",
+      "text" : "EMBEDDING_MODELs",
+      "li_attr" : {
+        "id" : "j3_15"
+      },
+      "a_attr" : {
+        "href" : "#",
+        "id" : "j3_15_anchor"
+      },
+      "state" : {
+        "loaded" : true,
+        "opened" : true,
+        "selected" : false,
+        "disabled" : false
+      },
+      "data" : { },
+      "children" : [ {
+        "id" : "j3_16",
+        "text" : "LLMkey",
+        "li_attr" : {
+          "id" : "j3_16"
+        },
+        "a_attr" : {
+          "href" : "#",
+          "id" : "j3_16_anchor"
+        },
+        "state" : {
+          "loaded" : true,
+          "opened" : false,
+          "selected" : false,
+          "disabled" : false
+        },
+        "data" : { },
+        "children" : [ ],
+        "type" : "string"
+      }, {
+        "id" : "j3_17",
+        "text" : "modelName",
+        "li_attr" : {
+          "id" : "j3_17"
+        },
+        "a_attr" : {
+          "href" : "#",
+          "id" : "j3_17_anchor"
+        },
+        "state" : {
+          "loaded" : true,
+          "opened" : false,
+          "selected" : false,
+          "disabled" : false
+        },
+        "data" : { },
+        "children" : [ ],
+        "type" : "string"
+      }, {
+        "id" : "j3_18",
+        "text" : "apiKey",
+        "li_attr" : {
+          "id" : "j3_18"
+        },
+        "a_attr" : {
+          "href" : "#",
+          "id" : "j3_18_anchor"
+        },
+        "state" : {
+          "loaded" : true,
+          "opened" : false,
+          "selected" : false,
+          "disabled" : false
+        },
+        "data" : { },
+        "children" : [ ],
+        "type" : "string"
+      }, {
+        "id" : "j3_19",
+        "text" : "provider",
+        "li_attr" : {
+          "id" : "j3_19"
+        },
+        "a_attr" : {
+          "href" : "#",
+          "id" : "j3_19_anchor"
+        },
+        "state" : {
+          "loaded" : true,
+          "opened" : false,
+          "selected" : false,
+          "disabled" : false
+        },
+        "data" : { },
+        "children" : [ ],
+        "type" : "string"
+      }, {
+        "id" : "j3_20",
+        "text" : "displayName",
+        "li_attr" : {
+          "id" : "j3_20"
+        },
+        "a_attr" : {
+          "href" : "#",
+          "id" : "j3_20_anchor"
+        },
+        "state" : {
+          "loaded" : true,
+          "opened" : false,
+          "selected" : false,
+          "disabled" : false
+        },
+        "data" : { },
+        "children" : [ ],
+        "type" : "string"
+      }, {
+        "id" : "j3_21",
+        "text" : "is_verified",
+        "li_attr" : {
+          "id" : "j3_21"
+        },
+        "a_attr" : {
+          "href" : "#",
+          "id" : "j3_21_anchor"
+        },
+        "state" : {
+          "loaded" : true,
+          "opened" : false,
+          "selected" : false,
+          "disabled" : false
+        },
+        "data" : { },
+        "children" : [ ],
+        "type" : "boolean"
+      }, {
+        "id" : "j3_22",
+        "text" : "properties",
+        "li_attr" : {
+          "id" : "j3_22"
+        },
+        "a_attr" : {
+          "href" : "#",
+          "id" : "j3_22_anchor"
+        },
+        "state" : {
+          "loaded" : true,
+          "opened" : true,
+          "selected" : false,
+          "disabled" : false
+        },
+        "data" : { },
+        "children" : [ {
+          "id" : "j3_23",
+          "text" : "ppm_output",
+          "li_attr" : {
+            "id" : "j3_23"
+          },
+          "a_attr" : {
+            "href" : "#",
+            "id" : "j3_23_anchor"
+          },
+          "state" : {
+            "loaded" : true,
+            "opened" : false,
+            "selected" : false,
+            "disabled" : false
+          },
+          "data" : { },
+          "children" : [ ],
+          "type" : "number"
+        }, {
+          "id" : "j3_24",
+          "text" : "ppt_input",
+          "li_attr" : {
+            "id" : "j3_24"
+          },
+          "a_attr" : {
+            "href" : "#",
+            "id" : "j3_24_anchor"
+          },
+          "state" : {
+            "loaded" : true,
+            "opened" : false,
+            "selected" : false,
+            "disabled" : false
+          },
+          "data" : { },
+          "children" : [ ],
+          "type" : "number"
+        }, {
+          "id" : "j3_25",
+          "text" : "ppt_output",
+          "li_attr" : {
+            "id" : "j3_25"
+          },
+          "a_attr" : {
+            "href" : "#",
+            "id" : "j3_25_anchor"
+          },
+          "state" : {
+            "loaded" : true,
+            "opened" : false,
+            "selected" : false,
+            "disabled" : false
+          },
+          "data" : { },
+          "children" : [ ],
+          "type" : "number"
+        }, {
+          "id" : "j3_26",
+          "text" : "currency",
+          "li_attr" : {
+            "id" : "j3_26"
+          },
+          "a_attr" : {
+            "href" : "#",
+            "id" : "j3_26_anchor"
+          },
+          "state" : {
+            "loaded" : true,
+            "opened" : false,
+            "selected" : false,
+            "disabled" : false
+          },
+          "data" : { },
+          "children" : [ ],
+          "type" : "string"
+        }, {
+          "id" : "j3_27",
+          "text" : "ppm_input",
+          "li_attr" : {
+            "id" : "j3_27"
+          },
+          "a_attr" : {
+            "href" : "#",
+            "id" : "j3_27_anchor"
+          },
+          "state" : {
+            "loaded" : true,
+            "opened" : false,
+            "selected" : false,
+            "disabled" : false
+          },
+          "data" : { },
+          "children" : [ ],
+          "type" : "number"
+        } ],
+        "type" : "document"
+      } ],
+      "type" : "documentList"
+    } ],
+    "api" : [ {
+      "id" : "j1_1",
+      "text" : "Invoke",
+      "li_attr" : {
+        "id" : "j1_1"
+      },
+      "a_attr" : {
+        "href" : "#",
+        "id" : "j1_1_anchor"
+      },
+      "state" : {
+        "loaded" : true,
+        "opened" : false,
+        "selected" : false,
+        "disabled" : false
+      },
+      "data" : {
+        "guid" : "a00afed3-db2a-457b-bc38-704d381b6dd0",
+        "columnType" : "-1",
+        "transformers" : [ {
+          "op" : "copy",
+          "from" : "/EMBEDDING_MODELs",
+          "to" : "/EMBEDDING_MODELs",
+          "inTypePath" : "documentList",
+          "outTypePath" : "documentList",
+          "direction" : "out"
+        } ],
+        "lines" : [ {
+          "inputPath" : "EMBEDDING_MODELs",
+          "outputPath" : "EMBEDDING_MODELs",
+          "inpJsTree" : "#launching_arrow_jsTree_function",
+          "outpJsTree" : "#landing_arrow_jsTree",
+          "INPath" : "EMBEDDING_MODELs",
+          "OUTPath" : "EMBEDDING_MODELs",
+          "direction" : "out",
+          "op" : "copy",
+          "line" : 0,
+          "dashedLine" : false,
+          "inType" : "documentList",
+          "outType" : "documentList",
+          "inTypePath" : "documentList",
+          "outTypePath" : "documentList"
+        } ],
+        "dropList" : [ ],
+        "createList" : [ ],
+        "initiateList" : [ ],
+        "fqn" : "packages/Awareness/dashboard/services/java/listEMs",
+        "serviceType" : "service"
+      },
+      "children" : [ ],
+      "type" : "invoke"
+    } ],
+    "api_info" : {
+      "title" : "",
+      "description" : ""
+    },
+    "lockedByUser" : "admin"
+  },
+  "consumers" : "",
+  "developers" : "administrators,developers",
+  "enableServiceDocumentValidation" : false,
+  "created_on" : "1762144206118",
+  "modified_on" : 1762144206118
+}

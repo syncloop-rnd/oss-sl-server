@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>504 | Gateway Timeout</title>
+
+    <style>
+        * {
+            box-sizing: border-box;
+            font-family: Inter, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+        }
+
+        body {
+            margin: 0;
+            background: linear-gradient(90deg, #ffffff 55%, #EAF7FB 45%);
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .container {
+            width: 100%;
+            max-width: 1200px;
+            padding: 40px;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            align-items: center;
+            gap: 40px;
+        }
+
+        .content {
+            max-width: 460px;
+        }
+
+        .badge {
+            display: inline-block;
+            background: #F0F9FF;
+            color: #0369A1;
+            padding: 6px 12px;
+            border-radius: 999px;
+            font-size: 13px;
+            font-weight: 500;
+            margin-bottom: 16px;
+        }
+
+        .content h1 {
+            font-size: 64px;
+            margin: 0;
+            color: #0284C7;
+            line-height: 1;
+        }
+
+        .content h2 {
+            font-size: 26px;
+            margin: 16px 0 10px;
+            color: #1F2937;
+        }
+
+        .content p {
+            font-size: 16px;
+            color: #6B7280;
+            line-height: 1.6;
+            margin-bottom: 24px;
+        }
+
+        .actions {
+            display: flex;
+            gap: 12px;
+            flex-wrap: wrap;
+        }
+
+        .btn {
+            padding: 12px 20px;
+            border-radius: 6px;
+            font-size: 14px;
+            font-weight: 500;
+            text-decoration: none;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+            transition: all 0.2s ease;
+        }
+
+        .btn-primary {
+            background: #0B5ED7;
+            color: #ffffff;
+        }
+
+        .btn-primary:hover {
+            background: #094BB5;
+        }
+
+        .btn-outline {
+            border: 1px solid #D1D5DB;
+            color: #1F2937;
+            background: #ffffff;
+        }
+
+        .btn-outline:hover {
+            background: #F3F4F6;
+        }
+
+        .illustration {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        svg {
+            max-width: 380px;
+            width: 100%;
+        }
+
+        @media (max-width: 900px) {
+            body {
+                background: #ffffff;
+            }
+
+            .container {
+                grid-template-columns: 1fr;
+                text-align: center;
+            }
+
+            .content {
+                margin: 0 auto;
+            }
+
+            .actions {
+                justify-content: center;
+            }
+        }
+    </style>
+    <script type="syncloop/analytics"></script>
+</head>
+<body>
+<script type="syncloop/body-analytics"></script>
+<div class="container">
+    <!-- LEFT CONTENT -->
+    <div class="content">
+        <!-- Logo placeholder -->
+        <!-- <img src="logo.svg" alt="Syncloop Logo" /> -->
+
+        <span class="badge">Request Timed Out</span>
+
+        <h1>504</h1>
+        <h2>Gateway Timeout</h2>
+        <p>
+            The server took too long to respond while acting as a gateway.
+            This can happen during high load or temporary network delays.
+        </p>
+
+        <div class="actions">
+            <a href="/" class="btn btn-primary">Retry</a>
+            <a href="javascript:location.reload()" class="btn btn-outline">Refresh Page</a>
+        </div>
+    </div>
+
+    <!-- RIGHT ILLUSTRATION -->
+    <div class="illustration">
+        <!-- Inline SVG – Timeout / clock gateway -->
+        <svg viewBox="0 0 320 300" xmlns="http://www.w3.org/2000/svg">
+            <circle cx="160" cy="150" r="140" fill="#EAF7FB"/>
+
+            <!-- Gateway blocks -->
+            <rect x="80" y="120" width="60" height="40" rx="8" fill="#FFFFFF" stroke="#CBD5E1" stroke-width="2"/>
+            <rect x="180" y="120" width="60" height="40" rx="8" fill="#FFFFFF" stroke="#CBD5E1" stroke-width="2"/>
+
+            <!-- Clock -->
+            <circle cx="160" cy="185" r="26" fill="#F0F9FF" stroke="#0284C7" stroke-width="2"/>
+            <line x1="160" y1="185" x2="160" y2="170" stroke="#0284C7" stroke-width="3"/>
+            <line x1="160" y1="185" x2="172" y2="192" stroke="#0284C7" stroke-width="3"/>
+
+            <!-- Dashed connection -->
+            <line x1="140" y1="140" x2="180" y2="140" stroke="#94A3B8" stroke-width="2" stroke-dasharray="6"/>
+
+            <!-- Pause dots -->
+            <circle cx="150" cy="140" r="3" fill="#EF4444"/>
+            <circle cx="170" cy="140" r="3" fill="#EF4444"/>
+        </svg>
+    </div>
+</div>
+
+</body>
+</html>

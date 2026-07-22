@@ -1,0 +1,69 @@
+{
+  "input" : [ {
+    "id" : "j1_1",
+    "text" : "msg",
+    "li_attr" : {
+      "id" : "j1_1"
+    },
+    "a_attr" : {
+      "href" : "#",
+      "id" : "j1_1_anchor"
+    },
+    "state" : {
+      "loaded" : true,
+      "opened" : false,
+      "selected" : false,
+      "disabled" : false
+    },
+    "data" : { },
+    "children" : [ ],
+    "type" : "string"
+  }, {
+    "id" : "j1_2",
+    "text" : "meta",
+    "li_attr" : {
+      "id" : "j1_2"
+    },
+    "a_attr" : {
+      "href" : "#",
+      "id" : "j1_2_anchor"
+    },
+    "state" : {
+      "loaded" : true,
+      "opened" : false,
+      "selected" : false,
+      "disabled" : false
+    },
+    "data" : { },
+    "children" : [ ],
+    "type" : "document"
+  }, {
+    "id" : "j1_3",
+    "text" : "code",
+    "li_attr" : {
+      "id" : "j1_3"
+    },
+    "a_attr" : {
+      "href" : "#",
+      "id" : "j1_3_anchor"
+    },
+    "state" : {
+      "loaded" : true,
+      "opened" : false,
+      "selected" : false,
+      "disabled" : false
+    },
+    "data" : { },
+    "children" : [ ],
+    "type" : "string"
+  } ],
+  "output" : [ ],
+  "package" : "cGFja2FnZSBwYWNrYWdlcy5taWRkbGV3YXJlLnB1Yi5zZXJ2aWNlOw==",
+  "imports" : "aW1wb3J0IGNvbS5la2EubWlkZGxld2FyZS5zZXJ2aWNlLkRhdGFQaXBlbGluZTsKaW1wb3J0IGNvbS5la2EubWlkZGxld2FyZS5zZXJ2aWNlLlNlcnZpY2VVdGlsczsKaW1wb3J0IGNvbS5la2EubWlkZGxld2FyZS50ZW1wbGF0ZS5TbmlwcGV0RXhjZXB0aW9uOwppbXBvcnQgamF2YS51dGlsLk1hcDs=",
+  "main" : "ZGF0YVBpcGVsaW5lLmFwcExvZygiT1BFUkFUSU9OIiwgInRocm93RXhjZXB0aW9uIik7ClN0cmluZyBtc2c9ZGF0YVBpcGVsaW5lLmdldFN0cmluZygibXNnIik7CmRhdGFQaXBlbGluZS5hcHBMb2coIlNFUlZJQ0VfTUVTU0FHRSIsbXNnKTsKU3RyaW5nIGNvZGU9ZGF0YVBpcGVsaW5lLmdldFN0cmluZygiY29kZSIpOwpkYXRhUGlwZWxpbmUuYXBwTG9nKCJTRVJWSUNFX0NPREUiLGNvZGUpOwpNYXA8U3RyaW5nLCBPYmplY3Q+IG1ldGEgPSAoTWFwPFN0cmluZywgT2JqZWN0PikgZGF0YVBpcGVsaW5lLmdldCgibWV0YSIpOwpkYXRhUGlwZWxpbmUuYXBwTG9nKCJNRVRBX1NUQVRVUyIsICJNZXRhIGRhdGEgYWNjZXNzZWQiKTsKCmlmKG1zZz09bnVsbCkKICBtc2c9IkRlZmF1bHQgZXhjZXB0aW9uIjsKdGhyb3cgbmV3IFNuaXBwZXRFeGNlcHRpb24oZGF0YVBpcGVsaW5lLCJGcm9tIFNlcnZpY2U6ICIgKyBtc2csIG5ldyBFeGNlcHRpb24obXNnKSwgbWV0YSwgY29kZSk7",
+  "staticWorkspace" : "",
+  "version" : "v1",
+  "consumers" : "",
+  "developers" : "",
+  "lockedByUser" : "admin"
+}

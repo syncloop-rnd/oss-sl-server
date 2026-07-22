@@ -1,0 +1,2019 @@
+<!DOCTYPE html>
+<html ng-app="jsonEditorApp">
+<head>
+	<meta charset="UTF-8">
+	<title>SL Awareness Configurator</title>
+	<base href="/"><script src="env.js"></script>
+	<script>
+		window.ENV = window.env || {};
+	</script>
+	<!-- AngularJS, jQuery, and Font Awesome via CDN -->
+	<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.8.2/angular.min.js"></script>
+	<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+	<link rel="shortcut icon" href="Awareness/pub/images/favicon.ico" type="image/x-icon" />
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/5.0.0-alpha2/css/bootstrap.min.css">
+	<link rel="stylesheet" href="Awareness/pub/css/style.css">
+	<link rel="stylesheet" href="middleware/pub/server/ui/assets/css/select2.min.css">
+	<link rel="stylesheet" href="middleware/pub/server/ui/css/sweetalert.css">
+
+	<script src="Awareness/pub/assets/syncloop-ai.js"></script>
+	<link href="middleware/pub/server/ui/assets/css/custom.css" rel="stylesheet" />
+	<link rel="stylesheet" href="https://unpkg.com/smooth-scrollbar@latest/dist/smooth-scrollbar.css">
+	<script src="https://unpkg.com/smooth-scrollbar@latest/dist/smooth-scrollbar.js"></script>
+	<script src="Awareness/pub/assets/wrapper-service.js" type="text/javascript"></script>
+
+	<style>
+
+		.input-group-text {
+			min-width: 100px;
+			background-color: #f1f1f1;
+			font-weight: 500;
+		}
+
+		.input-group img {
+			margin-left: -6px;
+		}
+		.input-group-append .btn,
+		.input-group-prepend .input-group-text {
+			display: flex;
+			align-items: center;
+			justify-content: center;
+		}
+		.dl-hover.remove-array-item.tooltip{
+			width: 34px;
+			height: 34px;
+		}
+		/* .remove-array-item,
+		.remove-array-object-item,
+		.add-array-item,
+		.add-array-object-item {
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			padding: 6px 10px;
+			border-radius: 4px;
+			cursor: pointer;
+			font-size: 14px;
+			gap: 6px;
+		} */
+
+		/* .remove-array-item,
+		.remove-array-object-item {
+			border: 1px solid #dc3545;
+			color: #dc3545;
+			background-color: transparent;
+		} */
+
+		/* .add-array-item,
+		.add-array-object-item {
+			border: 1px solid #007bff;
+			color: #007bff;
+			background-color: transparent;
+		} */
+
+		/* .remove-array-item img,
+		.remove-array-object-item img,
+		.add-array-item img,
+		.add-array-object-item img {
+			width: 16px;
+			height: 16px;
+			pointer-events: none;
+		} */
+
+		.array-item {
+			gap: 11px;
+			/* margin-bottom: 16px;
+			padding: 16px;
+			border: 1px solid #ddd;
+			border-radius: 4px;
+			background-color: #f9f9f9; */
+		}
+
+		.input-group,
+		.form-group {
+			margin-bottom: 12px;
+		}
+
+		.nested-fields {
+			padding-top: 10px;
+		}
+
+		.select2-selection__placeholder {
+			color: #a5a5a5 !important;
+		}
+
+		::-webkit-input-placeholder {
+			color:  #a5a5a5 !important;
+		}
+		:-moz-placeholder { /* Upto Firefox 18, Deprecated in Firefox 19  */
+			color:  #a5a5a5 !important;
+		}
+		::-moz-placeholder {  /* Firefox 19+ */
+			color:  #a5a5a5 !important;
+		}
+		:-ms-input-placeholder {
+			color:  #a5a5a5 !important;
+		}
+
+		.btn-blue {
+			background-color: #007bff;
+			color: white;
+			border: none;
+			padding: 6px 12px;
+			margin-right: 10px;
+			border-radius: 4px;
+			cursor: pointer;
+			transition: background-color 0.2s;
+		}
+
+		.btn-blue:hover {
+			background-color: #0056b3;
+		}
+
+		textarea.form-control.chat-expanded {
+			height: 250px !important;
+		}
+
+		.current-conversation {
+			background: #60606020;
+			border-radius: 3px;
+		}
+
+		.loader { display: none; }
+
+	</style>
+	<script type="syncloop/analytics"></script>
+
+</head>
+<body ng-controller="MainCtrl">
+<script type="syncloop/body-analytics"></script>
+<div id="initial-loader">
+	<img src="Awareness/pub/images/syncloop_logo_animation.gif" />
+</div>
+
+<!-- Angular app root -->
+<div ng-app="syncloop_ai" ng-cloak>
+	<header class="sy_ai_header">
+		<div class="sy_ai_logo">
+			<div>
+				<a href="javascript:void(0)"><img src="Awareness/pub/images/syncloop-logo.svg"></a>
+			</div>
+			<ul class="sy_login_nav" style="display: none;">
+				<li><a class="sy_user" href="javascript:void(0)">NK</a></li>
+				<li><a class="sy_invite" href="javascript:void(0)">Invite</a></li>
+			</ul>
+
+			<div class="dropdown navbar-right tp_m">
+				<a href="https://www.syncloop.com/howto.html?utm_source=Workspace&utm_medium=watch-tutorials-link" target="_blank" class="dropbtn"><img class="hvc" style="width:17px;" src="middleware/pub/server/ui/icons/play_icon.svg">&nbsp; Watch Tutorials</a>
+			</div>
+
+	</header>
+	<div id="wrapper" class="fullleft-width">
+		<!-- Sidebar -->
+		<div id="sidebar-wrapper" class="minsidebar" ng-init="menuOpen=false"
+     ng-class="{'open': menuOpen}"
+     ng-mouseleave="menuOpen=false" style="display: none">
+
+			<ul class="sidebar-nav padding-none">
+				<!-- <li style="visibility: hidden;"><strong>Dashboard</strong> </li> -->
+				<li class="title_add" ng-mouseenter="menuOpen=true"><strong class="dashboard_title">Dashboard</strong> <div ng-click="toggleSidebar()" class="menunormal"><img src="Awareness/pub/images/dashboard-icon.svg"></div></li>
+				<li ng-class="{active: activeTab==='studio'}" ng-click="activeTab='studio'" style="display: none;">
+					<a href="javascript:void(0)">
+						<i style="cursor:pointer;">
+							<img src="Awareness/pub/images/menu_studio.svg">
+						</i>
+						<span class="sidebar-navtext">Syncloop Studio</span>
+					</a>
+				</li>
+				<li ng-class="{active: activeTab==='apps'}" ng-click="activeTab='apps'">
+					<a href="javascript:void(0)">
+						<i style="cursor:pointer;">
+							<img src="Awareness/pub/images/menu_apps.svg">
+						</i>
+						<span class="sidebar-navtext">Apps</span>
+					</a>
+				</li>
+				<li ng-class="{active: activeTab==='teams'}" ng-click="activeTab='teams'">
+					<a href="javascript:void(0)">
+						<i style="cursor:pointer;">
+							<img src="Awareness/pub/images/menu_team.svg">
+						</i>
+						<span class="sidebar-navtext">Teams</span>
+					</a>
+				</li>
+				<li ng-class="{active: activeTab==='agents'}" ng-click="activeTab='agents'">
+					<a href="javascript:void(0)">
+						<i style="cursor:pointer;">
+							<img src="Awareness/pub/images/menu_agent.svg">
+						</i>
+						<span class="sidebar-navtext">Agents</span>
+					</a>
+				</li>
+				<li ng-class="{active: activeTab==='tools'}" ng-click="activeTab='tools'">
+					<a href="javascript:void(0)">
+						<i style="cursor:pointer;">
+							<img src="Awareness/pub/images/menu_tools.svg">
+						</i>
+						<span class="sidebar-navtext">Tools</span>
+					</a>
+				</li>
+				<li ng-class="{active: activeTab==='api'}">
+					<a href="middleware/pub/server/ui/workspace/web/api.html?utm_source=Workspace&utm_medium=api-page" target="_blank">
+						<i style="cursor:pointer;">
+							<img src="Awareness/pub/images/menu_APIs.svg">
+						</i>
+						<span class="sidebar-navtext">Api's</span>
+					</a>
+				</li>
+				<li style="display: none;">
+					<a href="javascript:void(0)">
+						<i style="cursor:pointer;">
+							<img src="Awareness/pub/images/menu_setting.svg" />
+						</i>
+						<span class="sidebar-navtext">Settings</span>
+					</a>
+				</li>
+
+				<li ng-click="triggerImport()">
+					<a href="javascript:void(0)">
+						<i style="cursor:pointer;">
+							<img src="Awareness/pub/images/menu_import.svg" />
+						</i>
+						<span class="sidebar-navtext">Import</span>
+					</a>
+				</li>
+
+				<li ng-click="exportJSON()">
+					<a href="javascript:void(0)">
+						<i style="cursor:pointer;">
+							<img src="Awareness/pub/images/menu_export.svg" />
+						</i>
+						<span class="sidebar-navtext">Export</span>
+					</a>
+				</li>
+				<li ng-class="{active: activeTab==='llms'}" ng-click="activeTab='llms'">
+					<a href="javascript:void(0)">
+						<i  style="cursor:pointer;">
+							<img src="Awareness/pub/images/menu_LLM.svg">
+						</i>
+						<span class="sidebar-navtext">LLM's</span>
+					</a>
+				</li>
+				<li ng-class="{active: activeTab==='kbs'}" ng-click="activeTab='kbs'">
+					<a href="javascript:void(0)">
+						<i  style="cursor:pointer;">
+							<img src="Awareness/pub/images/menu_knowledgebase.svg">
+						</i>
+						<span class="sidebar-navtext">Knowledge Base</span></a>
+				</li>
+				<li ng-class="{active: activeTab==='rags'}" ng-click="activeTab='rags'" style="display: none;">
+					<a href="javascript:void(0)">
+						<i  style="cursor:pointer;">
+							<img src="Awareness/pub/images/menu_Rags.svg">
+						</i>
+						<span class="sidebar-navtext">RAG</span></a>
+				</li>
+				<!-- <li>
+					<a href="middleware/pub/server/ui/workspace/web/workspace.html?utm_source=Workspace&utm_medium=workspace-page">
+						<i title="Test Chat" style="cursor:pointer;">
+							<img src="Awareness/pub/images/menu_APIs.svg">
+						</i>
+						<span class="sidebar-navtext">Workspace</span>
+					</a>
+				</li>
+				<li ng-click="doLogout()" title="Logout">
+					<a href="javascript:void(0)">
+						<i title="Apply Changes" style="cursor:pointer;">
+							<img src="Awareness/pub/images/menu_logout.svg" />
+						</i>
+						<span class="sidebar-navtext">Logout</span>
+					</a>
+				</li> -->
+				<!--				<li ng-click="exportJSON()" title="Export JSON">
+                                       <a href="javascript:void(0)"><img src="Awareness/pub/images/export_icon.svg" /> Export</a>
+                                    </li>-->
+			</ul>
+		</div>
+		<!-- /#sidebar-wrapper -->
+		<!-- Page Content -->
+
+
+		<div class="fullmodal_box" ng-show="showAgentBox">
+			<div class="resizer" role="separator" aria-orientation="vertical" aria-label="Resize panel"></div>
+			<div class="fullmodal_box--right" style="--right-width: 50%">
+
+				<div class="chatmodal-sharing">
+					<div class="total_tokens" style="visibility: hidden;">0/1000 <span>tokens</span></div>
+					<div class="d-flex gap_mix position-rel" style="--gapwidth: 12px" >
+
+
+						<div class="shareagent_box" id="shareagent_box">
+							<div class="d-flex justify-content-between align-items-center shareagent_box--head">
+								<h5 class="shareagent_box--headtitle">Share this Agent</h5>
+								<a href="javascript:void(0)" ng-click="copyAgentLink()" class="shareagent_box--headcopylink">
+									<img src="Awareness/pub/images/link-icon.svg"> {{copyLinkCaption}}</a>
+							</div>
+						<div class="shareagent_box--body">
+							<div class="d-flex gap-10">
+								<input class="agentinput_form" id="agent_share_option" />
+								<button type="btn" class="shareagent_box--invitebtn" ng-if="!isAgentInviting" ng-click="inviteAgent()">Invite</button>
+								<button type="btn" class="shareagent_box--invitebtn disabled" ng-if="isAgentInviting">Inviting</button>
+							</div>
+							<h6 class="shareagent_box--acess">Who has access</h6>
+							<div class="d-flex gap-10 flex-column">
+								<div class="d-flex gap-10 username_blanksetting" ng-repeat="consumer in sharedConsumers">
+									<img src="Awareness/pub/images/userpic.svg"> {{consumer}}
+								</div>
+								<div class="d-flex gap-10 username_blanksetting" ng-if="sharedConsumers.length == 0">
+									No one has access.
+								</div>
+							</div>
+						</div>
+						</div>	<!-- shareagent_box -->
+
+						<a href="javascript:void(0)" id="moreBtn" class="tooltip">
+							<img src="Awareness/pub/images/agent-more-options.svg">
+							<span class="tooltiptext">More</span>
+						</a>
+						<div class="rightmore_box" id="moreBox">
+						   <ul class="padding-none margin-none">
+							  </li>
+							    <li>
+									<a href="javascript:void(0)" ng-click="window.close()">Close
+								</a>
+							  </li>
+						   </ul>
+						</div> <!-- rightmore_box -->
+					</div>
+				</div>
+				<div class="fullmodal_box--rightscroll" id="agentChatWindow">
+					<div class="chat-logsagent overflow-y-auto">
+						<!-- Always-on welcome bubble -->
+						<div class="d-flex gap-10 align-items-start mb-3" ng-if="showWelcomeBubble">
+							<img src="Awareness/pub/images/chat_user.svg" alt="agent" class="mt-1">
+							<div class="chatuser_box">
+								<h5 class="chatuser_name">{{ agentForm.name || activeAgent.name || 'Syncloop Assistant' }}</h5>
+								<h6 class="chatuser_desc" ng-bind-html="welcomeSafeHtml"></h6>
+							</div>
+						</div>
+
+
+						<!-- (keep the rest: loading state, bubbles, thinking) -->
+						<div class="d-flex gap-10 align-items-start" ng-if="chatHistoryLoading">
+							<img src="Awareness/pub/images/chat_user.svg">
+							<div class="chatuser_box">
+								<h5 class="chatuser_name">Loading history…</h5>
+							</div>
+						</div>
+
+						<div ng-repeat="msg in chatHistory track by $index" class="mb-3">
+							<!-- User -->
+							<div class="d-flex justify-content-end" ng-if="msg.user === 'User'">
+								<span class="client_chatbox" ng-bind-html="msg.text"></span>
+							</div>
+
+							<!-- Agent -->
+							<div class="d-flex gap-10 align-items-start" ng-if="msg.user === 'Agent'">
+								<img src="Awareness/pub/images/robot-iconchat.svg" class="chatuser_bg" alt="agent" style="--bg-color:#DFF5FF">
+								<div class="chatuser_box">
+									<h5 class="chatuser_name">{{ msg.alias || activeAgent.name || 'Agent' }}</h5>
+									<div class="chatuser_desc" ng-bind-html="msg.text"></div>
+
+									<!-- Toolbar -->
+									<div class="message-toolbar d-flex mt-3">
+										<a href="javascript:void(0)" class="tooltip transresult_boxall--social">
+											<img src="Awareness/pub/images/thread_Thumbs_up.svg"><span class="tooltiptext">Like</span>
+										</a>
+										<a href="javascript:void(0)" class="tooltip transresult_boxall--social">
+											<img src="Awareness/pub/images/thread_Thumbs_down.svg"><span class="tooltiptext">Unlike</span>
+										</a>
+										<a href="javascript:void(0)" class="tooltip transresult_boxall--social" ng-click="copyHtml($event, msg.text)">
+											<img src="Awareness/pub/images/thread_copy.svg"><span class="tooltiptext" data-default="Copy">Copy</span>
+										</a>
+										<a href="javascript:void(0)"
+										   class="tooltip transresult_boxall--social"
+										   ng-class="{'is-disabled': msg._reloading}"
+										   ng-attr-aria-busy="{{ msg._reloading ? 'true' : 'false' }}"
+										   ng-attr-aria-disabled="{{ msg._reloading ? 'true' : 'false' }}"
+										   ng-click="!msg._reloading && reloadMessage(msg, $event)">
+
+											<!-- Spinner WHEN reloading -->
+											<span class="mini-spinner" ng-if="msg._reloading" aria-label="Reloading…" title="Reloading…"></span>
+
+											<!-- Reload icon WHEN NOT reloading -->
+											<img ng-if="!msg._reloading" src="Awareness/pub/images/thread_reload.svg" alt="Reload">
+
+											<!-- Tooltip text (dynamic) -->
+											<span class="tooltiptext" data-default="Reload">
+											  {{ msg._reloading ? 'Reloading…' : 'Reload' }}
+										    </span>
+										</a>
+										<a href="javascript:void(0)" class="seetranascript" ng-click="openresultBox()" style="display: none;">See Transcript</a>
+									</div>
+								</div>
+							</div>
+						</div>
+
+
+						<div class="d-flex gap-10 align-items-start mt-2" ng-show="chatWaitVisible">
+							<div class="chat_thinkingbox d-flex gap_mix" style="--gapwidth: 5px">
+								<img src="Awareness/pub/images/chat-loader.svg" alt="loading" width="28" height="28">
+							</div>
+						</div>
+					</div>
+
+					<div class="d-flex justify-content-between mb-2 position-rel width-100">
+
+
+							<button class="chatagent-name animation-fade" id="robotTriggerfirst"
+									ng-click="toggleAgentPicker()">
+								<img src="Awareness/pub/images/agentchaticon.svg">
+								{{ activeAgent.name || 'New Agent' }} <i class="fa fa-angle-down"></i>
+							</button>
+
+							<div class="chatagent-namebox position-abs"
+								 id="chatagentDropdown">
+								<div class="chatagent-namebox--search">
+									<div class="d-flex flex-1 align-items-center">
+										<img src="Awareness/pub/images/chat-search.svg">
+										<input type="text"
+											   class="chatagent-namebox--input flex-1"
+											   placeholder="Search Agents"
+											   ng-model="agentSearchQuery">
+									</div>
+<!--									<a href="javascript:void(0);" class="flexshrink-0"-->
+<!--									   ng-click="createAgentQuick()">+ New</a>-->
+								</div>
+
+								<h5 class="chatagent-nameboxtitle">My Agents</h5>
+
+								<div class="chatagent-name--inner">
+									<div class="row">
+										<div class="col-md-6" ng-repeat="a in filteredAgents() track by a.identifier">
+											<div class="icon-box">
+												<input type="radio" name="agentPicker" id="agentOpt_{{$index}}">
+												<label for="agentOpt_{{$index}}" class="d-flex justify-content-between"
+													   ng-click="selectChatAgent(a)">
+													<div class="d-flex justify-content-between">
+														<div class="box"><img src="Awareness/pub/images/robot-iconfirst.svg"></div>
+														<div>
+															<h5 class="chatagent-name--title">{{ a.name || 'Agent' }}</h5>
+															<h6 class="ellipsis chatagent-name--subtitle">
+																{{ (a.title || 'Click to chat with this agent') }}
+															</h6>
+														</div>
+													</div>
+													<span class="tick" ng-show="activeAgent && activeAgent.identifier === a.identifier">✔</span>
+												</label>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div><!-- /picker -->
+
+
+						<span class="chat_thinkmodal cursor-pointer animation-fade" style="display: none"
+							  ng-click="toggleThink()"
+							  ng-class="{'active': isThinkActive}">
+  <svg width="11" height="15" viewBox="0 0 11 15" fill="none" xmlns="http://www.w3.org/2000/svg">
+														<path d="M10 5.3694C10.0001 4.77208 9.88124 4.1807 9.65033 3.62981C9.41943 3.07893 9.0812 2.57957 8.65525 2.1608C8.22931 1.74205 7.72425 1.4123 7.16951 1.19082C6.61484 0.969324 6.02154 0.860541 5.42433 0.870778C4.27784 0.904871 3.18622 1.3695 2.36687 2.17218C1.54752 2.97487 1.06054 4.05673 1.00289 5.2023C0.975486 5.96674 1.14345 6.72553 1.49092 7.407C1.83839 8.08842 2.35388 8.67002 2.98867 9.09681C3.16758 9.21314 3.31471 9.37213 3.4168 9.55947C3.5189 9.74686 3.57276 9.95669 3.57349 10.1701V11.1533H7.4294V10.1701C7.4294 9.95727 7.48229 9.74783 7.58325 9.56049C7.68421 9.37316 7.83009 9.21384 8.00778 9.09681C8.61972 8.68622 9.1215 8.13154 9.46885 7.48162C9.81627 6.83169 9.99865 6.10632 10 5.3694Z" stroke="#505050" stroke-linecap="round" stroke-linejoin="round"/>
+														<path d="M7.42914 13.0876C6.87293 13.5048 6.19648 13.7303 5.50119 13.7303C4.80591 13.7303 4.12944 13.5048 3.57324 13.0876" stroke="#505050" stroke-linecap="round" stroke-linejoin="round"/>
+														<path d="M5.49493 3.19092L4.42813 4.97749C4.3798 5.05581 4.35339 5.14567 4.35165 5.23767C4.34992 5.32968 4.37286 5.42046 4.41817 5.50056C4.46348 5.58066 4.52941 5.64713 4.60916 5.69304C4.68892 5.73894 4.77953 5.76261 4.87156 5.76156H6.15686C6.24786 5.76121 6.33738 5.78505 6.41623 5.83064C6.49502 5.87622 6.56031 5.9419 6.60543 6.02099C6.65054 6.10011 6.67381 6.18976 6.67291 6.28076C6.67201 6.37182 6.64694 6.46096 6.60029 6.53917L5.52063 8.33219" stroke="#505050" stroke-linecap="round" stroke-linejoin="round"/>
+												</svg>
+    Think
+  </span>
+					</div>
+
+					<div class="chat-inputagent animation-up">
+  <textarea class="chat-agenttextarea"
+			placeholder="Write your message here...."
+			ng-model="newChatMessage"
+			ng-keydown="handleAgentChatKeydown($event)"></textarea>
+
+						<div class="chat-inputagent-box">
+							<img src="Awareness/pub/images/voice.svg"
+								 class="chat-inputagent-boxsend cursor-pointer"
+								 ng-if="!isRecording() && !chatWaitVisible && !hasTypedText()"
+								 ng-click="startPrimaryVoice()"
+								 title="Record &amp; send">
+
+							<img src="Awareness/pub/images/voiceblank.svg"
+								 class="chat-inputagent-boxvoice cursor-pointer"
+								 ng-if="!isRecording() && !chatWaitVisible && hasTypedText()"
+								 ng-click="startAppendVoice()"
+								 title="Record &amp; append">
+
+							<img src="Awareness/pub/images/stop-voice-icon.svg"
+								 class="chat-inputagent-boxsend cursor-pointer"
+								 ng-if="isRecording() || chatWaitVisible"
+								 ng-click="stopAll()"
+								 title="Stop" style="padding: 11px;">
+
+							<img src="Awareness/pub/images/uparrow.svg"
+								 class="chat-inputagent-boxsend cursor-pointer"
+								 ng-if="!isRecording() && !chatWaitVisible && hasTypedText()"
+								 ng-click="sendAgentChatMessage()"
+								 title="Send message">
+						</div>
+
+						<div class="d-flex justify-content-between remaining_tokens" ng-show="showTokensBox">
+							<span class="remaining_tokenslist">100 free tokens remaining only</span>
+							<div class="d-flex gap-10 align-items-center">
+								<a href="javascript:void(0);" class="remaining_tokensadd" ng-click="openllmBox()">Add your API Key</a>
+								<span class="shortclose-icon cursor-pointer" ng-click="closeTokensBox()">
+        <!-- close svg -->
+      </span>
+							</div>
+						</div>
+					</div><!-- chat-inputagent-->
+					<div class="tokens_warning-box d-none">
+						<div class="d-flex justify-content-between align-items-center">
+							<div class="d-flex gap-10">
+								<img src="Awareness/pub/images/tokens-allocation.svg">
+								<div>
+									<h4 class="tokens_warning-boxtitle">Free token allocation exhausted</h4>
+									<h5 class="tokens_warning-boxdiscribtion">Your free limit is over. To continue, add your LLM API key.</h5>
+								</div>
+							</div>
+							<button type="button" class="tokens_warning-boxkey">Add you API Key</button>
+						</div>
+					</div> <!-- tokens_warning-box-->
+
+				</div><!-- fullmodal_box--rightscroll -->
+				<div class="chat_settingbox chat_modalrightbox" ng-show="showsettingBox" id="chat_settingbox">
+					<div class="chat_settingbox--title">
+						<h2>Settings</h2>
+						<img src="Awareness/pub/images/Close_round_duotone_line.svg" class="cursor-pointer close_icon" ng-click="closeSettingBox()">
+					</div>
+					<ul class="nav nav-tabs chat_settingbox-tabs border-none mb-4 gap-10" id="myTab" role="tablist">
+						<li class="nav-item">
+							<a class="nav-link active" id="home-tab" data-toggle="tab" href="#home"
+							   role="tab" aria-controls="home" aria-selected="true">Settings</a>
+						</li>
+						<li class="nav-item">
+							<a class="nav-link" id="profile-tab" data-toggle="tab" href="#profile"
+							   role="tab" aria-controls="profile" aria-selected="false">Permissions</a>
+						</li>
+						<li class="nav-item">
+							<a class="nav-link" id="contact-tab" data-toggle="tab" href="#contact"
+							   role="tab" aria-controls="contact" aria-selected="false">Configuration</a>
+						</li>
+						<li class="nav-item">
+							<a class="nav-link" id="api-tab" data-toggle="tab" href="#apicall"
+							   role="tab" aria-controls="api" aria-selected="false">API Call</a>
+						</li>
+					</ul>
+
+					<div class="" id="myTabContent">
+						<div class="tab-pane fade show active mt-5" id="home" role="tabpanel" aria-labelledby="home-tab">
+							<div class="accordion chat_settingboxcollapse" id="accordionExample">
+								<div class="card mt-4">
+									<div class="card-header" id="headingOne">
+										<h5 class="mb-0 d-flex justify-content-between align-items-center cursor-pointer collapse_textcolor" data-toggle="collapse" data-target="#collapseinvitelink" aria-expanded="false">
+											<button class="btn btn-link collapsed" type="button" >
+												<img src="Awareness/pub/images/agent-setting-invite-link.svg"> <span class="icon_text--agent">Create invite link</span>
+
+											</button>
+											<img src="Awareness/pub/images/uparrowshort.svg" class="arrow-icons">
+										</h5>
+									</div>
+									<div id="collapseinvitelink" class="collapse" aria-labelledby="headingOne">
+										<div class="card-body">
+											<div class="position-rel">
+												<input type="text" class="input_form" ng-model="currentUrl" />
+												<a  href="javascript:void(0)" ng-click="copyAgentLink()" class="has_tooltip input_copy">
+													<img src="Awareness/pub/images/copy_icon.svg" class="">
+													<span class="tooltiptext">{{copyLinkCaption}}</span>
+												</a>
+
+											</div>
+										</div>
+									</div>
+								</div>
+
+								<div class="card">
+									<div class="card-header" id="headingTwo">
+										<h5 class="collapse_textcolor mb-0 d-flex justify-content-between align-items-center cursor-pointer" data-toggle="collapse" data-target="#collapseinvitecustomer" aria-expanded="false">
+											<button class="btn btn-link" type="button">
+												<img src="Awareness/pub/images/agent-setting-invite-consumers.svg"> <span class="icon_text--agent">Invite Consumers</span>
+											</button>
+											<img src="Awareness/pub/images/uparrowshort.svg" class="arrow-icons">
+										</h5>
+									</div>
+									<div id="collapseinvitecustomer" class="collapse" aria-labelledby="headingTwo">
+										<div class="card-body">
+											<input type="text" class="input_form" placeholder="Add email here">
+
+											<div class="d-flex justify-content-between align-items-center mt-4 mb-3">
+												<div class="d-flex gap-10 username_blanksetting">
+													<img src="Awareness/pub/images/userpic.svg"> naresh@gmail.com
+												</div>
+
+												<div class="d-flex gap-10">
+													<span class="confirm_btn"><img src="Awareness/pub/images/right.svg"> Confirm</span>
+													<span class="decline_btn"><img src="Awareness/pub/images/decline.svg"> Decline</span>
+												</div>
+
+											</div>
+											<div class="d-flex justify-content-between align-items-center mt-3 mb-3">
+												<div class="d-flex gap-10 username_blanksetting">
+													<img src="Awareness/pub/images/userpic.svg"> naresh@gmail.com
+												</div>
+
+												<div class="d-flex gap-10">
+													<span class="confirm_btn"><img src="Awareness/pub/images/right.svg"> Confirm</span>
+													<span class="decline_btn"><img src="Awareness/pub/images/decline.svg"> Decline</span>
+												</div>
+
+											</div>
+										</div>
+									</div>
+								</div>
+								<div class="card">
+									<h5 class="collapse_textcolor mb-0 d-flex justify-content-between align-items-center mt-2 mb-2 cursor-pointer">
+										<button class="btn btn-link" type="button">
+											<img src="Awareness/pub/images/agent-setting-duplicate.svg"> <span class="icon_text--agent">Duplicate Agent</span>
+										</button>
+
+									</h5>
+								</div>
+								<a href="javascript:void(0)" class="delete_agent d-flex align-items-center btn-style503"
+								   ng-click="deleteAgent(currentAgent)">
+									<img src="Awareness/pub/images/delete.svg" class="delete_agent_img"><span class="icon_text--agent"> Delete Agent</span>
+								</a>
+							</div>
+
+						</div>
+						<div class="tab-pane fade" id="profile" role="tabpanel" aria-labelledby="profile-tab">
+							<div class="form-group row mt-5">
+								<label class="col-sm-4 entire_toggletitle">Enitre Organisation</label>
+								<div class="col-sm-8">
+									<label class="switch entire_toggle" for="checkbox">
+										<input type="checkbox" id="checkbox" />
+										<div class="slider round"></div>
+									</label>
+								</div>
+							</div>
+							<div class="form-group row Consumers_divider">
+								<label class="col-sm-4 entire_toggletitle pt-2">Consumers
+									<a href="javascript:void(0)" class="tooltip">
+										<img src="Awareness/pub/images/info.svg">
+										<span class="tooltiptext">Info</span>
+									</a>
+								</label>
+								<div class="col-sm-8">
+									<select class="input_form" style="display: none">
+										<option>Charli</option>
+									</select>
+									<div class="d-flex pt-2" >
+										<a href="javascript:void(0)" class="tooltip" ng-repeat="consumer in sharedConsumers">
+											<img src="Awareness/pub/images/userpic.svg">
+											<span class="tooltiptext">{{consumer}}</span>
+										</a>
+									</div>
+								</div>
+							</div>
+							<div class="form-group row">
+								<label class="col-sm-4 entire_toggletitle">Make it Public</label>
+								<div class="col-sm-8">
+									<label class="switch entire_toggle" for="agent-public-switch">
+										<input type="checkbox" id="agent-public-switch" ng-click="saveCurrentAgent()" />
+										<div class="slider round"></div>
+									</label>
+								</div>
+							</div>
+						</div><!--  Permissions box -->
+
+						<div class="tab-pane fade mt-5" id="contact" role="tabpanel" aria-labelledby="contact-tab">
+							<div class="form-group row">
+								<label class="col-sm-4 entire_toggletitle pt-2">Method
+									<a href="javascript:void(0)" class="tooltip">
+										<img src="Awareness/pub/images/info.svg">
+										<span class="tooltiptext">info</span>
+									</a>
+
+								</label>
+								<div class="col-sm-8">
+									<select class="input_form">
+										<option>Get</option>
+									</select>
+								</div>
+							</div>
+							<div class="form-group row">
+								<label class="col-sm-4 entire_toggletitle pt-2">Alias
+									<a href="javascript:void(0)" class="tooltip">
+										<img src="Awareness/pub/images/info.svg">
+										<span class="tooltiptext">info</span>
+									</a>
+								</label>
+								<div class="col-sm-8">
+									<input type="text" class="input_form">
+								</div>
+							</div>
+							<div class="form-group row">
+								<label class="col-sm-4 entire_toggletitle pt-2">Service Endpoint
+									<a href="javascript:void(0)" class="tooltip">
+										<img src="Awareness/pub/images/info.svg">
+										<span class="tooltiptext">info</span>
+									</a>
+								</label>
+								<div class="col-sm-8">
+									<div class="position-rel">
+										<input type="text" class="input_form">
+										<a href="javascript:void(0)" class="tooltip input_copy">
+											<img src="Awareness/pub/images/copy_icon.svg">
+											<span class="tooltiptext">Copy</span>
+										</a>
+
+									</div>
+								</div>
+							</div>
+							<div class="form-group row">
+								<label class="col-sm-4 entire_toggletitle pt-2">Consumer
+									<a href="javascript:void(0)" class="tooltip">
+										<img src="Awareness/pub/images/info.svg">
+										<span class="tooltiptext">info</span>
+									</a>
+								</label>
+								<div class="col-sm-8">
+									<select class="input_form">
+										<option>Select</option>
+									</select>
+								</div>
+							</div>
+							<div class="form-group row">
+								<label class="col-sm-4 entire_toggletitle pt-2">Developer
+									<a href="javascript:void(0)" class="tooltip">
+										<img src="Awareness/pub/images/info.svg">
+										<span class="tooltiptext">info</span>
+									</a>
+								</label>
+								<div class="col-sm-8">
+									<select class="input_form">
+										<option>Select</option>
+									</select>
+								</div>
+							</div>
+							<div class="form-group row">
+								<label class="col-sm-4 entire_toggletitle pt-2">Config properties
+									<a href="javascript:void(0)" class="tooltip">
+										<img src="Awareness/pub/images/info.svg">
+										<span class="tooltiptext">info</span>
+									</a>
+								</label>
+								<div class="col-sm-8">
+									<input type="text" placeholder="Text description here" class="input_form">
+								</div>
+							</div>
+							<div class="form-group row">
+								<label class="col-sm-4 entire_toggletitle pt-2">Consumer
+									<a href="javascript:void(0)" class="tooltip">
+										<img src="Awareness/pub/images/info.svg">
+										<span class="tooltiptext">info</span>
+									</a>
+								</label>
+								<div class="col-sm-8">
+									<select class="input_form">
+										<option>Charli</option>
+									</select>
+								</div>
+							</div>
+						</div><!--  consumer tab -->
+
+						<div class="tab-pane fade mt-5" id="apicall" role="tabpanel" aria-labelledby="api-tab">
+							<div class="form-group row">
+								<label class="col-sm-4 entire_toggletitle pt-2">API List:
+								</label>
+								<div class="col-sm-8">
+									<select class="input_form">
+										<option>Send Message</option>
+										<option>Get Chat History</option>
+										<option>Get Transcripts</option>
+										<option>Get All Conversations</option>
+										<option>Delete All Conversations</option>
+									</select>
+								</div>
+							</div>
+							<div class="form-group row">
+								<label class="col-sm-4 entire_toggletitle pt-2">Request format:</label>
+								<div class="col-sm-8 d-flex align-items-center">
+									<select class="input_form">
+										<option value="curl">cURL</option>
+									</select>
+									<button type="btn" class="grey-btn ml-2 mr-2" ng-click="openSwagger()"><img src="Awareness/pub/images/swagger_logo.svg" class="pr-1" width="26px"> Download Swagger</button>
+									<button type="btn" class="grey-btn" style="display: none;"><img src="Awareness/pub/images/postman_logo.svg" class="pr-1" width="26px"> Import to Postman</button>
+								</div>
+							</div>
+							<div class="form-group row">
+									<div class="settingapi_list mt-3">
+						                 <img src="Awareness/pub/images/copy-svgrepo-com.svg" class="copyall" ng-click="copyTeamCurl($event)">
+
+					                </div>
+
+							</div>
+						</div>	 <!-- Api call -->
+					</div>
+
+				</div>
+				<div class="chat_addtoll chat_modalrightbox" ng-show="showaddmodaltoolBox">
+					<div class="chat_settingbox--title">
+						<h2>Add Tool</h2>
+						<img src="Awareness/pub/images/Close_round_duotone_line.svg"
+							 class="cursor-pointer close_icon"
+							 ng-click="closetoolBox()">
+					</div>
+
+					<div class="form-group row">
+						<label class="col-sm-4 entire_toggletitle pt-2">Tool Name
+							<a href="javascript:void(0)" class="tooltip">
+								<img src="Awareness/pub/images/info.svg"><span class="tooltiptext">info</span>
+							</a>
+						</label>
+						<div class="col-sm-8">
+							<input type="text" class="input_form" ng-model="toolForm.name" placeholder="Tool name or FQN">
+						</div>
+					</div>
+
+					<div class="form-group row">
+						<label class="col-sm-4 entire_toggletitle pt-2">Select Type</label>
+						<div class="col-sm-8">
+							<select class="input_form" ng-model="toolForm.type">
+								<option value="api">API</option>
+								<option value="kb">Knowledge base</option>
+								<!-- MCP intentionally omitted/disabled -->
+							</select>
+						</div>
+					</div>
+
+					<!-- API list -->
+					<div class="form-group row" ng-if="toolForm.type === 'api'">
+						<label class="col-sm-4 entire_toggletitle pt-2">Select API</label>
+						<div class="col-sm-8">
+							<select class="input_form aiToolsAdd"
+									ng-model="toolForm.selected"
+									ng-options="item.fqn as item.fqn for item in availableApiFqns track by item.fqn">
+								<option value=""></option>
+							</select>
+						</div>
+					</div>
+
+					<!-- KB list -->
+					<div class="form-group row" ng-if="toolForm.type === 'kb'">
+						<label class="col-sm-4 entire_toggletitle pt-2">Select KB</label>
+						<div class="col-sm-8">
+							<select class="input_form"
+									ng-model="toolForm.selected"
+									ng-options="kb.ragID as (kb.name || kb.kbName || kb.path) for kb in availableKBs()"
+									required>
+							</select>
+						</div>
+					</div>
+
+					<div class="form-group row" ng-if="currentAgent">
+						<label class="col-sm-4 entire_toggletitle pt-2">Agent</label>
+						<div class="col-sm-8">
+							<input class="input_form" type="text" readonly
+								   ng-value="(currentAgent.name || 'Agent') + (currentAgent.title ? ' - ' + currentAgent.title : '')">
+						</div>
+					</div>
+
+					<div class="form-group row">
+						<label class="col-sm-4 entire_toggletitle pt-2">Description</label>
+						<div class="col-sm-8">
+							<input type="text" class="input_form" ng-model="toolForm.description"
+								   placeholder="Text description here">
+						</div>
+					</div>
+
+					<div class="form-group row" ng-if="toolForm.type === 'api'">
+						<label class="col-sm-4 entire_toggletitle pt-2">Static Payload (JSON)</label>
+						<div class="col-sm-8">
+      <textarea class="input_form" rows="4" ng-model="toolForm.staticPayload"
+				placeholder='{"key":"value"}'></textarea>
+						</div>
+					</div>
+
+					<div class="text-center mt-4">
+						<button type="button" class="create_btn" ng-click="createToolFromModal()">Create</button>
+					</div>
+				</div>
+				<div class="chat_addtoll chat_modalrightbox" ng-show="showaddmodalpayloadbox">
+					<div class="chat_settingbox--title">
+						<h2>Edit Static JSON Payload</h2>
+						<img src="Awareness/pub/images/Close_round_duotone_line.svg"
+							 class="cursor-pointer close_icon"
+							 ng-click="closepayloadBox()">
+					</div>
+
+					<div class="form-group row">
+
+						<div class="col-sm-12">
+      						<textarea class="textarea_form" style="--height: 320px"></textarea>
+						</div>
+					</div>
+
+					<div class="text-center mt-4">
+						<button type="button" class="create_btn" ng-click="createToolFromModal()">Beautify</button>
+						<button type="button" class="create_btn" ng-click="createToolFromModal()">Ok</button>
+					</div>
+				</div> <!-- payload modal -->
+				<div class="chat_addtoll chat_modalrightbox" ng-show="showaddmodalschemabox">
+					<div class="chat_settingbox--title">
+						<h2>Edit Input JSON Schema</h2>
+						<img src="Awareness/pub/images/Close_round_duotone_line.svg"
+							 class="cursor-pointer close_icon"
+							 ng-click="closeschemaBox()">
+					</div>
+
+					<div class="form-group row">
+
+						<div class="col-sm-12">
+      						<textarea class="textarea_form" style="--height: 320px"></textarea>
+						</div>
+					</div>
+
+					<div class="text-center mt-4">
+						<button type="button" class="create_btn" ng-click="createToolFromModal()">Beautify</button>
+						<button type="button" class="create_btn" ng-click="createToolFromModal()">Ok</button>
+					</div>
+				</div> <!-- schema modal -->
+
+				<div class="chat_modalrightbox" ng-show="showaddmodalragbaseBox">
+					<div class="chat_settingbox--title">
+						<h2>Add RAG</h2>
+						<img src="Awareness/pub/images/Close_round_duotone_line.svg" class="cursor-pointer close_icon" ng-click="closeragbaseBox()">
+					</div>
+
+					<div class="rags-scroll">
+						<div class="accordion">
+							<div class="card margin-none border-none p-2 boxshadow_none">
+								<!-- <div class="card-header padding-none cardheader_boxshaodaw border-none">
+									<h5 class="mb-0 d-flex justify-content-between align-items-center" data-toggle="collapse" data-target="#collapserags" aria-expanded="true">
+										<button class="btn padding-none boxshadow_none" type="button">
+											<img src="Awareness/pub/images/uparrowshort.svg" class="arrow-icons">
+											<img src="Awareness/pub/images/Icon-Set-Filled.svg">
+											<span class="ragbase_boxname">Add RAG</span>
+										</button>
+									</h5>
+								</div> -->
+
+										<div class="form-group row">
+								<label class="col-sm-4 entire_toggletitle pt-2">Files</label>
+											<div class="col-sm-8">
+									<div class="input-group m-0" style="position:relative;">
+										<input type="file" id="ragFileInput" multiple
+											   accept=".pdf,.doc,.txt,.csv,.xml,.jpg,.jpeg,.png,.gif,.xls,.xlsx"
+											   style="display:none;">
+
+										<input class="input_form" type="text"
+											   placeholder="Choose files…"
+											   ng-model="ragEdit.filesDisplay"
+											   ng-attr-title="{{ragEdit.filesDisplayFull}}"
+											   readonly
+											   style="padding-right:40px; overflow:hidden; text-overflow:ellipsis; white-space:nowrap;">
+
+										<a href="javascript:void(0)" class="input-group-addon folder-path tooltip"
+										   ng-click="onRAGActionClick()"
+										   style="position:absolute; right:6px; top:50%; transform:translateY(-50%);">
+														<img src="Awareness/pub/images/Folder-icon.svg">
+											<span class="tooltiptext tooltiptextnope" style="left: -52px;">Choose files to upload</span>
+													</a>
+												</div>
+
+											</div>
+										</div>
+
+										<!-- File Pattern -->
+										<div class="form-group row">
+											<label class="col-sm-4 entire_toggletitle pt-2">File Pattern</label>
+											<div class="col-sm-8">
+												<input type="text" class="input_form" placeholder="*.txt, *.md" ng-model="ragEdit.filePattern">
+											</div>
+										</div>
+
+										<!-- Max Segment Size -->
+										<div class="form-group row">
+											<label class="col-sm-4 entire_toggletitle pt-2">Max Segment Size</label>
+											<div class="col-sm-8">
+												<input type="number" class="input_form" min="1" ng-model="ragEdit.maxSegmentSizeInChars">
+											</div>
+										</div>
+
+										<!-- Max Overlap Size -->
+										<div class="form-group row">
+											<label class="col-sm-4 entire_toggletitle pt-2">Max Overlap Size</label>
+											<div class="col-sm-8">
+												<input type="number" class="input_form" min="0" ng-model="ragEdit.maxOverlapSizeInChars">
+											</div>
+										</div>
+
+										<!-- Max Search Results -->
+										<div class="form-group row">
+											<label class="col-sm-4 entire_toggletitle pt-2">Max Search Results</label>
+											<div class="col-sm-8">
+												<input type="number" class="input_form" min="1" ng-model="ragEdit.maxSearchResults">
+											</div>
+										</div>
+
+										<div class="text-center mt-4 mb-5">
+											<button type="button" class="create_btn"
+													ng-click="saveAgentRAG()"
+													ng-disabled="saveInProgress || !ragEdit || !ragEdit.primaryFileName">
+												<span ng-if="!saveInProgress">Create</span>
+												<span ng-if="saveInProgress">Creating…</span>
+											</button>
+										</div>
+
+									</div>
+								</div>
+							</div> <!-- /card -->
+				</div> <!-- /accordion -->
+
+
+
+				<div class="chat_addtoll chat_modalrightbox" ng-show="showaddmodalllmBox">
+					<div class="chat_settingbox--title">
+						<h2>Add LLM</h2>
+						<img src="Awareness/pub/images/Close_round_duotone_line.svg" class="cursor-pointer close_icon" ng-click="closellmBox()">
+					</div>
+					<div class="form-group row">
+						<label class="col-sm-4 entire_toggletitle pt-2">Modal Name
+							<a href="javascript:void(0)" class="tooltip">
+								<img src="Awareness/pub/images/info.svg">
+								<span class="tooltiptext">info</span>
+							</a>
+						</label>
+						<div class="col-sm-8">
+							<input type="text" class="input_form" placeholder="Modal Name">
+						</div>
+					</div>
+					<div class="form-group row">
+						<label class="col-sm-4 entire_toggletitle pt-2">API Impl
+							<a href="javascript:void(0)" class="tooltip">
+								<img src="Awareness/pub/images/info.svg">
+								<span class="tooltiptext">info</span>
+							</a>
+						</label>
+						<div class="col-sm-8">
+							<select class="input_form">
+								<option>Select API</option>
+								<option>Select knowledge base</option>
+								<option>Select MCP</option>
+							</select>
+						</div>
+					</div>
+					<div class="form-group row">
+						<label class="col-sm-4 entire_toggletitle pt-2">Base URL
+							<a href="javascript:void(0)" class="tooltip">
+								<img src="Awareness/pub/images/info.svg">
+								<span class="tooltiptext">info</span>
+							</a>
+						</label>
+						<div class="col-sm-8">
+							<select class="input_form">
+								<option>https://api.example.com</option>
+							</select>
+						</div>
+					</div>
+					<div class="form-group row">
+						<label class="col-sm-4 entire_toggletitle pt-2">API Key
+							<a href="javascript:void(0)" class="tooltip">
+								<img src="Awareness/pub/images/info.svg">
+								<span class="tooltiptext">info</span>
+							</a>
+						</label>
+						<div class="col-sm-8">
+							<input type="text" class="input_form" placeholder="Enter API key">
+						</div>
+					</div>
+					<div class="form-group row">
+						<label class="col-sm-4 entire_toggletitle pt-2">Temperature
+							<a href="javascript:void(0)" class="tooltip">
+								<img src="Awareness/pub/images/info.svg">
+								<span class="tooltiptext">info</span>
+							</a>
+						</label>
+						<div class="col-sm-8">
+							<input type="number" class="input_form" placeholder="Enter Temperature">
+						</div>
+					</div>
+					<div class="form-group row">
+						<label class="col-sm-4 entire_toggletitle pt-2">Max Tokens
+							<a href="javascript:void(0)" class="tooltip">
+								<img src="Awareness/pub/images/info.svg">
+								<span class="tooltiptext">info</span>
+							</a>
+						</label>
+						<div class="col-sm-8">
+							<input type="number" class="input_form" placeholder="Enter Max Tokens">
+						</div>
+					</div>
+					<div class="form-group row">
+						<label class="col-sm-4 entire_toggletitle pt-2">Name (Optional)
+							<a href="javascript:void(0)" class="tooltip">
+								<img src="Awareness/pub/images/info.svg">
+								<span class="tooltiptext">info</span>
+							</a>
+						</label>
+						<div class="col-sm-8">
+							<input type="text" class="input_form" placeholder="Enter name">
+						</div>
+					</div>
+
+
+					<div class="text-center mt-4">
+						<button type="button" class="create_btn">Create</button>
+					</div>
+				</div> <!-- llm box end-->
+
+				<div class="chat_addtoll chat_modalrightbox" ng-show="showaddmodalresultBox">
+					<div class="chat_settingbox--title">
+						<h2>Transcript Result</h2>
+						<img src="Awareness/pub/images/Close_round_duotone_line.svg" class="cursor-pointer" ng-click="closetransriptbox()">
+					</div>
+					<div class="overflow-y-auto transbox_scroll">
+						<div class="d-flex gap-10 align-items-start">
+							<img src="Awareness/pub/images/chat_user.svg" >
+							<span class="transresult_box light-bg">What is the root square of 2</span>
+						</div> <!-- d-flex -->
+						<div class="d-flex gap-10 mt-4 align-items-start">
+							<img src="Awareness/pub/images/robot-iconchat.svg" class="chatuser_bg" style="--bg-color: #DFF5FF;">
+							<div class="mt-2">
+								<span class="transresult_box">Lorem ipsum text response comes here</span>
+								<span class="transscriptuser_name">Agent 1</span>
+							</div>
+						</div> <!-- d-flex -->
+						<div class="d-flex gap-10 mt-4 align-items-start">
+							<img src="Awareness/pub/images/robot-iconchat.svg" class="chatuser_bg" style="--bg-color: #FFEEDF;">
+							<div class="mt-2">
+								<span class="transresult_box">Lorem ipsum text response comes here</span>
+								<span class="transscriptuser_name">Agent 1 to Agent 2</span>
+							</div>
+						</div> <!-- d-flex -->
+						<div class="d-flex gap-10 mt-4 align-items-start">
+							<img src="Awareness/pub/images/menu_tools2.svg" class="chatuser_bg" style="--bg-color: #FFDFE0;">
+							<div class="mt-2">
+								<span class="transresult_box">Lorem ipsum text response comes here</span>
+								<span class="transscriptuser_name">Inspection manager tool</span>
+							</div>
+						</div> <!-- d-flex -->
+						<div class="d-flex gap-10 mt-4 align-items-start">
+							<img src="Awareness/pub/images/menu_tools2.svg" class="chatuser_bg" style="--bg-color: #E5F9DE;">
+							<div class="mt-2">
+								<span class="transresult_box">Lorem ipsum text response comes here</span>
+								<span class="transscriptuser_name">Inspection manager tool</span>
+							</div>
+						</div> <!-- d-flex -->
+						<div class="d-flex gap-10 align-items-start mt-4">
+							<img src="Awareness/pub/images/chat_user.svg">
+							<span class="transresult_box light-bg">Result</span>
+						</div> <!-- d-flex -->
+						<div class="transresult_boxall mt-4">
+							<p>The square root of 2 (√2) is an irrational number, approximately equal <br>to 1.4142135623730950488016887242097....</p>
+							<p>It cannot be expressed as a simple fraction, and its decimal representation continues infinitely without repeating.</p>
+							<h6>Interesting Facts:</h6>
+							<ul>
+								<li>√2 was the first known irrational number, discovered by the ancient Greeks.</li>
+								<li>It represents the length of the diagonal of a square with sides of length 1 (by the Pythagorean theorem).</li>
+								<li>It is also called Pythagoras' constant.</li>
+							</ul>
+						</div>
+					</div>	<!-- overflow-y-auto -->
+				</div> <!-- chat Modal Result Box end-->
+
+
+				<div class="chat_addtoll chat_modalrightbox" ng-show="showaddmodalchathistory">
+					<div class="chat_settingbox--title">
+						<h2>Chat History</h2>
+						<img src="Awareness/pub/images/Close_round_duotone_line.svg" class="cursor-pointer" ng-click="closehistorybox()">
+					</div>
+					<div class="overflow-y-auto transbox_scroll">
+						<div class="position-rel">
+							<input type="text" class="input_form search_input" placeholder="Search">
+							<img src="Awareness/pub/images/chat-search.svg" class="position-abs search_inputicon">
+						</div>
+
+						<div class="">
+							<ul class="chathistry_box">
+								<li>
+									<div class="d-flex justify-content-between position-rel" ng-click="$event.stopPropagation()">
+										<span class="chathistry_box--text">Title should come here</span>
+										
+										<div class="more-wrap" style="position:relative; display:inline-block;">
+											<img src="Awareness/pub/images/chat_dropdown.svg" class="cursor-pointer hovershow pt-2">
+											<ul class="rightmore_box" style="top:17px">
+												<li class="padding-none"><a href="javascript:void(0)"><img src="Awareness/pub/images/edit_icon.svg"> Rename</a></li>
+												<li class="padding-none"><a href="javascript:void(0)" ng-click="openhistroybox()"><img src="Awareness/pub/images/delete.svg"> Delete</a></li>
+											</ul>
+											</div>
+
+									</div>
+								</li>
+
+							</ul>
+						</div>
+						<a href="javascript:void(0)" class="delete_agent d-flex align-items-center btn-style503">
+							<img src="Awareness/pub/images/delete.svg" class="delete_agent_img"><span class="icon_text--agent"> Delete Agent</span>
+						</a>
+					</div>
+			  </div> <!-- chat history -->
+		</div> <!-- fullmodal_box--right-->
+
+	</div> <!-- fullmodal_box -->
+
+</div>
+
+
+
+<!-- tokens modal-->
+<div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+	<div class="modal-dialog modal-center" role="document">
+		<div class="modal-content custom_width token_modal"  style="--modalwidth: 800px; --padding: 20px 20px">
+			<div class="modal-header">
+				<div>
+					<h5 class="token_modal--title">Start Building — Redeem Tokens or Connect Your LLM</h5>
+					<h6 class="token_modal--subtitle">Choose how you want to get started with your agent. You can instantly claim free tokens to explore all features, or connect your own LLM API key to begin without limits.</h6>
+				</div>
+				<button type="button" class="close modal_closeright" data-dismiss="modal" aria-label="Close">
+					<span aria-hidden="true">&times;</span>
+				</button>
+			</div>
+			<div class="modal-body">
+				<div class="row">
+					<div class="col-md-6">
+						<div class="token_modalbox token_modalbox--active">
+							<span class="token_modalbox--label">Recommended</span>
+							<div class="d-flex gap-10">
+								<img src="Awareness/pub/images/tokens_gift.svg">
+								<h4 class="token_modalboxtitle">Get 10,000 Free Tokens</h4>
+							</div>
+							<p class="token_modalbox--desc">Start instantly with a complimentary tokens pack to explore all features.</p>
+						</div>
+					</div>
+					<div class="col-md-6">
+						<div class="token_modalbox">
+							<div class="d-flex gap-10">
+								<img src="Awareness/pub/images/tokens_key.svg">
+								<h4 class="token_modalboxtitle">Use your own API Key</h4>
+							</div>
+							<div class="form-group row">
+								<label class="col-sm-12 token_modalbox-label pt-2">LLM API Key <img src="Awareness/pub/images/info.svg"></label>
+								<div class="col-sm-12">
+									<input type="text" class="input_form" placeholder="|sk-">
+								</div>
+							</div>
+							<p class="token_modalbox--desc">You key is stored locally in this browser only.</p>
+						</div>
+					</div>
+				</div>
+				<button type="btn" class="save_tokens" data-dismiss="modal">Redeem 10,000 Free Tokens</button>
+			</div>
+
+		</div>
+	</div>
+</div>
+
+<!-- /#page-content-wrapper -->
+<div class="modal fade" id="basicModal" tabindex="-1" role="dialog" aria-labelledby="basicModal" aria-hidden="true">
+	<div class="modal-dialog">
+		<div class="modal-content">
+			<div class="modal-header">
+				<button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+				<h4 class="modal-title" id="myModalLabel">Add LLM</h4>
+			</div>
+			<div class="modal-body">
+				klkl m,,m
+			</div>
+			<div class="modal-footer">
+				<button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+				<button type="button" class="btn btn-primary">Save changes</button>
+			</div>
+		</div>
+	</div>
+</div>
+</div>
+
+<div id="addUpdatePayloadModel" class="modal fade">
+	<!-- Modal content -->
+	<div class="modal-dialog">
+		<div class="modal-content" style="width: 650px; height: auto;">
+			<span data-dismiss="modal" aria-hidden="true" class="close ok_close">×</span>
+			<h3>Edit Static JSON Payload</h3>
+
+			<div class="row">
+				<div class="col-md-12">
+					<div id="">
+						<input id="tool_edit_payload_id" class="form-control" type="hidden" />
+						<textarea id="tool_edit_payload_description" class="form-control" rows="7"></textarea>
+					</div>
+				</div>
+			</div>
+
+			<div class="anc_kbtn">
+				<button type="button" class="btn btn-gry" ng-click="beautifyStaticJsonInModal('tool_edit_payload_description')">Beautify</button>
+				<button type="button" class="btn btn-gry" ng-click="completePayloadEdit()">OK</button>
+			</div>
+
+		</div>
+	</div>
+</div>
+
+
+<div id="addUpdateSchemaModel" class="modal fade">
+	<!-- Modal content -->
+	<div class="modal-dialog">
+		<div class="modal-content" style="width: 650px; height: auto;">
+			<span data-dismiss="modal" aria-hidden="true" class="close ok_close">×</span>
+			<h3>Edit Input JSON Schema</h3>
+
+			<div class="row">
+				<div class="col-md-12">
+					<div id="">
+						<input id="tool_edit_schema_id" class="form-control" type="hidden" />
+						<textarea id="tool_edit_schema_description" class="form-control" rows="7"></textarea>
+					</div>
+				</div>
+			</div>
+
+			<div class="anc_kbtn">
+				<button type="button" class="btn btn-gry" ng-click="beautifyStaticJsonInModal('tool_edit_schema_description')">Beautify</button>
+				<button type="button" class="btn btn-gry" ng-click="completeSchemaEdit()">OK</button>
+			</div>
+
+		</div>
+	</div>
+</div>
+
+<div id="chatboxfirst" ng-click="closeChatTest()" ng-show="chatModalVisible" class="active"></div>
+
+<div class="chat_boxtransition"  ng-class="{ 'active': chatModalVisible }">
+
+	<div ng-show="chatModalVisible">
+		<div class="chatbox_width">
+			<div class="chatbox_width--left chatbox_width--leftborder">
+				<div class="search-container search-container-full">
+					<div class="chat_leftpanel">
+						<button type="button" class="chat_leftpanel-button" ng-click="startNewChat()"><img src="Awareness/pub/images/chatplus.svg"> Start new chat</button>
+						<h5 class="chat_leftpanel-title">Chat</h5>
+						<div class="srch_cnt">
+							<i class="fa fa-search"></i>
+							<input type="text" placeholder="Search" ng-model="searchTeamChatText" />
+						</div>
+
+
+
+						<ul class="chat-leftmodal" id="chat-history-list">
+							<li ng-repeat="conversation in TeamsConversations" style="cursor: pointer;" class="{{isCurrentConversation(conversation)? 'current-conversation' : ''}}"
+								ng-if="conversation.subject.toLowerCase().includes(searchTeamChatText.toLowerCase())" ng-click="switchChat(conversation)">
+								<span class="text_overflow" style="--width: 100px;">{{conversation.subject}}</span>
+
+								<div class="dropdown-container">
+									<!-- button -->
+									<button type="button" class="select-dropdown-button chat_selectdropdown">
+									<span class="selected-value">
+										<img src="Awareness/pub/images/chat_dropdown.svg" alt="">
+									</span>
+									</button>
+
+									<!-- menu -->
+									<div class="select-dropdown-content select-dropdown-action">
+										<!--<a href="#" class="select-option" data-value="rename">Rename</a>-->
+										<a href="#" class="select-option" data-value="delete" ng-click="deleteConversation(conversation)">Delete</a>
+										<a href="#" class="select-option" data-value="export" ng-click="downloadChatHistory(conversation)">Export Chat</a>
+									</div>
+
+									<!-- hidden field for forms -->
+									<input type="hidden" name="selectOption" class="hidden-select-value">
+								</div>
+							</li>
+
+						</ul>
+						<a href="#" class="chat-leftmodal-delete" ng-click="clearChatHistory()" style="bottom: 0px !important; background: white;padding-bottom: 18px;padding-top: 10px;">
+							<img src="Awareness/pub/images/delete.svg" alt="">
+							<span class="tooltiptext">Clear chat history</span>
+
+						</a>
+					</div>
+				</div>
+			</div>
+			<div class="chatbox_width--right">
+				<div class="chat-box-header" style="border-top-left-radius: 0px; border-top-right-radius: 0px;">
+					<h5>Chat with '{{ currentChatAgent.name || 'Agent' }}'</h5>
+					<span class="chat-box-toggle" ng-click="closeChatTest()">
+								&times;
+							</span>
+				</div>
+
+				<div class="chat-box-body">
+					<div class="chat-logs" id="chatWindow">
+						<div class="messages-chat" ng-repeat="msg in chatHistory track by $index">
+							<!-- USER Message -->
+							<div class="message text-only" ng-if="msg.user === 'User'">
+								<div class="response">
+									<p class="text" ng-bind-html="msg.text"></p>
+								</div>
+							</div>
+
+							<!-- AGENT Message -->
+							<div class="message" ng-if="msg.user === 'Agent'">
+								<div class="photo">
+									<!-- Agent SVG Icon or Avatar -->
+								</div>
+								<div class="text">
+									<p ng-bind-html="msg.text"></p>
+								</div>
+							</div>
+						</div>
+
+						<div class="messages-chat" ng-if="chatWaitVisible">
+							<div class="message">
+								<div class="photo">
+									<!-- Agent SVG Icon or Avatar -->
+								</div>
+								<div class="text">
+									<p><em>Thinking...</em></p>
+								</div>
+							</div>
+						</div>
+					</div>
+
+
+				</div>
+
+				<div class="chat-input">
+					<div class="c_act_grid">
+						<form id="chatgpt-input-field" ng-submit="sendChatMessage()" novalidate>
+							<textarea ng-model="newChatMessage" class="form-control" placeholder="Write your message here..." rows="3" ng-keydown="handleChatKeydown($event)"></textarea>
+							<button type="submit"
+									class="chat-submit"
+									id="chat-submit"
+									ng-disabled="!newChatMessage || chatWaitVisible"
+									ng-class="{'active': newChatMessage && !chatWaitVisible}"
+									ng-click="sendChatMessage()">
+								<svg xmlns="http://www.w3.org/2000/svg" width="11" height="12" viewBox="0 0 11 12" fill="none">
+									<path d="M9.36382 6.29379C9.19493 6.29379 9.0216 6.22713 8.89271 6.09824L5.07049 2.27602L1.24826 6.09824C0.986042 6.36046 0.56382 6.36046 0.306042 6.09824C0.0438194 5.83602 0.0438194 5.41379 0.306042 5.15602L4.59938 0.862682C4.8616 0.60046 5.28382 0.60046 5.5416 0.862682L9.83493 5.15602C10.0972 5.41824 10.0972 5.84046 9.83493 6.09824C9.70605 6.22713 9.53271 6.29379 9.36382 6.29379Z" fill="white"/>
+									<path d="M5.06315 11.2497C4.69426 11.2497 4.39648 10.9519 4.39648 10.583V1.33415C4.39648 0.965258 4.69426 0.66748 5.06315 0.66748C5.43204 0.66748 5.72982 0.965258 5.72982 1.33415V10.583C5.72982 10.9519 5.43204 11.2497 5.06315 11.2497Z" fill="white"/>
+								</svg>
+							</button>
+						</form>
+					</div>
+				</div>
+			</div>
+		</div>
+
+	</div>
+</div>
+
+
+<!--<div id="chatboxsecond"  ng-click="closeAppChat()"></div>
+	<div  class="chat_boxtransition chat_boxtransitionsecond overlay-content">
+
+			<div class="chat-box-header">
+					<h5>Chat with &#39;{{ currentChatAgent.name || 'Agent' }}&#39;</h5>
+					<span class="chat-box-toggle" ng-click="closeAppChat()">
+								&times;
+							</span>
+				</div>
+
+				<div class="chat-box-body">
+					<div class="chat-logs" id="chatWindow">
+						<div class="messages-chat" ng-repeat="msg in chatHistory track by $index">
+							&lt;!&ndash; USER Message &ndash;&gt;
+							<div class="message text-only" ng-if="msg.user === 'User'">
+								<div class="response">
+									<p class="text" ng-bind-html="msg.text"></p>
+								</div>
+							</div>
+
+							&lt;!&ndash; AGENT Message &ndash;&gt;
+							<div class="message" ng-if="msg.user === 'Agent'">
+								<div class="photo">
+									&lt;!&ndash; Agent SVG Icon or Avatar &ndash;&gt;
+								</div>
+								<div class="text">
+									<p ng-bind-html="msg.text"></p>
+								</div>
+							</div>
+						</div>
+
+						<div class="messages-chat" ng-if="chatWaitVisible">
+							<div class="message">
+								<div class="photo">
+									&lt;!&ndash; Agent SVG Icon or Avatar &ndash;&gt;
+								</div>
+								<div class="text">
+									<p><em>Thinking...</em></p>
+								</div>
+							</div>
+						</div>
+					</div>
+
+
+				</div>
+
+				<div class="chat-input">
+					<div class="c_act_grid">
+						<form id="chatgpt-input-field" ng-submit="sendChatMessage()" novalidate>
+							<textarea ng-model="newChatMessage" class="form-control" placeholder="Write your message here..." rows="3" ng-keydown="handleChatKeydown($event)"></textarea>
+							<button type="submit"
+									class="chat-submit"
+									id="chat-submit"
+									ng-disabled="!newChatMessage || chatWaitVisible"
+									ng-class="{'active': newChatMessage && !chatWaitVisible}"
+									ng-click="sendChatMessage()">
+								<svg xmlns="http://www.w3.org/2000/svg" width="11" height="12" viewBox="0 0 11 12" fill="none">
+									<path d="M9.36382 6.29379C9.19493 6.29379 9.0216 6.22713 8.89271 6.09824L5.07049 2.27602L1.24826 6.09824C0.986042 6.36046 0.56382 6.36046 0.306042 6.09824C0.0438194 5.83602 0.0438194 5.41379 0.306042 5.15602L4.59938 0.862682C4.8616 0.60046 5.28382 0.60046 5.5416 0.862682L9.83493 5.15602C10.0972 5.41824 10.0972 5.84046 9.83493 6.09824C9.70605 6.22713 9.53271 6.29379 9.36382 6.29379Z" fill="white"/>
+									<path d="M5.06315 11.2497C4.69426 11.2497 4.39648 10.9519 4.39648 10.583V1.33415C4.39648 0.965258 4.69426 0.66748 5.06315 0.66748C5.43204 0.66748 5.72982 0.965258 5.72982 1.33415V10.583C5.72982 10.9519 5.43204 11.2497 5.06315 11.2497Z" fill="white"/>
+								</svg>
+							</button>
+						</form>
+					</div>
+				</div>
+
+
+
+
+	</div>-->
+
+<div id="chatboxsecond"  ng-click="closeAppChat()"></div>
+<div  class="chat_boxtransition chat_boxtransitionsecond" ng-show="appChatModalVisible" style="display: block !important;">
+
+	<div ng-show="appChatModalVisible">
+
+		<div class="chat-box-header" style="border-top-left-radius: 0px; border-top-right-radius: 0px;">
+			<h5>Chat with '{{ currentChatAgent.appName || 'App' }}'</h5>
+			<span class="chat-box-toggle" ng-click="closeAppChat()">
+								&times;
+							</span>
+		</div>
+
+		<div class="chat-box-body">
+			<div class="chat-logs" id="appChatWindow">
+				<div class="messages-chat" ng-repeat="msg in chatHistory track by $index">
+					<!-- USER Message -->
+					<div class="message text-only" ng-if="msg.user === 'User'">
+						<div class="response">
+							<p class="text" ng-bind-html="msg.text"></p>
+						</div>
+					</div>
+
+					<!-- AGENT Message -->
+					<div class="message" ng-if="msg.user === 'Agent'">
+						<div class="photo">
+							<!-- Agent SVG Icon or Avatar -->
+						</div>
+						<div class="text">
+							<p ng-bind-html="msg.text"></p>
+						</div>
+					</div>
+				</div>
+
+				<div class="messages-chat" ng-if="appChatWaitVisible">
+					<div class="message">
+						<div class="photo">
+							<!-- Agent SVG Icon or Avatar -->
+						</div>
+						<div class="text">
+							<p><em>Thinking...</em></p>
+						</div>
+					</div>
+				</div>
+			</div>
+
+
+		</div>
+
+		<div class="chat-input">
+			<div class="c_act_grid">
+				<form id="message-input-field" ng-submit="sendAppChatMessage()" novalidate>
+					<textarea ng-model="newAppChatMessage" class="form-control" placeholder="Write your message here..." rows="3" ng-keydown="handleAppChatKeydown($event)"></textarea>
+					<button type="submit"
+							class="chat-submit"
+							id="app-chat-submit"
+							ng-disabled="!newAppChatMessage || appChatWaitVisible"
+							ng-class="{'active': newAppChatMessage && !appChatWaitVisible}"
+							ng-click="sendAppChatMessage()">
+						<svg xmlns="http://www.w3.org/2000/svg" width="11" height="12" viewBox="0 0 11 12" fill="none">
+							<path d="M9.36382 6.29379C9.19493 6.29379 9.0216 6.22713 8.89271 6.09824L5.07049 2.27602L1.24826 6.09824C0.986042 6.36046 0.56382 6.36046 0.306042 6.09824C0.0438194 5.83602 0.0438194 5.41379 0.306042 5.15602L4.59938 0.862682C4.8616 0.60046 5.28382 0.60046 5.5416 0.862682L9.83493 5.15602C10.0972 5.41824 10.0972 5.84046 9.83493 6.09824C9.70605 6.22713 9.53271 6.29379 9.36382 6.29379Z" fill="white"/>
+							<path d="M5.06315 11.2497C4.69426 11.2497 4.39648 10.9519 4.39648 10.583V1.33415C4.39648 0.965258 4.69426 0.66748 5.06315 0.66748C5.43204 0.66748 5.72982 0.965258 5.72982 1.33415V10.583C5.72982 10.9519 5.43204 11.2497 5.06315 11.2497Z" fill="white"/>
+						</svg>
+					</button>
+				</form>
+			</div>
+		</div>
+
+
+	</div>
+</div>
+
+<div>
+	<!-- Overlay Background -->
+	<div id="bgOverlayTeam" ng-click="closeOverlayTeam()"></div>
+	<!-- Overlay Modal -->
+	<div class="overlay" id="overlay-team">
+		<div class="overlay-content">
+			<span class="close-btn" ng-click="closeOverlayTeam()">&times;</span>
+			<h2>{{teamPopUpHeading}}</h2>
+			<form>
+				<div class="form-group row">
+					<label class="col-sm-2 col-form-label">Team Name</label>
+					<div class="col-sm-10">
+						<input id="teams_edit_id" class="form-control" type="hidden" />
+						<input id="teams_edit_name" class="form-control" type="text" placeholder="Enter Team Name" />
+					</div>
+				</div>
+
+				<div class="form-group row">
+					<label class="col-sm-2 col-form-label">App</label>
+					<div class="col-sm-10">
+						<select id="teams_edit_app"
+								class="form-control"
+								ng-model="selectedAppId">
+							<option value="">Select App</option>
+							<option ng-repeat="app in spec.Apps" value="{{app.appId}}">
+								{{app.appName}}
+							</option>
+						</select>
+					</div>
+				</div>
+
+				<div class="form-group row">
+					<label class="col-sm-2 col-form-label">Manager</label>
+					<div class="col-sm-10">
+						<select id="teams_edit_manager_agents"
+								class="form-control multi-options">
+							<option ng-repeat="agent in spec.Agents" value="{{agent.identifier}}">
+								{{agent.name}} {{agent.title}}
+							</option>
+						</select>
+					</div>
+				</div>
+
+				<div class="form-group row">
+					<label class="col-sm-2 col-form-label">Agents</label>
+					<div class="col-sm-10">
+						<select id="teams_edit_agents"
+								class="form-control multi-options"
+								multiple>
+							<option></option>
+							<option ng-repeat="agent in spec.Agents" value="{{agent.identifier}}">
+								{{agent.name}} {{agent.title}}
+							</option>
+						</select>
+					</div>
+				</div>
+
+				<div class="form-group row bsln">
+					<label class="col-sm-2 col-form-label">Description</label>
+					<div class="col-sm-10">
+						<textarea id="teams_edit_requirement" rows="15" class="form-control" style="height: 200px;" placeholder="Enter Team Description..."></textarea>
+					</div>
+				</div>
+
+				<div class="form-group row">
+					<div class="col-sm-12 text-center">
+						<button type="button" class="btn btn-primary" ng-click="completeAITeam()" ng-disabled="saveInProgress">Save</button>
+					</div>
+				</div>
+			</form>
+		</div>
+	</div>
+
+
+
+
+	<!-- Overlay Background -->
+	<div id="bgOverlayteamconfigration" ng-click="closeteamconfigration()"></div>
+	<!-- Agent Overlay -->
+	<div class="overlay" id="overlay-teamconfigration">
+		<div class="overlay-content">
+			<span class="close-btn" ng-click="closeteamconfigration()">×</span>
+			<h2>{{configureTeamHeading}} <span>(API Call)</span></h2>
+			<form>
+				<div class="form-group row">
+					<label class="col-sm-2 col-form-label">API List: </label>
+					<div class="col-sm-10">
+						<select class="form-control" ng-model="chat_list_type">
+							<option value="packages.syncloopai.assistant.teams.executeTeam">Send Message</option>
+							<option value="packages.syncloopai.assistant.teams.getChatHistory">Get Chat History</option>
+							<option value="packages.syncloopai.assistant.teams.getTranscripts">Get Transcripts</option>
+							<option value="packages.Awareness.dashboard.services.api.listConversations">Get All Conversations</option>
+							<option value="packages.syncloopai.dashboard.services.api.teams.clearChatHistory">Delete All Conversations</option>
+							<option value="packages.Awareness.dashboard.services.api.deleteConversation">Delete Conversation</option>
+						</select>
+					</div>
+				</div>
+				<div class="form-group row">
+					<label class="col-sm-2 col-form-label">Agent ID: </label>
+					<div class="col-sm-10">
+						<input class="form-control" value="{{currentTeam.managerId}}" disabled />
+					</div>
+				</div>
+				<div class="form-group row">
+					<label class="col-sm-2 col-form-label">Team ID: </label>
+					<div class="col-sm-10">
+						<input class="form-control" value="{{currentTeam.teamID}}" disabled />
+					</div>
+				</div>
+				<div class="form-group row">
+					<label class="col-sm-2 col-form-label">Request format:</label>
+					<div class="col-sm-10 d-flex align-items-center">
+						<select class="form-control">
+							<option value="curl">cURL</option>
+						</select>
+						<button type="btn" class="grey-btn ml-2 mr-2" ng-click="openSwagger()"><img src="Awareness/pub/images/swagger_logo.svg" class="pr-1" width="26px"> Download Swagger</button>
+						<button type="btn" class="grey-btn" style="display: none;"><img src="Awareness/pub/images/postman_logo.svg" class="pr-1" width="26px"> Import to Postman</button>
+					</div>
+				</div>
+				<div class="form-group row">
+					<div class="api_list mt-3">
+						<img src="Awareness/pub/images/copy-svgrepo-com.svg" class="copyall" ng-click="copyTeamCurl($event)" />
+						<pre  class="text_wrap" ng-if="chat_list_type == 'packages.syncloopai.assistant.teams.executeTeam'">curl -X POST {{currentHost}}/team/chat \
+-H "Content-Type: application/json" \
+-H "Authorization: Bearer {{jwtToken}}" \
+-d '{
+	"teamId": "{{currentTeam.teamID}}",
+	"prompt": "YOUR_PROMPT",
+	"chatID": "UNIQUE_CHAT_ID",
+	"chatTitle": "New Chat"
+}'
+</pre>
+						<pre class="text_wrap" ng-if="chat_list_type == 'packages.Awareness.dashboard.services.api.listConversations'">curl -X GET {{currentHost}}/awareness/list/conversations \
+-H "Authorization: Bearer {{jwtToken}}"
+</pre>
+						<pre class="text_wrap" ng-if="chat_list_type == 'packages.syncloopai.assistant.teams.getChatHistory'">curl -X GET "{{currentHost}}/chatHistory?chatID=UNIQUE_CHAT_ID&agentID={{currentTeam.managerId}}" \
+-H "Authorization: Bearer {{jwtToken}}"
+</pre>
+						<pre class="text_wrap" ng-if="chat_list_type == 'packages.syncloopai.assistant.teams.getTranscripts'">curl -X GET "{{currentHost}}/team/transcripts?transcriptId=CHAT_HISTORY_ID" \
+-H "Authorization: Bearer {{jwtToken}}"
+</pre>
+						<pre class="text_wrap" ng-if="chat_list_type == 'packages.syncloopai.dashboard.services.api.teams.clearChatHistory'">curl -X POST {{currentHost}}/team/clearHistory \
+-H "Content-Type: application/json" \
+-H "Authorization: Bearer {{jwtToken}}" \
+-d '{
+	"agentId": {{currentTeam.managerId}},
+	"identifiers": ARRAY_OF_UNIQUE_CHAT_ID
+}'
+</pre>
+						<pre class="text_wrap" ng-if="chat_list_type == 'packages.Awareness.dashboard.services.api.deleteConversation'">curl -X DELETE "{{currentHost}}/awareness/conversation?chatID=UNIQUE_CHAT_ID" \
+-H "Authorization: Bearer {{jwtToken}}"
+</pre>
+					</div>
+				</div>
+
+			</form>
+		</div>
+	</div>
+	<!-- Overlay Background -->
+	<div id="bgOverlayAgent" ng-click="closeOverlayAgent()"></div>
+	<!-- Agent Overlay -->
+	<div class="overlay" id="overlay-agent">
+		<div class="overlay-content">
+			<span class="close-btn" ng-click="closeOverlayAgent()">×</span>
+			<h2>{{agentPopUpHeading}}</h2>
+			<form>
+				<div class="form-group row">
+					<label class="col-sm-2 col-form-label">Name</label>
+					<div class="col-sm-10">
+						<input id="agent_edit_id" type="hidden" />
+						<input id="agent_edit_name" class="form-control" type="text" placeholder="Enter Agent Name" />
+					</div>
+				</div>
+
+				<div class="form-group row">
+					<label class="col-sm-2 col-form-label">Title</label>
+					<div class="col-sm-10">
+						<input id="agent_edit_title" class="form-control" type="text" placeholder="Enter Title" />
+					</div>
+				</div>
+
+				<div class="form-group row">
+					<label class="col-sm-2 col-form-label">LLM</label>
+					<div class="col-sm-10">
+						<select id="agent_edit_llm" class="form-control">
+							<option value="" disabled selected>Select LLM</option>
+						</select>
+					</div>
+				</div>
+
+				<!--<div class="form-group row">
+                    <label class="col-sm-2 col-form-label">Team</label>
+                    <div class="col-sm-10">
+                        <select id="agent_edit_teams" class="form-control">
+                            <option value="" disabled selected>Select Team</option>
+                        </select>
+                    </div>
+                </div>-->
+
+				<!--<div class="form-group row">
+                    <label class="col-sm-3 col-form-label">Tools</label>
+                    <div class="col-sm-9">
+                        <select id="agent_edit_tools" class="form-control" multiple></select>
+                    </div>
+                </div>-->
+
+				<div class="form-group row bsln">
+					<label class="col-sm-2 col-form-label">Description</label>
+					<div class="col-sm-10">
+						<textarea rows="10" id="agent_edit_description" class="form-control" style="height: 150px;" placeholder="Enter agent description..."></textarea>
+					</div>
+				</div>
+
+				<div class="form-group row">
+					<div class="col-sm-12 text-center">
+						<button type="button" class="btn btn-primary" ng-click="completeAgentEdit()" ng-disabled="saveInProgress">Save</button>
+					</div>
+				</div>
+			</form>
+		</div>
+	</div>
+
+
+	<!-- Overlay Background -->
+	<div id="bgOverlayTool" ng-click="closeOverlayTool()"></div>
+	<!-- Tool Overlay -->
+	<div class="overlay " id="overlay-tool">
+		<div class="overlay-content"  data-scrollbar style="width: auto;  overflow: auto;" id="humtum">
+			<span class="close-btn" ng-click="closeOverlayTool()">×</span>
+			<h2>{{toolPopUpHeading}}</h2>
+
+			<form>
+				<!-- Tool Name -->
+				<div class="form-group row mb-1 align-items-center">
+					<input type="hidden" id="tool_edit_id" />
+					<label for="tool_edit_name" class="col-sm-2 col-form-label">Name:</label>
+					<div class="col-sm-10">
+						<input id="tool_edit_name" class="form-control" type="text" placeholder="Enter Tool Name" ng-keyup="validateToolNameInput($event)" ng-model="toolName" />
+						<div id="info_message_tool" class="text-danger small mt-1"></div>
+					</div>
+				</div>
+				<!-- Radio Buttons -->
+				<div class="form-group row">
+					<label for="tool_edit_name" class="col-sm-2 col-form-label"></label>
+					<div class="col-sm-10">
+						<label class="mr-3 mb-0">
+							<input type="radio" name="toolType" ng-disabled="isToolEdit" value="api" ng-model="toolType" ng-change="onToolTypeChange()" checked />
+							API
+						</label>
+						<label class="mb-0">
+							<input type="radio" name="toolType" ng-disabled="isToolEdit" value="kb" ng-model="toolType" ng-change="onToolTypeChange()" />
+							Knowledge Base
+						</label>
+					</div>
+				</div>
+
+				<div class="form-group row">
+					<label class="col-sm-2 col-form-label" for="aiToolsAdd_api">
+						{{ toolType === 'kb' ? 'Select KB:' : 'Select API:' }}
+					</label>
+					<div class="col-sm-10">
+						<select id="aiToolsAdd_api" class="form-control aiToolsAdd">
+							<option value=""></option>
+						</select>
+					</div>
+				</div>
+				<div class="form-group row">
+
+					<label class="col-sm-2 col-form-label">Agents:</label>
+					<div class="col-sm-10">
+						<select id="tool_edit_agents" class="form-control"></select>
+
+					</div>
+				</div>
+
+
+
+				<div class="form-group row bsln">
+					<label class="col-sm-2 col-form-label">Description:</label>
+					<div class="col-sm-10">
+						<textarea id="tool_edit_description" class="form-control" rows="10" placeholder="Enter Description..."></textarea>
+					</div>
+				</div>
+
+				<div class="form-group row" id="toolVariablesRow" style="display:none; margin-top: 20px;">
+					<label class="col-sm-2 mt-3">Set Input Variables:</label>
+					<div class="col-sm-10">
+						<div id="toolVariableInputs"></div>
+					</div>
+				</div>
+
+				<div class="form-group row" id="staticJsonPayloadRow" style="display:none;">
+					<label class="col-sm-2 col-form-label">Add Static JSON Payload:</label>
+					<div class="col-sm-10">
+
+						<textarea id="tool_static_json_payload" class="form-control" rows="10" placeholder="Enter static JSON payload...">></textarea>
+					</div>
+				</div>
+
+				<div class="form-group row">
+					<div class="col-sm-12 text-center">
+						<button type="button" class="btn btn-primary" ng-click="completeToolEdit()" ng-disabled="saveInProgress">Save</button>
+					</div>
+				</div>
+			</form>
+		</div>
+
+	</div>
+
+	<!-- Overlay Background -->
+	<div id="bgOverlayApp" ng-click="closeOverlay()"></div>
+
+	<!-- Overlay Modal -->
+	<div class="overlay" id="overlayApp">
+		<div class="overlay-content">
+			<span class="close-btn" ng-click="closeOverlay()">&times;</span>
+			<h2>{{addappPopUpHeading}}</h2>
+			<form>
+				<div class="form-group row">
+					<label class="col-sm-2 col-form-label">Name</label>
+					<div class="col-sm-10">
+						<input id="app_edit_id" class="form-control" type="hidden" />
+						<input id="app_edit_name" class="form-control" type="text" placeholder="Enter App Name" />
+					</div>
+				</div>
+				<div class="form-group row">
+					<label class="col-sm-2 col-form-label">LLM</label>
+					<div class="col-sm-10">
+						<select id="app_edit_llm" class="form-control" type="text">
+							<option value="" disabled selected>Select LLM</option>
+						</select>
+					</div>
+				</div>
+				<div class="form-group row">
+					<label class="col-sm-2 col-form-label">App Link</label>
+					<div class="col-sm-10">
+						<input id="appLink" class="form-control" type="text" placeholder="Put your App Link where e.g. https://my.company.com" />
+					</div>
+				</div>
+				<div class="form-group row bsln">
+					<label class="col-sm-2 col-form-label">Description</label>
+					<div class="col-sm-10">
+						<textarea id="app_edit_requirement"
+								  class="form-control"
+								  style="height: 200px;"
+								  placeholder="Enter Description..." rows="10">
+						</textarea>
+					</div>
+				</div>
+				<div class="form-group row">
+					<div class="col-sm-12 text-center">
+						<button type="button" class="btn btn-primary" ng-click="completeAddApp()" ng-disabled="saveInProgress">Save</button>
+					</div>
+				</div>
+			</form>
+		</div>
+	</div>
+</div>
+<script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+<script src="middleware/pub/server/ui/javascript/showdown.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.2/dist/js/bootstrap.bundle.min.js"></script>
+<script src="middleware/pub/server/ui/javascript/sweetalert.min.js"></script>
+<script src="middleware/pub/server/ui/javascript/datatables/datatables.min.js"></script>
+
+<script src="middleware/pub/server/ui/assets/js/select2.full.min.js"></script>
+<script src="middleware/pub/server/ui/assets/js/select2-init.js"></script>
+<script src="https://cdn.ckeditor.com/ckeditor5/39.0.1/classic/ckeditor.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/js-cookie@2.2.1/src/js.cookie.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/js-cookie@2/src/js.cookie.min.js"></script>
+<script src="Awareness/pub/console-agent.js"></script>
+
+<script>
+	document.addEventListener("DOMContentLoaded", function () {
+
+		const el1 = document.querySelector('#humtum');
+		if (el1) {
+			const scrollbar = Scrollbar.init(el1);
+			scrollbar.addListener(({ offset }) => {
+				if (offset.x !== 0) {
+					scrollbar.scrollTo(0, offset.y, 0);
+				}
+			});
+		}
+
+		const el2 = document.querySelector('#smoothscrollbar');
+		if (el2) {
+			const scrollbarsecond = Scrollbar.init(el2);
+			scrollbarsecond.addListener(({ offset }) => {
+				if (offset.x !== 0) {
+					scrollbarsecond.scrollTo(0, offset.y, 0);
+				}
+			});
+		}
+
+		const el3 = document.querySelector('#smoothscrollbarsecond');
+		if (el3) {
+			const scrollbarthird = Scrollbar.init(el3);
+			scrollbarthird.addListener(({ offset }) => {
+				if (offset.x !== 0) {
+					scrollbarthird.scrollTo(0, offset.y, 0);
+				}
+			});
+		}
+
+	});
+
+</script>
+</div>
+</body>
+</html>

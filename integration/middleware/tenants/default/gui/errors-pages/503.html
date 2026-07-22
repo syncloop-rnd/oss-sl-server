@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>503 | Service Unavailable</title>
+
+    <style>
+        * {
+            box-sizing: border-box;
+            font-family: Inter, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+        }
+
+        body {
+            margin: 0;
+            background: linear-gradient(90deg, #ffffff 55%, #EAF7FB 45%);
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .container {
+            width: 100%;
+            max-width: 1200px;
+            padding: 40px;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            align-items: center;
+            gap: 40px;
+        }
+
+        .content {
+            max-width: 440px;
+        }
+
+        .content h1 {
+            font-size: 64px;
+            margin: 0;
+            color: #F59E0B;
+            line-height: 1;
+        }
+
+        .content h2 {
+            font-size: 26px;
+            margin: 16px 0 10px;
+            color: #1F2937;
+        }
+
+        .content p {
+            font-size: 16px;
+            color: #6B7280;
+            line-height: 1.6;
+            margin-bottom: 24px;
+        }
+
+        .status {
+            display: inline-block;
+            background: #FEF3C7;
+            color: #92400E;
+            padding: 6px 12px;
+            border-radius: 999px;
+            font-size: 13px;
+            font-weight: 500;
+            margin-bottom: 16px;
+        }
+
+        .actions {
+            display: flex;
+            gap: 12px;
+            flex-wrap: wrap;
+        }
+
+        .btn {
+            padding: 12px 20px;
+            border-radius: 6px;
+            font-size: 14px;
+            font-weight: 500;
+            text-decoration: none;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+            transition: all 0.2s ease;
+        }
+
+        .btn-primary {
+            background: #0B5ED7;
+            color: #ffffff;
+        }
+
+        .btn-primary:hover {
+            background: #094BB5;
+        }
+
+        .btn-outline {
+            border: 1px solid #D1D5DB;
+            color: #1F2937;
+            background: #ffffff;
+        }
+
+        .btn-outline:hover {
+            background: #F3F4F6;
+        }
+
+        .illustration {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        svg {
+            max-width: 380px;
+            width: 100%;
+        }
+
+        @media (max-width: 900px) {
+            body {
+                background: #ffffff;
+            }
+
+            .container {
+                grid-template-columns: 1fr;
+                text-align: center;
+            }
+
+            .content {
+                margin: 0 auto;
+            }
+
+            .actions {
+                justify-content: center;
+            }
+        }
+    </style>
+    <script type="syncloop/analytics"></script>
+</head>
+<body>
+<script type="syncloop/body-analytics"></script>
+<div class="container">
+    <!-- LEFT CONTENT -->
+    <div class="content">
+        <!-- Logo placeholder -->
+        <!-- <img src="logo.svg" alt="Syncloop Logo" /> -->
+
+        <span class="status">Temporary Maintenance</span>
+
+        <h1>503</h1>
+        <h2>Service Unavailable</h2>
+        <p>
+            Our systems are taking a short maintenance break to ensure everything
+            runs smoothly. We’ll be back shortly — thank you for your patience.
+        </p>
+
+        <div class="actions">
+            <a href="/" class="btn btn-primary">Retry</a>
+            <a href="https://status.syncloop.com" class="btn btn-outline">System Status</a>
+        </div>
+    </div>
+
+    <!-- RIGHT ILLUSTRATION -->
+    <div class="illustration">
+        <!-- Inline SVG – Rocket under maintenance -->
+        <svg viewBox="0 0 320 300" xmlns="http://www.w3.org/2000/svg">
+            <circle cx="160" cy="150" r="140" fill="#EAF7FB"/>
+
+            <!-- Rocket -->
+            <ellipse cx="160" cy="130" rx="28" ry="68" fill="#FFFFFF" stroke="#CBD5E1" stroke-width="2"/>
+            <polygon points="160,35 130,85 190,85" fill="#9CA3AF"/>
+
+            <!-- Window -->
+            <circle cx="160" cy="115" r="8" fill="#2563EB"/>
+
+            <!-- Engine off -->
+            <rect x="150" y="195" width="20" height="16" rx="4" fill="#9CA3AF"/>
+
+            <!-- Wrench -->
+            <rect x="95" y="165" width="90" height="8" rx="4" fill="#F59E0B" transform="rotate(-20 95 165)"/>
+            <circle cx="90" cy="165" r="10" fill="#FBBF24"/>
+
+            <!-- Dots -->
+            <circle cx="60" cy="70" r="3" fill="#93C5FD"/>
+            <circle cx="250" cy="80" r="3" fill="#93C5FD"/>
+            <circle cx="230" cy="50" r="2" fill="#93C5FD"/>
+        </svg>
+    </div>
+</div>
+
+</body>
+</html>

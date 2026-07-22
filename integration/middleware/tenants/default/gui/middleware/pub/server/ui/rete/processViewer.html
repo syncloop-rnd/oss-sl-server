@@ -1,0 +1,1400 @@
+<!DOCTYPE html>
+<html ng-app="ProcessOrchestrator">
+<head>
+    <meta charset="UTF-8">
+    <title>Process Orchestration Designer</title>
+    <!-- CSS Libraries -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="https://code.jquery.com/ui/1.13.2/themes/base/jquery-ui.css">
+<style>
+    /* Global Styles */
+    body, html {
+        height: 100%;
+        margin: 0;
+        font-family: Arial, sans-serif;
+        overflow: hidden;
+        background-color: #1e1e1e; /* Dark background */
+        color: #e0e0e0; /* Light text for contrast */
+    }
+
+    /* Top Menu */
+    .top-menu {
+        height: 50px;
+        background-color: #2c2c2c; /* Darker shade for top menu */
+        color: #e0e0e0;
+        display: flex;
+        align-items: center;
+        padding: 0 20px;
+        position: relative;
+        z-index: 1001; /* Ensure top menu stays above other elements */
+        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.5); /* Subtle shadow for depth */
+    }
+
+    .top-menu button {
+        margin-right: 15px;
+        padding: 8px 16px;
+        cursor: pointer;
+        background-color: #3a3a3a; /* Dark button background */
+        border: none;
+        color: #e0e0e0;
+        border-radius: 6px;
+        transition: background-color 0.3s, transform 0.2s;
+    }
+
+    .top-menu button:hover {
+        background-color: #5a9bd5; /* Sky blue on hover */
+        transform: translateY(-2px);
+    }
+
+    /* Container */
+    .container {
+        display: flex;
+        height: calc(100% - 50px);
+        position: relative; /* To manage stacking context */
+        overflow: hidden;
+    }
+
+    /* Left Menu */
+    .left-menu-container {
+        position: relative;
+        transition: width 0.3s;
+        background-color: #2c2c2c; 
+        border-right: 1px solid #444;
+        overflow: hidden; 
+    }
+
+    .left-menu {
+        height: 100%;
+        overflow-y: auto;
+        padding: 20px 15px;
+        box-shadow: inset -2px 0 5px rgba(0, 0, 0, 0.5);
+        transition: width 0.3s;
+    }
+
+    /* Collapsed/Expanded states */
+    .left-menu-collapsed {
+        width: 25px !important;
+        padding: 10px 5px !important;
+    }
+
+    .left-menu-toggle {
+        position: absolute;
+        top: 10px;
+        right: -15px;
+        width: 30px;
+        height: 30px;
+        background-color: #3a3a3a;
+        color: #e0e0e0;
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        cursor: pointer;
+        box-shadow: 0 0 5px rgba(0,0,0,0.5);
+        transition: right 0.3s;
+    }
+
+    /* Accordion Styles */
+    .accordion-item {
+        margin-bottom: 10px;
+    }
+
+    .accordion-header {
+        background-color: #3a3a3a;
+        padding: 8px 10px;
+        cursor: pointer;
+        border-radius: 5px;
+        display: flex;
+        align-items: center;
+        transition: background-color 0.3s;
+    }
+
+    .accordion-header:hover {
+        background-color: #5a9bd5; /* highlight on hover */
+    }
+
+    .accordion-header i {
+        margin-right: 8px;
+        color: #ffd700;
+        min-width: 20px;
+        text-align: center;
+    }
+
+    .accordion-title {
+        overflow: hidden;
+        white-space: nowrap;
+        text-overflow: ellipsis;
+    }
+
+    .accordion-content {
+        padding-left: 15px;
+        margin-top: 5px;
+        border-left: 2px solid #5a9bd5;
+        display: none; /* hidden by default */
+    }
+
+    .accordion-expanded .accordion-content {
+        display: block;
+    }
+
+    /* Menu Item Styles */
+    .menu-item {
+        padding: 8px 10px;
+        margin: 5px 0;
+        background-color: #3a3a3a;
+        border-radius: 5px;
+        display: flex;
+        align-items: center;
+        cursor: grab;
+        transition: background-color 0.3s;
+        border: 1px solid #555;
+        justify-content: flex-start;
+    }
+
+    .menu-item:hover {
+        background-color: #5a9bd5; /* highlight on hover */
+        transform: translateY(-2px);
+    }
+
+    .menu-item i {
+        margin-right: 8px;
+        color: #ffd700;
+        min-width: 20px;
+        text-align: center;
+    }
+
+    /* When menu is collapsed */
+    .collapsed .accordion-title,
+    .collapsed .menu-item span {
+        display: none;
+    }
+
+    .collapsed .accordion-header i {
+        margin-right: 0;
+    }
+
+    .collapsed .menu-item i {
+        margin-right: 0;
+    }
+
+    /* Design Area */
+    .design-area {
+        flex: 1;
+        position: relative;
+        background-color: #1e1e1e;
+        background-image: 
+            linear-gradient(45deg, #2a2a2a 25%, transparent 25%),
+            linear-gradient(-45deg, #2a2a2a 25%, transparent 25%),
+            linear-gradient(45deg, transparent 75%, #2a2a2a 75%),
+            linear-gradient(-45deg, transparent 75%, #2a2a2a 75%);
+        background-size: 20px 20px;
+        background-position: 
+            0 0, 
+            0 10px, 
+            10px -10px, 
+            -10px 0px;
+        overflow: auto;
+        z-index: 0;
+        border: 2px solid #5a9bd5;
+        box-sizing: border-box;
+        left: -2000px;
+        top: -2000px;
+        min-height: 5000px;
+        min-width: 6000px;
+    }
+
+    .design-area-container {
+        flex: 1;
+        position: relative;
+        background-color: #1e1e1e;
+        overflow: hidden;
+        z-index: 0;
+        border: 2px solid #5a9bd5;
+        box-sizing: border-box;
+    }
+
+    /* Component Items in Design Area */
+    .component-item {
+        position: absolute;
+        padding: 12px 20px;
+        border: 1px solid #555;
+        border-radius: 8px;
+        background-color: #3a3a3a;
+        cursor: move;
+        min-width: 160px;
+        text-align: center;
+        box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.7);
+        font-size: 14px;
+        transition: box-shadow 0.3s, transform 0.2s;
+        color: #e0e0e0;
+    }
+
+    .component-item:hover {
+        box-shadow: 4px 4px 15px rgba(0, 0, 0, 0.9);
+        transform: translateY(-2px);
+    }
+
+    .component-item .actions {
+        position: absolute;
+        top: 4px;
+        right: 4px;
+        display: flex;
+        gap: 8px;
+    }
+
+    .component-item .actions i {
+        cursor: pointer;
+        color: #ffd700; 
+        transition: color 0.3s;
+    }
+
+    .component-item .actions i:hover {
+        color: #ff8c00; 
+    }
+
+    /* IO Elements */
+    .input-circle,
+    .output-square {
+        width: 14px;
+        height: 14px;
+        position: absolute;
+        background-color: #5a9bd5; 
+    }
+
+    .input-circle {
+        border-radius: 50%;
+        text-indent: 15px;
+    }
+
+    .output-square {
+        cursor: crosshair;
+        text-align: right;
+        text-indent: -45px;
+    }
+
+    .output-label {
+        min-height: 10px;
+        padding: 2px 6px 4px 0;
+        text-align: right;
+        color: #ffd700; 
+    }
+
+    .io-container {
+        position: relative;
+        margin: 8px 0;
+    }
+
+    /* Form Elements */
+    .readonly-field {
+        background: #2c2c2c;
+        border: 1px solid #555;
+        padding: 4px 8px;
+        cursor: pointer;
+        color: #e0e0e0;
+        border-radius: 4px;
+        transition: background-color 0.3s, border-color 0.3s;
+    }
+
+    .readonly-field:hover {
+        background: #5a5a5a;
+        border-color: #5a9bd5;
+    }
+
+    .checkbox-container {
+        margin: 8px 0;
+    }
+
+    .comment-box,
+    .text-input-field,
+    .textarea-field {
+        width: 100%;
+        box-sizing: border-box;
+        margin: 8px 0;
+        padding: 8px;
+        background-color: #2c2c2c;
+        border: 1px solid #555;
+        border-radius: 4px;
+        color: #e0e0e0;
+        transition: background-color 0.3s, border-color 0.3s;
+    }
+
+    .comment-box:hover,
+    .text-input-field:hover,
+    .textarea-field:hover {
+        background-color: #3a3a3a;
+        border-color: #5a9bd5;
+    }
+
+    .selected {
+        border: 2px dashed #ff8c00; 
+    }
+
+    /* Modal Styles */
+    .modal {
+        display: none;
+        position: fixed;
+        z-index: 2000;
+        left: 0;
+        top: 0;
+        width: 100%;
+        height: 100%;
+        overflow: auto;
+        background-color: rgba(0, 0, 0, 0.7);
+    }
+
+    .modal-content {
+        background-color: #2c2c2c;
+        margin: 10% auto;
+        padding: 25px;
+        border: 1px solid #555;
+        width: 450px;
+        border-radius: 10px;
+        position: relative;
+        box-shadow: 0 4px 15px rgba(0, 0, 0, 0.8);
+        color: #e0e0e0;
+    }
+
+    .modal-header {
+        font-size: 20px;
+        margin-bottom: 15px;
+        color: #ffd700; 
+    }
+
+    .modal-footer {
+        text-align: right;
+        margin-top: 15px;
+    }
+
+    .modal-footer button {
+        padding: 8px 16px;
+        margin-left: 10px;
+        cursor: pointer;
+        border: none;
+        border-radius: 6px;
+        background-color: #5a9bd5; 
+        color: #e0e0e0;
+        transition: background-color 0.3s, transform 0.2s;
+    }
+
+    .modal-footer button:hover {
+        background-color: #ff8c00; 
+        transform: translateY(-2px);
+    }
+
+    /* IO Points */
+    .io-point {
+        position: relative;
+        height: 24px;
+    }
+
+    .io-point .input-circle {
+        left: -18px;
+        top: 6px;
+    }
+
+    .io-point .output-square {
+        right: -18px;
+        top: 6px;
+    }
+
+    /* Connection Button */
+    .connection-button {
+        position: absolute;
+        transform: translate(-50%, -50%);
+        z-index: 10; 
+    }
+
+    .connection-button button {
+        width: 34px; 
+        height: 34px; 
+        padding: 0; 
+        font-size: 14px; 
+        cursor: pointer;
+        background-color: #5a9bd5; 
+        border: none; 
+        border-radius: 50%; 
+        transition: background-color 0.3s, border 0.3s, transform 0.2s; 
+    }
+
+    .connection-button button:hover {
+        background-color: #ff8c00; 
+        border: 2px solid #a020f0; 
+        transform: rotate(10deg);
+    }
+</style>
+</head>
+<body ng-controller="MainController">
+
+    <!-- Top Menu Bar -->
+    <div class="top-menu">
+        <button ng-click="exportDesign()"><i class="fas fa-download"></i> Export</button>
+        <button ng-click="importDesign()"><i class="fas fa-upload"></i> Import</button>
+        <button ng-click="autoArrange()"><i class="fas fa-arrows-alt"></i> Auto-Arrange</button>
+    </div>
+
+    <div class="container">
+        <!-- Left-side Menu -->
+        <div class="left-menu-container" ng-class="{'collapsed': menuCollapsed}" ng-style="{'width': menuCollapsed ? '25px' : '220px'}">
+            <div class="left-menu" ng-class="{'left-menu-collapsed': menuCollapsed}">
+                <div class="accordion-item" ng-repeat="(key, item) in leftMenuData['menu-items']" ng-init="level=0">
+                    <menu-accordion item="item" menu-collapsed="menuCollapsed" level="level"></menu-accordion>
+                </div>
+            </div>
+            <div class="left-menu-toggle" ng-click="toggleMenu()">
+                <i class="fas" ng-class="menuCollapsed ? 'fa-arrow-right' : 'fa-arrow-left'"></i>
+            </div>
+        </div>
+
+        <!-- Central Design Area -->
+        <div class="design-area-container">
+            <div class="design-area" id="designArea">
+                <!-- Components will be dynamically added here -->
+                <div ng-repeat="component in components" 
+                     class="component-item" 
+                     id="{{component.id}}" 
+                     ng-style="{'top': component.position.top + 'px', 'left': component.position.left + 'px'}" 
+                     ng-mousedown="selectComponent(component.id)"
+                     ng-switch="component.type">
+                     
+                    <div class="actions">
+                        <i class="fas fa-cog" ng-click="openSettings(component.id)"></i>
+                        <i class="fas fa-trash" ng-click="deleteComponent(component.id)"></i>
+                    </div>
+                    
+                    <strong>{{component.name}}</strong>
+                    <hr/>
+
+                    <!-- Same component-type handling as before -->
+                    <div ng-switch-when="Trigger">
+                        <div class="io-point">
+                            <div class="output-label">*event</div><div class="output-square" id="{{component.id}}-output0" sourceType="trigger" outputType="event"></div>
+                        </div>
+                    </div>
+                    
+                    <div ng-switch-when="SubscribeEvent">
+                        <div class="io-point">
+                            <div class="input-circle" id="{{component.id}}-input0" targetType="subscribe" inputType="event">*event</div>
+                            <div class="output-label">*event</div><div class="output-square" style="top:0;" id="{{component.id}}-output0" sourceType="subscribe" outputType="event"></div>
+                            <div class="output-label">monitor</div><div class="output-square" style="top:20px;" id="{{component.id}}-output1" sourceType="subscribe" outputType="monitor"></div>
+                        </div>
+                        <div class="readonly-field" ng-click="openSelectDialog(component.id, 'SubscribeEvent')">Select Event</div>
+                        <textarea class="comment-box" placeholder="Comment..." ng-model="component.tempComment"></textarea>
+                    </div>
+
+                    <div ng-switch-when="ExecuteTask">
+                        <div class="io-point">
+                            <div class="input-circle" id="{{component.id}}-input0" targetType="task" inputType="event">*event</div>
+                            <div class="output-label">*event</div><div class="output-square" id="{{component.id}}-output0" sourceType="task" outputType="event"></div>
+                        </div>
+                        <div class="readonly-field" ng-click="openSelectDialog(component.id, 'ExecuteTask')">Select Task</div>
+                        <textarea class="comment-box" placeholder="Comment..." ng-model="component.tempComment"></textarea>
+                    </div>
+
+                    <div ng-switch-when="ANDGate">
+                        <div class="io-point">
+                            <div class="input-circle" id="{{component.id}}-input0" targetType="and" inputType="events">*events</div>
+                            <div class="output-label">*event</div><div class="output-square" id="{{component.id}}-output0" sourceType="and" outputType="event"></div>
+                        </div>
+                    </div>
+                    
+                    <div ng-switch-when="ORGate">
+                        <div class="io-point">
+                            <div class="input-circle" id="{{component.id}}-input0" targetType="or" inputType="events">*events</div>
+                            <div class="output-label">*event</div><div class="output-square" id="{{component.id}}-output0" sourceType="or" outputType="event"></div>
+                        </div>
+                    </div>
+                    
+                    <div ng-switch-when="PublishEvent">
+                        <div class="io-point">
+                            <div class="input-circle" id="{{component.id}}-input0" targetType="publish" inputType="event">*event</div>
+                            <div class="output-label">*event</div><div class="output-square" id="{{component.id}}-output0" sourceType="publish" outputType="event"></div>
+                        </div>
+                        <div class="checkbox-container">
+                            <label><input type="checkbox" ng-model="component.settingsObj.synchronous"> Synchronous</label>
+                        </div>
+                        <div class="readonly-field" ng-click="openSelectDialog(component.id, 'PublishEvent')">Select Event</div>
+                        <textarea class="comment-box" placeholder="Comment..." ng-model="component.tempComment"></textarea>
+                    </div>
+                    
+                    <div ng-switch-when="EndTask">
+                        <div class="io-point">
+                            <div class="input-circle" id="{{component.id}}-input0" targetType="end" inputType="event">*event</div>
+                        </div>
+                        <div class="checkbox-container">
+                            <label><input type="checkbox" ng-model="component.settingsObj.finishProcess"> Finish process</label>
+                        </div>
+                    </div>
+                    
+                    <div ng-switch-when="SendEmail">
+                        <div class="io-point">
+                            <div class="input-circle" id="{{component.id}}-input0" targetType="email" inputType="event">*event</div>
+                            <div class="output-label">*event</div><div class="output-square" id="{{component.id}}-output0" sourceType="email" outputType="event"></div>
+                        </div>
+                        <div class="checkbox-container">
+                            <label><input type="checkbox" ng-model="component.settingsObj.verify"> Verify</label>
+                        </div>
+                        <div class="readonly-field" ng-click="openTemplateEditor(component.id, 'SendEmail')">Email Template</div>
+                    </div>
+                    
+                    <div ng-switch-when="SendSMS">
+                        <div class="io-point">
+                            <div class="input-circle" id="{{component.id}}-input0" targetType="sms" inputType="event">*event</div>
+                            <div class="output-label">*event</div><div class="output-square" id="{{component.id}}-output0" sourceType="sms" outputType="event"></div>
+                        </div>
+                        <div class="checkbox-container">
+                            <label><input type="checkbox" ng-model="component.settingsObj.verify"> Verify</label>
+                        </div>
+                        <div class="readonly-field" ng-click="openTemplateEditor(component.id, 'SendSMS')">SMS Template</div>
+                    </div>
+                    
+                    <div ng-switch-when="Reference">
+                        <div class="io-point">
+                            <div class="input-circle" id="{{component.id}}-input0" targetType="reference" inputType="event">*event</div>
+                            <div class="output-label">*event</div><div class="output-square" id="{{component.id}}-output0" sourceType="reference" outputType="event"></div>
+                        </div>
+                        <div class="readonly-field" ng-click="openSelectDialog(component.id, 'Reference')">Select Reference</div>
+                        <textarea class="comment-box" placeholder="Comment..." ng-model="component.tempComment"></textarea>
+                    </div>
+                    
+                    <div ng-switch-when="LLMPrompt">
+                        <div class="io-point">
+                            <div class="input-circle" id="{{component.id}}-input0" targetType="llm-prompt" inputType="event">*event</div>
+                            <div class="output-label">*event</div><div class="output-square" id="{{component.id}}-output0" sourceType="llm-prompt" outputType="event"></div>
+                        </div>
+                    </div>
+                    
+                    <div ng-switch-when="WaitTimer">
+                        <div class="io-point">
+                            <div class="input-circle" id="{{component.id}}-input0" targetType="wait" inputType="event">*event</div>
+                            <div class="output-label">*event</div><div class="output-square" id="{{component.id}}-output0" sourceType="wait" outputType="event"></div>
+                        </div>
+                        <input type="text" class="text-input-field" placeholder="Countdown (s)" ng-model="component.settingsObj.countdown">
+                    </div>
+                    
+                    <div ng-switch-when="Decision">
+                        <div class="io-point" style="height:60px;">
+                            <div class="input-circle" style="top:20px;" id="{{component.id}}-input0" targetType="decision" inputType="event">*event</div>
+                            <div class="output-label">1-*event</div><div class="output-square" style="top:0px;" id="{{component.id}}-output0" sourceType="decision" outputType="true-event" title="True"></div>
+                            <div class="output-label">0-*event</div><div class="output-square" style="top:20px;" id="{{component.id}}-output1" sourceType="decision" outputType="false-event" title="False"></div>
+                            <div class="output-label">D-*event</div><div class="output-square" style="top:40px;" id="{{component.id}}-output2" sourceType="decision" outputType="default-event" title="Default"></div>
+                        </div>
+                        <select ng-model="component.settingsObj.selectedTask">
+                            <option value="">Select Task</option>
+                            <option value="task1">Task 1</option>
+                            <option value="task2">Task 2</option>
+                        </select>
+                    </div>
+                    
+                    <div ng-switch-when="WhileBox">
+                        <div class="io-point" style="height:auto;">
+                            <div class="input-circle" id="{{component.id}}-input0" targetType="while" inputType="event" style="top:10px;">*event</div>
+                            <div class="output-label">true-*event</div><div class="output-square" id="{{component.id}}-output0" sourceType="while" outputType="true-event" style="top:0px;" title="Loop"></div>
+                            <div class="output-label">exit-*event</div><div class="output-square" id="{{component.id}}-output1" sourceType="while" outputType="exit-event" style="top:20px;" title="Exit"></div>
+                        </div>
+                        <button ng-click="addWhileTrueOutput(component.id)">Add True Output</button>
+                        <select ng-model="component.settingsObj.selectedTask">
+                            <option value="">Select Task</option>
+                            <option value="task1">Task 1</option>
+                            <option value="task2">Task 2</option>
+                        </select>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Settings Modal -->
+    <div class="modal" id="settingsModal">
+        <div class="modal-content">
+            <div class="modal-header">Component Settings</div>
+            <div class="modal-body">
+                <label>Settings (Base64-encoded JSON):</label>
+                <textarea ng-model="currentSettings" style="width: 100%; height: 150px;"></textarea>
+            </div>
+            <div class="modal-footer">
+                <button ng-click="closeSettings()" style="background-color: #ccc;">Cancel</button>
+                <button ng-click="saveSettings()" style="background-color: #4CAF50; color: white;">Save</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Import Modal -->
+    <div class="modal" id="importModal">
+        <div class="modal-content">
+            <div class="modal-header">Import Design</div>
+            <div class="modal-body">
+                <label>Paste Base64-encoded JSON:</label>
+                <textarea ng-model="importData" style="width: 100%; height: 150px;"></textarea>
+            </div>
+            <div class="modal-footer">
+                <button ng-click="closeImport()" style="background-color: #ccc;">Cancel</button>
+                <button ng-click="performImport()" style="background-color: #4CAF50; color: white;">Import</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Line Settings Modal -->
+    <div class="modal" id="lineSettingsModal">
+        <div class="modal-content">
+            <div class="modal-header">Connection Settings</div>
+            <div class="modal-body">
+                <label>Label:</label>
+                <input type="text" ng-model="currentLineLabel" style="width: 100%; padding: 5px;"/>
+            </div>
+            <div class="modal-footer">
+                <button ng-click="closeLineSettings()" style="background-color: #ccc;">Cancel</button>
+                <button ng-click="saveLineSettings()" style="background-color: #4CAF50; color: white;">Save</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- jQuery and Libraries -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.13.2/jquery-ui.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jsPlumb/2.15.6/js/jsplumb.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.8.3/angular.min.js"></script>
+    <script>
+        var app = angular.module('ProcessOrchestrator', []);
+
+        // Menu accordion directive with event handling for one-at-a-time opening
+        app.directive('menuAccordion', ['$rootScope', function($rootScope) {
+            return {
+                restrict: 'E',
+                scope: {
+                    item: '=',
+                    menuCollapsed: '=',
+                    level: '='
+                },
+                template: `
+                    <div class="accordion-item" ng-class="{'accordion-expanded': expanded}">
+                        <div class="accordion-header" 
+                             ng-if="item.display === 'accordian'" 
+                             ng-click="toggleAccordion()">
+                            <i class="fas fa-folder"></i>
+                            <div class="accordion-title">{{item.name}}</div>
+                        </div>
+                        <div class="accordion-header menu-item" 
+                             ng-if="item.display !== 'accordian'" 
+                             comp-type="{{item.type}}" comp-name="{{item.name}}" draggable-component>
+                            <i ng-if="item.icon && item.icon.indexOf('fas')===0" class="{{item.icon}}"></i>
+                            <span>{{item.name}}</span>
+                        </div>
+                        <div class="accordion-content" ng-if="item.display === 'accordian'">
+                            <div ng-repeat="subItem in item['menu-items']" ng-init="nextLevel=level+1">
+                                <menu-accordion item="subItem" menu-collapsed="menuCollapsed" level="nextLevel"></menu-accordion>
+                            </div>
+                        </div>
+                    </div>
+                `,
+                link: function(scope) {
+                    scope.expanded = false;
+
+                    // Listen for accordion toggle events
+                    $rootScope.$on('accordion:toggle', function(e, activeItem) {
+                        if (activeItem !== scope.item) {
+                            scope.expanded = false;
+                        }
+                    });
+
+                    scope.toggleAccordion = function() {
+                        scope.expanded = !scope.expanded;
+                        if (scope.expanded) {
+                            // Broadcast that this accordion is opened
+                            $rootScope.$broadcast('accordion:toggle', scope.item);
+                        } else {
+                            // If the same is closed again, broadcast to collapse all
+                            $rootScope.$broadcast('accordion:toggle', null);
+                        }
+                    };
+                }
+            };
+        }]);
+
+        app.directive('draggableComponent', function() {
+            return {
+                restrict: 'A',
+                link: function(scope, element, attrs) {
+                    // If it has a comp-type attribute, make it draggable
+                    if (attrs.compType) {
+                        $(element).draggable({
+                            helper: 'clone',
+                            revert: 'invalid',
+                            appendTo: 'body',
+                            zIndex: 1500
+                        });
+                    }
+                }
+            };
+        });
+
+        app.controller('MainController', ['$scope', '$timeout', function($scope, $timeout) {
+            $scope.menuCollapsed = false;
+            $scope.leftMenuData = {
+                "menu-items": {
+                    "Components": {
+                        "name": "Components",
+                        "display": "accordian",
+                        "menu-items": [
+                            {
+                                "type": "Read",
+                                "name": "read",
+                                "icon": "fas fa-bell"
+                            },
+							{
+                                "type": "Info",
+                                "name": "info",
+                                "icon": "fas fa-bell"
+                            },
+                            {
+                                "type": "Http",
+                                "name": "http",
+                                "icon": "fas fa-tasks"
+                            },
+                            {
+                                "type": "EndTask",
+                                "name": "End Task",
+                                "icon": "fas fa-stop"
+                            },
+                            {
+                                "type": "SendEmail",
+                                "name": "Send Email",
+                                "icon": "fas fa-envelope"
+                            },
+                            {
+                                "type": "SendSMS",
+                                "name": "Send SMS",
+                                "icon": "fas fa-sms"
+                            },
+                            {
+                                "type": "Reference",
+                                "name": "Reference",
+                                "icon": "fas fa-link"
+                            },
+                            {
+                                "type": "LLMPrompt",
+                                "name": "LLM Prompt",
+                                "icon": "fas fa-comment"
+                            },
+                            {
+                                "type": "WaitTimer",
+                                "name": "Wait Timer",
+                                "icon": "fas fa-clock"
+                            },
+                            {
+                                "type": "WhileBox",
+                                "name": "While Box",
+                                "icon": "fas fa-redo"
+                            }
+                        ]
+                    },
+                    "Credentials": {
+                        "name": "Credentials",
+                        "display": "accordian",
+                        "menu-items": [
+                            {
+                                "name": "HTTP",
+                                "display": "accordian",
+                                "menu-items": [
+                                    {
+                                        "name": "OpenAI",
+                                        "icon": "fas fa-globe",
+                                        "settings": {}
+                                    }
+                                ]
+                            },
+                            {
+                                "name": "Database",
+                                "display": "accordian",
+                                "menu-items": [
+                                    {
+                                        "name": "DynamoDB",
+                                        "icon": "fas fa-database",
+                                        "settings": {}
+                                    }
+                                ]
+                            }
+                        ]
+                    },
+                    "Properties": {
+                        "name": "OrderWorkflow",
+                        "display": "accordian",
+                        "menu-items": [
+                            {
+                                "name": "Key",
+                                "icon": "fas fa-cog",
+                                "value":"value"
+                            },
+                            {
+                                "name": "DynamoDB",
+                                "icon": "fas fa-cog",
+                                "value":"value"
+                            }
+                        ]
+                    }
+                }
+            };
+
+            $scope.toggleMenu = function() {
+                $scope.menuCollapsed = !$scope.menuCollapsed;
+            };
+
+            jsPlumb.ready(function() {
+                jsPlumb.setContainer('designArea');
+            });
+
+            $scope.components = [];
+            $scope.lines = [];
+            $scope.zoomLevel = 1; 
+
+            function generateUUID() {
+                return 'xxxxxxxx-xxxx-4xxx-yxxx-xxxxxxxxxxxx'.replace(/[xy]/g, function(c) {
+                    var r = Math.random() * 16 | 0, v = c === 'x' ? r : (r & 0x3 | 0x8);
+                    return v.toString(16);
+                });
+            }
+
+            $scope.addComponent = function(type, x, y, name) {
+                var id = generateUUID();
+                var settingsObj = {};
+                var newComp = {
+                    id: id,
+                    type: type,
+                    name: name || type,
+                    position: {top: y/$scope.zoomLevel, left: x/$scope.zoomLevel},
+                    settings: btoa(JSON.stringify(settingsObj)),
+                    settingsObj: settingsObj,
+                    uuid: id
+                };
+                
+                $scope.components.push(newComp);
+                $scope.$apply();
+
+                $('#' + id).draggable({
+                    containment: "designArea",
+                    stop: function(event, ui) {
+                        jsPlumb.repaintEverything();
+                        triggerEvent('onMove', id);
+                    },
+                    drag: function(event, ui) {
+                        const scale=$scope.zoomLevel;
+                        ui.position.left = ui.position.left/ scale;
+                        ui.position.top = ui.position.top/ scale;
+                    }
+                });
+
+                $timeout(function(){
+                    createEndpointsForComponent(newComp);
+                    triggerEvent('onCreate', id);
+                });
+            };
+
+            function createEndpointsForComponent(comp) {
+                var $comp = $('#' + comp.id);
+                $comp.find('.input-circle').each(function(){
+                    var ioType=comp.type;
+                    var maxConns= (ioType==="ANDGate" || ioType==="ORGate") ? 50 : 1;
+                    jsPlumb.makeTarget($(this), {
+                        anchor: "Continuous",
+                        allowLoopback: false,
+                        endpoint: "Dot",
+                        paintStyle: { fill: "#000", radius: 5 },
+                        isTarget: true,
+                        maxConnections: maxConns,
+                        scope: "components"
+                    });
+                });
+                $comp.find('.output-square').each(function(){
+                    jsPlumb.makeSource($(this), {
+                        anchor: "Continuous",
+                        connector: ["Bezier", { curviness: 150 }],
+                        connectorStyle: { stroke: "skyblue", strokeWidth: 4 },
+                        maxConnections: -1,
+                        endpoint: "Dot",
+                        paintStyle: { fill: "#000", radius: 5 },
+                        isSource: true,
+                        scope: "components"
+                    });
+                });
+            }
+
+            // Move droppable initialization into controller so we can call $scope.addComponent directly
+            $('#designArea').droppable({
+                accept: '.menu-item[comp-type]',
+                drop: function(event, ui) {
+                    var compType = ui.draggable.attr('comp-type');
+                    var compName = ui.draggable.attr('comp-name');
+                    var offset = $(this).offset();
+                    var xPos = ui.offset.left - offset.left;
+                    var yPos = ui.offset.top - offset.top;
+                    $scope.addComponent(compType, xPos, yPos, compName);
+                }
+            });
+
+            $scope.connect = function(line){
+                jsPlumb.connect({
+                    source: line.sourceEndpoint,
+                    target: line.targetEndpoint,
+                    connector: ["Bezier", { curviness: 150 }],
+                    endpoint: "Dot",
+                    anchors: ["Continuous", "Continuous"],
+                    endpointStyle: { fill: "#000", radius: 5 },
+                    paintStyle: { stroke: "#000", strokeWidth: 2 }
+                });
+
+                $scope.lines.push(line);
+            };
+
+            $scope.setUpJsPlumb = function(){
+                jsPlumb.bind("connection", function(info, originalEvent) {
+                    var sourceCompId = info.sourceId;
+                    var targetCompId = info.targetId;
+                    var existingLine = $scope.lines.find(l => l.source === sourceCompId && l.target === targetCompId && l.sourceEndpoint === info.sourceId && l.targetEndpoint === info.targetId);
+                    if (existingLine) return;
+                    var lineId = generateUUID();
+                    var targetType=info.target.attributes.targettype.value;
+                    var sourceType=info.source.attributes.sourcetype.value;
+                    var inputType=info.target.attributes.inputtype.value;
+                    var outputType=info.source.attributes.outputtype.value;
+                    var newLine = {
+                        id: lineId,
+                        source: sourceCompId,
+                        target: targetCompId,
+                        sourceEndpoint: info.sourceId,
+                        targetEndpoint: info.targetId,
+                        label: '',
+                        settings: btoa(JSON.stringify({})),
+                        targetType:targetType,
+                        sourceType:sourceType,
+                        inputType:inputType,
+                        outputType:outputType
+                    };
+                    
+                    $scope.lines.push(newLine);
+                    $scope.$apply();
+                    updateConnectionStyle(newLine,info);
+                });
+
+                jsPlumb.bind("connectionDetached", function(info, originalEvent) {
+                    var sourceCompId = info.sourceId;
+                    var targetCompId = info.targetId;
+                    var lineIndex = $scope.lines.findIndex(l => l.source === sourceCompId && l.target === targetCompId && l.sourceEndpoint === info.sourceId && l.targetEndpoint === info.targetId);
+                    if (!info.connection.source || !info.connection.target) {
+                        jsPlumb.deleteConnection(connection);
+                    }
+                    if (lineIndex !== -1) {
+                        var removedLine = $scope.lines.splice(lineIndex, 1)[0];
+                        $scope.$apply();
+                        triggerEvent('onDelete', removedLine.id);
+                    }
+                });
+
+                jsPlumb.bind("beforeDrop", function (info) {
+                    var allow=info.sourceId && info.targetId;
+                    $scope.lines.forEach(line => {
+                        if (line.source===info.sourceId && line.target===info.targetId)
+                            allow= false;
+                    });
+                    return allow;
+                });
+
+                jsPlumb.bind("endpointRemoved", function (endpoint, info) {
+                    var connections = endpoint.connections;
+                    connections.forEach(function (conn) {
+                        if (!conn.source || !conn.target) {
+                            jsPlumb.deleteConnection(conn);
+                        }
+                    });
+                });
+            };
+
+            // Initialize jsPlumb
+            //$scope.setUpJsPlumb();
+			// Apply Zoom by adjusting CSS transform
+            function applyZoom() {
+                $('#designArea').css('transform', 'scale(' + $scope.zoomLevel + ')');
+                // Optional: Adjust the transform-origin if needed
+                // Repaint jsPlumb connections after zoom
+                jsPlumb.repaintEverything();
+            }
+
+			            // Function to initialize panning
+            (function initializePanning() {
+                var isPanning = false;
+                var startX, startY;
+                var scrollLeft, scrollTop;
+				$(document).ready(function(){
+					$scope.setUpJsPlumb();
+				});
+                $('#designArea').on('mousedown', function(e) {
+                    // Only initiate panning if not clicking on a component
+                    if (!$(e.target).closest('.component').length) {
+                        isPanning = true;
+                        $('#designArea').css('cursor', 'grabbing');
+                    }
+                });
+					// Apply Transform by adjusting CSS transform
+				function applyTransform() {
+					var transform = 'translate(' + $scope.panX + 'px, ' + $scope.panY + 'px) scale(' + $scope.zoomLevel + ')';
+					$('#designArea').css('transform', transform);
+					// Repaint jsPlumb connections after zoom
+					jsPlumb.repaintEverything();
+				}
+                $(document).on('mousemove', function(e) {
+                    if (!isPanning) return;
+					applyTransform()
+                });
+
+                $(document).on('mouseup', function(e) {
+                    if (isPanning) {
+                        isPanning = false;
+                        $('#designArea').css('cursor', 'grab');
+                    }
+                });
+
+                // Change cursor on hover
+                $('#designArea').css('cursor', 'grab');
+				
+				//=====================================================
+				var isDragging = false;
+				//var startX, startY;
+				var componentsStartPositions = [];
+
+				// Function to get current positions of all child components
+				function getComponentsPositions() {
+					var positions = [];
+					$('.design-area .component-item').each(function() {
+						var $this = $(this);
+						var offset = $this.position(); // Relative to .design-area
+						positions.push({
+							element: $this,
+							left: offset.left/$scope.zoomLevel,
+							top: offset.top/$scope.zoomLevel
+						});
+					});
+					return positions;
+				}
+
+				// Mouse down on .design-area but not on child components
+				$('.design-area').on('mousedown', function(e) {
+					// If the mousedown target is .design-area itself
+					if ($(e.target).is('.design-area')) {
+						e.preventDefault(); // Prevent text selection or other default actions
+
+						isDragging = true;
+						startX = e.pageX;
+						startY = e.pageY;
+
+						// Store the initial positions of all components
+						componentsStartPositions = getComponentsPositions();
+
+						// Optional: Change cursor to grabbing
+						$('body').css('cursor', 'grabbing');
+					}
+				});
+
+				// Mouse move on the document
+				$(document).on('mousemove', function(e) {
+					if (isDragging) {
+						var dx = e.pageX - startX;
+						var dy = e.pageY - startY;
+
+						// Update positions of all components
+						componentsStartPositions.forEach(function(comp) {
+							comp.element.css({
+								left: comp.left + dx/$scope.zoomLevel,
+								top: comp.top + dy/$scope.zoomLevel
+							});
+						});
+					}
+				});
+
+				// Mouse up on the document
+				$(document).on('mouseup', function(e) {
+					//jsPlumb.reset();
+					//jsPlumb.repaintEverything();
+					if (isDragging) {
+						isDragging = false;
+						// Reset cursor
+						$('body').css('cursor', '');
+
+						// Optionally, you can implement snapping or boundary checks here
+					}
+				});
+
+				// Prevent dragging when interacting with child components
+				$('.design-area .component').on('mousedown', function(e) {
+					e.stopPropagation(); // Prevent triggering the .design-area mousedown
+				});
+				//=====================================================
+				//-------------------------------Zoom in and zoom out--------
+				    // Zoom Variables
+				//var zoomLevel = 1; // Default zoom level
+				var zoomStep = 0.1; // Increment/decrement step
+				var maxZoom = 3; // Maximum zoom level (300%)
+				var minZoom = 0.5; // Minimum zoom level (50%)
+
+				// Update Zoom Function
+				$scope.updateZoom=function() {
+					jsPlumb.setZoom($scope.zoomLevel);
+					$('#designArea').css('transform', 'scale(' + $scope.zoomLevel + ')');
+				}
+
+				// Optional: Mouse Wheel Zooming
+				$('.design-area').on('wheel', function(e) {
+					e.preventDefault(); // Prevent default scrolling
+
+					if (e.originalEvent.deltaY < 0) {
+						// Scroll Up -> Zoom In
+						if ($scope.zoomLevel < maxZoom) {
+							$scope.zoomLevel += zoomStep;
+							$scope.updateZoom();
+						}
+					} else {
+						// Scroll Down -> Zoom Out
+						if ($scope.zoomLevel > minZoom) {
+							$scope.zoomLevel -= zoomStep;
+							$scope.updateZoom();
+						}
+					}
+				});
+				//-----------------------------------------------------------
+				
+			})();
+			
+            $scope.selectComponent = function(id) {
+                console.log("Component selected: " + id);
+                triggerEvent('onSelect', id);
+            };
+
+            $scope.deleteComponent = function(id) {
+                $scope.components = $scope.components.filter(c => c.id !== id);
+                jsPlumb.removeAllEndpoints(id);
+                jsPlumb.remove(id);
+                $scope.lines = $scope.lines.filter(l => {
+                    var seid=(l.sourceEndpoint).split("-output")[0];
+                    var teid=(l.targetEndpoint).split("-input")[0];
+                    return !(seid == id || teid == id);
+                });
+
+                $scope.$apply();
+                triggerEvent('onDelete', id);
+            };
+
+            $scope.openSettings = function(id) {
+                var comp = $scope.components.find(c => c.id === id);
+                if (comp) {
+                    $scope.currentSettings = atob(comp.settings);
+                    $scope.currentComponentId = id;
+                    $('#settingsModal').show();
+                }
+            };
+
+            $scope.closeSettings = function() {
+                $('#settingsModal').hide();
+                $scope.currentSettings = '';
+                $scope.currentComponentId = null;
+            };
+
+            $scope.saveSettings = function() {
+                var comp = $scope.components.find(c => c.id === $scope.currentComponentId);
+                if (comp) {
+                    try {
+                        var json = JSON.parse($scope.currentSettings);
+                        comp.settings = btoa(JSON.stringify(json));
+                        comp.settingsObj = json;
+                        $('#settingsModal').hide();
+                        triggerEvent('onChange', comp.id);
+                    } catch (e) {
+                        alert('Invalid JSON');
+                    }
+                }
+            };
+
+            $scope.importDesign = function() {
+                $('#importModal').show();
+            };
+
+            $scope.closeImport = function() {
+                $('#importModal').hide();
+                $scope.importData = '';
+            };
+
+            $scope.performImport = function() {
+                try {
+                    var jsonData = $scope.importData;
+                    var data = JSON.parse(jsonData);
+
+                    if (!data.components || !data.lines) {
+                        throw new Error('Imported data is missing required fields.');
+                    }
+
+                    $scope.components = [];
+                    $scope.lines = [];
+                    $scope.zoomLevel=data.info.scale;
+                    $scope.updateZoom();
+                    jsPlumb.reset();
+                    $scope.setUpJsPlumb();
+                    jsPlumb.setZoom($scope.zoomLevel);
+
+                    data.components.forEach(comp => {
+                        comp.id=comp.uuid;
+                        if (comp.settings) {
+                            try {
+                                comp.settingsObj = JSON.parse(atob(comp.settings));
+                            } catch (e) {
+                                console.warn('Invalid settings for component:', comp.id, e);
+                                comp.settingsObj = {};
+                            }
+                        } else {
+                            comp.settingsObj = {};
+                        }
+                        $scope.components.push(comp);
+                    });
+
+                    $timeout(function(){
+                        $scope.components.forEach(comp => {
+                            $('#' + comp.id).draggable({
+                                containment: "designArea",
+                                stop: function(event, ui) {
+                                    jsPlumb.repaintEverything();
+                                    triggerEvent('onMove', comp.id);
+                                },
+                                drag: function(event, ui) {
+                                    const scale=$scope.zoomLevel;
+                                    ui.position.left = ui.position.left/scale;
+                                    ui.position.top = ui.position.top/scale;
+                                }
+                            });
+                            createEndpointsForComponent(comp);
+                            triggerEvent('onCreate', comp.id);
+                        });
+
+                        data.lines.forEach(line => {
+                            line.sourceEndpoint=line.source;
+                            line.targetEndpoint=line.target;
+                            $scope.connect(line);
+                        });
+
+                        $('#importModal').hide();
+                    });
+
+                } catch (e) {
+                    alert('Invalid Import Data: ' + e.message);
+                    console.error(e);
+                }
+            };
+
+            $scope.exportDesign = function() {
+                var da=$("#designArea");
+                var data = {
+                    components: $scope.components.map(({ id, ...rest }) => rest),
+                    lines: $scope.lines.map(({ sourceEndpoint, targetEndpoint, ...rest }) => rest),
+                    info: {scale:$scope.zoomLevel,left:da.css('left'),top:da.css('top')}
+                };
+                var json = JSON.stringify(data);
+                var encoded = btoa(json);
+                var element = document.createElement('a');
+                element.setAttribute('href', 'data:text/plain;base64,' + encoded);
+                element.setAttribute('download', 'design.json');
+                element.click();
+            };
+
+            $scope.autoArrange = function() {
+                var gridSize = 150;
+                $scope.components.forEach((comp, index) => {
+                    comp.position.top = 50 + (Math.floor(index / 4) * gridSize);
+                    comp.position.left = 50 + ((index % 4) * gridSize);
+                    $('#' + comp.id).css({top: comp.position.top + 'px', left: comp.position.left + 'px'});
+                });
+                jsPlumb.repaintEverything();
+                $scope.$apply();
+            };
+
+            function triggerEvent(eventName, uuid) {
+                console.log('Event:', eventName, 'UUID:', uuid);
+            }
+
+            function updateConnectionStyle(line, info) {
+                var conn = info.connection;
+                if (conn) {
+                    conn.removeOverlays();
+                    conn.setPaintStyle({ stroke: "green", strokeWidth: 4 });
+                    conn.addOverlay(
+                        [ "Custom", {
+                            location: 0.5,
+                            id: "buttonOverlay",
+                            create: function (component) {
+                                var buttonDiv = document.createElement("div");
+                                buttonDiv.classList.add("connection-button");
+                                var button = document.createElement("button");
+                                button.innerText = "";
+                                button.onclick = function (e) {
+                                    e.stopPropagation();
+                                    alert("Button on connection clicked!");
+                                };
+                                buttonDiv.appendChild(button);
+                                return buttonDiv;
+                            }
+                        }]
+                    );
+                    jsPlumb.repaintEverything();
+                }
+            }
+
+            $scope.openLineSettings = function(lineId,info) {
+                var line = $scope.lines.find(l => l.id === lineId);
+                if (line) {
+                    $scope.currentLineId = lineId;
+                    $scope.lineInfo = info;
+                    $('#lineSettingsModal').show();
+                }
+            };
+
+            $scope.closeLineSettings = function() {
+                $('#lineSettingsModal').hide();
+                $scope.currentLineId = null;
+                $scope.currentLineLabel = '';
+            };
+
+            $scope.saveLineSettings = function() {
+                var line = $scope.lines.find(l => l.id === $scope.currentLineId);
+                if (line) {
+                    triggerEvent('onChange', line.id);
+                }
+                $('#lineSettingsModal').hide();
+                $scope.currentLineId = null;
+                $scope.currentLineLabel = '';
+                $scope.lineInfo=null;
+            };
+
+            $scope.openSelectDialog = function(componentId, type) {
+                alert("Open select dialog for " + type + " of component " + componentId);
+            };
+            $scope.openTemplateEditor = function(componentId, type) {
+                alert("Open template editor for " + type + " of component " + componentId);
+            };
+
+            $scope.addWhileTrueOutput = function(componentId) {
+                alert("Add another True output for WhileBox " + componentId + " (Not fully implemented)");
+            };
+
+            // Zoom functions
+            $scope.updateZoom = function() {
+                jsPlumb.setZoom($scope.zoomLevel);
+                $('#designArea').css('transform', 'scale(' + $scope.zoomLevel + ')');
+            };
+
+            // Random Tint change every 10s
+            var tints = ['#87CEEB', '#D3D3D3', '#FF6347', '#FFC300', '#90EE90'];
+            setInterval(function() {
+                $scope.components.forEach(comp => {
+                    var tint = tints[Math.floor(Math.random() * tints.length)];
+                    $('#' + comp.id).css('border-color', tint);
+                });
+            }, 10000);
+
+        }]);
+    </script>
+
+</body>
+</html>

@@ -1,0 +1,31 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="20" height="20" viewBox="0 0 20 20">
+  <defs>
+    <style>
+      .cls-1 {
+        filter: url(#filter);
+      }
+
+      .cls-2 {
+        fill: #0840a6;
+      }
+
+      .cls-2, .cls-3 {
+        fill-rule: evenodd;
+      }
+    </style>
+    <filter id="filter" filterUnits="userSpaceOnUse">
+      <feFlood result="flood" flood-color="#7b7b7b"/>
+      <feComposite result="composite" operator="in" in2="SourceGraphic"/>
+      <feBlend result="blend" in2="SourceGraphic"/>
+    </filter>
+  </defs>
+  <g id="date_array" data-name="date array">
+    <g class="cls-1">
+      <path id="Shape_4_copy_3" data-name="Shape 4 copy 3" class="cls-2" d="M683.915,18H668V3.212h1.326V2.606h1.447V2H685V15.455h-0.482v1.455h-0.6V18ZM668.362,3.576V17.515h15.191V16.788H669.326V3.576h-0.964Zm1.205-.606V16.424h14.589v-0.97h-13.5V2.97h-1.085Zm1.447-.485h13.624V15.091H671.014V2.485Z" transform="translate(-666)"/>
+      <g>
+        <path class="cls-3" d="M672.681,5.49h9.632v8.8h-9.632V5.49h0Zm4.428,5.4v1.876a0.417,0.417,0,0,0,.242.325,0.4,0.4,0,0,0,.281.006,0.46,0.46,0,0,0,.287-0.341V9.874a0.415,0.415,0,0,0-.188-0.308,0.41,0.41,0,0,0-.286-0.055,0.426,0.426,0,0,0-.248.138l-0.754.754a0.42,0.42,0,0,0-.127.336,0.413,0.413,0,0,0,.094.22,0.4,0.4,0,0,0,.253.154,0.413,0.413,0,0,0,.264-0.066,0.515,0.515,0,0,0,.16-0.149S677.112,10.87,677.109,10.886Zm-4.428-3h9.638V8.691h-9.638V7.883h0Zm6.377,6.419V11.436a0.468,0.468,0,0,1,.408-0.39h2.853V11.92h-2.407v2.4Zm-3.97-9.621H675.9V7.091h-0.815V4.681h0Zm2,0H677.9V7.091h-0.815V4.681h0Zm2.016,0h0.815V7.091H679.1V4.681h0Zm3.21,7.244V13.07a1.175,1.175,0,0,1-1.211,1.221h-1.195Z" transform="translate(-666)"/>
+        <path id="q_copy_2" data-name="q copy 2" class="cls-3" d="M675.5,4.681a0.407,0.407,0,0,1,.408.408V5.5h-0.815V5.089A0.407,0.407,0,0,1,675.5,4.681Zm2,0a0.408,0.408,0,0,1,.408.408V5.5h-0.816V5.089A0.408,0.408,0,0,1,677.5,4.681Zm2,0a0.407,0.407,0,0,1,.407.408V5.5H679.1V5.089A0.407,0.407,0,0,1,679.505,4.681Z" transform="translate(-666)"/>
+      </g>
+    </g>
+  </g>
+</svg>

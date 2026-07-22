@@ -1,0 +1,717 @@
+{
+  "latest" : {
+    "createdTS" : "",
+    "input" : [ {
+      "id" : "j2_6",
+      "text" : "*pathParameters",
+      "li_attr" : {
+        "id" : "j2_6"
+      },
+      "a_attr" : {
+        "href" : "#",
+        "id" : "j2_6_anchor"
+      },
+      "state" : {
+        "loaded" : true,
+        "opened" : false,
+        "selected" : false,
+        "disabled" : false,
+        "hidden" : false
+      },
+      "data" : { },
+      "children" : [ {
+        "id" : "j2_8",
+        "text" : "thread_id",
+        "li_attr" : {
+          "id" : "j2_8"
+        },
+        "a_attr" : {
+          "href" : "#",
+          "id" : "j2_8_anchor"
+        },
+        "state" : {
+          "loaded" : true,
+          "opened" : false,
+          "selected" : false,
+          "disabled" : false
+        },
+        "data" : {
+          "guid" : "74a20738-73fd-4786-a464-3269f880d8fd",
+          "columnType" : "-1",
+          "assignList" : [ {
+            "path" : "*pathParameters/thread_id",
+            "value" : "",
+            "typePath" : "document/string"
+          } ]
+        },
+        "children" : [ ],
+        "type" : "string"
+      } ],
+      "type" : "document"
+    }, {
+      "id" : "j2_10",
+      "text" : "serviceType",
+      "li_attr" : {
+        "id" : "j2_10"
+      },
+      "a_attr" : {
+        "href" : "#",
+        "id" : "j2_10_anchor"
+      },
+      "state" : {
+        "loaded" : true,
+        "opened" : false,
+        "selected" : false,
+        "disabled" : false,
+        "hidden" : false
+      },
+      "data" : {
+        "guid" : "24d09153-1891-4e7b-8f26-4cd1f4f07f50",
+        "columnType" : "-1"
+      },
+      "children" : [ ],
+      "type" : "string"
+    }, {
+      "id" : "j2_4",
+      "text" : "requestHeaders",
+      "li_attr" : {
+        "id" : "j2_4"
+      },
+      "a_attr" : {
+        "href" : "#",
+        "id" : "j2_4_anchor"
+      },
+      "state" : {
+        "loaded" : true,
+        "opened" : false,
+        "selected" : false,
+        "disabled" : false,
+        "hidden" : false
+      },
+      "data" : {
+        "guid" : "ed4c6912-c164-48d3-af93-a0dd82cba24a",
+        "columnType" : "-1"
+      },
+      "children" : [ {
+        "id" : "j2_5",
+        "text" : "Content-Type",
+        "li_attr" : {
+          "id" : "j2_5"
+        },
+        "a_attr" : {
+          "href" : "#",
+          "id" : "j2_5_anchor"
+        },
+        "state" : {
+          "loaded" : true,
+          "opened" : false,
+          "selected" : false,
+          "disabled" : false
+        },
+        "data" : {
+          "guid" : "3c196100-bbb8-45a9-a8c3-618fbc73ed38",
+          "columnType" : "-1",
+          "assignList" : [ {
+            "path" : "requestHeaders/Content-Type",
+            "value" : "application/json",
+            "typePath" : "document/string"
+          } ]
+        },
+        "children" : [ ],
+        "type" : "string"
+      }, {
+        "id" : "j2_7",
+        "text" : "OpenAI-Beta",
+        "li_attr" : {
+          "id" : "j2_7"
+        },
+        "a_attr" : {
+          "href" : "#",
+          "id" : "j2_7_anchor"
+        },
+        "state" : {
+          "loaded" : true,
+          "opened" : false,
+          "selected" : false,
+          "disabled" : false
+        },
+        "data" : {
+          "guid" : "a337489d-d7dd-42cf-815f-be177758abe6",
+          "columnType" : "-1",
+          "assignList" : [ {
+            "path" : "requestHeaders/OpenAI-Beta",
+            "value" : "assistants=v2",
+            "typePath" : "document/string"
+          } ]
+        },
+        "children" : [ ],
+        "type" : "string"
+      }, {
+        "id" : "j2_9",
+        "text" : "Authorization",
+        "li_attr" : {
+          "id" : "j2_9"
+        },
+        "a_attr" : {
+          "href" : "#",
+          "id" : "j2_9_anchor"
+        },
+        "state" : {
+          "loaded" : true,
+          "opened" : false,
+          "selected" : false,
+          "disabled" : false
+        },
+        "data" : {
+          "guid" : "b5cacd02-3630-4e9d-961b-a6643af2f651",
+          "columnType" : "-1",
+          "assignList" : [ {
+            "path" : "requestHeaders/Authorization",
+            "value" : "Bearer #{chatgptToken}",
+            "evaluate" : "EPV",
+            "typePath" : "document/string"
+          } ]
+        },
+        "children" : [ ],
+        "type" : "string"
+      } ],
+      "type" : "document"
+    }, {
+      "id" : "j2_11",
+      "text" : "assistant_id",
+      "li_attr" : {
+        "id" : "j2_11"
+      },
+      "a_attr" : {
+        "href" : "#",
+        "id" : "j2_11_anchor"
+      },
+      "state" : {
+        "loaded" : true,
+        "opened" : false,
+        "selected" : false,
+        "disabled" : false,
+        "hidden" : false
+      },
+      "data" : {
+        "guid" : "74dd52ba-febe-4738-977e-d3abc8f96904",
+        "columnType" : "-1"
+      },
+      "children" : [ ],
+      "type" : "string"
+    } ],
+    "output" : [ ],
+    "api" : [ {
+      "id" : "j1_13",
+      "text" : "Ifelse",
+      "li_attr" : {
+        "id" : "j1_13"
+      },
+      "a_attr" : {
+        "href" : "javascript:void(0)",
+        "id" : "j1_13_anchor"
+      },
+      "state" : {
+        "loaded" : true,
+        "opened" : true,
+        "selected" : false,
+        "disabled" : false,
+        "hidden" : false
+      },
+      "data" : {
+        "guid" : "85546f8b-5b16-4d53-b140-f638dcb3fd74",
+        "columnType" : "-1",
+        "comment" : "Evaluating assistantId based on Service Type "
+      },
+      "children" : [ {
+        "id" : "j1_14",
+        "text" : "CONDITION",
+        "li_attr" : {
+          "id" : "j1_14"
+        },
+        "a_attr" : {
+          "href" : "#",
+          "id" : "j1_14_anchor"
+        },
+        "state" : {
+          "loaded" : true,
+          "opened" : true,
+          "selected" : false,
+          "disabled" : false
+        },
+        "data" : {
+          "guid" : "0b2e21cd-6a67-4008-80b1-b94a9b346b70",
+          "columnType" : "-1",
+          "ifcondition" : "\"#{serviceType}\" == \"API\""
+        },
+        "children" : [ {
+          "id" : "j1_15",
+          "text" : "Transformer",
+          "li_attr" : {
+            "id" : "j1_15"
+          },
+          "a_attr" : {
+            "href" : "#",
+            "id" : "j1_15_anchor"
+          },
+          "state" : {
+            "loaded" : true,
+            "opened" : false,
+            "selected" : false,
+            "disabled" : false
+          },
+          "data" : {
+            "guid" : "6c0d0672-77f8-41c8-aa69-d7ab35e83cae",
+            "columnType" : "-1",
+            "transformers" : [ ],
+            "lines" : [ ],
+            "dropList" : [ ],
+            "createList" : [ {
+              "path" : "*payload/assistant_id",
+              "value" : "#{middleware.syncloop.gpt.assistant.apiservice.id}",
+              "id" : "727941e0-c714-402e-ae76-78f2c086effb",
+              "evaluate" : "EPV",
+              "typePath" : "document/string"
+            } ],
+            "initiateList" : [ ]
+          },
+          "children" : [ ],
+          "type" : "transformer"
+        } ],
+        "type" : "sequence"
+      }, {
+        "id" : "j1_16",
+        "text" : "CONDITION",
+        "li_attr" : {
+          "id" : "j1_16"
+        },
+        "a_attr" : {
+          "href" : "#",
+          "id" : "j1_16_anchor"
+        },
+        "state" : {
+          "loaded" : true,
+          "opened" : true,
+          "selected" : false,
+          "disabled" : false
+        },
+        "data" : {
+          "guid" : "5f382c81-13a1-4a37-bbab-d4e7d5c4ad87",
+          "columnType" : "-1",
+          "ifcondition" : "\"#{serviceType}\" == \"SQL\""
+        },
+        "children" : [ {
+          "id" : "j1_17",
+          "text" : "Transformer",
+          "li_attr" : {
+            "id" : "j1_17"
+          },
+          "a_attr" : {
+            "href" : "#",
+            "id" : "j1_17_anchor"
+          },
+          "state" : {
+            "loaded" : true,
+            "opened" : false,
+            "selected" : false,
+            "disabled" : false
+          },
+          "data" : {
+            "guid" : "59c30416-ede9-4664-a591-ccda4019255c",
+            "columnType" : "-1",
+            "transformers" : [ ],
+            "lines" : [ ],
+            "dropList" : [ ],
+            "createList" : [ {
+              "path" : "*payload/assistant_id",
+              "value" : "#{assistant_id}",
+              "id" : "de79fb9b-9501-48c1-8e90-92983bc40f67",
+              "evaluate" : "EEV",
+              "typePath" : "document/string"
+            } ],
+            "initiateList" : [ ]
+          },
+          "children" : [ ],
+          "type" : "transformer"
+        } ],
+        "type" : "sequence"
+      } ],
+      "type" : "ifelse"
+    }, {
+      "id" : "j1_1",
+      "text" : "TRANSFORMER",
+      "li_attr" : {
+        "id" : "j1_1"
+      },
+      "a_attr" : {
+        "href" : "javascript:void(0)",
+        "id" : "j1_1_anchor"
+      },
+      "state" : {
+        "loaded" : true,
+        "opened" : false,
+        "selected" : false,
+        "disabled" : false,
+        "hidden" : false
+      },
+      "data" : {
+        "createList" : [ {
+          "path" : "basePath",
+          "typePath" : "string",
+          "value" : "https://api.openai.com/"
+        }, {
+          "path" : "*payload/stream",
+          "value" : "true",
+          "id" : "09328af2-cdc1-4391-80d9-d26ac49aa8ff",
+          "typePath" : "document/boolean"
+        }, {
+          "path" : "contentType",
+          "value" : "text/event-stream",
+          "id" : "94e85799-a1f0-402c-9c79-e90f7308c728",
+          "typePath" : "string"
+        }, {
+          "path" : "returnAsInputStream",
+          "value" : "true",
+          "id" : "08dec8a7-3bcb-4769-b1f8-b55481ec5b74",
+          "typePath" : "boolean"
+        } ],
+        "transformers" : [ ],
+        "dropList" : [ ],
+        "comment" : "SettingUp BasePath Parameter",
+        "lines" : [ ],
+        "status" : "enabled",
+        "guid" : "108c4b43-566a-4e11-a1d7-52ed7aaf2d80",
+        "initiateList" : [ {
+          "path" : "*payload/stream",
+          "id" : "c4b242f4-7446-4d7d-bcb9-09e0be35b0c1",
+          "typePath" : "document/boolean"
+        }, {
+          "path" : "contentType",
+          "id" : "a7dc3155-5713-4ea8-9e3f-14b62a01472a",
+          "typePath" : "string"
+        }, {
+          "path" : "returnAsInputStream",
+          "id" : "8e27c891-94d7-45f3-a3e9-738893d771a0",
+          "typePath" : "boolean"
+        } ]
+      },
+      "children" : [ ],
+      "type" : "transformer"
+    }, {
+      "id" : "j1_2",
+      "text" : "TRANSFORMER",
+      "li_attr" : {
+        "id" : "j1_2"
+      },
+      "a_attr" : {
+        "href" : "javascript:void(0)",
+        "id" : "j1_2_anchor"
+      },
+      "state" : {
+        "loaded" : true,
+        "opened" : false,
+        "selected" : false,
+        "disabled" : false,
+        "hidden" : false
+      },
+      "data" : {
+        "createList" : [ {
+          "path" : "method",
+          "typePath" : "string",
+          "value" : "POST"
+        }, {
+          "path" : "url",
+          "typePath" : "string",
+          "evaluate" : "EEV",
+          "value" : "https://api.openai.com/v1/threads/#{*pathParameters/thread_id}/runs",
+          "id" : "80149b19-5159-4bf6-b290-9949d296db9d"
+        }, {
+          "path" : "rootName_Response",
+          "typePath" : "string",
+          "value" : "response"
+        }, {
+          "path" : "rootName_Error",
+          "typePath" : "string",
+          "value" : "error"
+        } ],
+        "transformers" : [ ],
+        "dropList" : [ ],
+        "comment" : "Initializing parameters For HTTP request",
+        "lines" : [ ],
+        "status" : "enabled",
+        "guid" : "d5c5658d-c4da-4a2a-b4f8-b13a2dce0e34",
+        "initiateList" : [ {
+          "path" : "*payload/max_prompt_tokens",
+          "id" : "469d0105-dff0-490f-b0dd-a71885cbe0b7",
+          "typePath" : "document/integer"
+        }, {
+          "path" : "*payload/max_completion_tokens",
+          "id" : "d55f3a2b-01b0-456c-afc1-39c572908cd0",
+          "typePath" : "document/integer"
+        } ]
+      },
+      "children" : [ ],
+      "type" : "transformer"
+    }, {
+      "id" : "j1_3",
+      "text" : "INVOKE",
+      "li_attr" : {
+        "id" : "j1_3"
+      },
+      "a_attr" : {
+        "href" : "javascript:void(0)",
+        "id" : "j1_3_anchor"
+      },
+      "state" : {
+        "loaded" : true,
+        "opened" : false,
+        "selected" : false,
+        "disabled" : false,
+        "hidden" : false
+      },
+      "data" : {
+        "serviceType" : "service",
+        "createList" : [ ],
+        "transformers" : [ {
+          "op" : "copy",
+          "from" : "/jsonString",
+          "to" : "/body",
+          "inTypePath" : "string",
+          "outTypePath" : "string",
+          "direction" : "out"
+        }, {
+          "op" : "copy",
+          "from" : "/*payload",
+          "to" : "/root",
+          "inTypePath" : "document",
+          "outTypePath" : "javaObject",
+          "direction" : "in"
+        } ],
+        "fqn" : "packages/middleware/pub/json/toString",
+        "dropList" : [ ],
+        "comment" : "Initialize",
+        "lines" : [ {
+          "op" : "copy",
+          "line" : 0,
+          "INPath" : "jsonString",
+          "outTypePath" : "string",
+          "dashedLine" : false,
+          "inTypePath" : "string",
+          "outpJsTree" : "#landing_arrow_jsTree",
+          "outType" : "string",
+          "OUTPath" : "body",
+          "inputPath" : "jsonString",
+          "outputPath" : "body",
+          "inpJsTree" : "#launching_arrow_jsTree_function",
+          "inType" : "string",
+          "direction" : "out"
+        }, {
+          "inputPath" : "*payload",
+          "outputPath" : "root",
+          "inpJsTree" : "#launching_arrow_jsTree",
+          "outpJsTree" : "#landing_arrow_jsTree_function",
+          "INPath" : "*payload",
+          "OUTPath" : "root",
+          "direction" : "in",
+          "op" : "copy",
+          "line" : 0,
+          "dashedLine" : false,
+          "inType" : "document",
+          "outType" : "document",
+          "inTypePath" : "document",
+          "outTypePath" : "javaObject"
+        } ],
+        "status" : "enabled",
+        "guid" : "9470e8dd-0470-401a-9f11-52e713f7ad41",
+        "initiateList" : [ ]
+      },
+      "children" : [ ],
+      "type" : "invoke"
+    }, {
+      "id" : "j1_4",
+      "text" : "INVOKE",
+      "li_attr" : {
+        "id" : "j1_4"
+      },
+      "a_attr" : {
+        "href" : "javascript:void(0)",
+        "id" : "j1_4_anchor"
+      },
+      "state" : {
+        "loaded" : true,
+        "opened" : false,
+        "selected" : true,
+        "disabled" : false,
+        "hidden" : false
+      },
+      "data" : {
+        "serviceType" : "service",
+        "createList" : [ ],
+        "transformers" : [ {
+          "op" : "copy",
+          "from" : "/url",
+          "to" : "/url",
+          "inTypePath" : "string",
+          "outTypePath" : "string",
+          "direction" : "in"
+        }, {
+          "op" : "copy",
+          "from" : "/method",
+          "to" : "/method",
+          "inTypePath" : "string",
+          "outTypePath" : "string",
+          "direction" : "in"
+        }, {
+          "op" : "copy",
+          "from" : "/body",
+          "to" : "/payload",
+          "inTypePath" : "string",
+          "outTypePath" : "string",
+          "direction" : "in"
+        }, {
+          "op" : "copy",
+          "from" : "/requestHeaders",
+          "to" : "/headers",
+          "inTypePath" : "document",
+          "outTypePath" : "document",
+          "direction" : "in"
+        }, {
+          "op" : "copy",
+          "from" : "/inputStream",
+          "to" : "/inputStream",
+          "inTypePath" : "javaObject",
+          "outTypePath" : "javaObject",
+          "direction" : "out"
+        }, {
+          "op" : "copy",
+          "from" : "/returnAsInputStream",
+          "to" : "/settings/responseAsEventStream",
+          "inTypePath" : "boolean",
+          "outTypePath" : "document/boolean",
+          "direction" : "in"
+        } ],
+        "fqn" : "packages/middleware/pub/client/http/request",
+        "dropList" : [ {
+          "path" : "method",
+          "typePath" : "string"
+        }, {
+          "path" : "url",
+          "typePath" : "string"
+        }, {
+          "path" : "headers",
+          "typePath" : "document"
+        }, {
+          "path" : "urlParameters",
+          "typePath" : "document"
+        } ],
+        "comment" : "SettingUp Request Payload",
+        "lines" : [ {
+          "inputPath" : "url",
+          "outputPath" : "url",
+          "inpJsTree" : "#launching_arrow_jsTree",
+          "outpJsTree" : "#landing_arrow_jsTree_function",
+          "INPath" : "url",
+          "OUTPath" : "url",
+          "direction" : "in",
+          "op" : "copy",
+          "line" : 0,
+          "dashedLine" : false,
+          "inType" : "string",
+          "outType" : "string",
+          "inTypePath" : "string",
+          "outTypePath" : "string"
+        }, {
+          "inputPath" : "method",
+          "outputPath" : "method",
+          "inpJsTree" : "#launching_arrow_jsTree",
+          "outpJsTree" : "#landing_arrow_jsTree_function",
+          "INPath" : "method",
+          "OUTPath" : "method",
+          "direction" : "in",
+          "op" : "copy",
+          "line" : 0,
+          "dashedLine" : false,
+          "inType" : "string",
+          "outType" : "string",
+          "inTypePath" : "string",
+          "outTypePath" : "string"
+        }, {
+          "inputPath" : "body",
+          "outputPath" : "payload",
+          "inpJsTree" : "#launching_arrow_jsTree",
+          "outpJsTree" : "#landing_arrow_jsTree_function",
+          "INPath" : "body",
+          "OUTPath" : "payload",
+          "direction" : "in",
+          "op" : "copy",
+          "line" : 0,
+          "dashedLine" : false,
+          "inType" : "string",
+          "outType" : "string",
+          "inTypePath" : "string",
+          "outTypePath" : "string"
+        }, {
+          "inputPath" : "requestHeaders",
+          "outputPath" : "headers",
+          "inpJsTree" : "#launching_arrow_jsTree",
+          "outpJsTree" : "#landing_arrow_jsTree_function",
+          "INPath" : "requestHeaders",
+          "OUTPath" : "headers",
+          "direction" : "in",
+          "op" : "copy",
+          "line" : 0,
+          "dashedLine" : false,
+          "inType" : "document",
+          "outType" : "document",
+          "inTypePath" : "document",
+          "outTypePath" : "document"
+        }, {
+          "inputPath" : "inputStream",
+          "outputPath" : "inputStream",
+          "inpJsTree" : "#launching_arrow_jsTree_function",
+          "outpJsTree" : "#landing_arrow_jsTree",
+          "INPath" : "inputStream",
+          "OUTPath" : "inputStream",
+          "direction" : "out",
+          "op" : "copy",
+          "line" : 0,
+          "dashedLine" : false,
+          "inType" : "javaObject",
+          "outType" : "javaObject",
+          "inTypePath" : "javaObject",
+          "outTypePath" : "javaObject"
+        }, {
+          "inputPath" : "returnAsInputStream",
+          "outputPath" : "settings/responseAsEventStream",
+          "inpJsTree" : "#launching_arrow_jsTree",
+          "outpJsTree" : "#landing_arrow_jsTree_function",
+          "INPath" : "returnAsInputStream",
+          "OUTPath" : "settings/responseAsEventStream",
+          "direction" : "in",
+          "op" : "copy",
+          "line" : 0,
+          "dashedLine" : false,
+          "inType" : "boolean",
+          "outType" : "boolean",
+          "inTypePath" : "boolean",
+          "outTypePath" : "document/boolean"
+        } ],
+        "status" : "enabled",
+        "guid" : "eca65945-4cc7-44f5-9e27-f20058bb1554",
+        "initiateList" : [ ]
+      },
+      "children" : [ ],
+      "type" : "invoke"
+    } ],
+    "api_info" : {
+      "title" : "",
+      "description" : ""
+    },
+    "lockedByUser" : "admin"
+  },
+  "consumers" : "",
+  "developers" : "developers,developers",
+  "enableServiceDocumentValidation" : false,
+  "created_on" : "1732702354804",
+  "modified_on" : 1732702354804
+}

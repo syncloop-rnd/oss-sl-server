@@ -1,0 +1,1617 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<title>Settings</title>
+	<base href="/"><script src="env.js"></script>
+	<script>
+		window.ENV = window.env || {};
+	</script>
+	<link href="middleware/pub/server/ui/assets/css/bootstrap.min.css" rel="stylesheet">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+	<link href="https://unpkg.com/tabulator-tables@5.2.1/dist/css/tabulator.min.css" rel="stylesheet">
+	<link rel="shortcut icon" href="middleware/pub/server/ui/assets/img/favicon.ico" type="image/x-icon" />
+	<link rel="stylesheet" href="index.css" />
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600&display=swap" rel="stylesheet">
+	<!-- Custom styles for this template -->
+	<link href="middleware/pub/server/ui/assets/css/sidebars.css" rel="stylesheet">
+	<link href="middleware/pub/server/ui/assets/css/custom.css" rel="stylesheet">
+	<script	src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+	<script	src="middleware/pub/server/ui/javascript/jstree.min.js"></script>
+	<script src="middleware/pub/server/ui/javascript/jstreetable.js"></script>
+	<script src="middleware/pub/server/ui/javascript/middleware.js"></script>
+	<script type="text/javascript" src="https://unpkg.com/tabulator-tables@5.2.1/dist/js/tabulator.min.js"></script>
+	<script src="middleware/pub/server/ui/javascript/sweetalert.min.js"></script>
+	<script src="middleware/pub/server/ui/javascript/sweetalert.init.js"></script>
+	<link rel="stylesheet" href="middleware/pub/server/ui/css/sweetalert.css" />
+	<link rel="stylesheet" href="middleware/pub/server/ui/assets/css/select2.min.css">
+	<style>
+		.modal-header {
+			display: inline-block;
+		}
+		.modal-body li.nav-link.active.in {
+			border-color: transparent;
+		}
+		.modal-body .nav-link{
+			padding: 0;
+			border: none;
+		}
+		cron-expression-input .nav-tabs>li>a{margin-right: 0px !important;}
+	</style>
+</head>
+<body>
+<header class="navbar custom_head custom_head sticky-top flex-md-nowrap bg-gray">
+	<div id="mostRecentlyOpened">
+	<a class="eka_logo" href="dashboard.html">
+		<img class="ekalogos" src="middleware/pub/server/ui/assets/img/syncloop-logo.svg">
+	</a>
+	<a href="middleware/pub/server/ui/workspace/web/dashboard.html?utm_source=Workspace&utm_medium=dashboard-page"class="header_home">
+				<img src="middleware/pub/server/ui/assets/img/header_nav.svg">
+	</a>
+</div>
+	<div class="navbar-nav">
+		<div class="nav-item text-nowrap">
+			<a class="nav-link px-3 logout" href="javascript:void(0)"><img class="log_icon" src="middleware/pub/server/ui/icons/icn_logout.svg">&nbsp; Logout</a>
+		</div>
+	</div>
+</header>
+<main>
+	<div class="container-fluid ">
+		<div class="row">
+			<div class="col-lg-1 d-flex flex-column flex-shrink-0 eka-side p-0" data-match-height="groupName">
+				<ul class="nav nav-pills nav-flush flex-column mb-auto text-center left-m-bar">
+					<li>
+						<a href="middleware/pub/server/ui/workspace/web/workspace.html" class="nav-link py-3 " title="Workspace" data-bs-toggle="tooltip" data-bs-placement="right">
+							<svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 32 32">
+								<defs>
+									<style>
+										.cls-1 {
+											fill: #175cff;
+											fill-rule: evenodd;
+										}
+									</style>
+								</defs>
+								<g id="icn_dashboard">
+									<path class="cls-1" d="M50.5,25.84h-17.8a3.815,3.815,0,0,0-3.816,3.816V39.83a3.815,3.815,0,0,0,3.816,3.815h7.63v2.544H35.235a1.272,1.272,0,1,0,0,2.543H47.953a1.272,1.272,0,1,0,0-2.543H42.865V43.645H50.5a3.815,3.815,0,0,0,3.815-3.815V29.656A3.815,3.815,0,0,0,50.5,25.84Zm1.272,13.99A1.272,1.272,0,0,1,50.5,41.1h-17.8a1.272,1.272,0,0,1-1.272-1.272V29.656a1.272,1.272,0,0,1,1.272-1.272H50.5a1.272,1.272,0,0,1,1.272,1.272V39.83Z" transform="translate(-26 -21)"/>
+								</g>
+							</svg>
+						</a>
+					</li>
+					<li>
+						<a href="scheduler/manager/web/scheduler-new.html" class="nav-link py-3 " title="Scheduler" data-bs-toggle="tooltip"
+						   data-bs-placement="right">
+							<svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 32 32">
+								<defs>
+									<style>
+										.cls-1 {
+											fill: #999;
+											fill-rule: evenodd;
+										}
+									</style>
+								</defs>
+								<g id="icn_schedular">
+									<path class="cls-1" d="M185.91,34.019h0a1.146,1.146,0,0,0-1.35-.888,1.168,1.168,0,0,0-.234.074,1.145,1.145,0,0,0-.66,1.269,10.389,10.389,0,1,1-2.531-4.942,1.139,1.139,0,0,0-.15,2.267l2.7,0.381,0.048-.349,0.044,0.355a1.148,1.148,0,0,0,1.132-.977l0.378-2.613a1.145,1.145,0,0,0-1.819-1.074,1.126,1.126,0,0,0-.439.7,12.731,12.731,0,0,0-22.182,6.4,12.616,12.616,0,0,0,10.638,14.442,13.255,13.255,0,0,0,1.991.152A12.678,12.678,0,0,0,185.91,34.019Zm-12.671-5.355A1.143,1.143,0,0,0,172.1,29.8v5.823a2.309,2.309,0,1,0,3.158,3.144h2.483a1.139,1.139,0,1,0,0-2.278h-2.483a2.3,2.3,0,0,0-.87-0.866V29.8A1.143,1.143,0,0,0,173.239,28.664Z" transform="translate(-158 -21)"/>
+								</g>
+							</svg>
+						</a>
+					</li>
+					<li>
+						<a href="middleware/pub/server/ui/workspace/web/documentation.html" class="nav-link py-3" title="Documentation" data-bs-toggle="tooltip"
+						   data-bs-placement="right">
+							<svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 32 32">
+								<defs>
+									<style>
+										.cls-1 {
+											fill: #999;
+											fill-rule: evenodd;
+										}
+									</style>
+								</defs>
+								<g id="icn_documentation">
+									<path class="cls-1" d="M446.585,23.229H436.037a2.592,2.592,0,0,0-2.623,2.555v2.679a0.494,0.494,0,0,0,.5.488h1.068a0.494,0.494,0,0,0,.5-0.488V25.784a0.548,0.548,0,0,1,.555-0.54h10.548a0.548,0.548,0,0,1,.554.54V41.641a0.548,0.548,0,0,1-.554.54h-2.152a0.494,0.494,0,0,0-.5.488v1.04a0.5,0.5,0,0,0,.5.488h2.152a2.592,2.592,0,0,0,2.623-2.555V25.784A2.592,2.592,0,0,0,446.585,23.229Zm-6.333,6.546H429.705a2.592,2.592,0,0,0-2.623,2.555V48.187a2.593,2.593,0,0,0,2.623,2.556h10.547a2.594,2.594,0,0,0,2.624-2.556V32.33A2.593,2.593,0,0,0,440.252,29.775Zm-11.1,2.555a0.548,0.548,0,0,1,.555-0.54h10.547a0.547,0.547,0,0,1,.554.54V48.187a0.546,0.546,0,0,1-.554.539H429.705a0.548,0.548,0,0,1-.555-0.539V32.33Z" transform="translate(-422 -21)"/>
+								</g>
+							</svg>
+						</a>
+					</li>
+					<li>
+						<a href="middleware/pub/server/ui/workspace/web/api.html" class="nav-link py-3" title="api" data-bs-toggle="tooltip" data-bs-placement="right">
+							<svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 32 32">
+								<defs>
+									<style>
+										.cls-1 {
+											fill: #999;
+											fill-rule: evenodd;
+										}
+									</style>
+								</defs>
+								<g id="icn_api">
+									<path class="cls-1" d="M296.949,47.179l0.306-2.2a0.172,0.172,0,0,0-.168-0.2h-0.074a3.16,3.16,0,0,1-2.33-5.3,1.2,1.2,0,0,0,.234-1.256,6.274,6.274,0,0,1-.439-2.307,6.325,6.325,0,0,1,12.172-2.425,1.191,1.191,0,0,0,1.816.5,3.635,3.635,0,0,1,2.2-.737,3.675,3.675,0,0,1,3.672,3.675,1.3,1.3,0,0,0,.924,1.593,3.163,3.163,0,0,1-.672,6.253h0a0.236,0.236,0,0,0-.233.269l0.266,1.921a0.244,0.244,0,0,0,.252.211,5.578,5.578,0,0,0,1.84-10.718,6.081,6.081,0,0,0-6.049-5.622,5.978,5.978,0,0,0-2.424.507,8.715,8.715,0,0,0-16.155,4.566,8.536,8.536,0,0,0,.376,2.513,5.566,5.566,0,0,0,4.485,8.76m5.387-1.02,0.023,0.064,0.352,1.009h1.622L302.1,40.853h-1.738l-2.217,6.379h1.7l0.355-1.073h2.138Zm-1.088-3.105,0.558,1.591h-1.09Zm7.961,1.58a2.232,2.232,0,0,0,0-3.141,2.165,2.165,0,0,0-1.582-.639h-2.414v6.379h1.58v-1.96h0.834A2.165,2.165,0,0,0,309.209,44.634Zm-2.416-2.266h0.834a0.615,0.615,0,0,1,.469.193,0.759,0.759,0,0,1,0,1,0.606,0.606,0,0,1-.467.2h-0.834V42.368Zm4.162-1.514v6.379h1.579V40.853h-1.579Z" transform="translate(-290 -21)"/>
+								</g>
+							</svg>
+						</a>
+					</li>
+					<li style="display:none;">
+						<a href="javascript:void(0)" id="createBuild" class="nav-link py-3" title="Create Build" data-bs-toggle="tooltip"
+						   data-bs-placement="right">
+							<svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 32 32">
+								<defs>
+									<style>
+										.cls-1 {
+											fill: #999;
+											fill-rule: evenodd;
+										}
+									</style>
+								</defs>
+								<g id="icn_build_export">
+									<path id="export" class="cls-1" d="M709.8,40.377c4.909-6,4.91-16.126,4.906-16.229a1.013,1.013,0,0,0-.3-0.737,1,1,0,0,0-.73-0.3l-0.082,0c-2.705.074-11.926,0.715-17.025,5.831a13.543,13.543,0,0,0-1.381,1.624,0.213,0.213,0,0,1-.115.058,8.388,8.388,0,0,0-6.158,2.471l-1.7,1.7a1.027,1.027,0,0,0,0,1.463,1.039,1.039,0,0,0,1.458,0l1.7-1.7a6.531,6.531,0,0,1,3.178-1.739,0.136,0.136,0,0,1,.141.05,0.143,0.143,0,0,1,.015.15,22.59,22.59,0,0,0-1.325,3.3,1.021,1.021,0,0,0,.269,1.054l3.11,3.119a0.14,0.14,0,0,1,0,.2l-2.21,2.216A1.033,1.033,0,0,0,695,44.37l2.21-2.216a0.14,0.14,0,0,1,.2,0l0.969,0.972,0.532,0.534a2.075,2.075,0,0,1,.892-2.031l-0.033-.033-0.922-.925a0.139,0.139,0,0,1,0-.2l2.209-2.217a1.033,1.033,0,0,0-1.458-1.463l-2.21,2.217a0.144,0.144,0,0,1-.2,0l-2.585-2.593a0.141,0.141,0,0,1-.032-0.146,18.448,18.448,0,0,1,1.873-3.878,0.794,0.794,0,0,0,.131-0.2,12.305,12.305,0,0,1,1.441-1.783c4.025-4.036,11.417-4.957,14.409-5.165a0.127,0.127,0,0,1,.108.04,0.139,0.139,0,0,1,.04.108,29.908,29.908,0,0,1-2.746,11.162C709.8,38.211,709.8,38.861,709.8,40.377Zm-3.614-5.836a2.122,2.122,0,0,0,.336-0.272,2.028,2.028,0,1,0-3.158-.374,2.053,2.053,0,0,0,.987.833A1.944,1.944,0,0,0,706.181,34.541ZM711.5,51.907H699.554a0.95,0.95,0,0,1-.948-0.951v-3.2a0.949,0.949,0,1,1,1.9,0v2.245H710.55V47.761a0.948,0.948,0,1,1,1.9,0v3.2A0.95,0.95,0,0,1,711.5,51.907Zm-5.972-3.978c-0.03,0-.059,0-0.088,0l-0.149-.026c-0.048-.013-0.062-0.018-0.076-0.023l-0.041-.016-0.042-.019a0.381,0.381,0,0,1-.06-0.03l-0.039-.022-0.106-.075c-0.024-.02-0.047-0.041-0.069-0.063l-2.729-2.736a0.951,0.951,0,0,1,0-1.344,0.969,0.969,0,0,1,1.341,0l1.11,1.113v-5.55a0.949,0.949,0,1,1,1.9,0v5.55l1.109-1.113a0.969,0.969,0,0,1,1.341,0,0.949,0.949,0,0,1,0,1.344L706.2,47.651c-0.027.026-.048,0.045-0.069,0.063l-0.164.106h0l-0.349.1C705.584,47.928,705.554,47.929,705.526,47.929Z" transform="translate(-686 -21)"/>
+								</g>
+							</svg>
+						</a>
+					</li>
+					<li style="display:none;">
+						<a href="javascript:importBuild()" class="nav-link py-3" title="Import" data-bs-toggle="tooltip"
+						   data-bs-placement="right">
+							<svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 32 32">
+								<defs>
+									<style>
+										.cls-1 {
+											fill: #999;
+											fill-rule: evenodd;
+										}
+									</style>
+								</defs>
+								<g id="icn_export">
+									<path id="import_arrow_up" data-name="import_arrow up" class="cls-1" d="M975.528,50.308H957.183a3.883,3.883,0,0,1-3.878-3.878V28.085a3.883,3.883,0,0,1,3.878-3.878h6.155a1.056,1.056,0,1,1,0,2.112h-6.155a1.768,1.768,0,0,0-1.766,1.766V41.14h7.411a1.057,1.057,0,0,1,1.056,1.056,1.768,1.768,0,0,0,1.766,1.767h1.411a1.768,1.768,0,0,0,1.766-1.767,1.057,1.057,0,0,1,1.056-1.056h7.411V32.319a1.056,1.056,0,0,1,2.112,0V46.43A3.883,3.883,0,0,1,975.528,50.308Zm-20.111-7.056V46.43a1.768,1.768,0,0,0,1.766,1.766h18.345a1.768,1.768,0,0,0,1.766-1.766V43.252h-6.5a3.89,3.89,0,0,1-3.732,2.822H965.65a3.89,3.89,0,0,1-3.732-2.822h-6.5ZM971.294,24.2a1.051,1.051,0,0,0-.747.309l-2.821,2.822a1.056,1.056,0,0,0,1.493,1.493l1.019-1.02v7.329a1.056,1.056,0,0,0,2.112,0V27.8l1.02,1.02a1.056,1.056,0,1,0,1.493-1.493l-2.822-2.822A1.051,1.051,0,0,0,971.294,24.2Z" transform="translate(-950 -21)"/>
+								</g>
+							</svg>
+						</a>
+					</li>
+					<li>
+						<a href="middleware/pub/server/ui/workspace/web/server-logs.html" class="nav-link py-3" title="Logs" data-bs-toggle="tooltip"
+						   data-bs-placement="right">
+							<svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 32 32">
+								<defs>
+									<style>
+										.cls-1 {
+											fill: #999;
+											fill-rule: evenodd;
+										}
+									</style>
+								</defs>
+								<g id="icn_logs">
+									<path id="log" class="cls-1" d="M842.434,47.41v1.042h0a1.882,1.882,0,0,1-1.878,1.879h-15.79a1.883,1.883,0,0,1-1.879-1.879V24.975a1.879,1.879,0,0,1,1.879-1.879H835.9v2.726a3.567,3.567,0,0,0,3.56,3.561h2.976v7.912l1.681-.053V28.87a1.673,1.673,0,0,0-.13-0.632,1.615,1.615,0,0,0-.365-0.531l-6.076-5.846a1.6,1.6,0,0,0-.512-0.334h0a1.6,1.6,0,0,0-.6-0.12H824.766a3.558,3.558,0,0,0-3.56,3.561V48.446a3.558,3.558,0,0,0,3.56,3.561h15.79a3.557,3.557,0,0,0,3.559-3.561V47.4m-3.47-13.9h0a0.844,0.844,0,0,0-.841-0.841H825.666a0.844,0.844,0,0,0-.841.841h0a0.844,0.844,0,0,0,.841.841H839.8A0.849,0.849,0,0,0,840.645,33.493Zm-6.321-4.758a0.844,0.844,0,0,0-.841-0.841h-7.889a0.841,0.841,0,0,0,0,1.683h7.884A0.845,0.845,0,0,0,834.324,28.735Zm12.082,9.814H831.822a1.8,1.8,0,0,0-1.8,1.8v4.144a1.8,1.8,0,0,0,1.8,1.8h14.584a1.8,1.8,0,0,0,1.8-1.8V40.349A1.8,1.8,0,0,0,846.406,38.549ZM835.53,44.619h-2.81V40.158H833.8v3.523h1.727v0.939Zm4.907-1.282a2.2,2.2,0,0,1-.506.75,2.26,2.26,0,0,1-.772.482,2.713,2.713,0,0,1-.971.17,2.684,2.684,0,0,1-.967-0.17,2.252,2.252,0,0,1-.768-0.482,2.21,2.21,0,0,1-.508-0.75,2.663,2.663,0,0,1,0-1.935,2.132,2.132,0,0,1,.508-0.734,2.257,2.257,0,0,1,.768-0.466,2.783,2.783,0,0,1,.967-0.164,2.814,2.814,0,0,1,.971.164,2.266,2.266,0,0,1,.772.466,2.127,2.127,0,0,1,.506.734A2.649,2.649,0,0,1,840.437,43.337Zm4.984,1.012a3.451,3.451,0,0,1-.765.277,4.025,4.025,0,0,1-.955.108,2.777,2.777,0,0,1-.986-0.17,2.276,2.276,0,0,1-.774-0.479,2.159,2.159,0,0,1-.508-0.74,2.62,2.62,0,0,1,0-1.931,2.171,2.171,0,0,1,.513-0.74,2.276,2.276,0,0,1,.769-0.47,2.717,2.717,0,0,1,.951-0.164,2.933,2.933,0,0,1,.983.16,2.019,2.019,0,0,1,.737.432l-0.679.775a1.2,1.2,0,0,0-.416-0.3,1.411,1.411,0,0,0-.587-0.117,1.3,1.3,0,0,0-.523.1,1.28,1.28,0,0,0-.416.29,1.322,1.322,0,0,0-.274.442,1.569,1.569,0,0,0-.1.557,1.74,1.74,0,0,0,.089.567,1.221,1.221,0,0,0,.261.445,1.185,1.185,0,0,0,.429.289,1.524,1.524,0,0,0,.582.1,2.114,2.114,0,0,0,.359-0.029,1.3,1.3,0,0,0,.315-0.091V42.855h-0.851v-0.87h1.84v2.363ZM839.112,41.4a1.224,1.224,0,0,0-.4-0.283,1.275,1.275,0,0,0-.52-0.1,1.223,1.223,0,0,0-1.181.819,1.581,1.581,0,0,0-.091.542,1.614,1.614,0,0,0,.094.557,1.316,1.316,0,0,0,.262.438,1.159,1.159,0,0,0,.4.287,1.328,1.328,0,0,0,1.033,0,1.21,1.21,0,0,0,.4-0.287,1.29,1.29,0,0,0,.265-0.438,1.591,1.591,0,0,0,.094-0.557,1.536,1.536,0,0,0-.094-0.542A1.321,1.321,0,0,0,839.112,41.4Z" transform="translate(-818 -21)"/>
+								</g>
+							</svg>
+						</a>
+					</li>
+					<li>
+						<a href="javascript:openJWTPopup()" class="nav-link py-3" title="API Token" data-bs-toggle="tooltip" data-bs-placement="right">
+							<svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 32 32">
+								<defs>
+									<style>
+										.cls-1 {
+											fill: #999;
+											fill-rule: evenodd;
+										}
+									</style>
+								</defs>
+								<g id="icn_key">
+									<path class="cls-1" d="M1103.14,32.636a1.171,1.171,0,0,0,1.58.163,1.1,1.1,0,0,0,.17-1.536l-0.79-.989a1.221,1.221,0,0,0-1.58-.163,1.1,1.1,0,0,0-.16,1.536Zm0.88,0.545a1.346,1.346,0,0,1-.99-0.446l-0.01-.008-0.78-.989a1.236,1.236,0,0,1,.18-1.737,1.371,1.371,0,0,1,1.79.168l0.8,1a1.247,1.247,0,0,1-.19,1.737A1.314,1.314,0,0,1,1104.02,33.181Zm-0.76-.64a1.018,1.018,0,0,0,1.37.14,0.957,0.957,0,0,0,.14-1.328l-0.79-.989a1.046,1.046,0,0,0-1.38-.127,0.942,0.942,0,0,0-.12,1.318Zm-18.95,13.528,2.69,3.345a1.178,1.178,0,0,0,1.58.163,1.1,1.1,0,0,0,.17-1.536l-2-2.477,1.83-1.4,2.02,2.509a1.177,1.177,0,0,0,1.58.163,1.1,1.1,0,0,0,.16-1.536l-2-2.483,6.75-5.17a9.3,9.3,0,0,0,11.22-.131,5.079,5.079,0,0,0,2.14-4.823,10.44,10.44,0,0,0-2.48-4.823c-2.08-2.525-4.05-3.782-6.07-3.782a5.279,5.279,0,0,0-3.38,1.315c-1.97,1.2-5.12,6.28-2.77,10.5l-11.28,8.636a1.123,1.123,0,0,0-.41.847A0.967,0.967,0,0,0,1084.31,46.069Zm15.57-19.082a3.49,3.49,0,0,1,2.08-.82c1.24,0,2.76,1.041,4.33,3.014a8.915,8.915,0,0,1,2.03,3.782,2.874,2.874,0,0,1-1.35,2.851c-2.47,1.8-6.76,2.3-8.88-.384C1095.78,32.757,1097.95,28.507,1099.88,26.987Zm-11.97,22.973c-0.03,0-.05,0-0.08,0a1.379,1.379,0,0,1-.94-0.445l-2.7-3.349a1.159,1.159,0,0,1-.28-0.773,1.259,1.259,0,0,1,.46-0.958l11.18-8.565c-2.3-4.342,1.01-9.444,2.89-10.589a5.42,5.42,0,0,1,3.46-1.338c2.04,0,4.06,1.255,6.19,3.837a10.512,10.512,0,0,1,2.51,4.895,5.23,5.23,0,0,1-2.19,4.959,9.562,9.562,0,0,1-11.33.21l-6.53,5,1.91,2.366a1.081,1.081,0,0,1,.27.821,1.308,1.308,0,0,1-.46.917,1.171,1.171,0,0,1-.84.27,1.361,1.361,0,0,1-.94-0.446l-1.94-2.4-1.59,1.215,1.9,2.36a1.09,1.09,0,0,1,.28.822,1.346,1.346,0,0,1-.46.916A1.186,1.186,0,0,1,1087.91,49.961Zm13.99-25.723a5.133,5.133,0,0,0-3.28,1.28c-1.85,1.125-5.07,6.114-2.74,10.319l0.06,0.11-11.38,8.714a1.034,1.034,0,0,0-.35.732,0.88,0.88,0,0,0,.21.577l0.01,0.007,2.69,3.346a1.113,1.113,0,0,0,.73.339,0.921,0.921,0,0,0,.63-0.2,1.068,1.068,0,0,0,.35-0.712,0.785,0.785,0,0,0-.2-0.613l-2.09-2.6,2.06-1.583,2.12,2.625a1.083,1.083,0,0,0,.73.339,0.837,0.837,0,0,0,.62-0.2,1.037,1.037,0,0,0,.36-0.713,0.863,0.863,0,0,0-.2-0.612l-2.11-2.607,6.97-5.338,0.1,0.082a9.2,9.2,0,0,0,11.03-.14,4.951,4.951,0,0,0,2.08-4.682,10.277,10.277,0,0,0-2.45-4.754C1105.79,25.456,1103.84,24.238,1101.9,24.238Zm0.46,13.227a5.448,5.448,0,0,1-4.4-1.945,4.416,4.416,0,0,1-.99-3.427,8.255,8.255,0,0,1,2.82-5.221v0a3.659,3.659,0,0,1,2.17-.851c1.31,0,2.85,1.062,4.45,3.071a9.037,9.037,0,0,1,2.06,3.849,3.026,3.026,0,0,1-1.41,2.991A8.168,8.168,0,0,1,1102.36,37.464Zm-2.38-10.36a7.921,7.921,0,0,0-2.71,5.016,4.1,4.1,0,0,0,.93,3.213c1.98,2.506,6.16,2.2,8.68.361a2.74,2.74,0,0,0,1.29-2.711,8.861,8.861,0,0,0-2-3.712c-1.52-1.906-3.01-2.955-4.21-2.955A3.351,3.351,0,0,0,1099.98,27.1Z" transform="translate(-1082 -21)"/>
+								</g>
+							</svg>
+						</a>
+					</li>
+					<li>
+						<a href="middleware/pub/server/ui/workspace/web/setting.html" class="nav-link active py-3" title="Setting" data-bs-toggle="tooltip" data-bs-placement="right">
+							<svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 32 32">
+								<defs>
+									<style>
+										.cls-1 {
+											fill: #999;
+											fill-rule: evenodd;
+										}
+									</style>
+								</defs>
+								<g id="icn_setting">
+									<path class="cls-1" d="M571.317,22.862a0.967,0.967,0,0,1,.911.635l0.98,2.719c0.352,0.088.654,0.176,0.909,0.268,0.279,0.1.639,0.252,1.084,0.459l2.283-1.209a0.972,0.972,0,0,1,1.154.183l2.008,2.078a0.95,0.95,0,0,1,.192,1.033l-1.072,2.513c0.179,0.326.322,0.6,0.429,0.839,0.116,0.255.26,0.606,0.433,1.056l2.5,1.07a0.959,0.959,0,0,1,.582.938l-0.183,2.884a0.959,0.959,0,0,1-.639.841l-2.364.84a8.422,8.422,0,0,1-.213.844c-0.087.277-.226,0.633-0.415,1.075l1.188,2.629a0.95,0.95,0,0,1-.234,1.1l-2.257,2.018a0.975,0.975,0,0,1-1.105.134l-2.327-1.234a10.079,10.079,0,0,1-1.125.51l-1.017.38-0.9,2.5a0.965,0.965,0,0,1-.889.635l-2.638.059a0.967,0.967,0,0,1-.928-0.622l-1.064-2.817c-0.489-.171-0.846-0.3-1.077-0.4s-0.506-.229-0.86-0.409l-2.636,1.129a0.973,0.973,0,0,1-1.049-.185l-1.952-1.834a0.951,0.951,0,0,1-.214-1.089l1.134-2.474q-0.256-.5-0.419-0.895c-0.115-.275-0.253-0.649-0.418-1.127l-2.483-.756a0.955,0.955,0,0,1-.682-0.95l0.1-2.67a0.959,0.959,0,0,1,.545-0.826l2.607-1.253c0.121-.443.227-0.788,0.32-1.041s0.239-.577.436-0.989l-1.132-2.393a0.952,0.952,0,0,1,.207-1.1l1.951-1.844a0.976,0.976,0,0,1,1.041-.191l2.636,1.089q0.436-.289.794-0.477a8.891,8.891,0,0,1,1.145-.481L567.5,23.5a0.968,0.968,0,0,1,.912-0.637h2.907Zm-0.681,1.914h-1.543l-0.843,2.355a0.959,0.959,0,0,1-.6.588,9.4,9.4,0,0,0-1.3.509,9.869,9.869,0,0,0-1.028.653,0.976,0.976,0,0,1-.935.1l-2.54-1.049-0.991.937,1.034,2.183a0.95,0.95,0,0,1-.009.829c-0.278.558-.466,0.969-0.56,1.221s-0.221.684-.375,1.281a0.956,0.956,0,0,1-.515.626l-2.485,1.194-0.05,1.361,2.248,0.684a0.959,0.959,0,0,1,.634.615c0.224,0.668.4,1.16,0.529,1.468s0.314,0.687.561,1.15a0.944,0.944,0,0,1,.026.843L560.849,44.6l0.989,0.928,2.474-1.059a0.976,0.976,0,0,1,.837.033c0.507,0.267.885,0.452,1.123,0.553s0.709,0.272,1.383.5a0.961,0.961,0,0,1,.589.57l0.983,2.6,1.287-.029,0.828-2.3a0.965,0.965,0,0,1,.568-0.573q0.815-.306,1.441-0.539a9.652,9.652,0,0,0,1.32-.639,0.978,0.978,0,0,1,.936-0.012L577.8,45.8l1.231-1.1-1.075-2.379a0.941,0.941,0,0,1,0-.777c0.252-.568.423-0.994,0.51-1.266a9.4,9.4,0,0,0,.256-1.147,0.958,0.958,0,0,1,.627-0.74l2.287-.813,0.1-1.585-2.25-.964a0.956,0.956,0,0,1-.522-0.547c-0.224-.6-0.4-1.04-0.525-1.312s-0.319-.638-0.583-1.1a0.949,0.949,0,0,1-.049-0.842l1.008-2.362-1.061-1.1-2.067,1.095a0.976,0.976,0,0,1-.879.017c-0.6-.29-1.054-0.488-1.344-0.592a9.974,9.974,0,0,0-1.191-.319,0.964,0.964,0,0,1-.7-0.613ZM569.854,30.7a6.062,6.062,0,1,1-6.125,6.061A6.092,6.092,0,0,1,569.854,30.7Zm0,1.914a4.147,4.147,0,1,0,4.19,4.147A4.169,4.169,0,0,0,569.854,32.618Z" transform="translate(-554 -21)"/>
+								</g>
+							</svg>
+						</a>
+					</li>
+				</ul>
+			</div>
+			<div class="col-lg-11 px-5 pr-0 p-3" data-match-height="groupName">
+				<!-- <div class="tabl_outer">
+                   <h3 class="margin_16">Settings</h3>
+                   </div> -->
+				<div class="row">
+					<div class="col-md-12">
+						<div class="tabbable-panel">
+							<div class="tabbable-line">
+								<ul class="nav nav-tabs ">
+									<li class="active">
+										<a href="#tab_default_1" data-toggle="tab">Profile </a>
+									</li>
+									<li>
+										<a href="#team_tab" data-toggle="tab">Team </a>
+									</li>
+									<li>
+										<a href="#group_tab" data-toggle="tab">Group </a>
+									</li>
+									<!-- <li>
+                                       <a href="#tab_default_3" data-toggle="tab">Server Settings </a>
+                                       </li> -->
+                                       <li>
+                                       <a href="#environment" data-toggle="tab">Environment </a>
+                                       </li>
+									   <li>
+                                       <a href="#credentials_tab" data-toggle="tab">Credentials</a>
+                                       </li>
+								</ul>
+								<div class="tab-content">
+									<div class="tab-pane active" id="tab_default_1">
+										<div class="mb-3" style="flex-direction: inherit;">
+											<!-- <div class="st_head"><h3>Basic Detail</h3></div> -->
+											<div class="col-lg-12">
+												<div class="nodetext setting_grid" id="loggedin-name-panel"><label>Name:</label><strong id="loggedin-name">...</strong></div>
+												<div class="nodetext setting_grid" id="loggedin-email-panel"><label>Email:</label><strong id="loggedin-email">...</strong></div>
+												<div class="nodetext setting_grid" id=""><label>User ID:</label><strong id="loggedin-userId">...</strong></div>
+												<div class="nodetext setting_grid">
+													<label>Password:</label><strong>*******</strong><br>
+													<a  class="text-black algn_ed" href="javascript:void(0)" data-bs-toggle="modal" data-bs-target="#changePasswordModal">
+														Edit
+													</a>
+												</div>
+												<div class="nodetext setting_grid" id=""><label>Tenant:</label><strong id="profile-tenant-name">...</strong></div>
+												<div class="nodetext setting_grid">
+													<label>Role:</label><!-- <span class="bubble">developers</span><span class="bubble">administrators</span> --><strong id="loggedin-roles">...</strong>
+												</div>
+											</div>
+											<!-- <div class="col-lg-4">
+                                               <div class="nodetext" style="display: none;">Joined on:<strong>...</strong></div>
+                                               </div> -->
+										</div>
+										<!-- Modal -->
+										<div class="modal fade nw_popup" id="changePasswordModal" tabindex="-1" aria-labelledby="teamModalLabel" aria-hidden="true">
+											<div class="modal-dialog">
+												<div class="modal-content" style="width:750px;height:auto;">
+													<div class="modal-header">
+														<h5 class="modal-title" id="envrModalLabel">Change Password</h5>
+														<button type="button" class="btn-close envr_close" data-bs-dismiss="modal" aria-label="Close"></button>
+													</div>
+													<div class="modal-body">
+														<div class="row m-t-b">
+															<div class="col-md-6">
+																<label>New Password: </label>
+																<input class="form-control" placeholder="Enter new password" type="password" id="first-password" value="" >
+															</div>
+															<div class="col-md-6">
+																<label>Confirm Password: </label>
+																<input class="form-control" type="password" placeholder="Confirm password" id="confirm-password" value="" >
+															</div>
+														</div>
+													</div>
+													<div class="modal-footer">
+														<button type="button" class="btn btn-primary" onclick="updatePassword()">OK</button>
+													</div>
+												</div>
+											</div>
+										</div>
+									</div>
+									<div class="tab-pane" id="team_tab">
+										<div class="tabl_outer">
+											<div class="table-responsive">
+												<table id="aPiTable" class="table table-bordered table-striped">
+													<thead>
+													<tr>
+														<th>User ID</th>
+														<th>Name</th>
+														<th>Email</th>
+														<th>Groups</th>
+														<th>Action</th>
+													</tr>
+													</thead>
+													<tbody id="user-contents"></tbody>
+												</table>
+											</div>
+											<div class="add_team_btn"><button type="button" class="btn btn-primary2" onclick="addUser()">Add team member</button></div>
+											<!-- Modal -->
+											<div class="modal fade nw_popup" id="addTeamModal" tabindex="-1" aria-labelledby="teamModalLabel" aria-hidden="true">
+												<div class="modal-dialog">
+													<div class="modal-content" style="width:750px;height:auto;">
+														<div class="modal-header">
+															<h5 class="modal-title" id="envrModalLabel">Add Team Member</h5>
+															<button type="button" class="btn-close envr_close" data-bs-dismiss="modal" aria-label="Close"></button>
+														</div>
+														<div class="modal-body">
+															<div class="row m-t-b">
+																<div class="col-md-6">
+																	<label>Name: </label>
+																	<input class="form-control" placeholder="Type your name" type="text" id="add_team_name" value="" />
+																</div>
+																<div class="col-md-6">
+																	<label>Email: </label>
+																	<input class="form-control" type="text" placeholder="Type your email" id="add_team_email" value="" />
+																</div>
+															</div>
+															<div class="row m-t-b">
+																<div class="col-md-6" id="password-field">
+																	<label>Password: </label>
+																	<input class="form-control" placeholder="Enter Password" type="password" id="add_team_password" value="" />
+																	<i class="bi bi-eye-slash" id="togglePassword"></i>
+																</div>
+																<div class="col-md-6">
+																	<label>Groups: </label>
+																	<select class="form-control multi-options" multiple="multiple" id="groups-dropdown">
+																	</select>
+																	<div class="tm_check" style="display:none;">
+																		<input class="styled-checkbox" id="add_team_isAdmin" name="" type="checkbox" value="false" />
+																		<label class="enble_check" for="add_team_isAdmin">isAdmin</label>
+																		<input class="styled-checkbox" id="add_team_isDeveloper" name="" type="checkbox" value="false" />
+																		<label class="enble_check" for="add_team_isDeveloper">isDeveloper</label>
+																	</div>
+																</div>
+															</div>
+														</div>
+														<div class="modal-footer">
+															<button type="button" class="btn btn-primary" id="save-btn" onclick="updateUser('add')">Save</button>
+														</div>
+													</div>
+												</div>
+											</div>
+										</div>
+									</div>
+									<div class="tab-pane" id="group_tab">
+										<div class="tabl_outer">
+											<div class="table-responsive">
+												<table id="groupTable" class="table table-bordered table-striped">
+													<thead>
+													<tr>
+														<th>Group Name</th>
+														<th>Action</th>
+													</tr>
+													</thead>
+													<tbody id="groups-contents"></tbody>
+												</table>
+											</div>
+											<div class="add_team_btn"><button type="button" class="btn btn-primary2" data-bs-toggle="modal" data-bs-target="#addGroupModal">Add group</button></div>
+										</div>
+										<!-- Modal -->
+										<div class="modal fade nw_popup" id="addGroupModal" tabindex="-1" aria-labelledby="teamModalLabel" aria-hidden="true">
+											<div class="modal-dialog">
+												<div class="modal-content" style="width:750px;height:auto;">
+													<div class="modal-header">
+														<h5 class="modal-title" id="envrModalLabel">Add Group</h5>
+														<button type="button" class="btn-close envr_close" data-bs-dismiss="modal" aria-label="Close"></button>
+													</div>
+													<div class="modal-body">
+														<div class="row m-t-b">
+															<div class="col-md-12">
+																<label>Group Name: </label>
+																<input class="form-control" placeholder="Enter group name here" type="text" id="add-group" value="" />
+															</div>
+														</div>
+													</div>
+													<div class="modal-footer">
+														<button type="button" class="btn btn-primary" onclick="createGroup()">Save</button>
+													</div>
+												</div>
+											</div>
+										</div>
+									</div>
+									<div class="tab-pane" id="tab_default_3">
+										<div class="row">
+											<div class="col-lg-6">
+												<div class="row mb-3 fr-style">
+													<label class="col-sm-3 col-form-label">Name:</label>
+													<div class="col-sm-9">
+														<input type="text" class="form-control" id="" placeholder="API 1">
+													</div>
+												</div>
+												<div class="row mb-3 fr-style">
+													<label class="col-sm-3 col-form-label">Server host:</label>
+													<div class="col-sm-9">
+														<input type="text" class="form-control" id="" placeholder="name here">
+													</div>
+												</div>
+												<div class="row mb-3 fr-style">
+													<label class="col-sm-3 col-form-label">Type:</label>
+													<div class="col-sm-9">
+														<div class="form-check ck_g">
+															<input class="form-check-input" type="checkbox" id="call_control">
+															<label class="form-check-label" for="call_control">Call control</label>
+														</div>
+														<div class="form-check ck_g">
+															<input class="form-check-input" type="checkbox" id="management_control">
+															<label class="form-check-label" for="management_control">Management control</label>
+														</div>
+													</div>
+												</div>
+												<div class="row mb-3 fr-style">
+													<label class="col-sm-3 col-form-label">Allowed subnets:</label>
+													<div class="col-sm-9">
+														<input type="text" class="form-control" id="" placeholder="255.255.255.255/0">
+													</div>
+												</div>
+											</div>
+											<div class="col-lg-6">
+												<div class="row mb-3 fr-style">
+													<label class="col-sm-3 col-form-label">Name:</label>
+													<div class="col-sm-9">
+														<input type="text" class="form-control" id="" placeholder="API 1">
+													</div>
+												</div>
+												<div class="row mb-3 fr-style">
+													<label class="col-sm-3 col-form-label">Server host:</label>
+													<div class="col-sm-9">
+														<input type="text" class="form-control" id="" placeholder="name here">
+													</div>
+												</div>
+												<div class="row mb-3 fr-style">
+													<label class="col-sm-3 col-form-label">Type:</label>
+													<div class="col-sm-9">
+														<div class="form-check ck_g">
+															<input class="form-check-input" type="checkbox" id="call_control2">
+															<label class="form-check-label" for="call_control2">Call control</label>
+														</div>
+														<div class="form-check ck_g">
+															<input class="form-check-input" type="checkbox" id="management_control2">
+															<label class="form-check-label" for="management_control2">Management control</label>
+														</div>
+													</div>
+												</div>
+												<div class="row mb-3 fr-style">
+													<label class="col-sm-3 col-form-label">Allowed subnets:</label>
+													<div class="col-sm-9">
+														<input type="text" class="form-control" id="" placeholder="255.255.255.255/0">
+													</div>
+												</div>
+											</div>
+										</div>
+										<div class="sch_action">
+											<button type="button" onclick="" class="btn btn-primary mr-1">Save</button>
+											<button type="button" onclick="" class="btn btn-secondary">Cancel</button>
+										</div>
+									</div>
+									<div class="tab-pane" id="environment">
+										<div class="tabl_outer">
+											<div class="add_kbtn"><button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#addEnvironmentModal">Add Environment</button></div>
+											<div class="table-responsive">
+												<table id="environmentTable" class="table table-bordered table-striped">
+													<thead>
+													<tr>
+														<th>Name</th>
+														<th>Type</th>
+														<th>DNS Endpoint</th>
+														<th>Tenant</th>
+														<th>Key</th>
+														<th>Status</th>
+														<th>Action</th>
+													</tr>
+													</thead>
+													<tbody id="deploymentList"></tbody>
+												</table>
+											</div>
+										</div>
+									</div>
+									<!-- Modal -->
+									<div class="modal fade" id="addEnvironmentModal" tabindex="-1" aria-labelledby="envrModalLabel" aria-hidden="true">
+										<div class="modal-dialog">
+											<div class="modal-content" style="width:650px;height:auto;">
+												<div class="modal-header">
+													<h5 class="modal-title" id="envrModalLabel">Add Environment</h5>
+													<button type="button" class="btn-close envr_close" data-bs-dismiss="modal" aria-label="Close"></button>
+												</div>
+												<div class="modal-body">
+													<div class="row m-t-b">
+														<div class="col-md-6">
+															<label>Name: </label>
+															<input class="form-control" type="text" id="environment_name" value="" />
+														</div>
+														<div class="col-md-6">
+															<label>Type: </label>
+															<select class="form-control" id="environment_type">
+																<option value="AWS_ECS">AWS_ECS</option>
+																<option value="EKA_ENV">EKA_ENV</option>
+															</select>
+														</div>
+													</div>
+
+													<div id="AWS_ECS" class="display-none">
+													<div class="credentials_grid">
+														<h6>Credentials</h6>
+														<div class="row m-t-b">
+															<div class="col-md-6">
+																<label>Key: </label>
+																<select class="form-control" id="credential_id">
+																</select>
+															</div>
+															<div class="col-md-6">
+																<label>Region: </label>
+																<select class="form-control" id="environment_aws_region">
+																	<option>us-east-1</option>
+																	<option>us-east-2</option>
+																	<option>us-west-1</option>
+																	<option>us-west-2</option>
+																	<option>eu-west-1</option>
+																	<option>eu-west-2</option>
+																	<option>eu-west-3</option>
+																	<option>eu-central-1</option>
+																	<option>eu-north-1</option>
+																	<option>ap-east-1</option>
+																	<option>ap-south-1</option>
+																	<option>ap-southeast-1</option>
+																	<option>ap-southeast-2</option>
+																	<option>ap-northeast-1</option>
+																	<option>ap-northeast-2</option>
+																	<option>sa-east-1</option>
+																	<option>cn-north-1</option>
+																	<option>cn-northwest-1</option>
+																	<option>ca-central-1</option>
+																	<option>me-south-1</option>
+																	<option>us-gov-west-1</option>
+																	<option>us-gov-east-1</option>
+																</select>
+															</div>
+														</div>
+
+													</div>
+													<div class="row m-t-b">
+														<div class="col-md-6">
+															<label>External Port: </label>
+															<input class="form-control" type="text" id="environment_port_mapping" value="80:80" disabled />
+														</div>
+														<div class="col-md-6">
+															<label>Protocol: </label>
+															<select class="form-control" id="environment_protocol">
+																<option value="HTTPS">HTTPS</option>
+															</select>
+														</div>
+													</div>
+													<div class="row m-t-b">
+														<div class="col-md-11">
+															<label>Certificate: </label>
+															<select class="form-control" id="environment_aws_acm_arn"></select>
+														</div>
+														<div class="col-md-1">
+															<label>&nbsp;</label>
+															<button onclick="loadCertificates(this)">Load</button>
+														</div>
+													</div>
+													<div class="credentials_grid">
+														<h6>VPC</h6>
+														<div class="row m-t-b">
+															<div class="col-md-6">
+																<label>VPC ID: </label>
+																<input class="form-control" type="text" id="aws_vpc_id" value="" />
+															</div>
+														</div>
+														<div class="row m-t-b">
+															<div class="col-md-6">
+																<label>Subnet ID: </label>
+																<input class="form-control" type="text" id="aws_vpc_subnet_id_1" value="" />
+															</div>
+															<div class="col-md-6">
+																<label>Subnet ID: </label>
+																<input class="form-control" type="text" id="aws_vpc_subnet_id_2" value="" />
+															</div>
+															<div class="col-md-6">
+																<label>Subnet ID: </label>
+																<input class="form-control" type="text" id="aws_vpc_subnet_id_3" value="" />
+															</div>
+															<div class="col-md-6">
+																<label>Subnet ID: </label>
+																<input class="form-control" type="text" id="aws_vpc_subnet_id_4" value="" />
+															</div>
+														</div>
+													</div>
+													<div class="credentials_grid" style="">
+														<h6>Auto Scaling</h6>
+														<div class="row m-t-b">
+															<div class="col-md-6">
+																<label>Min Nodes: </label>
+																<input class="form-control" type="text" id="" readonly value="1" >
+															</div>
+															<div class="col-md-6">
+																<label>Max Nodes: </label>
+																<input class="form-control" type="text" id="" readonly value="10" >
+															</div>
+														</div>
+														<div class="row m-t-b">
+															<div class="col-md-6">
+																<label>CPU Threshold: </label>
+																<input class="form-control" type="text" id="" readonly value="75" >
+															</div>
+														</div>
+													</div>
+
+													<div class="credentials_grid">
+														<h6>Node Config</h6>
+														<div class="row m-t-b">
+															<div class="col-md-6">
+																<label>CPU: </label>
+																<input class="form-control" type="text" id="" readonly value="0.5" >
+															</div>
+															<div class="col-md-6">
+																<label>RAM: </label>
+																<input class="form-control" type="text" id="" readonly value="1024" >
+															</div>
+														</div>
+													</div>
+												    </div>
+
+              										<div id="EKA_ENV" class="display-none" style="display:none;">
+													    <div class="credentials_grid">
+															<h6>Configuration</h6>
+															<div class="row m-t-b">
+																<div class="col-md-6">
+																	<label>Secret: </label>
+																	<select class="form-control" id="credential_id2"></select>
+																</div>
+																<div class="col-md-6">
+																	<label>Tenant: </label>
+																	<input class="form-control" type="text" id="tenant_form_name" value="" >
+																</div>
+															</div>
+
+															<div class="row m-t-b">
+																<div class="col-md-6">
+																	<label>Endpoint: </label>
+																	<input class="form-control" type="text" id="environment_endpoint" value="" >
+																</div>
+															</div>
+														</div>
+													</div>
+												</div>
+												<div class="modal-footer">
+													<button type="button" class="btn btn-secondary mr-10 deploy-container" onclick="deployContainer(this, true)">Add</button>
+													<!--<button type="button" class="btn btn-primary deploy-container" onclick="deployContainer(this, true)">Add & Deploy</button>-->
+												</div>
+											</div>
+										</div>
+									</div>
+
+
+									<div class="tab-pane" id="credentials_tab">
+										<div class="tabl_outer">
+											<div class="table-responsive">
+												<table id="credentialsTable" class="table table-bordered table-striped" style="width: 100%;">
+													<thead>
+													<tr>
+														<th>S.No</th>
+														<th>Name</th>
+														<th>Username</th>
+														<th>Password</th>
+														<th>Action</th>
+													</tr>
+													</thead>
+													<tbody>
+
+													</tbody>
+												</table>
+											</div>
+											<button type="button" class="btn btn-primary2" data-bs-toggle="modal" data-bs-target="#credentialsModal">Add Credential</button>
+
+											<!-- Modal -->
+											<div class="modal fade nw_popup" id="credentialsModal" tabindex="-1" aria-labelledby="envrModalLabel" aria-hidden="true">
+												<div class="modal-dialog">
+													<div class="modal-content" style="width:750px;height:auto;">
+														<div class="modal-header">
+															<h5 class="modal-title" id="envrModalLabel">Add Credential</h5>
+															<button type="button" class="btn-close envr_close" data-bs-dismiss="modal" aria-label="Close"></button>
+														</div>
+														<div class="modal-body">
+															<div class="row m-t-b">
+																<div class="col-md-6">
+																	<label>Name: </label>
+																	<input class="form-control" placeholder="" type="text" id="credential_name" value="" />
+																</div>
+																<div class="col-md-6">
+																	<label>Username: </label>
+																	<input class="form-control" type="text" placeholder="" id="credential_username" value="" />
+																</div>
+															</div>
+															<div class="row m-t-b">
+																<div class="col-md-6" id="">
+																	<label>Password: </label>
+																	<input class="form-control" placeholder="" type="password" id="credential_password" value="" />
+																</div>
+															</div>
+														</div>
+														<div class="modal-footer">
+															<button type="button" class="btn btn-primary" onclick="addCredential(this)">Save</button>
+														</div>
+													</div>
+												</div>
+											</div>
+
+											</div>
+									</div>
+
+
+
+									<div id="jwtModelDialog" class="modal">
+										<!-- Modal content -->
+										<div class="modal-content" style="width:650px;height:auto;">
+											<div class="anc_kbtn"><span id="closejwtModelDialog" class="close" >&times;</span></div>
+										<h3>API token</h3>
+										<div class="row exp_alg" style="margin-top:10px; margin-bottom:15px;">
+											<div class="col-md-3"><label for="jwt_token_key">Token key:</label></div>
+											<div class="col-md-9"><input id="jwt_token_key" type="text" class="form-control" value="" /></div>
+										</div>
+										<div id="jwtNameDiv" style="margin-top:0; margin-bottom:15px;">
+												<a class="copy_icon" href="javascript:void(0)" id="button-copy"><img src="middleware/pub/server/ui/icons/copy-svgrepo-com.svg"></a>
+												<label for="jwtInput">Bearer Token: </label>
+												<textarea class="form-control" type="text" id="jwtInput" name="jwtInput" style="height: 150px !important;" readonly="readonly"></textarea>
+											</div>
+											<div class="anc_kbtn"><button type="button" id="JWTOKButton" class="btn btn-primary">OK</button></div>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</body>
+<script src="middleware/pub/server/ui/assets/js/bootstrap.bundle.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+<script src="middleware/pub/server/ui/javascript/datatables/datatables.min.js"></script>
+<script src="middleware/pub/server/ui/javascript/datatables/cdn.datatables.net/buttons/1.2.2/js/dataTables.buttons.min.js"></script>
+<script src="middleware/pub/server/ui/javascript/datatables/cdn.datatables.net/buttons/1.2.2/js/buttons.flash.min.js"></script>
+<script src="middleware/pub/server/ui/javascript/datatables/datatables-init.js"></script>
+<script src="middleware/pub/server/ui/assets/js/select2.full.min.js"></script>
+<script src="middleware/pub/server/ui/assets/js/select2-init.js"></script>
+<script>
+	document.querySelector("#button-copy").onclick = function () {
+		document.querySelector("#jwtInput").select();
+		document.execCommand("copy");
+	};
+
+</script>
+<script>
+	$(document).ready(function() {
+		loadUsers();
+		loadGroups();
+		getCurrentUser();
+	});
+
+	let users = {};
+	let dtUsers = null;
+
+	function loadUsers() {
+		var response=syncRestRequest("/packages.middleware.pub.security.flow.getUsers.main", "GET", "");
+		if(response.status==200 && response.payload) {
+
+			if (null != dtUsers) {
+				dtUsers.destroy();
+			}
+
+			var HTML = "";
+			response = JSON.parse(response.payload);
+			users = response.users;
+			Object.keys(response.users).forEach(function(key){
+
+				let user = response.users[key];
+
+				HTML += "<tr>";
+				HTML += "<td>" + key + "</td>";
+				HTML += "<td>" + (null == user.profile.name ? "-" : user.profile.name) + "</td>";
+				HTML += "<td>" + (null == user.profile.email ? "-" : user.profile.email) + "</td>";
+
+				let GROUPS = "";
+				for (var i = 1 ; i < user.profile.groups.length ; i++) {
+					GROUPS += "<span class=\"bubble\">" + user.profile.groups[i] + "</span>";
+				}
+
+				HTML += "<td>" + GROUPS + "</td>";
+				if (key == "admin") {
+					HTML += "<td><a class='fa fa-pencil-square-o' href='javascript:editUser(\"" + key + "\")'></a></td>";
+				} else {
+					HTML += "<td><a class='fa fa-pencil-square-o' href='javascript:editUser(\"" + key + "\")'></a> &nbsp;&nbsp; <a class='fa fa-trash-o' href='javascript:deleteUser(\"" + key + "\")'></a></td>";
+				}
+				HTML += "</tr>";
+
+			});
+
+			$("#user-contents").html(HTML);
+			dtUsers = $("#aPiTable").DataTable({});
+		}
+	}
+
+	let groups = {};
+	let dtGroups = null;
+
+	function loadGroups() {
+		var response = syncRestRequest("/packages.middleware.pub.security.flow.getGroups.main", "GET", "");
+		if(response.status==200 && response.payload) {
+
+			if (null != dtGroups) {
+				dtGroups.destroy();
+			}
+
+			$('#groups-dropdown').html("<option>administrators</option>");
+			$('#groups-dropdown').append("<option>developers</option>");
+
+			var HTML = "";
+			response = JSON.parse(response.payload);
+			groups = response.groups;
+			for (var i = 0 ; i < groups.length ; i++) {
+				HTML += "<tr>";
+				HTML += "<td>" + groups[i] + "</td>";
+				HTML += "<td><a class='fa fa-trash-o' href='javascript:deleteGroup(\"" + groups[i] + "\")'></a></td>";
+				HTML += "</tr>";
+				$('#groups-dropdown').append("<option>" + groups[i] + "</option>");
+			}
+
+			$("#groups-contents").html(HTML);
+			dtGroups = $("#groupTable").DataTable({});
+		}
+	}
+
+	let user = {};
+
+	function editUser(keyUser) {
+		$("#password-field").hide();
+
+		Object.keys(users).forEach(function(key) {
+
+			if (key != keyUser) {
+				return;
+			}
+			user = users[key];
+			user.id = key;
+		});
+		$("#save-btn").attr("onclick", "updateUser('edit')")
+
+		$("#add_team_name").val(user.profile.name);
+		$("#add_team_email").val(user.profile.email);
+
+		if (null != user.profile.email) {
+			$("#add_team_email").attr("readonly", "readonly");
+		}
+
+		if (containsObject("administrators", user.profile.groups)) {
+			$("#add_team_isAdmin").attr("checked", "checked");
+		} else {
+			$("#add_team_isAdmin").removeAttr("checked");
+		}
+		if (containsObject("developers", user.profile.groups)) {
+			$("#add_team_isDeveloper").attr("checked", "checked");
+		} else {
+			$("#add_team_isDeveloper").removeAttr("checked");
+		}
+
+		$('#groups-dropdown').select2({}).val(user.profile.groups).trigger('change');
+
+
+		$("#addTeamModal").modal('toggle');
+	}
+
+	function addUser(key) {
+		$("#password-field").show();
+		$("#add_team_email").removeAttr("readonly");
+		$("#add_team_isAdmin").removeAttr("checked");
+		$("#add_team_isDeveloper").removeAttr("checked");
+		$("#save-btn").attr("onclick", "updateUser('add')")
+
+		$("#addTeamModal").modal('toggle');
+	}
+
+	function deleteUser(key) {
+
+		swal({
+					title: "Are you sure to delete '" + key + "'?",
+					text: "It will be deleted permanently",
+					type: "warning",
+					showCancelButton: true,
+					confirmButtonColor: "#f2533e",
+					cancelButtonText: "No, cancel it !!",
+					confirmButtonText: "Yes, delete it !!",
+					showLoaderOnConfirm : true,
+					closeOnConfirm: false,
+					closeOnCancel: false
+				},
+				function(isConfirm){
+					if (isConfirm) {
+						asyncRestRequest("/packages.middleware.pub.security.flow.deleteUser.main?userId=" + key, null,  "DELETE", function (response) {
+							if (response.status == true) {
+								swal({
+										title: "Account deleted successfully.",
+										type: "success",
+										confirmButtonColor: "#2C61F5" // Optional: customize button color
+								});
+
+								loadUsers();
+							} else {
+								swal({
+										title: "Error Occurred. Please try again.",
+										type: "error",
+										confirmButtonColor: "#f2533e" // Optional: red shade
+								});
+
+								loadUsers();
+							}
+						});
+					}
+					else {
+						swal({
+									title: "Cancelled !!",
+									text: "Hey, '" + key + "' is safe !!",
+									type: "error",
+									confirmButtonColor: "#f2533e" // Optional: red shade for cancel/error
+							});
+
+					}
+				});
+	}
+
+	function deleteGroup(key) {
+		swal({
+					title: "Are you sure to delete '" + key + "'?",
+					text: "It will be deleted permanently",
+					type: "warning",
+					showCancelButton: true,
+					confirmButtonColor: "#f2533e",
+					cancelButtonText: "No, cancel it !!",
+					confirmButtonText: "Yes, delete it !!",
+					showLoaderOnConfirm : true,
+					closeOnConfirm: false,
+					closeOnCancel: false
+				},
+				function(isConfirm){
+					if (isConfirm) {
+						asyncRestRequest("/packages.middleware.pub.security.flow.deleteGroup.main?group_name=" + key, null, "DELETE", function (response) {
+							if (response.status == true) {
+								swal({
+										title: "Group deleted successfully.",
+										text: "",
+										type: "success",
+										confirmButtonColor: "#2C61F5" // Optional: customize success button color
+									});
+
+								loadGroups();
+							} else {
+								swal({
+										title: "Error Occurred. Please try again.",
+										text: "",
+										type: "error",
+										confirmButtonColor: "#f2533e" // Optional: red shade
+								});
+
+								loadGroups();
+							}
+						});
+					}
+					else {
+						swal({
+								title: "Cancelled !!",
+								text: "Hey, '" + key + "' is safe !!",
+								type: "error",
+								confirmButtonColor: "#f2533e" // Optional: red shade
+						});
+
+					}
+				});
+
+	}
+
+	function containsObject(obj, list) {
+		var i;
+		for (i = 0; i < list.length; i++) {
+			if (list[i] === obj) {
+				return true;
+			}
+		}
+
+		return false;
+	}
+
+	function createGroup() {
+		var response = syncRestRequest("/packages.middleware.pub.security.flow.addGroup.main",
+				"POST", JSON.stringify({"group_name": $("#add-group").val()}), "application/json", "application/json");
+
+		if(response.status == 200 && response.payload) {
+			response = JSON.parse(response.payload);
+			if (response.status == true) {
+				swal({
+						title: "Group updated successfully.",
+						text: "",
+						type: "success",
+						confirmButtonColor: "#2C61F5" // Optional: custom button color
+				});
+
+				$("#addGroupModal").modal('toggle');
+				loadGroups();
+			} else {
+				swal({
+						title: "Error Occurred. Please try again.",
+						text: "",
+						type: "error",
+						confirmButtonColor: "#f2533e" // Optional: red shade
+				});
+
+				$("#addGroupModal").modal('toggle');
+				loadGroups();
+			}
+
+		}
+	}
+
+	function updateUser(type) {
+		$("#save-btn").html("...");
+		$("#save-btn").attr("disabled", "disabled");
+		if (type == "add") {
+			asyncRestRequest("/packages.middleware.pub.security.flow.addUserFlow.main",
+					JSON.stringify({
+						"userId": $("#add_team_email").val(),
+						"password": $("#add_team_password").val(),
+						"name": $("#add_team_name").val(),
+						"email": $("#add_team_email").val(),
+						"isAdmin": $("#add_team_isAdmin").is(":checked"),
+						"isDeveloper": $("#add_team_isDeveloper").is(":checked"),
+						"groups": $('#groups-dropdown').val()
+					}), "POST", function (response) {
+						$("#save-btn").removeAttr("disabled");
+						$("#save-btn").html("Save");
+						if (response.status == true) {
+							swal({
+										title: "Account created successfully.",
+										text: "",
+										type: "success",
+										confirmButtonColor: "#2C61F5"
+								});
+
+							$("#addTeamModal").modal('toggle');
+							loadUsers();
+						} else {
+							swal({
+									title: "Error Occurred. Please try again.",
+									text: "",
+									type: "error",
+									confirmButtonColor: "#f2533e" // Optional: Red shade
+							});
+
+							$("#addTeamModal").modal('toggle');
+							loadUsers();
+						}
+					});
+		} else {
+			asyncRestRequest("/packages.middleware.pub.security.flow.updateUserFlow.main",
+					JSON.stringify({
+						"userId": user.id,
+						"name": $("#add_team_name").val(),
+						"email": $("#add_team_email").val(),
+						"isAdmin": $("#add_team_isAdmin").is(":checked"),
+						"isDeveloper": $("#add_team_isDeveloper").is(":checked"),
+						"groups": $('#groups-dropdown').val()
+					}), "POST", function (response) {
+						$("#save-btn").removeAttr("disabled");
+						$("#save-btn").html("Save");
+						if (response.status == true) {
+							swal({
+									title: "Account updated successfully.",
+									text: "",
+									type: "success",
+									confirmButtonColor: "#2C61F5" // Optional: blue shade
+							});
+
+							$("#addTeamModal").modal('toggle');
+							loadUsers();
+						} else {
+							swal({
+									title: "Error Occurred. Please try again.",
+									text: "",
+									type: "error",
+									confirmButtonColor: "#f2533e" // Optional: custom red shade
+							});
+
+							$("#addTeamModal").modal('toggle');
+							loadUsers();
+						}
+					});
+
+
+		}
+	}
+
+
+	function updatePassword() {
+		if ($("#first-password").val().trim() == 0) {
+			swal({
+					title: "Invalid password.",
+					text: "",
+					type: "error",
+					confirmButtonColor: "#f2533e" // Optional: red shade
+				});
+
+			return ;
+		}
+
+		if ($("#first-password").val().trim() != $("#confirm-password").val().trim()) {
+			swal({
+					title: "Password mismatched.",
+					type: "error",
+					confirmButtonColor: "#f2533e" // Optional: red button
+			});
+
+			return ;
+		}
+		var response = syncRestRequest("/packages.middleware.pub.security.flow.changePasswordFlow.main",
+				"POST", JSON.stringify({
+					"password": $("#first-password").val()
+				}), "application/json", "application/json");
+
+		if(response.status == 200 && response.payload) {
+			response = JSON.parse(response.payload);
+			if (response.status == true) {
+				swal({
+					title: "Password updated successfully.",
+					type: "success",
+					confirmButtonColor: "#2C61F5" // Optional: custom blue
+				});
+
+				$("#changePasswordModal").modal('toggle');
+				loadUsers();
+			} else {
+				swal({
+						title: "Error Occurred. Please try again.",
+						type: "error",
+						confirmButtonColor: "#f2533e" // Optional red shade
+				});
+
+				$("#changePasswordModal").modal('toggle');
+				loadUsers();
+			}
+		}
+	}
+
+	function getCurrentUser() {
+		var response = syncRestRequest("/packages.middleware.pub.service.getCurrentUserAccount.main", "GET", "");
+		if(response.status == 200 && response.payload) {
+			response = JSON.parse(response.payload);
+			if (null == response.profile.name) {
+				if (null == response.profile.email) {
+					$("#loggedin-name-panel").hide();
+				} else {
+					$("#loggedin-name").html(response.profile.email);
+				}
+
+			} else {
+				$("#loggedin-name").html(response.profile.name);
+			}
+
+			if (null == response.profile.email) {
+				$("#loggedin-email-panel").hide();
+			} else {
+				$("#loggedin-email").html(response.profile.email);
+			}
+
+			$("#loggedin-userId").html(response.userId);
+			$("#profile-tenant-name").html(localStorage.getItem("tenant"));
+
+			/*var cookies = document.cookie.split(";");
+			for  (var i = 0 ; i < cookies.length ; i++) {
+				var coo = cookies[i].split("=");
+				if (coo[0].trim() == "tenant") {
+					$("#profile-tenant-name").html(coo[1].replaceAll('"', "").split(" ")[0] );
+				}
+			}
+			*/
+			let HTML = "";
+			for (let i = 0 ; i < response.profile.groups.length ; i++) {
+				HTML += "<span class=\"bubble\">" + response.profile.groups[i] + "</span>";
+			}
+
+			$("#loggedin-roles").html(HTML);
+		}
+	}
+
+</script>
+<script>
+	const togglePassword = document.querySelector("#togglePassword");
+	const password = document.querySelector("#add_team_password");
+
+	togglePassword.addEventListener("click", function () {
+		// toggle the type attribute
+		const type = password.getAttribute("type") === "password" ? "text" : "password";
+		password.setAttribute("type", type);
+
+		// toggle the icon
+		this.classList.toggle("bi-eye");
+	});
+
+	var environmentTable = null;
+
+	function loadDeployments() {
+		asyncRestRequest("/packages.middleware.pub.environments.api.getEnvironments.main?start=0&length=100", null,  "GET", function (response) {
+			var HTML = "";
+			for (var i = 0 ; i < response.environments.length ; i++) {
+				HTML += '<tr>';
+				HTML += '<td>' + response.environments[i].name + '</td>';
+				HTML += '<td>' + response.environments[i].type + '</td>';
+
+				var dnsName = '<td>---</td>';
+				if (response.environments[i].type == "AWS_ECS") {
+					if (null != response.environments[i].DescribeLoadBalancersResponse && null != response.environments[i].PhysicalResourceId) {
+
+						for (var j = 0 ; j < response.environments[i].DescribeLoadBalancersResponse.DescribeLoadBalancersResult.LoadBalancers.length ; j++) {
+							if (response.environments[i].DescribeLoadBalancersResponse.DescribeLoadBalancersResult.LoadBalancers[j].LoadBalancerArn
+									== response.environments[i].PhysicalResourceId && !response.environments[i].dns_mapping) {
+								dnsName = '<td><a href="https://' + response.environments[i].DescribeLoadBalancersResponse.DescribeLoadBalancersResult.LoadBalancers[j].DNSName + '" target="_blank">'
+										+ response.environments[i].DescribeLoadBalancersResponse.DescribeLoadBalancersResult.LoadBalancers[j].DNSName + '</a></td>';
+								mapDNS(response.environments[i].id, response.environments[i].DescribeLoadBalancersResponse.DescribeLoadBalancersResult.LoadBalancers[j].DNSName);
+								break;
+							} else if (response.environments[i].dns_mapping) {
+								dnsName = '<td><a href="https://' + response.environments[i].sub_domain + '" target="_blank">'
+										+ response.environments[i].sub_domain + '</a></td>';
+								break;
+							}
+						}
+					}
+				} else {
+					dnsName = '<td><a href="https://' + response.environments[i].sub_domain + '" target="_blank">'
+							+ response.environments[i].sub_domain + '</a></td>';
+				}
+
+				HTML += dnsName;
+				HTML += '<td>' + response.environments[i].tenant + '</td>';
+
+				if (response.environments[i].type == "AWS_ECS") {
+					HTML += '<td>' + response.environments[i].credential_key + '</td>';
+					if (response.environments[i].deployed && null != response.environments[i].status) {
+						HTML += '<td>' + response.environments[i].status.DescribeStacksResult.Stacks[0].StackStatus + '</td>';
+					} else {
+						HTML += '<td>NOT DEPLOYED</td>';
+					}
+				} else {
+					HTML += '<td>*****</td>';
+					HTML += '<td>HEALTHY</td>';
+				}
+
+
+				HTML += '<td><a href="javascript:void(0)" onclick="deleteContainer(' + response.environments[i].id + ')">Delete</a> </td>';
+				HTML += '</tr>';
+			}
+
+			$("#deploymentList").html(HTML);
+			if (null != environmentTable) {
+				environmentTable.destroy();
+			}
+			//environmentTable = $("#environmentTable").DataTable({});
+		});
+	}
+
+	function mapDNS(id, dnsName) {
+		asyncRestRequest("/packages.middleware.pub.environments.api.mapDNSName.main?id=" + id + "&registrar_name=godaddy&dnsName=" + dnsName, null,  "PATCH", function (response) {});
+	}
+
+	loadDeployments();
+
+	function deployContainer(ref, deployStatus) {
+		var request = null;
+
+		if ($("#environment_type").val() == "AWS_ECS") {
+			request = {
+				"name": $("#environment_name").val(),
+				"type": $("#environment_type").val(),
+				"credential_id": $("#credential_id").val(),
+				"data_center_region": $("#environment_aws_region").val(),
+				"port_mapping": "",
+				"protocol": "",
+				"aws_acm_arn": $("#environment_aws_acm_arn").val(),
+				"auto_scaling_min_nodes": "1",
+				"auto_scaling_max_nodes": "5",
+				"auto_scaling_cpu_threshold": "75",
+				"deploy": deployStatus,
+				"vpcId": $("#aws_vpc_id").val(),
+				"subnets": [],
+				"resource_cups": "0.5",
+				"resource_memory": "1024",
+				"sub_domain": $("#environment_name").val() + "-" + getTenant() +".syncloop.com",
+				"domain_registrar": "godaddy",
+				"dns_mapping": "false",
+				"tenant": "default"
+			};
+		} else {
+			request = {
+				"name": $("#environment_name").val(),
+				"type": $("#environment_type").val(),
+				"credential_id": $("#credential_id2").val(),
+				"data_center_region": "",
+				"port_mapping": "",
+				"protocol": "",
+				"aws_acm_arn": "",
+				"auto_scaling_min_nodes": "1",
+				"auto_scaling_max_nodes": "5",
+				"auto_scaling_cpu_threshold": "75",
+				"deploy": "false",
+				"vpcId": "",
+				"subnets": [],
+				"resource_cups": "0.5",
+				"resource_memory": "1024",
+				"sub_domain": new URL($("#environment_endpoint").val()).hostname,
+				"domain_registrar": "",
+				"dns_mapping": "true",
+				"tenant": $("#tenant_form_name").val()
+			};
+		}
+
+		if ($("#environment_type").val() == "AWS_ECS") {
+			if ($("#aws_vpc_subnet_id_1").val().trim() != "") {
+				request.subnets.push($("#aws_vpc_subnet_id_1").val());
+			}
+			if ($("#aws_vpc_subnet_id_2").val().trim() != "") {
+				request.subnets.push($("#aws_vpc_subnet_id_2").val());
+			}
+			if ($("#aws_vpc_subnet_id_3").val().trim() != "") {
+				request.subnets.push($("#aws_vpc_subnet_id_3").val());
+			}
+			if ($("#aws_vpc_subnet_id_4").val().trim() != "") {
+				request.subnets.push($("#aws_vpc_subnet_id_4").val());
+			}
+		} else {
+			request.dns_mapping = true;
+		}
+
+		$(".deploy-container").attr('disabled', 'disabled');
+
+		asyncRestRequest("/packages.middleware.pub.environments.api.deployContainer.main", JSON.stringify(request),  "POST", function (response) {
+			if (response.status == true && response.cf_response.Error != null) {
+				swal({
+					title: "Error Occurred. Please try again.",
+					type: "error",
+					confirmButtonColor: "#f2533e"
+				});
+
+			} else if (response.status == true) {
+				if (deployStatus) {
+					swal({
+							title: "Submitted successfully for deployment.",
+							type: "success",
+							confirmButtonColor: "#2C61F5"
+					});
+
+				} else {
+					swal({
+							title: "Added successfully.",
+							type: "success",
+							confirmButtonColor: "#2C61F5"
+					});
+
+				}
+				$("#addEnvironmentModal").modal('toggle');
+				loadDeployments();
+			} else {
+				swal({
+						title: "Error Occurred. Please try again.",
+						text: "",
+						type: "error",
+						confirmButtonColor: "#f2533e" // Red or any custom color
+					});
+
+			}
+			$(".deploy-container").removeAttr('disabled');
+		});
+
+	}
+
+	function deleteContainer(id) {
+		asyncRestRequest("/packages.middleware.pub.environments.api.deleteContainer.main?id=" + id, null,  "GET", function (response) {
+			if (response.status == true) {
+				swal({
+					title: "Removed from Syncloop. Deletion of an ECS Cluster is in progress",
+					text: "",
+					type: "success",
+					confirmButtonColor: "#2C61F5" // Optional: custom success color
+					});
+
+				loadDeployments();
+			} else {
+				swal({
+						title: "Error Occurred. Please try again.",
+						text: "",
+						type: "error",
+						confirmButtonColor: "#f2533e" // Optional: custom red shade
+						});
+
+			}
+		});
+	}
+
+	function getAllCredentials() {
+		asyncRestRequest("/packages.middleware.pub.environments.api.getCredentials.main?length=100&start=0", null,  "GET", function (response) {
+			$("#credential_id").html("");
+			$("#credential_id2").html("");
+			for (var i = 0 ; i < response.credentials.length ; i++) {
+				$("#credential_id").append("<option value='" + response.credentials[i].id + "'>" + response.credentials[i].name + ":" + response.credentials[i].api_username + "</option>");
+				$("#credential_id2").append("<option value='" + response.credentials[i].id + "'>" + response.credentials[i].name + ":" + response.credentials[i].api_username + "</option>");
+			}
+		});
+	}
+
+	getAllCredentials();
+
+	function loadCertificates(ref) {
+		$(ref).html("...");
+		asyncRestRequest("/packages.Wrapper.AWS.acm.getCertificates.main", JSON.stringify({
+			"credential_id": $("#credential_id").val(),
+			"region": $("#environment_aws_region").val()
+		}),  "POST", function (response) {
+
+
+			$("#environment_aws_acm_arn").html("");
+
+			if (null == response.response.CertificateSummaryList) {
+			swal({
+					title: "Error.",
+					text: JSON.stringify(response.response),
+					type: "error",
+					confirmButtonColor: "#f2533e" // Optional: red shade
+					});
+
+			} else {
+				if (response.response.CertificateSummaryList.length == 0) {
+					swal({
+						title: "Error.",
+						text: "No certificate found in this region.",
+						type: "error",
+						confirmButtonColor: "#f2533e" // Optional: red shade for error
+						});
+
+				}
+				for (var i = 0; i < response.response.CertificateSummaryList.length; i++) {
+					$("#environment_aws_acm_arn").append("<option value='" + response.response.CertificateSummaryList[i].CertificateArn + "'>" + response.response.CertificateSummaryList[i].SubjectAlternativeNameSummaries[0] + "</option>")
+				}
+			}
+			$(ref).html("Load");
+		});
+	}
+
+	function getTenant(){
+		const tenant = localStorage.getItem("tenant");
+		if (tenant && typeof tenant === "string" && tenant.trim() !== "" &&
+				tenant !== "null" && tenant !== "undefined") {
+			return tenant.trim();
+		}
+		return "default";
+	}
+
+	/*function getTenant() {
+		var cookies = document.cookie.split(";");
+		for  (var i = 0 ; i < cookies.length ; i++) {
+			var coo = cookies[i].split("=");
+			if (coo[0].trim() == "tenant") {
+				return coo[1].replaceAll('"', "").split(" ")[0];
+			}
+		}
+	}*/
+
+	var credentialsTable = $("#credentialsTable").DataTable({
+		"serverSide": true,
+		"ajax": {
+			"url": window.ENV.API_BASE_URL + "/tenant/" + localStorage.getItem("tenant") + "/packages.middleware.pub.environments.api.getCredentials.main",
+			"dataSrc": function(data) {
+				if (data.credentials == null) {
+					return [];
+				} else {
+					return data.credentials;
+				}
+			},
+			"headers": {
+				"Authorization": "Bearer " + localStorage.getItem("AuthToken")
+			},
+			"type": "GET"
+		},
+		saveState : true,
+		"deferRender": true,
+		"iDisplayLength": 20,
+		"lengthMenu": [ 20, 50, 100 ],
+		"fnRowCallback" : function(nRow, aData, iDisplayIndex){
+			$("td:nth-of-type(1)", nRow).html(credentialsTable.page.info().start + iDisplayIndex +1);
+			return nRow;
+		},
+		"columns": [
+			{ "data": "id"},
+			{ "data": "name"},
+			{ "data": "api_username"},
+			{ "data": "password", "render": function ( data, type, full, meta ) {
+					return "*****";
+				}
+			},
+			{ "data": "id", "render": function ( data, type, full, meta ) {
+					return '<a href="javascript:void(0)" onclick="deleteCredential(' + data + ')">Delete</a> ';
+				}
+			}
+		]
+	});
+
+	$('[data-toggle="tooltip"]').tooltip();
+
+	function addCredential(ref) {
+		$(ref).attr('disabled', 'disabled');
+		asyncRestRequest("/packages.middleware.pub.environments.api.addCredential.main", JSON.stringify({
+			name : $("#credential_name").val(),
+			api_username : $("#credential_username").val(),
+			api_password : $("#credential_password").val()
+		}),  "POST", function (response) {
+			if (response.status == true) {
+				swal({
+					title: "Added successfully.",
+					text: "",
+					type: "success",
+					confirmButtonColor: "#2C61F5" // Optional: custom blue shade
+					});
+
+
+				$("#credential_name").val("");
+				$("#credential_username").val("");
+				$("#credential_password").val("");
+
+				$("#credentialsModal").modal('toggle');
+				credentialsTable.draw();
+				getAllCredentials();
+			} else {
+				swal({
+						title: "Error Occurred. Please try again.",
+						text: "",
+						type: "error",
+						confirmButtonColor: "#f2533e" // Optional: red shade
+					});
+
+			}
+			$(ref).removeAttr('disabled');
+		});
+	}
+
+	function deleteCredential(id) {
+		asyncRestRequest("/packages.middleware.pub.environments.api.deleteCredential.main?id=" + id, null,  "DELETE", function (response) {
+			if (response.status == true) {
+				swal({
+						title: "Deleted successfully.",
+					text: "",
+					type: "success",
+					confirmButtonColor: "#2C61F5" // Optional: blue shade
+					});
+
+				credentialsTable.draw();
+				getAllCredentials();
+			} else {
+				swal({
+					title: "Error Occurred. Please try again.",
+					text: "",
+					type: "error",
+					confirmButtonColor: "#f2533e" // Optional: red shade
+					});
+
+			}
+		});
+	}
+</script>
+
+
+<script>
+//$('#environment_type').on('change', function() {
+  //$('#ekaenv').css('display', 'none');
+  //if ( $(this).val() === 'EKA_ENV' ) {
+   // $('#ekaenv').css('display', 'block');
+ // }
+//});
+
+
+
+$(function() {
+	  $('#environment_type').change(function(){
+		$('.display-none').hide();
+		$('#' + $(this).val()).show();
+
+	  });
+});
+</script>
+
+</html>

@@ -1,0 +1,655 @@
+{
+  "latest" : {
+    "createdTS" : "",
+    "input" : [ {
+      "id" : "j2_1",
+      "text" : "*pathParameters",
+      "li_attr" : {
+        "id" : "j2_1"
+      },
+      "a_attr" : {
+        "href" : "#",
+        "id" : "j2_1_anchor"
+      },
+      "state" : {
+        "loaded" : true,
+        "opened" : true,
+        "selected" : false,
+        "disabled" : false,
+        "hidden" : false
+      },
+      "data" : { },
+      "children" : [ {
+        "id" : "j2_2",
+        "text" : "id",
+        "li_attr" : {
+          "id" : "j2_2"
+        },
+        "a_attr" : {
+          "href" : "#",
+          "id" : "j2_2_anchor"
+        },
+        "state" : {
+          "loaded" : true,
+          "opened" : false,
+          "selected" : false,
+          "disabled" : false
+        },
+        "data" : { },
+        "children" : [ ],
+        "type" : "string"
+      } ],
+      "type" : "document"
+    }, {
+      "id" : "j2_3",
+      "text" : "startIndex",
+      "li_attr" : {
+        "id" : "j2_3"
+      },
+      "a_attr" : {
+        "href" : "#",
+        "id" : "j2_3_anchor"
+      },
+      "state" : {
+        "loaded" : true,
+        "opened" : false,
+        "selected" : false,
+        "disabled" : false,
+        "hidden" : false
+      },
+      "data" : { },
+      "children" : [ ],
+      "type" : "integer"
+    }, {
+      "id" : "j2_4",
+      "text" : "rows",
+      "li_attr" : {
+        "id" : "j2_4"
+      },
+      "a_attr" : {
+        "href" : "#",
+        "id" : "j2_4_anchor"
+      },
+      "state" : {
+        "loaded" : true,
+        "opened" : false,
+        "selected" : false,
+        "disabled" : false,
+        "hidden" : false
+      },
+      "data" : { },
+      "children" : [ ],
+      "type" : "integer"
+    } ],
+    "output" : [ {
+      "id" : "j3_1",
+      "text" : "output",
+      "li_attr" : {
+        "id" : "j3_1"
+      },
+      "a_attr" : {
+        "href" : "#",
+        "id" : "j3_1_anchor"
+      },
+      "state" : {
+        "loaded" : true,
+        "opened" : false,
+        "selected" : false,
+        "disabled" : false,
+        "hidden" : false
+      },
+      "data" : { },
+      "children" : [ ],
+      "type" : "documentList"
+    } ],
+    "api_info" : {
+      "title" : "",
+      "description" : ""
+    },
+    "lockedByUser" : "admin",
+    "api" : [ {
+      "id" : "j1_4",
+      "text" : "Transformer",
+      "li_attr" : {
+        "id" : "j1_4"
+      },
+      "a_attr" : {
+        "href" : "javascript:void(0)",
+        "id" : "j1_4_anchor"
+      },
+      "state" : {
+        "loaded" : true,
+        "opened" : false,
+        "selected" : false,
+        "disabled" : false,
+        "hidden" : false
+      },
+      "data" : {
+        "transformers" : [ {
+          "op" : "copy",
+          "from" : "/startIndex",
+          "to" : "/startIndex",
+          "condition" : "#{startIndex}==null",
+          "applyFunction" : "custom",
+          "jsFunction" : "cmV0dXJuIDA7",
+          "jsFunctionSig" : "",
+          "inTypePath" : "integer",
+          "outTypePath" : "integer"
+        }, {
+          "op" : "copy",
+          "from" : "/rows",
+          "to" : "/rowCount",
+          "condition" : "#{rows}==null",
+          "applyFunction" : "custom",
+          "jsFunction" : "cmV0dXJuIDUwOw==",
+          "jsFunctionSig" : "",
+          "inTypePath" : "integer",
+          "outTypePath" : "integer"
+        } ],
+        "lines" : [ {
+          "inputPath" : "startIndex",
+          "outputPath" : "startIndex",
+          "inpJsTree" : "#launching_arrow_jsTree",
+          "outpJsTree" : "#landing_arrow_jsTree",
+          "INPath" : "startIndex",
+          "OUTPath" : "startIndex",
+          "op" : "copy",
+          "line" : 0,
+          "dashedLine" : false,
+          "inType" : "integer",
+          "outType" : "integer",
+          "applyFunction" : "custom",
+          "condition" : "#{startIndex}==null",
+          "jsFunction" : "cmV0dXJuIDA7",
+          "jsFunctionSig" : "",
+          "inTypePath" : "integer",
+          "outTypePath" : "integer"
+        }, {
+          "inputPath" : "rows",
+          "outputPath" : "rowCount",
+          "inpJsTree" : "#launching_arrow_jsTree",
+          "outpJsTree" : "#landing_arrow_jsTree",
+          "INPath" : "rows",
+          "OUTPath" : "rowCount",
+          "op" : "copy",
+          "line" : 0,
+          "dashedLine" : false,
+          "inType" : "integer",
+          "outType" : "integer",
+          "applyFunction" : "custom",
+          "condition" : "#{rows}==null",
+          "jsFunction" : "cmV0dXJuIDUwOw==",
+          "jsFunctionSig" : "",
+          "inTypePath" : "integer",
+          "outTypePath" : "integer"
+        } ],
+        "dropList" : [ ],
+        "createList" : [ ],
+        "guid" : "462d15ce-f31b-4c07-a74a-0eec25348d7e"
+      },
+      "children" : [ ],
+      "type" : "transformer"
+    }, {
+      "id" : "j1_1",
+      "text" : "Invoke",
+      "li_attr" : {
+        "id" : "j1_1"
+      },
+      "a_attr" : {
+        "href" : "javascript:void(0)",
+        "id" : "j1_1_anchor"
+      },
+      "state" : {
+        "loaded" : true,
+        "opened" : false,
+        "selected" : false,
+        "disabled" : false,
+        "hidden" : false
+      },
+      "data" : {
+        "transformers" : [ {
+          "op" : "copy",
+          "from" : "/*pathParameters/id",
+          "to" : "/inputDocList/0/id",
+          "inTypePath" : "document/string",
+          "outTypePath" : "documentList/string"
+        }, {
+          "op" : "loop",
+          "from" : "/outputDocList/#{loop_id_-331687499}",
+          "to" : "/output/#{loop_id_-331687499}",
+          "loop_Id" : "loop_id_-331687499",
+          "inTypePath" : "documentList",
+          "outTypePath" : "documentList"
+        }, {
+          "op" : "add",
+          "from" : "/outputDocList/#{loop_id_-331687499}/id",
+          "to" : "/output/#{loop_id_-331687499}/id",
+          "follow" : "loop_id_-331687499",
+          "inTypePath" : "documentList/string",
+          "outTypePath" : "documentList/string"
+        }, {
+          "op" : "add",
+          "from" : "/outputDocList/#{loop_id_-331687499}/serviceFqn",
+          "to" : "/output/#{loop_id_-331687499}/serviceFqn",
+          "follow" : "loop_id_-331687499",
+          "inTypePath" : "documentList/string",
+          "outTypePath" : "documentList/string"
+        }, {
+          "op" : "add",
+          "from" : "/outputDocList/#{loop_id_-331687499}/cron",
+          "to" : "/output/#{loop_id_-331687499}/cron",
+          "follow" : "loop_id_-331687499",
+          "inTypePath" : "documentList/string",
+          "outTypePath" : "documentList/string"
+        }, {
+          "op" : "add",
+          "from" : "/outputDocList/#{loop_id_-331687499}/status",
+          "to" : "/output/#{loop_id_-331687499}/status",
+          "follow" : "loop_id_-331687499",
+          "inTypePath" : "documentList/string",
+          "outTypePath" : "documentList/string"
+        }, {
+          "op" : "add",
+          "from" : "/outputDocList/#{loop_id_-331687499}/lasterror",
+          "to" : "/output/#{loop_id_-331687499}/lasterror",
+          "follow" : "loop_id_-331687499",
+          "inTypePath" : "documentList/string",
+          "outTypePath" : "documentList/string"
+        }, {
+          "op" : "add",
+          "from" : "/outputDocList/#{loop_id_-331687499}/enabled",
+          "to" : "/output/#{loop_id_-331687499}/enabled",
+          "follow" : "loop_id_-331687499",
+          "inTypePath" : "documentList/string",
+          "outTypePath" : "documentList/string"
+        }, {
+          "op" : "add",
+          "from" : "/outputDocList/#{loop_id_-331687499}/owner_node",
+          "to" : "/output/#{loop_id_-331687499}/owner_node",
+          "follow" : "loop_id_-331687499",
+          "inTypePath" : "documentList/string",
+          "outTypePath" : "documentList/string"
+        }, {
+          "op" : "add",
+          "from" : "/outputDocList/#{loop_id_-331687499}/last_run",
+          "to" : "/output/#{loop_id_-331687499}/last_run",
+          "follow" : "loop_id_-331687499",
+          "inTypePath" : "documentList/string",
+          "outTypePath" : "documentList/string"
+        }, {
+          "op" : "add",
+          "from" : "/outputDocList/#{loop_id_-331687499}/next_run",
+          "to" : "/output/#{loop_id_-331687499}/next_run",
+          "follow" : "loop_id_-331687499",
+          "inTypePath" : "documentList/string",
+          "outTypePath" : "documentList/string"
+        }, {
+          "op" : "add",
+          "from" : "/outputDocList/#{loop_id_-331687499}/created_time",
+          "to" : "/output/#{loop_id_-331687499}/created_time",
+          "follow" : "loop_id_-331687499",
+          "inTypePath" : "documentList/string",
+          "outTypePath" : "documentList/string"
+        }, {
+          "op" : "add",
+          "from" : "/outputDocList/#{loop_id_-331687499}/job_name",
+          "to" : "/output/#{loop_id_-331687499}/job_name",
+          "follow" : "loop_id_-331687499",
+          "inTypePath" : "documentList/string",
+          "outTypePath" : "documentList/string"
+        } ],
+        "lines" : [ {
+          "inputPath" : "*pathParameters/id",
+          "outputPath" : "inputDocList/id",
+          "inpJsTree" : "#launching_arrow_jsTree",
+          "outpJsTree" : "#landing_arrow_jsTree_function",
+          "INPath" : "*pathParameters/id",
+          "OUTPath" : "inputDocList/#0/id",
+          "op" : "copy",
+          "line" : 0,
+          "dashedLine" : false,
+          "inType" : "string",
+          "outType" : "string",
+          "inTypePath" : "document/string",
+          "outTypePath" : "documentList/string"
+        }, {
+          "loop_Id" : "loop_id_-331687499",
+          "inputPath" : "outputDocList",
+          "outputPath" : "output",
+          "inpJsTree" : "#launching_arrow_jsTree_function",
+          "outpJsTree" : "#landing_arrow_jsTree",
+          "INPath" : "outputDocList/#{loop_id_-331687499}",
+          "OUTPath" : "output/#{loop_id_-331687499}",
+          "line" : 0,
+          "dashedLine" : true,
+          "op" : "loop",
+          "inType" : "documentList",
+          "outType" : "documentList",
+          "inTypePath" : "documentList",
+          "outTypePath" : "documentList"
+        }, {
+          "inputPath" : "outputDocList/id",
+          "outputPath" : "output/id",
+          "inpJsTree" : "#launching_arrow_jsTree_function",
+          "outpJsTree" : "#landing_arrow_jsTree",
+          "INPath" : "outputDocList/#{loop_id_-331687499}/id",
+          "OUTPath" : "output/#{loop_id_-331687499}/id",
+          "follow" : "loop_id_-331687499",
+          "op" : "add",
+          "line" : 0,
+          "dashedLine" : false,
+          "inType" : "string",
+          "outType" : "string",
+          "inTypePath" : "documentList/string",
+          "outTypePath" : "documentList/string"
+        }, {
+          "inputPath" : "outputDocList/serviceFqn",
+          "outputPath" : "output/serviceFqn",
+          "inpJsTree" : "#launching_arrow_jsTree_function",
+          "outpJsTree" : "#landing_arrow_jsTree",
+          "INPath" : "outputDocList/#{loop_id_-331687499}/serviceFqn",
+          "OUTPath" : "output/#{loop_id_-331687499}/serviceFqn",
+          "follow" : "loop_id_-331687499",
+          "op" : "add",
+          "line" : 0,
+          "dashedLine" : false,
+          "inType" : "string",
+          "outType" : "string",
+          "inTypePath" : "documentList/string",
+          "outTypePath" : "documentList/string"
+        }, {
+          "inputPath" : "outputDocList/cron",
+          "outputPath" : "output/cron",
+          "inpJsTree" : "#launching_arrow_jsTree_function",
+          "outpJsTree" : "#landing_arrow_jsTree",
+          "INPath" : "outputDocList/#{loop_id_-331687499}/cron",
+          "OUTPath" : "output/#{loop_id_-331687499}/cron",
+          "follow" : "loop_id_-331687499",
+          "op" : "add",
+          "line" : 0,
+          "dashedLine" : false,
+          "inType" : "string",
+          "outType" : "string",
+          "inTypePath" : "documentList/string",
+          "outTypePath" : "documentList/string"
+        }, {
+          "inputPath" : "outputDocList/status",
+          "outputPath" : "output/status",
+          "inpJsTree" : "#launching_arrow_jsTree_function",
+          "outpJsTree" : "#landing_arrow_jsTree",
+          "INPath" : "outputDocList/#{loop_id_-331687499}/status",
+          "OUTPath" : "output/#{loop_id_-331687499}/status",
+          "follow" : "loop_id_-331687499",
+          "op" : "add",
+          "line" : 0,
+          "dashedLine" : false,
+          "inType" : "string",
+          "outType" : "string",
+          "inTypePath" : "documentList/string",
+          "outTypePath" : "documentList/string"
+        }, {
+          "inputPath" : "outputDocList/lasterror",
+          "outputPath" : "output/lasterror",
+          "inpJsTree" : "#launching_arrow_jsTree_function",
+          "outpJsTree" : "#landing_arrow_jsTree",
+          "INPath" : "outputDocList/#{loop_id_-331687499}/lasterror",
+          "OUTPath" : "output/#{loop_id_-331687499}/lasterror",
+          "follow" : "loop_id_-331687499",
+          "op" : "add",
+          "line" : 0,
+          "dashedLine" : false,
+          "inType" : "string",
+          "outType" : "string",
+          "inTypePath" : "documentList/string",
+          "outTypePath" : "documentList/string"
+        }, {
+          "inputPath" : "outputDocList/enabled",
+          "outputPath" : "output/enabled",
+          "inpJsTree" : "#launching_arrow_jsTree_function",
+          "outpJsTree" : "#landing_arrow_jsTree",
+          "INPath" : "outputDocList/#{loop_id_-331687499}/enabled",
+          "OUTPath" : "output/#{loop_id_-331687499}/enabled",
+          "follow" : "loop_id_-331687499",
+          "op" : "add",
+          "line" : 0,
+          "dashedLine" : false,
+          "inType" : "string",
+          "outType" : "string",
+          "inTypePath" : "documentList/string",
+          "outTypePath" : "documentList/string"
+        }, {
+          "inputPath" : "outputDocList/owner_node",
+          "outputPath" : "output/owner_node",
+          "inpJsTree" : "#launching_arrow_jsTree_function",
+          "outpJsTree" : "#landing_arrow_jsTree",
+          "INPath" : "outputDocList/#{loop_id_-331687499}/owner_node",
+          "OUTPath" : "output/#{loop_id_-331687499}/owner_node",
+          "follow" : "loop_id_-331687499",
+          "op" : "add",
+          "line" : 0,
+          "dashedLine" : false,
+          "inType" : "string",
+          "outType" : "string",
+          "inTypePath" : "documentList/string",
+          "outTypePath" : "documentList/string"
+        }, {
+          "inputPath" : "outputDocList/last_run",
+          "outputPath" : "output/last_run",
+          "inpJsTree" : "#launching_arrow_jsTree_function",
+          "outpJsTree" : "#landing_arrow_jsTree",
+          "INPath" : "outputDocList/#{loop_id_-331687499}/last_run",
+          "OUTPath" : "output/#{loop_id_-331687499}/last_run",
+          "follow" : "loop_id_-331687499",
+          "op" : "add",
+          "line" : 0,
+          "dashedLine" : false,
+          "inType" : "string",
+          "outType" : "string",
+          "inTypePath" : "documentList/string",
+          "outTypePath" : "documentList/string"
+        }, {
+          "inputPath" : "outputDocList/next_run",
+          "outputPath" : "output/next_run",
+          "inpJsTree" : "#launching_arrow_jsTree_function",
+          "outpJsTree" : "#landing_arrow_jsTree",
+          "INPath" : "outputDocList/#{loop_id_-331687499}/next_run",
+          "OUTPath" : "output/#{loop_id_-331687499}/next_run",
+          "follow" : "loop_id_-331687499",
+          "op" : "add",
+          "line" : 0,
+          "dashedLine" : false,
+          "inType" : "string",
+          "outType" : "string",
+          "inTypePath" : "documentList/string",
+          "outTypePath" : "documentList/string"
+        }, {
+          "inputPath" : "outputDocList/created_time",
+          "outputPath" : "output/created_time",
+          "inpJsTree" : "#launching_arrow_jsTree_function",
+          "outpJsTree" : "#landing_arrow_jsTree",
+          "INPath" : "outputDocList/#{loop_id_-331687499}/created_time",
+          "OUTPath" : "output/#{loop_id_-331687499}/created_time",
+          "follow" : "loop_id_-331687499",
+          "op" : "add",
+          "line" : 0,
+          "dashedLine" : false,
+          "inType" : "string",
+          "outType" : "string",
+          "inTypePath" : "documentList/string",
+          "outTypePath" : "documentList/string"
+        }, {
+          "inputPath" : "outputDocList/job_name",
+          "outputPath" : "output/job_name",
+          "inpJsTree" : "#launching_arrow_jsTree_function",
+          "outpJsTree" : "#landing_arrow_jsTree",
+          "INPath" : "outputDocList/#{loop_id_-331687499}/job_name",
+          "OUTPath" : "output/#{loop_id_-331687499}/job_name",
+          "follow" : "loop_id_-331687499",
+          "op" : "add",
+          "line" : 0,
+          "dashedLine" : false,
+          "inType" : "string",
+          "outType" : "string",
+          "inTypePath" : "documentList/string",
+          "outTypePath" : "documentList/string"
+        } ],
+        "dropList" : [ {
+          "path" : "*pathParameters",
+          "typePath" : "document"
+        }, {
+          "path" : "inputDocList",
+          "typePath" : "documentList"
+        } ],
+        "createList" : [ ],
+        "serviceType" : "sql",
+        "comment" : "Getting one scheduler record from the database",
+        "guid" : "fcb56bb9-1592-4f0b-b602-6104ffdba8ac",
+        "fqn" : "packages/scheduler/cronJob/adapter/services/DQL/getSchedulerById"
+      },
+      "children" : [ ],
+      "type" : "invoke"
+    }, {
+      "id" : "j1_2",
+      "text" : "Foreach",
+      "li_attr" : {
+        "id" : "j1_2"
+      },
+      "a_attr" : {
+        "href" : "javascript:void(0)",
+        "id" : "j1_2_anchor"
+      },
+      "state" : {
+        "loaded" : true,
+        "opened" : true,
+        "selected" : false,
+        "disabled" : false,
+        "hidden" : false
+      },
+      "data" : {
+        "inArray" : "output",
+        "outArray" : "out",
+        "status" : "enabled",
+        "guid" : "92b10275-5a31-4b3f-ba69-cdfde709214e"
+      },
+      "children" : [ {
+        "id" : "j1_3",
+        "text" : "Invoke",
+        "li_attr" : {
+          "id" : "j1_3"
+        },
+        "a_attr" : {
+          "href" : "javascript:void(0)",
+          "id" : "j1_3_anchor"
+        },
+        "state" : {
+          "loaded" : true,
+          "opened" : false,
+          "selected" : true,
+          "disabled" : false
+        },
+        "data" : {
+          "transformers" : [ {
+            "op" : "copy",
+            "from" : "/output/id",
+            "to" : "/inputDocList/0/id",
+            "inTypePath" : "document/string",
+            "outTypePath" : "documentList/string"
+          }, {
+            "op" : "copy",
+            "from" : "/outputDocList",
+            "to" : "/output/job_history",
+            "inTypePath" : "documentList",
+            "outTypePath" : "document/documentList"
+          }, {
+            "op" : "copy",
+            "from" : "/rowCount",
+            "to" : "/substitute/rows",
+            "inTypePath" : "integer",
+            "outTypePath" : "document/integer",
+            "direction" : "in"
+          }, {
+            "op" : "copy",
+            "from" : "/startIndex",
+            "to" : "/substitute/startIndex",
+            "inTypePath" : "integer",
+            "outTypePath" : "document/integer",
+            "direction" : "in"
+          } ],
+          "lines" : [ {
+            "inputPath" : "output/id",
+            "outputPath" : "inputDocList/id",
+            "inpJsTree" : "#launching_arrow_jsTree",
+            "outpJsTree" : "#landing_arrow_jsTree_function",
+            "INPath" : "output/id",
+            "OUTPath" : "inputDocList/#0/id",
+            "op" : "copy",
+            "line" : 0,
+            "dashedLine" : false,
+            "inType" : "string",
+            "outType" : "string",
+            "inTypePath" : "document/string",
+            "outTypePath" : "documentList/string"
+          }, {
+            "inputPath" : "outputDocList",
+            "outputPath" : "output/job_history",
+            "inpJsTree" : "#launching_arrow_jsTree_function",
+            "outpJsTree" : "#landing_arrow_jsTree",
+            "INPath" : "outputDocList",
+            "OUTPath" : "output/job_history",
+            "op" : "copy",
+            "line" : 0,
+            "dashedLine" : false,
+            "inType" : "documentList",
+            "outType" : "documentList",
+            "inTypePath" : "documentList",
+            "outTypePath" : "document/documentList"
+          }, {
+            "inputPath" : "rowCount",
+            "outputPath" : "substitute/rows",
+            "inpJsTree" : "#launching_arrow_jsTree",
+            "outpJsTree" : "#landing_arrow_jsTree_function",
+            "INPath" : "rowCount",
+            "OUTPath" : "substitute/rows",
+            "direction" : "in",
+            "op" : "copy",
+            "line" : 0,
+            "dashedLine" : false,
+            "inType" : "integer",
+            "outType" : "integer",
+            "inTypePath" : "integer",
+            "outTypePath" : "document/integer"
+          }, {
+            "inputPath" : "startIndex",
+            "outputPath" : "substitute/startIndex",
+            "inpJsTree" : "#launching_arrow_jsTree",
+            "outpJsTree" : "#landing_arrow_jsTree_function",
+            "INPath" : "startIndex",
+            "OUTPath" : "substitute/startIndex",
+            "direction" : "in",
+            "op" : "copy",
+            "line" : 0,
+            "dashedLine" : false,
+            "inType" : "integer",
+            "outType" : "integer",
+            "inTypePath" : "integer",
+            "outTypePath" : "document/integer"
+          } ],
+          "dropList" : [ ],
+          "createList" : [ ],
+          "serviceType" : "sql",
+          "status" : "enabled",
+          "comment" : "Getting recent 5 rows form job_history database.",
+          "guid" : "9a1a6e60-7d17-442f-a7cb-61cd32cb58d0",
+          "initiateList" : [ ],
+          "fqn" : "packages/scheduler/cronJob/adapter/services/DQL/getJobHistory"
+        },
+        "children" : [ ],
+        "type" : "invoke"
+      } ],
+      "type" : "foreach"
+    } ]
+  },
+  "consumers" : "",
+  "developers" : "rnd",
+  "enableServiceDocumentValidation" : false
+}

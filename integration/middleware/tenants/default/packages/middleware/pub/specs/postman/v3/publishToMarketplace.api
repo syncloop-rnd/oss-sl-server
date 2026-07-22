@@ -1,0 +1,1011 @@
+{
+  "latest" : {
+    "createdTS" : "",
+    "input" : [ {
+      "id" : "j2_1",
+      "text" : "packageName",
+      "li_attr" : {
+        "id" : "j2_1"
+      },
+      "a_attr" : {
+        "href" : "#",
+        "id" : "j2_1_anchor"
+      },
+      "state" : {
+        "loaded" : true,
+        "opened" : false,
+        "selected" : false,
+        "disabled" : false
+      },
+      "data" : { },
+      "children" : [ ],
+      "type" : "string"
+    } ],
+    "output" : [ {
+      "id" : "j3_1",
+      "text" : "url",
+      "li_attr" : {
+        "id" : "j3_1"
+      },
+      "a_attr" : {
+        "href" : "#",
+        "id" : "j3_1_anchor"
+      },
+      "state" : {
+        "loaded" : true,
+        "opened" : false,
+        "selected" : false,
+        "disabled" : false
+      },
+      "data" : { },
+      "children" : [ ],
+      "type" : "string"
+    }, {
+      "id" : "j3_3",
+      "text" : "path",
+      "li_attr" : {
+        "id" : "j3_3"
+      },
+      "a_attr" : {
+        "href" : "#",
+        "id" : "j3_3_anchor"
+      },
+      "state" : {
+        "loaded" : true,
+        "opened" : false,
+        "selected" : false,
+        "disabled" : false
+      },
+      "data" : { },
+      "children" : [ ],
+      "type" : "string"
+    }, {
+      "id" : "j3_4",
+      "text" : "msg",
+      "li_attr" : {
+        "id" : "j3_4"
+      },
+      "a_attr" : {
+        "href" : "#",
+        "id" : "j3_4_anchor"
+      },
+      "state" : {
+        "loaded" : true,
+        "opened" : false,
+        "selected" : false,
+        "disabled" : false
+      },
+      "data" : { },
+      "children" : [ ],
+      "type" : "string"
+    }, {
+      "id" : "j3_5",
+      "text" : "serviceDetails",
+      "li_attr" : {
+        "id" : "j3_5"
+      },
+      "a_attr" : {
+        "href" : "#",
+        "id" : "j3_5_anchor"
+      },
+      "state" : {
+        "loaded" : true,
+        "opened" : false,
+        "selected" : false,
+        "disabled" : false
+      },
+      "data" : { },
+      "children" : [ {
+        "id" : "j3_6",
+        "text" : "asset",
+        "li_attr" : {
+          "id" : "j3_6"
+        },
+        "a_attr" : {
+          "href" : "#"
+        },
+        "state" : {
+          "loaded" : true,
+          "opened" : false,
+          "selected" : false,
+          "disabled" : false
+        },
+        "data" : { },
+        "children" : [ ],
+        "type" : "string"
+      }, {
+        "id" : "j3_7",
+        "text" : "type",
+        "li_attr" : {
+          "id" : "j3_7"
+        },
+        "a_attr" : {
+          "href" : "#"
+        },
+        "state" : {
+          "loaded" : true,
+          "opened" : false,
+          "selected" : false,
+          "disabled" : false
+        },
+        "data" : { },
+        "children" : [ ],
+        "type" : "string"
+      } ],
+      "type" : "documentList"
+    }, {
+      "id" : "j3_8",
+      "text" : "zipContents",
+      "li_attr" : {
+        "id" : "j3_8"
+      },
+      "a_attr" : {
+        "href" : "#",
+        "id" : "j3_8_anchor"
+      },
+      "state" : {
+        "loaded" : true,
+        "opened" : false,
+        "selected" : false,
+        "disabled" : false
+      },
+      "data" : { },
+      "children" : [ ],
+      "type" : "byte"
+    }, {
+      "id" : "j3_9",
+      "text" : "response",
+      "li_attr" : {
+        "id" : "j3_9"
+      },
+      "a_attr" : {
+        "href" : "#",
+        "id" : "j3_9_anchor"
+      },
+      "state" : {
+        "loaded" : true,
+        "opened" : false,
+        "selected" : false,
+        "disabled" : false
+      },
+      "data" : { },
+      "children" : [ ],
+      "type" : "document"
+    } ],
+    "api" : [ {
+      "id" : "j1_7",
+      "text" : "Transformer",
+      "li_attr" : {
+        "id" : "j1_7"
+      },
+      "a_attr" : {
+        "href" : "javascript:void(0)",
+        "id" : "j1_7_anchor"
+      },
+      "state" : {
+        "loaded" : true,
+        "opened" : false,
+        "selected" : false,
+        "disabled" : false
+      },
+      "data" : {
+        "guid" : "2787cba0-b428-4d8b-851c-5419e531879c",
+        "transformers" : [ ],
+        "lines" : [ ],
+        "dropList" : [ ],
+        "createList" : [ {
+          "path" : "dateFormat",
+          "value" : "dMMMyyyy_HHmmss",
+          "typePath" : "string"
+        } ],
+        "comment" : "Set Date Format"
+      },
+      "children" : [ ],
+      "type" : "transformer"
+    }, {
+      "id" : "j1_5",
+      "text" : "Invoke",
+      "li_attr" : {
+        "id" : "j1_5"
+      },
+      "a_attr" : {
+        "href" : "javascript:void(0)",
+        "id" : "j1_5_anchor"
+      },
+      "state" : {
+        "loaded" : true,
+        "opened" : false,
+        "selected" : false,
+        "disabled" : false
+      },
+      "data" : {
+        "guid" : "bc231c98-1d92-454e-a518-1da9ba2b46c5",
+        "transformers" : [ {
+          "op" : "copy",
+          "from" : "/dateFormat",
+          "to" : "/format",
+          "inTypePath" : "string",
+          "outTypePath" : "string",
+          "direction" : "in"
+        }, {
+          "op" : "copy",
+          "from" : "/curDatetime",
+          "to" : "/curDatetime",
+          "inTypePath" : "string",
+          "outTypePath" : "string",
+          "direction" : "out"
+        } ],
+        "lines" : [ {
+          "inputPath" : "dateFormat",
+          "outputPath" : "format",
+          "inpJsTree" : "#launching_arrow_jsTree",
+          "outpJsTree" : "#landing_arrow_jsTree_function",
+          "INPath" : "dateFormat",
+          "OUTPath" : "format",
+          "direction" : "in",
+          "op" : "copy",
+          "line" : 0,
+          "dashedLine" : false,
+          "inType" : "string",
+          "outType" : "string",
+          "inTypePath" : "string",
+          "outTypePath" : "string"
+        }, {
+          "inputPath" : "curDatetime",
+          "outputPath" : "curDatetime",
+          "inpJsTree" : "#launching_arrow_jsTree_function",
+          "outpJsTree" : "#landing_arrow_jsTree",
+          "INPath" : "curDatetime",
+          "OUTPath" : "curDatetime",
+          "direction" : "out",
+          "op" : "copy",
+          "line" : 0,
+          "dashedLine" : false,
+          "inType" : "string",
+          "outType" : "string",
+          "inTypePath" : "string",
+          "outTypePath" : "string"
+        } ],
+        "dropList" : [ {
+          "path" : "dateFormat",
+          "typePath" : "string"
+        } ],
+        "createList" : [ ],
+        "fqn" : "packages/middleware/pub/date/getCurrentDateTime",
+        "serviceType" : "service",
+        "comment" : "Get Current Time "
+      },
+      "children" : [ ],
+      "type" : "invoke"
+    }, {
+      "id" : "j1_4",
+      "text" : "Transformer",
+      "li_attr" : {
+        "id" : "j1_4"
+      },
+      "a_attr" : {
+        "href" : "javascript:void(0)",
+        "id" : "j1_4_anchor"
+      },
+      "state" : {
+        "loaded" : true,
+        "opened" : false,
+        "selected" : false,
+        "disabled" : false
+      },
+      "data" : {
+        "guid" : "3a28f726-9132-43b5-a9e8-102f7b844340",
+        "transformers" : [ ],
+        "lines" : [ ],
+        "dropList" : [ ],
+        "createList" : [ {
+          "path" : "includeGlobalProperties",
+          "value" : "false",
+          "typePath" : "boolean"
+        }, {
+          "path" : "includeDependencies",
+          "value" : "false",
+          "typePath" : "boolean"
+        }, {
+          "path" : "includeLocalProperties",
+          "value" : "false",
+          "typePath" : "boolean"
+        }, {
+          "path" : "includeEndpoints",
+          "value" : "false",
+          "typePath" : "boolean"
+        }, {
+          "path" : "buildName",
+          "value" : "#{packageName}_#{curDatetime}",
+          "evaluate" : "EEV",
+          "typePath" : "string"
+        } ],
+        "comment" : "Initiating Parameters"
+      },
+      "children" : [ ],
+      "type" : "transformer"
+    }, {
+      "id" : "j1_1",
+      "text" : "Invoke",
+      "li_attr" : {
+        "id" : "j1_1"
+      },
+      "a_attr" : {
+        "href" : "javascript:void(0)",
+        "id" : "j1_1_anchor"
+      },
+      "state" : {
+        "loaded" : true,
+        "opened" : false,
+        "selected" : false,
+        "disabled" : false
+      },
+      "data" : {
+        "guid" : "67ea5ad6-9a5d-4e47-8449-931599226308",
+        "transformers" : [ {
+          "op" : "copy",
+          "from" : "/packageName",
+          "to" : "/folderName",
+          "inTypePath" : "string",
+          "outTypePath" : "string",
+          "direction" : "in"
+        }, {
+          "op" : "copy",
+          "from" : "/serviceDetails",
+          "to" : "/serviceDetails",
+          "inTypePath" : "documentList",
+          "outTypePath" : "documentList",
+          "direction" : "out"
+        } ],
+        "lines" : [ {
+          "inputPath" : "packageName",
+          "outputPath" : "folderName",
+          "inpJsTree" : "#launching_arrow_jsTree",
+          "outpJsTree" : "#landing_arrow_jsTree_function",
+          "INPath" : "packageName",
+          "OUTPath" : "folderName",
+          "direction" : "in",
+          "op" : "copy",
+          "line" : 0,
+          "dashedLine" : false,
+          "inType" : "string",
+          "outType" : "string",
+          "inTypePath" : "string",
+          "outTypePath" : "string"
+        }, {
+          "inputPath" : "serviceDetails",
+          "outputPath" : "serviceDetails",
+          "inpJsTree" : "#launching_arrow_jsTree_function",
+          "outpJsTree" : "#landing_arrow_jsTree",
+          "INPath" : "serviceDetails",
+          "OUTPath" : "serviceDetails",
+          "direction" : "out",
+          "op" : "copy",
+          "line" : 0,
+          "dashedLine" : false,
+          "inType" : "documentList",
+          "outType" : "documentList",
+          "inTypePath" : "documentList",
+          "outTypePath" : "documentList"
+        } ],
+        "dropList" : [ {
+          "path" : "packageName",
+          "typePath" : "string"
+        } ],
+        "createList" : [ ],
+        "fqn" : "packages/middleware/pub/specs/postman/v3/getAssetAndType",
+        "serviceType" : "service",
+        "status" : "enabled",
+        "comment" : "Get Asset and Type List From Package Scanning"
+      },
+      "children" : [ ],
+      "type" : "invoke"
+    }, {
+      "id" : "j1_3",
+      "text" : "Invoke",
+      "li_attr" : {
+        "id" : "j1_3"
+      },
+      "a_attr" : {
+        "href" : "javascript:void(0)",
+        "id" : "j1_3_anchor"
+      },
+      "state" : {
+        "loaded" : true,
+        "opened" : false,
+        "selected" : false,
+        "disabled" : false
+      },
+      "data" : {
+        "guid" : "0cef0f34-f7ac-4ddf-b2ee-91bac905dbd0",
+        "transformers" : [ {
+          "op" : "copy",
+          "from" : "/msg",
+          "to" : "/msg",
+          "inTypePath" : "string",
+          "outTypePath" : "string",
+          "direction" : "out"
+        }, {
+          "op" : "copy",
+          "from" : "/includeGlobalProperties",
+          "to" : "/includeGlobalProperties",
+          "inTypePath" : "boolean",
+          "outTypePath" : "boolean",
+          "direction" : "in"
+        }, {
+          "op" : "copy",
+          "from" : "/includeEndpoints",
+          "to" : "/includeEndpoints",
+          "inTypePath" : "boolean",
+          "outTypePath" : "boolean",
+          "direction" : "in"
+        }, {
+          "op" : "copy",
+          "from" : "/buildName",
+          "to" : "/buildName",
+          "inTypePath" : "string",
+          "outTypePath" : "string",
+          "direction" : "in"
+        }, {
+          "op" : "copy",
+          "from" : "/path",
+          "to" : "/path",
+          "inTypePath" : "string",
+          "outTypePath" : "string",
+          "direction" : "out"
+        }, {
+          "op" : "copy",
+          "from" : "/url",
+          "to" : "/url",
+          "inTypePath" : "string",
+          "outTypePath" : "string",
+          "direction" : "out"
+        }, {
+          "op" : "copy",
+          "from" : "/serviceDetails",
+          "to" : "/*payload",
+          "inTypePath" : "documentList",
+          "outTypePath" : "documentList",
+          "direction" : "in"
+        }, {
+          "op" : "copy",
+          "from" : "/includeDependencies",
+          "to" : "/includeDependencies",
+          "inTypePath" : "boolean",
+          "outTypePath" : "boolean",
+          "direction" : "in"
+        }, {
+          "op" : "copy",
+          "from" : "/includeLocalProperties",
+          "to" : "/includeLocalProperties",
+          "inTypePath" : "boolean",
+          "outTypePath" : "boolean",
+          "direction" : "in"
+        } ],
+        "lines" : [ {
+          "inputPath" : "msg",
+          "outputPath" : "msg",
+          "inpJsTree" : "#launching_arrow_jsTree_function",
+          "outpJsTree" : "#landing_arrow_jsTree",
+          "INPath" : "msg",
+          "OUTPath" : "msg",
+          "direction" : "out",
+          "op" : "copy",
+          "line" : 0,
+          "dashedLine" : false,
+          "inType" : "string",
+          "outType" : "string",
+          "inTypePath" : "string",
+          "outTypePath" : "string"
+        }, {
+          "inputPath" : "includeGlobalProperties",
+          "outputPath" : "includeGlobalProperties",
+          "inpJsTree" : "#launching_arrow_jsTree",
+          "outpJsTree" : "#landing_arrow_jsTree_function",
+          "INPath" : "includeGlobalProperties",
+          "OUTPath" : "includeGlobalProperties",
+          "direction" : "in",
+          "op" : "copy",
+          "line" : 0,
+          "dashedLine" : false,
+          "inType" : "boolean",
+          "outType" : "boolean",
+          "inTypePath" : "boolean",
+          "outTypePath" : "boolean"
+        }, {
+          "inputPath" : "includeEndpoints",
+          "outputPath" : "includeEndpoints",
+          "inpJsTree" : "#launching_arrow_jsTree",
+          "outpJsTree" : "#landing_arrow_jsTree_function",
+          "INPath" : "includeEndpoints",
+          "OUTPath" : "includeEndpoints",
+          "direction" : "in",
+          "op" : "copy",
+          "line" : 0,
+          "dashedLine" : false,
+          "inType" : "boolean",
+          "outType" : "boolean",
+          "inTypePath" : "boolean",
+          "outTypePath" : "boolean"
+        }, {
+          "inputPath" : "buildName",
+          "outputPath" : "buildName",
+          "inpJsTree" : "#launching_arrow_jsTree",
+          "outpJsTree" : "#landing_arrow_jsTree_function",
+          "INPath" : "buildName",
+          "OUTPath" : "buildName",
+          "direction" : "in",
+          "op" : "copy",
+          "line" : 0,
+          "dashedLine" : false,
+          "inType" : "string",
+          "outType" : "string",
+          "inTypePath" : "string",
+          "outTypePath" : "string"
+        }, {
+          "inputPath" : "path",
+          "outputPath" : "path",
+          "inpJsTree" : "#launching_arrow_jsTree_function",
+          "outpJsTree" : "#landing_arrow_jsTree",
+          "INPath" : "path",
+          "OUTPath" : "path",
+          "direction" : "out",
+          "op" : "copy",
+          "line" : 0,
+          "dashedLine" : false,
+          "inType" : "string",
+          "outType" : "string",
+          "inTypePath" : "string",
+          "outTypePath" : "string"
+        }, {
+          "inputPath" : "url",
+          "outputPath" : "url",
+          "inpJsTree" : "#launching_arrow_jsTree_function",
+          "outpJsTree" : "#landing_arrow_jsTree",
+          "INPath" : "url",
+          "OUTPath" : "url",
+          "direction" : "out",
+          "op" : "copy",
+          "line" : 0,
+          "dashedLine" : false,
+          "inType" : "string",
+          "outType" : "string",
+          "inTypePath" : "string",
+          "outTypePath" : "string"
+        }, {
+          "inputPath" : "serviceDetails",
+          "outputPath" : "*payload",
+          "inpJsTree" : "#launching_arrow_jsTree",
+          "outpJsTree" : "#landing_arrow_jsTree_function",
+          "INPath" : "serviceDetails",
+          "OUTPath" : "*payload",
+          "direction" : "in",
+          "op" : "copy",
+          "line" : 0,
+          "dashedLine" : false,
+          "inType" : "documentList",
+          "outType" : "documentList",
+          "inTypePath" : "documentList",
+          "outTypePath" : "documentList"
+        }, {
+          "inputPath" : "includeDependencies",
+          "outputPath" : "includeDependencies",
+          "inpJsTree" : "#launching_arrow_jsTree",
+          "outpJsTree" : "#landing_arrow_jsTree_function",
+          "INPath" : "includeDependencies",
+          "OUTPath" : "includeDependencies",
+          "direction" : "in",
+          "op" : "copy",
+          "line" : 0,
+          "dashedLine" : false,
+          "inType" : "boolean",
+          "outType" : "boolean",
+          "inTypePath" : "boolean",
+          "outTypePath" : "boolean"
+        }, {
+          "inputPath" : "includeLocalProperties",
+          "outputPath" : "includeLocalProperties",
+          "inpJsTree" : "#launching_arrow_jsTree",
+          "outpJsTree" : "#landing_arrow_jsTree_function",
+          "INPath" : "includeLocalProperties",
+          "OUTPath" : "includeLocalProperties",
+          "direction" : "in",
+          "op" : "copy",
+          "line" : 0,
+          "dashedLine" : false,
+          "inType" : "boolean",
+          "outType" : "boolean",
+          "inTypePath" : "boolean",
+          "outTypePath" : "boolean"
+        } ],
+        "dropList" : [ ],
+        "createList" : [ ],
+        "fqn" : "packages/middleware/pub/server/build/api/createBuild",
+        "serviceType" : "service",
+        "status" : "enabled",
+        "snap" : "disabled",
+        "comment" : "Exporting Build"
+      },
+      "children" : [ ],
+      "type" : "invoke"
+    }, {
+      "id" : "j1_10",
+      "text" : "Invoke",
+      "li_attr" : {
+        "id" : "j1_10"
+      },
+      "a_attr" : {
+        "href" : "javascript:void(0)",
+        "id" : "j1_10_anchor"
+      },
+      "state" : {
+        "loaded" : true,
+        "opened" : false,
+        "selected" : false,
+        "disabled" : false
+      },
+      "data" : {
+        "guid" : "725191a3-3b67-4785-a192-c5ca6451d915",
+        "transformers" : [ {
+          "op" : "copy",
+          "from" : "/path",
+          "to" : "/filePathWithName",
+          "inTypePath" : "string",
+          "outTypePath" : "string",
+          "direction" : "in"
+        }, {
+          "op" : "copy",
+          "from" : "/bytes",
+          "to" : "/zipContents",
+          "inTypePath" : "byteList",
+          "outTypePath" : "byteList",
+          "direction" : "out"
+        } ],
+        "lines" : [ {
+          "inputPath" : "path",
+          "outputPath" : "filePathWithName",
+          "inpJsTree" : "#launching_arrow_jsTree",
+          "outpJsTree" : "#landing_arrow_jsTree_function",
+          "INPath" : "path",
+          "OUTPath" : "filePathWithName",
+          "direction" : "in",
+          "op" : "copy",
+          "line" : 0,
+          "dashedLine" : false,
+          "inType" : "string",
+          "outType" : "string",
+          "inTypePath" : "string",
+          "outTypePath" : "string"
+        }, {
+          "inputPath" : "bytes",
+          "outputPath" : "zipContents",
+          "inpJsTree" : "#launching_arrow_jsTree_function",
+          "outpJsTree" : "#landing_arrow_jsTree",
+          "INPath" : "bytes",
+          "OUTPath" : "zipContents",
+          "direction" : "out",
+          "op" : "copy",
+          "line" : 0,
+          "dashedLine" : false,
+          "inType" : "byteList",
+          "outType" : "byteList",
+          "inTypePath" : "byteList",
+          "outTypePath" : "byteList"
+        } ],
+        "dropList" : [ {
+          "path" : "curDatetime",
+          "typePath" : "string"
+        }, {
+          "path" : "includeGlobalProperties",
+          "typePath" : "boolean"
+        }, {
+          "path" : "includeDependencies",
+          "typePath" : "boolean"
+        }, {
+          "path" : "includeLocalProperties",
+          "typePath" : "boolean"
+        }, {
+          "path" : "includeEndpoints",
+          "typePath" : "boolean"
+        }, {
+          "path" : "serviceDetails",
+          "typePath" : "documentList"
+        } ],
+        "createList" : [ ],
+        "fqn" : "packages/middleware/pub/file/fileToBytes",
+        "serviceType" : "service",
+        "status" : "enabled",
+        "comment" : "Converting to Bytes"
+      },
+      "children" : [ ],
+      "type" : "invoke"
+    }, {
+      "id" : "j1_12",
+      "text" : "Transformer",
+      "li_attr" : {
+        "id" : "j1_12"
+      },
+      "a_attr" : {
+        "href" : "javascript:void(0)",
+        "id" : "j1_12_anchor"
+      },
+      "state" : {
+        "loaded" : true,
+        "opened" : false,
+        "selected" : false,
+        "disabled" : false
+      },
+      "data" : {
+        "guid" : "7191fde7-44f3-4ce3-981e-a98b366d5689",
+        "transformers" : [ ],
+        "lines" : [ ],
+        "dropList" : [ {
+          "path" : "msg",
+          "typePath" : "string"
+        }, {
+          "path" : "path",
+          "typePath" : "string"
+        }, {
+          "path" : "url",
+          "typePath" : "string"
+        }, {
+          "path" : "buildName",
+          "typePath" : "string"
+        }, {
+          "path" : "serviceDetails",
+          "typePath" : "documentList"
+        }, {
+          "path" : "curDatetime",
+          "typePath" : "string"
+        } ],
+        "createList" : [ {
+          "path" : "awsCreds/accessKey",
+          "value" : "#{accessKey}",
+          "evaluate" : "ELV",
+          "typePath" : "document/string"
+        }, {
+          "path" : "awsCreds/secretKey",
+          "value" : "#{secretKey}",
+          "evaluate" : "ELV",
+          "typePath" : "document/string"
+        }, {
+          "path" : "awsCreds/bucketName",
+          "value" : "#{bucketName}",
+          "evaluate" : "ELV",
+          "typePath" : "document/string"
+        }, {
+          "path" : "awsCreds/region",
+          "value" : "#{region}",
+          "evaluate" : "ELV",
+          "typePath" : "document/string"
+        }, {
+          "path" : "ContentType",
+          "value" : "application/x-www-form-urlencoded",
+          "typePath" : "string"
+        }, {
+          "path" : "awsCreds/key",
+          "value" : "#{buildName}.zip",
+          "evaluate" : "EEV",
+          "typePath" : "document/string"
+        } ],
+        "comment" : "Setting AWS Credentials"
+      },
+      "children" : [ ],
+      "type" : "transformer"
+    }, {
+      "id" : "j1_11",
+      "text" : "Invoke",
+      "li_attr" : {
+        "id" : "j1_11"
+      },
+      "a_attr" : {
+        "href" : "javascript:void(0)",
+        "id" : "j1_11_anchor"
+      },
+      "state" : {
+        "loaded" : true,
+        "opened" : false,
+        "selected" : true,
+        "disabled" : false
+      },
+      "data" : {
+        "guid" : "27cd695a-a757-4fa3-bb03-4b5565b449a3",
+        "transformers" : [ {
+          "op" : "copy",
+          "from" : "/awsCreds/accessKey",
+          "to" : "/request/accessKey",
+          "inTypePath" : "document/string",
+          "outTypePath" : "document/string",
+          "direction" : "in"
+        }, {
+          "op" : "copy",
+          "from" : "/awsCreds/secretKey",
+          "to" : "/request/secret",
+          "inTypePath" : "document/string",
+          "outTypePath" : "document/string",
+          "direction" : "in"
+        }, {
+          "op" : "copy",
+          "from" : "/response",
+          "to" : "/response",
+          "inTypePath" : "document",
+          "outTypePath" : "document",
+          "direction" : "out"
+        }, {
+          "op" : "copy",
+          "from" : "/awsCreds/region",
+          "to" : "/request/region",
+          "inTypePath" : "document/string",
+          "outTypePath" : "document/string",
+          "direction" : "in"
+        }, {
+          "op" : "copy",
+          "from" : "/zipContents",
+          "to" : "/request/binary_content",
+          "inTypePath" : "byteList",
+          "outTypePath" : "document/byteList",
+          "direction" : "in"
+        }, {
+          "op" : "copy",
+          "from" : "/awsCreds/bucketName",
+          "to" : "/request/bucket",
+          "inTypePath" : "document/string",
+          "outTypePath" : "document/string",
+          "direction" : "in"
+        }, {
+          "op" : "copy",
+          "from" : "/ContentType",
+          "to" : "/request/Content-Type",
+          "inTypePath" : "string",
+          "outTypePath" : "document/string",
+          "direction" : "in"
+        }, {
+          "op" : "copy",
+          "from" : "/awsCreds/key",
+          "to" : "/request/key",
+          "inTypePath" : "document/string",
+          "outTypePath" : "document/string",
+          "direction" : "in"
+        } ],
+        "lines" : [ {
+          "inputPath" : "awsCreds/accessKey",
+          "outputPath" : "request/accessKey",
+          "inpJsTree" : "#launching_arrow_jsTree",
+          "outpJsTree" : "#landing_arrow_jsTree_function",
+          "INPath" : "awsCreds/accessKey",
+          "OUTPath" : "request/accessKey",
+          "direction" : "in",
+          "op" : "copy",
+          "line" : 0,
+          "dashedLine" : false,
+          "inType" : "string",
+          "outType" : "string",
+          "inTypePath" : "document/string",
+          "outTypePath" : "document/string"
+        }, {
+          "inputPath" : "awsCreds/secretKey",
+          "outputPath" : "request/secret",
+          "inpJsTree" : "#launching_arrow_jsTree",
+          "outpJsTree" : "#landing_arrow_jsTree_function",
+          "INPath" : "awsCreds/secretKey",
+          "OUTPath" : "request/secret",
+          "direction" : "in",
+          "op" : "copy",
+          "line" : 0,
+          "dashedLine" : false,
+          "inType" : "string",
+          "outType" : "string",
+          "inTypePath" : "document/string",
+          "outTypePath" : "document/string"
+        }, {
+          "inputPath" : "response",
+          "outputPath" : "response",
+          "inpJsTree" : "#launching_arrow_jsTree_function",
+          "outpJsTree" : "#landing_arrow_jsTree",
+          "INPath" : "response",
+          "OUTPath" : "response",
+          "direction" : "out",
+          "op" : "copy",
+          "line" : 0,
+          "dashedLine" : false,
+          "inType" : "document",
+          "outType" : "document",
+          "inTypePath" : "document",
+          "outTypePath" : "document"
+        }, {
+          "inputPath" : "awsCreds/region",
+          "outputPath" : "request/region",
+          "inpJsTree" : "#launching_arrow_jsTree",
+          "outpJsTree" : "#landing_arrow_jsTree_function",
+          "INPath" : "awsCreds/region",
+          "OUTPath" : "request/region",
+          "direction" : "in",
+          "op" : "copy",
+          "line" : 0,
+          "dashedLine" : false,
+          "inType" : "string",
+          "outType" : "string",
+          "inTypePath" : "document/string",
+          "outTypePath" : "document/string"
+        }, {
+          "inputPath" : "zipContents",
+          "outputPath" : "request/binary_content",
+          "inpJsTree" : "#launching_arrow_jsTree",
+          "outpJsTree" : "#landing_arrow_jsTree_function",
+          "INPath" : "zipContents",
+          "OUTPath" : "request/binary_content",
+          "direction" : "in",
+          "op" : "copy",
+          "line" : 0,
+          "dashedLine" : false,
+          "inType" : "byteList",
+          "outType" : "byteList",
+          "inTypePath" : "byteList",
+          "outTypePath" : "document/byteList"
+        }, {
+          "inputPath" : "awsCreds/bucketName",
+          "outputPath" : "request/bucket",
+          "inpJsTree" : "#launching_arrow_jsTree",
+          "outpJsTree" : "#landing_arrow_jsTree_function",
+          "INPath" : "awsCreds/bucketName",
+          "OUTPath" : "request/bucket",
+          "direction" : "in",
+          "op" : "copy",
+          "line" : 0,
+          "dashedLine" : false,
+          "inType" : "string",
+          "outType" : "string",
+          "inTypePath" : "document/string",
+          "outTypePath" : "document/string"
+        }, {
+          "inputPath" : "ContentType",
+          "outputPath" : "request/Content-Type",
+          "inpJsTree" : "#launching_arrow_jsTree",
+          "outpJsTree" : "#landing_arrow_jsTree_function",
+          "INPath" : "ContentType",
+          "OUTPath" : "request/Content-Type",
+          "direction" : "in",
+          "op" : "copy",
+          "line" : 0,
+          "dashedLine" : false,
+          "inType" : "string",
+          "outType" : "string",
+          "inTypePath" : "string",
+          "outTypePath" : "document/string"
+        }, {
+          "inputPath" : "awsCreds/key",
+          "outputPath" : "request/key",
+          "inpJsTree" : "#launching_arrow_jsTree",
+          "outpJsTree" : "#landing_arrow_jsTree_function",
+          "INPath" : "awsCreds/key",
+          "OUTPath" : "request/key",
+          "direction" : "in",
+          "op" : "copy",
+          "line" : 0,
+          "dashedLine" : false,
+          "inType" : "string",
+          "outType" : "string",
+          "inTypePath" : "document/string",
+          "outTypePath" : "document/string"
+        } ],
+        "dropList" : [ ],
+        "createList" : [ ],
+        "fqn" : "packages/Wrapper/AWS/S3/Objects/Uploads/put_create_multipart",
+        "serviceType" : "api",
+        "status" : "enabled",
+        "snap" : "disabled",
+        "comment" : "Uploading Build to S3 Bucket"
+      },
+      "children" : [ ],
+      "type" : "invoke"
+    } ],
+    "api_info" : {
+      "title" : "",
+      "description" : ""
+    },
+    "lockedByUser" : "admin"
+  },
+  "consumers" : "",
+  "developers" : "developers",
+  "enableServiceDocumentValidation" : false
+}

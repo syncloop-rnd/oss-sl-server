@@ -1,0 +1,372 @@
+<!DOCTYPE html>
+<html style="min-height: 100% !important;">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <base href="/"><script src="env.js"></script>
+  <script>window.ENV = window.env || {};</script>
+  <link rel="shortcut icon" href="middleware/pub/server/ui/assets/img/favicon.ico" type="image/x-icon">
+  <title>Syncloop | Choose tenant</title>
+  <style>
+    :root {
+      --ink: #17212b;
+      --muted: #697785;
+      --line: #dce5ec;
+      --panel: #ffffff;
+      --page: #eef4f6;
+      --teal: #0f766e;
+      --teal-dark: #0b4f4a;
+      --gold: #bf8b24;
+      --danger: #b42318;
+    }
+    * { box-sizing: border-box; }
+    body {
+      min-height: 100vh;
+      margin: 0;
+      font-family: "Aptos", "Segoe UI", sans-serif;
+      color: var(--ink);
+      background:
+        linear-gradient(135deg, rgba(15, 118, 110, 0.14), transparent 34%),
+        linear-gradient(315deg, rgba(191, 139, 36, 0.16), transparent 30%),
+        var(--page);
+    }
+    .shell {
+      min-height: 100vh;
+      display: grid;
+      grid-template-columns: minmax(320px, 0.95fr) minmax(420px, 1.35fr);
+    }
+    .brand-pane {
+      padding: 48px;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      background: #ffffffcc;
+      border-right: 1px solid var(--line);
+      backdrop-filter: blur(12px);
+    }
+    .logo { width: 162px; height: auto; }
+    .headline { max-width: 440px; }
+    h1 { margin: 34px 0 14px; font-size: 42px; line-height: 1.05; font-weight: 760; letter-spacing: 0; }
+    .headline p { margin: 0; color: var(--muted); font-size: 16px; line-height: 1.6; }
+    .session { color: var(--muted); font-size: 13px; line-height: 1.5; }
+    .content-pane { padding: 48px; display: flex; align-items: center; }
+    .tenant-panel { width: min(760px, 100%); }
+    .panel-head { display: flex; align-items: end; justify-content: space-between; gap: 20px; margin-bottom: 22px; }
+    h2 { margin: 0; font-size: 24px; line-height: 1.2; font-weight: 720; }
+    .count { color: var(--muted); font-size: 13px; white-space: nowrap; }
+    .tenant-list { display: grid; gap: 12px; }
+    .tenant-card {
+      width: 100%;
+      display: grid;
+      grid-template-columns: 44px 1fr 32px;
+      align-items: center;
+      gap: 14px;
+      min-height: 84px;
+      padding: 16px;
+      border: 1px solid var(--line);
+      border-radius: 8px;
+      background: var(--panel);
+      color: var(--ink);
+      text-align: left;
+      cursor: pointer;
+      transition: border-color 160ms ease, box-shadow 160ms ease, transform 160ms ease;
+    }
+    .tenant-card:hover, .tenant-card:focus-visible {
+      outline: none;
+      border-color: var(--teal);
+      box-shadow: 0 14px 34px rgba(15, 79, 74, 0.12);
+      transform: translateY(-1px);
+    }
+    .tenant-mark {
+      width: 44px;
+      height: 44px;
+      border-radius: 8px;
+      display: grid;
+      place-items: center;
+      color: #fff;
+      background: linear-gradient(135deg, var(--teal), var(--teal-dark));
+      font-weight: 800;
+      font-size: 16px;
+    }
+    .tenant-name { font-size: 16px; font-weight: 720; overflow-wrap: anywhere; }
+    .tenant-meta { margin-top: 5px; color: var(--muted); font-size: 12px; overflow-wrap: anywhere; }
+    .arrow { color: var(--teal); font-size: 24px; line-height: 1; }
+    .state {
+      padding: 22px;
+      border: 1px solid var(--line);
+      border-radius: 8px;
+      background: #fff;
+      color: var(--muted);
+      line-height: 1.5;
+    }
+    .state.error { border-color: rgba(180, 35, 24, 0.35); color: var(--danger); background: #fff7f5; }
+    .state.loading {
+      color: var(--ink);
+      display: flex;
+      align-items: center;
+      gap: 12px;
+    }
+    .spinner {
+      width: 18px;
+      height: 18px;
+      border: 2px solid rgba(15, 118, 110, 0.2);
+      border-top-color: var(--teal);
+      border-radius: 50%;
+      flex: 0 0 auto;
+      animation: spin 800ms linear infinite;
+    }
+    @keyframes spin {
+      to { transform: rotate(360deg); }
+    }
+    .actions { margin-top: 18px; display: flex; gap: 10px; flex-wrap: wrap; }
+    .flash {
+      margin-bottom: 16px;
+      padding: 14px 16px;
+      border-radius: 8px;
+      border: 1px solid rgba(15, 118, 110, 0.24);
+      background: rgba(15, 118, 110, 0.08);
+      color: var(--teal-dark);
+      line-height: 1.5;
+    }
+    .link-button {
+      border: 1px solid var(--line);
+      background: #fff;
+      color: var(--ink);
+      border-radius: 8px;
+      padding: 10px 14px;
+      cursor: pointer;
+      font-weight: 650;
+    }
+    .link-button:hover { border-color: var(--teal); color: var(--teal-dark); }
+    @media (max-width: 860px) {
+      .shell { grid-template-columns: 1fr; }
+      .brand-pane { padding: 30px 24px 20px; border-right: 0; border-bottom: 1px solid var(--line); }
+      h1 { font-size: 32px; margin-top: 28px; }
+      .content-pane { padding: 24px; align-items: start; }
+      .panel-head { align-items: start; flex-direction: column; gap: 8px; }
+    }
+  </style>
+</head>
+<body>
+  <main class="shell">
+    <section class="brand-pane">
+      <div class="headline">
+        <img class="logo" src="middleware/pub/server/ui/assets/img/syncloop-blue-logo.svg" alt="Syncloop">
+        <h1>Choose your workspace</h1>
+        <p>Select the tenant you want to use for this session. We will keep your login token and switch the active workspace before opening the dashboard.</p>
+      </div>
+      <div class="session" id="sessionInfo">Signed in session ready</div>
+    </section>
+    <section class="content-pane">
+      <div class="tenant-panel">
+        <div class="panel-head">
+          <h2>Available tenants</h2>
+          <div class="count" id="tenantCount">Loading</div>
+        </div>
+        <div id="flashMessage"></div>
+        <div id="tenantList" class="tenant-list">
+          <div class="state">Loading tenants...</div>
+        </div>
+        <div class="actions">
+          <button class="link-button" type="button" onclick="goBackToLogin()">Back to login</button>
+          <button class="link-button" type="button" onclick="loadTenants()">Refresh</button>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <script>
+    const apiBase = (window.ENV && window.ENV.API_BASE_URL) || window.location.origin;
+    const dashboardUrl = "/middleware/pub/server/ui/workspace/web/dashboard.html";
+    const loginUrl = "/middleware/pub/server/ui/welcome/onboarding/login.html";
+    const redirectUrl = new URLSearchParams(window.location.search).get("r");
+    const loginRedirectUrl = loginUrl + (redirectUrl ? "?r=" + encodeURIComponent(redirectUrl) : "");
+
+    function token() { return localStorage.getItem("AuthToken") || ""; }
+    function loginTenant() { return localStorage.getItem("loginTenant") || localStorage.getItem("tenant") || "default"; }
+    function loginUserId() { return localStorage.getItem("loginUserId") || ""; }
+    function continueWithSelectedTenant() {
+      if (!token() || !localStorage.getItem("tenant")) return false;
+      window.location.href = redirectUrl || dashboardUrl;
+      return true;
+    }
+
+    window.addEventListener("storage", function (event) {
+      if (event.key === "tenant" && event.newValue) continueWithSelectedTenant();
+    });
+
+    function updateTenantSession(payload, selectedTenant) {
+      const tenantName = payload.tenant || selectedTenant.name || "default";
+      localStorage.setItem("AuthToken", payload.token);
+      localStorage.setItem("tenant", tenantName);
+      localStorage.setItem("loginTenant", tenantName);
+      if (payload.userId) {
+        localStorage.setItem("loginUserId", payload.userId);
+      }
+      if (payload.tenantId !== undefined && payload.tenantId !== null && payload.tenantId !== "") {
+        localStorage.setItem("tenantId", String(payload.tenantId));
+      } else {
+        localStorage.removeItem("tenantId");
+      }
+      if (payload.uuid) {
+        localStorage.setItem("tenantUuid", payload.uuid);
+      } else {
+        localStorage.removeItem("tenantUuid");
+      }
+    }
+
+    function setState(message, isError, countText) {
+      document.getElementById("tenantList").innerHTML = '<div class="state ' + (isError ? 'error' : 'loading') + '">' +
+        (isError ? '' : '<span class="spinner" aria-hidden="true"></span>') +
+        '<span>' + escapeHtml(message) + '</span></div>';
+      document.getElementById("tenantCount").textContent = countText || (isError ? "Needs attention" : "Loading");
+    }
+
+    function escapeHtml(value) {
+      return String(value || "").replace(/[&<>'"]/g, function (char) {
+        return { "&": "&amp;", "<": "&lt;", ">": "&gt;", "'": "&#39;", '"': "&quot;" }[char];
+      });
+    }
+
+    function initials(name) {
+      return String(name || "?").split(/[\s_-]+/).filter(Boolean).slice(0, 2).map(function (part) { return part.charAt(0).toUpperCase(); }).join("") || "?";
+    }
+
+    function chooseTenant(tenant, event) {
+      const button = event && event.currentTarget ? event.currentTarget : null;
+      if (button) {
+        button.disabled = true;
+      }
+      setState("Signing you into " + (tenant.displayName || "selected tenant") + "...", false, "Signing in");
+
+      fetch(apiBase + "/tenant/switch", {
+        method: "POST",
+        headers: {
+          "Authorization": "Bearer " + token(),
+          "Content-Type": "application/json",
+          "tenant": loginTenant()
+        },
+        body: JSON.stringify({
+          token: token(),
+          tenant: loginTenant(),
+          userId: loginUserId(),
+          targetTenant: tenant.name,
+          tenantId: tenant.tenantId,
+          uuid: tenant.uuid
+        })
+      }).then(function (response) {
+        if (!response.ok) {
+          throw new Error("Tenant switch failed");
+        }
+        return response.json();
+      }).then(function (payload) {
+        if (!payload || payload.status !== "success" || !payload.token) {
+          throw new Error((payload && payload.message) || "Tenant switch failed");
+        }
+
+        updateTenantSession(payload, tenant);
+
+        window.location.href = redirectUrl || dashboardUrl;
+      }).catch(function () {
+        if (button) {
+          button.disabled = false;
+        }
+        setState("We could not switch into that tenant with the current session. Please try again or login once more.", true);
+        document.getElementById("tenantCount").textContent = "Needs attention";
+      });
+    }
+
+    function renderTenants(tenants) {
+      const list = document.getElementById("tenantList");
+      document.getElementById("tenantCount").textContent = tenants.length + (tenants.length === 1 ? " tenant" : " tenants");
+      if (!tenants.length) {
+        setState("No tenants are assigned to this user.", true);
+        return;
+      }
+      list.innerHTML = tenants.map(function (tenant, index) {
+        return '<button class="tenant-card" type="button" data-index="' + index + '">' +
+          '<span class="tenant-mark">' + escapeHtml(initials(tenant.displayName)) + '</span>' +
+          '<span><span class="tenant-name">' + escapeHtml(tenant.displayName || "Unnamed tenant") + '</span></span>' +
+          '<span class="arrow">&#8250;</span>' +
+        '</button>';
+      }).join("");
+      Array.prototype.forEach.call(list.querySelectorAll(".tenant-card"), function (button) {
+        button.addEventListener("click", function (event) { chooseTenant(tenants[Number(button.dataset.index)], event); });
+      });
+    }
+
+    function openSingleTenant(tenant) {
+      const tenantName = tenant.displayName || "your workspace";
+      document.querySelector(".panel-head h2").textContent = "Opening workspace";
+      document.getElementById("tenantCount").textContent = "1 tenant";
+      document.getElementById("flashMessage").innerHTML = '<div class="flash">Only one workspace is available. Signing you into <strong>' + escapeHtml(tenantName) + '</strong> directly.</div>';
+      chooseTenant(tenant);
+    }
+
+    function loadTenants() {
+      if (!token()) {
+        window.location.href = loginRedirectUrl;
+        return;
+      }
+      document.getElementById("sessionInfo").textContent = "Signed in as " + (loginUserId() || "authenticated user");
+      document.querySelector(".panel-head h2").textContent = "Available tenants";
+      setState("Loading tenants...", false, "Loading");
+      fetch(apiBase + "/tenants", {
+        method: "POST",
+        headers: {
+          "Authorization": "Bearer " + token(),
+          "Content-Type": "application/json",
+          "tenant": loginTenant()
+        },
+        body: JSON.stringify({ token: token(), tenant: loginTenant(), userId: loginUserId() })
+      }).then(function (response) {
+        if (!response.ok) throw new Error("Tenant lookup failed");
+        return response.json();
+      }).then(function (payload) {
+        if (payload && payload.userId) {
+          localStorage.setItem("loginUserId", payload.userId);
+          document.getElementById("sessionInfo").textContent = "Signed in as " + payload.userId;
+        }
+
+        const tenants = payload.tenants || [];
+        if (tenants.length === 1) {
+          openSingleTenant(tenants[0]);
+          return;
+        }
+
+        renderTenants(tenants);
+      }).catch(function () {
+        setState("Could not load tenants for this login. Please refresh or sign in again.", true);
+      });
+    }
+
+    function goBackToLogin() {
+      localStorage.removeItem("AuthToken");
+      localStorage.removeItem("loginTenant");
+      localStorage.removeItem("loginUserId");
+      window.location.href = loginRedirectUrl;
+    }
+
+    function queryParam(name) {
+      return new URLSearchParams(window.location.search).get(name) || "";
+    }
+
+    function renderFlashMessage() {
+      const flashMessage = document.getElementById("flashMessage");
+      if (queryParam("created") === "true") {
+        const tenantName = queryParam("tenantName");
+        flashMessage.innerHTML = '<div class="flash">Tenant created successfully' +
+          (tenantName ? ' for <strong>' + escapeHtml(tenantName) + '</strong>' : '') +
+          '. Choose the workspace you want to open next.</div>';
+      } else {
+        flashMessage.innerHTML = "";
+      }
+    }
+
+    if (!continueWithSelectedTenant()) {
+      renderFlashMessage();
+      loadTenants();
+    }
+  </script>
+</body>
+</html>

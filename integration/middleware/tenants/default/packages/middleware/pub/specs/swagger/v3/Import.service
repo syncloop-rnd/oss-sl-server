@@ -1,0 +1,132 @@
+{
+  "input" : [ {
+    "id" : "j1_1",
+    "text" : "content",
+    "li_attr" : {
+      "id" : "j1_1"
+    },
+    "a_attr" : {
+      "href" : "#",
+      "id" : "j1_1_anchor"
+    },
+    "state" : {
+      "loaded" : true,
+      "opened" : false,
+      "selected" : false,
+      "disabled" : false,
+      "hidden" : false
+    },
+    "data" : { },
+    "children" : [ ],
+    "type" : "byteList"
+  }, {
+    "id" : "j1_2",
+    "text" : "generateClient",
+    "li_attr" : {
+      "id" : "j1_2"
+    },
+    "a_attr" : {
+      "href" : "#",
+      "id" : "j1_2_anchor"
+    },
+    "state" : {
+      "loaded" : true,
+      "opened" : false,
+      "selected" : false,
+      "disabled" : false,
+      "hidden" : false
+    },
+    "data" : { },
+    "children" : [ ],
+    "type" : "boolean"
+  }, {
+    "id" : "j1_3",
+    "text" : "generateServerStub",
+    "li_attr" : {
+      "id" : "j1_3"
+    },
+    "a_attr" : {
+      "href" : "#",
+      "id" : "j1_3_anchor"
+    },
+    "state" : {
+      "loaded" : true,
+      "opened" : false,
+      "selected" : false,
+      "disabled" : false,
+      "hidden" : false
+    },
+    "data" : { },
+    "children" : [ ],
+    "type" : "boolean"
+  }, {
+    "id" : "j1_4",
+    "text" : "packageName",
+    "li_attr" : {
+      "id" : "j1_4"
+    },
+    "a_attr" : {
+      "href" : "#",
+      "id" : "j1_4_anchor"
+    },
+    "state" : {
+      "loaded" : true,
+      "opened" : false,
+      "selected" : false,
+      "disabled" : false,
+      "hidden" : false
+    },
+    "data" : { },
+    "children" : [ ],
+    "type" : "string"
+  } ],
+  "output" : [ {
+    "id" : "j2_1",
+    "text" : "clientServices",
+    "li_attr" : {
+      "id" : "j2_1"
+    },
+    "a_attr" : {
+      "href" : "#",
+      "id" : "j2_1_anchor"
+    },
+    "state" : {
+      "loaded" : true,
+      "opened" : false,
+      "selected" : false,
+      "disabled" : false,
+      "hidden" : false
+    },
+    "data" : { },
+    "children" : [ ],
+    "type" : "document"
+  }, {
+    "id" : "j2_2",
+    "text" : "serverServices",
+    "li_attr" : {
+      "id" : "j2_2"
+    },
+    "a_attr" : {
+      "href" : "#",
+      "id" : "j2_2_anchor"
+    },
+    "state" : {
+      "loaded" : true,
+      "opened" : false,
+      "selected" : false,
+      "disabled" : false,
+      "hidden" : false
+    },
+    "data" : { },
+    "children" : [ ],
+    "type" : "document"
+  } ],
+  "package" : "cGFja2FnZSBwYWNrYWdlcy5taWRkbGV3YXJlLnB1Yi5zcGVjcy5zd2FnZ2VyLnYzOw==",
+  "imports" : "aW1wb3J0IGNvbS5la2EubWlkZGxld2FyZS5wdWIudXRpbC5JbXBvcnRTd2FnZ2VyOwppbXBvcnQgY29tLmVrYS5taWRkbGV3YXJlLnNlcnZpY2UuRGF0YVBpcGVsaW5lOwppbXBvcnQgY29tLmVrYS5taWRkbGV3YXJlLnNlcnZpY2UuUHJvcGVydHlNYW5hZ2VyOwppbXBvcnQgY29tLmVrYS5taWRkbGV3YXJlLnRlbXBsYXRlLlNuaXBwZXRFeGNlcHRpb247CmltcG9ydCBqYXZhLnV0aWwuTWFwOwppbXBvcnQgY29tLmVrYS5taWRkbGV3YXJlLnNlcnZpY2UuU2VydmljZVV0aWxzOw==",
+  "main" : "dHJ5IHsKCQkJZGF0YVBpcGVsaW5lLmFwcExvZygiT1BFUkFUSU9OIiwgIkltcG9ydCIpOwogICAgICAgICAgICBieXRlW10gY29udGVudCA9IChieXRlW10pZGF0YVBpcGVsaW5lLmdldCgiY29udGVudCIpOwogIAkJCWRhdGFQaXBlbGluZS5hcHBMb2coIkNPTlRFTlQiLCAiQ29udGVudDogIiArIGNvbnRlbnQpOwogICAgICAgICAgICBib29sZWFuIGNsaWVudCA9IGRhdGFQaXBlbGluZS5nZXRBc0Jvb2xlYW4oImdlbmVyYXRlQ2xpZW50Iik7CiAgCQkJZGF0YVBpcGVsaW5lLmFwcExvZygiR0VORVJBVEVfQ0xJRU5UIiwgIkdlbmVyYXRlIENsaWVudDogIiArIGNsaWVudCk7CiAgICAgICAgICAgIGJvb2xlYW4gc2VydmVyU3R1YiA9IGRhdGFQaXBlbGluZS5nZXRBc0Jvb2xlYW4oImdlbmVyYXRlU2VydmVyU3R1YiIpOwogIAkJCWRhdGFQaXBlbGluZS5hcHBMb2coIkdFTkVSQVRFX1NFUlZFUl9TVFVCIiwgIkdlbmVyYXRlIFNlcnZlciBTdHViOiAiICsgc2VydmVyU3R1Yik7CiAgICAgICAgICAgIFN0cmluZyBwYWNrYWdlTmFtZSA9IGRhdGFQaXBlbGluZS5nZXRTdHJpbmcoInBhY2thZ2VOYW1lIik7CiAgCQkJZGF0YVBpcGVsaW5lLmFwcExvZygiUEFDS0FHRV9OQU1FIiwgIlBhY2thZ2UgTmFtZTogIiArIHBhY2thZ2VOYW1lKTsKCiAgICAgICAgICAgIFN0cmluZyBsb2NhdGlvbiA9IFByb3BlcnR5TWFuYWdlci5nZXRQYWNrYWdlUGF0aChkYXRhUGlwZWxpbmUucnAuZ2V0VGVuYW50KCkpICsgInBhY2thZ2VzLyIgKyBwYWNrYWdlTmFtZSArICIvY2xpZW50IjsKICAJCQlkYXRhUGlwZWxpbmUuYXBwTG9nKCJDTElFTlRfTE9DQVRJT04iLCBsb2NhdGlvbik7CgogICAgICAgICAgICBpZiAoY2xpZW50KSB7CiAgICAgICAgICAgICAgICBNYXA8U3RyaW5nLCBTdHJpbmc+IGNsaWVudFNlcnZpY2VzID0gSW1wb3J0U3dhZ2dlci5hc0NsaWVudExpYihsb2NhdGlvbiwgY29udGVudCwgZGF0YVBpcGVsaW5lKTsKICAgICAgICAgICAgICAgIGRhdGFQaXBlbGluZS5wdXQoImNsaWVudFNlcnZpY2VzIiwgY2xpZW50U2VydmljZXMpOwogICAgICAgICAgICAgIAlkYXRhUGlwZWxpbmUuYXBwTG9nKCJTRVJWSUNFU19DUkVBVEVEIiwgY2xpZW50U2VydmljZXMgKyAiIDogQ2xpZW50IHNlcnZpY2VzIGNyZWF0ZWQgc3VjY2Vzc2Z1bGx5LiIpOwogICAgICAgICAgICB9CiAgCiAgCQkJbG9jYXRpb24gPSBQcm9wZXJ0eU1hbmFnZXIuZ2V0UGFja2FnZVBhdGgoZGF0YVBpcGVsaW5lLnJwLmdldFRlbmFudCgpKSArICJwYWNrYWdlcy8iICsgcGFja2FnZU5hbWUgKyAiL3NlcnZlciI7CgkJCWRhdGFQaXBlbGluZS5hcHBMb2coIlNFUlZFUl9MT0NBVElPTiIsIGxvY2F0aW9uKTsKCiAgICAgICAgICAgIGlmIChzZXJ2ZXJTdHViKSB7CiAgICAgICAgICAgICAgICBNYXA8U3RyaW5nLCBTdHJpbmc+IHNlcnZlclNlcnZpY2VzID0gSW1wb3J0U3dhZ2dlci5hc1NlcnZlclN0dWIobG9jYXRpb24sIGNvbnRlbnQsZGF0YVBpcGVsaW5lLGNsaWVudCxwYWNrYWdlTmFtZSk7CiAgICAgICAgICAgICAgICBkYXRhUGlwZWxpbmUucHV0KCJzZXJ2ZXJTZXJ2aWNlcyIsIHNlcnZlclNlcnZpY2VzKTsKICAgICAgICAgICAgICAJZGF0YVBpcGVsaW5lLmFwcExvZygiU0VSVklDRVNfQ1JFQVRFRCIsIHNlcnZlclNlcnZpY2VzICsgIiA6IENsaWVudCBzZXJ2aWNlcyBjcmVhdGVkIHN1Y2Nlc3NmdWxseS4iKTsKICAgICAgICAgICAgfQogIAkJCVNlcnZpY2VVdGlscy5leHBpcmVTZXJ2aWNlQ2FjaGUoInBhY2thZ2VzLm1pZGRsZXdhcmUucHViLnNlcnZlci5icm93c2UuZ2V0UGFja2FnZXNBc1RyZWUiKTsKCiAgICAgICAgfSBjYXRjaCAoRXhjZXB0aW9uIGUpIHsKICAgICAgICAgICAgZS5wcmludFN0YWNrVHJhY2UoKTsKICAgICAgICAgICAgZGF0YVBpcGVsaW5lLmNsZWFyKCk7CiAgICAgICAgICAgIGRhdGFQaXBlbGluZS5wdXQoImVycm9yIiwgZS5nZXRNZXNzYWdlKCkpOwogIAkJCWRhdGFQaXBlbGluZS5hcHBMb2coIlNFUlZJQ0VfRVJST1IiLCBlLmdldE1lc3NhZ2UoKSk7CiAgICAgICAgICAgIG5ldyBTbmlwcGV0RXhjZXB0aW9uKGRhdGFQaXBlbGluZSwgIlNuaXBwZXQgZXhjZXB0aW9uIiwgbmV3IEV4Y2VwdGlvbihlKSk7CiAgICAgICAgfQ==",
+  "staticWorkspace" : "",
+  "version" : "v1",
+  "consumers" : "",
+  "developers" : "rnd,developers",
+  "lockedByUser" : "vaishna.nature9@gmail.com"
+}

@@ -1,0 +1,59 @@
+{
+  "input" : [ {
+    "id" : "j1_1",
+    "text" : "mcpId",
+    "li_attr" : {
+      "id" : "j1_1"
+    },
+    "a_attr" : {
+      "href" : "#",
+      "id" : "j1_1_anchor"
+    },
+    "state" : {
+      "loaded" : true,
+      "opened" : false,
+      "selected" : false,
+      "disabled" : false,
+      "hidden" : false
+    },
+    "data" : {
+      "guid" : "afb174d9-c4e4-4bdb-8452-d54606b52dff",
+      "columnType" : "-1",
+      "assignList" : [ ]
+    },
+    "children" : [ ],
+    "type" : "string"
+  } ],
+  "output" : [ {
+    "id" : "j2_1",
+    "text" : "tools_registry",
+    "li_attr" : {
+      "id" : "j2_1"
+    },
+    "a_attr" : {
+      "href" : "#",
+      "id" : "j2_1_anchor"
+    },
+    "state" : {
+      "loaded" : true,
+      "opened" : false,
+      "selected" : false,
+      "disabled" : false,
+      "hidden" : false
+    },
+    "data" : {
+      "guid" : "61e20588-2f35-4ccd-b2ad-891f6e144717",
+      "columnType" : "-1"
+    },
+    "children" : [ ],
+    "type" : "documentList"
+  } ],
+  "package" : "cGFja2FnZSBwYWNrYWdlcy5Bd2FyZW5lc3MuZGFzaGJvYXJkLnNlcnZpY2VzLmphdmEudG9vbHNfcmVnaXN0cnk7",
+  "imports" : "aW1wb3J0IGFnZW50cy5jb3JlLnRvb2xzLm1vZGVsLio7CmltcG9ydCBhZ2VudHMuY29yZS50b29scy5zZXJ2aWNlLkFnZW50VG9vbHNTZXJ2aWNlOwppbXBvcnQgYWdlbnRzLmNvcmUudG9vbHMuc2VydmljZS5Ub29sc1JlZ2lzdHJ5U2VydmljZTsKaW1wb3J0IGNvbS5la2EubWlkZGxld2FyZS5zZXJ2aWNlLkRhdGFQaXBlbGluZTsKaW1wb3J0IGNvbS5la2EubWlkZGxld2FyZS5zZXJ2aWNlLlJ1bnRpbWVQaXBlbGluZTsKaW1wb3J0IGNvbS5la2EubWlkZGxld2FyZS50ZW1wbGF0ZS5TbmlwcGV0RXhjZXB0aW9uOwoKaW1wb3J0IGphdmEudXRpbC5MaXN0OwppbXBvcnQgamF2YS51dGlsLk1hcDsKaW1wb3J0IGphdmEudXRpbC5VVUlEOw==",
+  "main" : "dHJ5ewoKICAgICAgICAgICAgU3RyaW5nIFVVSUQgPSBkYXRhUGlwZWxpbmUuZ2V0U3RyaW5nKCJtY3BJZCIpOwoKICAgICAgICAgICAgTGlzdDxNYXA8U3RyaW5nLCBPYmplY3Q+PiB0b29sc1JlZ2lzdHJ5ID0gVG9vbHNSZWdpc3RyeVNlcnZpY2UuZ2V0SW5zdGFuY2UoKS5saXN0Um93c0J5TWNwSWQoamF2YS51dGlsLlVVSUQuZnJvbVN0cmluZyhVVUlEKSk7CgogICAgICAgICAgICBkYXRhUGlwZWxpbmUucHV0KCJ0b29sc19yZWdpc3RyeSIsIHRvb2xzUmVnaXN0cnkpOwoKICAgICAgICB9Y2F0Y2goRXhjZXB0aW9uIGUpewogICAgICAgICAgICBlLnByaW50U3RhY2tUcmFjZSgpOwogICAgICAgICAgICBkYXRhUGlwZWxpbmUuY2xlYXIoKTsKICAgICAgICAgICAgZGF0YVBpcGVsaW5lLnB1dCgiZXJyb3IiLGUuZ2V0TWVzc2FnZSgpKTsKICAgICAgICAgICAgZGF0YVBpcGVsaW5lLnB1dCgic3RhdHVzIiwiZmFpbGVkIik7CiAgICAgICAgICAgIG5ldyBTbmlwcGV0RXhjZXB0aW9uKGRhdGFQaXBlbGluZSwiU25pcHBldCBleGNlcHRpb24iLCBuZXcgRXhjZXB0aW9uKGUpKTsKICAgICAgICB9",
+  "staticWorkspace" : "",
+  "version" : "v1",
+  "consumers" : "",
+  "developers" : "administrators",
+  "lockedByUser" : "rupeshgupta@syncloop.com"
+}

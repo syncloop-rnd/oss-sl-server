@@ -1,0 +1,88 @@
+{
+  "input" : [ ],
+  "output" : [ {
+    "id" : "j2_1",
+    "text" : "msg",
+    "li_attr" : {
+      "id" : "j2_1"
+    },
+    "a_attr" : {
+      "href" : "#",
+      "id" : "j2_1_anchor"
+    },
+    "state" : {
+      "loaded" : true,
+      "opened" : false,
+      "selected" : false,
+      "disabled" : false
+    },
+    "data" : { },
+    "children" : [ ],
+    "type" : "string"
+  }, {
+    "id" : "j2_2",
+    "text" : "error",
+    "li_attr" : {
+      "id" : "j2_2"
+    },
+    "a_attr" : {
+      "href" : "#",
+      "id" : "j2_2_anchor"
+    },
+    "state" : {
+      "loaded" : true,
+      "opened" : false,
+      "selected" : false,
+      "disabled" : false
+    },
+    "data" : { },
+    "children" : [ ],
+    "type" : "string"
+  }, {
+    "id" : "j2_3",
+    "text" : "jobMapData",
+    "li_attr" : {
+      "id" : "j2_3"
+    },
+    "a_attr" : {
+      "href" : "#",
+      "id" : "j2_3_anchor"
+    },
+    "state" : {
+      "loaded" : true,
+      "opened" : false,
+      "selected" : false,
+      "disabled" : false
+    },
+    "data" : { },
+    "children" : [ ],
+    "type" : "document"
+  }, {
+    "id" : "j2_4",
+    "text" : "status",
+    "li_attr" : {
+      "id" : "j2_4"
+    },
+    "a_attr" : {
+      "href" : "#",
+      "id" : "j2_4_anchor"
+    },
+    "state" : {
+      "loaded" : true,
+      "opened" : false,
+      "selected" : false,
+      "disabled" : false
+    },
+    "data" : { },
+    "children" : [ ],
+    "type" : "boolean"
+  } ],
+  "package" : "cGFja2FnZSBwYWNrYWdlcy5zY2hlZHVsZXIuY3JvbkpvYi5zZXJ2aWNlcy5qYXZhOw==",
+  "imports" : "aW1wb3J0IGNvbS5la2EubWlkZGxld2FyZS5zZXJ2aWNlLkRhdGFQaXBlbGluZTsKaW1wb3J0IGNvbS5la2EubWlkZGxld2FyZS5zZXJ2aWNlLlNlcnZpY2VVdGlsczsKaW1wb3J0IGNvbS5la2EubWlkZGxld2FyZS50ZW1wbGF0ZS5TbmlwcGV0RXhjZXB0aW9uOwppbXBvcnQgY29tLmVrYS5taWRkbGV3YXJlLnNlcnZpY2UuUnVudGltZVBpcGVsaW5lOwppbXBvcnQgY29tLmVrYS5taWRkbGV3YXJlLnRlbXBsYXRlLlRlbmFudDsKaW1wb3J0IGphdmEudGltZS5EdXJhdGlvbjsKaW1wb3J0IGphdmEudGltZS5JbnN0YW50OwppbXBvcnQgamF2YS50aW1lLlpvbmVkRGF0ZVRpbWU7CmltcG9ydCBqYXZhLnV0aWwuKjsKaW1wb3J0IGphdmEudXRpbC5jb25jdXJyZW50LkNvbmN1cnJlbnRIYXNoTWFwOwppbXBvcnQgY29tLmVrYS5taWRkbGV3YXJlLmhlYXAuQ2FjaGVNYW5hZ2VyOwppbXBvcnQgY29tLmNyb251dGlscy5tb2RlbC5Dcm9uVHlwZTsKaW1wb3J0IGNvbS5jcm9udXRpbHMubW9kZWwuZGVmaW5pdGlvbi5Dcm9uRGVmaW5pdGlvbjsKaW1wb3J0IGNvbS5jcm9udXRpbHMubW9kZWwuZGVmaW5pdGlvbi5Dcm9uRGVmaW5pdGlvbkJ1aWxkZXI7CmltcG9ydCBjb20uY3JvbnV0aWxzLm1vZGVsLnRpbWUuRXhlY3V0aW9uVGltZTsKaW1wb3J0IGNvbS5jcm9udXRpbHMucGFyc2VyLkNyb25QYXJzZXI7CmltcG9ydCBpby50aW1lYW5kc3BhY2UuY3JvbnNjaGVkdWxlci5Dcm9uU2NoZWR1bGVyOwppbXBvcnQgamF2YS50aW1lLmZvcm1hdC5EYXRlVGltZUZvcm1hdHRlcjsKaW1wb3J0IGNvbS5la2EubWlkZGxld2FyZS5zY2hlZHVsaW5nLkFwcGxpY2F0aW9uU2NoZWR1bGVyRmFjdG9yeTsKaW1wb3J0IGNvbS5la2EubWlkZGxld2FyZS5zY2hlZHVsaW5nLkpvYlNjaGVkdWxlcjsKaW1wb3J0IG9yZy5xdWFydHouKjsK",
+  "main" : "dHJ5IHsgCiAgCiAgICBpZighQXBwbGljYXRpb25TY2hlZHVsZXJGYWN0b3J5LmlzU2NoZWR1bGVyQWxpdmUoZGF0YVBpcGVsaW5lKSl7CiAgICAgIEFwcGxpY2F0aW9uU2NoZWR1bGVyRmFjdG9yeS5zdGFydFNjaGVkdWxlcihkYXRhUGlwZWxpbmUpOwogICAgIC8vIHNjaGVkdWxlclRocmVhZD1uZXcgVGhyZWFkKHJ1bm5hYmxlKTsKICAgICAgZGF0YVBpcGVsaW5lLmxvZygiQXR0ZW1wdGluZyB0byBzdGFydCB0aGUgc2NoZWR1bGVyIHRocmVhZC4uLi4iKTsKICAgICAvLyBzY2hlZHVsZXJUaHJlYWQuc3RhcnQoKTsKICAgICAgZGF0YVBpcGVsaW5lLnB1dCgibXNnIiwiU2NoZWR1bGVyIHRocmVhZCBpcyBhY3RpdmUgYW5kIHJ1bm5pbmciKTsKICAgICAgZGF0YVBpcGVsaW5lLmxvZygiU2NoZWR1bGVyIHRocmVhZCBzdGFydGVkL2FjdGl2YXRlZCIpOwogICAgICBkYXRhUGlwZWxpbmUucHV0KCJtc2ciLCJTY2hlZHVsZXIgdGhyZWFkIGFjdGl2YXRlZCIpOwogICAgICBkYXRhUGlwZWxpbmUucHV0KCJzdGF0dXMiLCB0cnVlKTsKICAgIH1lbHNlIHsKICAgICAgZGF0YVBpcGVsaW5lLnB1dCgibXNnIiwiU2NoZWR1bGVyIHRocmVhZCBpcyBhY3RpdmUgYW5kIHJ1bm5pbmciKTsKICAgICAgZGF0YVBpcGVsaW5lLnB1dCgic3RhdHVzIiwgZmFsc2UpOwogICAgfQogIH0gY2F0Y2ggKEV4Y2VwdGlvbiBlKSB7CgkJZGF0YVBpcGVsaW5lLmNsZWFyKCk7CiAgCQlkYXRhUGlwZWxpbmUucHV0KCJlcnJvciIsZS5nZXRNZXNzYWdlKCkpOwogICAgCXRocm93IG5ldyBTbmlwcGV0RXhjZXB0aW9uKGRhdGFQaXBlbGluZSwiU25pcHBldCBleGNlcHRpb24iLCBuZXcgRXhjZXB0aW9uKGUpKTsKICB9",
+  "staticWorkspace" : "",
+  "version" : "v1",
+  "consumers" : "",
+  "developers" : "",
+  "lockedByUser" : "admin"
+}

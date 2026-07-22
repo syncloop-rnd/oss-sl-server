@@ -1,0 +1,165 @@
+<html style="min-height: 100% !important;">
+<head>
+	<!-- Required meta tags -->
+	<meta charset="utf-8">
+	<base href="/"><script src="env.js"></script>
+	<script>
+		window.ENV = window.env || {};
+	</script>
+	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+	<link rel="shortcut icon" href="middleware/pub/server/ui/assets/img/favicon.ico" type="image/x-icon" />
+	<!-- Bootstrap CSS -->
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+	<link rel="stylesheet" href="middleware/pub/server/ui/assets/css/bootstrap.min.css">
+	<link rel="stylesheet" href="middleware/pub/server/ui/assets/css/dashboard.css">
+	<!-- Style -->
+	<link rel="stylesheet" href="middleware/pub/server/ui/assets/css/login.css">
+	<title>Syncloop | Signup</title>
+
+	<script type="syncloop/analytics"></script>
+</head>
+<body>
+<script type="syncloop/body-analytics"></script>
+<div id="toasts"></div>
+<div class="d-lg-flex half">
+	<div class="bg order-1 order-md-2 signup_img"></div>
+	<div class="contents order-2 order-md-1">
+		<div class="container login-style">
+			<div class="login_logo"><img src="middleware/pub/server/ui/assets/img/syncloop-blue-logo.svg" alt="Image"></div>
+			<div class="row align-items-center justify-content-center">
+				<div class="col-md-9">
+					<div class="licence_info" style="display: none;">
+					    <h4>Syncloop offering you...</h4>
+						<div class="info_pr">
+						    <h5>Enterprise License</h5>
+							<div class="l_price">Price: &nbsp;<span id="licenseCredits"></span></div>
+						</div>
+					</div>
+					<h3>Create an account</h3>
+					<form>
+						<div class="form-group first spr">
+							<input type="text" placeholder="john@gmail.com" class="form-control icon1" id="username" />
+							<i class="" aria-hidden="true"><img src="middleware/pub/server/ui/assets/img/icon_email.svg"></i>
+						</div>
+						<div class="form-group last spr">
+							<input type="password" placeholder="Create password" class="form-control" id="password" />
+							<i class="us-p" aria-hidden="true"><img src="middleware/pub/server/ui/assets/img/icon_lock.svg"></i>
+							<i class="bi bi-eye-slash" id="togglePassword"></i>
+						</div>
+						<button type="button" id="" class="btn btn-gry" onclick="doSignUp(this)">Get started</button>
+						<div class="back_login">Already have an account? <a href="/">Login</a></div>
+					</form>
+					<div class="lgn_footer">
+						<div class="join_slack"><span><img src="middleware/pub/server/ui/assets/img/discord2.png" alt="">Join us on <a target="_blank" href="https://discord.com/invite/EnazFJpGQs?">Discord</a></span></div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
+<script src="middleware/pub/server/ui/assets/js/custom-dashboard.js"></script>
+<script type="text/javascript" src="middleware/pub/server/ui/javascript/middleware.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/js-cookie@2.2.1/src/js.cookie.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/js-cookie@2/src/js.cookie.min.js"></script>
+<script>
+	const togglePassword = document.querySelector("#togglePassword");
+	const password = document.querySelector("#password");
+
+	togglePassword.addEventListener("click", function () {
+		// toggle the type attribute
+		const type = password.getAttribute("type") === "password" ? "text" : "password";
+		password.setAttribute("type", type);
+
+		// toggle the icon
+		this.classList.toggle("bi-eye");
+	});
+
+	$(document).ready(function () {
+		if ("#" != getQueryVariable("licenseCredits")) {
+			$("#licenseCredits").html("$" + getQueryVariable("licenseCredits"));
+			$(".licence_info").show();
+		}
+	});
+
+	function getQueryVariable(variable) {
+		var query = window.location.search.substring(1);
+		var vars = query.split("&");
+		for (var i = 0; i < vars.length; i++) {
+			var pair = vars[i].split("=");
+			if (pair[0] == variable) {
+				return pair[1];
+			}
+		}
+		console.log('Query Variable ' + variable + ' not found');
+		return "#";
+	}
+
+	function doSignUp(ref) {
+		const email = $("#username").val().trim();
+		const pass = $("#password").val().trim();
+
+		const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+
+		if (!email) {
+			$.toast('<div class="custom-toast"><span class="tst red"><svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" viewBox="0 0 30 30"><defs><style>.cls-1 {fill: #fff;fill-rule: evenodd;}</style></defs><g id="notification_error"><path class="cls-in" d="M275.5,28A12.5,12.5,0,1,1,288,15.5,12.514,12.514,0,0,1,275.5,28Zm0-24A11.5,11.5,0,1,0,287,15.5,11.513,11.513,0,0,0,275.5,4Zm-0.473,13.867-2.241,2.241a1.339,1.339,0,0,1-1.894-1.894l2.241-2.241a0.669,0.669,0,0,0,0-.947l-2.241-2.241a1.339,1.339,0,0,1,1.894-1.894l2.241,2.241a0.67,0.67,0,0,0,.947,0l2.24-2.241a1.339,1.339,0,0,1,1.894,1.894l-2.241,2.241a0.671,0.671,0,0,0,0,.947l2.241,2.241a1.339,1.339,0,0,1-1.894,1.894l-2.24-2.241a0.67,0.67,0,0,0-.947,0h0Z" transform="translate(-260)"/></g></svg></span><div class="t_info"><h5>Email Required</h5><span>Please enter your email address.</span></div></div>');
+			return;
+		}
+
+		if (!emailRegex.test(email)) {
+			$.toast('<div class="custom-toast"><span class="tst red"><svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" viewBox="0 0 30 30"><defs><style>.cls-1 {fill: #fff;fill-rule: evenodd;}</style></defs><g id="notification_error"><path class="cls-in" d="M275.5,28A12.5,12.5,0,1,1,288,15.5,12.514,12.514,0,0,1,275.5,28Zm0-24A11.5,11.5,0,1,0,287,15.5,11.513,11.513,0,0,0,275.5,4Zm-0.473,13.867-2.241,2.241a1.339,1.339,0,0,1-1.894-1.894l2.241-2.241a0.669,0.669,0,0,0,0-.947l-2.241-2.241a1.339,1.339,0,0,1,1.894-1.894l2.241,2.241a0.67,0.67,0,0,0,.947,0l2.24-2.241a1.339,1.339,0,0,1,1.894,1.894l-2.241,2.241a0.671,0.671,0,0,0,0,.947l2.241,2.241a1.339,1.339,0,0,1-1.894,1.894l-2.24-2.241a0.67,0.67,0,0,0-.947,0h0Z" transform="translate(-260)"/></g></svg></span><div class="t_info"><h5>Invalid Email</h5><span>Please enter a valid email address.</span></div></div>');
+			return;
+		}
+
+		if (!pass) {
+			$.toast('<div class="custom-toast"><span class="tst red"><svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" viewBox="0 0 30 30"><defs><style>.cls-1 {fill: #fff;fill-rule: evenodd;}</style></defs><g id="notification_error"><path class="cls-in" d="M275.5,28A12.5,12.5,0,1,1,288,15.5,12.514,12.514,0,0,1,275.5,28Zm0-24A11.5,11.5,0,1,0,287,15.5,11.513,11.513,0,0,0,275.5,4Zm-0.473,13.867-2.241,2.241a1.339,1.339,0,0,1-1.894-1.894l2.241-2.241a0.669,0.669,0,0,0,0-.947l-2.241-2.241a1.339,1.339,0,0,1,1.894-1.894l2.241,2.241a0.67,0.67,0,0,0,.947,0l2.24-2.241a1.339,1.339,0,0,1,1.894,1.894l-2.241,2.241a0.671,0.671,0,0,0,0,.947l2.241,2.241a1.339,1.339,0,0,1-1.894,1.894l-2.24-2.241a0.67,0.67,0,0,0-.947,0h0Z" transform="translate(-260)"/></g></svg></span><div class="t_info"><h5>Password Required</h5><span>Please enter a password.</span></div></div>');
+			return;
+		}
+
+		if (pass.length < 6 || pass.length > 18) {
+			$.toast('<div class="custom-toast"><span class="tst red"><svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" viewBox="0 0 30 30"><defs><style>.cls-1 {fill: #fff;fill-rule: evenodd;}</style></defs><g id="notification_error"><path class="cls-in" d="M275.5,28A12.5,12.5,0,1,1,288,15.5,12.514,12.514,0,0,1,275.5,28Zm0-24A11.5,11.5,0,1,0,287,15.5,11.513,11.513,0,0,0,275.5,4Zm-0.473,13.867-2.241,2.241a1.339,1.339,0,0,1-1.894-1.894l2.241-2.241a0.669,0.669,0,0,0,0-.947l-2.241-2.241a1.339,1.339,0,0,1,1.894-1.894l2.241,2.241a0.67,0.67,0,0,0,.947,0l2.24-2.241a1.339,1.339,0,0,1,1.894,1.894l-2.241,2.241a0.671,0.671,0,0,0,0,.947l2.241,2.241a1.339,1.339,0,0,1-1.894,1.894l-2.24-2.241a0.67,0.67,0,0,0-.947,0h0Z" transform="translate(-260)"/></g></svg></span><div class="t_info"><h5>Password Length</h5><span>Password must be between 6 and 18 characters.</span></div></div>');
+			return;
+		}
+
+		$(ref).attr("disabled", "disabled");
+		$(ref).html("...");
+
+		let request = {
+			"user": email,
+			"password": pass
+		};
+
+		if ("#" != getQueryVariable("licenseCredits")) {
+			request.licenseCredits = getQueryVariable("licenseCredits");
+		}
+
+		Cookies.remove('pac4jCsrfToken');
+		Cookies.remove('tenant');
+		Cookies.remove('JSESSIONID');
+		localStorage.clear();
+		sessionStorage.clear();
+		deleteAllCookies();
+
+		$.ajax({
+			type: "POST",
+			url: window.ENV.API_BASE_URL + "/public/packages.onboarding.api.onboardUser.main",
+			data: JSON.stringify(request),
+			contentType: "application/json",
+			success: function (response) {
+				$(ref).removeAttr("disabled");
+				$(ref).html("Get Started");
+				if (response.status == true) {
+					location.href = "middleware/pub/server/ui/welcome/onboarding/verify-your-email.html?email=" + email;
+				} else {
+					$.toast('<div class="custom-toast"><span class="tst red"><svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" viewBox="0 0 30 30"><defs><style>.cls-1 {fill: #fff;fill-rule: evenodd;}</style></defs><g id="notification_error"><path class="cls-in" d="M275.5,28A12.5,12.5,0,1,1,288,15.5,12.514,12.514,0,0,1,275.5,28Zm0-24A11.5,11.5,0,1,0,287,15.5,11.513,11.513,0,0,0,275.5,4Zm-0.473,13.867-2.241,2.241a1.339,1.339,0,0,1-1.894-1.894l2.241-2.241a0.669,0.669,0,0,0,0-.947l-2.241-2.241a1.339,1.339,0,0,1,1.894-1.894l2.241,2.241a0.67,0.67,0,0,0,.947,0l2.24-2.241a1.339,1.339,0,0,1,1.894,1.894l-2.241,2.241a0.671,0.671,0,0,0,0,.947l2.241,2.241a1.339,1.339,0,0,1-1.894,1.894l-2.24-2.241a0.67,0.67,0,0,0-.947,0h0Z" transform="translate(-260)"/></g></svg></span><div class="t_info"><h5>Oops!</h5><span>' + response.message + '</span></div></div>');
+				}
+			},
+			error: function () {
+				$.toast('<div class="custom-toast"><span class="tst red"><svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" viewBox="0 0 30 30"><defs><style>.cls-1 {fill: #fff;fill-rule: evenodd;}</style></defs><g id="notification_error"><path class="cls-in" d="M275.5,28A12.5,12.5,0,1,1,288,15.5,12.514,12.514,0,0,1,275.5,28Zm0-24A11.5,11.5,0,1,0,287,15.5,11.513,11.513,0,0,0,275.5,4Zm-0.473,13.867-2.241,2.241a1.339,1.339,0,0,1-1.894-1.894l2.241-2.241a0.669,0.669,0,0,0,0-.947l-2.241-2.241a1.339,1.339,0,0,1,1.894-1.894l2.241,2.241a0.67,0.67,0,0,0,.947,0l2.24-2.241a1.339,1.339,0,0,1,1.894,1.894l-2.241,2.241a0.671,0.671,0,0,0,0,.947l2.241,2.241a1.339,1.339,0,0,1-1.894,1.894l-2.24-2.241a0.67,0.67,0,0,0-.947,0h0Z" transform="translate(-260)"/></g></svg></span><div class="t_info"><h5>Oops!</h5><span>Service Unavailable. Please try later.</span></div></div>');
+			}
+		});
+	}
+
+</script>
+</body>
+</html>

@@ -1,0 +1,691 @@
+{
+  "latest" : {
+    "createdTS" : "",
+    "input" : [ {
+      "id" : "j2_1",
+      "text" : "endpoint",
+      "li_attr" : {
+        "id" : "j2_1"
+      },
+      "a_attr" : {
+        "href" : "#",
+        "id" : "j2_1_anchor"
+      },
+      "state" : {
+        "loaded" : true,
+        "opened" : false,
+        "selected" : false,
+        "disabled" : false,
+        "hidden" : false
+      },
+      "data" : { },
+      "children" : [ ],
+      "type" : "string"
+    }, {
+      "id" : "j2_2",
+      "text" : "apiKey",
+      "li_attr" : {
+        "id" : "j2_2"
+      },
+      "a_attr" : {
+        "href" : "#",
+        "id" : "j2_2_anchor"
+      },
+      "state" : {
+        "loaded" : true,
+        "opened" : false,
+        "selected" : false,
+        "disabled" : false,
+        "hidden" : false
+      },
+      "data" : { },
+      "children" : [ ],
+      "type" : "string"
+    }, {
+      "id" : "j2_3",
+      "text" : "tenant",
+      "li_attr" : {
+        "id" : "j2_3"
+      },
+      "a_attr" : {
+        "href" : "#",
+        "id" : "j2_3_anchor"
+      },
+      "state" : {
+        "loaded" : true,
+        "opened" : false,
+        "selected" : false,
+        "disabled" : false,
+        "hidden" : false
+      },
+      "data" : { },
+      "children" : [ ],
+      "type" : "string"
+    } ],
+    "output" : [ {
+      "id" : "j3_1",
+      "text" : "isEnabled",
+      "li_attr" : {
+        "id" : "j3_1"
+      },
+      "a_attr" : {
+        "href" : "#",
+        "id" : "j3_1_anchor"
+      },
+      "state" : {
+        "loaded" : true,
+        "opened" : false,
+        "selected" : false,
+        "disabled" : false,
+        "hidden" : false
+      },
+      "data" : { },
+      "children" : [ ],
+      "type" : "boolean"
+    }, {
+      "id" : "j3_2",
+      "text" : "reason",
+      "li_attr" : {
+        "id" : "j3_2"
+      },
+      "a_attr" : {
+        "href" : "#",
+        "id" : "j3_2_anchor"
+      },
+      "state" : {
+        "loaded" : true,
+        "opened" : false,
+        "selected" : false,
+        "disabled" : false,
+        "hidden" : false
+      },
+      "data" : { },
+      "children" : [ ],
+      "type" : "string"
+    }, {
+      "id" : "j3_3",
+      "text" : "statusCode",
+      "li_attr" : {
+        "id" : "j3_3"
+      },
+      "a_attr" : {
+        "href" : "#",
+        "id" : "j3_3_anchor"
+      },
+      "state" : {
+        "loaded" : true,
+        "opened" : false,
+        "selected" : false,
+        "disabled" : false
+      },
+      "data" : { },
+      "children" : [ ],
+      "type" : "string"
+    } ],
+    "api" : [ {
+      "id" : "j1_1",
+      "text" : "Transformer",
+      "li_attr" : {
+        "id" : "j1_1"
+      },
+      "a_attr" : {
+        "href" : "javascript:void(0)",
+        "id" : "j1_1_anchor"
+      },
+      "state" : {
+        "loaded" : true,
+        "opened" : false,
+        "selected" : false,
+        "disabled" : false,
+        "hidden" : false
+      },
+      "data" : {
+        "transformers" : [ ],
+        "lines" : [ ],
+        "dropList" : [ ],
+        "createList" : [ {
+          "path" : "environment_url",
+          "value" : "https://#{endpoint}/tenant/#{tenant}/packages.middleware.pub.service.getCurrentUserAccount.main",
+          "evaluate" : "EEV",
+          "typePath" : "string"
+        }, {
+          "path" : "method",
+          "value" : "GET",
+          "typePath" : "string"
+        }, {
+          "path" : "AuthKey",
+          "value" : "Bearer #{apiKey}",
+          "evaluate" : "EEV",
+          "typePath" : "string"
+        }, {
+          "path" : "requestTimeout",
+          "value" : "1",
+          "typePath" : "string"
+        }, {
+          "path" : "sslValidation",
+          "value" : "false",
+          "id" : "96579363-5de3-4f5e-b513-65a2e3b7e08c",
+          "typePath" : "boolean"
+        } ],
+        "guid" : "2d6d9bcc-ebc9-4148-a03a-64fb028e6492",
+        "initiateList" : [ {
+          "path" : "sslValidation",
+          "id" : "fcd7a4bb-c708-4797-818e-5e1c40877463",
+          "typePath" : "boolean"
+        } ]
+      },
+      "children" : [ ],
+      "type" : "transformer"
+    }, {
+      "id" : "j1_2",
+      "text" : "Invoke",
+      "li_attr" : {
+        "id" : "j1_2"
+      },
+      "a_attr" : {
+        "href" : "javascript:void(0)",
+        "id" : "j1_2_anchor"
+      },
+      "state" : {
+        "loaded" : true,
+        "opened" : false,
+        "selected" : false,
+        "disabled" : false,
+        "hidden" : false
+      },
+      "data" : {
+        "transformers" : [ {
+          "op" : "copy",
+          "from" : "/environment_url",
+          "to" : "/url",
+          "inTypePath" : "string",
+          "outTypePath" : "string",
+          "direction" : "in"
+        }, {
+          "op" : "copy",
+          "from" : "/method",
+          "to" : "/method",
+          "inTypePath" : "string",
+          "outTypePath" : "string",
+          "direction" : "in"
+        }, {
+          "op" : "copy",
+          "from" : "/AuthKey",
+          "to" : "/headers/Authorization",
+          "inTypePath" : "string",
+          "outTypePath" : "document/string",
+          "direction" : "in"
+        }, {
+          "op" : "copy",
+          "from" : "/isSuccessful",
+          "to" : "/isSuccessful",
+          "inTypePath" : "boolean",
+          "outTypePath" : "boolean",
+          "direction" : "out"
+        }, {
+          "op" : "copy",
+          "from" : "/respPayload",
+          "to" : "/respPayload",
+          "inTypePath" : "string",
+          "outTypePath" : "string",
+          "direction" : "out"
+        }, {
+          "op" : "copy",
+          "from" : "/statusCode",
+          "to" : "/statusCode",
+          "inTypePath" : "string",
+          "outTypePath" : "string",
+          "direction" : "out"
+        }, {
+          "op" : "copy",
+          "from" : "/requestTimeout",
+          "to" : "/settings/requestTimeout",
+          "inTypePath" : "string",
+          "outTypePath" : "document/string",
+          "direction" : "in"
+        }, {
+          "op" : "copy",
+          "from" : "/sslValidation",
+          "to" : "/settings/sslValidation",
+          "inTypePath" : "boolean",
+          "outTypePath" : "document/boolean",
+          "direction" : "in"
+        } ],
+        "lines" : [ {
+          "inputPath" : "environment_url",
+          "outputPath" : "url",
+          "inpJsTree" : "#launching_arrow_jsTree",
+          "outpJsTree" : "#landing_arrow_jsTree_function",
+          "INPath" : "environment_url",
+          "OUTPath" : "url",
+          "direction" : "in",
+          "op" : "copy",
+          "line" : 0,
+          "dashedLine" : false,
+          "inType" : "string",
+          "outType" : "string",
+          "inTypePath" : "string",
+          "outTypePath" : "string"
+        }, {
+          "inputPath" : "method",
+          "outputPath" : "method",
+          "inpJsTree" : "#launching_arrow_jsTree",
+          "outpJsTree" : "#landing_arrow_jsTree_function",
+          "INPath" : "method",
+          "OUTPath" : "method",
+          "direction" : "in",
+          "op" : "copy",
+          "line" : 0,
+          "dashedLine" : false,
+          "inType" : "string",
+          "outType" : "string",
+          "inTypePath" : "string",
+          "outTypePath" : "string"
+        }, {
+          "inputPath" : "AuthKey",
+          "outputPath" : "headers/Authorization",
+          "inpJsTree" : "#launching_arrow_jsTree",
+          "outpJsTree" : "#landing_arrow_jsTree_function",
+          "INPath" : "AuthKey",
+          "OUTPath" : "headers/Authorization",
+          "direction" : "in",
+          "op" : "copy",
+          "line" : 0,
+          "dashedLine" : false,
+          "inType" : "string",
+          "outType" : "string",
+          "inTypePath" : "string",
+          "outTypePath" : "document/string"
+        }, {
+          "inputPath" : "isSuccessful",
+          "outputPath" : "isSuccessful",
+          "inpJsTree" : "#launching_arrow_jsTree_function",
+          "outpJsTree" : "#landing_arrow_jsTree",
+          "INPath" : "isSuccessful",
+          "OUTPath" : "isSuccessful",
+          "direction" : "out",
+          "op" : "copy",
+          "line" : 0,
+          "dashedLine" : false,
+          "inType" : "boolean",
+          "outType" : "boolean",
+          "inTypePath" : "boolean",
+          "outTypePath" : "boolean"
+        }, {
+          "inputPath" : "respPayload",
+          "outputPath" : "respPayload",
+          "inpJsTree" : "#launching_arrow_jsTree_function",
+          "outpJsTree" : "#landing_arrow_jsTree",
+          "INPath" : "respPayload",
+          "OUTPath" : "respPayload",
+          "direction" : "out",
+          "op" : "copy",
+          "line" : 0,
+          "dashedLine" : false,
+          "inType" : "string",
+          "outType" : "string",
+          "inTypePath" : "string",
+          "outTypePath" : "string"
+        }, {
+          "inputPath" : "statusCode",
+          "outputPath" : "statusCode",
+          "inpJsTree" : "#launching_arrow_jsTree_function",
+          "outpJsTree" : "#landing_arrow_jsTree",
+          "INPath" : "statusCode",
+          "OUTPath" : "statusCode",
+          "direction" : "out",
+          "op" : "copy",
+          "line" : 0,
+          "dashedLine" : false,
+          "inType" : "string",
+          "outType" : "string",
+          "inTypePath" : "string",
+          "outTypePath" : "string"
+        }, {
+          "inputPath" : "requestTimeout",
+          "outputPath" : "settings/requestTimeout",
+          "inpJsTree" : "#launching_arrow_jsTree",
+          "outpJsTree" : "#landing_arrow_jsTree_function",
+          "INPath" : "requestTimeout",
+          "OUTPath" : "settings/requestTimeout",
+          "direction" : "in",
+          "op" : "copy",
+          "line" : 0,
+          "dashedLine" : false,
+          "inType" : "string",
+          "outType" : "string",
+          "inTypePath" : "string",
+          "outTypePath" : "document/string"
+        }, {
+          "inputPath" : "sslValidation",
+          "outputPath" : "settings/sslValidation",
+          "inpJsTree" : "#launching_arrow_jsTree",
+          "outpJsTree" : "#landing_arrow_jsTree_function",
+          "INPath" : "sslValidation",
+          "OUTPath" : "settings/sslValidation",
+          "direction" : "in",
+          "op" : "copy",
+          "line" : 0,
+          "dashedLine" : false,
+          "inType" : "boolean",
+          "outType" : "boolean",
+          "inTypePath" : "boolean",
+          "outTypePath" : "document/boolean"
+        } ],
+        "dropList" : [ ],
+        "createList" : [ ],
+        "serviceType" : "service",
+        "guid" : "44e1cd29-7639-4444-aacc-b787dda01915",
+        "fqn" : "packages/middleware/pub/client/http/request",
+        "initiateList" : [ ],
+        "snap" : "enabled"
+      },
+      "children" : [ ],
+      "type" : "invoke"
+    }, {
+      "id" : "j1_5",
+      "text" : "SWITCH",
+      "li_attr" : {
+        "id" : "j1_5"
+      },
+      "a_attr" : {
+        "href" : "javascript:void(0)",
+        "id" : "j1_5_anchor"
+      },
+      "state" : {
+        "loaded" : true,
+        "opened" : true,
+        "selected" : false,
+        "disabled" : false,
+        "hidden" : false
+      },
+      "data" : {
+        "switch" : "isSuccessful",
+        "guid" : "507ff4cf-b010-4be5-9548-58a17d0fb206"
+      },
+      "children" : [ {
+        "id" : "j1_6",
+        "text" : "CASE",
+        "li_attr" : {
+          "id" : "j1_6"
+        },
+        "a_attr" : {
+          "href" : "javascript:void(0)",
+          "id" : "j1_6_anchor"
+        },
+        "state" : {
+          "loaded" : true,
+          "opened" : true,
+          "selected" : false,
+          "disabled" : false
+        },
+        "data" : {
+          "case" : "true",
+          "guid" : "da66e6bb-2834-4239-b77a-22c2b5b817f3"
+        },
+        "children" : [ {
+          "id" : "j1_9",
+          "text" : "SWITCH",
+          "li_attr" : {
+            "id" : "j1_9"
+          },
+          "a_attr" : {
+            "href" : "javascript:void(0)",
+            "id" : "j1_9_anchor"
+          },
+          "state" : {
+            "loaded" : true,
+            "opened" : true,
+            "selected" : false,
+            "disabled" : false
+          },
+          "data" : {
+            "switch" : "statusCode",
+            "guid" : "e7b3ebba-0496-48b8-b197-efec8d494dfa"
+          },
+          "children" : [ {
+            "id" : "j1_10",
+            "text" : "CASE",
+            "li_attr" : {
+              "id" : "j1_10"
+            },
+            "a_attr" : {
+              "href" : "javascript:void(0)",
+              "id" : "j1_10_anchor"
+            },
+            "state" : {
+              "loaded" : true,
+              "opened" : false,
+              "selected" : false,
+              "disabled" : false
+            },
+            "data" : {
+              "case" : "401",
+              "guid" : "06154efe-8100-4f00-9d84-958987722825"
+            },
+            "children" : [ {
+              "id" : "j1_11",
+              "text" : "Transformer",
+              "li_attr" : {
+                "id" : "j1_11"
+              },
+              "a_attr" : {
+                "href" : "javascript:void(0)",
+                "id" : "j1_11_anchor"
+              },
+              "state" : {
+                "loaded" : true,
+                "opened" : false,
+                "selected" : false,
+                "disabled" : false
+              },
+              "data" : {
+                "transformers" : [ ],
+                "lines" : [ ],
+                "dropList" : [ ],
+                "createList" : [ {
+                  "path" : "isEnabled",
+                  "value" : "false",
+                  "typePath" : "boolean"
+                }, {
+                  "path" : "reason",
+                  "value" : "Authorization Key Expired",
+                  "typePath" : "string"
+                } ],
+                "guid" : "6ef5783b-61ac-459d-b83d-a381aab23b86",
+                "initiateList" : [ ]
+              },
+              "children" : [ ],
+              "type" : "transformer"
+            } ],
+            "type" : "group"
+          }, {
+            "id" : "j1_17",
+            "text" : "CASE",
+            "li_attr" : {
+              "id" : "j1_17"
+            },
+            "a_attr" : {
+              "href" : "#",
+              "id" : "j1_17_anchor"
+            },
+            "state" : {
+              "loaded" : true,
+              "opened" : true,
+              "selected" : false,
+              "disabled" : false
+            },
+            "data" : {
+              "guid" : "97014833-f3cb-479d-8e01-a32dcc06fe6c",
+              "columnType" : "-1",
+              "case" : "403"
+            },
+            "children" : [ {
+              "id" : "j1_18",
+              "text" : "Transformer",
+              "li_attr" : {
+                "id" : "j1_18"
+              },
+              "a_attr" : {
+                "href" : "#",
+                "id" : "j1_18_anchor"
+              },
+              "state" : {
+                "loaded" : true,
+                "opened" : false,
+                "selected" : true,
+                "disabled" : false
+              },
+              "data" : {
+                "guid" : "68f67a25-0835-4256-9d3c-cc150825b43d",
+                "columnType" : "-1",
+                "transformers" : [ ],
+                "lines" : [ ],
+                "dropList" : [ ],
+                "createList" : [ {
+                  "path" : "isEnabled",
+                  "value" : "false",
+                  "id" : "37cbcf7b-11a9-4b90-b1bf-3644372955a7",
+                  "typePath" : "boolean"
+                }, {
+                  "path" : "reason",
+                  "value" : "Authorization Key Expired",
+                  "id" : "1a540e43-d7e1-4c83-b6ac-0e5fd9b807e9",
+                  "typePath" : "string"
+                } ],
+                "initiateList" : [ ]
+              },
+              "children" : [ ],
+              "type" : "transformer"
+            } ],
+            "type" : "group"
+          }, {
+            "id" : "j1_12",
+            "text" : "CASE",
+            "li_attr" : {
+              "id" : "j1_12"
+            },
+            "a_attr" : {
+              "href" : "javascript:void(0)",
+              "id" : "j1_12_anchor"
+            },
+            "state" : {
+              "loaded" : true,
+              "opened" : true,
+              "selected" : false,
+              "disabled" : false
+            },
+            "data" : {
+              "case" : "#default",
+              "guid" : "4e9c9632-dc9a-478b-a647-dfbd8b89e907"
+            },
+            "children" : [ {
+              "id" : "j1_13",
+              "text" : "Transformer",
+              "li_attr" : {
+                "id" : "j1_13"
+              },
+              "a_attr" : {
+                "href" : "javascript:void(0)",
+                "id" : "j1_13_anchor"
+              },
+              "state" : {
+                "loaded" : true,
+                "opened" : false,
+                "selected" : false,
+                "disabled" : false
+              },
+              "data" : {
+                "transformers" : [ ],
+                "lines" : [ ],
+                "dropList" : [ ],
+                "createList" : [ {
+                  "path" : "isEnabled",
+                  "value" : "true",
+                  "typePath" : "boolean"
+                }, {
+                  "path" : "reason",
+                  "value" : "",
+                  "typePath" : "string"
+                } ],
+                "guid" : "1afb539a-e3f1-413f-a324-8e7d7dbc3d56"
+              },
+              "children" : [ ],
+              "type" : "transformer"
+            } ],
+            "type" : "group"
+          } ],
+          "type" : "switch"
+        } ],
+        "type" : "group"
+      }, {
+        "id" : "j1_7",
+        "text" : "CASE",
+        "li_attr" : {
+          "id" : "j1_7"
+        },
+        "a_attr" : {
+          "href" : "javascript:void(0)",
+          "id" : "j1_7_anchor"
+        },
+        "state" : {
+          "loaded" : true,
+          "opened" : true,
+          "selected" : false,
+          "disabled" : false
+        },
+        "data" : {
+          "case" : "false",
+          "guid" : "490e5630-fd6f-4fbf-a07b-4d09a572e2a0"
+        },
+        "children" : [ {
+          "id" : "j1_8",
+          "text" : "Transformer",
+          "li_attr" : {
+            "id" : "j1_8"
+          },
+          "a_attr" : {
+            "href" : "javascript:void(0)",
+            "id" : "j1_8_anchor"
+          },
+          "state" : {
+            "loaded" : true,
+            "opened" : false,
+            "selected" : false,
+            "disabled" : false
+          },
+          "data" : {
+            "transformers" : [ ],
+            "lines" : [ ],
+            "dropList" : [ ],
+            "createList" : [ {
+              "path" : "isEnabled",
+              "value" : "false",
+              "typePath" : "boolean"
+            }, {
+              "path" : "reason",
+              "value" : "Environment is not reachable",
+              "typePath" : "string"
+            } ],
+            "guid" : "0825976c-71b4-4a39-a8f1-d7f210320037",
+            "initiateList" : [ ]
+          },
+          "children" : [ ],
+          "type" : "transformer"
+        } ],
+        "type" : "group"
+      } ],
+      "type" : "switch"
+    } ],
+    "api_info" : {
+      "title" : "",
+      "description" : ""
+    },
+    "lockedByUser" : "admin"
+  },
+  "consumers" : "",
+  "developers" : "developers",
+  "enableServiceDocumentValidation" : false,
+  "created_on" : "1769239677723",
+  "modified_on" : 1769239677723
+}

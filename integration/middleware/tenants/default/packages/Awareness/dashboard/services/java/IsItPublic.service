@@ -1,0 +1,57 @@
+{
+  "input" : [ {
+    "id" : "j1_2",
+    "text" : "agentId",
+    "li_attr" : {
+      "id" : "j1_2"
+    },
+    "a_attr" : {
+      "href" : "#",
+      "id" : "j1_2_anchor"
+    },
+    "state" : {
+      "loaded" : true,
+      "opened" : false,
+      "selected" : false,
+      "disabled" : false,
+      "hidden" : false
+    },
+    "data" : {
+      "guid" : "0ca48f70-04b9-4e55-a2a0-16c46c2db5a5",
+      "columnType" : "-1"
+    },
+    "children" : [ ],
+    "type" : "string"
+  } ],
+  "output" : [ {
+    "id" : "j2_1",
+    "text" : "status",
+    "li_attr" : {
+      "id" : "j2_1"
+    },
+    "a_attr" : {
+      "href" : "#",
+      "id" : "j2_1_anchor"
+    },
+    "state" : {
+      "loaded" : true,
+      "opened" : false,
+      "selected" : true,
+      "disabled" : false
+    },
+    "data" : {
+      "guid" : "e8ac2117-9740-4c5b-9d4d-a35e594598df",
+      "columnType" : "-1"
+    },
+    "children" : [ ],
+    "type" : "boolean"
+  } ],
+  "package" : "cGFja2FnZSBwYWNrYWdlcy5Bd2FyZW5lc3MuZGFzaGJvYXJkLnNlcnZpY2VzLmphdmE7",
+  "imports" : "aW1wb3J0IGNvbS5la2EubWlkZGxld2FyZS5zZXJ2aWNlLkRhdGFQaXBlbGluZTsKaW1wb3J0IGNvbS5la2EubWlkZGxld2FyZS5zZXJ2aWNlLlNlcnZpY2VVdGlsczsKaW1wb3J0IGNvbS5la2EubWlkZGxld2FyZS50ZW1wbGF0ZS5TbmlwcGV0RXhjZXB0aW9uOwppbXBvcnQgdXRpbHMuV3JhcHBlclNlcnZpY2VVdGlsczs=",
+  "main" : "U3RyaW5nIGFnZW50SWQgPSBkYXRhUGlwZWxpbmUuZ2V0U3RyaW5nKCJhZ2VudElkIik7Cgp0cnkgewoJYm9vbGVhbiBzdGF0dXMgPSBXcmFwcGVyU2VydmljZVV0aWxzLmdldFB1YmxpY1N0YXR1cyhhZ2VudElkKTsKICAgIGRhdGFQaXBlbGluZS5wdXQoInN0YXR1cyIsIHN0YXR1cyk7Cn0gY2F0Y2ggKEV4Y2VwdGlvbiBlKSB7CiAgZGF0YVBpcGVsaW5lLnB1dCgic3RhdHVzIiwgZmFsc2UpOwogIAp9",
+  "staticWorkspace" : "",
+  "version" : "v1",
+  "consumers" : "",
+  "developers" : "administrators",
+  "lockedByUser" : "rupeshgupta@syncloop.com"
+}

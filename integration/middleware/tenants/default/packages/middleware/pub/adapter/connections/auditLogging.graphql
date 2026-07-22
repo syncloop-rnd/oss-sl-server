@@ -1,0 +1,45 @@
+"Marks the field, argument, input field or enum value as deprecated"
+directive @deprecated(
+    "The reason for the deprecation"
+    reason: String = "No longer supported"
+  ) on FIELD_DEFINITION | ARGUMENT_DEFINITION | ENUM_VALUE | INPUT_FIELD_DEFINITION
+
+"Directs the executor to include this field or fragment only when the `if` argument is true"
+directive @include(
+    "Included when true."
+    if: Boolean!
+  ) on FIELD | FRAGMENT_SPREAD | INLINE_FRAGMENT
+
+"Directs the executor to skip this field or fragment when the `if` argument is true."
+directive @skip(
+    "Skipped when true."
+    if: Boolean!
+  ) on FIELD | FRAGMENT_SPREAD | INLINE_FRAGMENT
+
+"Exposes a URL that specifies the behaviour of this scalar."
+directive @specifiedBy(
+    "The URL that specifies the behaviour of this scalar."
+    url: String!
+  ) on SCALAR
+
+type Query {
+  audit_logging: audit_logging
+}
+
+type audit_logging {
+  correlationId: String
+  dateTimeStmp: String
+  duration: Int
+  error: String
+  fqn: String
+  hostName: String
+  id: Int
+  nanoInstance: String
+  nodeName: String
+  remoteAddr: String
+  request: String
+  response: String
+  sessionId: String
+  urlPath: String
+  userId: String
+}

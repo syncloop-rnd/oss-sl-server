@@ -1,0 +1,47 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="20" height="20" viewBox="0 0 20 20">
+  <defs>
+    <style>
+      .cls-1 {
+        filter: url(#filter);
+      }
+
+      .cls-2, .cls-3 {
+        fill-rule: evenodd;
+      }
+
+      .cls-3 {
+        fill: #6b6c6f;
+      }
+
+      .cls-4 {
+        font-size: 20px;
+        font-family: Arial;
+        font-weight: 700;
+        text-transform: uppercase;
+      }
+    </style>
+    <filter id="filter" filterUnits="userSpaceOnUse">
+      <feFlood result="flood" flood-color="#7b7b7b"/>
+      <feComposite result="composite" operator="in" in2="SourceGraphic"/>
+      <feBlend result="blend" in2="SourceGraphic"/>
+    </filter>
+  </defs>
+  <g id="byte_arrray" data-name="byte arrray">
+    <g class="cls-1">
+      <g>
+        <path class="cls-2" d="M817.429,1.515v16.97h14.142V6.406l-5.357-4.891h-8.785Zm0.964,1V17.487h12.214V6.706l-4.5-4.193h-7.714Z" transform="translate(-814)"/>
+        <path class="cls-3" d="M826.107,2.513V6.706h4.607Z" transform="translate(-814)"/>
+      </g>
+      <g>
+        <g>
+          <path class="cls-2" d="M818.726,2.869V18.256h12.823V7.3l-4.857-4.435h-7.966ZM819.6,3.774V17.351h11.074V7.576l-4.08-3.8H819.6Z" transform="translate(-814)"/>
+          <path class="cls-3" d="M826.594,3.774v3.8h4.177Z" transform="translate(-814)"/>
+        </g>
+        <text id="_10100" data-name="10100" class="cls-4" transform="matrix(0.127, 0, 0, 0.098, 7.417, 10.29)">10100</text>
+        <text id="_01001" data-name="01001" class="cls-4" transform="matrix(0.127, 0, 0, 0.098, 7.544, 12.548)">01001</text>
+        <text id="_10100-2" data-name="10100" class="cls-4" transform="matrix(0.127, 0, 0, 0.098, 7.544, 14.807)">10100</text>
+        <text id="_11001" data-name="11001" class="cls-4" transform="matrix(0.127, 0, 0, 0.098, 7.544, 17.065)">11001</text>
+      </g>
+    </g>
+  </g>
+</svg>

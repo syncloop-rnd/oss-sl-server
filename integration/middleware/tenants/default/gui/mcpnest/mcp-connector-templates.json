@@ -1,0 +1,272 @@
+{
+  "version": 1,
+  "templates": [
+    {
+      "id": "manual",
+      "name": "Other / Manual MCP",
+      "category": "Custom",
+      "icon": "fa-sliders",
+      "iconClass": "fa-solid fa-screwdriver-wrench",
+      "description": "Enter the MCP endpoint and authentication details manually.",
+      "mcpAlias": "",
+      "mcpName": "",
+      "endpointUrl": "",
+      "endpointPlaceholder": "https://mcp.example.com/api/v1/connect",
+      "endpointType": "STANDARD",
+      "authType": "NONE",
+      "authFlow": "manual",
+      "authFields": []
+    },
+    {
+      "id": "gmail-zapier",
+      "name": "Gmail via Zapier MCP",
+      "category": "Productivity",
+      "icon": "fa-envelope",
+      "iconClass": "fa-solid fa-envelope-open-text",
+      "description": "Gmail tools exposed through a Zapier MCP connection URL. Paste the Zapier MCP token or full connect URL.",
+      "mcpAlias": "gmail",
+      "mcpName": "Gmail",
+      "endpointUrl": "https://mcp.zapier.com/api/v1/connect?token={connectionToken}",
+      "endpointPlaceholder": "https://mcp.zapier.com/api/v1/connect?token=...",
+      "endpointType": "STREAMABLE_HTTP",
+      "authType": "NONE",
+      "authFlow": "sso",
+      "authUrl": "https://mcp.zapier.com/",
+      "authFields": [
+        {
+          "key": "connectionToken",
+          "label": "Zapier MCP token",
+          "type": "password",
+          "target": "endpointToken",
+          "required": true,
+          "placeholder": "Paste token from Zapier MCP connection URL"
+        }
+      ]
+    },
+    {
+      "id": "github",
+      "name": "GitHub MCP",
+      "category": "Developer",
+      "icon": "fa-code-branch",
+      "iconClass": "fa-brands fa-github",
+      "description": "GitHub repository, issue, pull request, and code workflow tools. Use an issued remote MCP endpoint or a bearer token gateway.",
+      "mcpAlias": "github",
+      "mcpName": "GitHub",
+      "endpointUrl": "",
+      "endpointPlaceholder": "Paste your GitHub MCP endpoint URL",
+      "endpointType": "STREAMABLE_HTTP",
+      "authType": "BEARER",
+      "authFlow": "sso",
+      "authUrl": "https://github.com/login/oauth/authorize",
+      "authFields": [
+        {
+          "key": "bearerToken",
+          "label": "GitHub bearer token",
+          "type": "password",
+          "target": "authInfo.bearerToken",
+          "required": false,
+          "placeholder": "Paste token if your endpoint requires bearer auth"
+        }
+      ]
+    },
+    {
+      "id": "jira",
+      "name": "Jira / Atlassian MCP",
+      "category": "Project Management",
+      "icon": "fa-list-check",
+      "iconClass": "fa-solid fa-clipboard-check",
+      "description": "Jira issue and project tools. Use the remote MCP endpoint issued by your Atlassian or gateway configuration.",
+      "mcpAlias": "jira",
+      "mcpName": "Jira",
+      "endpointUrl": "",
+      "endpointPlaceholder": "Paste your Atlassian/Jira MCP endpoint URL",
+      "endpointType": "STREAMABLE_HTTP",
+      "authType": "BEARER",
+      "authFlow": "sso",
+      "authUrl": "https://id.atlassian.com/login",
+      "authFields": [
+        {
+          "key": "bearerToken",
+          "label": "Atlassian bearer token",
+          "type": "password",
+          "target": "authInfo.bearerToken",
+          "required": false,
+          "placeholder": "Paste token if required"
+        }
+      ]
+    },
+    {
+      "id": "stripe",
+      "name": "Stripe MCP",
+      "category": "Payments",
+      "icon": "fa-credit-card",
+      "iconClass": "fa-solid fa-money-check-dollar",
+      "description": "Stripe customer, payment, invoice, and subscription tools. Use a restricted API key or managed OAuth endpoint.",
+      "mcpAlias": "stripe",
+      "mcpName": "Stripe",
+      "endpointUrl": "",
+      "endpointPlaceholder": "Paste your Stripe MCP endpoint URL",
+      "endpointType": "STREAMABLE_HTTP",
+      "authType": "API_KEY",
+      "authFlow": "apiKey",
+      "authFields": [
+        {
+          "key": "apiKey",
+          "label": "Stripe restricted API key",
+          "type": "password",
+          "target": "authInfo.apiKey",
+          "required": true,
+          "placeholder": "rk_live_..."
+        },
+        {
+          "key": "headerName",
+          "label": "API key header",
+          "type": "text",
+          "target": "authInfo.headerName",
+          "value": "Authorization",
+          "required": false
+        }
+      ]
+    },
+    {
+      "id": "coinbase",
+      "name": "Coinbase MCP",
+      "category": "Crypto",
+      "icon": "fa-coins",
+      "iconClass": "fa-solid fa-building-columns",
+      "description": "Coinbase market, wallet, and account tools through a Coinbase-compatible MCP server.",
+      "mcpAlias": "coinbase",
+      "mcpName": "Coinbase",
+      "endpointUrl": "",
+      "endpointPlaceholder": "Paste your Coinbase MCP endpoint URL",
+      "endpointType": "STREAMABLE_HTTP",
+      "authType": "API_KEY",
+      "authFlow": "apiKey",
+      "authFields": [
+        {
+          "key": "apiKey",
+          "label": "Coinbase API key",
+          "type": "password",
+          "target": "authInfo.apiKey",
+          "required": true
+        },
+        {
+          "key": "apiSecret",
+          "label": "Coinbase API secret",
+          "type": "password",
+          "target": "authInfo.headerValue",
+          "required": false
+        }
+      ]
+    },
+    {
+      "id": "coingecko",
+      "name": "CoinGecko MCP",
+      "category": "Crypto",
+      "icon": "fa-chart-line",
+      "iconClass": "fa-solid fa-chart-pie",
+      "description": "CoinGecko market data tools exposed through a CoinGecko-compatible MCP server.",
+      "mcpAlias": "coingecko",
+      "mcpName": "CoinGecko",
+      "endpointUrl": "",
+      "endpointPlaceholder": "Paste your CoinGecko MCP endpoint URL",
+      "endpointType": "STREAMABLE_HTTP",
+      "authType": "API_KEY",
+      "authFlow": "apiKey",
+      "authFields": [
+        {
+          "key": "apiKey",
+          "label": "CoinGecko API key",
+          "type": "password",
+          "target": "authInfo.apiKey",
+          "required": true
+        },
+        {
+          "key": "headerName",
+          "label": "API key header",
+          "type": "text",
+          "target": "authInfo.headerName",
+          "value": "x-cg-pro-api-key",
+          "required": false
+        }
+      ]
+    },
+    {
+      "id": "google-drive",
+      "name": "Google Drive MCP",
+      "category": "Productivity",
+      "icon": "fa-folder",
+      "iconClass": "fa-solid fa-hard-drive",
+      "description": "Google Drive files and folders through an OAuth-enabled Google MCP endpoint.",
+      "mcpAlias": "google-drive",
+      "mcpName": "Google Drive",
+      "endpointUrl": "",
+      "endpointPlaceholder": "Paste your Google Drive MCP endpoint URL",
+      "endpointType": "STREAMABLE_HTTP",
+      "authType": "BEARER",
+      "authFlow": "sso",
+      "authUrl": "https://accounts.google.com/",
+      "authFields": [
+        {
+          "key": "bearerToken",
+          "label": "Google bearer token",
+          "type": "password",
+          "target": "authInfo.bearerToken",
+          "required": false
+        }
+      ]
+    },
+    {
+      "id": "robinhood-trading",
+      "name": "Robinhood Trading MCP",
+      "category": "Trading",
+      "icon": "fa-chart-candlestick",
+      "iconClass": "fa-solid fa-arrow-trend-up",
+      "description": "Robinhood trading tools via the hosted MCP endpoint at agent.robinhood.com. Provide a Robinhood-issued bearer token for authentication.",
+      "mcpAlias": "robinhood",
+      "mcpName": "Robinhood Trading",
+      "endpointUrl": "https://agent.robinhood.com/mcp/trading",
+      "endpointPlaceholder": "https://agent.robinhood.com/mcp/trading",
+      "endpointType": "STREAMABLE_HTTP",
+      "authType": "BEARER",
+      "authFlow": "sso",
+      "authUrl": "https://robinhood.com/login",
+      "authFields": [
+        {
+          "key": "bearerToken",
+          "label": "Robinhood bearer token",
+          "type": "password",
+          "target": "authInfo.bearerToken",
+          "required": true,
+          "placeholder": "Paste Robinhood access token"
+        }
+      ]
+    },
+    {
+      "id": "slack",
+      "name": "Slack MCP",
+      "category": "Communication",
+      "icon": "fa-comments",
+      "iconClass": "fa-brands fa-slack",
+      "description": "Slack channels, messages, users, and workspace automation through a Slack-compatible MCP endpoint.",
+      "mcpAlias": "slack",
+      "mcpName": "Slack",
+      "endpointUrl": "",
+      "endpointPlaceholder": "Paste your Slack MCP endpoint URL",
+      "endpointType": "STREAMABLE_HTTP",
+      "authType": "BEARER",
+      "authFlow": "sso",
+      "authUrl": "https://slack.com/oauth/v2/authorize",
+      "authFields": [
+        {
+          "key": "bearerToken",
+          "label": "Slack bot/user token",
+          "type": "password",
+          "target": "authInfo.bearerToken",
+          "required": false,
+          "placeholder": "xoxb-..."
+        }
+      ]
+    }
+  ]
+}
