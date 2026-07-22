@@ -14,8 +14,8 @@ Getting started Syncloop version 2.0.1:
 	middleware.server.home.dir=/oss-sl-server/integration/middleware/
 	ignite.workingDirectory.path=/oss-sl-server/ignite
 	
-6. start-api-server
-7. start-http-server
+6. Run start-api-server
+7. Install http-server and run start-http-server
 9. Open http://localhost:3000 
 10. User: admin
     Password: admin01
