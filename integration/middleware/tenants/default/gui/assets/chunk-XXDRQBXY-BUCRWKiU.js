@@ -1,0 +1,1 @@
+import{n as e}from"./chunk-Y2CYZVJY-Cc4-2YC8.js";import"./src-CacuXPPS.js";import{k as t}from"./vendor-reactflow-16qXvbFo.js";var n=e((e,n)=>{let r;return n===`sandbox`&&(r=t(`#i`+e)),t(n===`sandbox`?r.nodes()[0].contentDocument.body:`body`).select(`[id="${e}"]`)},`getDiagramElement`);export{n as t};

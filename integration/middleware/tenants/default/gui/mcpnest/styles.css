@@ -4010,3 +4010,20 @@ code {
   .oauth-row > * { grid-column: 1 !important; }
 }
 
+.mcp-type-badge {
+  display: inline-flex;
+  align-items: center;
+  min-height: 20px;
+  padding: 2px 7px;
+  border: 1px solid rgba(20, 184, 166, .35);
+  border-radius: 6px;
+  background: rgba(20, 184, 166, .1);
+  color: #0f766e;
+  font-size: .68rem;
+  font-weight: 700;
+  line-height: 1;
+}
+
+.theme-dark .mcp-type-badge {
+  color: #5eead4;
+}

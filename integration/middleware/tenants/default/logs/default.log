@@ -1,0 +1,298 @@
+2026-08-13 18:11:18,273 INFO c.e.m.a.Security [main] Public prefix path: default: /tenant/default/files/gui/middleware/pub/server/ui/welcome/
+2026-08-13 18:11:18,274 INFO c.e.m.t.Tenant [main] /tenant/default/files/gui/middleware/pub/server/ui/welcome/
+2026-08-13 18:11:18,274 INFO c.e.m.a.Security [main] Public prefix path: default: /files/gui/global/pub/
+2026-08-13 18:11:18,274 INFO c.e.m.t.Tenant [main] /files/gui/global/pub/
+2026-08-13 18:11:18,274 INFO c.e.m.a.Security [main] Public prefix path: default: /files/gui/global/public/
+2026-08-13 18:11:18,274 INFO c.e.m.t.Tenant [main] /files/gui/global/public/
+2026-08-13 18:11:18,275 INFO c.e.m.a.Security [main] Public prefix path: default: /files/gui/MCPNest/pub/
+2026-08-13 18:11:18,275 INFO c.e.m.t.Tenant [main] /files/gui/MCPNest/pub/
+2026-08-13 18:11:18,275 INFO c.e.m.a.Security [main] Public prefix path: default: /files/gui/MCPNest/public/
+2026-08-13 18:11:18,275 INFO c.e.m.t.Tenant [main] /files/gui/MCPNest/public/
+2026-08-13 18:11:18,275 INFO c.e.m.a.Security [main] Public prefix path: default: /files/gui/middleware/pub/
+2026-08-13 18:11:18,275 INFO c.e.m.t.Tenant [main] /files/gui/middleware/pub/
+2026-08-13 18:11:18,275 INFO c.e.m.a.Security [main] Public prefix path: default: /files/gui/middleware/public/
+2026-08-13 18:11:18,275 INFO c.e.m.t.Tenant [main] /files/gui/middleware/public/
+2026-08-13 18:11:18,275 INFO c.e.m.a.Security [main] Public prefix path: default: /files/gui/onboarding/pub/
+2026-08-13 18:11:18,275 INFO c.e.m.t.Tenant [main] /files/gui/onboarding/pub/
+2026-08-13 18:11:18,275 INFO c.e.m.a.Security [main] Public prefix path: default: /files/gui/onboarding/public/
+2026-08-13 18:11:18,275 INFO c.e.m.t.Tenant [main] /files/gui/onboarding/public/
+2026-08-13 18:11:18,275 INFO c.e.m.a.Security [main] Public prefix path: default: /files/gui/scheduler/pub/
+2026-08-13 18:11:18,276 INFO c.e.m.t.Tenant [main] /files/gui/scheduler/pub/
+2026-08-13 18:11:18,276 INFO c.e.m.a.Security [main] Public prefix path: default: /files/gui/scheduler/public/
+2026-08-13 18:11:18,276 INFO c.e.m.t.Tenant [main] /files/gui/scheduler/public/
+2026-08-13 18:11:18,277 INFO c.e.m.a.Security [main] Public prefix path: default: /packages.middleware.pub.security.OIDCLogin.
+2026-08-13 18:11:18,277 INFO c.e.m.t.Tenant [main] /packages.middleware.pub.security.OIDCLogin.
+2026-08-13 18:11:18,277 INFO c.e.m.a.Security [main] Public prefix path: default: /public
+2026-08-13 18:11:18,277 INFO c.e.m.t.Tenant [main] /public
+2026-08-13 18:11:18,277 INFO c.e.m.a.Security [main] Public exact path: default: /files/gui/middleware/pub/server/ui/welcome/onboarding/login.html
+2026-08-13 18:11:18,277 INFO c.e.m.t.Tenant [main] Public exact path: default: /files/gui/middleware/pub/server/ui/welcome/onboarding/login.html
+2026-08-13 18:11:18,277 INFO c.e.m.a.Security [main] Public exact path: default: /files/gui/middleware/pub/server/ui/tenant/selectTenant.html
+2026-08-13 18:11:18,277 INFO c.e.m.t.Tenant [main] Public exact path: default: /files/gui/middleware/pub/server/ui/tenant/selectTenant.html
+2026-08-13 18:11:18,861 INFO i.undertow [main] starting server: Undertow - 2.3.18.Final
+2026-08-13 18:11:18,867 INFO o.xnio [main] XNIO version 3.8.16.Final
+2026-08-13 18:11:18,872 INFO o.x.nio [main] XNIO NIO Implementation Version 3.8.16.Final
+2026-08-13 18:11:18,926 ERROR c.e.m.s.ServiceUtils [main] Internal    0    Error reading errors.json file
+java.net.BindException: Address already in use: bind
+io.undertow.Undertow.start(Undertow.java:254)
+com.eka.middleware.server.MiddlewareServer.startServer(MiddlewareServer.java:419)
+com.eka.middleware.server.MiddlewareServer.main(MiddlewareServer.java:248)
+
+2026-08-13 18:11:18,927 ERROR c.e.m.s.ServiceUtils [main] Internal    EKA_MWS_1008    Error is code not defined.
+java.net.BindException: Address already in use: bind
+io.undertow.Undertow.start(Undertow.java:254)
+com.eka.middleware.server.MiddlewareServer.startServer(MiddlewareServer.java:419)
+com.eka.middleware.server.MiddlewareServer.main(MiddlewareServer.java:248)
+
+2026-08-13 18:11:18,927 ERROR c.e.m.s.ServiceUtils [main] Internal    0    Error reading errors.json file
+java.lang.RuntimeException: java.net.BindException: Address already in use: bind
+com.eka.middleware.server.MiddlewareServer.main(MiddlewareServer.java:313)
+
+2026-08-13 18:11:18,927 ERROR c.e.m.s.ServiceUtils [main] Internal    EKA_MWS_1004    Error is code not defined.
+java.lang.RuntimeException: java.net.BindException: Address already in use: bind
+com.eka.middleware.server.MiddlewareServer.main(MiddlewareServer.java:313)
+
+2026-08-13 18:13:30,975 INFO c.e.m.a.Security [main] Public prefix path: default: /tenant/default/files/gui/middleware/pub/server/ui/welcome/
+2026-08-13 18:13:30,975 INFO c.e.m.t.Tenant [main] /tenant/default/files/gui/middleware/pub/server/ui/welcome/
+2026-08-13 18:13:30,976 INFO c.e.m.a.Security [main] Public prefix path: default: /files/gui/global/pub/
+2026-08-13 18:13:30,976 INFO c.e.m.t.Tenant [main] /files/gui/global/pub/
+2026-08-13 18:13:30,976 INFO c.e.m.a.Security [main] Public prefix path: default: /files/gui/global/public/
+2026-08-13 18:13:30,977 INFO c.e.m.t.Tenant [main] /files/gui/global/public/
+2026-08-13 18:13:30,977 INFO c.e.m.a.Security [main] Public prefix path: default: /files/gui/MCPNest/pub/
+2026-08-13 18:13:30,977 INFO c.e.m.t.Tenant [main] /files/gui/MCPNest/pub/
+2026-08-13 18:13:30,977 INFO c.e.m.a.Security [main] Public prefix path: default: /files/gui/MCPNest/public/
+2026-08-13 18:13:30,977 INFO c.e.m.t.Tenant [main] /files/gui/MCPNest/public/
+2026-08-13 18:13:30,977 INFO c.e.m.a.Security [main] Public prefix path: default: /files/gui/middleware/pub/
+2026-08-13 18:13:30,977 INFO c.e.m.t.Tenant [main] /files/gui/middleware/pub/
+2026-08-13 18:13:30,978 INFO c.e.m.a.Security [main] Public prefix path: default: /files/gui/middleware/public/
+2026-08-13 18:13:30,978 INFO c.e.m.t.Tenant [main] /files/gui/middleware/public/
+2026-08-13 18:13:30,978 INFO c.e.m.a.Security [main] Public prefix path: default: /files/gui/onboarding/pub/
+2026-08-13 18:13:30,978 INFO c.e.m.t.Tenant [main] /files/gui/onboarding/pub/
+2026-08-13 18:13:30,978 INFO c.e.m.a.Security [main] Public prefix path: default: /files/gui/onboarding/public/
+2026-08-13 18:13:30,978 INFO c.e.m.t.Tenant [main] /files/gui/onboarding/public/
+2026-08-13 18:13:30,978 INFO c.e.m.a.Security [main] Public prefix path: default: /files/gui/scheduler/pub/
+2026-08-13 18:13:30,978 INFO c.e.m.t.Tenant [main] /files/gui/scheduler/pub/
+2026-08-13 18:13:30,979 INFO c.e.m.a.Security [main] Public prefix path: default: /files/gui/scheduler/public/
+2026-08-13 18:13:30,979 INFO c.e.m.t.Tenant [main] /files/gui/scheduler/public/
+2026-08-13 18:13:30,979 INFO c.e.m.a.Security [main] Public prefix path: default: /packages.middleware.pub.security.OIDCLogin.
+2026-08-13 18:13:30,979 INFO c.e.m.t.Tenant [main] /packages.middleware.pub.security.OIDCLogin.
+2026-08-13 18:13:30,979 INFO c.e.m.a.Security [main] Public prefix path: default: /public
+2026-08-13 18:13:30,979 INFO c.e.m.t.Tenant [main] /public
+2026-08-13 18:13:30,979 INFO c.e.m.a.Security [main] Public exact path: default: /files/gui/middleware/pub/server/ui/welcome/onboarding/login.html
+2026-08-13 18:13:30,979 INFO c.e.m.t.Tenant [main] Public exact path: default: /files/gui/middleware/pub/server/ui/welcome/onboarding/login.html
+2026-08-13 18:13:30,980 INFO c.e.m.a.Security [main] Public exact path: default: /files/gui/middleware/pub/server/ui/tenant/selectTenant.html
+2026-08-13 18:13:30,980 INFO c.e.m.t.Tenant [main] Public exact path: default: /files/gui/middleware/pub/server/ui/tenant/selectTenant.html
+2026-08-13 18:13:31,586 INFO i.undertow [main] starting server: Undertow - 2.3.18.Final
+2026-08-13 18:13:31,597 INFO o.xnio [main] XNIO version 3.8.16.Final
+2026-08-13 18:13:31,606 INFO o.x.nio [main] XNIO NIO Implementation Version 3.8.16.Final
+2026-08-13 18:13:43,395 ERROR c.e.m.t.Tenant [syncloop-runtime-6] Error while decrypting: 
+Error while decrypting
+com.eka.middleware.auth.HybridRsaCrypto.decrypt(HybridRsaCrypto.java:154)
+com.eka.middleware.service.ServiceUtils.decrypt(ServiceUtils.java:1958)
+com.eka.middleware.auth.pac4j.AuthHandlers$6.handleRequest(AuthHandlers.java:361)
+com.eka.middleware.auth.pac4j.AuthHandlers$5.handleRequest(AuthHandlers.java:220)
+io.undertow.server.Connectors.executeRootHandler(Connectors.java:395)
+io.undertow.server.HttpServerExchange$1.run(HttpServerExchange.java:861)
+java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1090)
+java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:614)
+java.base/java.lang.Thread.run(Thread.java:1474)
+
+2026-08-13 18:13:43,395 ERROR c.e.m.t.Tenant [syncloop-runtime-9] Error while decrypting: 
+Error while decrypting
+com.eka.middleware.auth.HybridRsaCrypto.decrypt(HybridRsaCrypto.java:154)
+com.eka.middleware.service.ServiceUtils.decrypt(ServiceUtils.java:1958)
+com.eka.middleware.auth.pac4j.AuthHandlers$6.handleRequest(AuthHandlers.java:361)
+com.eka.middleware.auth.pac4j.AuthHandlers$5.handleRequest(AuthHandlers.java:220)
+io.undertow.server.Connectors.executeRootHandler(Connectors.java:395)
+io.undertow.server.HttpServerExchange$1.run(HttpServerExchange.java:861)
+java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1090)
+java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:614)
+java.base/java.lang.Thread.run(Thread.java:1474)
+
+2026-08-13 18:13:43,395 ERROR c.e.m.t.Tenant [syncloop-runtime-7] Error while decrypting: 
+Error while decrypting
+com.eka.middleware.auth.HybridRsaCrypto.decrypt(HybridRsaCrypto.java:154)
+com.eka.middleware.service.ServiceUtils.decrypt(ServiceUtils.java:1958)
+com.eka.middleware.auth.pac4j.AuthHandlers$6.handleRequest(AuthHandlers.java:361)
+com.eka.middleware.auth.pac4j.AuthHandlers$5.handleRequest(AuthHandlers.java:220)
+io.undertow.server.Connectors.executeRootHandler(Connectors.java:395)
+io.undertow.server.HttpServerExchange$1.run(HttpServerExchange.java:861)
+java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1090)
+java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:614)
+java.base/java.lang.Thread.run(Thread.java:1474)
+
+2026-08-13 18:13:43,395 ERROR c.e.m.t.Tenant [syncloop-runtime-8] Error while decrypting: 
+Error while decrypting
+com.eka.middleware.auth.HybridRsaCrypto.decrypt(HybridRsaCrypto.java:154)
+com.eka.middleware.service.ServiceUtils.decrypt(ServiceUtils.java:1958)
+com.eka.middleware.auth.pac4j.AuthHandlers$6.handleRequest(AuthHandlers.java:361)
+com.eka.middleware.auth.pac4j.AuthHandlers$5.handleRequest(AuthHandlers.java:220)
+io.undertow.server.Connectors.executeRootHandler(Connectors.java:395)
+io.undertow.server.HttpServerExchange$1.run(HttpServerExchange.java:861)
+java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1090)
+java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:614)
+java.base/java.lang.Thread.run(Thread.java:1474)
+
+2026-08-13 18:13:43,396 ERROR c.e.m.s.ServiceUtils [syncloop-runtime-7] Error while decrypting: 
+Error while decrypting
+com.eka.middleware.auth.HybridRsaCrypto.decrypt(HybridRsaCrypto.java:154)
+com.eka.middleware.service.ServiceUtils.decrypt(ServiceUtils.java:1958)
+com.eka.middleware.auth.pac4j.AuthHandlers$6.handleRequest(AuthHandlers.java:361)
+com.eka.middleware.auth.pac4j.AuthHandlers$5.handleRequest(AuthHandlers.java:220)
+io.undertow.server.Connectors.executeRootHandler(Connectors.java:395)
+io.undertow.server.HttpServerExchange$1.run(HttpServerExchange.java:861)
+java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1090)
+java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:614)
+java.base/java.lang.Thread.run(Thread.java:1474)
+
+2026-08-13 18:13:43,396 ERROR c.e.m.s.ServiceUtils [syncloop-runtime-8] Error while decrypting: 
+Error while decrypting
+com.eka.middleware.auth.HybridRsaCrypto.decrypt(HybridRsaCrypto.java:154)
+com.eka.middleware.service.ServiceUtils.decrypt(ServiceUtils.java:1958)
+com.eka.middleware.auth.pac4j.AuthHandlers$6.handleRequest(AuthHandlers.java:361)
+com.eka.middleware.auth.pac4j.AuthHandlers$5.handleRequest(AuthHandlers.java:220)
+io.undertow.server.Connectors.executeRootHandler(Connectors.java:395)
+io.undertow.server.HttpServerExchange$1.run(HttpServerExchange.java:861)
+java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1090)
+java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:614)
+java.base/java.lang.Thread.run(Thread.java:1474)
+
+2026-08-13 18:13:43,396 ERROR c.e.m.s.ServiceUtils [syncloop-runtime-6] Error while decrypting: 
+Error while decrypting
+com.eka.middleware.auth.HybridRsaCrypto.decrypt(HybridRsaCrypto.java:154)
+com.eka.middleware.service.ServiceUtils.decrypt(ServiceUtils.java:1958)
+com.eka.middleware.auth.pac4j.AuthHandlers$6.handleRequest(AuthHandlers.java:361)
+com.eka.middleware.auth.pac4j.AuthHandlers$5.handleRequest(AuthHandlers.java:220)
+io.undertow.server.Connectors.executeRootHandler(Connectors.java:395)
+io.undertow.server.HttpServerExchange$1.run(HttpServerExchange.java:861)
+java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1090)
+java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:614)
+java.base/java.lang.Thread.run(Thread.java:1474)
+
+2026-08-13 18:13:43,396 ERROR c.e.m.s.ServiceUtils [syncloop-runtime-9] Error while decrypting: 
+Error while decrypting
+com.eka.middleware.auth.HybridRsaCrypto.decrypt(HybridRsaCrypto.java:154)
+com.eka.middleware.service.ServiceUtils.decrypt(ServiceUtils.java:1958)
+com.eka.middleware.auth.pac4j.AuthHandlers$6.handleRequest(AuthHandlers.java:361)
+com.eka.middleware.auth.pac4j.AuthHandlers$5.handleRequest(AuthHandlers.java:220)
+io.undertow.server.Connectors.executeRootHandler(Connectors.java:395)
+io.undertow.server.HttpServerExchange$1.run(HttpServerExchange.java:861)
+java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1090)
+java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:614)
+java.base/java.lang.Thread.run(Thread.java:1474)
+
+2026-08-13 18:13:43,405 ERROR c.e.m.t.Tenant [syncloop-runtime-10] Error while decrypting: 
+Error while decrypting
+com.eka.middleware.auth.HybridRsaCrypto.decrypt(HybridRsaCrypto.java:154)
+com.eka.middleware.service.ServiceUtils.decrypt(ServiceUtils.java:1958)
+com.eka.middleware.auth.pac4j.AuthHandlers$6.handleRequest(AuthHandlers.java:361)
+com.eka.middleware.auth.pac4j.AuthHandlers$5.handleRequest(AuthHandlers.java:220)
+io.undertow.server.Connectors.executeRootHandler(Connectors.java:395)
+io.undertow.server.HttpServerExchange$1.run(HttpServerExchange.java:861)
+java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1090)
+java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:614)
+java.base/java.lang.Thread.run(Thread.java:1474)
+
+2026-08-13 18:13:43,405 ERROR c.e.m.s.ServiceUtils [syncloop-runtime-10] Error while decrypting: 
+Error while decrypting
+com.eka.middleware.auth.HybridRsaCrypto.decrypt(HybridRsaCrypto.java:154)
+com.eka.middleware.service.ServiceUtils.decrypt(ServiceUtils.java:1958)
+com.eka.middleware.auth.pac4j.AuthHandlers$6.handleRequest(AuthHandlers.java:361)
+com.eka.middleware.auth.pac4j.AuthHandlers$5.handleRequest(AuthHandlers.java:220)
+io.undertow.server.Connectors.executeRootHandler(Connectors.java:395)
+io.undertow.server.HttpServerExchange$1.run(HttpServerExchange.java:861)
+java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1090)
+java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:614)
+java.base/java.lang.Thread.run(Thread.java:1474)
+
+2026-08-13 18:13:43,408 ERROR c.e.m.t.Tenant [syncloop-runtime-11] Error while decrypting: 
+Error while decrypting
+com.eka.middleware.auth.HybridRsaCrypto.decrypt(HybridRsaCrypto.java:154)
+com.eka.middleware.service.ServiceUtils.decrypt(ServiceUtils.java:1958)
+com.eka.middleware.auth.pac4j.AuthHandlers$6.handleRequest(AuthHandlers.java:361)
+com.eka.middleware.auth.pac4j.AuthHandlers$5.handleRequest(AuthHandlers.java:220)
+io.undertow.server.Connectors.executeRootHandler(Connectors.java:395)
+io.undertow.server.HttpServerExchange$1.run(HttpServerExchange.java:861)
+java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1090)
+java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:614)
+java.base/java.lang.Thread.run(Thread.java:1474)
+
+2026-08-13 18:13:43,408 ERROR c.e.m.s.ServiceUtils [syncloop-runtime-11] Error while decrypting: 
+Error while decrypting
+com.eka.middleware.auth.HybridRsaCrypto.decrypt(HybridRsaCrypto.java:154)
+com.eka.middleware.service.ServiceUtils.decrypt(ServiceUtils.java:1958)
+com.eka.middleware.auth.pac4j.AuthHandlers$6.handleRequest(AuthHandlers.java:361)
+com.eka.middleware.auth.pac4j.AuthHandlers$5.handleRequest(AuthHandlers.java:220)
+io.undertow.server.Connectors.executeRootHandler(Connectors.java:395)
+io.undertow.server.HttpServerExchange$1.run(HttpServerExchange.java:861)
+java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1090)
+java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:614)
+java.base/java.lang.Thread.run(Thread.java:1474)
+
+2026-08-13 18:14:24,539 ERROR c.e.m.t.Tenant [syncloop-runtime-58] Class Not found 'packages.middleware.pub.service.getFQNByFolderScanning$1'
+packages.middleware.pub.service.getFQNByFolderScanning$1
+java.base/jdk.internal.loader.BuiltinClassLoader.loadClass(BuiltinClassLoader.java:580)
+java.base/java.lang.ClassLoader.loadClass(ClassLoader.java:490)
+com.eka.middleware.service.CustomClassLoader.loadClass(CustomClassLoader.java:270)
+com.eka.middleware.service.CustomClassLoader.loadClass(CustomClassLoader.java:270)
+packages.middleware.pub.service.getFQNByFolderScanning.collectApiFiles(getFQNByFolderScanning.java:54)
+packages.middleware.pub.service.getFQNByFolderScanning.main(getFQNByFolderScanning.java:37)
+java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104)
+java.base/java.lang.reflect.Method.invoke(Method.java:565)
+com.eka.middleware.server.ServiceManager.invokeJavaMethod(ServiceManager.java:183)
+com.eka.middleware.service.ServiceUtils.execute(ServiceUtils.java:343)
+com.eka.middleware.service.DataPipeline.apply(DataPipeline.java:915)
+com.eka.middleware.flow.Api.process(Api.java:114)
+com.eka.middleware.flow.FlowResolver.execute(FlowResolver.java:68)
+com.eka.middleware.service.ServiceUtils.beforeServiceExecution(ServiceUtils.java:2374)
+packages.middleware.pub.server.dashboard.api_page.getAPIAuditList.main(getAPIAuditList.java:37)
+java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104)
+java.base/java.lang.reflect.Method.invoke(Method.java:565)
+com.eka.middleware.server.ServiceManager.invokeJavaMethod(ServiceManager.java:183)
+com.eka.middleware.server.ThreadManager.processRequest(ThreadManager.java:715)
+com.eka.middleware.auth.pac4j.AuthHandlers$6.handleRequest(AuthHandlers.java:312)
+org.pac4j.undertow.handler.SecurityHandler.lambda$handleRequest$1(SecurityHandler.java:84)
+org.pac4j.core.engine.DefaultSecurityLogic.perform(DefaultSecurityLogic.java:141)
+org.pac4j.undertow.handler.SecurityHandler.handleRequest(SecurityHandler.java:82)
+io.undertow.server.handlers.BlockingHandler.handleRequest(BlockingHandler.java:56)
+com.eka.middleware.auth.pac4j.AuthHandlers$6.handleRequest(AuthHandlers.java:399)
+com.eka.middleware.auth.pac4j.AuthHandlers$5.handleRequest(AuthHandlers.java:220)
+io.undertow.server.Connectors.executeRootHandler(Connectors.java:395)
+io.undertow.server.HttpServerExchange$1.run(HttpServerExchange.java:861)
+java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1090)
+java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:614)
+java.base/java.lang.Thread.run(Thread.java:1474)
+
+2026-08-13 18:14:24,539 ERROR c.e.m.s.ServiceUtils [syncloop-runtime-58] Class Not found 'packages.middleware.pub.service.getFQNByFolderScanning$1'
+packages.middleware.pub.service.getFQNByFolderScanning$1
+java.base/jdk.internal.loader.BuiltinClassLoader.loadClass(BuiltinClassLoader.java:580)
+java.base/java.lang.ClassLoader.loadClass(ClassLoader.java:490)
+com.eka.middleware.service.CustomClassLoader.loadClass(CustomClassLoader.java:270)
+com.eka.middleware.service.CustomClassLoader.loadClass(CustomClassLoader.java:270)
+packages.middleware.pub.service.getFQNByFolderScanning.collectApiFiles(getFQNByFolderScanning.java:54)
+packages.middleware.pub.service.getFQNByFolderScanning.main(getFQNByFolderScanning.java:37)
+java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104)
+java.base/java.lang.reflect.Method.invoke(Method.java:565)
+com.eka.middleware.server.ServiceManager.invokeJavaMethod(ServiceManager.java:183)
+com.eka.middleware.service.ServiceUtils.execute(ServiceUtils.java:343)
+com.eka.middleware.service.DataPipeline.apply(DataPipeline.java:915)
+com.eka.middleware.flow.Api.process(Api.java:114)
+com.eka.middleware.flow.FlowResolver.execute(FlowResolver.java:68)
+com.eka.middleware.service.ServiceUtils.beforeServiceExecution(ServiceUtils.java:2374)
+packages.middleware.pub.server.dashboard.api_page.getAPIAuditList.main(getAPIAuditList.java:37)
+java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104)
+java.base/java.lang.reflect.Method.invoke(Method.java:565)
+com.eka.middleware.server.ServiceManager.invokeJavaMethod(ServiceManager.java:183)
+com.eka.middleware.server.ThreadManager.processRequest(ThreadManager.java:715)
+com.eka.middleware.auth.pac4j.AuthHandlers$6.handleRequest(AuthHandlers.java:312)
+org.pac4j.undertow.handler.SecurityHandler.lambda$handleRequest$1(SecurityHandler.java:84)
+org.pac4j.core.engine.DefaultSecurityLogic.perform(DefaultSecurityLogic.java:141)
+org.pac4j.undertow.handler.SecurityHandler.handleRequest(SecurityHandler.java:82)
+io.undertow.server.handlers.BlockingHandler.handleRequest(BlockingHandler.java:56)
+com.eka.middleware.auth.pac4j.AuthHandlers$6.handleRequest(AuthHandlers.java:399)
+com.eka.middleware.auth.pac4j.AuthHandlers$5.handleRequest(AuthHandlers.java:220)
+io.undertow.server.Connectors.executeRootHandler(Connectors.java:395)
+io.undertow.server.HttpServerExchange$1.run(HttpServerExchange.java:861)
+java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1090)
+java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:614)
+java.base/java.lang.Thread.run(Thread.java:1474)
+

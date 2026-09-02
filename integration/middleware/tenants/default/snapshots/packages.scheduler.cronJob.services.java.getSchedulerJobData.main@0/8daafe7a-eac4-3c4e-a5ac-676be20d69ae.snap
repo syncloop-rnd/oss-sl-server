@@ -1,0 +1,2311 @@
+[{
+  "packages.scheduler.cronJob.handler.startJob.main@0" : [ {
+    "jobData" : {
+      "cronExpression" : "* * * * *",
+      "start_time" : "2026-08-13 18:55:00",
+      "job_name" : "gc",
+      "next_run" : "2026-08-14T00:56:00Z",
+      "internal_status" : "running",
+      "end_time" : "",
+      "correlationId" : "0f33eee3-5678-34f4-9417-2aeb8cfba943",
+      "id" : "5",
+      "sessionId" : "8daafe7a-eac4-3c4e-a5ac-676be20d69ae",
+      "enabled" : "Y",
+      "serviceFqn" : "packages.middleware.pub.server.core.gcApi",
+      "status" : "running"
+    },
+    "stopRecursiveLogging" : "true"
+  }, {
+    "packages.scheduler.cronJob.handler.startJob.main@0" : {
+      "*currentResourceFQN" : "packages.scheduler.cronJob.handler.startJob",
+      "jobData" : {
+        "cronExpression" : "* * * * *",
+        "start_time" : "2026-08-13 18:55:00",
+        "job_name" : "gc",
+        "next_run" : "2026-08-14T00:56:00Z",
+        "internal_status" : "running",
+        "end_time" : "",
+        "correlationId" : "0f33eee3-5678-34f4-9417-2aeb8cfba943",
+        "id" : "5",
+        "sessionId" : "8daafe7a-eac4-3c4e-a5ac-676be20d69ae",
+        "enabled" : "Y",
+        "serviceFqn" : "packages.middleware.pub.server.core.gcApi",
+        "status" : "running"
+      },
+      "*currentResource" : "packages.scheduler.cronJob.handler.startJob.main@0",
+      "*trackingData" : {
+        "TENANT_NAME" : "default"
+      },
+      "*snapshot" : "enabled"
+    },
+    "packages.scheduler.cronJob.services.java.getSchedulerJobData.main@0" : { }
+  }, {
+    "stopRecursiveLogging" : "true"
+  } ],
+  "guid" : "82a3bbb8-1c80-4e21-a215-172bc68e5faf",
+  "comment" : "Main",
+  "before_execution" : true
+},
+{
+  "packages.scheduler.cronJob.handler.startJob.main@0" : [ {
+    "jobData" : {
+      "cronExpression" : "* * * * *",
+      "start_time" : "2026-08-13 18:55:00",
+      "job_name" : "gc",
+      "next_run" : "2026-08-14T00:56:00Z",
+      "internal_status" : "running",
+      "end_time" : "",
+      "correlationId" : "0f33eee3-5678-34f4-9417-2aeb8cfba943",
+      "id" : "5",
+      "sessionId" : "8daafe7a-eac4-3c4e-a5ac-676be20d69ae",
+      "enabled" : "Y",
+      "serviceFqn" : "packages.middleware.pub.server.core.gcApi",
+      "status" : "running"
+    },
+    "stopRecursiveLogging" : "true"
+  }, {
+    "packages.scheduler.cronJob.handler.startJob.main@0" : {
+      "*currentResourceFQN" : "packages.scheduler.cronJob.handler.startJob",
+      "jobData" : {
+        "cronExpression" : "* * * * *",
+        "start_time" : "2026-08-13 18:55:00",
+        "job_name" : "gc",
+        "next_run" : "2026-08-14T00:56:00Z",
+        "internal_status" : "running",
+        "end_time" : "",
+        "correlationId" : "0f33eee3-5678-34f4-9417-2aeb8cfba943",
+        "id" : "5",
+        "sessionId" : "8daafe7a-eac4-3c4e-a5ac-676be20d69ae",
+        "enabled" : "Y",
+        "serviceFqn" : "packages.middleware.pub.server.core.gcApi",
+        "status" : "running"
+      },
+      "*currentResource" : "packages.scheduler.cronJob.handler.startJob.main@0",
+      "*trackingData" : {
+        "TENANT_NAME" : "default"
+      },
+      "*snapshot" : "enabled"
+    },
+    "packages.scheduler.cronJob.services.java.getSchedulerJobData.main@0" : { }
+  }, {
+    "stopRecursiveLogging" : "true"
+  } ],
+  "guid" : "0197946d-a125-4047-b682-5f4f18a1966e",
+  "comment" : "Try",
+  "before_execution" : true
+},
+{
+  "packages.scheduler.cronJob.handler.startJob.main@0" : [ {
+    "jobData" : {
+      "cronExpression" : "* * * * *",
+      "start_time" : "2026-08-13 18:55:00",
+      "job_name" : "gc",
+      "next_run" : "2026-08-14T00:56:00Z",
+      "internal_status" : "running",
+      "end_time" : "",
+      "correlationId" : "0f33eee3-5678-34f4-9417-2aeb8cfba943",
+      "id" : "5",
+      "sessionId" : "8daafe7a-eac4-3c4e-a5ac-676be20d69ae",
+      "enabled" : "Y",
+      "serviceFqn" : "packages.middleware.pub.server.core.gcApi",
+      "status" : "running"
+    },
+    "stopRecursiveLogging" : "true"
+  }, {
+    "packages.scheduler.cronJob.handler.startJob.main@0" : {
+      "*currentResourceFQN" : "packages.scheduler.cronJob.handler.startJob",
+      "jobData" : {
+        "cronExpression" : "* * * * *",
+        "start_time" : "2026-08-13 18:55:00",
+        "job_name" : "gc",
+        "next_run" : "2026-08-14T00:56:00Z",
+        "internal_status" : "running",
+        "end_time" : "",
+        "correlationId" : "0f33eee3-5678-34f4-9417-2aeb8cfba943",
+        "id" : "5",
+        "sessionId" : "8daafe7a-eac4-3c4e-a5ac-676be20d69ae",
+        "enabled" : "Y",
+        "serviceFqn" : "packages.middleware.pub.server.core.gcApi",
+        "status" : "running"
+      },
+      "*currentResource" : "packages.scheduler.cronJob.handler.startJob.main@0",
+      "*trackingData" : {
+        "TENANT_NAME" : "default"
+      },
+      "*snapshot" : "enabled"
+    },
+    "packages.scheduler.cronJob.services.java.getSchedulerJobData.main@0" : { }
+  }, {
+    "stopRecursiveLogging" : "true"
+  } ],
+  "guid" : "be382d9f-1a2f-49b1-911b-ea4e8f2d139e",
+  "comment" : "Initialize",
+  "before_execution" : true
+},
+{
+  "packages.scheduler.cronJob.handler.startJob.main@0" : [ {
+    "jobData" : {
+      "cronExpression" : "* * * * *",
+      "start_time" : "2026-08-13 18:55:00",
+      "job_name" : "gc",
+      "next_run" : "2026-08-14T00:56:00Z",
+      "internal_status" : "running",
+      "end_time" : "",
+      "correlationId" : "0f33eee3-5678-34f4-9417-2aeb8cfba943",
+      "id" : "5",
+      "sessionId" : "8daafe7a-eac4-3c4e-a5ac-676be20d69ae",
+      "enabled" : "Y",
+      "serviceFqn" : "packages.middleware.pub.server.core.gcApi",
+      "status" : "running"
+    },
+    "stopRecursiveLogging" : "true"
+  }, {
+    "packages.scheduler.cronJob.handler.startJob.main@0" : {
+      "*currentResourceFQN" : "packages.scheduler.cronJob.handler.startJob",
+      "jobData" : {
+        "cronExpression" : "* * * * *",
+        "start_time" : "2026-08-13 18:55:00",
+        "job_name" : "gc",
+        "next_run" : "2026-08-14T00:56:00Z",
+        "internal_status" : "running",
+        "end_time" : "",
+        "correlationId" : "0f33eee3-5678-34f4-9417-2aeb8cfba943",
+        "id" : "5",
+        "sessionId" : "8daafe7a-eac4-3c4e-a5ac-676be20d69ae",
+        "enabled" : "Y",
+        "serviceFqn" : "packages.middleware.pub.server.core.gcApi",
+        "status" : "running"
+      },
+      "*currentResource" : "packages.scheduler.cronJob.handler.startJob.main@0",
+      "*trackingData" : {
+        "TENANT_NAME" : "default"
+      },
+      "date_format" : "yyyy-MM-dd HH:mm:ss",
+      "*snapshot" : "enabled",
+      "jobStartLog" : "Starting scheduled job packages.middleware.pub.server.core.gcApi"
+    },
+    "packages.scheduler.cronJob.services.java.getSchedulerJobData.main@0" : { }
+  }, {
+    "*hasError" : false,
+    "stopRecursiveLogging" : "true"
+  } ],
+  "guid" : "be382d9f-1a2f-49b1-911b-ea4e8f2d139e",
+  "comment" : "Initialize",
+  "before_execution" : false
+},
+{
+  "packages.scheduler.cronJob.handler.startJob.main@0" : [ {
+    "jobData" : {
+      "cronExpression" : "* * * * *",
+      "start_time" : "2026-08-13 18:55:00",
+      "job_name" : "gc",
+      "next_run" : "2026-08-14T00:56:00Z",
+      "internal_status" : "running",
+      "end_time" : "",
+      "correlationId" : "0f33eee3-5678-34f4-9417-2aeb8cfba943",
+      "id" : "5",
+      "sessionId" : "8daafe7a-eac4-3c4e-a5ac-676be20d69ae",
+      "enabled" : "Y",
+      "serviceFqn" : "packages.middleware.pub.server.core.gcApi",
+      "status" : "running"
+    },
+    "stopRecursiveLogging" : "true"
+  }, {
+    "packages.scheduler.cronJob.handler.startJob.main@0" : {
+      "*currentResourceFQN" : "packages.scheduler.cronJob.handler.startJob",
+      "jobData" : {
+        "cronExpression" : "* * * * *",
+        "start_time" : "2026-08-13 18:55:00",
+        "job_name" : "gc",
+        "next_run" : "2026-08-14T00:56:00Z",
+        "internal_status" : "running",
+        "end_time" : "",
+        "correlationId" : "0f33eee3-5678-34f4-9417-2aeb8cfba943",
+        "id" : "5",
+        "sessionId" : "8daafe7a-eac4-3c4e-a5ac-676be20d69ae",
+        "enabled" : "Y",
+        "serviceFqn" : "packages.middleware.pub.server.core.gcApi",
+        "status" : "running"
+      },
+      "*currentResource" : "packages.scheduler.cronJob.handler.startJob.main@0",
+      "*trackingData" : {
+        "TENANT_NAME" : "default"
+      },
+      "date_format" : "yyyy-MM-dd HH:mm:ss",
+      "*snapshot" : "enabled",
+      "jobStartLog" : "Starting scheduled job packages.middleware.pub.server.core.gcApi"
+    },
+    "packages.scheduler.cronJob.services.java.getSchedulerJobData.main@0" : { }
+  }, {
+    "*hasError" : false,
+    "stopRecursiveLogging" : "true"
+  } ],
+  "guid" : "f0bab7d1-ad75-42fc-b148-20bba06633f6",
+  "comment" : "Commentless step",
+  "before_execution" : true
+},
+{
+  "packages.scheduler.cronJob.handler.startJob.main@0" : [ { }, {
+    "packages.scheduler.cronJob.handler.startJob.main@0" : {
+      "*currentResourceFQN" : "packages.scheduler.cronJob.handler.startJob",
+      "jobData" : {
+        "cronExpression" : "* * * * *",
+        "start_time" : "2026-08-13 18:55:00",
+        "job_name" : "gc",
+        "next_run" : "2026-08-14T00:56:00Z",
+        "internal_status" : "running",
+        "end_time" : "",
+        "correlationId" : "0f33eee3-5678-34f4-9417-2aeb8cfba943",
+        "id" : "5",
+        "sessionId" : "8daafe7a-eac4-3c4e-a5ac-676be20d69ae",
+        "enabled" : "Y",
+        "serviceFqn" : "packages.middleware.pub.server.core.gcApi",
+        "status" : "running"
+      },
+      "*currentResource" : "packages.scheduler.cronJob.handler.startJob.main@0",
+      "*trackingData" : {
+        "TENANT_NAME" : "default"
+      },
+      "date_format" : "yyyy-MM-dd HH:mm:ss",
+      "startTime" : "2026-08-13 18:55:00",
+      "*snapshot" : "enabled",
+      "jobStartLog" : "Starting scheduled job packages.middleware.pub.server.core.gcApi"
+    },
+    "packages.scheduler.cronJob.services.java.getSchedulerJobData.main@0" : { }
+  }, {
+    "*hasError" : false,
+    "stopRecursiveLogging" : "true"
+  } ],
+  "guid" : "f0bab7d1-ad75-42fc-b148-20bba06633f6",
+  "comment" : "Commentless step",
+  "before_execution" : false
+},
+{
+  "packages.scheduler.cronJob.handler.startJob.main@0" : [ { }, {
+    "packages.scheduler.cronJob.handler.startJob.main@0" : {
+      "*currentResourceFQN" : "packages.scheduler.cronJob.handler.startJob",
+      "jobData" : {
+        "cronExpression" : "* * * * *",
+        "start_time" : "2026-08-13 18:55:00",
+        "job_name" : "gc",
+        "next_run" : "2026-08-14T00:56:00Z",
+        "internal_status" : "running",
+        "end_time" : "",
+        "correlationId" : "0f33eee3-5678-34f4-9417-2aeb8cfba943",
+        "id" : "5",
+        "sessionId" : "8daafe7a-eac4-3c4e-a5ac-676be20d69ae",
+        "enabled" : "Y",
+        "serviceFqn" : "packages.middleware.pub.server.core.gcApi",
+        "status" : "running"
+      },
+      "*currentResource" : "packages.scheduler.cronJob.handler.startJob.main@0",
+      "*trackingData" : {
+        "TENANT_NAME" : "default"
+      },
+      "date_format" : "yyyy-MM-dd HH:mm:ss",
+      "startTime" : "2026-08-13 18:55:00",
+      "*snapshot" : "enabled",
+      "jobStartLog" : "Starting scheduled job packages.middleware.pub.server.core.gcApi"
+    },
+    "packages.scheduler.cronJob.services.java.getSchedulerJobData.main@0" : { }
+  }, {
+    "*hasError" : false,
+    "stopRecursiveLogging" : "true"
+  } ],
+  "guid" : "a26a22ae-decf-40c1-88ef-7e3723203b83",
+  "comment" : "Print start log",
+  "before_execution" : true
+},
+{
+  "packages.scheduler.cronJob.handler.startJob.main@0" : [ { }, {
+    "packages.scheduler.cronJob.handler.startJob.main@0" : {
+      "*currentResourceFQN" : "packages.scheduler.cronJob.handler.startJob",
+      "jobData" : {
+        "cronExpression" : "* * * * *",
+        "start_time" : "2026-08-13 18:55:00",
+        "job_name" : "gc",
+        "next_run" : "2026-08-14T00:56:00Z",
+        "internal_status" : "running",
+        "end_time" : "",
+        "correlationId" : "0f33eee3-5678-34f4-9417-2aeb8cfba943",
+        "id" : "5",
+        "sessionId" : "8daafe7a-eac4-3c4e-a5ac-676be20d69ae",
+        "enabled" : "Y",
+        "serviceFqn" : "packages.middleware.pub.server.core.gcApi",
+        "status" : "running"
+      },
+      "*currentResource" : "packages.scheduler.cronJob.handler.startJob.main@0",
+      "*trackingData" : {
+        "TENANT_NAME" : "default"
+      },
+      "date_format" : "yyyy-MM-dd HH:mm:ss",
+      "startTime" : "2026-08-13 18:55:00",
+      "*snapshot" : "enabled",
+      "jobStartLog" : "Starting scheduled job packages.middleware.pub.server.core.gcApi"
+    },
+    "packages.scheduler.cronJob.services.java.getSchedulerJobData.main@0" : { }
+  }, {
+    "*hasError" : false,
+    "stopRecursiveLogging" : "true"
+  } ],
+  "guid" : "a26a22ae-decf-40c1-88ef-7e3723203b83",
+  "comment" : "Print start log",
+  "before_execution" : false
+},
+{
+  "packages.scheduler.cronJob.handler.startJob.main@0" : [ { }, {
+    "packages.scheduler.cronJob.handler.startJob.main@0" : {
+      "*currentResourceFQN" : "packages.scheduler.cronJob.handler.startJob",
+      "jobData" : {
+        "cronExpression" : "* * * * *",
+        "start_time" : "2026-08-13 18:55:00",
+        "job_name" : "gc",
+        "next_run" : "2026-08-14T00:56:00Z",
+        "internal_status" : "running",
+        "end_time" : "",
+        "correlationId" : "0f33eee3-5678-34f4-9417-2aeb8cfba943",
+        "id" : "5",
+        "sessionId" : "8daafe7a-eac4-3c4e-a5ac-676be20d69ae",
+        "enabled" : "Y",
+        "serviceFqn" : "packages.middleware.pub.server.core.gcApi",
+        "status" : "running"
+      },
+      "*currentResource" : "packages.scheduler.cronJob.handler.startJob.main@0",
+      "*trackingData" : {
+        "TENANT_NAME" : "default"
+      },
+      "date_format" : "yyyy-MM-dd HH:mm:ss",
+      "startTime" : "2026-08-13 18:55:00",
+      "*snapshot" : "enabled",
+      "jobStartLog" : "Starting scheduled job packages.middleware.pub.server.core.gcApi"
+    },
+    "packages.scheduler.cronJob.services.java.getSchedulerJobData.main@0" : { }
+  }, {
+    "*hasError" : false,
+    "stopRecursiveLogging" : "true"
+  } ],
+  "guid" : "e3107d88-9a95-4bc5-8dfa-c8c6beb71813",
+  "comment" : "Update status in database before running the job",
+  "before_execution" : true
+},
+{
+  "packages.scheduler.cronJob.handler.startJob.main@0" : [ { }, {
+    "packages.scheduler.cronJob.handler.startJob.main@0" : {
+      "*currentResourceFQN" : "packages.scheduler.cronJob.handler.startJob",
+      "jobData" : {
+        "cronExpression" : "* * * * *",
+        "start_time" : "2026-08-13 18:55:00",
+        "job_name" : "gc",
+        "next_run" : "2026-08-14T00:56:00Z",
+        "internal_status" : "running",
+        "end_time" : "",
+        "correlationId" : "0f33eee3-5678-34f4-9417-2aeb8cfba943",
+        "id" : "5",
+        "sessionId" : "8daafe7a-eac4-3c4e-a5ac-676be20d69ae",
+        "enabled" : "Y",
+        "serviceFqn" : "packages.middleware.pub.server.core.gcApi",
+        "status" : "running"
+      },
+      "*currentResource" : "packages.scheduler.cronJob.handler.startJob.main@0",
+      "*trackingData" : {
+        "TENANT_NAME" : "default"
+      },
+      "date_format" : "yyyy-MM-dd HH:mm:ss",
+      "startTime" : "2026-08-13 18:55:00",
+      "*snapshot" : "enabled",
+      "jobStartLog" : "Starting scheduled job packages.middleware.pub.server.core.gcApi"
+    },
+    "packages.scheduler.cronJob.services.java.getSchedulerJobData.main@0" : { }
+  }, {
+    "*hasError" : false,
+    "stopRecursiveLogging" : "true"
+  } ],
+  "guid" : "ab7b764e-b4fe-48db-86e7-81781ed4830b",
+  "comment" : "Prepare jobData document",
+  "before_execution" : true
+},
+{
+  "packages.scheduler.cronJob.handler.startJob.main@0" : [ { }, {
+    "packages.scheduler.cronJob.handler.startJob.main@0" : {
+      "*currentResourceFQN" : "packages.scheduler.cronJob.handler.startJob",
+      "ServiceOutput" : "Task with correlationId: 0f33eee3-5678-34f4-9417-2aeb8cfba943, Completed Successfully",
+      "jobData" : {
+        "internal_status" : "running",
+        "lasterror" : "",
+        "end_time" : "",
+        "last_run" : "2026-08-13 18:55:00",
+        "sessionId" : "8daafe7a-eac4-3c4e-a5ac-676be20d69ae",
+        "enabled" : "Y",
+        "cronExpression" : "* * * * *",
+        "start_time" : "2026-08-13 18:55:00",
+        "job_name" : "gc",
+        "next_run" : "2026-08-14T00:56:00Z",
+        "correlationId" : "0f33eee3-5678-34f4-9417-2aeb8cfba943",
+        "id" : "5",
+        "owner_node" : "EkamwNode1",
+        "serviceFqn" : "packages.middleware.pub.server.core.gcApi",
+        "status" : "running"
+      },
+      "*currentResource" : "packages.scheduler.cronJob.handler.startJob.main@0",
+      "*trackingData" : {
+        "TENANT_NAME" : "default"
+      },
+      "date_format" : "yyyy-MM-dd HH:mm:ss",
+      "startTime" : "2026-08-13 18:55:00",
+      "*snapshot" : "enabled",
+      "jobStartLog" : "Updatng database status to running**********************"
+    },
+    "packages.scheduler.cronJob.services.java.getSchedulerJobData.main@0" : { }
+  }, {
+    "*hasError" : false,
+    "stopRecursiveLogging" : "true"
+  } ],
+  "guid" : "ab7b764e-b4fe-48db-86e7-81781ed4830b",
+  "comment" : "Prepare jobData document",
+  "before_execution" : false
+},
+{
+  "packages.scheduler.cronJob.handler.startJob.main@0" : [ { }, {
+    "packages.scheduler.cronJob.handler.startJob.main@0" : {
+      "*currentResourceFQN" : "packages.scheduler.cronJob.handler.startJob",
+      "ServiceOutput" : "Task with correlationId: 0f33eee3-5678-34f4-9417-2aeb8cfba943, Completed Successfully",
+      "jobData" : {
+        "internal_status" : "running",
+        "lasterror" : "",
+        "end_time" : "",
+        "last_run" : "2026-08-13 18:55:00",
+        "sessionId" : "8daafe7a-eac4-3c4e-a5ac-676be20d69ae",
+        "enabled" : "Y",
+        "cronExpression" : "* * * * *",
+        "start_time" : "2026-08-13 18:55:00",
+        "job_name" : "gc",
+        "next_run" : "2026-08-14T00:56:00Z",
+        "correlationId" : "0f33eee3-5678-34f4-9417-2aeb8cfba943",
+        "id" : "5",
+        "owner_node" : "EkamwNode1",
+        "serviceFqn" : "packages.middleware.pub.server.core.gcApi",
+        "status" : "running"
+      },
+      "*currentResource" : "packages.scheduler.cronJob.handler.startJob.main@0",
+      "*trackingData" : {
+        "TENANT_NAME" : "default"
+      },
+      "date_format" : "yyyy-MM-dd HH:mm:ss",
+      "startTime" : "2026-08-13 18:55:00",
+      "*snapshot" : "enabled",
+      "jobStartLog" : "Updatng database status to running**********************"
+    },
+    "packages.scheduler.cronJob.services.java.getSchedulerJobData.main@0" : { }
+  }, {
+    "*hasError" : false,
+    "stopRecursiveLogging" : "true"
+  } ],
+  "guid" : "af307c29-7934-4067-88d7-d24899eb308f",
+  "comment" : "Commentless step",
+  "before_execution" : true
+},
+{
+  "packages.scheduler.cronJob.handler.startJob.main@0" : [ { }, {
+    "packages.scheduler.cronJob.handler.startJob.main@0" : {
+      "*currentResourceFQN" : "packages.scheduler.cronJob.handler.startJob",
+      "msg" : "Updatng database status to running**********************",
+      "ServiceOutput" : "Task with correlationId: 0f33eee3-5678-34f4-9417-2aeb8cfba943, Completed Successfully",
+      "jobData" : {
+        "internal_status" : "running",
+        "lasterror" : "",
+        "end_time" : "",
+        "last_run" : "2026-08-13 18:55:00",
+        "sessionId" : "8daafe7a-eac4-3c4e-a5ac-676be20d69ae",
+        "enabled" : "Y",
+        "cronExpression" : "* * * * *",
+        "start_time" : "2026-08-13 18:55:00",
+        "job_name" : "gc",
+        "next_run" : "2026-08-14T00:56:00Z",
+        "correlationId" : "0f33eee3-5678-34f4-9417-2aeb8cfba943",
+        "id" : "5",
+        "owner_node" : "EkamwNode1",
+        "serviceFqn" : "packages.middleware.pub.server.core.gcApi",
+        "status" : "running"
+      },
+      "log" : "Updatng database status to running**********************",
+      "*currentResource" : "packages.scheduler.cronJob.handler.startJob.main@0",
+      "*trackingData" : {
+        "TENANT_NAME" : "default"
+      },
+      "date_format" : "yyyy-MM-dd HH:mm:ss",
+      "startTime" : "2026-08-13 18:55:00",
+      "*snapshot" : "enabled",
+      "jobStartLog" : "Updatng database status to running**********************"
+    },
+    "packages.scheduler.cronJob.services.java.getSchedulerJobData.main@0" : { }
+  }, {
+    "*hasError" : false,
+    "stopRecursiveLogging" : "true"
+  } ],
+  "guid" : "af307c29-7934-4067-88d7-d24899eb308f",
+  "comment" : "Commentless step",
+  "before_execution" : false
+},
+{
+  "packages.scheduler.cronJob.handler.startJob.main@0" : [ { }, {
+    "packages.scheduler.cronJob.handler.startJob.main@0" : {
+      "*currentResourceFQN" : "packages.scheduler.cronJob.handler.startJob",
+      "msg" : "Updatng database status to running**********************",
+      "ServiceOutput" : "Task with correlationId: 0f33eee3-5678-34f4-9417-2aeb8cfba943, Completed Successfully",
+      "jobData" : {
+        "internal_status" : "running",
+        "lasterror" : "",
+        "end_time" : "",
+        "last_run" : "2026-08-13 18:55:00",
+        "sessionId" : "8daafe7a-eac4-3c4e-a5ac-676be20d69ae",
+        "enabled" : "Y",
+        "cronExpression" : "* * * * *",
+        "start_time" : "2026-08-13 18:55:00",
+        "job_name" : "gc",
+        "next_run" : "2026-08-14T00:56:00Z",
+        "correlationId" : "0f33eee3-5678-34f4-9417-2aeb8cfba943",
+        "id" : "5",
+        "owner_node" : "EkamwNode1",
+        "serviceFqn" : "packages.middleware.pub.server.core.gcApi",
+        "status" : "running"
+      },
+      "log" : "Updatng database status to running**********************",
+      "*currentResource" : "packages.scheduler.cronJob.handler.startJob.main@0",
+      "*trackingData" : {
+        "TENANT_NAME" : "default"
+      },
+      "date_format" : "yyyy-MM-dd HH:mm:ss",
+      "startTime" : "2026-08-13 18:55:00",
+      "*snapshot" : "enabled",
+      "jobStartLog" : "Updatng database status to running**********************"
+    },
+    "packages.scheduler.cronJob.services.java.getSchedulerJobData.main@0" : { }
+  }, {
+    "*hasError" : false,
+    "stopRecursiveLogging" : "true"
+  } ],
+  "guid" : "f4ab1bf8-10e5-45ea-a19e-f44e3eac00bc",
+  "comment" : "Update database",
+  "before_execution" : true
+},
+{
+  "packages.scheduler.cronJob.handler.startJob.main@0" : [ { }, {
+    "packages.scheduler.cronJob.handler.startJob.main@0" : {
+      "*currentResourceFQN" : "packages.scheduler.cronJob.handler.startJob",
+      "msg" : "Updatng database status to running**********************",
+      "ServiceOutput" : "Task with correlationId: 0f33eee3-5678-34f4-9417-2aeb8cfba943, Completed Successfully",
+      "jobData" : {
+        "internal_status" : "running",
+        "lasterror" : "",
+        "end_time" : "",
+        "last_run" : "2026-08-13 18:55:00",
+        "sessionId" : "8daafe7a-eac4-3c4e-a5ac-676be20d69ae",
+        "enabled" : "Y",
+        "cronExpression" : "* * * * *",
+        "start_time" : "2026-08-13 18:55:00",
+        "job_name" : "gc",
+        "next_run" : "2026-08-14T00:56:00Z",
+        "correlationId" : "0f33eee3-5678-34f4-9417-2aeb8cfba943",
+        "id" : "5",
+        "owner_node" : "EkamwNode1",
+        "serviceFqn" : "packages.middleware.pub.server.core.gcApi",
+        "status" : "running"
+      },
+      "log" : "Updatng database status to running**********************",
+      "*currentResource" : "packages.scheduler.cronJob.handler.startJob.main@0",
+      "*trackingData" : {
+        "TENANT_NAME" : "default"
+      },
+      "inputDocList" : [ {
+        "cronExpression" : "* * * * *",
+        "next_run" : "2026-08-14T00:56:00Z",
+        "lasterror" : "",
+        "last_run" : "2026-08-13 18:55:00",
+        "id" : "5",
+        "owner_node" : "EkamwNode1",
+        "enabled" : "Y",
+        "status" : "running"
+      } ],
+      "date_format" : "yyyy-MM-dd HH:mm:ss",
+      "startTime" : "2026-08-13 18:55:00",
+      "*snapshot" : "enabled",
+      "jobStartLog" : "Database updated. Id:5"
+    },
+    "packages.scheduler.cronJob.services.java.getSchedulerJobData.main@0" : { }
+  }, {
+    "*hasError" : false,
+    "stopRecursiveLogging" : "true"
+  } ],
+  "guid" : "f4ab1bf8-10e5-45ea-a19e-f44e3eac00bc",
+  "comment" : "Update database",
+  "before_execution" : false
+},
+{
+  "packages.scheduler.cronJob.handler.startJob.main@0" : [ { }, {
+    "packages.scheduler.cronJob.handler.startJob.main@0" : {
+      "*currentResourceFQN" : "packages.scheduler.cronJob.handler.startJob",
+      "msg" : "Updatng database status to running**********************",
+      "ServiceOutput" : "Task with correlationId: 0f33eee3-5678-34f4-9417-2aeb8cfba943, Completed Successfully",
+      "jobData" : {
+        "internal_status" : "running",
+        "lasterror" : "",
+        "end_time" : "",
+        "last_run" : "2026-08-13 18:55:00",
+        "sessionId" : "8daafe7a-eac4-3c4e-a5ac-676be20d69ae",
+        "enabled" : "Y",
+        "cronExpression" : "* * * * *",
+        "start_time" : "2026-08-13 18:55:00",
+        "job_name" : "gc",
+        "next_run" : "2026-08-14T00:56:00Z",
+        "correlationId" : "0f33eee3-5678-34f4-9417-2aeb8cfba943",
+        "id" : "5",
+        "owner_node" : "EkamwNode1",
+        "serviceFqn" : "packages.middleware.pub.server.core.gcApi",
+        "status" : "running"
+      },
+      "log" : "Updatng database status to running**********************",
+      "*currentResource" : "packages.scheduler.cronJob.handler.startJob.main@0",
+      "*trackingData" : {
+        "TENANT_NAME" : "default"
+      },
+      "inputDocList" : [ {
+        "cronExpression" : "* * * * *",
+        "next_run" : "2026-08-14T00:56:00Z",
+        "lasterror" : "",
+        "last_run" : "2026-08-13 18:55:00",
+        "id" : "5",
+        "owner_node" : "EkamwNode1",
+        "enabled" : "Y",
+        "status" : "running"
+      } ],
+      "date_format" : "yyyy-MM-dd HH:mm:ss",
+      "startTime" : "2026-08-13 18:55:00",
+      "*snapshot" : "enabled",
+      "jobStartLog" : "Database updated. Id:5"
+    },
+    "packages.scheduler.cronJob.services.java.getSchedulerJobData.main@0" : { }
+  }, {
+    "*hasError" : false,
+    "stopRecursiveLogging" : "true"
+  } ],
+  "guid" : "67230686-3383-43a9-84bc-9932fabd1f17",
+  "comment" : "Commentless step",
+  "before_execution" : true
+},
+{
+  "packages.scheduler.cronJob.handler.startJob.main@0" : [ { }, {
+    "packages.scheduler.cronJob.handler.startJob.main@0" : {
+      "*currentResourceFQN" : "packages.scheduler.cronJob.handler.startJob",
+      "msg" : "Database updated. Id:5",
+      "ServiceOutput" : "Task with correlationId: 0f33eee3-5678-34f4-9417-2aeb8cfba943, Completed Successfully",
+      "jobData" : {
+        "internal_status" : "running",
+        "lasterror" : "",
+        "end_time" : "",
+        "last_run" : "2026-08-13 18:55:00",
+        "sessionId" : "8daafe7a-eac4-3c4e-a5ac-676be20d69ae",
+        "enabled" : "Y",
+        "cronExpression" : "* * * * *",
+        "start_time" : "2026-08-13 18:55:00",
+        "job_name" : "gc",
+        "next_run" : "2026-08-14T00:56:00Z",
+        "correlationId" : "0f33eee3-5678-34f4-9417-2aeb8cfba943",
+        "id" : "5",
+        "owner_node" : "EkamwNode1",
+        "serviceFqn" : "packages.middleware.pub.server.core.gcApi",
+        "status" : "running"
+      },
+      "log" : "Updatng database status to running**********************",
+      "*currentResource" : "packages.scheduler.cronJob.handler.startJob.main@0",
+      "*trackingData" : {
+        "TENANT_NAME" : "default"
+      },
+      "inputDocList" : [ {
+        "cronExpression" : "* * * * *",
+        "next_run" : "2026-08-14T00:56:00Z",
+        "lasterror" : "",
+        "last_run" : "2026-08-13 18:55:00",
+        "id" : "5",
+        "owner_node" : "EkamwNode1",
+        "enabled" : "Y",
+        "status" : "running"
+      } ],
+      "date_format" : "yyyy-MM-dd HH:mm:ss",
+      "startTime" : "2026-08-13 18:55:00",
+      "*snapshot" : "enabled",
+      "jobStartLog" : "Database updated. Id:5"
+    },
+    "packages.scheduler.cronJob.services.java.getSchedulerJobData.main@0" : { }
+  }, {
+    "*hasError" : false,
+    "stopRecursiveLogging" : "true"
+  } ],
+  "guid" : "67230686-3383-43a9-84bc-9932fabd1f17",
+  "comment" : "Commentless step",
+  "before_execution" : false
+},
+{
+  "packages.scheduler.cronJob.handler.startJob.main@0" : [ { }, {
+    "packages.scheduler.cronJob.handler.startJob.main@0" : {
+      "*currentResourceFQN" : "packages.scheduler.cronJob.handler.startJob",
+      "msg" : "Database updated. Id:5",
+      "ServiceOutput" : "Task with correlationId: 0f33eee3-5678-34f4-9417-2aeb8cfba943, Completed Successfully",
+      "jobData" : {
+        "internal_status" : "running",
+        "lasterror" : "",
+        "end_time" : "",
+        "last_run" : "2026-08-13 18:55:00",
+        "sessionId" : "8daafe7a-eac4-3c4e-a5ac-676be20d69ae",
+        "enabled" : "Y",
+        "cronExpression" : "* * * * *",
+        "start_time" : "2026-08-13 18:55:00",
+        "job_name" : "gc",
+        "next_run" : "2026-08-14T00:56:00Z",
+        "correlationId" : "0f33eee3-5678-34f4-9417-2aeb8cfba943",
+        "id" : "5",
+        "owner_node" : "EkamwNode1",
+        "serviceFqn" : "packages.middleware.pub.server.core.gcApi",
+        "status" : "running"
+      },
+      "log" : "Updatng database status to running**********************",
+      "*currentResource" : "packages.scheduler.cronJob.handler.startJob.main@0",
+      "*trackingData" : {
+        "TENANT_NAME" : "default"
+      },
+      "inputDocList" : [ {
+        "cronExpression" : "* * * * *",
+        "next_run" : "2026-08-14T00:56:00Z",
+        "lasterror" : "",
+        "last_run" : "2026-08-13 18:55:00",
+        "id" : "5",
+        "owner_node" : "EkamwNode1",
+        "enabled" : "Y",
+        "status" : "running"
+      } ],
+      "date_format" : "yyyy-MM-dd HH:mm:ss",
+      "startTime" : "2026-08-13 18:55:00",
+      "*snapshot" : "enabled",
+      "jobStartLog" : "Database updated. Id:5"
+    },
+    "packages.scheduler.cronJob.services.java.getSchedulerJobData.main@0" : { }
+  }, {
+    "*hasError" : false,
+    "stopRecursiveLogging" : "true"
+  } ],
+  "guid" : "e3107d88-9a95-4bc5-8dfa-c8c6beb71813",
+  "comment" : "Update status in database before running the job",
+  "before_execution" : false,
+  "GROUP_SEQUENCE_CONDITION_EVAL" : false
+},
+{
+  "packages.scheduler.cronJob.handler.startJob.main@0" : [ { }, {
+    "packages.scheduler.cronJob.handler.startJob.main@0" : {
+      "*currentResourceFQN" : "packages.scheduler.cronJob.handler.startJob",
+      "msg" : "Database updated. Id:5",
+      "ServiceOutput" : "Task with correlationId: 0f33eee3-5678-34f4-9417-2aeb8cfba943, Completed Successfully",
+      "jobData" : {
+        "internal_status" : "running",
+        "lasterror" : "",
+        "end_time" : "",
+        "last_run" : "2026-08-13 18:55:00",
+        "sessionId" : "8daafe7a-eac4-3c4e-a5ac-676be20d69ae",
+        "enabled" : "Y",
+        "cronExpression" : "* * * * *",
+        "start_time" : "2026-08-13 18:55:00",
+        "job_name" : "gc",
+        "next_run" : "2026-08-14T00:56:00Z",
+        "correlationId" : "0f33eee3-5678-34f4-9417-2aeb8cfba943",
+        "id" : "5",
+        "owner_node" : "EkamwNode1",
+        "serviceFqn" : "packages.middleware.pub.server.core.gcApi",
+        "status" : "running"
+      },
+      "log" : "Updatng database status to running**********************",
+      "*currentResource" : "packages.scheduler.cronJob.handler.startJob.main@0",
+      "*trackingData" : {
+        "TENANT_NAME" : "default"
+      },
+      "inputDocList" : [ {
+        "cronExpression" : "* * * * *",
+        "next_run" : "2026-08-14T00:56:00Z",
+        "lasterror" : "",
+        "last_run" : "2026-08-13 18:55:00",
+        "id" : "5",
+        "owner_node" : "EkamwNode1",
+        "enabled" : "Y",
+        "status" : "running"
+      } ],
+      "date_format" : "yyyy-MM-dd HH:mm:ss",
+      "startTime" : "2026-08-13 18:55:00",
+      "*snapshot" : "enabled",
+      "jobStartLog" : "Database updated. Id:5"
+    },
+    "packages.scheduler.cronJob.services.java.getSchedulerJobData.main@0" : { }
+  }, {
+    "*hasError" : false,
+    "stopRecursiveLogging" : "true"
+  } ],
+  "guid" : "85b18a7f-868d-44e9-9f0b-9735564717b2",
+  "comment" : "Start the scheduled job",
+  "before_execution" : true
+},
+{
+  "packages.scheduler.cronJob.handler.startJob.main@0" : [ { }, {
+    "packages.scheduler.cronJob.handler.startJob.main@0" : {
+      "*currentResourceFQN" : "packages.scheduler.cronJob.handler.startJob",
+      "msg" : "Database updated. Id:5",
+      "ServiceOutput" : "Task with correlationId: 0f33eee3-5678-34f4-9417-2aeb8cfba943, Completed Successfully",
+      "jobData" : {
+        "internal_status" : "running",
+        "lasterror" : "",
+        "end_time" : "",
+        "last_run" : "2026-08-13 18:55:00",
+        "sessionId" : "8daafe7a-eac4-3c4e-a5ac-676be20d69ae",
+        "enabled" : "Y",
+        "cronExpression" : "* * * * *",
+        "start_time" : "2026-08-13 18:55:00",
+        "job_name" : "gc",
+        "next_run" : "2026-08-14T00:56:00Z",
+        "correlationId" : "0f33eee3-5678-34f4-9417-2aeb8cfba943",
+        "id" : "5",
+        "owner_node" : "EkamwNode1",
+        "serviceFqn" : "packages.middleware.pub.server.core.gcApi",
+        "status" : "running"
+      },
+      "log" : "Updatng database status to running**********************",
+      "*currentResource" : "packages.scheduler.cronJob.handler.startJob.main@0",
+      "*trackingData" : {
+        "TENANT_NAME" : "default"
+      },
+      "inputDocList" : [ {
+        "cronExpression" : "* * * * *",
+        "next_run" : "2026-08-14T00:56:00Z",
+        "lasterror" : "",
+        "last_run" : "2026-08-13 18:55:00",
+        "id" : "5",
+        "owner_node" : "EkamwNode1",
+        "enabled" : "Y",
+        "status" : "running"
+      } ],
+      "date_format" : "yyyy-MM-dd HH:mm:ss",
+      "startTime" : "2026-08-13 18:55:00",
+      "*snapshot" : "enabled",
+      "jobStartLog" : "Database updated. Id:5"
+    },
+    "packages.scheduler.cronJob.services.java.getSchedulerJobData.main@0" : { }
+  }, {
+    "*hasError" : false,
+    "stopRecursiveLogging" : "true"
+  } ],
+  "guid" : "4d7a9fa6-3922-4729-8d8e-d0b54963c53f",
+  "comment" : "Commentless step",
+  "before_execution" : true
+},
+{
+  "packages.scheduler.cronJob.handler.startJob.main@0" : [ { }, {
+    "packages.scheduler.cronJob.handler.startJob.main@0" : {
+      "*currentResourceFQN" : "packages.scheduler.cronJob.handler.startJob",
+      "msg" : "Database updated. Id:5",
+      "ServiceOutput" : "Task with correlationId: 0f33eee3-5678-34f4-9417-2aeb8cfba943, Completed Successfully",
+      "jobData" : {
+        "internal_status" : "running",
+        "lasterror" : "",
+        "end_time" : "",
+        "last_run" : "2026-08-13 18:55:00",
+        "sessionId" : "8daafe7a-eac4-3c4e-a5ac-676be20d69ae",
+        "enabled" : "Y",
+        "cronExpression" : "* * * * *",
+        "start_time" : "2026-08-13 18:55:00",
+        "job_name" : "gc",
+        "next_run" : "2026-08-14T00:56:00Z",
+        "correlationId" : "0f33eee3-5678-34f4-9417-2aeb8cfba943",
+        "id" : "5",
+        "owner_node" : "EkamwNode1",
+        "serviceFqn" : "packages.middleware.pub.server.core.gcApi",
+        "status" : "running"
+      },
+      "log" : "Updatng database status to running**********************",
+      "*currentResource" : "packages.scheduler.cronJob.handler.startJob.main@0",
+      "*trackingData" : {
+        "TENANT_NAME" : "default"
+      },
+      "inputDocList" : [ {
+        "cronExpression" : "* * * * *",
+        "next_run" : "2026-08-14T00:56:00Z",
+        "lasterror" : "",
+        "last_run" : "2026-08-13 18:55:00",
+        "id" : "5",
+        "owner_node" : "EkamwNode1",
+        "enabled" : "Y",
+        "status" : "running"
+      } ],
+      "date_format" : "yyyy-MM-dd HH:mm:ss",
+      "startTime" : "2026-08-13 18:55:00",
+      "*snapshot" : "enabled",
+      "jobStartLog" : "Database updated. Id:5"
+    },
+    "packages.scheduler.cronJob.services.java.getSchedulerJobData.main@0" : { }
+  }, {
+    "*hasError" : false,
+    "stopRecursiveLogging" : "true"
+  } ],
+  "guid" : "4d7a9fa6-3922-4729-8d8e-d0b54963c53f",
+  "comment" : "Commentless step",
+  "before_execution" : false
+},
+{
+  "packages.scheduler.cronJob.handler.startJob.main@0" : [ { }, {
+    "packages.scheduler.cronJob.handler.startJob.main@0" : {
+      "*currentResourceFQN" : "packages.scheduler.cronJob.handler.startJob",
+      "msg" : "Database updated. Id:5",
+      "ServiceOutput" : "Task with correlationId: 0f33eee3-5678-34f4-9417-2aeb8cfba943, Completed Successfully",
+      "jobData" : {
+        "internal_status" : "running",
+        "lasterror" : "",
+        "end_time" : "",
+        "last_run" : "2026-08-13 18:55:00",
+        "sessionId" : "8daafe7a-eac4-3c4e-a5ac-676be20d69ae",
+        "enabled" : "Y",
+        "cronExpression" : "* * * * *",
+        "start_time" : "2026-08-13 18:55:00",
+        "job_name" : "gc",
+        "next_run" : "2026-08-14T00:56:00Z",
+        "correlationId" : "0f33eee3-5678-34f4-9417-2aeb8cfba943",
+        "id" : "5",
+        "owner_node" : "EkamwNode1",
+        "serviceFqn" : "packages.middleware.pub.server.core.gcApi",
+        "status" : "running"
+      },
+      "log" : "Updatng database status to running**********************",
+      "*currentResource" : "packages.scheduler.cronJob.handler.startJob.main@0",
+      "*trackingData" : {
+        "TENANT_NAME" : "default"
+      },
+      "inputDocList" : [ {
+        "cronExpression" : "* * * * *",
+        "next_run" : "2026-08-14T00:56:00Z",
+        "lasterror" : "",
+        "last_run" : "2026-08-13 18:55:00",
+        "id" : "5",
+        "owner_node" : "EkamwNode1",
+        "enabled" : "Y",
+        "status" : "running"
+      } ],
+      "date_format" : "yyyy-MM-dd HH:mm:ss",
+      "startTime" : "2026-08-13 18:55:00",
+      "*snapshot" : "enabled",
+      "jobStartLog" : "Database updated. Id:5"
+    },
+    "packages.scheduler.cronJob.services.java.getSchedulerJobData.main@0" : { }
+  }, {
+    "*hasError" : false,
+    "stopRecursiveLogging" : "true"
+  } ],
+  "guid" : "85b18a7f-868d-44e9-9f0b-9735564717b2",
+  "comment" : "Start the scheduled job",
+  "before_execution" : false,
+  "GROUP_SEQUENCE_CONDITION_EVAL" : false
+},
+{
+  "packages.scheduler.cronJob.handler.startJob.main@0" : [ { }, {
+    "packages.scheduler.cronJob.handler.startJob.main@0" : {
+      "*currentResourceFQN" : "packages.scheduler.cronJob.handler.startJob",
+      "msg" : "Database updated. Id:5",
+      "ServiceOutput" : "Task with correlationId: 0f33eee3-5678-34f4-9417-2aeb8cfba943, Completed Successfully",
+      "jobData" : {
+        "internal_status" : "running",
+        "lasterror" : "",
+        "end_time" : "",
+        "last_run" : "2026-08-13 18:55:00",
+        "sessionId" : "8daafe7a-eac4-3c4e-a5ac-676be20d69ae",
+        "enabled" : "Y",
+        "cronExpression" : "* * * * *",
+        "start_time" : "2026-08-13 18:55:00",
+        "job_name" : "gc",
+        "next_run" : "2026-08-14T00:56:00Z",
+        "correlationId" : "0f33eee3-5678-34f4-9417-2aeb8cfba943",
+        "id" : "5",
+        "owner_node" : "EkamwNode1",
+        "serviceFqn" : "packages.middleware.pub.server.core.gcApi",
+        "status" : "running"
+      },
+      "log" : "Updatng database status to running**********************",
+      "*currentResource" : "packages.scheduler.cronJob.handler.startJob.main@0",
+      "*trackingData" : {
+        "TENANT_NAME" : "default"
+      },
+      "inputDocList" : [ {
+        "cronExpression" : "* * * * *",
+        "next_run" : "2026-08-14T00:56:00Z",
+        "lasterror" : "",
+        "last_run" : "2026-08-13 18:55:00",
+        "id" : "5",
+        "owner_node" : "EkamwNode1",
+        "enabled" : "Y",
+        "status" : "running"
+      } ],
+      "date_format" : "yyyy-MM-dd HH:mm:ss",
+      "startTime" : "2026-08-13 18:55:00",
+      "*snapshot" : "enabled",
+      "jobStartLog" : "Database updated. Id:5"
+    },
+    "packages.scheduler.cronJob.services.java.getSchedulerJobData.main@0" : { }
+  }, {
+    "*hasError" : false,
+    "stopRecursiveLogging" : "true"
+  } ],
+  "guid" : "7355b5d8-0056-4f45-8016-4e7108a3b75f",
+  "comment" : "Update status in database after finish running the job",
+  "before_execution" : true
+},
+{
+  "packages.scheduler.cronJob.handler.startJob.main@0" : [ { }, {
+    "packages.scheduler.cronJob.handler.startJob.main@0" : {
+      "*currentResourceFQN" : "packages.scheduler.cronJob.handler.startJob",
+      "msg" : "Database updated. Id:5",
+      "ServiceOutput" : "Task with correlationId: 0f33eee3-5678-34f4-9417-2aeb8cfba943, Completed Successfully",
+      "jobData" : {
+        "internal_status" : "running",
+        "lasterror" : "",
+        "end_time" : "",
+        "last_run" : "2026-08-13 18:55:00",
+        "sessionId" : "8daafe7a-eac4-3c4e-a5ac-676be20d69ae",
+        "enabled" : "Y",
+        "cronExpression" : "* * * * *",
+        "start_time" : "2026-08-13 18:55:00",
+        "job_name" : "gc",
+        "next_run" : "2026-08-14T00:56:00Z",
+        "correlationId" : "0f33eee3-5678-34f4-9417-2aeb8cfba943",
+        "id" : "5",
+        "owner_node" : "EkamwNode1",
+        "serviceFqn" : "packages.middleware.pub.server.core.gcApi",
+        "status" : "running"
+      },
+      "log" : "Updatng database status to running**********************",
+      "*currentResource" : "packages.scheduler.cronJob.handler.startJob.main@0",
+      "*trackingData" : {
+        "TENANT_NAME" : "default"
+      },
+      "inputDocList" : [ {
+        "cronExpression" : "* * * * *",
+        "next_run" : "2026-08-14T00:56:00Z",
+        "lasterror" : "",
+        "last_run" : "2026-08-13 18:55:00",
+        "id" : "5",
+        "owner_node" : "EkamwNode1",
+        "enabled" : "Y",
+        "status" : "running"
+      } ],
+      "date_format" : "yyyy-MM-dd HH:mm:ss",
+      "startTime" : "2026-08-13 18:55:00",
+      "*snapshot" : "enabled",
+      "jobStartLog" : "Database updated. Id:5"
+    },
+    "packages.scheduler.cronJob.services.java.getSchedulerJobData.main@0" : { }
+  }, {
+    "*hasError" : false,
+    "stopRecursiveLogging" : "true"
+  } ],
+  "guid" : "f3736d2f-d4ad-4ec4-a0ca-65adaf3b755f",
+  "comment" : "Prepare jobData document",
+  "before_execution" : true
+},
+{
+  "packages.scheduler.cronJob.handler.startJob.main@0" : [ { }, {
+    "packages.scheduler.cronJob.handler.startJob.main@0" : {
+      "*currentResourceFQN" : "packages.scheduler.cronJob.handler.startJob",
+      "msg" : "Database updated. Id:5",
+      "ServiceOutput" : "Task with correlationId: 0f33eee3-5678-34f4-9417-2aeb8cfba943, Completed Successfully",
+      "jobData" : {
+        "internal_status" : "running",
+        "lasterror" : "",
+        "end_time" : "",
+        "last_run" : "2026-08-13 18:55:00",
+        "sessionId" : "8daafe7a-eac4-3c4e-a5ac-676be20d69ae",
+        "enabled" : "Y",
+        "cronExpression" : "* * * * *",
+        "start_time" : "2026-08-13 18:55:00",
+        "job_name" : "gc",
+        "next_run" : "2026-08-14T00:56:00Z",
+        "correlationId" : "0f33eee3-5678-34f4-9417-2aeb8cfba943",
+        "id" : "5",
+        "owner_node" : "EkamwNode1",
+        "serviceFqn" : "packages.middleware.pub.server.core.gcApi",
+        "status" : "completed"
+      },
+      "log" : "Updatng database status to running**********************",
+      "*currentResource" : "packages.scheduler.cronJob.handler.startJob.main@0",
+      "*trackingData" : {
+        "TENANT_NAME" : "default"
+      },
+      "inputDocList" : [ {
+        "cronExpression" : "* * * * *",
+        "next_run" : "2026-08-14T00:56:00Z",
+        "lasterror" : "",
+        "last_run" : "2026-08-13 18:55:00",
+        "id" : "5",
+        "owner_node" : "EkamwNode1",
+        "enabled" : "Y",
+        "status" : "running"
+      } ],
+      "date_format" : "yyyy-MM-dd HH:mm:ss",
+      "startTime" : "2026-08-13 18:55:00",
+      "*snapshot" : "enabled",
+      "jobStartLog" : "Database updated. Id:5"
+    },
+    "packages.scheduler.cronJob.services.java.getSchedulerJobData.main@0" : { }
+  }, {
+    "*hasError" : false,
+    "stopRecursiveLogging" : "true"
+  } ],
+  "guid" : "f3736d2f-d4ad-4ec4-a0ca-65adaf3b755f",
+  "comment" : "Prepare jobData document",
+  "before_execution" : false
+},
+{
+  "packages.scheduler.cronJob.handler.startJob.main@0" : [ { }, {
+    "packages.scheduler.cronJob.handler.startJob.main@0" : {
+      "*currentResourceFQN" : "packages.scheduler.cronJob.handler.startJob",
+      "msg" : "Database updated. Id:5",
+      "ServiceOutput" : "Task with correlationId: 0f33eee3-5678-34f4-9417-2aeb8cfba943, Completed Successfully",
+      "jobData" : {
+        "internal_status" : "running",
+        "lasterror" : "",
+        "end_time" : "",
+        "last_run" : "2026-08-13 18:55:00",
+        "sessionId" : "8daafe7a-eac4-3c4e-a5ac-676be20d69ae",
+        "enabled" : "Y",
+        "cronExpression" : "* * * * *",
+        "start_time" : "2026-08-13 18:55:00",
+        "job_name" : "gc",
+        "next_run" : "2026-08-14T00:56:00Z",
+        "correlationId" : "0f33eee3-5678-34f4-9417-2aeb8cfba943",
+        "id" : "5",
+        "owner_node" : "EkamwNode1",
+        "serviceFqn" : "packages.middleware.pub.server.core.gcApi",
+        "status" : "completed"
+      },
+      "log" : "Updatng database status to running**********************",
+      "*currentResource" : "packages.scheduler.cronJob.handler.startJob.main@0",
+      "*trackingData" : {
+        "TENANT_NAME" : "default"
+      },
+      "inputDocList" : [ {
+        "cronExpression" : "* * * * *",
+        "next_run" : "2026-08-14T00:56:00Z",
+        "lasterror" : "",
+        "last_run" : "2026-08-13 18:55:00",
+        "id" : "5",
+        "owner_node" : "EkamwNode1",
+        "enabled" : "Y",
+        "status" : "running"
+      } ],
+      "date_format" : "yyyy-MM-dd HH:mm:ss",
+      "startTime" : "2026-08-13 18:55:00",
+      "*snapshot" : "enabled",
+      "jobStartLog" : "Database updated. Id:5"
+    },
+    "packages.scheduler.cronJob.services.java.getSchedulerJobData.main@0" : { }
+  }, {
+    "*hasError" : false,
+    "stopRecursiveLogging" : "true"
+  } ],
+  "guid" : "44426885-743f-4ff5-91eb-4497fa195c04",
+  "comment" : "Select the latest updated scheduler Job data",
+  "before_execution" : true
+},
+{
+  "packages.scheduler.cronJob.handler.startJob.main@0" : [ { }, {
+    "packages.scheduler.cronJob.handler.startJob.main@0" : {
+      "*currentResourceFQN" : "packages.scheduler.cronJob.handler.startJob",
+      "msg" : "Database updated. Id:5",
+      "ServiceOutput" : "Task with correlationId: 0f33eee3-5678-34f4-9417-2aeb8cfba943, Completed Successfully",
+      "jobData" : {
+        "internal_status" : "running",
+        "lasterror" : "",
+        "end_time" : "",
+        "last_run" : "2026-08-13 18:55:00",
+        "sessionId" : "8daafe7a-eac4-3c4e-a5ac-676be20d69ae",
+        "enabled" : "Y",
+        "cronExpression" : "* * * * *",
+        "start_time" : "2026-08-13 18:55:00",
+        "job_name" : "gc",
+        "next_run" : "2026-08-14T00:56:00Z",
+        "correlationId" : "0f33eee3-5678-34f4-9417-2aeb8cfba943",
+        "id" : "5",
+        "owner_node" : "EkamwNode1",
+        "serviceFqn" : "packages.middleware.pub.server.core.gcApi",
+        "status" : "completed"
+      },
+      "log" : "Updatng database status to running**********************",
+      "*currentResource" : "packages.scheduler.cronJob.handler.startJob.main@0",
+      "*trackingData" : {
+        "TENANT_NAME" : "default"
+      },
+      "inputDocList" : [ {
+        "cronExpression" : "* * * * *",
+        "next_run" : "2026-08-14T00:56:00Z",
+        "lasterror" : "",
+        "last_run" : "2026-08-13 18:55:00",
+        "id" : "5",
+        "owner_node" : "EkamwNode1",
+        "enabled" : "Y",
+        "status" : "running"
+      } ],
+      "date_format" : "yyyy-MM-dd HH:mm:ss",
+      "startTime" : "2026-08-13 18:55:00",
+      "*snapshot" : "enabled",
+      "jobStartLog" : "Database updated. Id:5"
+    },
+    "packages.scheduler.cronJob.services.java.getSchedulerJobData.main@0" : { }
+  }, {
+    "*hasError" : false,
+    "stopRecursiveLogging" : "true"
+  } ],
+  "guid" : "44426885-743f-4ff5-91eb-4497fa195c04",
+  "comment" : "Select the latest updated scheduler Job data",
+  "before_execution" : false
+},
+{
+  "packages.scheduler.cronJob.handler.startJob.main@0" : [ { }, {
+    "packages.scheduler.cronJob.handler.startJob.main@0" : {
+      "*currentResourceFQN" : "packages.scheduler.cronJob.handler.startJob",
+      "msg" : "Database updated. Id:5",
+      "ServiceOutput" : "Task with correlationId: 0f33eee3-5678-34f4-9417-2aeb8cfba943, Completed Successfully",
+      "jobData" : {
+        "internal_status" : "running",
+        "lasterror" : "",
+        "end_time" : "",
+        "last_run" : "2026-08-13 18:55:00",
+        "sessionId" : "8daafe7a-eac4-3c4e-a5ac-676be20d69ae",
+        "enabled" : "Y",
+        "cronExpression" : "* * * * *",
+        "start_time" : "2026-08-13 18:55:00",
+        "job_name" : "gc",
+        "next_run" : "2026-08-14T00:56:00Z",
+        "correlationId" : "0f33eee3-5678-34f4-9417-2aeb8cfba943",
+        "id" : "5",
+        "owner_node" : "EkamwNode1",
+        "serviceFqn" : "packages.middleware.pub.server.core.gcApi",
+        "status" : "completed"
+      },
+      "log" : "Updatng database status to running**********************",
+      "*currentResource" : "packages.scheduler.cronJob.handler.startJob.main@0",
+      "*trackingData" : {
+        "TENANT_NAME" : "default"
+      },
+      "inputDocList" : [ {
+        "cronExpression" : "* * * * *",
+        "next_run" : "2026-08-14T00:56:00Z",
+        "lasterror" : "",
+        "last_run" : "2026-08-13 18:55:00",
+        "id" : "5",
+        "owner_node" : "EkamwNode1",
+        "enabled" : "Y",
+        "status" : "running"
+      } ],
+      "date_format" : "yyyy-MM-dd HH:mm:ss",
+      "startTime" : "2026-08-13 18:55:00",
+      "*snapshot" : "enabled",
+      "jobStartLog" : "Database updated. Id:5"
+    },
+    "packages.scheduler.cronJob.services.java.getSchedulerJobData.main@0" : { }
+  }, {
+    "*hasError" : false,
+    "stopRecursiveLogging" : "true"
+  } ],
+  "guid" : "c48317fc-226e-464c-8eb5-6a13f0e99ea9",
+  "comment" : "Commentless step",
+  "before_execution" : true
+},
+{
+  "packages.scheduler.cronJob.handler.startJob.main@0" : [ { }, {
+    "packages.scheduler.cronJob.handler.startJob.main@0" : {
+      "*currentResourceFQN" : "packages.scheduler.cronJob.handler.startJob",
+      "msg" : "gc",
+      "ServiceOutput" : "Task with correlationId: 0f33eee3-5678-34f4-9417-2aeb8cfba943, Completed Successfully",
+      "jobData" : {
+        "internal_status" : "running",
+        "lasterror" : "Task with correlationId: 0f33eee3-5678-34f4-9417-2aeb8cfba943, Completed Successfully",
+        "end_time" : "",
+        "last_run" : "2026-08-13 18:55:00",
+        "sessionId" : "8daafe7a-eac4-3c4e-a5ac-676be20d69ae",
+        "enabled" : "Y",
+        "cronExpression" : "* * * * *",
+        "start_time" : "2026-08-13 18:55:00",
+        "job_name" : "gc",
+        "next_run" : "2026-08-14T00:56:00Z",
+        "correlationId" : "0f33eee3-5678-34f4-9417-2aeb8cfba943",
+        "id" : "5",
+        "owner_node" : "EkamwNode1",
+        "serviceFqn" : "packages.middleware.pub.server.core.gcApi",
+        "status" : "completed"
+      },
+      "log" : "gc",
+      "*currentResource" : "packages.scheduler.cronJob.handler.startJob.main@0",
+      "*trackingData" : {
+        "TENANT_NAME" : "default"
+      },
+      "inputDocList" : [ {
+        "cronExpression" : "* * * * *",
+        "next_run" : "2026-08-14T00:56:00Z",
+        "lasterror" : "",
+        "last_run" : "2026-08-13 18:55:00",
+        "id" : "5",
+        "owner_node" : "EkamwNode1",
+        "enabled" : "Y",
+        "status" : "running"
+      } ],
+      "date_format" : "yyyy-MM-dd HH:mm:ss",
+      "startTime" : "2026-08-13 18:55:00",
+      "*snapshot" : "enabled",
+      "jobStartLog" : "Database updated. Id:5"
+    },
+    "packages.scheduler.cronJob.services.java.getSchedulerJobData.main@0" : { }
+  }, {
+    "*hasError" : false,
+    "stopRecursiveLogging" : "true"
+  } ],
+  "guid" : "c48317fc-226e-464c-8eb5-6a13f0e99ea9",
+  "comment" : "Commentless step",
+  "before_execution" : false
+},
+{
+  "packages.scheduler.cronJob.handler.startJob.main@0" : [ { }, {
+    "packages.scheduler.cronJob.handler.startJob.main@0" : {
+      "*currentResourceFQN" : "packages.scheduler.cronJob.handler.startJob",
+      "msg" : "gc",
+      "ServiceOutput" : "Task with correlationId: 0f33eee3-5678-34f4-9417-2aeb8cfba943, Completed Successfully",
+      "jobData" : {
+        "internal_status" : "running",
+        "lasterror" : "Task with correlationId: 0f33eee3-5678-34f4-9417-2aeb8cfba943, Completed Successfully",
+        "end_time" : "",
+        "last_run" : "2026-08-13 18:55:00",
+        "sessionId" : "8daafe7a-eac4-3c4e-a5ac-676be20d69ae",
+        "enabled" : "Y",
+        "cronExpression" : "* * * * *",
+        "start_time" : "2026-08-13 18:55:00",
+        "job_name" : "gc",
+        "next_run" : "2026-08-14T00:56:00Z",
+        "correlationId" : "0f33eee3-5678-34f4-9417-2aeb8cfba943",
+        "id" : "5",
+        "owner_node" : "EkamwNode1",
+        "serviceFqn" : "packages.middleware.pub.server.core.gcApi",
+        "status" : "completed"
+      },
+      "log" : "gc",
+      "*currentResource" : "packages.scheduler.cronJob.handler.startJob.main@0",
+      "*trackingData" : {
+        "TENANT_NAME" : "default"
+      },
+      "inputDocList" : [ {
+        "cronExpression" : "* * * * *",
+        "next_run" : "2026-08-14T00:56:00Z",
+        "lasterror" : "",
+        "last_run" : "2026-08-13 18:55:00",
+        "id" : "5",
+        "owner_node" : "EkamwNode1",
+        "enabled" : "Y",
+        "status" : "running"
+      } ],
+      "date_format" : "yyyy-MM-dd HH:mm:ss",
+      "startTime" : "2026-08-13 18:55:00",
+      "*snapshot" : "enabled",
+      "jobStartLog" : "Database updated. Id:5"
+    },
+    "packages.scheduler.cronJob.services.java.getSchedulerJobData.main@0" : { }
+  }, {
+    "*hasError" : false,
+    "stopRecursiveLogging" : "true"
+  } ],
+  "guid" : "6a391f6e-e315-4a0c-9185-15c2e61fc22e",
+  "comment" : "Commentless step",
+  "before_execution" : true
+},
+{
+  "packages.scheduler.cronJob.handler.startJob.main@0" : [ { }, {
+    "packages.scheduler.cronJob.handler.startJob.main@0" : {
+      "*currentResourceFQN" : "packages.scheduler.cronJob.handler.startJob",
+      "msg" : "gc",
+      "ServiceOutput" : "Task with correlationId: 0f33eee3-5678-34f4-9417-2aeb8cfba943, Completed Successfully",
+      "jobData" : {
+        "internal_status" : "running",
+        "lasterror" : "Task with correlationId: 0f33eee3-5678-34f4-9417-2aeb8cfba943, Completed Successfully",
+        "end_time" : "",
+        "last_run" : "2026-08-13 18:55:00",
+        "sessionId" : "8daafe7a-eac4-3c4e-a5ac-676be20d69ae",
+        "enabled" : "Y",
+        "cronExpression" : "* * * * *",
+        "start_time" : "2026-08-13 18:55:00",
+        "job_name" : "gc",
+        "next_run" : "2026-08-14T00:56:00Z",
+        "correlationId" : "0f33eee3-5678-34f4-9417-2aeb8cfba943",
+        "id" : "5",
+        "owner_node" : "EkamwNode1",
+        "serviceFqn" : "packages.middleware.pub.server.core.gcApi",
+        "status" : "completed"
+      },
+      "log" : "gc",
+      "*currentResource" : "packages.scheduler.cronJob.handler.startJob.main@0",
+      "*trackingData" : {
+        "TENANT_NAME" : "default"
+      },
+      "inputDocList" : [ {
+        "cronExpression" : "* * * * *",
+        "next_run" : "2026-08-14T00:56:00Z",
+        "job_name" : "gc",
+        "lasterror" : "Task with correlationId: 0f33eee3-5678-34f4-9417-2aeb8cfba943, Completed Successfully",
+        "last_run" : "2026-08-13 18:55:00",
+        "id" : "5",
+        "owner_node" : "EkamwNode1",
+        "enabled" : "Y",
+        "status" : "completed"
+      } ],
+      "date_format" : "yyyy-MM-dd HH:mm:ss",
+      "startTime" : "2026-08-13 18:55:00",
+      "*snapshot" : "enabled",
+      "jobStartLog" : "Database updated. Id:5"
+    },
+    "packages.scheduler.cronJob.services.java.getSchedulerJobData.main@0" : { }
+  }, {
+    "*hasError" : false,
+    "stopRecursiveLogging" : "true"
+  } ],
+  "guid" : "6a391f6e-e315-4a0c-9185-15c2e61fc22e",
+  "comment" : "Commentless step",
+  "before_execution" : false
+},
+{
+  "packages.scheduler.cronJob.handler.startJob.main@0" : [ { }, {
+    "packages.scheduler.cronJob.handler.startJob.main@0" : {
+      "*currentResourceFQN" : "packages.scheduler.cronJob.handler.startJob",
+      "msg" : "gc",
+      "ServiceOutput" : "Task with correlationId: 0f33eee3-5678-34f4-9417-2aeb8cfba943, Completed Successfully",
+      "jobData" : {
+        "internal_status" : "running",
+        "lasterror" : "Task with correlationId: 0f33eee3-5678-34f4-9417-2aeb8cfba943, Completed Successfully",
+        "end_time" : "",
+        "last_run" : "2026-08-13 18:55:00",
+        "sessionId" : "8daafe7a-eac4-3c4e-a5ac-676be20d69ae",
+        "enabled" : "Y",
+        "cronExpression" : "* * * * *",
+        "start_time" : "2026-08-13 18:55:00",
+        "job_name" : "gc",
+        "next_run" : "2026-08-14T00:56:00Z",
+        "correlationId" : "0f33eee3-5678-34f4-9417-2aeb8cfba943",
+        "id" : "5",
+        "owner_node" : "EkamwNode1",
+        "serviceFqn" : "packages.middleware.pub.server.core.gcApi",
+        "status" : "completed"
+      },
+      "log" : "gc",
+      "*currentResource" : "packages.scheduler.cronJob.handler.startJob.main@0",
+      "*trackingData" : {
+        "TENANT_NAME" : "default"
+      },
+      "inputDocList" : [ {
+        "cronExpression" : "* * * * *",
+        "next_run" : "2026-08-14T00:56:00Z",
+        "job_name" : "gc",
+        "lasterror" : "Task with correlationId: 0f33eee3-5678-34f4-9417-2aeb8cfba943, Completed Successfully",
+        "last_run" : "2026-08-13 18:55:00",
+        "id" : "5",
+        "owner_node" : "EkamwNode1",
+        "enabled" : "Y",
+        "status" : "completed"
+      } ],
+      "date_format" : "yyyy-MM-dd HH:mm:ss",
+      "startTime" : "2026-08-13 18:55:00",
+      "*snapshot" : "enabled",
+      "jobStartLog" : "Database updated. Id:5"
+    },
+    "packages.scheduler.cronJob.services.java.getSchedulerJobData.main@0" : { }
+  }, {
+    "*hasError" : false,
+    "stopRecursiveLogging" : "true"
+  } ],
+  "guid" : "c84b5c3f-3ff3-486d-b91c-bd9fdbf9032e",
+  "comment" : "Commentless step",
+  "before_execution" : true
+},
+{
+  "packages.scheduler.cronJob.handler.startJob.main@0" : [ { }, {
+    "packages.scheduler.cronJob.handler.startJob.main@0" : {
+      "*currentResourceFQN" : "packages.scheduler.cronJob.handler.startJob",
+      "msg" : "completed",
+      "ServiceOutput" : "Task with correlationId: 0f33eee3-5678-34f4-9417-2aeb8cfba943, Completed Successfully",
+      "jobData" : {
+        "internal_status" : "running",
+        "lasterror" : "Task with correlationId: 0f33eee3-5678-34f4-9417-2aeb8cfba943, Completed Successfully",
+        "end_time" : "",
+        "last_run" : "2026-08-13 18:55:00",
+        "sessionId" : "8daafe7a-eac4-3c4e-a5ac-676be20d69ae",
+        "enabled" : "Y",
+        "cronExpression" : "* * * * *",
+        "start_time" : "2026-08-13 18:55:00",
+        "job_name" : "gc",
+        "next_run" : "2026-08-14T00:56:00Z",
+        "correlationId" : "0f33eee3-5678-34f4-9417-2aeb8cfba943",
+        "id" : "5",
+        "owner_node" : "EkamwNode1",
+        "serviceFqn" : "packages.middleware.pub.server.core.gcApi",
+        "status" : "completed"
+      },
+      "log" : "packages.middleware.pub.server.core.gcApi",
+      "*currentResource" : "packages.scheduler.cronJob.handler.startJob.main@0",
+      "*trackingData" : {
+        "TENANT_NAME" : "default"
+      },
+      "inputDocList" : [ {
+        "cronExpression" : "* * * * *",
+        "next_run" : "2026-08-14T00:56:00Z",
+        "job_name" : "gc",
+        "lasterror" : "Task with correlationId: 0f33eee3-5678-34f4-9417-2aeb8cfba943, Completed Successfully",
+        "last_run" : "2026-08-13 18:55:00",
+        "id" : "5",
+        "owner_node" : "EkamwNode1",
+        "enabled" : "Y",
+        "status" : "completed"
+      } ],
+      "date_format" : "yyyy-MM-dd HH:mm:ss",
+      "startTime" : "2026-08-13 18:55:00",
+      "*snapshot" : "enabled",
+      "jobStartLog" : "Database updated. Id:5"
+    },
+    "packages.scheduler.cronJob.services.java.getSchedulerJobData.main@0" : { }
+  }, {
+    "*hasError" : false,
+    "stopRecursiveLogging" : "true"
+  } ],
+  "guid" : "c84b5c3f-3ff3-486d-b91c-bd9fdbf9032e",
+  "comment" : "Commentless step",
+  "before_execution" : false
+},
+{
+  "packages.scheduler.cronJob.handler.startJob.main@0" : [ { }, {
+    "packages.scheduler.cronJob.handler.startJob.main@0" : {
+      "*currentResourceFQN" : "packages.scheduler.cronJob.handler.startJob",
+      "msg" : "completed",
+      "ServiceOutput" : "Task with correlationId: 0f33eee3-5678-34f4-9417-2aeb8cfba943, Completed Successfully",
+      "jobData" : {
+        "internal_status" : "running",
+        "lasterror" : "Task with correlationId: 0f33eee3-5678-34f4-9417-2aeb8cfba943, Completed Successfully",
+        "end_time" : "",
+        "last_run" : "2026-08-13 18:55:00",
+        "sessionId" : "8daafe7a-eac4-3c4e-a5ac-676be20d69ae",
+        "enabled" : "Y",
+        "cronExpression" : "* * * * *",
+        "start_time" : "2026-08-13 18:55:00",
+        "job_name" : "gc",
+        "next_run" : "2026-08-14T00:56:00Z",
+        "correlationId" : "0f33eee3-5678-34f4-9417-2aeb8cfba943",
+        "id" : "5",
+        "owner_node" : "EkamwNode1",
+        "serviceFqn" : "packages.middleware.pub.server.core.gcApi",
+        "status" : "completed"
+      },
+      "log" : "packages.middleware.pub.server.core.gcApi",
+      "*currentResource" : "packages.scheduler.cronJob.handler.startJob.main@0",
+      "*trackingData" : {
+        "TENANT_NAME" : "default"
+      },
+      "inputDocList" : [ {
+        "cronExpression" : "* * * * *",
+        "next_run" : "2026-08-14T00:56:00Z",
+        "job_name" : "gc",
+        "lasterror" : "Task with correlationId: 0f33eee3-5678-34f4-9417-2aeb8cfba943, Completed Successfully",
+        "last_run" : "2026-08-13 18:55:00",
+        "id" : "5",
+        "owner_node" : "EkamwNode1",
+        "enabled" : "Y",
+        "status" : "completed"
+      } ],
+      "date_format" : "yyyy-MM-dd HH:mm:ss",
+      "startTime" : "2026-08-13 18:55:00",
+      "*snapshot" : "enabled",
+      "jobStartLog" : "Database updated. Id:5"
+    },
+    "packages.scheduler.cronJob.services.java.getSchedulerJobData.main@0" : { }
+  }, {
+    "*hasError" : false,
+    "stopRecursiveLogging" : "true"
+  } ],
+  "guid" : "7355b5d8-0056-4f45-8016-4e7108a3b75f",
+  "comment" : "Update status in database after finish running the job",
+  "before_execution" : false,
+  "GROUP_SEQUENCE_CONDITION_EVAL" : false
+},
+{
+  "packages.scheduler.cronJob.handler.startJob.main@0" : [ { }, {
+    "packages.scheduler.cronJob.handler.startJob.main@0" : {
+      "*currentResourceFQN" : "packages.scheduler.cronJob.handler.startJob",
+      "msg" : "completed",
+      "ServiceOutput" : "Task with correlationId: 0f33eee3-5678-34f4-9417-2aeb8cfba943, Completed Successfully",
+      "jobData" : {
+        "internal_status" : "running",
+        "lasterror" : "Task with correlationId: 0f33eee3-5678-34f4-9417-2aeb8cfba943, Completed Successfully",
+        "end_time" : "",
+        "last_run" : "2026-08-13 18:55:00",
+        "sessionId" : "8daafe7a-eac4-3c4e-a5ac-676be20d69ae",
+        "enabled" : "Y",
+        "cronExpression" : "* * * * *",
+        "start_time" : "2026-08-13 18:55:00",
+        "job_name" : "gc",
+        "next_run" : "2026-08-14T00:56:00Z",
+        "correlationId" : "0f33eee3-5678-34f4-9417-2aeb8cfba943",
+        "id" : "5",
+        "owner_node" : "EkamwNode1",
+        "serviceFqn" : "packages.middleware.pub.server.core.gcApi",
+        "status" : "completed"
+      },
+      "log" : "packages.middleware.pub.server.core.gcApi",
+      "*currentResource" : "packages.scheduler.cronJob.handler.startJob.main@0",
+      "*trackingData" : {
+        "TENANT_NAME" : "default"
+      },
+      "inputDocList" : [ {
+        "cronExpression" : "* * * * *",
+        "next_run" : "2026-08-14T00:56:00Z",
+        "job_name" : "gc",
+        "lasterror" : "Task with correlationId: 0f33eee3-5678-34f4-9417-2aeb8cfba943, Completed Successfully",
+        "last_run" : "2026-08-13 18:55:00",
+        "id" : "5",
+        "owner_node" : "EkamwNode1",
+        "enabled" : "Y",
+        "status" : "completed"
+      } ],
+      "date_format" : "yyyy-MM-dd HH:mm:ss",
+      "startTime" : "2026-08-13 18:55:00",
+      "*snapshot" : "enabled",
+      "jobStartLog" : "Database updated. Id:5"
+    },
+    "packages.scheduler.cronJob.services.java.getSchedulerJobData.main@0" : { }
+  }, {
+    "*hasError" : false,
+    "stopRecursiveLogging" : "true"
+  } ],
+  "guid" : "0197946d-a125-4047-b682-5f4f18a1966e",
+  "comment" : "Try",
+  "before_execution" : false,
+  "GROUP_SEQUENCE_CONDITION_EVAL" : false
+},
+{
+  "packages.scheduler.cronJob.handler.startJob.main@0" : [ { }, {
+    "packages.scheduler.cronJob.handler.startJob.main@0" : {
+      "*currentResourceFQN" : "packages.scheduler.cronJob.handler.startJob",
+      "msg" : "completed",
+      "ServiceOutput" : "Task with correlationId: 0f33eee3-5678-34f4-9417-2aeb8cfba943, Completed Successfully",
+      "jobData" : {
+        "internal_status" : "running",
+        "lasterror" : "Task with correlationId: 0f33eee3-5678-34f4-9417-2aeb8cfba943, Completed Successfully",
+        "end_time" : "",
+        "last_run" : "2026-08-13 18:55:00",
+        "sessionId" : "8daafe7a-eac4-3c4e-a5ac-676be20d69ae",
+        "enabled" : "Y",
+        "cronExpression" : "* * * * *",
+        "start_time" : "2026-08-13 18:55:00",
+        "job_name" : "gc",
+        "next_run" : "2026-08-14T00:56:00Z",
+        "correlationId" : "0f33eee3-5678-34f4-9417-2aeb8cfba943",
+        "id" : "5",
+        "owner_node" : "EkamwNode1",
+        "serviceFqn" : "packages.middleware.pub.server.core.gcApi",
+        "status" : "completed"
+      },
+      "log" : "packages.middleware.pub.server.core.gcApi",
+      "*currentResource" : "packages.scheduler.cronJob.handler.startJob.main@0",
+      "*trackingData" : {
+        "TENANT_NAME" : "default"
+      },
+      "inputDocList" : [ {
+        "cronExpression" : "* * * * *",
+        "next_run" : "2026-08-14T00:56:00Z",
+        "job_name" : "gc",
+        "lasterror" : "Task with correlationId: 0f33eee3-5678-34f4-9417-2aeb8cfba943, Completed Successfully",
+        "last_run" : "2026-08-13 18:55:00",
+        "id" : "5",
+        "owner_node" : "EkamwNode1",
+        "enabled" : "Y",
+        "status" : "completed"
+      } ],
+      "date_format" : "yyyy-MM-dd HH:mm:ss",
+      "startTime" : "2026-08-13 18:55:00",
+      "*snapshot" : "enabled",
+      "jobStartLog" : "Database updated. Id:5"
+    },
+    "packages.scheduler.cronJob.services.java.getSchedulerJobData.main@0" : { }
+  }, {
+    "*hasError" : false,
+    "stopRecursiveLogging" : "true"
+  } ],
+  "guid" : "30e3bcc1-c5d2-4164-9df0-8c6777f9f4ce",
+  "comment" : "Commentless step",
+  "before_execution" : true
+},
+{
+  "packages.scheduler.cronJob.handler.startJob.main@0" : [ { }, {
+    "packages.scheduler.cronJob.handler.startJob.main@0" : {
+      "*currentResourceFQN" : "packages.scheduler.cronJob.handler.startJob",
+      "msg" : "completed",
+      "ServiceOutput" : "Task with correlationId: 0f33eee3-5678-34f4-9417-2aeb8cfba943, Completed Successfully",
+      "jobData" : {
+        "internal_status" : "running",
+        "lasterror" : "Task with correlationId: 0f33eee3-5678-34f4-9417-2aeb8cfba943, Completed Successfully",
+        "end_time" : "",
+        "last_run" : "2026-08-13 18:55:00",
+        "sessionId" : "8daafe7a-eac4-3c4e-a5ac-676be20d69ae",
+        "enabled" : "Y",
+        "cronExpression" : "* * * * *",
+        "start_time" : "2026-08-13 18:55:00",
+        "job_name" : "gc",
+        "next_run" : "2026-08-14T00:56:00Z",
+        "correlationId" : "0f33eee3-5678-34f4-9417-2aeb8cfba943",
+        "id" : "5",
+        "owner_node" : "EkamwNode1",
+        "serviceFqn" : "packages.middleware.pub.server.core.gcApi",
+        "status" : "completed"
+      },
+      "log" : "packages.middleware.pub.server.core.gcApi",
+      "*currentResource" : "packages.scheduler.cronJob.handler.startJob.main@0",
+      "*trackingData" : {
+        "TENANT_NAME" : "default"
+      },
+      "inputDocList" : [ {
+        "cronExpression" : "* * * * *",
+        "next_run" : "2026-08-14T00:56:00Z",
+        "job_name" : "gc",
+        "lasterror" : "Task with correlationId: 0f33eee3-5678-34f4-9417-2aeb8cfba943, Completed Successfully",
+        "last_run" : "2026-08-13 18:55:00",
+        "id" : "5",
+        "owner_node" : "EkamwNode1",
+        "enabled" : "Y",
+        "status" : "completed"
+      } ],
+      "date_format" : "yyyy-MM-dd HH:mm:ss",
+      "startTime" : "2026-08-13 18:55:00",
+      "*snapshot" : "enabled",
+      "jobStartLog" : "Database updated. Id:5"
+    },
+    "packages.scheduler.cronJob.services.java.getSchedulerJobData.main@0" : { }
+  }, {
+    "*hasError" : false,
+    "stopRecursiveLogging" : "true"
+  } ],
+  "guid" : "1c19d4db-4363-489e-b634-a40ba6842d8c",
+  "comment" : "Preparing parameters",
+  "before_execution" : true
+},
+{
+  "packages.scheduler.cronJob.handler.startJob.main@0" : [ { }, {
+    "packages.scheduler.cronJob.handler.startJob.main@0" : {
+      "*currentResourceFQN" : "packages.scheduler.cronJob.handler.startJob",
+      "msg" : "completed",
+      "ServiceOutput" : "Task with correlationId: 0f33eee3-5678-34f4-9417-2aeb8cfba943, Completed Successfully",
+      "jobData" : {
+        "internal_status" : "running",
+        "lasterror" : "Task with correlationId: 0f33eee3-5678-34f4-9417-2aeb8cfba943, Completed Successfully",
+        "end_time" : "",
+        "last_run" : "2026-08-13 18:55:00",
+        "sessionId" : "8daafe7a-eac4-3c4e-a5ac-676be20d69ae",
+        "enabled" : "Y",
+        "cronExpression" : "* * * * *",
+        "start_time" : "2026-08-13 18:55:00",
+        "job_name" : "gc",
+        "next_run" : "2026-08-14T00:56:00Z",
+        "correlationId" : "0f33eee3-5678-34f4-9417-2aeb8cfba943",
+        "id" : "5",
+        "owner_node" : "EkamwNode1",
+        "serviceFqn" : "packages.middleware.pub.server.core.gcApi",
+        "status" : "completed"
+      },
+      "log" : "packages.middleware.pub.server.core.gcApi",
+      "*currentResource" : "packages.scheduler.cronJob.handler.startJob.main@0",
+      "*trackingData" : {
+        "TENANT_NAME" : "default"
+      },
+      "inputDocList" : [ {
+        "cronExpression" : "* * * * *",
+        "next_run" : "2026-08-14T00:56:00Z",
+        "job_name" : "gc",
+        "lasterror" : "Task with correlationId: 0f33eee3-5678-34f4-9417-2aeb8cfba943, Completed Successfully",
+        "last_run" : "2026-08-13 18:55:00",
+        "id" : "5",
+        "owner_node" : "EkamwNode1",
+        "enabled" : "Y",
+        "status" : "completed"
+      } ],
+      "date_format" : "yyyy-MM-dd HH:mm:ss",
+      "startTime" : "2026-08-13 18:55:00",
+      "*snapshot" : "enabled",
+      "jobStartLog" : "Database updated. Id:5"
+    },
+    "packages.scheduler.cronJob.services.java.getSchedulerJobData.main@0" : { }
+  }, {
+    "*hasError" : false,
+    "stopRecursiveLogging" : "true"
+  } ],
+  "guid" : "1c19d4db-4363-489e-b634-a40ba6842d8c",
+  "comment" : "Preparing parameters",
+  "before_execution" : false
+},
+{
+  "packages.scheduler.cronJob.handler.startJob.main@0" : [ { }, {
+    "packages.scheduler.cronJob.handler.startJob.main@0" : {
+      "*currentResourceFQN" : "packages.scheduler.cronJob.handler.startJob",
+      "msg" : "completed",
+      "ServiceOutput" : "Task with correlationId: 0f33eee3-5678-34f4-9417-2aeb8cfba943, Completed Successfully",
+      "jobData" : {
+        "internal_status" : "running",
+        "lasterror" : "Task with correlationId: 0f33eee3-5678-34f4-9417-2aeb8cfba943, Completed Successfully",
+        "end_time" : "",
+        "last_run" : "2026-08-13 18:55:00",
+        "sessionId" : "8daafe7a-eac4-3c4e-a5ac-676be20d69ae",
+        "enabled" : "Y",
+        "cronExpression" : "* * * * *",
+        "start_time" : "2026-08-13 18:55:00",
+        "job_name" : "gc",
+        "next_run" : "2026-08-14T00:56:00Z",
+        "correlationId" : "0f33eee3-5678-34f4-9417-2aeb8cfba943",
+        "id" : "5",
+        "owner_node" : "EkamwNode1",
+        "serviceFqn" : "packages.middleware.pub.server.core.gcApi",
+        "status" : "completed"
+      },
+      "log" : "packages.middleware.pub.server.core.gcApi",
+      "*currentResource" : "packages.scheduler.cronJob.handler.startJob.main@0",
+      "*trackingData" : {
+        "TENANT_NAME" : "default"
+      },
+      "inputDocList" : [ {
+        "cronExpression" : "* * * * *",
+        "next_run" : "2026-08-14T00:56:00Z",
+        "job_name" : "gc",
+        "lasterror" : "Task with correlationId: 0f33eee3-5678-34f4-9417-2aeb8cfba943, Completed Successfully",
+        "last_run" : "2026-08-13 18:55:00",
+        "id" : "5",
+        "owner_node" : "EkamwNode1",
+        "enabled" : "Y",
+        "status" : "completed"
+      } ],
+      "date_format" : "yyyy-MM-dd HH:mm:ss",
+      "startTime" : "2026-08-13 18:55:00",
+      "*snapshot" : "enabled",
+      "jobStartLog" : "Database updated. Id:5"
+    },
+    "packages.scheduler.cronJob.services.java.getSchedulerJobData.main@0" : { }
+  }, {
+    "*hasError" : false,
+    "stopRecursiveLogging" : "true"
+  } ],
+  "guid" : "26219335-1de1-441b-9486-c2c74b9169cf",
+  "comment" : "Commentless step",
+  "before_execution" : true
+},
+{
+  "packages.scheduler.cronJob.handler.startJob.main@0" : [ { }, {
+    "packages.scheduler.cronJob.handler.startJob.main@0" : {
+      "msg" : "completed",
+      "ServiceOutput" : "Task with correlationId: 0f33eee3-5678-34f4-9417-2aeb8cfba943, Completed Successfully",
+      "jobData" : {
+        "internal_status" : "running",
+        "lasterror" : "Task with correlationId: 0f33eee3-5678-34f4-9417-2aeb8cfba943, Completed Successfully",
+        "end_time" : "2026-08-13 18:55:00",
+        "last_run" : "2026-08-13 18:55:00",
+        "sessionId" : "8daafe7a-eac4-3c4e-a5ac-676be20d69ae",
+        "enabled" : "Y",
+        "cronExpression" : "* * * * *",
+        "start_time" : "2026-08-13 18:55:00",
+        "job_name" : "gc",
+        "next_run" : "2026-08-14T00:56:00Z",
+        "correlationId" : "0f33eee3-5678-34f4-9417-2aeb8cfba943",
+        "id" : "5",
+        "owner_node" : "EkamwNode1",
+        "serviceFqn" : "packages.middleware.pub.server.core.gcApi",
+        "status" : "completed"
+      },
+      "log" : "packages.middleware.pub.server.core.gcApi",
+      "*trackingData" : {
+        "TENANT_NAME" : "default"
+      },
+      "format" : "yyyy-MM-dd HH:mm:ss",
+      "jobStartLog" : "Database updated. Id:5",
+      "*currentResourceFQN" : "packages.scheduler.cronJob.handler.startJob",
+      "*currentResource" : "packages.scheduler.cronJob.handler.startJob.main@0",
+      "inputDocList" : [ {
+        "cronExpression" : "* * * * *",
+        "next_run" : "2026-08-14T00:56:00Z",
+        "job_name" : "gc",
+        "lasterror" : "Task with correlationId: 0f33eee3-5678-34f4-9417-2aeb8cfba943, Completed Successfully",
+        "last_run" : "2026-08-13 18:55:00",
+        "id" : "5",
+        "owner_node" : "EkamwNode1",
+        "enabled" : "Y",
+        "status" : "completed"
+      } ],
+      "date_format" : "yyyy-MM-dd HH:mm:ss",
+      "*snapshot" : "enabled"
+    },
+    "packages.scheduler.cronJob.services.java.getSchedulerJobData.main@0" : { }
+  }, {
+    "*hasError" : false,
+    "stopRecursiveLogging" : "true"
+  } ],
+  "guid" : "26219335-1de1-441b-9486-c2c74b9169cf",
+  "comment" : "Commentless step",
+  "before_execution" : false
+},
+{
+  "packages.scheduler.cronJob.handler.startJob.main@0" : [ { }, {
+    "packages.scheduler.cronJob.handler.startJob.main@0" : {
+      "msg" : "completed",
+      "ServiceOutput" : "Task with correlationId: 0f33eee3-5678-34f4-9417-2aeb8cfba943, Completed Successfully",
+      "jobData" : {
+        "internal_status" : "running",
+        "lasterror" : "Task with correlationId: 0f33eee3-5678-34f4-9417-2aeb8cfba943, Completed Successfully",
+        "end_time" : "2026-08-13 18:55:00",
+        "last_run" : "2026-08-13 18:55:00",
+        "sessionId" : "8daafe7a-eac4-3c4e-a5ac-676be20d69ae",
+        "enabled" : "Y",
+        "cronExpression" : "* * * * *",
+        "start_time" : "2026-08-13 18:55:00",
+        "job_name" : "gc",
+        "next_run" : "2026-08-14T00:56:00Z",
+        "correlationId" : "0f33eee3-5678-34f4-9417-2aeb8cfba943",
+        "id" : "5",
+        "owner_node" : "EkamwNode1",
+        "serviceFqn" : "packages.middleware.pub.server.core.gcApi",
+        "status" : "completed"
+      },
+      "log" : "packages.middleware.pub.server.core.gcApi",
+      "*trackingData" : {
+        "TENANT_NAME" : "default"
+      },
+      "format" : "yyyy-MM-dd HH:mm:ss",
+      "jobStartLog" : "Database updated. Id:5",
+      "*currentResourceFQN" : "packages.scheduler.cronJob.handler.startJob",
+      "*currentResource" : "packages.scheduler.cronJob.handler.startJob.main@0",
+      "inputDocList" : [ {
+        "cronExpression" : "* * * * *",
+        "next_run" : "2026-08-14T00:56:00Z",
+        "job_name" : "gc",
+        "lasterror" : "Task with correlationId: 0f33eee3-5678-34f4-9417-2aeb8cfba943, Completed Successfully",
+        "last_run" : "2026-08-13 18:55:00",
+        "id" : "5",
+        "owner_node" : "EkamwNode1",
+        "enabled" : "Y",
+        "status" : "completed"
+      } ],
+      "date_format" : "yyyy-MM-dd HH:mm:ss",
+      "*snapshot" : "enabled"
+    },
+    "packages.scheduler.cronJob.services.java.getSchedulerJobData.main@0" : { }
+  }, {
+    "*hasError" : false,
+    "stopRecursiveLogging" : "true"
+  } ],
+  "guid" : "668aef78-206a-4ea7-9b27-1bce60aadb01",
+  "comment" : "Updating run status",
+  "before_execution" : true
+},
+{
+  "packages.scheduler.cronJob.handler.startJob.main@0" : [ { }, {
+    "packages.scheduler.cronJob.handler.startJob.main@0" : {
+      "msg" : "completed",
+      "ServiceOutput" : "Task with correlationId: 0f33eee3-5678-34f4-9417-2aeb8cfba943, Completed Successfully",
+      "jobData" : {
+        "internal_status" : "running",
+        "lasterror" : "Task with correlationId: 0f33eee3-5678-34f4-9417-2aeb8cfba943, Completed Successfully",
+        "end_time" : "2026-08-13 18:55:00",
+        "last_run" : "2026-08-13 18:55:00",
+        "sessionId" : "8daafe7a-eac4-3c4e-a5ac-676be20d69ae",
+        "enabled" : "Y",
+        "cronExpression" : "* * * * *",
+        "start_time" : "2026-08-13 18:55:00",
+        "job_name" : "gc",
+        "next_run" : "2026-08-14T00:56:00Z",
+        "correlationId" : "0f33eee3-5678-34f4-9417-2aeb8cfba943",
+        "id" : "5",
+        "owner_node" : "EkamwNode1",
+        "serviceFqn" : "packages.middleware.pub.server.core.gcApi",
+        "status" : "completed"
+      },
+      "log" : "packages.middleware.pub.server.core.gcApi",
+      "*trackingData" : {
+        "TENANT_NAME" : "default"
+      },
+      "format" : "yyyy-MM-dd HH:mm:ss",
+      "jobStartLog" : "----------------------Finally---------------------",
+      "*currentResourceFQN" : "packages.scheduler.cronJob.handler.startJob",
+      "*currentResource" : "packages.scheduler.cronJob.handler.startJob.main@0",
+      "inputDocList" : [ {
+        "lasterror" : "Task with correlationId: 0f33eee3-5678-34f4-9417-2aeb8cfba943, Completed Successfully",
+        "end_time" : "2026-08-13 18:55:00",
+        "last_run" : "2026-08-13 18:55:00",
+        "sessionId" : "8daafe7a-eac4-3c4e-a5ac-676be20d69ae",
+        "error" : "Task with correlationId: 0f33eee3-5678-34f4-9417-2aeb8cfba943, Completed Successfully",
+        "enabled" : "Y",
+        "cronExpression" : "* * * * *",
+        "start_time" : "2026-08-13 18:55:00",
+        "next_run" : "2026-08-14T00:56:00Z",
+        "job_name" : "gc",
+        "job_id" : "5",
+        "correlationId" : "0f33eee3-5678-34f4-9417-2aeb8cfba943",
+        "id" : "5",
+        "owner_node" : "EkamwNode1",
+        "status" : "completed",
+        "serviceFqn" : "packages.middleware.pub.server.core.gcApi"
+      } ],
+      "date_format" : "yyyy-MM-dd HH:mm:ss",
+      "*snapshot" : "enabled"
+    },
+    "packages.scheduler.cronJob.services.java.getSchedulerJobData.main@0" : { }
+  }, {
+    "*hasError" : false,
+    "stopRecursiveLogging" : "true"
+  } ],
+  "guid" : "668aef78-206a-4ea7-9b27-1bce60aadb01",
+  "comment" : "Updating run status",
+  "before_execution" : false
+},
+{
+  "packages.scheduler.cronJob.handler.startJob.main@0" : [ { }, {
+    "packages.scheduler.cronJob.handler.startJob.main@0" : {
+      "msg" : "completed",
+      "ServiceOutput" : "Task with correlationId: 0f33eee3-5678-34f4-9417-2aeb8cfba943, Completed Successfully",
+      "jobData" : {
+        "internal_status" : "running",
+        "lasterror" : "Task with correlationId: 0f33eee3-5678-34f4-9417-2aeb8cfba943, Completed Successfully",
+        "end_time" : "2026-08-13 18:55:00",
+        "last_run" : "2026-08-13 18:55:00",
+        "sessionId" : "8daafe7a-eac4-3c4e-a5ac-676be20d69ae",
+        "enabled" : "Y",
+        "cronExpression" : "* * * * *",
+        "start_time" : "2026-08-13 18:55:00",
+        "job_name" : "gc",
+        "next_run" : "2026-08-14T00:56:00Z",
+        "correlationId" : "0f33eee3-5678-34f4-9417-2aeb8cfba943",
+        "id" : "5",
+        "owner_node" : "EkamwNode1",
+        "serviceFqn" : "packages.middleware.pub.server.core.gcApi",
+        "status" : "completed"
+      },
+      "log" : "packages.middleware.pub.server.core.gcApi",
+      "*trackingData" : {
+        "TENANT_NAME" : "default"
+      },
+      "format" : "yyyy-MM-dd HH:mm:ss",
+      "jobStartLog" : "----------------------Finally---------------------",
+      "*currentResourceFQN" : "packages.scheduler.cronJob.handler.startJob",
+      "*currentResource" : "packages.scheduler.cronJob.handler.startJob.main@0",
+      "inputDocList" : [ {
+        "lasterror" : "Task with correlationId: 0f33eee3-5678-34f4-9417-2aeb8cfba943, Completed Successfully",
+        "end_time" : "2026-08-13 18:55:00",
+        "last_run" : "2026-08-13 18:55:00",
+        "sessionId" : "8daafe7a-eac4-3c4e-a5ac-676be20d69ae",
+        "error" : "Task with correlationId: 0f33eee3-5678-34f4-9417-2aeb8cfba943, Completed Successfully",
+        "enabled" : "Y",
+        "cronExpression" : "* * * * *",
+        "start_time" : "2026-08-13 18:55:00",
+        "next_run" : "2026-08-14T00:56:00Z",
+        "job_name" : "gc",
+        "job_id" : "5",
+        "correlationId" : "0f33eee3-5678-34f4-9417-2aeb8cfba943",
+        "id" : "5",
+        "owner_node" : "EkamwNode1",
+        "status" : "completed",
+        "serviceFqn" : "packages.middleware.pub.server.core.gcApi"
+      } ],
+      "date_format" : "yyyy-MM-dd HH:mm:ss",
+      "*snapshot" : "enabled"
+    },
+    "packages.scheduler.cronJob.services.java.getSchedulerJobData.main@0" : { }
+  }, {
+    "*hasError" : false,
+    "stopRecursiveLogging" : "true"
+  } ],
+  "guid" : "7f1cedfd-0484-4da5-bec4-2dcb2f3c2078",
+  "comment" : "Commentless step",
+  "before_execution" : true
+},
+{
+  "packages.scheduler.cronJob.handler.startJob.main@0" : [ { }, {
+    "packages.scheduler.cronJob.handler.startJob.main@0" : {
+      "msg" : "completed",
+      "ServiceOutput" : "Task with correlationId: 0f33eee3-5678-34f4-9417-2aeb8cfba943, Completed Successfully",
+      "jobData" : {
+        "internal_status" : "running",
+        "lasterror" : "Task with correlationId: 0f33eee3-5678-34f4-9417-2aeb8cfba943, Completed Successfully",
+        "end_time" : "2026-08-13 18:55:00",
+        "last_run" : "2026-08-13 18:55:00",
+        "sessionId" : "8daafe7a-eac4-3c4e-a5ac-676be20d69ae",
+        "enabled" : "Y",
+        "cronExpression" : "* * * * *",
+        "start_time" : "2026-08-13 18:55:00",
+        "job_name" : "gc",
+        "next_run" : "2026-08-14T00:56:00Z",
+        "correlationId" : "0f33eee3-5678-34f4-9417-2aeb8cfba943",
+        "id" : "5",
+        "owner_node" : "EkamwNode1",
+        "serviceFqn" : "packages.middleware.pub.server.core.gcApi",
+        "status" : "completed"
+      },
+      "log" : "packages.middleware.pub.server.core.gcApi",
+      "*trackingData" : {
+        "TENANT_NAME" : "default"
+      },
+      "format" : "yyyy-MM-dd HH:mm:ss",
+      "jobStartLog" : "----------------------Finally---------------------",
+      "*currentResourceFQN" : "packages.scheduler.cronJob.handler.startJob",
+      "*currentResource" : "packages.scheduler.cronJob.handler.startJob.main@0",
+      "inputDocList" : [ {
+        "lasterror" : "Task with correlationId: 0f33eee3-5678-34f4-9417-2aeb8cfba943, Completed Successfully",
+        "end_time" : "2026-08-13 18:55:00",
+        "last_run" : "2026-08-13 18:55:00",
+        "sessionId" : "8daafe7a-eac4-3c4e-a5ac-676be20d69ae",
+        "error" : "Task with correlationId: 0f33eee3-5678-34f4-9417-2aeb8cfba943, Completed Successfully",
+        "enabled" : "Y",
+        "cronExpression" : "* * * * *",
+        "start_time" : "2026-08-13 18:55:00",
+        "next_run" : "2026-08-14T00:56:00Z",
+        "job_name" : "gc",
+        "job_id" : "5",
+        "correlationId" : "0f33eee3-5678-34f4-9417-2aeb8cfba943",
+        "id" : "5",
+        "owner_node" : "EkamwNode1",
+        "status" : "completed",
+        "serviceFqn" : "packages.middleware.pub.server.core.gcApi"
+      } ],
+      "date_format" : "yyyy-MM-dd HH:mm:ss",
+      "*snapshot" : "enabled"
+    },
+    "packages.scheduler.cronJob.services.java.getSchedulerJobData.main@0" : { }
+  }, {
+    "*hasError" : false,
+    "stopRecursiveLogging" : "true"
+  } ],
+  "guid" : "7f1cedfd-0484-4da5-bec4-2dcb2f3c2078",
+  "comment" : "Commentless step",
+  "before_execution" : false
+},
+{
+  "packages.scheduler.cronJob.handler.startJob.main@0" : [ { }, {
+    "packages.scheduler.cronJob.handler.startJob.main@0" : {
+      "msg" : "completed",
+      "ServiceOutput" : "Task with correlationId: 0f33eee3-5678-34f4-9417-2aeb8cfba943, Completed Successfully",
+      "jobData" : {
+        "internal_status" : "running",
+        "lasterror" : "Task with correlationId: 0f33eee3-5678-34f4-9417-2aeb8cfba943, Completed Successfully",
+        "end_time" : "2026-08-13 18:55:00",
+        "last_run" : "2026-08-13 18:55:00",
+        "sessionId" : "8daafe7a-eac4-3c4e-a5ac-676be20d69ae",
+        "enabled" : "Y",
+        "cronExpression" : "* * * * *",
+        "start_time" : "2026-08-13 18:55:00",
+        "job_name" : "gc",
+        "next_run" : "2026-08-14T00:56:00Z",
+        "correlationId" : "0f33eee3-5678-34f4-9417-2aeb8cfba943",
+        "id" : "5",
+        "owner_node" : "EkamwNode1",
+        "serviceFqn" : "packages.middleware.pub.server.core.gcApi",
+        "status" : "completed"
+      },
+      "log" : "packages.middleware.pub.server.core.gcApi",
+      "*trackingData" : {
+        "TENANT_NAME" : "default"
+      },
+      "format" : "yyyy-MM-dd HH:mm:ss",
+      "jobStartLog" : "----------------------Finally---------------------",
+      "*currentResourceFQN" : "packages.scheduler.cronJob.handler.startJob",
+      "*currentResource" : "packages.scheduler.cronJob.handler.startJob.main@0",
+      "inputDocList" : [ {
+        "lasterror" : "Task with correlationId: 0f33eee3-5678-34f4-9417-2aeb8cfba943, Completed Successfully",
+        "end_time" : "2026-08-13 18:55:00",
+        "last_run" : "2026-08-13 18:55:00",
+        "sessionId" : "8daafe7a-eac4-3c4e-a5ac-676be20d69ae",
+        "error" : "Task with correlationId: 0f33eee3-5678-34f4-9417-2aeb8cfba943, Completed Successfully",
+        "enabled" : "Y",
+        "cronExpression" : "* * * * *",
+        "start_time" : "2026-08-13 18:55:00",
+        "next_run" : "2026-08-14T00:56:00Z",
+        "job_name" : "gc",
+        "job_id" : "5",
+        "correlationId" : "0f33eee3-5678-34f4-9417-2aeb8cfba943",
+        "id" : "5",
+        "owner_node" : "EkamwNode1",
+        "status" : "completed",
+        "serviceFqn" : "packages.middleware.pub.server.core.gcApi"
+      } ],
+      "date_format" : "yyyy-MM-dd HH:mm:ss",
+      "*snapshot" : "enabled"
+    },
+    "packages.scheduler.cronJob.services.java.getSchedulerJobData.main@0" : { }
+  }, {
+    "*hasError" : false,
+    "stopRecursiveLogging" : "true"
+  } ],
+  "guid" : "30e3bcc1-c5d2-4164-9df0-8c6777f9f4ce",
+  "comment" : "Commentless step",
+  "before_execution" : false,
+  "GROUP_SEQUENCE_CONDITION_EVAL" : false
+},
+{
+  "packages.scheduler.cronJob.handler.startJob.main@0" : [ { }, {
+    "packages.scheduler.cronJob.handler.startJob.main@0" : {
+      "msg" : "completed",
+      "ServiceOutput" : "Task with correlationId: 0f33eee3-5678-34f4-9417-2aeb8cfba943, Completed Successfully",
+      "jobData" : {
+        "internal_status" : "running",
+        "lasterror" : "Task with correlationId: 0f33eee3-5678-34f4-9417-2aeb8cfba943, Completed Successfully",
+        "end_time" : "2026-08-13 18:55:00",
+        "last_run" : "2026-08-13 18:55:00",
+        "sessionId" : "8daafe7a-eac4-3c4e-a5ac-676be20d69ae",
+        "enabled" : "Y",
+        "cronExpression" : "* * * * *",
+        "start_time" : "2026-08-13 18:55:00",
+        "job_name" : "gc",
+        "next_run" : "2026-08-14T00:56:00Z",
+        "correlationId" : "0f33eee3-5678-34f4-9417-2aeb8cfba943",
+        "id" : "5",
+        "owner_node" : "EkamwNode1",
+        "serviceFqn" : "packages.middleware.pub.server.core.gcApi",
+        "status" : "completed"
+      },
+      "log" : "packages.middleware.pub.server.core.gcApi",
+      "*trackingData" : {
+        "TENANT_NAME" : "default"
+      },
+      "format" : "yyyy-MM-dd HH:mm:ss",
+      "jobStartLog" : "----------------------Finally---------------------",
+      "*currentResourceFQN" : "packages.scheduler.cronJob.handler.startJob",
+      "*currentResource" : "packages.scheduler.cronJob.handler.startJob.main@0",
+      "inputDocList" : [ {
+        "lasterror" : "Task with correlationId: 0f33eee3-5678-34f4-9417-2aeb8cfba943, Completed Successfully",
+        "end_time" : "2026-08-13 18:55:00",
+        "last_run" : "2026-08-13 18:55:00",
+        "sessionId" : "8daafe7a-eac4-3c4e-a5ac-676be20d69ae",
+        "error" : "Task with correlationId: 0f33eee3-5678-34f4-9417-2aeb8cfba943, Completed Successfully",
+        "enabled" : "Y",
+        "cronExpression" : "* * * * *",
+        "start_time" : "2026-08-13 18:55:00",
+        "next_run" : "2026-08-14T00:56:00Z",
+        "job_name" : "gc",
+        "job_id" : "5",
+        "correlationId" : "0f33eee3-5678-34f4-9417-2aeb8cfba943",
+        "id" : "5",
+        "owner_node" : "EkamwNode1",
+        "status" : "completed",
+        "serviceFqn" : "packages.middleware.pub.server.core.gcApi"
+      } ],
+      "date_format" : "yyyy-MM-dd HH:mm:ss",
+      "*snapshot" : "enabled"
+    },
+    "packages.scheduler.cronJob.services.java.getSchedulerJobData.main@0" : { }
+  }, {
+    "*hasError" : false,
+    "stopRecursiveLogging" : "true"
+  } ],
+  "guid" : "82a3bbb8-1c80-4e21-a215-172bc68e5faf",
+  "comment" : "Main",
+  "before_execution" : false
+},
+{}]

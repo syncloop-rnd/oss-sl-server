@@ -272,7 +272,9 @@ document.addEventListener("DOMContentLoaded", function () {
                if (extractedJson && typeof extractedJson === "object") {
                     console.log("Json --> ", extractedJson)
                     traverseAndModifyJson(extractedJson, loadFile);
-                    updateServiceUsingGPT(true, JSON.stringify(extractedJson));                    
+                    updateServiceUsingGPT(true, JSON.stringify(extractedJson), function () {
+                        save();
+                    });
                 } else if (extractedJson) {
                     extractedJson = removeJSONComments(extractedJson);
                     if (typeof extractedJson === "string") {
@@ -281,7 +283,9 @@ document.addEventListener("DOMContentLoaded", function () {
                     console.log("Json --> ", extractedJson)
                     traverseAndModifyJson(extractedJson, loadFile);
                     if (extractedJson !== null) {
-                        updateServiceUsingGPT(true, JSON.stringify(extractedJson));                    
+                        updateServiceUsingGPT(true, JSON.stringify(extractedJson), function () {
+                            save();
+                        });
                     }
                 }
                 updateChatLog("Bot", showdownConverter.makeHtml("API created based on the JSON response from Agent."));

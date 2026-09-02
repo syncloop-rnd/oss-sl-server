@@ -1,0 +1,884 @@
+2026-08-13 18:12:00,052 INFO c.e.m.t.Tenant [DefaultQuartzScheduler_Worker-1] 425cf442-d446-3baa-9da8-59701ceeb6ed    packages.scheduler.cronJob.handler.startJob.main    Starting scheduled job packages.middleware.pub.server.core.gcApi
+2026-08-13 18:12:00,052 INFO c.e.m.t.Tenant [DefaultQuartzScheduler_Worker-1] 425cf442-d446-3baa-9da8-59701ceeb6ed    packages.scheduler.cronJob.handler.startJob.main    Starting scheduled job packages.middleware.pub.server.core.gcApi
+2026-08-13 18:12:00,054 INFO c.e.m.t.Tenant [DefaultQuartzScheduler_Worker-1] 425cf442-d446-3baa-9da8-59701ceeb6ed    packages.scheduler.cronJob.handler.startJob.main    Updatng database status to running**********************
+2026-08-13 18:12:00,054 INFO c.e.m.t.Tenant [DefaultQuartzScheduler_Worker-1] 425cf442-d446-3baa-9da8-59701ceeb6ed    packages.scheduler.cronJob.handler.startJob.main    Updatng database status to running**********************
+2026-08-13 18:12:00,072 INFO c.e.m.t.Tenant [DefaultQuartzScheduler_Worker-1] 425cf442-d446-3baa-9da8-59701ceeb6ed    packages.scheduler.cronJob.handler.startJob.main    Database updated. Id:5
+2026-08-13 18:12:00,124 INFO c.e.m.t.Tenant [DefaultQuartzScheduler_Worker-1] 425cf442-d446-3baa-9da8-59701ceeb6ed    packages.scheduler.cronJob.handler.startJob.main    SELECT "id", "serviceFqn", "cron", "status", "lasterror", "enabled", "owner_node", "last_run", 
+"next_run", "job_name", "created_time"
+FROM "Schedulers" WHERE "id" = '?';
+2026-08-13 18:12:00,126 INFO c.e.m.t.Tenant [DefaultQuartzScheduler_Worker-1] 425cf442-d446-3baa-9da8-59701ceeb6ed    packages.scheduler.cronJob.handler.startJob.main    gc
+2026-08-13 18:12:00,126 INFO c.e.m.t.Tenant [DefaultQuartzScheduler_Worker-1] 425cf442-d446-3baa-9da8-59701ceeb6ed    packages.scheduler.cronJob.handler.startJob.main    gc
+2026-08-13 18:12:00,129 INFO c.e.m.t.Tenant [DefaultQuartzScheduler_Worker-1] 425cf442-d446-3baa-9da8-59701ceeb6ed    packages.scheduler.cronJob.handler.startJob.main    completed
+2026-08-13 18:12:00,130 INFO c.e.m.t.Tenant [DefaultQuartzScheduler_Worker-1] 425cf442-d446-3baa-9da8-59701ceeb6ed    packages.scheduler.cronJob.handler.startJob.main    packages.middleware.pub.server.core.gcApi
+2026-08-13 18:12:00,144 INFO c.e.m.t.Tenant [DefaultQuartzScheduler_Worker-1] 425cf442-d446-3baa-9da8-59701ceeb6ed    packages.scheduler.cronJob.handler.startJob.main    Task with correlationId: 2181f099-9e87-3a77-81ac-7343a76c6d03, Completed Successfully
+2026-08-13 18:14:00,072 INFO c.e.m.t.Tenant [DefaultQuartzScheduler_Worker-1] b2b539a4-83a6-3e72-b58e-adf314cabaea    packages.scheduler.cronJob.handler.startJob.main    Starting scheduled job packages.middleware.pub.server.core.gcApi
+2026-08-13 18:14:00,072 INFO c.e.m.t.Tenant [DefaultQuartzScheduler_Worker-1] b2b539a4-83a6-3e72-b58e-adf314cabaea    packages.scheduler.cronJob.handler.startJob.main    Starting scheduled job packages.middleware.pub.server.core.gcApi
+2026-08-13 18:14:00,076 INFO c.e.m.t.Tenant [DefaultQuartzScheduler_Worker-1] b2b539a4-83a6-3e72-b58e-adf314cabaea    packages.scheduler.cronJob.handler.startJob.main    Updatng database status to running**********************
+2026-08-13 18:14:00,076 INFO c.e.m.t.Tenant [DefaultQuartzScheduler_Worker-1] b2b539a4-83a6-3e72-b58e-adf314cabaea    packages.scheduler.cronJob.handler.startJob.main    Updatng database status to running**********************
+2026-08-13 18:14:00,100 INFO c.e.m.t.Tenant [DefaultQuartzScheduler_Worker-1] b2b539a4-83a6-3e72-b58e-adf314cabaea    packages.scheduler.cronJob.handler.startJob.main    Database updated. Id:5
+2026-08-13 18:14:00,172 INFO c.e.m.t.Tenant [DefaultQuartzScheduler_Worker-1] b2b539a4-83a6-3e72-b58e-adf314cabaea    packages.scheduler.cronJob.handler.startJob.main    SELECT "id", "serviceFqn", "cron", "status", "lasterror", "enabled", "owner_node", "last_run", 
+"next_run", "job_name", "created_time"
+FROM "Schedulers" WHERE "id" = '?';
+2026-08-13 18:14:00,179 INFO c.e.m.t.Tenant [DefaultQuartzScheduler_Worker-1] b2b539a4-83a6-3e72-b58e-adf314cabaea    packages.scheduler.cronJob.handler.startJob.main    gc
+2026-08-13 18:14:00,179 INFO c.e.m.t.Tenant [DefaultQuartzScheduler_Worker-1] b2b539a4-83a6-3e72-b58e-adf314cabaea    packages.scheduler.cronJob.handler.startJob.main    gc
+2026-08-13 18:14:00,181 INFO c.e.m.t.Tenant [DefaultQuartzScheduler_Worker-1] b2b539a4-83a6-3e72-b58e-adf314cabaea    packages.scheduler.cronJob.handler.startJob.main    completed
+2026-08-13 18:14:00,181 INFO c.e.m.t.Tenant [DefaultQuartzScheduler_Worker-1] b2b539a4-83a6-3e72-b58e-adf314cabaea    packages.scheduler.cronJob.handler.startJob.main    packages.middleware.pub.server.core.gcApi
+2026-08-13 18:14:00,210 INFO c.e.m.t.Tenant [DefaultQuartzScheduler_Worker-1] b2b539a4-83a6-3e72-b58e-adf314cabaea    packages.scheduler.cronJob.handler.startJob.main    Task with correlationId: fd35fc11-4df0-37b8-95fc-e3b2562b8787, Completed Successfully
+2026-08-13 18:15:00,021 INFO c.e.m.t.Tenant [DefaultQuartzScheduler_Worker-2] deb63110-f2d2-3ba9-9321-bd1936d3a762    packages.scheduler.cronJob.handler.startJob.main    Starting scheduled job packages.middleware.pub.server.core.gcApi
+2026-08-13 18:15:00,021 INFO c.e.m.t.Tenant [DefaultQuartzScheduler_Worker-2] deb63110-f2d2-3ba9-9321-bd1936d3a762    packages.scheduler.cronJob.handler.startJob.main    Starting scheduled job packages.middleware.pub.server.core.gcApi
+2026-08-13 18:15:00,021 INFO c.e.m.t.Tenant [DefaultQuartzScheduler_Worker-2] deb63110-f2d2-3ba9-9321-bd1936d3a762    packages.scheduler.cronJob.handler.startJob.main    Updatng database status to running**********************
+2026-08-13 18:15:00,021 INFO c.e.m.t.Tenant [DefaultQuartzScheduler_Worker-2] deb63110-f2d2-3ba9-9321-bd1936d3a762    packages.scheduler.cronJob.handler.startJob.main    Updatng database status to running**********************
+2026-08-13 18:15:00,021 INFO c.e.m.t.Tenant [DefaultQuartzScheduler_Worker-2] deb63110-f2d2-3ba9-9321-bd1936d3a762    packages.scheduler.cronJob.handler.startJob.main    Database updated. Id:5
+2026-08-13 18:15:00,021 INFO c.e.m.t.Tenant [DefaultQuartzScheduler_Worker-2] deb63110-f2d2-3ba9-9321-bd1936d3a762    packages.scheduler.cronJob.handler.startJob.main    SELECT "id", "serviceFqn", "cron", "status", "lasterror", "enabled", "owner_node", "last_run", 
+"next_run", "job_name", "created_time"
+FROM "Schedulers" WHERE "id" = '?';
+2026-08-13 18:15:00,037 INFO c.e.m.t.Tenant [DefaultQuartzScheduler_Worker-2] deb63110-f2d2-3ba9-9321-bd1936d3a762    packages.scheduler.cronJob.handler.startJob.main    gc
+2026-08-13 18:15:00,037 INFO c.e.m.t.Tenant [DefaultQuartzScheduler_Worker-2] deb63110-f2d2-3ba9-9321-bd1936d3a762    packages.scheduler.cronJob.handler.startJob.main    gc
+2026-08-13 18:15:00,037 INFO c.e.m.t.Tenant [DefaultQuartzScheduler_Worker-2] deb63110-f2d2-3ba9-9321-bd1936d3a762    packages.scheduler.cronJob.handler.startJob.main    completed
+2026-08-13 18:15:00,037 INFO c.e.m.t.Tenant [DefaultQuartzScheduler_Worker-2] deb63110-f2d2-3ba9-9321-bd1936d3a762    packages.scheduler.cronJob.handler.startJob.main    packages.middleware.pub.server.core.gcApi
+2026-08-13 18:15:00,037 INFO c.e.m.t.Tenant [DefaultQuartzScheduler_Worker-2] deb63110-f2d2-3ba9-9321-bd1936d3a762    packages.scheduler.cronJob.handler.startJob.main    Task with correlationId: 68968432-c0cf-3f5c-b703-8f55ca00bc9c, Completed Successfully
+2026-08-13 18:16:00,016 INFO c.e.m.t.Tenant [DefaultQuartzScheduler_Worker-3] afbb2a06-b6f5-3f0b-a06a-8cb607be6e3a    packages.scheduler.cronJob.handler.startJob.main    Starting scheduled job packages.middleware.pub.server.core.gcApi
+2026-08-13 18:16:00,016 INFO c.e.m.t.Tenant [DefaultQuartzScheduler_Worker-3] afbb2a06-b6f5-3f0b-a06a-8cb607be6e3a    packages.scheduler.cronJob.handler.startJob.main    Starting scheduled job packages.middleware.pub.server.core.gcApi
+2026-08-13 18:16:00,020 INFO c.e.m.t.Tenant [DefaultQuartzScheduler_Worker-3] afbb2a06-b6f5-3f0b-a06a-8cb607be6e3a    packages.scheduler.cronJob.handler.startJob.main    Updatng database status to running**********************
+2026-08-13 18:16:00,020 INFO c.e.m.t.Tenant [DefaultQuartzScheduler_Worker-3] afbb2a06-b6f5-3f0b-a06a-8cb607be6e3a    packages.scheduler.cronJob.handler.startJob.main    Updatng database status to running**********************
+2026-08-13 18:16:00,020 INFO c.e.m.t.Tenant [DefaultQuartzScheduler_Worker-3] afbb2a06-b6f5-3f0b-a06a-8cb607be6e3a    packages.scheduler.cronJob.handler.startJob.main    Database updated. Id:5
+2026-08-13 18:16:00,020 INFO c.e.m.t.Tenant [DefaultQuartzScheduler_Worker-3] afbb2a06-b6f5-3f0b-a06a-8cb607be6e3a    packages.scheduler.cronJob.handler.startJob.main    SELECT "id", "serviceFqn", "cron", "status", "lasterror", "enabled", "owner_node", "last_run", 
+"next_run", "job_name", "created_time"
+FROM "Schedulers" WHERE "id" = '?';
+2026-08-13 18:16:00,020 INFO c.e.m.t.Tenant [DefaultQuartzScheduler_Worker-3] afbb2a06-b6f5-3f0b-a06a-8cb607be6e3a    packages.scheduler.cronJob.handler.startJob.main    gc
+2026-08-13 18:16:00,020 INFO c.e.m.t.Tenant [DefaultQuartzScheduler_Worker-3] afbb2a06-b6f5-3f0b-a06a-8cb607be6e3a    packages.scheduler.cronJob.handler.startJob.main    gc
+2026-08-13 18:16:00,036 INFO c.e.m.t.Tenant [DefaultQuartzScheduler_Worker-3] afbb2a06-b6f5-3f0b-a06a-8cb607be6e3a    packages.scheduler.cronJob.handler.startJob.main    completed
+2026-08-13 18:16:00,036 INFO c.e.m.t.Tenant [DefaultQuartzScheduler_Worker-3] afbb2a06-b6f5-3f0b-a06a-8cb607be6e3a    packages.scheduler.cronJob.handler.startJob.main    packages.middleware.pub.server.core.gcApi
+2026-08-13 18:16:00,039 INFO c.e.m.t.Tenant [DefaultQuartzScheduler_Worker-3] afbb2a06-b6f5-3f0b-a06a-8cb607be6e3a    packages.scheduler.cronJob.handler.startJob.main    Task with correlationId: 4cde7979-e54c-3297-9e4d-49fb546da520, Completed Successfully
+2026-08-13 18:17:00,016 INFO c.e.m.t.Tenant [DefaultQuartzScheduler_Worker-4] 296ee95a-7dcd-3412-9d0d-7baf00544d12    packages.scheduler.cronJob.handler.startJob.main    Starting scheduled job packages.middleware.pub.server.core.gcApi
+2026-08-13 18:17:00,016 INFO c.e.m.t.Tenant [DefaultQuartzScheduler_Worker-4] 296ee95a-7dcd-3412-9d0d-7baf00544d12    packages.scheduler.cronJob.handler.startJob.main    Starting scheduled job packages.middleware.pub.server.core.gcApi
+2026-08-13 18:17:00,016 INFO c.e.m.t.Tenant [DefaultQuartzScheduler_Worker-4] 296ee95a-7dcd-3412-9d0d-7baf00544d12    packages.scheduler.cronJob.handler.startJob.main    Updatng database status to running**********************
+2026-08-13 18:17:00,016 INFO c.e.m.t.Tenant [DefaultQuartzScheduler_Worker-4] 296ee95a-7dcd-3412-9d0d-7baf00544d12    packages.scheduler.cronJob.handler.startJob.main    Updatng database status to running**********************
+2026-08-13 18:17:00,030 INFO c.e.m.t.Tenant [DefaultQuartzScheduler_Worker-4] 296ee95a-7dcd-3412-9d0d-7baf00544d12    packages.scheduler.cronJob.handler.startJob.main    Database updated. Id:5
+2026-08-13 18:17:00,037 INFO c.e.m.t.Tenant [DefaultQuartzScheduler_Worker-4] 296ee95a-7dcd-3412-9d0d-7baf00544d12    packages.scheduler.cronJob.handler.startJob.main    SELECT "id", "serviceFqn", "cron", "status", "lasterror", "enabled", "owner_node", "last_run", 
+"next_run", "job_name", "created_time"
+FROM "Schedulers" WHERE "id" = '?';
+2026-08-13 18:17:00,040 INFO c.e.m.t.Tenant [DefaultQuartzScheduler_Worker-4] 296ee95a-7dcd-3412-9d0d-7baf00544d12    packages.scheduler.cronJob.handler.startJob.main    gc
+2026-08-13 18:17:00,040 INFO c.e.m.t.Tenant [DefaultQuartzScheduler_Worker-4] 296ee95a-7dcd-3412-9d0d-7baf00544d12    packages.scheduler.cronJob.handler.startJob.main    gc
+2026-08-13 18:17:00,045 INFO c.e.m.t.Tenant [DefaultQuartzScheduler_Worker-4] 296ee95a-7dcd-3412-9d0d-7baf00544d12    packages.scheduler.cronJob.handler.startJob.main    completed
+2026-08-13 18:17:00,045 INFO c.e.m.t.Tenant [DefaultQuartzScheduler_Worker-4] 296ee95a-7dcd-3412-9d0d-7baf00544d12    packages.scheduler.cronJob.handler.startJob.main    packages.middleware.pub.server.core.gcApi
+2026-08-13 18:17:00,047 INFO c.e.m.t.Tenant [DefaultQuartzScheduler_Worker-4] 296ee95a-7dcd-3412-9d0d-7baf00544d12    packages.scheduler.cronJob.handler.startJob.main    Task with correlationId: 19cc5270-ba35-3076-89f3-f8ff9661ca8a, Completed Successfully
+2026-08-13 18:18:00,018 INFO c.e.m.t.Tenant [DefaultQuartzScheduler_Worker-5] c0b3fef6-6dd4-356d-bf87-919f5c0929c0    packages.scheduler.cronJob.handler.startJob.main    Starting scheduled job packages.middleware.pub.server.core.gcApi
+2026-08-13 18:18:00,018 INFO c.e.m.t.Tenant [DefaultQuartzScheduler_Worker-5] c0b3fef6-6dd4-356d-bf87-919f5c0929c0    packages.scheduler.cronJob.handler.startJob.main    Starting scheduled job packages.middleware.pub.server.core.gcApi
+2026-08-13 18:18:00,026 INFO c.e.m.t.Tenant [DefaultQuartzScheduler_Worker-5] c0b3fef6-6dd4-356d-bf87-919f5c0929c0    packages.scheduler.cronJob.handler.startJob.main    Updatng database status to running**********************
+2026-08-13 18:18:00,026 INFO c.e.m.t.Tenant [DefaultQuartzScheduler_Worker-5] c0b3fef6-6dd4-356d-bf87-919f5c0929c0    packages.scheduler.cronJob.handler.startJob.main    Updatng database status to running**********************
+2026-08-13 18:18:00,030 INFO c.e.m.t.Tenant [DefaultQuartzScheduler_Worker-5] c0b3fef6-6dd4-356d-bf87-919f5c0929c0    packages.scheduler.cronJob.handler.startJob.main    Database updated. Id:5
+2026-08-13 18:18:00,036 INFO c.e.m.t.Tenant [DefaultQuartzScheduler_Worker-5] c0b3fef6-6dd4-356d-bf87-919f5c0929c0    packages.scheduler.cronJob.handler.startJob.main    SELECT "id", "serviceFqn", "cron", "status", "lasterror", "enabled", "owner_node", "last_run", 
+"next_run", "job_name", "created_time"
+FROM "Schedulers" WHERE "id" = '?';
+2026-08-13 18:18:00,036 INFO c.e.m.t.Tenant [DefaultQuartzScheduler_Worker-5] c0b3fef6-6dd4-356d-bf87-919f5c0929c0    packages.scheduler.cronJob.handler.startJob.main    gc
+2026-08-13 18:18:00,038 INFO c.e.m.t.Tenant [DefaultQuartzScheduler_Worker-5] c0b3fef6-6dd4-356d-bf87-919f5c0929c0    packages.scheduler.cronJob.handler.startJob.main    gc
+2026-08-13 18:18:00,040 INFO c.e.m.t.Tenant [DefaultQuartzScheduler_Worker-5] c0b3fef6-6dd4-356d-bf87-919f5c0929c0    packages.scheduler.cronJob.handler.startJob.main    completed
+2026-08-13 18:18:00,040 INFO c.e.m.t.Tenant [DefaultQuartzScheduler_Worker-5] c0b3fef6-6dd4-356d-bf87-919f5c0929c0    packages.scheduler.cronJob.handler.startJob.main    packages.middleware.pub.server.core.gcApi
+2026-08-13 18:18:00,044 INFO c.e.m.t.Tenant [DefaultQuartzScheduler_Worker-5] c0b3fef6-6dd4-356d-bf87-919f5c0929c0    packages.scheduler.cronJob.handler.startJob.main    Task with correlationId: 9996ef61-d4c0-3aa6-b149-7264902356f2, Completed Successfully
+2026-08-13 18:19:00,018 INFO c.e.m.t.Tenant [DefaultQuartzScheduler_Worker-6] dc6ede06-930f-3254-8e94-ab1cbefcaa66    packages.scheduler.cronJob.handler.startJob.main    Starting scheduled job packages.middleware.pub.server.core.gcApi
+2026-08-13 18:19:00,018 INFO c.e.m.t.Tenant [DefaultQuartzScheduler_Worker-6] dc6ede06-930f-3254-8e94-ab1cbefcaa66    packages.scheduler.cronJob.handler.startJob.main    Starting scheduled job packages.middleware.pub.server.core.gcApi
+2026-08-13 18:19:00,020 INFO c.e.m.t.Tenant [DefaultQuartzScheduler_Worker-6] dc6ede06-930f-3254-8e94-ab1cbefcaa66    packages.scheduler.cronJob.handler.startJob.main    Updatng database status to running**********************
+2026-08-13 18:19:00,020 INFO c.e.m.t.Tenant [DefaultQuartzScheduler_Worker-6] dc6ede06-930f-3254-8e94-ab1cbefcaa66    packages.scheduler.cronJob.handler.startJob.main    Updatng database status to running**********************
+2026-08-13 18:19:00,025 INFO c.e.m.t.Tenant [DefaultQuartzScheduler_Worker-6] dc6ede06-930f-3254-8e94-ab1cbefcaa66    packages.scheduler.cronJob.handler.startJob.main    Database updated. Id:5
+2026-08-13 18:19:00,029 INFO c.e.m.t.Tenant [DefaultQuartzScheduler_Worker-6] dc6ede06-930f-3254-8e94-ab1cbefcaa66    packages.scheduler.cronJob.handler.startJob.main    SELECT "id", "serviceFqn", "cron", "status", "lasterror", "enabled", "owner_node", "last_run", 
+"next_run", "job_name", "created_time"
+FROM "Schedulers" WHERE "id" = '?';
+2026-08-13 18:19:00,033 INFO c.e.m.t.Tenant [DefaultQuartzScheduler_Worker-6] dc6ede06-930f-3254-8e94-ab1cbefcaa66    packages.scheduler.cronJob.handler.startJob.main    gc
+2026-08-13 18:19:00,033 INFO c.e.m.t.Tenant [DefaultQuartzScheduler_Worker-6] dc6ede06-930f-3254-8e94-ab1cbefcaa66    packages.scheduler.cronJob.handler.startJob.main    gc
+2026-08-13 18:19:00,039 INFO c.e.m.t.Tenant [DefaultQuartzScheduler_Worker-6] dc6ede06-930f-3254-8e94-ab1cbefcaa66    packages.scheduler.cronJob.handler.startJob.main    completed
+2026-08-13 18:19:00,039 INFO c.e.m.t.Tenant [DefaultQuartzScheduler_Worker-6] dc6ede06-930f-3254-8e94-ab1cbefcaa66    packages.scheduler.cronJob.handler.startJob.main    packages.middleware.pub.server.core.gcApi
+2026-08-13 18:19:00,039 INFO c.e.m.t.Tenant [DefaultQuartzScheduler_Worker-6] dc6ede06-930f-3254-8e94-ab1cbefcaa66    packages.scheduler.cronJob.handler.startJob.main    Task with correlationId: 64ca00d7-51fb-3a70-a7a0-3c17438bc6f0, Completed Successfully
+2026-08-13 18:20:00,013 INFO c.e.m.t.Tenant [DefaultQuartzScheduler_Worker-7] a341ee89-8337-374e-bc8c-d684624f4901    packages.scheduler.cronJob.handler.startJob.main    Starting scheduled job packages.middleware.pub.server.core.gcApi
+2026-08-13 18:20:00,013 INFO c.e.m.t.Tenant [DefaultQuartzScheduler_Worker-7] a341ee89-8337-374e-bc8c-d684624f4901    packages.scheduler.cronJob.handler.startJob.main    Starting scheduled job packages.middleware.pub.server.core.gcApi
+2026-08-13 18:20:00,017 INFO c.e.m.t.Tenant [DefaultQuartzScheduler_Worker-7] a341ee89-8337-374e-bc8c-d684624f4901    packages.scheduler.cronJob.handler.startJob.main    Updatng database status to running**********************
+2026-08-13 18:20:00,017 INFO c.e.m.t.Tenant [DefaultQuartzScheduler_Worker-7] a341ee89-8337-374e-bc8c-d684624f4901    packages.scheduler.cronJob.handler.startJob.main    Updatng database status to running**********************
+2026-08-13 18:20:00,021 INFO c.e.m.t.Tenant [DefaultQuartzScheduler_Worker-7] a341ee89-8337-374e-bc8c-d684624f4901    packages.scheduler.cronJob.handler.startJob.main    Database updated. Id:5
+2026-08-13 18:20:00,027 INFO c.e.m.t.Tenant [DefaultQuartzScheduler_Worker-7] a341ee89-8337-374e-bc8c-d684624f4901    packages.scheduler.cronJob.handler.startJob.main    SELECT "id", "serviceFqn", "cron", "status", "lasterror", "enabled", "owner_node", "last_run", 
+"next_run", "job_name", "created_time"
+FROM "Schedulers" WHERE "id" = '?';
+2026-08-13 18:20:00,027 INFO c.e.m.t.Tenant [DefaultQuartzScheduler_Worker-7] a341ee89-8337-374e-bc8c-d684624f4901    packages.scheduler.cronJob.handler.startJob.main    gc
+2026-08-13 18:20:00,027 INFO c.e.m.t.Tenant [DefaultQuartzScheduler_Worker-7] a341ee89-8337-374e-bc8c-d684624f4901    packages.scheduler.cronJob.handler.startJob.main    gc
+2026-08-13 18:20:00,033 INFO c.e.m.t.Tenant [DefaultQuartzScheduler_Worker-7] a341ee89-8337-374e-bc8c-d684624f4901    packages.scheduler.cronJob.handler.startJob.main    completed
+2026-08-13 18:20:00,033 INFO c.e.m.t.Tenant [DefaultQuartzScheduler_Worker-7] a341ee89-8337-374e-bc8c-d684624f4901    packages.scheduler.cronJob.handler.startJob.main    packages.middleware.pub.server.core.gcApi
+2026-08-13 18:20:00,033 INFO c.e.m.t.Tenant [DefaultQuartzScheduler_Worker-7] a341ee89-8337-374e-bc8c-d684624f4901    packages.scheduler.cronJob.handler.startJob.main    Task with correlationId: 3bd0ef27-c218-3139-a568-631061100d80, Completed Successfully
+2026-08-13 18:21:00,003 INFO c.e.m.t.Tenant [DefaultQuartzScheduler_Worker-8] 497b394d-9128-3b42-a4b8-a7539dc6fceb    packages.scheduler.cronJob.handler.startJob.main    Starting scheduled job packages.middleware.pub.server.core.gcApi
+2026-08-13 18:21:00,003 INFO c.e.m.t.Tenant [DefaultQuartzScheduler_Worker-8] 497b394d-9128-3b42-a4b8-a7539dc6fceb    packages.scheduler.cronJob.handler.startJob.main    Starting scheduled job packages.middleware.pub.server.core.gcApi
+2026-08-13 18:21:00,003 INFO c.e.m.t.Tenant [DefaultQuartzScheduler_Worker-8] 497b394d-9128-3b42-a4b8-a7539dc6fceb    packages.scheduler.cronJob.handler.startJob.main    Updatng database status to running**********************
+2026-08-13 18:21:00,003 INFO c.e.m.t.Tenant [DefaultQuartzScheduler_Worker-8] 497b394d-9128-3b42-a4b8-a7539dc6fceb    packages.scheduler.cronJob.handler.startJob.main    Updatng database status to running**********************
+2026-08-13 18:21:00,019 INFO c.e.m.t.Tenant [DefaultQuartzScheduler_Worker-8] 497b394d-9128-3b42-a4b8-a7539dc6fceb    packages.scheduler.cronJob.handler.startJob.main    Database updated. Id:5
+2026-08-13 18:21:00,019 INFO c.e.m.t.Tenant [DefaultQuartzScheduler_Worker-8] 497b394d-9128-3b42-a4b8-a7539dc6fceb    packages.scheduler.cronJob.handler.startJob.main    SELECT "id", "serviceFqn", "cron", "status", "lasterror", "enabled", "owner_node", "last_run", 
+"next_run", "job_name", "created_time"
+FROM "Schedulers" WHERE "id" = '?';
+2026-08-13 18:21:00,019 INFO c.e.m.t.Tenant [DefaultQuartzScheduler_Worker-8] 497b394d-9128-3b42-a4b8-a7539dc6fceb    packages.scheduler.cronJob.handler.startJob.main    gc
+2026-08-13 18:21:00,019 INFO c.e.m.t.Tenant [DefaultQuartzScheduler_Worker-8] 497b394d-9128-3b42-a4b8-a7539dc6fceb    packages.scheduler.cronJob.handler.startJob.main    gc
+2026-08-13 18:21:00,034 INFO c.e.m.t.Tenant [DefaultQuartzScheduler_Worker-8] 497b394d-9128-3b42-a4b8-a7539dc6fceb    packages.scheduler.cronJob.handler.startJob.main    completed
+2026-08-13 18:21:00,034 INFO c.e.m.t.Tenant [DefaultQuartzScheduler_Worker-8] 497b394d-9128-3b42-a4b8-a7539dc6fceb    packages.scheduler.cronJob.handler.startJob.main    packages.middleware.pub.server.core.gcApi
+2026-08-13 18:21:00,040 INFO c.e.m.t.Tenant [DefaultQuartzScheduler_Worker-8] 497b394d-9128-3b42-a4b8-a7539dc6fceb    packages.scheduler.cronJob.handler.startJob.main    Task with correlationId: 9d11a513-57d6-38ae-b486-023d5ccce53a, Completed Successfully
+2026-08-13 18:22:00,021 INFO c.e.m.t.Tenant [DefaultQuartzScheduler_Worker-9] 8b955cfb-410d-355e-a122-3d8d908358a5    packages.scheduler.cronJob.handler.startJob.main    Starting scheduled job packages.middleware.pub.server.core.gcApi
+2026-08-13 18:22:00,021 INFO c.e.m.t.Tenant [DefaultQuartzScheduler_Worker-9] 8b955cfb-410d-355e-a122-3d8d908358a5    packages.scheduler.cronJob.handler.startJob.main    Starting scheduled job packages.middleware.pub.server.core.gcApi
+2026-08-13 18:22:00,021 INFO c.e.m.t.Tenant [DefaultQuartzScheduler_Worker-9] 8b955cfb-410d-355e-a122-3d8d908358a5    packages.scheduler.cronJob.handler.startJob.main    Updatng database status to running**********************
+2026-08-13 18:22:00,021 INFO c.e.m.t.Tenant [DefaultQuartzScheduler_Worker-9] 8b955cfb-410d-355e-a122-3d8d908358a5    packages.scheduler.cronJob.handler.startJob.main    Updatng database status to running**********************
+2026-08-13 18:22:00,032 INFO c.e.m.t.Tenant [DefaultQuartzScheduler_Worker-9] 8b955cfb-410d-355e-a122-3d8d908358a5    packages.scheduler.cronJob.handler.startJob.main    Database updated. Id:5
+2026-08-13 18:22:00,040 INFO c.e.m.t.Tenant [DefaultQuartzScheduler_Worker-9] 8b955cfb-410d-355e-a122-3d8d908358a5    packages.scheduler.cronJob.handler.startJob.main    SELECT "id", "serviceFqn", "cron", "status", "lasterror", "enabled", "owner_node", "last_run", 
+"next_run", "job_name", "created_time"
+FROM "Schedulers" WHERE "id" = '?';
+2026-08-13 18:22:00,042 INFO c.e.m.t.Tenant [DefaultQuartzScheduler_Worker-9] 8b955cfb-410d-355e-a122-3d8d908358a5    packages.scheduler.cronJob.handler.startJob.main    gc
+2026-08-13 18:22:00,042 INFO c.e.m.t.Tenant [DefaultQuartzScheduler_Worker-9] 8b955cfb-410d-355e-a122-3d8d908358a5    packages.scheduler.cronJob.handler.startJob.main    gc
+2026-08-13 18:22:00,043 INFO c.e.m.t.Tenant [DefaultQuartzScheduler_Worker-9] 8b955cfb-410d-355e-a122-3d8d908358a5    packages.scheduler.cronJob.handler.startJob.main    completed
+2026-08-13 18:22:00,043 INFO c.e.m.t.Tenant [DefaultQuartzScheduler_Worker-9] 8b955cfb-410d-355e-a122-3d8d908358a5    packages.scheduler.cronJob.handler.startJob.main    packages.middleware.pub.server.core.gcApi
+2026-08-13 18:22:00,047 INFO c.e.m.t.Tenant [DefaultQuartzScheduler_Worker-9] 8b955cfb-410d-355e-a122-3d8d908358a5    packages.scheduler.cronJob.handler.startJob.main    Task with correlationId: 30e64b33-24b5-3c13-b246-3753b9fa65c1, Completed Successfully
+2026-08-13 18:23:00,008 INFO c.e.m.t.Tenant [DefaultQuartzScheduler_Worker-10] 91be2205-a6ff-30ee-8730-ea3b9e8d0955    packages.scheduler.cronJob.handler.startJob.main    Starting scheduled job packages.middleware.pub.server.core.gcApi
+2026-08-13 18:23:00,008 INFO c.e.m.t.Tenant [DefaultQuartzScheduler_Worker-10] 91be2205-a6ff-30ee-8730-ea3b9e8d0955    packages.scheduler.cronJob.handler.startJob.main    Starting scheduled job packages.middleware.pub.server.core.gcApi
+2026-08-13 18:23:00,024 INFO c.e.m.t.Tenant [DefaultQuartzScheduler_Worker-10] 91be2205-a6ff-30ee-8730-ea3b9e8d0955    packages.scheduler.cronJob.handler.startJob.main    Updatng database status to running**********************
+2026-08-13 18:23:00,024 INFO c.e.m.t.Tenant [DefaultQuartzScheduler_Worker-10] 91be2205-a6ff-30ee-8730-ea3b9e8d0955    packages.scheduler.cronJob.handler.startJob.main    Updatng database status to running**********************
+2026-08-13 18:23:00,024 INFO c.e.m.t.Tenant [DefaultQuartzScheduler_Worker-10] 91be2205-a6ff-30ee-8730-ea3b9e8d0955    packages.scheduler.cronJob.handler.startJob.main    Database updated. Id:5
+2026-08-13 18:23:00,024 INFO c.e.m.t.Tenant [DefaultQuartzScheduler_Worker-10] 91be2205-a6ff-30ee-8730-ea3b9e8d0955    packages.scheduler.cronJob.handler.startJob.main    SELECT "id", "serviceFqn", "cron", "status", "lasterror", "enabled", "owner_node", "last_run", 
+"next_run", "job_name", "created_time"
+FROM "Schedulers" WHERE "id" = '?';
+2026-08-13 18:23:00,024 INFO c.e.m.t.Tenant [DefaultQuartzScheduler_Worker-10] 91be2205-a6ff-30ee-8730-ea3b9e8d0955    packages.scheduler.cronJob.handler.startJob.main    gc
+2026-08-13 18:23:00,024 INFO c.e.m.t.Tenant [DefaultQuartzScheduler_Worker-10] 91be2205-a6ff-30ee-8730-ea3b9e8d0955    packages.scheduler.cronJob.handler.startJob.main    gc
+2026-08-13 18:23:00,041 INFO c.e.m.t.Tenant [DefaultQuartzScheduler_Worker-10] 91be2205-a6ff-30ee-8730-ea3b9e8d0955    packages.scheduler.cronJob.handler.startJob.main    completed
+2026-08-13 18:23:00,041 INFO c.e.m.t.Tenant [DefaultQuartzScheduler_Worker-10] 91be2205-a6ff-30ee-8730-ea3b9e8d0955    packages.scheduler.cronJob.handler.startJob.main    packages.middleware.pub.server.core.gcApi
+2026-08-13 18:23:00,041 INFO c.e.m.t.Tenant [DefaultQuartzScheduler_Worker-10] 91be2205-a6ff-30ee-8730-ea3b9e8d0955    packages.scheduler.cronJob.handler.startJob.main    Task with correlationId: 842f21ac-687d-3e9a-ab80-7a64594fe848, Completed Successfully
+2026-08-13 18:24:00,017 INFO c.e.m.t.Tenant [DefaultQuartzScheduler_Worker-1] 24ad290d-7796-37f5-a138-c05095fd0d98    packages.scheduler.cronJob.handler.startJob.main    Starting scheduled job packages.middleware.pub.server.core.gcApi
+2026-08-13 18:24:00,017 INFO c.e.m.t.Tenant [DefaultQuartzScheduler_Worker-1] 24ad290d-7796-37f5-a138-c05095fd0d98    packages.scheduler.cronJob.handler.startJob.main    Starting scheduled job packages.middleware.pub.server.core.gcApi
+2026-08-13 18:24:00,017 INFO c.e.m.t.Tenant [DefaultQuartzScheduler_Worker-1] 24ad290d-7796-37f5-a138-c05095fd0d98    packages.scheduler.cronJob.handler.startJob.main    Updatng database status to running**********************
+2026-08-13 18:24:00,017 INFO c.e.m.t.Tenant [DefaultQuartzScheduler_Worker-1] 24ad290d-7796-37f5-a138-c05095fd0d98    packages.scheduler.cronJob.handler.startJob.main    Updatng database status to running**********************
+2026-08-13 18:24:00,017 INFO c.e.m.t.Tenant [DefaultQuartzScheduler_Worker-1] 24ad290d-7796-37f5-a138-c05095fd0d98    packages.scheduler.cronJob.handler.startJob.main    Database updated. Id:5
+2026-08-13 18:24:00,029 INFO c.e.m.t.Tenant [DefaultQuartzScheduler_Worker-1] 24ad290d-7796-37f5-a138-c05095fd0d98    packages.scheduler.cronJob.handler.startJob.main    SELECT "id", "serviceFqn", "cron", "status", "lasterror", "enabled", "owner_node", "last_run", 
+"next_run", "job_name", "created_time"
+FROM "Schedulers" WHERE "id" = '?';
+2026-08-13 18:24:00,029 INFO c.e.m.t.Tenant [DefaultQuartzScheduler_Worker-1] 24ad290d-7796-37f5-a138-c05095fd0d98    packages.scheduler.cronJob.handler.startJob.main    gc
+2026-08-13 18:24:00,029 INFO c.e.m.t.Tenant [DefaultQuartzScheduler_Worker-1] 24ad290d-7796-37f5-a138-c05095fd0d98    packages.scheduler.cronJob.handler.startJob.main    gc
+2026-08-13 18:24:00,029 INFO c.e.m.t.Tenant [DefaultQuartzScheduler_Worker-1] 24ad290d-7796-37f5-a138-c05095fd0d98    packages.scheduler.cronJob.handler.startJob.main    completed
+2026-08-13 18:24:00,029 INFO c.e.m.t.Tenant [DefaultQuartzScheduler_Worker-1] 24ad290d-7796-37f5-a138-c05095fd0d98    packages.scheduler.cronJob.handler.startJob.main    packages.middleware.pub.server.core.gcApi
+2026-08-13 18:24:00,047 INFO c.e.m.t.Tenant [DefaultQuartzScheduler_Worker-1] 24ad290d-7796-37f5-a138-c05095fd0d98    packages.scheduler.cronJob.handler.startJob.main    Task with correlationId: c3abf0f0-747f-3a0c-af8c-83dd5979b505, Completed Successfully
+2026-08-13 18:25:00,006 INFO c.e.m.t.Tenant [DefaultQuartzScheduler_Worker-2] 512a222e-caf6-3b66-983c-ed42524f2a7a    packages.scheduler.cronJob.handler.startJob.main    Starting scheduled job packages.middleware.pub.server.core.gcApi
+2026-08-13 18:25:00,006 INFO c.e.m.t.Tenant [DefaultQuartzScheduler_Worker-2] 512a222e-caf6-3b66-983c-ed42524f2a7a    packages.scheduler.cronJob.handler.startJob.main    Starting scheduled job packages.middleware.pub.server.core.gcApi
+2026-08-13 18:25:00,006 INFO c.e.m.t.Tenant [DefaultQuartzScheduler_Worker-2] 512a222e-caf6-3b66-983c-ed42524f2a7a    packages.scheduler.cronJob.handler.startJob.main    Updatng database status to running**********************
+2026-08-13 18:25:00,006 INFO c.e.m.t.Tenant [DefaultQuartzScheduler_Worker-2] 512a222e-caf6-3b66-983c-ed42524f2a7a    packages.scheduler.cronJob.handler.startJob.main    Updatng database status to running**********************
+2026-08-13 18:25:00,016 INFO c.e.m.t.Tenant [DefaultQuartzScheduler_Worker-2] 512a222e-caf6-3b66-983c-ed42524f2a7a    packages.scheduler.cronJob.handler.startJob.main    Database updated. Id:5
+2026-08-13 18:25:00,016 INFO c.e.m.t.Tenant [DefaultQuartzScheduler_Worker-2] 512a222e-caf6-3b66-983c-ed42524f2a7a    packages.scheduler.cronJob.handler.startJob.main    SELECT "id", "serviceFqn", "cron", "status", "lasterror", "enabled", "owner_node", "last_run", 
+"next_run", "job_name", "created_time"
+FROM "Schedulers" WHERE "id" = '?';
+2026-08-13 18:25:00,016 INFO c.e.m.t.Tenant [DefaultQuartzScheduler_Worker-2] 512a222e-caf6-3b66-983c-ed42524f2a7a    packages.scheduler.cronJob.handler.startJob.main    gc
+2026-08-13 18:25:00,016 INFO c.e.m.t.Tenant [DefaultQuartzScheduler_Worker-2] 512a222e-caf6-3b66-983c-ed42524f2a7a    packages.scheduler.cronJob.handler.startJob.main    gc
+2026-08-13 18:25:00,016 INFO c.e.m.t.Tenant [DefaultQuartzScheduler_Worker-2] 512a222e-caf6-3b66-983c-ed42524f2a7a    packages.scheduler.cronJob.handler.startJob.main    completed
+2026-08-13 18:25:00,016 INFO c.e.m.t.Tenant [DefaultQuartzScheduler_Worker-2] 512a222e-caf6-3b66-983c-ed42524f2a7a    packages.scheduler.cronJob.handler.startJob.main    packages.middleware.pub.server.core.gcApi
+2026-08-13 18:25:00,032 INFO c.e.m.t.Tenant [DefaultQuartzScheduler_Worker-2] 512a222e-caf6-3b66-983c-ed42524f2a7a    packages.scheduler.cronJob.handler.startJob.main    Task with correlationId: 7812417d-5398-3535-b0d8-bf9ebcfec82f, Completed Successfully
+2026-08-13 18:26:00,018 INFO c.e.m.t.Tenant [DefaultQuartzScheduler_Worker-3] 1223c84e-d198-31e6-902d-6ab70aa0e3fe    packages.scheduler.cronJob.handler.startJob.main    Starting scheduled job packages.middleware.pub.server.core.gcApi
+2026-08-13 18:26:00,018 INFO c.e.m.t.Tenant [DefaultQuartzScheduler_Worker-3] 1223c84e-d198-31e6-902d-6ab70aa0e3fe    packages.scheduler.cronJob.handler.startJob.main    Starting scheduled job packages.middleware.pub.server.core.gcApi
+2026-08-13 18:26:00,018 INFO c.e.m.t.Tenant [DefaultQuartzScheduler_Worker-3] 1223c84e-d198-31e6-902d-6ab70aa0e3fe    packages.scheduler.cronJob.handler.startJob.main    Updatng database status to running**********************
+2026-08-13 18:26:00,018 INFO c.e.m.t.Tenant [DefaultQuartzScheduler_Worker-3] 1223c84e-d198-31e6-902d-6ab70aa0e3fe    packages.scheduler.cronJob.handler.startJob.main    Updatng database status to running**********************
+2026-08-13 18:26:00,024 INFO c.e.m.t.Tenant [DefaultQuartzScheduler_Worker-3] 1223c84e-d198-31e6-902d-6ab70aa0e3fe    packages.scheduler.cronJob.handler.startJob.main    Database updated. Id:5
+2026-08-13 18:26:00,024 INFO c.e.m.t.Tenant [DefaultQuartzScheduler_Worker-3] 1223c84e-d198-31e6-902d-6ab70aa0e3fe    packages.scheduler.cronJob.handler.startJob.main    SELECT "id", "serviceFqn", "cron", "status", "lasterror", "enabled", "owner_node", "last_run", 
+"next_run", "job_name", "created_time"
+FROM "Schedulers" WHERE "id" = '?';
+2026-08-13 18:26:00,024 INFO c.e.m.t.Tenant [DefaultQuartzScheduler_Worker-3] 1223c84e-d198-31e6-902d-6ab70aa0e3fe    packages.scheduler.cronJob.handler.startJob.main    gc
+2026-08-13 18:26:00,024 INFO c.e.m.t.Tenant [DefaultQuartzScheduler_Worker-3] 1223c84e-d198-31e6-902d-6ab70aa0e3fe    packages.scheduler.cronJob.handler.startJob.main    gc
+2026-08-13 18:26:00,024 INFO c.e.m.t.Tenant [DefaultQuartzScheduler_Worker-3] 1223c84e-d198-31e6-902d-6ab70aa0e3fe    packages.scheduler.cronJob.handler.startJob.main    completed
+2026-08-13 18:26:00,024 INFO c.e.m.t.Tenant [DefaultQuartzScheduler_Worker-3] 1223c84e-d198-31e6-902d-6ab70aa0e3fe    packages.scheduler.cronJob.handler.startJob.main    packages.middleware.pub.server.core.gcApi
+2026-08-13 18:26:00,043 INFO c.e.m.t.Tenant [DefaultQuartzScheduler_Worker-3] 1223c84e-d198-31e6-902d-6ab70aa0e3fe    packages.scheduler.cronJob.handler.startJob.main    Task with correlationId: 47330dad-566f-3985-9782-cffa4cbdb7d0, Completed Successfully
+2026-08-13 18:27:00,012 INFO c.e.m.t.Tenant [DefaultQuartzScheduler_Worker-4] 906bb866-9c7a-3da1-ae66-15111485b018    packages.scheduler.cronJob.handler.startJob.main    Starting scheduled job packages.middleware.pub.server.core.gcApi
+2026-08-13 18:27:00,012 INFO c.e.m.t.Tenant [DefaultQuartzScheduler_Worker-4] 906bb866-9c7a-3da1-ae66-15111485b018    packages.scheduler.cronJob.handler.startJob.main    Starting scheduled job packages.middleware.pub.server.core.gcApi
+2026-08-13 18:27:00,025 INFO c.e.m.t.Tenant [DefaultQuartzScheduler_Worker-4] 906bb866-9c7a-3da1-ae66-15111485b018    packages.scheduler.cronJob.handler.startJob.main    Updatng database status to running**********************
+2026-08-13 18:27:00,025 INFO c.e.m.t.Tenant [DefaultQuartzScheduler_Worker-4] 906bb866-9c7a-3da1-ae66-15111485b018    packages.scheduler.cronJob.handler.startJob.main    Updatng database status to running**********************
+2026-08-13 18:27:00,028 INFO c.e.m.t.Tenant [DefaultQuartzScheduler_Worker-4] 906bb866-9c7a-3da1-ae66-15111485b018    packages.scheduler.cronJob.handler.startJob.main    Database updated. Id:5
+2026-08-13 18:27:00,034 INFO c.e.m.t.Tenant [DefaultQuartzScheduler_Worker-4] 906bb866-9c7a-3da1-ae66-15111485b018    packages.scheduler.cronJob.handler.startJob.main    SELECT "id", "serviceFqn", "cron", "status", "lasterror", "enabled", "owner_node", "last_run", 
+"next_run", "job_name", "created_time"
+FROM "Schedulers" WHERE "id" = '?';
+2026-08-13 18:27:00,037 INFO c.e.m.t.Tenant [DefaultQuartzScheduler_Worker-4] 906bb866-9c7a-3da1-ae66-15111485b018    packages.scheduler.cronJob.handler.startJob.main    gc
+2026-08-13 18:27:00,037 INFO c.e.m.t.Tenant [DefaultQuartzScheduler_Worker-4] 906bb866-9c7a-3da1-ae66-15111485b018    packages.scheduler.cronJob.handler.startJob.main    gc
+2026-08-13 18:27:00,037 INFO c.e.m.t.Tenant [DefaultQuartzScheduler_Worker-4] 906bb866-9c7a-3da1-ae66-15111485b018    packages.scheduler.cronJob.handler.startJob.main    completed
+2026-08-13 18:27:00,037 INFO c.e.m.t.Tenant [DefaultQuartzScheduler_Worker-4] 906bb866-9c7a-3da1-ae66-15111485b018    packages.scheduler.cronJob.handler.startJob.main    packages.middleware.pub.server.core.gcApi
+2026-08-13 18:27:00,044 INFO c.e.m.t.Tenant [DefaultQuartzScheduler_Worker-4] 906bb866-9c7a-3da1-ae66-15111485b018    packages.scheduler.cronJob.handler.startJob.main    Task with correlationId: e569c9d4-ecf5-33e7-8389-6589f20f2bbd, Completed Successfully
+2026-08-13 18:28:00,008 INFO c.e.m.t.Tenant [DefaultQuartzScheduler_Worker-5] 9cfd2e4f-e70f-32bc-bd50-dab7c1430a75    packages.scheduler.cronJob.handler.startJob.main    Starting scheduled job packages.middleware.pub.server.core.gcApi
+2026-08-13 18:28:00,008 INFO c.e.m.t.Tenant [DefaultQuartzScheduler_Worker-5] 9cfd2e4f-e70f-32bc-bd50-dab7c1430a75    packages.scheduler.cronJob.handler.startJob.main    Starting scheduled job packages.middleware.pub.server.core.gcApi
+2026-08-13 18:28:00,008 INFO c.e.m.t.Tenant [DefaultQuartzScheduler_Worker-5] 9cfd2e4f-e70f-32bc-bd50-dab7c1430a75    packages.scheduler.cronJob.handler.startJob.main    Updatng database status to running**********************
+2026-08-13 18:28:00,008 INFO c.e.m.t.Tenant [DefaultQuartzScheduler_Worker-5] 9cfd2e4f-e70f-32bc-bd50-dab7c1430a75    packages.scheduler.cronJob.handler.startJob.main    Updatng database status to running**********************
+2026-08-13 18:28:00,024 INFO c.e.m.t.Tenant [DefaultQuartzScheduler_Worker-5] 9cfd2e4f-e70f-32bc-bd50-dab7c1430a75    packages.scheduler.cronJob.handler.startJob.main    Database updated. Id:5
+2026-08-13 18:28:00,024 INFO c.e.m.t.Tenant [DefaultQuartzScheduler_Worker-5] 9cfd2e4f-e70f-32bc-bd50-dab7c1430a75    packages.scheduler.cronJob.handler.startJob.main    SELECT "id", "serviceFqn", "cron", "status", "lasterror", "enabled", "owner_node", "last_run", 
+"next_run", "job_name", "created_time"
+FROM "Schedulers" WHERE "id" = '?';
+2026-08-13 18:28:00,024 INFO c.e.m.t.Tenant [DefaultQuartzScheduler_Worker-5] 9cfd2e4f-e70f-32bc-bd50-dab7c1430a75    packages.scheduler.cronJob.handler.startJob.main    gc
+2026-08-13 18:28:00,024 INFO c.e.m.t.Tenant [DefaultQuartzScheduler_Worker-5] 9cfd2e4f-e70f-32bc-bd50-dab7c1430a75    packages.scheduler.cronJob.handler.startJob.main    gc
+2026-08-13 18:28:00,024 INFO c.e.m.t.Tenant [DefaultQuartzScheduler_Worker-5] 9cfd2e4f-e70f-32bc-bd50-dab7c1430a75    packages.scheduler.cronJob.handler.startJob.main    completed
+2026-08-13 18:28:00,024 INFO c.e.m.t.Tenant [DefaultQuartzScheduler_Worker-5] 9cfd2e4f-e70f-32bc-bd50-dab7c1430a75    packages.scheduler.cronJob.handler.startJob.main    packages.middleware.pub.server.core.gcApi
+2026-08-13 18:28:00,040 INFO c.e.m.t.Tenant [DefaultQuartzScheduler_Worker-5] 9cfd2e4f-e70f-32bc-bd50-dab7c1430a75    packages.scheduler.cronJob.handler.startJob.main    Task with correlationId: 374d06e1-703d-3fff-b61f-b8e31dd8e6f8, Completed Successfully
+2026-08-13 18:29:00,012 INFO c.e.m.t.Tenant [DefaultQuartzScheduler_Worker-6] 405e427e-6728-3520-a03d-b652cd4eeaaa    packages.scheduler.cronJob.handler.startJob.main    Starting scheduled job packages.middleware.pub.server.core.gcApi
+2026-08-13 18:29:00,012 INFO c.e.m.t.Tenant [DefaultQuartzScheduler_Worker-6] 405e427e-6728-3520-a03d-b652cd4eeaaa    packages.scheduler.cronJob.handler.startJob.main    Starting scheduled job packages.middleware.pub.server.core.gcApi
+2026-08-13 18:29:00,014 INFO c.e.m.t.Tenant [DefaultQuartzScheduler_Worker-6] 405e427e-6728-3520-a03d-b652cd4eeaaa    packages.scheduler.cronJob.handler.startJob.main    Updatng database status to running**********************
+2026-08-13 18:29:00,014 INFO c.e.m.t.Tenant [DefaultQuartzScheduler_Worker-6] 405e427e-6728-3520-a03d-b652cd4eeaaa    packages.scheduler.cronJob.handler.startJob.main    Updatng database status to running**********************
+2026-08-13 18:29:00,019 INFO c.e.m.t.Tenant [DefaultQuartzScheduler_Worker-6] 405e427e-6728-3520-a03d-b652cd4eeaaa    packages.scheduler.cronJob.handler.startJob.main    Database updated. Id:5
+2026-08-13 18:29:00,019 INFO c.e.m.t.Tenant [DefaultQuartzScheduler_Worker-6] 405e427e-6728-3520-a03d-b652cd4eeaaa    packages.scheduler.cronJob.handler.startJob.main    SELECT "id", "serviceFqn", "cron", "status", "lasterror", "enabled", "owner_node", "last_run", 
+"next_run", "job_name", "created_time"
+FROM "Schedulers" WHERE "id" = '?';
+2026-08-13 18:29:00,019 INFO c.e.m.t.Tenant [DefaultQuartzScheduler_Worker-6] 405e427e-6728-3520-a03d-b652cd4eeaaa    packages.scheduler.cronJob.handler.startJob.main    gc
+2026-08-13 18:29:00,019 INFO c.e.m.t.Tenant [DefaultQuartzScheduler_Worker-6] 405e427e-6728-3520-a03d-b652cd4eeaaa    packages.scheduler.cronJob.handler.startJob.main    gc
+2026-08-13 18:29:00,030 INFO c.e.m.t.Tenant [DefaultQuartzScheduler_Worker-6] 405e427e-6728-3520-a03d-b652cd4eeaaa    packages.scheduler.cronJob.handler.startJob.main    completed
+2026-08-13 18:29:00,030 INFO c.e.m.t.Tenant [DefaultQuartzScheduler_Worker-6] 405e427e-6728-3520-a03d-b652cd4eeaaa    packages.scheduler.cronJob.handler.startJob.main    packages.middleware.pub.server.core.gcApi
+2026-08-13 18:29:00,033 INFO c.e.m.t.Tenant [DefaultQuartzScheduler_Worker-6] 405e427e-6728-3520-a03d-b652cd4eeaaa    packages.scheduler.cronJob.handler.startJob.main    Task with correlationId: 9f0baf34-2aa9-3682-9ffa-2c6841ce9fb1, Completed Successfully
+2026-08-13 18:30:00,022 INFO c.e.m.t.Tenant [DefaultQuartzScheduler_Worker-7] 534820cc-0c11-3bd3-a828-ceea8b2b7e86    packages.scheduler.cronJob.handler.startJob.main    Starting scheduled job packages.middleware.pub.server.core.gcApi
+2026-08-13 18:30:00,022 INFO c.e.m.t.Tenant [DefaultQuartzScheduler_Worker-7] 534820cc-0c11-3bd3-a828-ceea8b2b7e86    packages.scheduler.cronJob.handler.startJob.main    Starting scheduled job packages.middleware.pub.server.core.gcApi
+2026-08-13 18:30:00,022 INFO c.e.m.t.Tenant [DefaultQuartzScheduler_Worker-7] 534820cc-0c11-3bd3-a828-ceea8b2b7e86    packages.scheduler.cronJob.handler.startJob.main    Updatng database status to running**********************
+2026-08-13 18:30:00,022 INFO c.e.m.t.Tenant [DefaultQuartzScheduler_Worker-7] 534820cc-0c11-3bd3-a828-ceea8b2b7e86    packages.scheduler.cronJob.handler.startJob.main    Updatng database status to running**********************
+2026-08-13 18:30:00,028 INFO c.e.m.t.Tenant [DefaultQuartzScheduler_Worker-7] 534820cc-0c11-3bd3-a828-ceea8b2b7e86    packages.scheduler.cronJob.handler.startJob.main    Database updated. Id:5
+2026-08-13 18:30:00,028 INFO c.e.m.t.Tenant [DefaultQuartzScheduler_Worker-7] 534820cc-0c11-3bd3-a828-ceea8b2b7e86    packages.scheduler.cronJob.handler.startJob.main    SELECT "id", "serviceFqn", "cron", "status", "lasterror", "enabled", "owner_node", "last_run", 
+"next_run", "job_name", "created_time"
+FROM "Schedulers" WHERE "id" = '?';
+2026-08-13 18:30:00,028 INFO c.e.m.t.Tenant [DefaultQuartzScheduler_Worker-7] 534820cc-0c11-3bd3-a828-ceea8b2b7e86    packages.scheduler.cronJob.handler.startJob.main    gc
+2026-08-13 18:30:00,028 INFO c.e.m.t.Tenant [DefaultQuartzScheduler_Worker-7] 534820cc-0c11-3bd3-a828-ceea8b2b7e86    packages.scheduler.cronJob.handler.startJob.main    gc
+2026-08-13 18:30:00,028 INFO c.e.m.t.Tenant [DefaultQuartzScheduler_Worker-7] 534820cc-0c11-3bd3-a828-ceea8b2b7e86    packages.scheduler.cronJob.handler.startJob.main    completed
+2026-08-13 18:30:00,028 INFO c.e.m.t.Tenant [DefaultQuartzScheduler_Worker-7] 534820cc-0c11-3bd3-a828-ceea8b2b7e86    packages.scheduler.cronJob.handler.startJob.main    packages.middleware.pub.server.core.gcApi
+2026-08-13 18:30:00,028 INFO c.e.m.t.Tenant [DefaultQuartzScheduler_Worker-7] 534820cc-0c11-3bd3-a828-ceea8b2b7e86    packages.scheduler.cronJob.handler.startJob.main    Task with correlationId: c35d7bd6-6c21-3ae0-8626-3a2af566fd60, Completed Successfully
+2026-08-13 18:31:00,018 INFO c.e.m.t.Tenant [DefaultQuartzScheduler_Worker-8] e4fb0206-0509-323c-ac87-806473602cd4    packages.scheduler.cronJob.handler.startJob.main    Starting scheduled job packages.middleware.pub.server.core.gcApi
+2026-08-13 18:31:00,018 INFO c.e.m.t.Tenant [DefaultQuartzScheduler_Worker-8] e4fb0206-0509-323c-ac87-806473602cd4    packages.scheduler.cronJob.handler.startJob.main    Starting scheduled job packages.middleware.pub.server.core.gcApi
+2026-08-13 18:31:00,020 INFO c.e.m.t.Tenant [DefaultQuartzScheduler_Worker-8] e4fb0206-0509-323c-ac87-806473602cd4    packages.scheduler.cronJob.handler.startJob.main    Updatng database status to running**********************
+2026-08-13 18:31:00,020 INFO c.e.m.t.Tenant [DefaultQuartzScheduler_Worker-8] e4fb0206-0509-323c-ac87-806473602cd4    packages.scheduler.cronJob.handler.startJob.main    Updatng database status to running**********************
+2026-08-13 18:31:00,025 INFO c.e.m.t.Tenant [DefaultQuartzScheduler_Worker-8] e4fb0206-0509-323c-ac87-806473602cd4    packages.scheduler.cronJob.handler.startJob.main    Database updated. Id:5
+2026-08-13 18:31:00,032 INFO c.e.m.t.Tenant [DefaultQuartzScheduler_Worker-8] e4fb0206-0509-323c-ac87-806473602cd4    packages.scheduler.cronJob.handler.startJob.main    SELECT "id", "serviceFqn", "cron", "status", "lasterror", "enabled", "owner_node", "last_run", 
+"next_run", "job_name", "created_time"
+FROM "Schedulers" WHERE "id" = '?';
+2026-08-13 18:31:00,034 INFO c.e.m.t.Tenant [DefaultQuartzScheduler_Worker-8] e4fb0206-0509-323c-ac87-806473602cd4    packages.scheduler.cronJob.handler.startJob.main    gc
+2026-08-13 18:31:00,034 INFO c.e.m.t.Tenant [DefaultQuartzScheduler_Worker-8] e4fb0206-0509-323c-ac87-806473602cd4    packages.scheduler.cronJob.handler.startJob.main    gc
+2026-08-13 18:31:00,037 INFO c.e.m.t.Tenant [DefaultQuartzScheduler_Worker-8] e4fb0206-0509-323c-ac87-806473602cd4    packages.scheduler.cronJob.handler.startJob.main    completed
+2026-08-13 18:31:00,037 INFO c.e.m.t.Tenant [DefaultQuartzScheduler_Worker-8] e4fb0206-0509-323c-ac87-806473602cd4    packages.scheduler.cronJob.handler.startJob.main    packages.middleware.pub.server.core.gcApi
+2026-08-13 18:31:00,040 INFO c.e.m.t.Tenant [DefaultQuartzScheduler_Worker-8] e4fb0206-0509-323c-ac87-806473602cd4    packages.scheduler.cronJob.handler.startJob.main    Task with correlationId: dbbf2207-e839-3a96-9aa5-a1fb88926754, Completed Successfully
+2026-08-13 18:32:00,012 INFO c.e.m.t.Tenant [DefaultQuartzScheduler_Worker-9] b80f5bcc-1d07-3c8b-a250-3991fe378035    packages.scheduler.cronJob.handler.startJob.main    Starting scheduled job packages.middleware.pub.server.core.gcApi
+2026-08-13 18:32:00,012 INFO c.e.m.t.Tenant [DefaultQuartzScheduler_Worker-9] b80f5bcc-1d07-3c8b-a250-3991fe378035    packages.scheduler.cronJob.handler.startJob.main    Starting scheduled job packages.middleware.pub.server.core.gcApi
+2026-08-13 18:32:00,012 INFO c.e.m.t.Tenant [DefaultQuartzScheduler_Worker-9] b80f5bcc-1d07-3c8b-a250-3991fe378035    packages.scheduler.cronJob.handler.startJob.main    Updatng database status to running**********************
+2026-08-13 18:32:00,012 INFO c.e.m.t.Tenant [DefaultQuartzScheduler_Worker-9] b80f5bcc-1d07-3c8b-a250-3991fe378035    packages.scheduler.cronJob.handler.startJob.main    Updatng database status to running**********************
+2026-08-13 18:32:00,028 INFO c.e.m.t.Tenant [DefaultQuartzScheduler_Worker-9] b80f5bcc-1d07-3c8b-a250-3991fe378035    packages.scheduler.cronJob.handler.startJob.main    Database updated. Id:5
+2026-08-13 18:32:00,031 INFO c.e.m.t.Tenant [DefaultQuartzScheduler_Worker-9] b80f5bcc-1d07-3c8b-a250-3991fe378035    packages.scheduler.cronJob.handler.startJob.main    SELECT "id", "serviceFqn", "cron", "status", "lasterror", "enabled", "owner_node", "last_run", 
+"next_run", "job_name", "created_time"
+FROM "Schedulers" WHERE "id" = '?';
+2026-08-13 18:32:00,031 INFO c.e.m.t.Tenant [DefaultQuartzScheduler_Worker-9] b80f5bcc-1d07-3c8b-a250-3991fe378035    packages.scheduler.cronJob.handler.startJob.main    gc
+2026-08-13 18:32:00,031 INFO c.e.m.t.Tenant [DefaultQuartzScheduler_Worker-9] b80f5bcc-1d07-3c8b-a250-3991fe378035    packages.scheduler.cronJob.handler.startJob.main    gc
+2026-08-13 18:32:00,031 INFO c.e.m.t.Tenant [DefaultQuartzScheduler_Worker-9] b80f5bcc-1d07-3c8b-a250-3991fe378035    packages.scheduler.cronJob.handler.startJob.main    completed
+2026-08-13 18:32:00,031 INFO c.e.m.t.Tenant [DefaultQuartzScheduler_Worker-9] b80f5bcc-1d07-3c8b-a250-3991fe378035    packages.scheduler.cronJob.handler.startJob.main    packages.middleware.pub.server.core.gcApi
+2026-08-13 18:32:00,031 INFO c.e.m.t.Tenant [DefaultQuartzScheduler_Worker-9] b80f5bcc-1d07-3c8b-a250-3991fe378035    packages.scheduler.cronJob.handler.startJob.main    Task with correlationId: 1d538859-4724-3765-8a5d-5ed6680ae7cb, Completed Successfully
+2026-08-13 18:33:00,013 INFO c.e.m.t.Tenant [DefaultQuartzScheduler_Worker-10] 68ebb37e-9f09-34d5-b991-eecc39c1fb65    packages.scheduler.cronJob.handler.startJob.main    Starting scheduled job packages.middleware.pub.server.core.gcApi
+2026-08-13 18:33:00,013 INFO c.e.m.t.Tenant [DefaultQuartzScheduler_Worker-10] 68ebb37e-9f09-34d5-b991-eecc39c1fb65    packages.scheduler.cronJob.handler.startJob.main    Starting scheduled job packages.middleware.pub.server.core.gcApi
+2026-08-13 18:33:00,013 INFO c.e.m.t.Tenant [DefaultQuartzScheduler_Worker-10] 68ebb37e-9f09-34d5-b991-eecc39c1fb65    packages.scheduler.cronJob.handler.startJob.main    Updatng database status to running**********************
+2026-08-13 18:33:00,013 INFO c.e.m.t.Tenant [DefaultQuartzScheduler_Worker-10] 68ebb37e-9f09-34d5-b991-eecc39c1fb65    packages.scheduler.cronJob.handler.startJob.main    Updatng database status to running**********************
+2026-08-13 18:33:00,013 INFO c.e.m.t.Tenant [DefaultQuartzScheduler_Worker-10] 68ebb37e-9f09-34d5-b991-eecc39c1fb65    packages.scheduler.cronJob.handler.startJob.main    Database updated. Id:5
+2026-08-13 18:33:00,023 INFO c.e.m.t.Tenant [DefaultQuartzScheduler_Worker-10] 68ebb37e-9f09-34d5-b991-eecc39c1fb65    packages.scheduler.cronJob.handler.startJob.main    SELECT "id", "serviceFqn", "cron", "status", "lasterror", "enabled", "owner_node", "last_run", 
+"next_run", "job_name", "created_time"
+FROM "Schedulers" WHERE "id" = '?';
+2026-08-13 18:33:00,029 INFO c.e.m.t.Tenant [DefaultQuartzScheduler_Worker-10] 68ebb37e-9f09-34d5-b991-eecc39c1fb65    packages.scheduler.cronJob.handler.startJob.main    gc
+2026-08-13 18:33:00,029 INFO c.e.m.t.Tenant [DefaultQuartzScheduler_Worker-10] 68ebb37e-9f09-34d5-b991-eecc39c1fb65    packages.scheduler.cronJob.handler.startJob.main    gc
+2026-08-13 18:33:00,029 INFO c.e.m.t.Tenant [DefaultQuartzScheduler_Worker-10] 68ebb37e-9f09-34d5-b991-eecc39c1fb65    packages.scheduler.cronJob.handler.startJob.main    completed
+2026-08-13 18:33:00,029 INFO c.e.m.t.Tenant [DefaultQuartzScheduler_Worker-10] 68ebb37e-9f09-34d5-b991-eecc39c1fb65    packages.scheduler.cronJob.handler.startJob.main    packages.middleware.pub.server.core.gcApi
+2026-08-13 18:33:00,033 INFO c.e.m.t.Tenant [DefaultQuartzScheduler_Worker-10] 68ebb37e-9f09-34d5-b991-eecc39c1fb65    packages.scheduler.cronJob.handler.startJob.main    Task with correlationId: 936b9b14-f805-3f30-a0a4-cfd816d7a91d, Completed Successfully
+2026-08-13 18:34:00,011 INFO c.e.m.t.Tenant [DefaultQuartzScheduler_Worker-1] 820500a9-e272-3b59-85a0-76cedc9f3acd    packages.scheduler.cronJob.handler.startJob.main    Starting scheduled job packages.middleware.pub.server.core.gcApi
+2026-08-13 18:34:00,011 INFO c.e.m.t.Tenant [DefaultQuartzScheduler_Worker-1] 820500a9-e272-3b59-85a0-76cedc9f3acd    packages.scheduler.cronJob.handler.startJob.main    Starting scheduled job packages.middleware.pub.server.core.gcApi
+2026-08-13 18:34:00,011 INFO c.e.m.t.Tenant [DefaultQuartzScheduler_Worker-1] 820500a9-e272-3b59-85a0-76cedc9f3acd    packages.scheduler.cronJob.handler.startJob.main    Updatng database status to running**********************
+2026-08-13 18:34:00,011 INFO c.e.m.t.Tenant [DefaultQuartzScheduler_Worker-1] 820500a9-e272-3b59-85a0-76cedc9f3acd    packages.scheduler.cronJob.handler.startJob.main    Updatng database status to running**********************
+2026-08-13 18:34:00,011 INFO c.e.m.t.Tenant [DefaultQuartzScheduler_Worker-1] 820500a9-e272-3b59-85a0-76cedc9f3acd    packages.scheduler.cronJob.handler.startJob.main    Database updated. Id:5
+2026-08-13 18:34:00,022 INFO c.e.m.t.Tenant [DefaultQuartzScheduler_Worker-1] 820500a9-e272-3b59-85a0-76cedc9f3acd    packages.scheduler.cronJob.handler.startJob.main    SELECT "id", "serviceFqn", "cron", "status", "lasterror", "enabled", "owner_node", "last_run", 
+"next_run", "job_name", "created_time"
+FROM "Schedulers" WHERE "id" = '?';
+2026-08-13 18:34:00,022 INFO c.e.m.t.Tenant [DefaultQuartzScheduler_Worker-1] 820500a9-e272-3b59-85a0-76cedc9f3acd    packages.scheduler.cronJob.handler.startJob.main    gc
+2026-08-13 18:34:00,026 INFO c.e.m.t.Tenant [DefaultQuartzScheduler_Worker-1] 820500a9-e272-3b59-85a0-76cedc9f3acd    packages.scheduler.cronJob.handler.startJob.main    gc
+2026-08-13 18:34:00,030 INFO c.e.m.t.Tenant [DefaultQuartzScheduler_Worker-1] 820500a9-e272-3b59-85a0-76cedc9f3acd    packages.scheduler.cronJob.handler.startJob.main    completed
+2026-08-13 18:34:00,030 INFO c.e.m.t.Tenant [DefaultQuartzScheduler_Worker-1] 820500a9-e272-3b59-85a0-76cedc9f3acd    packages.scheduler.cronJob.handler.startJob.main    packages.middleware.pub.server.core.gcApi
+2026-08-13 18:34:00,031 INFO c.e.m.t.Tenant [DefaultQuartzScheduler_Worker-1] 820500a9-e272-3b59-85a0-76cedc9f3acd    packages.scheduler.cronJob.handler.startJob.main    Task with correlationId: 12153bf4-d130-3fc8-bdae-ed530f88f1bc, Completed Successfully
+2026-08-13 18:35:00,015 INFO c.e.m.t.Tenant [DefaultQuartzScheduler_Worker-2] e890e8f2-d0e0-3c1e-87b3-0529bec24fc1    packages.scheduler.cronJob.handler.startJob.main    Starting scheduled job packages.middleware.pub.server.core.gcApi
+2026-08-13 18:35:00,015 INFO c.e.m.t.Tenant [DefaultQuartzScheduler_Worker-2] e890e8f2-d0e0-3c1e-87b3-0529bec24fc1    packages.scheduler.cronJob.handler.startJob.main    Starting scheduled job packages.middleware.pub.server.core.gcApi
+2026-08-13 18:35:00,017 INFO c.e.m.t.Tenant [DefaultQuartzScheduler_Worker-2] e890e8f2-d0e0-3c1e-87b3-0529bec24fc1    packages.scheduler.cronJob.handler.startJob.main    Updatng database status to running**********************
+2026-08-13 18:35:00,017 INFO c.e.m.t.Tenant [DefaultQuartzScheduler_Worker-2] e890e8f2-d0e0-3c1e-87b3-0529bec24fc1    packages.scheduler.cronJob.handler.startJob.main    Updatng database status to running**********************
+2026-08-13 18:35:00,019 INFO c.e.m.t.Tenant [DefaultQuartzScheduler_Worker-2] e890e8f2-d0e0-3c1e-87b3-0529bec24fc1    packages.scheduler.cronJob.handler.startJob.main    Database updated. Id:5
+2026-08-13 18:35:00,025 INFO c.e.m.t.Tenant [DefaultQuartzScheduler_Worker-2] e890e8f2-d0e0-3c1e-87b3-0529bec24fc1    packages.scheduler.cronJob.handler.startJob.main    SELECT "id", "serviceFqn", "cron", "status", "lasterror", "enabled", "owner_node", "last_run", 
+"next_run", "job_name", "created_time"
+FROM "Schedulers" WHERE "id" = '?';
+2026-08-13 18:35:00,027 INFO c.e.m.t.Tenant [DefaultQuartzScheduler_Worker-2] e890e8f2-d0e0-3c1e-87b3-0529bec24fc1    packages.scheduler.cronJob.handler.startJob.main    gc
+2026-08-13 18:35:00,027 INFO c.e.m.t.Tenant [DefaultQuartzScheduler_Worker-2] e890e8f2-d0e0-3c1e-87b3-0529bec24fc1    packages.scheduler.cronJob.handler.startJob.main    gc
+2026-08-13 18:35:00,027 INFO c.e.m.t.Tenant [DefaultQuartzScheduler_Worker-2] e890e8f2-d0e0-3c1e-87b3-0529bec24fc1    packages.scheduler.cronJob.handler.startJob.main    completed
+2026-08-13 18:35:00,027 INFO c.e.m.t.Tenant [DefaultQuartzScheduler_Worker-2] e890e8f2-d0e0-3c1e-87b3-0529bec24fc1    packages.scheduler.cronJob.handler.startJob.main    packages.middleware.pub.server.core.gcApi
+2026-08-13 18:35:00,027 INFO c.e.m.t.Tenant [DefaultQuartzScheduler_Worker-2] e890e8f2-d0e0-3c1e-87b3-0529bec24fc1    packages.scheduler.cronJob.handler.startJob.main    Task with correlationId: 91f54e21-fe1d-3068-8611-3b47e8f0371f, Completed Successfully
+2026-08-13 18:36:00,016 INFO c.e.m.t.Tenant [DefaultQuartzScheduler_Worker-3] 6616b11f-0483-3d70-b2c1-2fde7cfcb477    packages.scheduler.cronJob.handler.startJob.main    Starting scheduled job packages.middleware.pub.server.core.gcApi
+2026-08-13 18:36:00,016 INFO c.e.m.t.Tenant [DefaultQuartzScheduler_Worker-3] 6616b11f-0483-3d70-b2c1-2fde7cfcb477    packages.scheduler.cronJob.handler.startJob.main    Starting scheduled job packages.middleware.pub.server.core.gcApi
+2026-08-13 18:36:00,016 INFO c.e.m.t.Tenant [DefaultQuartzScheduler_Worker-3] 6616b11f-0483-3d70-b2c1-2fde7cfcb477    packages.scheduler.cronJob.handler.startJob.main    Updatng database status to running**********************
+2026-08-13 18:36:00,016 INFO c.e.m.t.Tenant [DefaultQuartzScheduler_Worker-3] 6616b11f-0483-3d70-b2c1-2fde7cfcb477    packages.scheduler.cronJob.handler.startJob.main    Updatng database status to running**********************
+2026-08-13 18:36:00,016 INFO c.e.m.t.Tenant [DefaultQuartzScheduler_Worker-3] 6616b11f-0483-3d70-b2c1-2fde7cfcb477    packages.scheduler.cronJob.handler.startJob.main    Database updated. Id:5
+2026-08-13 18:36:00,032 INFO c.e.m.t.Tenant [DefaultQuartzScheduler_Worker-3] 6616b11f-0483-3d70-b2c1-2fde7cfcb477    packages.scheduler.cronJob.handler.startJob.main    SELECT "id", "serviceFqn", "cron", "status", "lasterror", "enabled", "owner_node", "last_run", 
+"next_run", "job_name", "created_time"
+FROM "Schedulers" WHERE "id" = '?';
+2026-08-13 18:36:00,032 INFO c.e.m.t.Tenant [DefaultQuartzScheduler_Worker-3] 6616b11f-0483-3d70-b2c1-2fde7cfcb477    packages.scheduler.cronJob.handler.startJob.main    gc
+2026-08-13 18:36:00,032 INFO c.e.m.t.Tenant [DefaultQuartzScheduler_Worker-3] 6616b11f-0483-3d70-b2c1-2fde7cfcb477    packages.scheduler.cronJob.handler.startJob.main    gc
+2026-08-13 18:36:00,032 INFO c.e.m.t.Tenant [DefaultQuartzScheduler_Worker-3] 6616b11f-0483-3d70-b2c1-2fde7cfcb477    packages.scheduler.cronJob.handler.startJob.main    completed
+2026-08-13 18:36:00,032 INFO c.e.m.t.Tenant [DefaultQuartzScheduler_Worker-3] 6616b11f-0483-3d70-b2c1-2fde7cfcb477    packages.scheduler.cronJob.handler.startJob.main    packages.middleware.pub.server.core.gcApi
+2026-08-13 18:36:00,032 INFO c.e.m.t.Tenant [DefaultQuartzScheduler_Worker-3] 6616b11f-0483-3d70-b2c1-2fde7cfcb477    packages.scheduler.cronJob.handler.startJob.main    Task with correlationId: 995a1f22-912b-374d-bd63-4461d33bbc55, Completed Successfully
+2026-08-13 18:37:00,014 INFO c.e.m.t.Tenant [DefaultQuartzScheduler_Worker-4] 3796c050-adfb-3f66-af9b-263a0bda2603    packages.scheduler.cronJob.handler.startJob.main    Starting scheduled job packages.middleware.pub.server.core.gcApi
+2026-08-13 18:37:00,014 INFO c.e.m.t.Tenant [DefaultQuartzScheduler_Worker-4] 3796c050-adfb-3f66-af9b-263a0bda2603    packages.scheduler.cronJob.handler.startJob.main    Starting scheduled job packages.middleware.pub.server.core.gcApi
+2026-08-13 18:37:00,024 INFO c.e.m.t.Tenant [DefaultQuartzScheduler_Worker-4] 3796c050-adfb-3f66-af9b-263a0bda2603    packages.scheduler.cronJob.handler.startJob.main    Updatng database status to running**********************
+2026-08-13 18:37:00,024 INFO c.e.m.t.Tenant [DefaultQuartzScheduler_Worker-4] 3796c050-adfb-3f66-af9b-263a0bda2603    packages.scheduler.cronJob.handler.startJob.main    Updatng database status to running**********************
+2026-08-13 18:37:00,024 INFO c.e.m.t.Tenant [DefaultQuartzScheduler_Worker-4] 3796c050-adfb-3f66-af9b-263a0bda2603    packages.scheduler.cronJob.handler.startJob.main    Database updated. Id:5
+2026-08-13 18:37:00,030 INFO c.e.m.t.Tenant [DefaultQuartzScheduler_Worker-4] 3796c050-adfb-3f66-af9b-263a0bda2603    packages.scheduler.cronJob.handler.startJob.main    SELECT "id", "serviceFqn", "cron", "status", "lasterror", "enabled", "owner_node", "last_run", 
+"next_run", "job_name", "created_time"
+FROM "Schedulers" WHERE "id" = '?';
+2026-08-13 18:37:00,030 INFO c.e.m.t.Tenant [DefaultQuartzScheduler_Worker-4] 3796c050-adfb-3f66-af9b-263a0bda2603    packages.scheduler.cronJob.handler.startJob.main    gc
+2026-08-13 18:37:00,030 INFO c.e.m.t.Tenant [DefaultQuartzScheduler_Worker-4] 3796c050-adfb-3f66-af9b-263a0bda2603    packages.scheduler.cronJob.handler.startJob.main    gc
+2026-08-13 18:37:00,030 INFO c.e.m.t.Tenant [DefaultQuartzScheduler_Worker-4] 3796c050-adfb-3f66-af9b-263a0bda2603    packages.scheduler.cronJob.handler.startJob.main    completed
+2026-08-13 18:37:00,030 INFO c.e.m.t.Tenant [DefaultQuartzScheduler_Worker-4] 3796c050-adfb-3f66-af9b-263a0bda2603    packages.scheduler.cronJob.handler.startJob.main    packages.middleware.pub.server.core.gcApi
+2026-08-13 18:37:00,030 INFO c.e.m.t.Tenant [DefaultQuartzScheduler_Worker-4] 3796c050-adfb-3f66-af9b-263a0bda2603    packages.scheduler.cronJob.handler.startJob.main    Task with correlationId: fe2bd5cd-f1f7-348d-95ea-d46e9d065933, Completed Successfully
+2026-08-13 18:38:00,013 INFO c.e.m.t.Tenant [DefaultQuartzScheduler_Worker-5] a8862e68-bd21-39e7-a6a4-a2e6ca231ee8    packages.scheduler.cronJob.handler.startJob.main    Starting scheduled job packages.middleware.pub.server.core.gcApi
+2026-08-13 18:38:00,013 INFO c.e.m.t.Tenant [DefaultQuartzScheduler_Worker-5] a8862e68-bd21-39e7-a6a4-a2e6ca231ee8    packages.scheduler.cronJob.handler.startJob.main    Starting scheduled job packages.middleware.pub.server.core.gcApi
+2026-08-13 18:38:00,013 INFO c.e.m.t.Tenant [DefaultQuartzScheduler_Worker-5] a8862e68-bd21-39e7-a6a4-a2e6ca231ee8    packages.scheduler.cronJob.handler.startJob.main    Updatng database status to running**********************
+2026-08-13 18:38:00,013 INFO c.e.m.t.Tenant [DefaultQuartzScheduler_Worker-5] a8862e68-bd21-39e7-a6a4-a2e6ca231ee8    packages.scheduler.cronJob.handler.startJob.main    Updatng database status to running**********************
+2026-08-13 18:38:00,013 INFO c.e.m.t.Tenant [DefaultQuartzScheduler_Worker-5] a8862e68-bd21-39e7-a6a4-a2e6ca231ee8    packages.scheduler.cronJob.handler.startJob.main    Database updated. Id:5
+2026-08-13 18:38:00,027 INFO c.e.m.t.Tenant [DefaultQuartzScheduler_Worker-5] a8862e68-bd21-39e7-a6a4-a2e6ca231ee8    packages.scheduler.cronJob.handler.startJob.main    SELECT "id", "serviceFqn", "cron", "status", "lasterror", "enabled", "owner_node", "last_run", 
+"next_run", "job_name", "created_time"
+FROM "Schedulers" WHERE "id" = '?';
+2026-08-13 18:38:00,027 INFO c.e.m.t.Tenant [DefaultQuartzScheduler_Worker-5] a8862e68-bd21-39e7-a6a4-a2e6ca231ee8    packages.scheduler.cronJob.handler.startJob.main    gc
+2026-08-13 18:38:00,027 INFO c.e.m.t.Tenant [DefaultQuartzScheduler_Worker-5] a8862e68-bd21-39e7-a6a4-a2e6ca231ee8    packages.scheduler.cronJob.handler.startJob.main    gc
+2026-08-13 18:38:00,027 INFO c.e.m.t.Tenant [DefaultQuartzScheduler_Worker-5] a8862e68-bd21-39e7-a6a4-a2e6ca231ee8    packages.scheduler.cronJob.handler.startJob.main    completed
+2026-08-13 18:38:00,027 INFO c.e.m.t.Tenant [DefaultQuartzScheduler_Worker-5] a8862e68-bd21-39e7-a6a4-a2e6ca231ee8    packages.scheduler.cronJob.handler.startJob.main    packages.middleware.pub.server.core.gcApi
+2026-08-13 18:38:00,039 INFO c.e.m.t.Tenant [DefaultQuartzScheduler_Worker-5] a8862e68-bd21-39e7-a6a4-a2e6ca231ee8    packages.scheduler.cronJob.handler.startJob.main    Task with correlationId: a84986d3-e493-3ebd-af44-694d433cfba2, Completed Successfully
+2026-08-13 18:39:00,020 INFO c.e.m.t.Tenant [DefaultQuartzScheduler_Worker-6] 86933c1d-ceb0-3f04-b6bc-4860c290cd7a    packages.scheduler.cronJob.handler.startJob.main    Starting scheduled job packages.middleware.pub.server.core.gcApi
+2026-08-13 18:39:00,020 INFO c.e.m.t.Tenant [DefaultQuartzScheduler_Worker-6] 86933c1d-ceb0-3f04-b6bc-4860c290cd7a    packages.scheduler.cronJob.handler.startJob.main    Starting scheduled job packages.middleware.pub.server.core.gcApi
+2026-08-13 18:39:00,022 INFO c.e.m.t.Tenant [DefaultQuartzScheduler_Worker-6] 86933c1d-ceb0-3f04-b6bc-4860c290cd7a    packages.scheduler.cronJob.handler.startJob.main    Updatng database status to running**********************
+2026-08-13 18:39:00,022 INFO c.e.m.t.Tenant [DefaultQuartzScheduler_Worker-6] 86933c1d-ceb0-3f04-b6bc-4860c290cd7a    packages.scheduler.cronJob.handler.startJob.main    Updatng database status to running**********************
+2026-08-13 18:39:00,025 INFO c.e.m.t.Tenant [DefaultQuartzScheduler_Worker-6] 86933c1d-ceb0-3f04-b6bc-4860c290cd7a    packages.scheduler.cronJob.handler.startJob.main    Database updated. Id:5
+2026-08-13 18:39:00,025 INFO c.e.m.t.Tenant [DefaultQuartzScheduler_Worker-6] 86933c1d-ceb0-3f04-b6bc-4860c290cd7a    packages.scheduler.cronJob.handler.startJob.main    SELECT "id", "serviceFqn", "cron", "status", "lasterror", "enabled", "owner_node", "last_run", 
+"next_run", "job_name", "created_time"
+FROM "Schedulers" WHERE "id" = '?';
+2026-08-13 18:39:00,025 INFO c.e.m.t.Tenant [DefaultQuartzScheduler_Worker-6] 86933c1d-ceb0-3f04-b6bc-4860c290cd7a    packages.scheduler.cronJob.handler.startJob.main    gc
+2026-08-13 18:39:00,025 INFO c.e.m.t.Tenant [DefaultQuartzScheduler_Worker-6] 86933c1d-ceb0-3f04-b6bc-4860c290cd7a    packages.scheduler.cronJob.handler.startJob.main    gc
+2026-08-13 18:39:00,025 INFO c.e.m.t.Tenant [DefaultQuartzScheduler_Worker-6] 86933c1d-ceb0-3f04-b6bc-4860c290cd7a    packages.scheduler.cronJob.handler.startJob.main    completed
+2026-08-13 18:39:00,025 INFO c.e.m.t.Tenant [DefaultQuartzScheduler_Worker-6] 86933c1d-ceb0-3f04-b6bc-4860c290cd7a    packages.scheduler.cronJob.handler.startJob.main    packages.middleware.pub.server.core.gcApi
+2026-08-13 18:39:00,041 INFO c.e.m.t.Tenant [DefaultQuartzScheduler_Worker-6] 86933c1d-ceb0-3f04-b6bc-4860c290cd7a    packages.scheduler.cronJob.handler.startJob.main    Task with correlationId: f0f258b2-4612-3ff5-a223-226539046bed, Completed Successfully
+2026-08-13 18:40:00,017 INFO c.e.m.t.Tenant [DefaultQuartzScheduler_Worker-7] 2158772b-0e37-38ef-bf12-b5ad715974cc    packages.scheduler.cronJob.handler.startJob.main    Starting scheduled job packages.middleware.pub.server.core.gcApi
+2026-08-13 18:40:00,018 INFO c.e.m.t.Tenant [DefaultQuartzScheduler_Worker-7] 2158772b-0e37-38ef-bf12-b5ad715974cc    packages.scheduler.cronJob.handler.startJob.main    Starting scheduled job packages.middleware.pub.server.core.gcApi
+2026-08-13 18:40:00,019 INFO c.e.m.t.Tenant [DefaultQuartzScheduler_Worker-7] 2158772b-0e37-38ef-bf12-b5ad715974cc    packages.scheduler.cronJob.handler.startJob.main    Updatng database status to running**********************
+2026-08-13 18:40:00,019 INFO c.e.m.t.Tenant [DefaultQuartzScheduler_Worker-7] 2158772b-0e37-38ef-bf12-b5ad715974cc    packages.scheduler.cronJob.handler.startJob.main    Updatng database status to running**********************
+2026-08-13 18:40:00,022 INFO c.e.m.t.Tenant [DefaultQuartzScheduler_Worker-7] 2158772b-0e37-38ef-bf12-b5ad715974cc    packages.scheduler.cronJob.handler.startJob.main    Database updated. Id:5
+2026-08-13 18:40:00,027 INFO c.e.m.t.Tenant [DefaultQuartzScheduler_Worker-7] 2158772b-0e37-38ef-bf12-b5ad715974cc    packages.scheduler.cronJob.handler.startJob.main    SELECT "id", "serviceFqn", "cron", "status", "lasterror", "enabled", "owner_node", "last_run", 
+"next_run", "job_name", "created_time"
+FROM "Schedulers" WHERE "id" = '?';
+2026-08-13 18:40:00,030 INFO c.e.m.t.Tenant [DefaultQuartzScheduler_Worker-7] 2158772b-0e37-38ef-bf12-b5ad715974cc    packages.scheduler.cronJob.handler.startJob.main    gc
+2026-08-13 18:40:00,030 INFO c.e.m.t.Tenant [DefaultQuartzScheduler_Worker-7] 2158772b-0e37-38ef-bf12-b5ad715974cc    packages.scheduler.cronJob.handler.startJob.main    gc
+2026-08-13 18:40:00,030 INFO c.e.m.t.Tenant [DefaultQuartzScheduler_Worker-7] 2158772b-0e37-38ef-bf12-b5ad715974cc    packages.scheduler.cronJob.handler.startJob.main    completed
+2026-08-13 18:40:00,030 INFO c.e.m.t.Tenant [DefaultQuartzScheduler_Worker-7] 2158772b-0e37-38ef-bf12-b5ad715974cc    packages.scheduler.cronJob.handler.startJob.main    packages.middleware.pub.server.core.gcApi
+2026-08-13 18:40:00,030 INFO c.e.m.t.Tenant [DefaultQuartzScheduler_Worker-7] 2158772b-0e37-38ef-bf12-b5ad715974cc    packages.scheduler.cronJob.handler.startJob.main    Task with correlationId: 55d59714-a796-3fd0-b5ba-d0e10d468613, Completed Successfully
+2026-08-13 18:41:00,013 INFO c.e.m.t.Tenant [DefaultQuartzScheduler_Worker-8] 915b92c6-b1a3-3463-a166-4db9a4d99775    packages.scheduler.cronJob.handler.startJob.main    Starting scheduled job packages.middleware.pub.server.core.gcApi
+2026-08-13 18:41:00,013 INFO c.e.m.t.Tenant [DefaultQuartzScheduler_Worker-8] 915b92c6-b1a3-3463-a166-4db9a4d99775    packages.scheduler.cronJob.handler.startJob.main    Starting scheduled job packages.middleware.pub.server.core.gcApi
+2026-08-13 18:41:00,016 INFO c.e.m.t.Tenant [DefaultQuartzScheduler_Worker-8] 915b92c6-b1a3-3463-a166-4db9a4d99775    packages.scheduler.cronJob.handler.startJob.main    Updatng database status to running**********************
+2026-08-13 18:41:00,016 INFO c.e.m.t.Tenant [DefaultQuartzScheduler_Worker-8] 915b92c6-b1a3-3463-a166-4db9a4d99775    packages.scheduler.cronJob.handler.startJob.main    Updatng database status to running**********************
+2026-08-13 18:41:00,021 INFO c.e.m.t.Tenant [DefaultQuartzScheduler_Worker-8] 915b92c6-b1a3-3463-a166-4db9a4d99775    packages.scheduler.cronJob.handler.startJob.main    Database updated. Id:5
+2026-08-13 18:41:00,027 INFO c.e.m.t.Tenant [DefaultQuartzScheduler_Worker-8] 915b92c6-b1a3-3463-a166-4db9a4d99775    packages.scheduler.cronJob.handler.startJob.main    SELECT "id", "serviceFqn", "cron", "status", "lasterror", "enabled", "owner_node", "last_run", 
+"next_run", "job_name", "created_time"
+FROM "Schedulers" WHERE "id" = '?';
+2026-08-13 18:41:00,032 INFO c.e.m.t.Tenant [DefaultQuartzScheduler_Worker-8] 915b92c6-b1a3-3463-a166-4db9a4d99775    packages.scheduler.cronJob.handler.startJob.main    gc
+2026-08-13 18:41:00,032 INFO c.e.m.t.Tenant [DefaultQuartzScheduler_Worker-8] 915b92c6-b1a3-3463-a166-4db9a4d99775    packages.scheduler.cronJob.handler.startJob.main    gc
+2026-08-13 18:41:00,034 INFO c.e.m.t.Tenant [DefaultQuartzScheduler_Worker-8] 915b92c6-b1a3-3463-a166-4db9a4d99775    packages.scheduler.cronJob.handler.startJob.main    completed
+2026-08-13 18:41:00,034 INFO c.e.m.t.Tenant [DefaultQuartzScheduler_Worker-8] 915b92c6-b1a3-3463-a166-4db9a4d99775    packages.scheduler.cronJob.handler.startJob.main    packages.middleware.pub.server.core.gcApi
+2026-08-13 18:41:00,043 INFO c.e.m.t.Tenant [DefaultQuartzScheduler_Worker-8] 915b92c6-b1a3-3463-a166-4db9a4d99775    packages.scheduler.cronJob.handler.startJob.main    Task with correlationId: 49aa92b2-b470-3a34-b5d4-d743bf34966e, Completed Successfully
+2026-08-13 18:42:00,015 INFO c.e.m.t.Tenant [DefaultQuartzScheduler_Worker-9] 0bb141f7-aa00-3fc0-bdbb-af20e2f257f4    packages.scheduler.cronJob.handler.startJob.main    Starting scheduled job packages.middleware.pub.server.core.gcApi
+2026-08-13 18:42:00,015 INFO c.e.m.t.Tenant [DefaultQuartzScheduler_Worker-9] 0bb141f7-aa00-3fc0-bdbb-af20e2f257f4    packages.scheduler.cronJob.handler.startJob.main    Starting scheduled job packages.middleware.pub.server.core.gcApi
+2026-08-13 18:42:00,016 INFO c.e.m.t.Tenant [DefaultQuartzScheduler_Worker-9] 0bb141f7-aa00-3fc0-bdbb-af20e2f257f4    packages.scheduler.cronJob.handler.startJob.main    Updatng database status to running**********************
+2026-08-13 18:42:00,016 INFO c.e.m.t.Tenant [DefaultQuartzScheduler_Worker-9] 0bb141f7-aa00-3fc0-bdbb-af20e2f257f4    packages.scheduler.cronJob.handler.startJob.main    Updatng database status to running**********************
+2026-08-13 18:42:00,019 INFO c.e.m.t.Tenant [DefaultQuartzScheduler_Worker-9] 0bb141f7-aa00-3fc0-bdbb-af20e2f257f4    packages.scheduler.cronJob.handler.startJob.main    Database updated. Id:5
+2026-08-13 18:42:00,025 INFO c.e.m.t.Tenant [DefaultQuartzScheduler_Worker-9] 0bb141f7-aa00-3fc0-bdbb-af20e2f257f4    packages.scheduler.cronJob.handler.startJob.main    SELECT "id", "serviceFqn", "cron", "status", "lasterror", "enabled", "owner_node", "last_run", 
+"next_run", "job_name", "created_time"
+FROM "Schedulers" WHERE "id" = '?';
+2026-08-13 18:42:00,027 INFO c.e.m.t.Tenant [DefaultQuartzScheduler_Worker-9] 0bb141f7-aa00-3fc0-bdbb-af20e2f257f4    packages.scheduler.cronJob.handler.startJob.main    gc
+2026-08-13 18:42:00,027 INFO c.e.m.t.Tenant [DefaultQuartzScheduler_Worker-9] 0bb141f7-aa00-3fc0-bdbb-af20e2f257f4    packages.scheduler.cronJob.handler.startJob.main    gc
+2026-08-13 18:42:00,030 INFO c.e.m.t.Tenant [DefaultQuartzScheduler_Worker-9] 0bb141f7-aa00-3fc0-bdbb-af20e2f257f4    packages.scheduler.cronJob.handler.startJob.main    completed
+2026-08-13 18:42:00,030 INFO c.e.m.t.Tenant [DefaultQuartzScheduler_Worker-9] 0bb141f7-aa00-3fc0-bdbb-af20e2f257f4    packages.scheduler.cronJob.handler.startJob.main    packages.middleware.pub.server.core.gcApi
+2026-08-13 18:42:00,035 INFO c.e.m.t.Tenant [DefaultQuartzScheduler_Worker-9] 0bb141f7-aa00-3fc0-bdbb-af20e2f257f4    packages.scheduler.cronJob.handler.startJob.main    Task with correlationId: 9339d2de-be85-3fdc-b988-7df37cf90701, Completed Successfully
+2026-08-13 18:43:00,016 INFO c.e.m.t.Tenant [DefaultQuartzScheduler_Worker-10] 743cdb25-7a47-39cf-9f47-a42fd77ed1d5    packages.scheduler.cronJob.handler.startJob.main    Starting scheduled job packages.middleware.pub.server.core.gcApi
+2026-08-13 18:43:00,016 INFO c.e.m.t.Tenant [DefaultQuartzScheduler_Worker-10] 743cdb25-7a47-39cf-9f47-a42fd77ed1d5    packages.scheduler.cronJob.handler.startJob.main    Starting scheduled job packages.middleware.pub.server.core.gcApi
+2026-08-13 18:43:00,016 INFO c.e.m.t.Tenant [DefaultQuartzScheduler_Worker-10] 743cdb25-7a47-39cf-9f47-a42fd77ed1d5    packages.scheduler.cronJob.handler.startJob.main    Updatng database status to running**********************
+2026-08-13 18:43:00,016 INFO c.e.m.t.Tenant [DefaultQuartzScheduler_Worker-10] 743cdb25-7a47-39cf-9f47-a42fd77ed1d5    packages.scheduler.cronJob.handler.startJob.main    Updatng database status to running**********************
+2026-08-13 18:43:00,016 INFO c.e.m.t.Tenant [DefaultQuartzScheduler_Worker-10] 743cdb25-7a47-39cf-9f47-a42fd77ed1d5    packages.scheduler.cronJob.handler.startJob.main    Database updated. Id:5
+2026-08-13 18:43:00,034 INFO c.e.m.t.Tenant [DefaultQuartzScheduler_Worker-10] 743cdb25-7a47-39cf-9f47-a42fd77ed1d5    packages.scheduler.cronJob.handler.startJob.main    SELECT "id", "serviceFqn", "cron", "status", "lasterror", "enabled", "owner_node", "last_run", 
+"next_run", "job_name", "created_time"
+FROM "Schedulers" WHERE "id" = '?';
+2026-08-13 18:43:00,034 INFO c.e.m.t.Tenant [DefaultQuartzScheduler_Worker-10] 743cdb25-7a47-39cf-9f47-a42fd77ed1d5    packages.scheduler.cronJob.handler.startJob.main    gc
+2026-08-13 18:43:00,034 INFO c.e.m.t.Tenant [DefaultQuartzScheduler_Worker-10] 743cdb25-7a47-39cf-9f47-a42fd77ed1d5    packages.scheduler.cronJob.handler.startJob.main    gc
+2026-08-13 18:43:00,034 INFO c.e.m.t.Tenant [DefaultQuartzScheduler_Worker-10] 743cdb25-7a47-39cf-9f47-a42fd77ed1d5    packages.scheduler.cronJob.handler.startJob.main    completed
+2026-08-13 18:43:00,034 INFO c.e.m.t.Tenant [DefaultQuartzScheduler_Worker-10] 743cdb25-7a47-39cf-9f47-a42fd77ed1d5    packages.scheduler.cronJob.handler.startJob.main    packages.middleware.pub.server.core.gcApi
+2026-08-13 18:43:00,034 INFO c.e.m.t.Tenant [DefaultQuartzScheduler_Worker-10] 743cdb25-7a47-39cf-9f47-a42fd77ed1d5    packages.scheduler.cronJob.handler.startJob.main    Task with correlationId: eb99ae11-d1d2-3ae1-a1ab-619e162294de, Completed Successfully
+2026-08-13 18:44:00,016 INFO c.e.m.t.Tenant [DefaultQuartzScheduler_Worker-1] c9cb3fad-3e9f-3082-8c49-56c3c573b7da    packages.scheduler.cronJob.handler.startJob.main    Starting scheduled job packages.middleware.pub.server.core.gcApi
+2026-08-13 18:44:00,016 INFO c.e.m.t.Tenant [DefaultQuartzScheduler_Worker-1] c9cb3fad-3e9f-3082-8c49-56c3c573b7da    packages.scheduler.cronJob.handler.startJob.main    Starting scheduled job packages.middleware.pub.server.core.gcApi
+2026-08-13 18:44:00,016 INFO c.e.m.t.Tenant [DefaultQuartzScheduler_Worker-1] c9cb3fad-3e9f-3082-8c49-56c3c573b7da    packages.scheduler.cronJob.handler.startJob.main    Updatng database status to running**********************
+2026-08-13 18:44:00,016 INFO c.e.m.t.Tenant [DefaultQuartzScheduler_Worker-1] c9cb3fad-3e9f-3082-8c49-56c3c573b7da    packages.scheduler.cronJob.handler.startJob.main    Updatng database status to running**********************
+2026-08-13 18:44:00,026 INFO c.e.m.t.Tenant [DefaultQuartzScheduler_Worker-1] c9cb3fad-3e9f-3082-8c49-56c3c573b7da    packages.scheduler.cronJob.handler.startJob.main    Database updated. Id:5
+2026-08-13 18:44:00,026 INFO c.e.m.t.Tenant [DefaultQuartzScheduler_Worker-1] c9cb3fad-3e9f-3082-8c49-56c3c573b7da    packages.scheduler.cronJob.handler.startJob.main    SELECT "id", "serviceFqn", "cron", "status", "lasterror", "enabled", "owner_node", "last_run", 
+"next_run", "job_name", "created_time"
+FROM "Schedulers" WHERE "id" = '?';
+2026-08-13 18:44:00,026 INFO c.e.m.t.Tenant [DefaultQuartzScheduler_Worker-1] c9cb3fad-3e9f-3082-8c49-56c3c573b7da    packages.scheduler.cronJob.handler.startJob.main    gc
+2026-08-13 18:44:00,026 INFO c.e.m.t.Tenant [DefaultQuartzScheduler_Worker-1] c9cb3fad-3e9f-3082-8c49-56c3c573b7da    packages.scheduler.cronJob.handler.startJob.main    gc
+2026-08-13 18:44:00,034 INFO c.e.m.t.Tenant [DefaultQuartzScheduler_Worker-1] c9cb3fad-3e9f-3082-8c49-56c3c573b7da    packages.scheduler.cronJob.handler.startJob.main    completed
+2026-08-13 18:44:00,034 INFO c.e.m.t.Tenant [DefaultQuartzScheduler_Worker-1] c9cb3fad-3e9f-3082-8c49-56c3c573b7da    packages.scheduler.cronJob.handler.startJob.main    packages.middleware.pub.server.core.gcApi
+2026-08-13 18:44:00,034 INFO c.e.m.t.Tenant [DefaultQuartzScheduler_Worker-1] c9cb3fad-3e9f-3082-8c49-56c3c573b7da    packages.scheduler.cronJob.handler.startJob.main    Task with correlationId: 5e3a4fc9-58a9-3082-8ad0-ef379d50ca01, Completed Successfully
+2026-08-13 18:45:00,011 INFO c.e.m.t.Tenant [DefaultQuartzScheduler_Worker-2] 8071ef32-bbb0-30ce-b0a7-bdbe465d6cd0    packages.scheduler.cronJob.handler.startJob.main    Starting scheduled job packages.middleware.pub.server.core.gcApi
+2026-08-13 18:45:00,011 INFO c.e.m.t.Tenant [DefaultQuartzScheduler_Worker-2] 8071ef32-bbb0-30ce-b0a7-bdbe465d6cd0    packages.scheduler.cronJob.handler.startJob.main    Starting scheduled job packages.middleware.pub.server.core.gcApi
+2026-08-13 18:45:00,011 INFO c.e.m.t.Tenant [DefaultQuartzScheduler_Worker-2] 8071ef32-bbb0-30ce-b0a7-bdbe465d6cd0    packages.scheduler.cronJob.handler.startJob.main    Updatng database status to running**********************
+2026-08-13 18:45:00,011 INFO c.e.m.t.Tenant [DefaultQuartzScheduler_Worker-2] 8071ef32-bbb0-30ce-b0a7-bdbe465d6cd0    packages.scheduler.cronJob.handler.startJob.main    Updatng database status to running**********************
+2026-08-13 18:45:00,028 INFO c.e.m.t.Tenant [DefaultQuartzScheduler_Worker-2] 8071ef32-bbb0-30ce-b0a7-bdbe465d6cd0    packages.scheduler.cronJob.handler.startJob.main    Database updated. Id:5
+2026-08-13 18:45:00,028 INFO c.e.m.t.Tenant [DefaultQuartzScheduler_Worker-2] 8071ef32-bbb0-30ce-b0a7-bdbe465d6cd0    packages.scheduler.cronJob.handler.startJob.main    SELECT "id", "serviceFqn", "cron", "status", "lasterror", "enabled", "owner_node", "last_run", 
+"next_run", "job_name", "created_time"
+FROM "Schedulers" WHERE "id" = '?';
+2026-08-13 18:45:00,028 INFO c.e.m.t.Tenant [DefaultQuartzScheduler_Worker-2] 8071ef32-bbb0-30ce-b0a7-bdbe465d6cd0    packages.scheduler.cronJob.handler.startJob.main    gc
+2026-08-13 18:45:00,028 INFO c.e.m.t.Tenant [DefaultQuartzScheduler_Worker-2] 8071ef32-bbb0-30ce-b0a7-bdbe465d6cd0    packages.scheduler.cronJob.handler.startJob.main    gc
+2026-08-13 18:45:00,028 INFO c.e.m.t.Tenant [DefaultQuartzScheduler_Worker-2] 8071ef32-bbb0-30ce-b0a7-bdbe465d6cd0    packages.scheduler.cronJob.handler.startJob.main    completed
+2026-08-13 18:45:00,028 INFO c.e.m.t.Tenant [DefaultQuartzScheduler_Worker-2] 8071ef32-bbb0-30ce-b0a7-bdbe465d6cd0    packages.scheduler.cronJob.handler.startJob.main    packages.middleware.pub.server.core.gcApi
+2026-08-13 18:45:00,028 INFO c.e.m.t.Tenant [DefaultQuartzScheduler_Worker-2] 8071ef32-bbb0-30ce-b0a7-bdbe465d6cd0    packages.scheduler.cronJob.handler.startJob.main    Task with correlationId: 58cb291d-68d4-38bd-97b8-0368f1eb8021, Completed Successfully
+2026-08-13 18:46:00,011 INFO c.e.m.t.Tenant [DefaultQuartzScheduler_Worker-3] d4c49aaf-5116-376b-a12a-7dd2b96e496e    packages.scheduler.cronJob.handler.startJob.main    Starting scheduled job packages.middleware.pub.server.core.gcApi
+2026-08-13 18:46:00,011 INFO c.e.m.t.Tenant [DefaultQuartzScheduler_Worker-3] d4c49aaf-5116-376b-a12a-7dd2b96e496e    packages.scheduler.cronJob.handler.startJob.main    Starting scheduled job packages.middleware.pub.server.core.gcApi
+2026-08-13 18:46:00,013 INFO c.e.m.t.Tenant [DefaultQuartzScheduler_Worker-3] d4c49aaf-5116-376b-a12a-7dd2b96e496e    packages.scheduler.cronJob.handler.startJob.main    Updatng database status to running**********************
+2026-08-13 18:46:00,013 INFO c.e.m.t.Tenant [DefaultQuartzScheduler_Worker-3] d4c49aaf-5116-376b-a12a-7dd2b96e496e    packages.scheduler.cronJob.handler.startJob.main    Updatng database status to running**********************
+2026-08-13 18:46:00,015 INFO c.e.m.t.Tenant [DefaultQuartzScheduler_Worker-3] d4c49aaf-5116-376b-a12a-7dd2b96e496e    packages.scheduler.cronJob.handler.startJob.main    Database updated. Id:5
+2026-08-13 18:46:00,022 INFO c.e.m.t.Tenant [DefaultQuartzScheduler_Worker-3] d4c49aaf-5116-376b-a12a-7dd2b96e496e    packages.scheduler.cronJob.handler.startJob.main    SELECT "id", "serviceFqn", "cron", "status", "lasterror", "enabled", "owner_node", "last_run", 
+"next_run", "job_name", "created_time"
+FROM "Schedulers" WHERE "id" = '?';
+2026-08-13 18:46:00,023 INFO c.e.m.t.Tenant [DefaultQuartzScheduler_Worker-3] d4c49aaf-5116-376b-a12a-7dd2b96e496e    packages.scheduler.cronJob.handler.startJob.main    gc
+2026-08-13 18:46:00,024 INFO c.e.m.t.Tenant [DefaultQuartzScheduler_Worker-3] d4c49aaf-5116-376b-a12a-7dd2b96e496e    packages.scheduler.cronJob.handler.startJob.main    gc
+2026-08-13 18:46:00,026 INFO c.e.m.t.Tenant [DefaultQuartzScheduler_Worker-3] d4c49aaf-5116-376b-a12a-7dd2b96e496e    packages.scheduler.cronJob.handler.startJob.main    completed
+2026-08-13 18:46:00,026 INFO c.e.m.t.Tenant [DefaultQuartzScheduler_Worker-3] d4c49aaf-5116-376b-a12a-7dd2b96e496e    packages.scheduler.cronJob.handler.startJob.main    packages.middleware.pub.server.core.gcApi
+2026-08-13 18:46:00,031 INFO c.e.m.t.Tenant [DefaultQuartzScheduler_Worker-3] d4c49aaf-5116-376b-a12a-7dd2b96e496e    packages.scheduler.cronJob.handler.startJob.main    Task with correlationId: a7ce4ae3-4ea8-3cfe-be39-579ef3e10f22, Completed Successfully
+2026-08-13 18:47:00,015 INFO c.e.m.t.Tenant [DefaultQuartzScheduler_Worker-4] 585cecd9-2abb-3259-ab77-ba011955fd09    packages.scheduler.cronJob.handler.startJob.main    Starting scheduled job packages.middleware.pub.server.core.gcApi
+2026-08-13 18:47:00,015 INFO c.e.m.t.Tenant [DefaultQuartzScheduler_Worker-4] 585cecd9-2abb-3259-ab77-ba011955fd09    packages.scheduler.cronJob.handler.startJob.main    Starting scheduled job packages.middleware.pub.server.core.gcApi
+2026-08-13 18:47:00,017 INFO c.e.m.t.Tenant [DefaultQuartzScheduler_Worker-4] 585cecd9-2abb-3259-ab77-ba011955fd09    packages.scheduler.cronJob.handler.startJob.main    Updatng database status to running**********************
+2026-08-13 18:47:00,017 INFO c.e.m.t.Tenant [DefaultQuartzScheduler_Worker-4] 585cecd9-2abb-3259-ab77-ba011955fd09    packages.scheduler.cronJob.handler.startJob.main    Updatng database status to running**********************
+2026-08-13 18:47:00,019 INFO c.e.m.t.Tenant [DefaultQuartzScheduler_Worker-4] 585cecd9-2abb-3259-ab77-ba011955fd09    packages.scheduler.cronJob.handler.startJob.main    Database updated. Id:5
+2026-08-13 18:47:00,021 INFO c.e.m.t.Tenant [DefaultQuartzScheduler_Worker-4] 585cecd9-2abb-3259-ab77-ba011955fd09    packages.scheduler.cronJob.handler.startJob.main    SELECT "id", "serviceFqn", "cron", "status", "lasterror", "enabled", "owner_node", "last_run", 
+"next_run", "job_name", "created_time"
+FROM "Schedulers" WHERE "id" = '?';
+2026-08-13 18:47:00,021 INFO c.e.m.t.Tenant [DefaultQuartzScheduler_Worker-4] 585cecd9-2abb-3259-ab77-ba011955fd09    packages.scheduler.cronJob.handler.startJob.main    gc
+2026-08-13 18:47:00,021 INFO c.e.m.t.Tenant [DefaultQuartzScheduler_Worker-4] 585cecd9-2abb-3259-ab77-ba011955fd09    packages.scheduler.cronJob.handler.startJob.main    gc
+2026-08-13 18:47:00,021 INFO c.e.m.t.Tenant [DefaultQuartzScheduler_Worker-4] 585cecd9-2abb-3259-ab77-ba011955fd09    packages.scheduler.cronJob.handler.startJob.main    completed
+2026-08-13 18:47:00,021 INFO c.e.m.t.Tenant [DefaultQuartzScheduler_Worker-4] 585cecd9-2abb-3259-ab77-ba011955fd09    packages.scheduler.cronJob.handler.startJob.main    packages.middleware.pub.server.core.gcApi
+2026-08-13 18:47:00,021 INFO c.e.m.t.Tenant [DefaultQuartzScheduler_Worker-4] 585cecd9-2abb-3259-ab77-ba011955fd09    packages.scheduler.cronJob.handler.startJob.main    Task with correlationId: 563e779b-f8ed-32f5-9c27-6c8bd26e4573, Completed Successfully
+2026-08-13 18:48:00,011 INFO c.e.m.t.Tenant [DefaultQuartzScheduler_Worker-5] 82426d9c-4a6a-3b95-ac29-fb3dca99e674    packages.scheduler.cronJob.handler.startJob.main    Starting scheduled job packages.middleware.pub.server.core.gcApi
+2026-08-13 18:48:00,011 INFO c.e.m.t.Tenant [DefaultQuartzScheduler_Worker-5] 82426d9c-4a6a-3b95-ac29-fb3dca99e674    packages.scheduler.cronJob.handler.startJob.main    Starting scheduled job packages.middleware.pub.server.core.gcApi
+2026-08-13 18:48:00,012 INFO c.e.m.t.Tenant [DefaultQuartzScheduler_Worker-5] 82426d9c-4a6a-3b95-ac29-fb3dca99e674    packages.scheduler.cronJob.handler.startJob.main    Updatng database status to running**********************
+2026-08-13 18:48:00,012 INFO c.e.m.t.Tenant [DefaultQuartzScheduler_Worker-5] 82426d9c-4a6a-3b95-ac29-fb3dca99e674    packages.scheduler.cronJob.handler.startJob.main    Updatng database status to running**********************
+2026-08-13 18:48:00,016 INFO c.e.m.t.Tenant [DefaultQuartzScheduler_Worker-5] 82426d9c-4a6a-3b95-ac29-fb3dca99e674    packages.scheduler.cronJob.handler.startJob.main    Database updated. Id:5
+2026-08-13 18:48:00,021 INFO c.e.m.t.Tenant [DefaultQuartzScheduler_Worker-5] 82426d9c-4a6a-3b95-ac29-fb3dca99e674    packages.scheduler.cronJob.handler.startJob.main    SELECT "id", "serviceFqn", "cron", "status", "lasterror", "enabled", "owner_node", "last_run", 
+"next_run", "job_name", "created_time"
+FROM "Schedulers" WHERE "id" = '?';
+2026-08-13 18:48:00,022 INFO c.e.m.t.Tenant [DefaultQuartzScheduler_Worker-5] 82426d9c-4a6a-3b95-ac29-fb3dca99e674    packages.scheduler.cronJob.handler.startJob.main    gc
+2026-08-13 18:48:00,022 INFO c.e.m.t.Tenant [DefaultQuartzScheduler_Worker-5] 82426d9c-4a6a-3b95-ac29-fb3dca99e674    packages.scheduler.cronJob.handler.startJob.main    gc
+2026-08-13 18:48:00,025 INFO c.e.m.t.Tenant [DefaultQuartzScheduler_Worker-5] 82426d9c-4a6a-3b95-ac29-fb3dca99e674    packages.scheduler.cronJob.handler.startJob.main    completed
+2026-08-13 18:48:00,025 INFO c.e.m.t.Tenant [DefaultQuartzScheduler_Worker-5] 82426d9c-4a6a-3b95-ac29-fb3dca99e674    packages.scheduler.cronJob.handler.startJob.main    packages.middleware.pub.server.core.gcApi
+2026-08-13 18:48:00,026 INFO c.e.m.t.Tenant [DefaultQuartzScheduler_Worker-5] 82426d9c-4a6a-3b95-ac29-fb3dca99e674    packages.scheduler.cronJob.handler.startJob.main    Task with correlationId: 3b05bb6a-270d-388b-b168-2710baee206e, Completed Successfully
+2026-08-13 18:49:00,023 INFO c.e.m.t.Tenant [DefaultQuartzScheduler_Worker-6] 470ca7f5-05ef-3f3b-80ce-20a753a0997b    packages.scheduler.cronJob.handler.startJob.main    Starting scheduled job packages.middleware.pub.server.core.gcApi
+2026-08-13 18:49:00,023 INFO c.e.m.t.Tenant [DefaultQuartzScheduler_Worker-6] 470ca7f5-05ef-3f3b-80ce-20a753a0997b    packages.scheduler.cronJob.handler.startJob.main    Starting scheduled job packages.middleware.pub.server.core.gcApi
+2026-08-13 18:49:00,023 INFO c.e.m.t.Tenant [DefaultQuartzScheduler_Worker-6] 470ca7f5-05ef-3f3b-80ce-20a753a0997b    packages.scheduler.cronJob.handler.startJob.main    Updatng database status to running**********************
+2026-08-13 18:49:00,023 INFO c.e.m.t.Tenant [DefaultQuartzScheduler_Worker-6] 470ca7f5-05ef-3f3b-80ce-20a753a0997b    packages.scheduler.cronJob.handler.startJob.main    Updatng database status to running**********************
+2026-08-13 18:49:00,023 INFO c.e.m.t.Tenant [DefaultQuartzScheduler_Worker-6] 470ca7f5-05ef-3f3b-80ce-20a753a0997b    packages.scheduler.cronJob.handler.startJob.main    Database updated. Id:5
+2026-08-13 18:49:00,039 INFO c.e.m.t.Tenant [DefaultQuartzScheduler_Worker-6] 470ca7f5-05ef-3f3b-80ce-20a753a0997b    packages.scheduler.cronJob.handler.startJob.main    SELECT "id", "serviceFqn", "cron", "status", "lasterror", "enabled", "owner_node", "last_run", 
+"next_run", "job_name", "created_time"
+FROM "Schedulers" WHERE "id" = '?';
+2026-08-13 18:49:00,039 INFO c.e.m.t.Tenant [DefaultQuartzScheduler_Worker-6] 470ca7f5-05ef-3f3b-80ce-20a753a0997b    packages.scheduler.cronJob.handler.startJob.main    gc
+2026-08-13 18:49:00,039 INFO c.e.m.t.Tenant [DefaultQuartzScheduler_Worker-6] 470ca7f5-05ef-3f3b-80ce-20a753a0997b    packages.scheduler.cronJob.handler.startJob.main    gc
+2026-08-13 18:49:00,039 INFO c.e.m.t.Tenant [DefaultQuartzScheduler_Worker-6] 470ca7f5-05ef-3f3b-80ce-20a753a0997b    packages.scheduler.cronJob.handler.startJob.main    completed
+2026-08-13 18:49:00,039 INFO c.e.m.t.Tenant [DefaultQuartzScheduler_Worker-6] 470ca7f5-05ef-3f3b-80ce-20a753a0997b    packages.scheduler.cronJob.handler.startJob.main    packages.middleware.pub.server.core.gcApi
+2026-08-13 18:49:00,039 INFO c.e.m.t.Tenant [DefaultQuartzScheduler_Worker-6] 470ca7f5-05ef-3f3b-80ce-20a753a0997b    packages.scheduler.cronJob.handler.startJob.main    Task with correlationId: bbd08afd-d223-3b5d-98aa-33a8c988118f, Completed Successfully
+2026-08-13 18:50:00,004 INFO c.e.m.t.Tenant [DefaultQuartzScheduler_Worker-7] 7117210b-1fe1-368c-af9b-aec667d64c1b    packages.scheduler.cronJob.handler.startJob.main    Starting scheduled job packages.middleware.pub.server.core.gcApi
+2026-08-13 18:50:00,004 INFO c.e.m.t.Tenant [DefaultQuartzScheduler_Worker-7] 7117210b-1fe1-368c-af9b-aec667d64c1b    packages.scheduler.cronJob.handler.startJob.main    Starting scheduled job packages.middleware.pub.server.core.gcApi
+2026-08-13 18:50:00,004 INFO c.e.m.t.Tenant [DefaultQuartzScheduler_Worker-7] 7117210b-1fe1-368c-af9b-aec667d64c1b    packages.scheduler.cronJob.handler.startJob.main    Updatng database status to running**********************
+2026-08-13 18:50:00,004 INFO c.e.m.t.Tenant [DefaultQuartzScheduler_Worker-7] 7117210b-1fe1-368c-af9b-aec667d64c1b    packages.scheduler.cronJob.handler.startJob.main    Updatng database status to running**********************
+2026-08-13 18:50:00,023 INFO c.e.m.t.Tenant [DefaultQuartzScheduler_Worker-7] 7117210b-1fe1-368c-af9b-aec667d64c1b    packages.scheduler.cronJob.handler.startJob.main    Database updated. Id:5
+2026-08-13 18:50:00,023 INFO c.e.m.t.Tenant [DefaultQuartzScheduler_Worker-7] 7117210b-1fe1-368c-af9b-aec667d64c1b    packages.scheduler.cronJob.handler.startJob.main    SELECT "id", "serviceFqn", "cron", "status", "lasterror", "enabled", "owner_node", "last_run", 
+"next_run", "job_name", "created_time"
+FROM "Schedulers" WHERE "id" = '?';
+2026-08-13 18:50:00,023 INFO c.e.m.t.Tenant [DefaultQuartzScheduler_Worker-7] 7117210b-1fe1-368c-af9b-aec667d64c1b    packages.scheduler.cronJob.handler.startJob.main    gc
+2026-08-13 18:50:00,023 INFO c.e.m.t.Tenant [DefaultQuartzScheduler_Worker-7] 7117210b-1fe1-368c-af9b-aec667d64c1b    packages.scheduler.cronJob.handler.startJob.main    gc
+2026-08-13 18:50:00,023 INFO c.e.m.t.Tenant [DefaultQuartzScheduler_Worker-7] 7117210b-1fe1-368c-af9b-aec667d64c1b    packages.scheduler.cronJob.handler.startJob.main    completed
+2026-08-13 18:50:00,023 INFO c.e.m.t.Tenant [DefaultQuartzScheduler_Worker-7] 7117210b-1fe1-368c-af9b-aec667d64c1b    packages.scheduler.cronJob.handler.startJob.main    packages.middleware.pub.server.core.gcApi
+2026-08-13 18:50:00,036 INFO c.e.m.t.Tenant [DefaultQuartzScheduler_Worker-7] 7117210b-1fe1-368c-af9b-aec667d64c1b    packages.scheduler.cronJob.handler.startJob.main    Task with correlationId: 94408dbe-eb26-3a88-9bfd-9de6b7c2a113, Completed Successfully
+2026-08-13 18:51:00,026 INFO c.e.m.t.Tenant [DefaultQuartzScheduler_Worker-8] de108295-e40e-35c3-853e-5bfc5d9cc572    packages.scheduler.cronJob.handler.startJob.main    Starting scheduled job packages.middleware.pub.server.core.gcApi
+2026-08-13 18:51:00,026 INFO c.e.m.t.Tenant [DefaultQuartzScheduler_Worker-8] de108295-e40e-35c3-853e-5bfc5d9cc572    packages.scheduler.cronJob.handler.startJob.main    Starting scheduled job packages.middleware.pub.server.core.gcApi
+2026-08-13 18:51:00,028 INFO c.e.m.t.Tenant [DefaultQuartzScheduler_Worker-8] de108295-e40e-35c3-853e-5bfc5d9cc572    packages.scheduler.cronJob.handler.startJob.main    Updatng database status to running**********************
+2026-08-13 18:51:00,028 INFO c.e.m.t.Tenant [DefaultQuartzScheduler_Worker-8] de108295-e40e-35c3-853e-5bfc5d9cc572    packages.scheduler.cronJob.handler.startJob.main    Updatng database status to running**********************
+2026-08-13 18:51:00,032 INFO c.e.m.t.Tenant [DefaultQuartzScheduler_Worker-8] de108295-e40e-35c3-853e-5bfc5d9cc572    packages.scheduler.cronJob.handler.startJob.main    Database updated. Id:5
+2026-08-13 18:51:00,039 INFO c.e.m.t.Tenant [DefaultQuartzScheduler_Worker-8] de108295-e40e-35c3-853e-5bfc5d9cc572    packages.scheduler.cronJob.handler.startJob.main    SELECT "id", "serviceFqn", "cron", "status", "lasterror", "enabled", "owner_node", "last_run", 
+"next_run", "job_name", "created_time"
+FROM "Schedulers" WHERE "id" = '?';
+2026-08-13 18:51:00,039 INFO c.e.m.t.Tenant [DefaultQuartzScheduler_Worker-8] de108295-e40e-35c3-853e-5bfc5d9cc572    packages.scheduler.cronJob.handler.startJob.main    gc
+2026-08-13 18:51:00,041 INFO c.e.m.t.Tenant [DefaultQuartzScheduler_Worker-8] de108295-e40e-35c3-853e-5bfc5d9cc572    packages.scheduler.cronJob.handler.startJob.main    gc
+2026-08-13 18:51:00,042 INFO c.e.m.t.Tenant [DefaultQuartzScheduler_Worker-8] de108295-e40e-35c3-853e-5bfc5d9cc572    packages.scheduler.cronJob.handler.startJob.main    completed
+2026-08-13 18:51:00,042 INFO c.e.m.t.Tenant [DefaultQuartzScheduler_Worker-8] de108295-e40e-35c3-853e-5bfc5d9cc572    packages.scheduler.cronJob.handler.startJob.main    packages.middleware.pub.server.core.gcApi
+2026-08-13 18:51:00,045 INFO c.e.m.t.Tenant [DefaultQuartzScheduler_Worker-8] de108295-e40e-35c3-853e-5bfc5d9cc572    packages.scheduler.cronJob.handler.startJob.main    Task with correlationId: fb8566dd-a3bb-3156-9f2e-ebd8b1e412fa, Completed Successfully
+2026-08-13 18:52:00,011 INFO c.e.m.t.Tenant [DefaultQuartzScheduler_Worker-9] 808f85c7-4fd6-3b9d-8bd1-d4440b77311b    packages.scheduler.cronJob.handler.startJob.main    Starting scheduled job packages.middleware.pub.server.core.gcApi
+2026-08-13 18:52:00,011 INFO c.e.m.t.Tenant [DefaultQuartzScheduler_Worker-9] 808f85c7-4fd6-3b9d-8bd1-d4440b77311b    packages.scheduler.cronJob.handler.startJob.main    Starting scheduled job packages.middleware.pub.server.core.gcApi
+2026-08-13 18:52:00,011 INFO c.e.m.t.Tenant [DefaultQuartzScheduler_Worker-9] 808f85c7-4fd6-3b9d-8bd1-d4440b77311b    packages.scheduler.cronJob.handler.startJob.main    Updatng database status to running**********************
+2026-08-13 18:52:00,011 INFO c.e.m.t.Tenant [DefaultQuartzScheduler_Worker-9] 808f85c7-4fd6-3b9d-8bd1-d4440b77311b    packages.scheduler.cronJob.handler.startJob.main    Updatng database status to running**********************
+2026-08-13 18:52:00,017 INFO c.e.m.t.Tenant [DefaultQuartzScheduler_Worker-9] 808f85c7-4fd6-3b9d-8bd1-d4440b77311b    packages.scheduler.cronJob.handler.startJob.main    Database updated. Id:5
+2026-08-13 18:52:00,017 INFO c.e.m.t.Tenant [DefaultQuartzScheduler_Worker-9] 808f85c7-4fd6-3b9d-8bd1-d4440b77311b    packages.scheduler.cronJob.handler.startJob.main    SELECT "id", "serviceFqn", "cron", "status", "lasterror", "enabled", "owner_node", "last_run", 
+"next_run", "job_name", "created_time"
+FROM "Schedulers" WHERE "id" = '?';
+2026-08-13 18:52:00,017 INFO c.e.m.t.Tenant [DefaultQuartzScheduler_Worker-9] 808f85c7-4fd6-3b9d-8bd1-d4440b77311b    packages.scheduler.cronJob.handler.startJob.main    gc
+2026-08-13 18:52:00,017 INFO c.e.m.t.Tenant [DefaultQuartzScheduler_Worker-9] 808f85c7-4fd6-3b9d-8bd1-d4440b77311b    packages.scheduler.cronJob.handler.startJob.main    gc
+2026-08-13 18:52:00,017 INFO c.e.m.t.Tenant [DefaultQuartzScheduler_Worker-9] 808f85c7-4fd6-3b9d-8bd1-d4440b77311b    packages.scheduler.cronJob.handler.startJob.main    completed
+2026-08-13 18:52:00,017 INFO c.e.m.t.Tenant [DefaultQuartzScheduler_Worker-9] 808f85c7-4fd6-3b9d-8bd1-d4440b77311b    packages.scheduler.cronJob.handler.startJob.main    packages.middleware.pub.server.core.gcApi
+2026-08-13 18:52:00,017 INFO c.e.m.t.Tenant [DefaultQuartzScheduler_Worker-9] 808f85c7-4fd6-3b9d-8bd1-d4440b77311b    packages.scheduler.cronJob.handler.startJob.main    Task with correlationId: 40806d1e-444f-32c8-8376-62f361e848b0, Completed Successfully
+2026-08-13 18:53:00,009 INFO c.e.m.t.Tenant [DefaultQuartzScheduler_Worker-10] 2ffe3d49-b4b7-37b0-b7a6-5e9f9610454f    packages.scheduler.cronJob.handler.startJob.main    Starting scheduled job packages.middleware.pub.server.core.gcApi
+2026-08-13 18:53:00,009 INFO c.e.m.t.Tenant [DefaultQuartzScheduler_Worker-10] 2ffe3d49-b4b7-37b0-b7a6-5e9f9610454f    packages.scheduler.cronJob.handler.startJob.main    Starting scheduled job packages.middleware.pub.server.core.gcApi
+2026-08-13 18:53:00,011 INFO c.e.m.t.Tenant [DefaultQuartzScheduler_Worker-10] 2ffe3d49-b4b7-37b0-b7a6-5e9f9610454f    packages.scheduler.cronJob.handler.startJob.main    Updatng database status to running**********************
+2026-08-13 18:53:00,011 INFO c.e.m.t.Tenant [DefaultQuartzScheduler_Worker-10] 2ffe3d49-b4b7-37b0-b7a6-5e9f9610454f    packages.scheduler.cronJob.handler.startJob.main    Updatng database status to running**********************
+2026-08-13 18:53:00,016 INFO c.e.m.t.Tenant [DefaultQuartzScheduler_Worker-10] 2ffe3d49-b4b7-37b0-b7a6-5e9f9610454f    packages.scheduler.cronJob.handler.startJob.main    Database updated. Id:5
+2026-08-13 18:53:00,020 INFO c.e.m.t.Tenant [DefaultQuartzScheduler_Worker-10] 2ffe3d49-b4b7-37b0-b7a6-5e9f9610454f    packages.scheduler.cronJob.handler.startJob.main    SELECT "id", "serviceFqn", "cron", "status", "lasterror", "enabled", "owner_node", "last_run", 
+"next_run", "job_name", "created_time"
+FROM "Schedulers" WHERE "id" = '?';
+2026-08-13 18:53:00,020 INFO c.e.m.t.Tenant [DefaultQuartzScheduler_Worker-10] 2ffe3d49-b4b7-37b0-b7a6-5e9f9610454f    packages.scheduler.cronJob.handler.startJob.main    gc
+2026-08-13 18:53:00,020 INFO c.e.m.t.Tenant [DefaultQuartzScheduler_Worker-10] 2ffe3d49-b4b7-37b0-b7a6-5e9f9610454f    packages.scheduler.cronJob.handler.startJob.main    gc
+2026-08-13 18:53:00,020 INFO c.e.m.t.Tenant [DefaultQuartzScheduler_Worker-10] 2ffe3d49-b4b7-37b0-b7a6-5e9f9610454f    packages.scheduler.cronJob.handler.startJob.main    completed
+2026-08-13 18:53:00,020 INFO c.e.m.t.Tenant [DefaultQuartzScheduler_Worker-10] 2ffe3d49-b4b7-37b0-b7a6-5e9f9610454f    packages.scheduler.cronJob.handler.startJob.main    packages.middleware.pub.server.core.gcApi
+2026-08-13 18:53:00,020 INFO c.e.m.t.Tenant [DefaultQuartzScheduler_Worker-10] 2ffe3d49-b4b7-37b0-b7a6-5e9f9610454f    packages.scheduler.cronJob.handler.startJob.main    Task with correlationId: 30813bfc-1f5e-3661-a28c-0eaf5f3e9b1f, Completed Successfully
+2026-08-13 18:54:00,015 INFO c.e.m.t.Tenant [DefaultQuartzScheduler_Worker-1] 37ce65e1-0e04-393b-87fe-c07a6f178144    packages.scheduler.cronJob.handler.startJob.main    Starting scheduled job packages.middleware.pub.server.core.gcApi
+2026-08-13 18:54:00,015 INFO c.e.m.t.Tenant [DefaultQuartzScheduler_Worker-1] 37ce65e1-0e04-393b-87fe-c07a6f178144    packages.scheduler.cronJob.handler.startJob.main    Starting scheduled job packages.middleware.pub.server.core.gcApi
+2026-08-13 18:54:00,015 INFO c.e.m.t.Tenant [DefaultQuartzScheduler_Worker-1] 37ce65e1-0e04-393b-87fe-c07a6f178144    packages.scheduler.cronJob.handler.startJob.main    Updatng database status to running**********************
+2026-08-13 18:54:00,015 INFO c.e.m.t.Tenant [DefaultQuartzScheduler_Worker-1] 37ce65e1-0e04-393b-87fe-c07a6f178144    packages.scheduler.cronJob.handler.startJob.main    Updatng database status to running**********************
+2026-08-13 18:54:00,015 INFO c.e.m.t.Tenant [DefaultQuartzScheduler_Worker-1] 37ce65e1-0e04-393b-87fe-c07a6f178144    packages.scheduler.cronJob.handler.startJob.main    Database updated. Id:5
+2026-08-13 18:54:00,033 INFO c.e.m.t.Tenant [DefaultQuartzScheduler_Worker-1] 37ce65e1-0e04-393b-87fe-c07a6f178144    packages.scheduler.cronJob.handler.startJob.main    SELECT "id", "serviceFqn", "cron", "status", "lasterror", "enabled", "owner_node", "last_run", 
+"next_run", "job_name", "created_time"
+FROM "Schedulers" WHERE "id" = '?';
+2026-08-13 18:54:00,033 INFO c.e.m.t.Tenant [DefaultQuartzScheduler_Worker-1] 37ce65e1-0e04-393b-87fe-c07a6f178144    packages.scheduler.cronJob.handler.startJob.main    gc
+2026-08-13 18:54:00,033 INFO c.e.m.t.Tenant [DefaultQuartzScheduler_Worker-1] 37ce65e1-0e04-393b-87fe-c07a6f178144    packages.scheduler.cronJob.handler.startJob.main    gc
+2026-08-13 18:54:00,033 INFO c.e.m.t.Tenant [DefaultQuartzScheduler_Worker-1] 37ce65e1-0e04-393b-87fe-c07a6f178144    packages.scheduler.cronJob.handler.startJob.main    completed
+2026-08-13 18:54:00,033 INFO c.e.m.t.Tenant [DefaultQuartzScheduler_Worker-1] 37ce65e1-0e04-393b-87fe-c07a6f178144    packages.scheduler.cronJob.handler.startJob.main    packages.middleware.pub.server.core.gcApi
+2026-08-13 18:54:00,033 INFO c.e.m.t.Tenant [DefaultQuartzScheduler_Worker-1] 37ce65e1-0e04-393b-87fe-c07a6f178144    packages.scheduler.cronJob.handler.startJob.main    Task with correlationId: 1c0ee2f7-d435-399d-93fb-09189c0e72fe, Completed Successfully
+2026-08-13 18:55:00,014 INFO c.e.m.t.Tenant [DefaultQuartzScheduler_Worker-2] 8daafe7a-eac4-3c4e-a5ac-676be20d69ae    packages.scheduler.cronJob.handler.startJob.main    Starting scheduled job packages.middleware.pub.server.core.gcApi
+2026-08-13 18:55:00,014 INFO c.e.m.t.Tenant [DefaultQuartzScheduler_Worker-2] 8daafe7a-eac4-3c4e-a5ac-676be20d69ae    packages.scheduler.cronJob.handler.startJob.main    Starting scheduled job packages.middleware.pub.server.core.gcApi
+2026-08-13 18:55:00,014 INFO c.e.m.t.Tenant [DefaultQuartzScheduler_Worker-2] 8daafe7a-eac4-3c4e-a5ac-676be20d69ae    packages.scheduler.cronJob.handler.startJob.main    Updatng database status to running**********************
+2026-08-13 18:55:00,014 INFO c.e.m.t.Tenant [DefaultQuartzScheduler_Worker-2] 8daafe7a-eac4-3c4e-a5ac-676be20d69ae    packages.scheduler.cronJob.handler.startJob.main    Updatng database status to running**********************
+2026-08-13 18:55:00,014 INFO c.e.m.t.Tenant [DefaultQuartzScheduler_Worker-2] 8daafe7a-eac4-3c4e-a5ac-676be20d69ae    packages.scheduler.cronJob.handler.startJob.main    Database updated. Id:5
+2026-08-13 18:55:00,030 INFO c.e.m.t.Tenant [DefaultQuartzScheduler_Worker-2] 8daafe7a-eac4-3c4e-a5ac-676be20d69ae    packages.scheduler.cronJob.handler.startJob.main    SELECT "id", "serviceFqn", "cron", "status", "lasterror", "enabled", "owner_node", "last_run", 
+"next_run", "job_name", "created_time"
+FROM "Schedulers" WHERE "id" = '?';
+2026-08-13 18:55:00,030 INFO c.e.m.t.Tenant [DefaultQuartzScheduler_Worker-2] 8daafe7a-eac4-3c4e-a5ac-676be20d69ae    packages.scheduler.cronJob.handler.startJob.main    gc
+2026-08-13 18:55:00,030 INFO c.e.m.t.Tenant [DefaultQuartzScheduler_Worker-2] 8daafe7a-eac4-3c4e-a5ac-676be20d69ae    packages.scheduler.cronJob.handler.startJob.main    gc
+2026-08-13 18:55:00,030 INFO c.e.m.t.Tenant [DefaultQuartzScheduler_Worker-2] 8daafe7a-eac4-3c4e-a5ac-676be20d69ae    packages.scheduler.cronJob.handler.startJob.main    completed
+2026-08-13 18:55:00,030 INFO c.e.m.t.Tenant [DefaultQuartzScheduler_Worker-2] 8daafe7a-eac4-3c4e-a5ac-676be20d69ae    packages.scheduler.cronJob.handler.startJob.main    packages.middleware.pub.server.core.gcApi
+2026-08-13 18:55:00,030 INFO c.e.m.t.Tenant [DefaultQuartzScheduler_Worker-2] 8daafe7a-eac4-3c4e-a5ac-676be20d69ae    packages.scheduler.cronJob.handler.startJob.main    Task with correlationId: 0f33eee3-5678-34f4-9417-2aeb8cfba943, Completed Successfully
+2026-08-13 18:56:00,011 INFO c.e.m.t.Tenant [DefaultQuartzScheduler_Worker-3] 6bd33a21-0396-3c9c-aa6b-935f8d2da70b    packages.scheduler.cronJob.handler.startJob.main    Starting scheduled job packages.middleware.pub.server.core.gcApi
+2026-08-13 18:56:00,011 INFO c.e.m.t.Tenant [DefaultQuartzScheduler_Worker-3] 6bd33a21-0396-3c9c-aa6b-935f8d2da70b    packages.scheduler.cronJob.handler.startJob.main    Starting scheduled job packages.middleware.pub.server.core.gcApi
+2026-08-13 18:56:00,011 INFO c.e.m.t.Tenant [DefaultQuartzScheduler_Worker-3] 6bd33a21-0396-3c9c-aa6b-935f8d2da70b    packages.scheduler.cronJob.handler.startJob.main    Updatng database status to running**********************
+2026-08-13 18:56:00,011 INFO c.e.m.t.Tenant [DefaultQuartzScheduler_Worker-3] 6bd33a21-0396-3c9c-aa6b-935f8d2da70b    packages.scheduler.cronJob.handler.startJob.main    Updatng database status to running**********************
+2026-08-13 18:56:00,028 INFO c.e.m.t.Tenant [DefaultQuartzScheduler_Worker-3] 6bd33a21-0396-3c9c-aa6b-935f8d2da70b    packages.scheduler.cronJob.handler.startJob.main    Database updated. Id:5
+2026-08-13 18:56:00,028 INFO c.e.m.t.Tenant [DefaultQuartzScheduler_Worker-3] 6bd33a21-0396-3c9c-aa6b-935f8d2da70b    packages.scheduler.cronJob.handler.startJob.main    SELECT "id", "serviceFqn", "cron", "status", "lasterror", "enabled", "owner_node", "last_run", 
+"next_run", "job_name", "created_time"
+FROM "Schedulers" WHERE "id" = '?';
+2026-08-13 18:56:00,028 INFO c.e.m.t.Tenant [DefaultQuartzScheduler_Worker-3] 6bd33a21-0396-3c9c-aa6b-935f8d2da70b    packages.scheduler.cronJob.handler.startJob.main    gc
+2026-08-13 18:56:00,028 INFO c.e.m.t.Tenant [DefaultQuartzScheduler_Worker-3] 6bd33a21-0396-3c9c-aa6b-935f8d2da70b    packages.scheduler.cronJob.handler.startJob.main    gc
+2026-08-13 18:56:00,028 INFO c.e.m.t.Tenant [DefaultQuartzScheduler_Worker-3] 6bd33a21-0396-3c9c-aa6b-935f8d2da70b    packages.scheduler.cronJob.handler.startJob.main    completed
+2026-08-13 18:56:00,028 INFO c.e.m.t.Tenant [DefaultQuartzScheduler_Worker-3] 6bd33a21-0396-3c9c-aa6b-935f8d2da70b    packages.scheduler.cronJob.handler.startJob.main    packages.middleware.pub.server.core.gcApi
+2026-08-13 18:56:00,044 INFO c.e.m.t.Tenant [DefaultQuartzScheduler_Worker-3] 6bd33a21-0396-3c9c-aa6b-935f8d2da70b    packages.scheduler.cronJob.handler.startJob.main    Task with correlationId: 404caf38-9e7f-3180-b349-c234ecfc3482, Completed Successfully
+2026-08-13 18:57:00,005 INFO c.e.m.t.Tenant [DefaultQuartzScheduler_Worker-4] 38ba004d-2ba6-3fa6-97f7-5bf9d7b07d33    packages.scheduler.cronJob.handler.startJob.main    Starting scheduled job packages.middleware.pub.server.core.gcApi
+2026-08-13 18:57:00,005 INFO c.e.m.t.Tenant [DefaultQuartzScheduler_Worker-4] 38ba004d-2ba6-3fa6-97f7-5bf9d7b07d33    packages.scheduler.cronJob.handler.startJob.main    Starting scheduled job packages.middleware.pub.server.core.gcApi
+2026-08-13 18:57:00,005 INFO c.e.m.t.Tenant [DefaultQuartzScheduler_Worker-4] 38ba004d-2ba6-3fa6-97f7-5bf9d7b07d33    packages.scheduler.cronJob.handler.startJob.main    Updatng database status to running**********************
+2026-08-13 18:57:00,005 INFO c.e.m.t.Tenant [DefaultQuartzScheduler_Worker-4] 38ba004d-2ba6-3fa6-97f7-5bf9d7b07d33    packages.scheduler.cronJob.handler.startJob.main    Updatng database status to running**********************
+2026-08-13 18:57:00,021 INFO c.e.m.t.Tenant [DefaultQuartzScheduler_Worker-4] 38ba004d-2ba6-3fa6-97f7-5bf9d7b07d33    packages.scheduler.cronJob.handler.startJob.main    Database updated. Id:5
+2026-08-13 18:57:00,021 INFO c.e.m.t.Tenant [DefaultQuartzScheduler_Worker-4] 38ba004d-2ba6-3fa6-97f7-5bf9d7b07d33    packages.scheduler.cronJob.handler.startJob.main    SELECT "id", "serviceFqn", "cron", "status", "lasterror", "enabled", "owner_node", "last_run", 
+"next_run", "job_name", "created_time"
+FROM "Schedulers" WHERE "id" = '?';
+2026-08-13 18:57:00,021 INFO c.e.m.t.Tenant [DefaultQuartzScheduler_Worker-4] 38ba004d-2ba6-3fa6-97f7-5bf9d7b07d33    packages.scheduler.cronJob.handler.startJob.main    gc
+2026-08-13 18:57:00,021 INFO c.e.m.t.Tenant [DefaultQuartzScheduler_Worker-4] 38ba004d-2ba6-3fa6-97f7-5bf9d7b07d33    packages.scheduler.cronJob.handler.startJob.main    gc
+2026-08-13 18:57:00,021 INFO c.e.m.t.Tenant [DefaultQuartzScheduler_Worker-4] 38ba004d-2ba6-3fa6-97f7-5bf9d7b07d33    packages.scheduler.cronJob.handler.startJob.main    completed
+2026-08-13 18:57:00,021 INFO c.e.m.t.Tenant [DefaultQuartzScheduler_Worker-4] 38ba004d-2ba6-3fa6-97f7-5bf9d7b07d33    packages.scheduler.cronJob.handler.startJob.main    packages.middleware.pub.server.core.gcApi
+2026-08-13 18:57:00,021 INFO c.e.m.t.Tenant [DefaultQuartzScheduler_Worker-4] 38ba004d-2ba6-3fa6-97f7-5bf9d7b07d33    packages.scheduler.cronJob.handler.startJob.main    Task with correlationId: 22b5df5a-58e6-34bb-9e8d-12d4b089fe44, Completed Successfully
+2026-08-13 18:58:00,009 INFO c.e.m.t.Tenant [DefaultQuartzScheduler_Worker-5] 422c4d49-fc4c-36c8-94d8-801090fd3b82    packages.scheduler.cronJob.handler.startJob.main    Starting scheduled job packages.middleware.pub.server.core.gcApi
+2026-08-13 18:58:00,009 INFO c.e.m.t.Tenant [DefaultQuartzScheduler_Worker-5] 422c4d49-fc4c-36c8-94d8-801090fd3b82    packages.scheduler.cronJob.handler.startJob.main    Starting scheduled job packages.middleware.pub.server.core.gcApi
+2026-08-13 18:58:00,009 INFO c.e.m.t.Tenant [DefaultQuartzScheduler_Worker-5] 422c4d49-fc4c-36c8-94d8-801090fd3b82    packages.scheduler.cronJob.handler.startJob.main    Updatng database status to running**********************
+2026-08-13 18:58:00,009 INFO c.e.m.t.Tenant [DefaultQuartzScheduler_Worker-5] 422c4d49-fc4c-36c8-94d8-801090fd3b82    packages.scheduler.cronJob.handler.startJob.main    Updatng database status to running**********************
+2026-08-13 18:58:00,009 INFO c.e.m.t.Tenant [DefaultQuartzScheduler_Worker-5] 422c4d49-fc4c-36c8-94d8-801090fd3b82    packages.scheduler.cronJob.handler.startJob.main    Database updated. Id:5
+2026-08-13 18:58:00,026 INFO c.e.m.t.Tenant [DefaultQuartzScheduler_Worker-5] 422c4d49-fc4c-36c8-94d8-801090fd3b82    packages.scheduler.cronJob.handler.startJob.main    SELECT "id", "serviceFqn", "cron", "status", "lasterror", "enabled", "owner_node", "last_run", 
+"next_run", "job_name", "created_time"
+FROM "Schedulers" WHERE "id" = '?';
+2026-08-13 18:58:00,028 INFO c.e.m.t.Tenant [DefaultQuartzScheduler_Worker-5] 422c4d49-fc4c-36c8-94d8-801090fd3b82    packages.scheduler.cronJob.handler.startJob.main    gc
+2026-08-13 18:58:00,028 INFO c.e.m.t.Tenant [DefaultQuartzScheduler_Worker-5] 422c4d49-fc4c-36c8-94d8-801090fd3b82    packages.scheduler.cronJob.handler.startJob.main    gc
+2026-08-13 18:58:00,030 INFO c.e.m.t.Tenant [DefaultQuartzScheduler_Worker-5] 422c4d49-fc4c-36c8-94d8-801090fd3b82    packages.scheduler.cronJob.handler.startJob.main    completed
+2026-08-13 18:58:00,031 INFO c.e.m.t.Tenant [DefaultQuartzScheduler_Worker-5] 422c4d49-fc4c-36c8-94d8-801090fd3b82    packages.scheduler.cronJob.handler.startJob.main    packages.middleware.pub.server.core.gcApi
+2026-08-13 18:58:00,035 INFO c.e.m.t.Tenant [DefaultQuartzScheduler_Worker-5] 422c4d49-fc4c-36c8-94d8-801090fd3b82    packages.scheduler.cronJob.handler.startJob.main    Task with correlationId: f673cc8c-84c9-38d0-bb7b-c1adf9e36ae0, Completed Successfully
+2026-08-13 18:59:00,016 INFO c.e.m.t.Tenant [DefaultQuartzScheduler_Worker-6] c241604c-b3a6-3adb-911a-c94b442d60d3    packages.scheduler.cronJob.handler.startJob.main    Starting scheduled job packages.middleware.pub.server.core.gcApi
+2026-08-13 18:59:00,017 INFO c.e.m.t.Tenant [DefaultQuartzScheduler_Worker-6] c241604c-b3a6-3adb-911a-c94b442d60d3    packages.scheduler.cronJob.handler.startJob.main    Starting scheduled job packages.middleware.pub.server.core.gcApi
+2026-08-13 18:59:00,018 INFO c.e.m.t.Tenant [DefaultQuartzScheduler_Worker-6] c241604c-b3a6-3adb-911a-c94b442d60d3    packages.scheduler.cronJob.handler.startJob.main    Updatng database status to running**********************
+2026-08-13 18:59:00,018 INFO c.e.m.t.Tenant [DefaultQuartzScheduler_Worker-6] c241604c-b3a6-3adb-911a-c94b442d60d3    packages.scheduler.cronJob.handler.startJob.main    Updatng database status to running**********************
+2026-08-13 18:59:00,021 INFO c.e.m.t.Tenant [DefaultQuartzScheduler_Worker-6] c241604c-b3a6-3adb-911a-c94b442d60d3    packages.scheduler.cronJob.handler.startJob.main    Database updated. Id:5
+2026-08-13 18:59:00,024 INFO c.e.m.t.Tenant [DefaultQuartzScheduler_Worker-6] c241604c-b3a6-3adb-911a-c94b442d60d3    packages.scheduler.cronJob.handler.startJob.main    SELECT "id", "serviceFqn", "cron", "status", "lasterror", "enabled", "owner_node", "last_run", 
+"next_run", "job_name", "created_time"
+FROM "Schedulers" WHERE "id" = '?';
+2026-08-13 18:59:00,024 INFO c.e.m.t.Tenant [DefaultQuartzScheduler_Worker-6] c241604c-b3a6-3adb-911a-c94b442d60d3    packages.scheduler.cronJob.handler.startJob.main    gc
+2026-08-13 18:59:00,024 INFO c.e.m.t.Tenant [DefaultQuartzScheduler_Worker-6] c241604c-b3a6-3adb-911a-c94b442d60d3    packages.scheduler.cronJob.handler.startJob.main    gc
+2026-08-13 18:59:00,024 INFO c.e.m.t.Tenant [DefaultQuartzScheduler_Worker-6] c241604c-b3a6-3adb-911a-c94b442d60d3    packages.scheduler.cronJob.handler.startJob.main    completed
+2026-08-13 18:59:00,024 INFO c.e.m.t.Tenant [DefaultQuartzScheduler_Worker-6] c241604c-b3a6-3adb-911a-c94b442d60d3    packages.scheduler.cronJob.handler.startJob.main    packages.middleware.pub.server.core.gcApi
+2026-08-13 18:59:00,034 INFO c.e.m.t.Tenant [DefaultQuartzScheduler_Worker-6] c241604c-b3a6-3adb-911a-c94b442d60d3    packages.scheduler.cronJob.handler.startJob.main    Task with correlationId: da5f4d84-6182-3590-a396-5b3d7b194e1f, Completed Successfully
+2026-08-13 19:00:00,023 INFO c.e.m.t.Tenant [DefaultQuartzScheduler_Worker-7] abb197dc-f28b-36dc-a0c0-b2104aee708c    packages.scheduler.cronJob.handler.startJob.main    Starting scheduled job packages.middleware.pub.server.core.gcApi
+2026-08-13 19:00:00,023 INFO c.e.m.t.Tenant [DefaultQuartzScheduler_Worker-7] abb197dc-f28b-36dc-a0c0-b2104aee708c    packages.scheduler.cronJob.handler.startJob.main    Starting scheduled job packages.middleware.pub.server.core.gcApi
+2026-08-13 19:00:00,023 INFO c.e.m.t.Tenant [DefaultQuartzScheduler_Worker-7] abb197dc-f28b-36dc-a0c0-b2104aee708c    packages.scheduler.cronJob.handler.startJob.main    Updatng database status to running**********************
+2026-08-13 19:00:00,023 INFO c.e.m.t.Tenant [DefaultQuartzScheduler_Worker-7] abb197dc-f28b-36dc-a0c0-b2104aee708c    packages.scheduler.cronJob.handler.startJob.main    Updatng database status to running**********************
+2026-08-13 19:00:00,028 INFO c.e.m.t.Tenant [DefaultQuartzScheduler_Worker-7] abb197dc-f28b-36dc-a0c0-b2104aee708c    packages.scheduler.cronJob.handler.startJob.main    Database updated. Id:5
+2026-08-13 19:00:00,035 INFO c.e.m.t.Tenant [DefaultQuartzScheduler_Worker-7] abb197dc-f28b-36dc-a0c0-b2104aee708c    packages.scheduler.cronJob.handler.startJob.main    SELECT "id", "serviceFqn", "cron", "status", "lasterror", "enabled", "owner_node", "last_run", 
+"next_run", "job_name", "created_time"
+FROM "Schedulers" WHERE "id" = '?';
+2026-08-13 19:00:00,036 INFO c.e.m.t.Tenant [DefaultQuartzScheduler_Worker-7] abb197dc-f28b-36dc-a0c0-b2104aee708c    packages.scheduler.cronJob.handler.startJob.main    gc
+2026-08-13 19:00:00,037 INFO c.e.m.t.Tenant [DefaultQuartzScheduler_Worker-7] abb197dc-f28b-36dc-a0c0-b2104aee708c    packages.scheduler.cronJob.handler.startJob.main    gc
+2026-08-13 19:00:00,039 INFO c.e.m.t.Tenant [DefaultQuartzScheduler_Worker-7] abb197dc-f28b-36dc-a0c0-b2104aee708c    packages.scheduler.cronJob.handler.startJob.main    completed
+2026-08-13 19:00:00,040 INFO c.e.m.t.Tenant [DefaultQuartzScheduler_Worker-7] abb197dc-f28b-36dc-a0c0-b2104aee708c    packages.scheduler.cronJob.handler.startJob.main    packages.middleware.pub.server.core.gcApi
+2026-08-13 19:00:00,041 INFO c.e.m.t.Tenant [DefaultQuartzScheduler_Worker-7] abb197dc-f28b-36dc-a0c0-b2104aee708c    packages.scheduler.cronJob.handler.startJob.main    Task with correlationId: 31fb8e5c-39eb-36b6-a267-9668e5fecb41, Completed Successfully
+2026-08-13 19:01:00,013 INFO c.e.m.t.Tenant [DefaultQuartzScheduler_Worker-8] 058e9b1a-5a8b-3926-89b5-4d797291f718    packages.scheduler.cronJob.handler.startJob.main    Starting scheduled job packages.middleware.pub.server.core.gcApi
+2026-08-13 19:01:00,013 INFO c.e.m.t.Tenant [DefaultQuartzScheduler_Worker-8] 058e9b1a-5a8b-3926-89b5-4d797291f718    packages.scheduler.cronJob.handler.startJob.main    Starting scheduled job packages.middleware.pub.server.core.gcApi
+2026-08-13 19:01:00,029 INFO c.e.m.t.Tenant [DefaultQuartzScheduler_Worker-8] 058e9b1a-5a8b-3926-89b5-4d797291f718    packages.scheduler.cronJob.handler.startJob.main    Updatng database status to running**********************
+2026-08-13 19:01:00,029 INFO c.e.m.t.Tenant [DefaultQuartzScheduler_Worker-8] 058e9b1a-5a8b-3926-89b5-4d797291f718    packages.scheduler.cronJob.handler.startJob.main    Updatng database status to running**********************
+2026-08-13 19:01:00,029 INFO c.e.m.t.Tenant [DefaultQuartzScheduler_Worker-8] 058e9b1a-5a8b-3926-89b5-4d797291f718    packages.scheduler.cronJob.handler.startJob.main    Database updated. Id:5
+2026-08-13 19:01:00,039 INFO c.e.m.t.Tenant [DefaultQuartzScheduler_Worker-8] 058e9b1a-5a8b-3926-89b5-4d797291f718    packages.scheduler.cronJob.handler.startJob.main    SELECT "id", "serviceFqn", "cron", "status", "lasterror", "enabled", "owner_node", "last_run", 
+"next_run", "job_name", "created_time"
+FROM "Schedulers" WHERE "id" = '?';
+2026-08-13 19:01:00,039 INFO c.e.m.t.Tenant [DefaultQuartzScheduler_Worker-8] 058e9b1a-5a8b-3926-89b5-4d797291f718    packages.scheduler.cronJob.handler.startJob.main    gc
+2026-08-13 19:01:00,039 INFO c.e.m.t.Tenant [DefaultQuartzScheduler_Worker-8] 058e9b1a-5a8b-3926-89b5-4d797291f718    packages.scheduler.cronJob.handler.startJob.main    gc
+2026-08-13 19:01:00,039 INFO c.e.m.t.Tenant [DefaultQuartzScheduler_Worker-8] 058e9b1a-5a8b-3926-89b5-4d797291f718    packages.scheduler.cronJob.handler.startJob.main    completed
+2026-08-13 19:01:00,039 INFO c.e.m.t.Tenant [DefaultQuartzScheduler_Worker-8] 058e9b1a-5a8b-3926-89b5-4d797291f718    packages.scheduler.cronJob.handler.startJob.main    packages.middleware.pub.server.core.gcApi
+2026-08-13 19:01:00,045 INFO c.e.m.t.Tenant [DefaultQuartzScheduler_Worker-8] 058e9b1a-5a8b-3926-89b5-4d797291f718    packages.scheduler.cronJob.handler.startJob.main    Task with correlationId: 49343555-8964-3494-85aa-acfe76ab4152, Completed Successfully
+2026-08-13 19:02:00,015 INFO c.e.m.t.Tenant [DefaultQuartzScheduler_Worker-9] a15df810-4eee-3738-b7b0-896cc5fd4e32    packages.scheduler.cronJob.handler.startJob.main    Starting scheduled job packages.middleware.pub.server.core.gcApi
+2026-08-13 19:02:00,015 INFO c.e.m.t.Tenant [DefaultQuartzScheduler_Worker-9] a15df810-4eee-3738-b7b0-896cc5fd4e32    packages.scheduler.cronJob.handler.startJob.main    Starting scheduled job packages.middleware.pub.server.core.gcApi
+2026-08-13 19:02:00,015 INFO c.e.m.t.Tenant [DefaultQuartzScheduler_Worker-9] a15df810-4eee-3738-b7b0-896cc5fd4e32    packages.scheduler.cronJob.handler.startJob.main    Updatng database status to running**********************
+2026-08-13 19:02:00,015 INFO c.e.m.t.Tenant [DefaultQuartzScheduler_Worker-9] a15df810-4eee-3738-b7b0-896cc5fd4e32    packages.scheduler.cronJob.handler.startJob.main    Updatng database status to running**********************
+2026-08-13 19:02:00,015 INFO c.e.m.t.Tenant [DefaultQuartzScheduler_Worker-9] a15df810-4eee-3738-b7b0-896cc5fd4e32    packages.scheduler.cronJob.handler.startJob.main    Database updated. Id:5
+2026-08-13 19:02:00,032 INFO c.e.m.t.Tenant [DefaultQuartzScheduler_Worker-9] a15df810-4eee-3738-b7b0-896cc5fd4e32    packages.scheduler.cronJob.handler.startJob.main    SELECT "id", "serviceFqn", "cron", "status", "lasterror", "enabled", "owner_node", "last_run", 
+"next_run", "job_name", "created_time"
+FROM "Schedulers" WHERE "id" = '?';
+2026-08-13 19:02:00,035 INFO c.e.m.t.Tenant [DefaultQuartzScheduler_Worker-9] a15df810-4eee-3738-b7b0-896cc5fd4e32    packages.scheduler.cronJob.handler.startJob.main    gc
+2026-08-13 19:02:00,035 INFO c.e.m.t.Tenant [DefaultQuartzScheduler_Worker-9] a15df810-4eee-3738-b7b0-896cc5fd4e32    packages.scheduler.cronJob.handler.startJob.main    gc
+2026-08-13 19:02:00,035 INFO c.e.m.t.Tenant [DefaultQuartzScheduler_Worker-9] a15df810-4eee-3738-b7b0-896cc5fd4e32    packages.scheduler.cronJob.handler.startJob.main    completed
+2026-08-13 19:02:00,035 INFO c.e.m.t.Tenant [DefaultQuartzScheduler_Worker-9] a15df810-4eee-3738-b7b0-896cc5fd4e32    packages.scheduler.cronJob.handler.startJob.main    packages.middleware.pub.server.core.gcApi
+2026-08-13 19:02:00,035 INFO c.e.m.t.Tenant [DefaultQuartzScheduler_Worker-9] a15df810-4eee-3738-b7b0-896cc5fd4e32    packages.scheduler.cronJob.handler.startJob.main    Task with correlationId: b024ea3e-5c0e-3164-9bdd-d7e744c6b34d, Completed Successfully
+2026-08-13 19:03:00,011 INFO c.e.m.t.Tenant [DefaultQuartzScheduler_Worker-10] 0e68143e-d308-3ca5-876a-a956de62f55b    packages.scheduler.cronJob.handler.startJob.main    Starting scheduled job packages.middleware.pub.server.core.gcApi
+2026-08-13 19:03:00,011 INFO c.e.m.t.Tenant [DefaultQuartzScheduler_Worker-10] 0e68143e-d308-3ca5-876a-a956de62f55b    packages.scheduler.cronJob.handler.startJob.main    Starting scheduled job packages.middleware.pub.server.core.gcApi
+2026-08-13 19:03:00,011 INFO c.e.m.t.Tenant [DefaultQuartzScheduler_Worker-10] 0e68143e-d308-3ca5-876a-a956de62f55b    packages.scheduler.cronJob.handler.startJob.main    Updatng database status to running**********************
+2026-08-13 19:03:00,011 INFO c.e.m.t.Tenant [DefaultQuartzScheduler_Worker-10] 0e68143e-d308-3ca5-876a-a956de62f55b    packages.scheduler.cronJob.handler.startJob.main    Updatng database status to running**********************
+2026-08-13 19:03:00,011 INFO c.e.m.t.Tenant [DefaultQuartzScheduler_Worker-10] 0e68143e-d308-3ca5-876a-a956de62f55b    packages.scheduler.cronJob.handler.startJob.main    Database updated. Id:5
+2026-08-13 19:03:00,027 INFO c.e.m.t.Tenant [DefaultQuartzScheduler_Worker-10] 0e68143e-d308-3ca5-876a-a956de62f55b    packages.scheduler.cronJob.handler.startJob.main    SELECT "id", "serviceFqn", "cron", "status", "lasterror", "enabled", "owner_node", "last_run", 
+"next_run", "job_name", "created_time"
+FROM "Schedulers" WHERE "id" = '?';
+2026-08-13 19:03:00,027 INFO c.e.m.t.Tenant [DefaultQuartzScheduler_Worker-10] 0e68143e-d308-3ca5-876a-a956de62f55b    packages.scheduler.cronJob.handler.startJob.main    gc
+2026-08-13 19:03:00,027 INFO c.e.m.t.Tenant [DefaultQuartzScheduler_Worker-10] 0e68143e-d308-3ca5-876a-a956de62f55b    packages.scheduler.cronJob.handler.startJob.main    gc
+2026-08-13 19:03:00,027 INFO c.e.m.t.Tenant [DefaultQuartzScheduler_Worker-10] 0e68143e-d308-3ca5-876a-a956de62f55b    packages.scheduler.cronJob.handler.startJob.main    completed
+2026-08-13 19:03:00,027 INFO c.e.m.t.Tenant [DefaultQuartzScheduler_Worker-10] 0e68143e-d308-3ca5-876a-a956de62f55b    packages.scheduler.cronJob.handler.startJob.main    packages.middleware.pub.server.core.gcApi
+2026-08-13 19:03:00,027 INFO c.e.m.t.Tenant [DefaultQuartzScheduler_Worker-10] 0e68143e-d308-3ca5-876a-a956de62f55b    packages.scheduler.cronJob.handler.startJob.main    Task with correlationId: e0fa4d91-b115-3fbf-a326-349207a707c7, Completed Successfully
+2026-08-13 19:04:00,012 INFO c.e.m.t.Tenant [DefaultQuartzScheduler_Worker-1] b12bc94f-a994-398d-b7d5-3107906a320d    packages.scheduler.cronJob.handler.startJob.main    Starting scheduled job packages.middleware.pub.server.core.gcApi
+2026-08-13 19:04:00,012 INFO c.e.m.t.Tenant [DefaultQuartzScheduler_Worker-1] b12bc94f-a994-398d-b7d5-3107906a320d    packages.scheduler.cronJob.handler.startJob.main    Starting scheduled job packages.middleware.pub.server.core.gcApi
+2026-08-13 19:04:00,014 INFO c.e.m.t.Tenant [DefaultQuartzScheduler_Worker-1] b12bc94f-a994-398d-b7d5-3107906a320d    packages.scheduler.cronJob.handler.startJob.main    Updatng database status to running**********************
+2026-08-13 19:04:00,014 INFO c.e.m.t.Tenant [DefaultQuartzScheduler_Worker-1] b12bc94f-a994-398d-b7d5-3107906a320d    packages.scheduler.cronJob.handler.startJob.main    Updatng database status to running**********************
+2026-08-13 19:04:00,017 INFO c.e.m.t.Tenant [DefaultQuartzScheduler_Worker-1] b12bc94f-a994-398d-b7d5-3107906a320d    packages.scheduler.cronJob.handler.startJob.main    Database updated. Id:5
+2026-08-13 19:04:00,022 INFO c.e.m.t.Tenant [DefaultQuartzScheduler_Worker-1] b12bc94f-a994-398d-b7d5-3107906a320d    packages.scheduler.cronJob.handler.startJob.main    SELECT "id", "serviceFqn", "cron", "status", "lasterror", "enabled", "owner_node", "last_run", 
+"next_run", "job_name", "created_time"
+FROM "Schedulers" WHERE "id" = '?';
+2026-08-13 19:04:00,023 INFO c.e.m.t.Tenant [DefaultQuartzScheduler_Worker-1] b12bc94f-a994-398d-b7d5-3107906a320d    packages.scheduler.cronJob.handler.startJob.main    gc
+2026-08-13 19:04:00,024 INFO c.e.m.t.Tenant [DefaultQuartzScheduler_Worker-1] b12bc94f-a994-398d-b7d5-3107906a320d    packages.scheduler.cronJob.handler.startJob.main    gc
+2026-08-13 19:04:00,026 INFO c.e.m.t.Tenant [DefaultQuartzScheduler_Worker-1] b12bc94f-a994-398d-b7d5-3107906a320d    packages.scheduler.cronJob.handler.startJob.main    completed
+2026-08-13 19:04:00,026 INFO c.e.m.t.Tenant [DefaultQuartzScheduler_Worker-1] b12bc94f-a994-398d-b7d5-3107906a320d    packages.scheduler.cronJob.handler.startJob.main    packages.middleware.pub.server.core.gcApi
+2026-08-13 19:04:00,030 INFO c.e.m.t.Tenant [DefaultQuartzScheduler_Worker-1] b12bc94f-a994-398d-b7d5-3107906a320d    packages.scheduler.cronJob.handler.startJob.main    Task with correlationId: 2023f7e6-a4ea-31f1-8369-c751fffb715c, Completed Successfully
+2026-08-13 19:05:00,011 INFO c.e.m.t.Tenant [DefaultQuartzScheduler_Worker-2] 9001f060-eaf5-3290-8a74-d806925fec9b    packages.scheduler.cronJob.handler.startJob.main    Starting scheduled job packages.middleware.pub.server.core.gcApi
+2026-08-13 19:05:00,011 INFO c.e.m.t.Tenant [DefaultQuartzScheduler_Worker-2] 9001f060-eaf5-3290-8a74-d806925fec9b    packages.scheduler.cronJob.handler.startJob.main    Starting scheduled job packages.middleware.pub.server.core.gcApi
+2026-08-13 19:05:00,011 INFO c.e.m.t.Tenant [DefaultQuartzScheduler_Worker-2] 9001f060-eaf5-3290-8a74-d806925fec9b    packages.scheduler.cronJob.handler.startJob.main    Updatng database status to running**********************
+2026-08-13 19:05:00,011 INFO c.e.m.t.Tenant [DefaultQuartzScheduler_Worker-2] 9001f060-eaf5-3290-8a74-d806925fec9b    packages.scheduler.cronJob.handler.startJob.main    Updatng database status to running**********************
+2026-08-13 19:05:00,011 INFO c.e.m.t.Tenant [DefaultQuartzScheduler_Worker-2] 9001f060-eaf5-3290-8a74-d806925fec9b    packages.scheduler.cronJob.handler.startJob.main    Database updated. Id:5
+2026-08-13 19:05:00,027 INFO c.e.m.t.Tenant [DefaultQuartzScheduler_Worker-2] 9001f060-eaf5-3290-8a74-d806925fec9b    packages.scheduler.cronJob.handler.startJob.main    SELECT "id", "serviceFqn", "cron", "status", "lasterror", "enabled", "owner_node", "last_run", 
+"next_run", "job_name", "created_time"
+FROM "Schedulers" WHERE "id" = '?';
+2026-08-13 19:05:00,027 INFO c.e.m.t.Tenant [DefaultQuartzScheduler_Worker-2] 9001f060-eaf5-3290-8a74-d806925fec9b    packages.scheduler.cronJob.handler.startJob.main    gc
+2026-08-13 19:05:00,027 INFO c.e.m.t.Tenant [DefaultQuartzScheduler_Worker-2] 9001f060-eaf5-3290-8a74-d806925fec9b    packages.scheduler.cronJob.handler.startJob.main    gc
+2026-08-13 19:05:00,027 INFO c.e.m.t.Tenant [DefaultQuartzScheduler_Worker-2] 9001f060-eaf5-3290-8a74-d806925fec9b    packages.scheduler.cronJob.handler.startJob.main    completed
+2026-08-13 19:05:00,027 INFO c.e.m.t.Tenant [DefaultQuartzScheduler_Worker-2] 9001f060-eaf5-3290-8a74-d806925fec9b    packages.scheduler.cronJob.handler.startJob.main    packages.middleware.pub.server.core.gcApi
+2026-08-13 19:05:00,027 INFO c.e.m.t.Tenant [DefaultQuartzScheduler_Worker-2] 9001f060-eaf5-3290-8a74-d806925fec9b    packages.scheduler.cronJob.handler.startJob.main    Task with correlationId: 82de8ff7-57e8-3bfb-994c-37fbc1368fd0, Completed Successfully
+2026-08-13 19:06:00,025 INFO c.e.m.t.Tenant [DefaultQuartzScheduler_Worker-3] d68c7fd4-0a0c-3c16-ad1a-10bff02daf10    packages.scheduler.cronJob.handler.startJob.main    Starting scheduled job packages.middleware.pub.server.core.gcApi
+2026-08-13 19:06:00,025 INFO c.e.m.t.Tenant [DefaultQuartzScheduler_Worker-3] d68c7fd4-0a0c-3c16-ad1a-10bff02daf10    packages.scheduler.cronJob.handler.startJob.main    Starting scheduled job packages.middleware.pub.server.core.gcApi
+2026-08-13 19:06:00,025 INFO c.e.m.t.Tenant [DefaultQuartzScheduler_Worker-3] d68c7fd4-0a0c-3c16-ad1a-10bff02daf10    packages.scheduler.cronJob.handler.startJob.main    Updatng database status to running**********************
+2026-08-13 19:06:00,025 INFO c.e.m.t.Tenant [DefaultQuartzScheduler_Worker-3] d68c7fd4-0a0c-3c16-ad1a-10bff02daf10    packages.scheduler.cronJob.handler.startJob.main    Updatng database status to running**********************
+2026-08-13 19:06:00,025 INFO c.e.m.t.Tenant [DefaultQuartzScheduler_Worker-3] d68c7fd4-0a0c-3c16-ad1a-10bff02daf10    packages.scheduler.cronJob.handler.startJob.main    Database updated. Id:5
+2026-08-13 19:06:00,025 INFO c.e.m.t.Tenant [DefaultQuartzScheduler_Worker-3] d68c7fd4-0a0c-3c16-ad1a-10bff02daf10    packages.scheduler.cronJob.handler.startJob.main    SELECT "id", "serviceFqn", "cron", "status", "lasterror", "enabled", "owner_node", "last_run", 
+"next_run", "job_name", "created_time"
+FROM "Schedulers" WHERE "id" = '?';
+2026-08-13 19:06:00,025 INFO c.e.m.t.Tenant [DefaultQuartzScheduler_Worker-3] d68c7fd4-0a0c-3c16-ad1a-10bff02daf10    packages.scheduler.cronJob.handler.startJob.main    gc
+2026-08-13 19:06:00,025 INFO c.e.m.t.Tenant [DefaultQuartzScheduler_Worker-3] d68c7fd4-0a0c-3c16-ad1a-10bff02daf10    packages.scheduler.cronJob.handler.startJob.main    gc
+2026-08-13 19:06:00,040 INFO c.e.m.t.Tenant [DefaultQuartzScheduler_Worker-3] d68c7fd4-0a0c-3c16-ad1a-10bff02daf10    packages.scheduler.cronJob.handler.startJob.main    completed
+2026-08-13 19:06:00,040 INFO c.e.m.t.Tenant [DefaultQuartzScheduler_Worker-3] d68c7fd4-0a0c-3c16-ad1a-10bff02daf10    packages.scheduler.cronJob.handler.startJob.main    packages.middleware.pub.server.core.gcApi
+2026-08-13 19:06:00,040 INFO c.e.m.t.Tenant [DefaultQuartzScheduler_Worker-3] d68c7fd4-0a0c-3c16-ad1a-10bff02daf10    packages.scheduler.cronJob.handler.startJob.main    Task with correlationId: ea58922b-aa60-3b87-83d0-a4f3c6da3729, Completed Successfully
+2026-08-13 19:07:00,008 INFO c.e.m.t.Tenant [DefaultQuartzScheduler_Worker-4] a0099039-68a7-35fb-bd0a-e2096efeedbc    packages.scheduler.cronJob.handler.startJob.main    Starting scheduled job packages.middleware.pub.server.core.gcApi
+2026-08-13 19:07:00,008 INFO c.e.m.t.Tenant [DefaultQuartzScheduler_Worker-4] a0099039-68a7-35fb-bd0a-e2096efeedbc    packages.scheduler.cronJob.handler.startJob.main    Starting scheduled job packages.middleware.pub.server.core.gcApi
+2026-08-13 19:07:00,008 INFO c.e.m.t.Tenant [DefaultQuartzScheduler_Worker-4] a0099039-68a7-35fb-bd0a-e2096efeedbc    packages.scheduler.cronJob.handler.startJob.main    Updatng database status to running**********************
+2026-08-13 19:07:00,008 INFO c.e.m.t.Tenant [DefaultQuartzScheduler_Worker-4] a0099039-68a7-35fb-bd0a-e2096efeedbc    packages.scheduler.cronJob.handler.startJob.main    Updatng database status to running**********************
+2026-08-13 19:07:00,008 INFO c.e.m.t.Tenant [DefaultQuartzScheduler_Worker-4] a0099039-68a7-35fb-bd0a-e2096efeedbc    packages.scheduler.cronJob.handler.startJob.main    Database updated. Id:5
+2026-08-13 19:07:00,024 INFO c.e.m.t.Tenant [DefaultQuartzScheduler_Worker-4] a0099039-68a7-35fb-bd0a-e2096efeedbc    packages.scheduler.cronJob.handler.startJob.main    SELECT "id", "serviceFqn", "cron", "status", "lasterror", "enabled", "owner_node", "last_run", 
+"next_run", "job_name", "created_time"
+FROM "Schedulers" WHERE "id" = '?';
+2026-08-13 19:07:00,024 INFO c.e.m.t.Tenant [DefaultQuartzScheduler_Worker-4] a0099039-68a7-35fb-bd0a-e2096efeedbc    packages.scheduler.cronJob.handler.startJob.main    gc
+2026-08-13 19:07:00,024 INFO c.e.m.t.Tenant [DefaultQuartzScheduler_Worker-4] a0099039-68a7-35fb-bd0a-e2096efeedbc    packages.scheduler.cronJob.handler.startJob.main    gc
+2026-08-13 19:07:00,024 INFO c.e.m.t.Tenant [DefaultQuartzScheduler_Worker-4] a0099039-68a7-35fb-bd0a-e2096efeedbc    packages.scheduler.cronJob.handler.startJob.main    completed
+2026-08-13 19:07:00,024 INFO c.e.m.t.Tenant [DefaultQuartzScheduler_Worker-4] a0099039-68a7-35fb-bd0a-e2096efeedbc    packages.scheduler.cronJob.handler.startJob.main    packages.middleware.pub.server.core.gcApi
+2026-08-13 19:07:00,024 INFO c.e.m.t.Tenant [DefaultQuartzScheduler_Worker-4] a0099039-68a7-35fb-bd0a-e2096efeedbc    packages.scheduler.cronJob.handler.startJob.main    Task with correlationId: ef8f4efd-5923-352d-bc4b-7e00ea298011, Completed Successfully
+2026-08-13 19:08:00,016 INFO c.e.m.t.Tenant [DefaultQuartzScheduler_Worker-5] 8dba123e-99e8-32ef-81e9-bcc23982cb84    packages.scheduler.cronJob.handler.startJob.main    Starting scheduled job packages.middleware.pub.server.core.gcApi
+2026-08-13 19:08:00,016 INFO c.e.m.t.Tenant [DefaultQuartzScheduler_Worker-5] 8dba123e-99e8-32ef-81e9-bcc23982cb84    packages.scheduler.cronJob.handler.startJob.main    Starting scheduled job packages.middleware.pub.server.core.gcApi
+2026-08-13 19:08:00,018 INFO c.e.m.t.Tenant [DefaultQuartzScheduler_Worker-5] 8dba123e-99e8-32ef-81e9-bcc23982cb84    packages.scheduler.cronJob.handler.startJob.main    Updatng database status to running**********************
+2026-08-13 19:08:00,018 INFO c.e.m.t.Tenant [DefaultQuartzScheduler_Worker-5] 8dba123e-99e8-32ef-81e9-bcc23982cb84    packages.scheduler.cronJob.handler.startJob.main    Updatng database status to running**********************
+2026-08-13 19:08:00,021 INFO c.e.m.t.Tenant [DefaultQuartzScheduler_Worker-5] 8dba123e-99e8-32ef-81e9-bcc23982cb84    packages.scheduler.cronJob.handler.startJob.main    Database updated. Id:5
+2026-08-13 19:08:00,025 INFO c.e.m.t.Tenant [DefaultQuartzScheduler_Worker-5] 8dba123e-99e8-32ef-81e9-bcc23982cb84    packages.scheduler.cronJob.handler.startJob.main    SELECT "id", "serviceFqn", "cron", "status", "lasterror", "enabled", "owner_node", "last_run", 
+"next_run", "job_name", "created_time"
+FROM "Schedulers" WHERE "id" = '?';
+2026-08-13 19:08:00,027 INFO c.e.m.t.Tenant [DefaultQuartzScheduler_Worker-5] 8dba123e-99e8-32ef-81e9-bcc23982cb84    packages.scheduler.cronJob.handler.startJob.main    gc
+2026-08-13 19:08:00,027 INFO c.e.m.t.Tenant [DefaultQuartzScheduler_Worker-5] 8dba123e-99e8-32ef-81e9-bcc23982cb84    packages.scheduler.cronJob.handler.startJob.main    gc
+2026-08-13 19:08:00,027 INFO c.e.m.t.Tenant [DefaultQuartzScheduler_Worker-5] 8dba123e-99e8-32ef-81e9-bcc23982cb84    packages.scheduler.cronJob.handler.startJob.main    completed
+2026-08-13 19:08:00,027 INFO c.e.m.t.Tenant [DefaultQuartzScheduler_Worker-5] 8dba123e-99e8-32ef-81e9-bcc23982cb84    packages.scheduler.cronJob.handler.startJob.main    packages.middleware.pub.server.core.gcApi
+2026-08-13 19:08:00,027 INFO c.e.m.t.Tenant [DefaultQuartzScheduler_Worker-5] 8dba123e-99e8-32ef-81e9-bcc23982cb84    packages.scheduler.cronJob.handler.startJob.main    Task with correlationId: d7fd1cb1-7bb6-30bd-aaa3-f26cd91f66c5, Completed Successfully
+2026-08-13 19:09:00,020 INFO c.e.m.t.Tenant [DefaultQuartzScheduler_Worker-6] dee91710-7371-36d8-a141-785e37bab839    packages.scheduler.cronJob.handler.startJob.main    Starting scheduled job packages.middleware.pub.server.core.gcApi
+2026-08-13 19:09:00,021 INFO c.e.m.t.Tenant [DefaultQuartzScheduler_Worker-6] dee91710-7371-36d8-a141-785e37bab839    packages.scheduler.cronJob.handler.startJob.main    Starting scheduled job packages.middleware.pub.server.core.gcApi
+2026-08-13 19:09:00,023 INFO c.e.m.t.Tenant [DefaultQuartzScheduler_Worker-6] dee91710-7371-36d8-a141-785e37bab839    packages.scheduler.cronJob.handler.startJob.main    Updatng database status to running**********************
+2026-08-13 19:09:00,023 INFO c.e.m.t.Tenant [DefaultQuartzScheduler_Worker-6] dee91710-7371-36d8-a141-785e37bab839    packages.scheduler.cronJob.handler.startJob.main    Updatng database status to running**********************
+2026-08-13 19:09:00,025 INFO c.e.m.t.Tenant [DefaultQuartzScheduler_Worker-6] dee91710-7371-36d8-a141-785e37bab839    packages.scheduler.cronJob.handler.startJob.main    Database updated. Id:5
+2026-08-13 19:09:00,031 INFO c.e.m.t.Tenant [DefaultQuartzScheduler_Worker-6] dee91710-7371-36d8-a141-785e37bab839    packages.scheduler.cronJob.handler.startJob.main    SELECT "id", "serviceFqn", "cron", "status", "lasterror", "enabled", "owner_node", "last_run", 
+"next_run", "job_name", "created_time"
+FROM "Schedulers" WHERE "id" = '?';
+2026-08-13 19:09:00,031 INFO c.e.m.t.Tenant [DefaultQuartzScheduler_Worker-6] dee91710-7371-36d8-a141-785e37bab839    packages.scheduler.cronJob.handler.startJob.main    gc
+2026-08-13 19:09:00,031 INFO c.e.m.t.Tenant [DefaultQuartzScheduler_Worker-6] dee91710-7371-36d8-a141-785e37bab839    packages.scheduler.cronJob.handler.startJob.main    gc
+2026-08-13 19:09:00,035 INFO c.e.m.t.Tenant [DefaultQuartzScheduler_Worker-6] dee91710-7371-36d8-a141-785e37bab839    packages.scheduler.cronJob.handler.startJob.main    completed
+2026-08-13 19:09:00,035 INFO c.e.m.t.Tenant [DefaultQuartzScheduler_Worker-6] dee91710-7371-36d8-a141-785e37bab839    packages.scheduler.cronJob.handler.startJob.main    packages.middleware.pub.server.core.gcApi
+2026-08-13 19:09:00,035 INFO c.e.m.t.Tenant [DefaultQuartzScheduler_Worker-6] dee91710-7371-36d8-a141-785e37bab839    packages.scheduler.cronJob.handler.startJob.main    Task with correlationId: 1135888d-f266-367b-9fb9-af09f10f94a2, Completed Successfully
+2026-08-13 19:10:00,009 INFO c.e.m.t.Tenant [DefaultQuartzScheduler_Worker-7] a58a8d0a-7034-3233-85ff-8a849c39932c    packages.scheduler.cronJob.handler.startJob.main    Starting scheduled job packages.middleware.pub.server.core.gcApi
+2026-08-13 19:10:00,009 INFO c.e.m.t.Tenant [DefaultQuartzScheduler_Worker-7] a58a8d0a-7034-3233-85ff-8a849c39932c    packages.scheduler.cronJob.handler.startJob.main    Starting scheduled job packages.middleware.pub.server.core.gcApi
+2026-08-13 19:10:00,009 INFO c.e.m.t.Tenant [DefaultQuartzScheduler_Worker-7] a58a8d0a-7034-3233-85ff-8a849c39932c    packages.scheduler.cronJob.handler.startJob.main    Updatng database status to running**********************
+2026-08-13 19:10:00,009 INFO c.e.m.t.Tenant [DefaultQuartzScheduler_Worker-7] a58a8d0a-7034-3233-85ff-8a849c39932c    packages.scheduler.cronJob.handler.startJob.main    Updatng database status to running**********************
+2026-08-13 19:10:00,021 INFO c.e.m.t.Tenant [DefaultQuartzScheduler_Worker-7] a58a8d0a-7034-3233-85ff-8a849c39932c    packages.scheduler.cronJob.handler.startJob.main    Database updated. Id:5
+2026-08-13 19:10:00,021 INFO c.e.m.t.Tenant [DefaultQuartzScheduler_Worker-7] a58a8d0a-7034-3233-85ff-8a849c39932c    packages.scheduler.cronJob.handler.startJob.main    SELECT "id", "serviceFqn", "cron", "status", "lasterror", "enabled", "owner_node", "last_run", 
+"next_run", "job_name", "created_time"
+FROM "Schedulers" WHERE "id" = '?';
+2026-08-13 19:10:00,021 INFO c.e.m.t.Tenant [DefaultQuartzScheduler_Worker-7] a58a8d0a-7034-3233-85ff-8a849c39932c    packages.scheduler.cronJob.handler.startJob.main    gc
+2026-08-13 19:10:00,021 INFO c.e.m.t.Tenant [DefaultQuartzScheduler_Worker-7] a58a8d0a-7034-3233-85ff-8a849c39932c    packages.scheduler.cronJob.handler.startJob.main    gc
+2026-08-13 19:10:00,021 INFO c.e.m.t.Tenant [DefaultQuartzScheduler_Worker-7] a58a8d0a-7034-3233-85ff-8a849c39932c    packages.scheduler.cronJob.handler.startJob.main    completed
+2026-08-13 19:10:00,021 INFO c.e.m.t.Tenant [DefaultQuartzScheduler_Worker-7] a58a8d0a-7034-3233-85ff-8a849c39932c    packages.scheduler.cronJob.handler.startJob.main    packages.middleware.pub.server.core.gcApi
+2026-08-13 19:10:00,037 INFO c.e.m.t.Tenant [DefaultQuartzScheduler_Worker-7] a58a8d0a-7034-3233-85ff-8a849c39932c    packages.scheduler.cronJob.handler.startJob.main    Task with correlationId: e18c516d-34af-3600-9af1-4d2d8228260a, Completed Successfully
+2026-08-13 19:11:00,018 INFO c.e.m.t.Tenant [DefaultQuartzScheduler_Worker-8] f4b804bd-09f3-3929-bd59-d07df5697df2    packages.scheduler.cronJob.handler.startJob.main    Starting scheduled job packages.middleware.pub.server.core.gcApi
+2026-08-13 19:11:00,018 INFO c.e.m.t.Tenant [DefaultQuartzScheduler_Worker-8] f4b804bd-09f3-3929-bd59-d07df5697df2    packages.scheduler.cronJob.handler.startJob.main    Starting scheduled job packages.middleware.pub.server.core.gcApi
+2026-08-13 19:11:00,028 INFO c.e.m.t.Tenant [DefaultQuartzScheduler_Worker-8] f4b804bd-09f3-3929-bd59-d07df5697df2    packages.scheduler.cronJob.handler.startJob.main    Updatng database status to running**********************
+2026-08-13 19:11:00,028 INFO c.e.m.t.Tenant [DefaultQuartzScheduler_Worker-8] f4b804bd-09f3-3929-bd59-d07df5697df2    packages.scheduler.cronJob.handler.startJob.main    Updatng database status to running**********************
+2026-08-13 19:11:00,028 INFO c.e.m.t.Tenant [DefaultQuartzScheduler_Worker-8] f4b804bd-09f3-3929-bd59-d07df5697df2    packages.scheduler.cronJob.handler.startJob.main    Database updated. Id:5
+2026-08-13 19:11:00,028 INFO c.e.m.t.Tenant [DefaultQuartzScheduler_Worker-8] f4b804bd-09f3-3929-bd59-d07df5697df2    packages.scheduler.cronJob.handler.startJob.main    SELECT "id", "serviceFqn", "cron", "status", "lasterror", "enabled", "owner_node", "last_run", 
+"next_run", "job_name", "created_time"
+FROM "Schedulers" WHERE "id" = '?';
+2026-08-13 19:11:00,028 INFO c.e.m.t.Tenant [DefaultQuartzScheduler_Worker-8] f4b804bd-09f3-3929-bd59-d07df5697df2    packages.scheduler.cronJob.handler.startJob.main    gc
+2026-08-13 19:11:00,028 INFO c.e.m.t.Tenant [DefaultQuartzScheduler_Worker-8] f4b804bd-09f3-3929-bd59-d07df5697df2    packages.scheduler.cronJob.handler.startJob.main    gc
+2026-08-13 19:11:00,044 INFO c.e.m.t.Tenant [DefaultQuartzScheduler_Worker-8] f4b804bd-09f3-3929-bd59-d07df5697df2    packages.scheduler.cronJob.handler.startJob.main    completed
+2026-08-13 19:11:00,044 INFO c.e.m.t.Tenant [DefaultQuartzScheduler_Worker-8] f4b804bd-09f3-3929-bd59-d07df5697df2    packages.scheduler.cronJob.handler.startJob.main    packages.middleware.pub.server.core.gcApi
+2026-08-13 19:11:00,044 INFO c.e.m.t.Tenant [DefaultQuartzScheduler_Worker-8] f4b804bd-09f3-3929-bd59-d07df5697df2    packages.scheduler.cronJob.handler.startJob.main    Task with correlationId: 3324bad1-33d8-39cd-9c95-17ebaff2dfd2, Completed Successfully
+2026-08-13 19:12:00,011 INFO c.e.m.t.Tenant [DefaultQuartzScheduler_Worker-9] a3b4f9a0-2ab9-3ceb-b900-3812a0eed61c    packages.scheduler.cronJob.handler.startJob.main    Starting scheduled job packages.middleware.pub.server.core.gcApi
+2026-08-13 19:12:00,011 INFO c.e.m.t.Tenant [DefaultQuartzScheduler_Worker-9] a3b4f9a0-2ab9-3ceb-b900-3812a0eed61c    packages.scheduler.cronJob.handler.startJob.main    Starting scheduled job packages.middleware.pub.server.core.gcApi
+2026-08-13 19:12:00,013 INFO c.e.m.t.Tenant [DefaultQuartzScheduler_Worker-9] a3b4f9a0-2ab9-3ceb-b900-3812a0eed61c    packages.scheduler.cronJob.handler.startJob.main    Updatng database status to running**********************
+2026-08-13 19:12:00,013 INFO c.e.m.t.Tenant [DefaultQuartzScheduler_Worker-9] a3b4f9a0-2ab9-3ceb-b900-3812a0eed61c    packages.scheduler.cronJob.handler.startJob.main    Updatng database status to running**********************
+2026-08-13 19:12:00,015 INFO c.e.m.t.Tenant [DefaultQuartzScheduler_Worker-9] a3b4f9a0-2ab9-3ceb-b900-3812a0eed61c    packages.scheduler.cronJob.handler.startJob.main    Database updated. Id:5
+2026-08-13 19:12:00,019 INFO c.e.m.t.Tenant [DefaultQuartzScheduler_Worker-9] a3b4f9a0-2ab9-3ceb-b900-3812a0eed61c    packages.scheduler.cronJob.handler.startJob.main    SELECT "id", "serviceFqn", "cron", "status", "lasterror", "enabled", "owner_node", "last_run", 
+"next_run", "job_name", "created_time"
+FROM "Schedulers" WHERE "id" = '?';
+2026-08-13 19:12:00,021 INFO c.e.m.t.Tenant [DefaultQuartzScheduler_Worker-9] a3b4f9a0-2ab9-3ceb-b900-3812a0eed61c    packages.scheduler.cronJob.handler.startJob.main    gc
+2026-08-13 19:12:00,021 INFO c.e.m.t.Tenant [DefaultQuartzScheduler_Worker-9] a3b4f9a0-2ab9-3ceb-b900-3812a0eed61c    packages.scheduler.cronJob.handler.startJob.main    gc
+2026-08-13 19:12:00,023 INFO c.e.m.t.Tenant [DefaultQuartzScheduler_Worker-9] a3b4f9a0-2ab9-3ceb-b900-3812a0eed61c    packages.scheduler.cronJob.handler.startJob.main    completed
+2026-08-13 19:12:00,023 INFO c.e.m.t.Tenant [DefaultQuartzScheduler_Worker-9] a3b4f9a0-2ab9-3ceb-b900-3812a0eed61c    packages.scheduler.cronJob.handler.startJob.main    packages.middleware.pub.server.core.gcApi
+2026-08-13 19:12:00,029 INFO c.e.m.t.Tenant [DefaultQuartzScheduler_Worker-9] a3b4f9a0-2ab9-3ceb-b900-3812a0eed61c    packages.scheduler.cronJob.handler.startJob.main    Task with correlationId: eccc92e1-a9bf-3275-a52a-60bf7ba71bf3, Completed Successfully
+2026-08-13 19:13:00,014 INFO c.e.m.t.Tenant [DefaultQuartzScheduler_Worker-10] 9676ba22-1936-323a-9503-cd48ad282e87    packages.scheduler.cronJob.handler.startJob.main    Starting scheduled job packages.middleware.pub.server.core.gcApi
+2026-08-13 19:13:00,014 INFO c.e.m.t.Tenant [DefaultQuartzScheduler_Worker-10] 9676ba22-1936-323a-9503-cd48ad282e87    packages.scheduler.cronJob.handler.startJob.main    Starting scheduled job packages.middleware.pub.server.core.gcApi
+2026-08-13 19:13:00,014 INFO c.e.m.t.Tenant [DefaultQuartzScheduler_Worker-10] 9676ba22-1936-323a-9503-cd48ad282e87    packages.scheduler.cronJob.handler.startJob.main    Updatng database status to running**********************
+2026-08-13 19:13:00,014 INFO c.e.m.t.Tenant [DefaultQuartzScheduler_Worker-10] 9676ba22-1936-323a-9503-cd48ad282e87    packages.scheduler.cronJob.handler.startJob.main    Updatng database status to running**********************
+2026-08-13 19:13:00,014 INFO c.e.m.t.Tenant [DefaultQuartzScheduler_Worker-10] 9676ba22-1936-323a-9503-cd48ad282e87    packages.scheduler.cronJob.handler.startJob.main    Database updated. Id:5
+2026-08-13 19:13:00,030 INFO c.e.m.t.Tenant [DefaultQuartzScheduler_Worker-10] 9676ba22-1936-323a-9503-cd48ad282e87    packages.scheduler.cronJob.handler.startJob.main    SELECT "id", "serviceFqn", "cron", "status", "lasterror", "enabled", "owner_node", "last_run", 
+"next_run", "job_name", "created_time"
+FROM "Schedulers" WHERE "id" = '?';
+2026-08-13 19:13:00,030 INFO c.e.m.t.Tenant [DefaultQuartzScheduler_Worker-10] 9676ba22-1936-323a-9503-cd48ad282e87    packages.scheduler.cronJob.handler.startJob.main    gc
+2026-08-13 19:13:00,030 INFO c.e.m.t.Tenant [DefaultQuartzScheduler_Worker-10] 9676ba22-1936-323a-9503-cd48ad282e87    packages.scheduler.cronJob.handler.startJob.main    gc
+2026-08-13 19:13:00,030 INFO c.e.m.t.Tenant [DefaultQuartzScheduler_Worker-10] 9676ba22-1936-323a-9503-cd48ad282e87    packages.scheduler.cronJob.handler.startJob.main    completed
+2026-08-13 19:13:00,030 INFO c.e.m.t.Tenant [DefaultQuartzScheduler_Worker-10] 9676ba22-1936-323a-9503-cd48ad282e87    packages.scheduler.cronJob.handler.startJob.main    packages.middleware.pub.server.core.gcApi
+2026-08-13 19:13:00,030 INFO c.e.m.t.Tenant [DefaultQuartzScheduler_Worker-10] 9676ba22-1936-323a-9503-cd48ad282e87    packages.scheduler.cronJob.handler.startJob.main    Task with correlationId: 1ebfa74c-d1c4-384d-a449-f4daf927bf71, Completed Successfully
+2026-08-13 19:14:00,013 INFO c.e.m.t.Tenant [DefaultQuartzScheduler_Worker-1] fa499038-18d0-3f51-8e80-eb07fe27dea1    packages.scheduler.cronJob.handler.startJob.main    Starting scheduled job packages.middleware.pub.server.core.gcApi
+2026-08-13 19:14:00,013 INFO c.e.m.t.Tenant [DefaultQuartzScheduler_Worker-1] fa499038-18d0-3f51-8e80-eb07fe27dea1    packages.scheduler.cronJob.handler.startJob.main    Starting scheduled job packages.middleware.pub.server.core.gcApi
+2026-08-13 19:14:00,013 INFO c.e.m.t.Tenant [DefaultQuartzScheduler_Worker-1] fa499038-18d0-3f51-8e80-eb07fe27dea1    packages.scheduler.cronJob.handler.startJob.main    Updatng database status to running**********************
+2026-08-13 19:14:00,013 INFO c.e.m.t.Tenant [DefaultQuartzScheduler_Worker-1] fa499038-18d0-3f51-8e80-eb07fe27dea1    packages.scheduler.cronJob.handler.startJob.main    Updatng database status to running**********************
+2026-08-13 19:14:00,013 INFO c.e.m.t.Tenant [DefaultQuartzScheduler_Worker-1] fa499038-18d0-3f51-8e80-eb07fe27dea1    packages.scheduler.cronJob.handler.startJob.main    Database updated. Id:5
+2026-08-13 19:14:00,018 INFO c.e.m.t.Tenant [DefaultQuartzScheduler_Worker-1] fa499038-18d0-3f51-8e80-eb07fe27dea1    packages.scheduler.cronJob.handler.startJob.main    SELECT "id", "serviceFqn", "cron", "status", "lasterror", "enabled", "owner_node", "last_run", 
+"next_run", "job_name", "created_time"
+FROM "Schedulers" WHERE "id" = '?';
+2026-08-13 19:14:00,018 INFO c.e.m.t.Tenant [DefaultQuartzScheduler_Worker-1] fa499038-18d0-3f51-8e80-eb07fe27dea1    packages.scheduler.cronJob.handler.startJob.main    gc
+2026-08-13 19:14:00,018 INFO c.e.m.t.Tenant [DefaultQuartzScheduler_Worker-1] fa499038-18d0-3f51-8e80-eb07fe27dea1    packages.scheduler.cronJob.handler.startJob.main    gc
+2026-08-13 19:14:00,025 INFO c.e.m.t.Tenant [DefaultQuartzScheduler_Worker-1] fa499038-18d0-3f51-8e80-eb07fe27dea1    packages.scheduler.cronJob.handler.startJob.main    completed
+2026-08-13 19:14:00,025 INFO c.e.m.t.Tenant [DefaultQuartzScheduler_Worker-1] fa499038-18d0-3f51-8e80-eb07fe27dea1    packages.scheduler.cronJob.handler.startJob.main    packages.middleware.pub.server.core.gcApi
+2026-08-13 19:14:00,025 INFO c.e.m.t.Tenant [DefaultQuartzScheduler_Worker-1] fa499038-18d0-3f51-8e80-eb07fe27dea1    packages.scheduler.cronJob.handler.startJob.main    Task with correlationId: 2e66f656-409c-3450-acce-0add621f1748, Completed Successfully
+2026-08-13 19:15:00,001 INFO c.e.m.t.Tenant [DefaultQuartzScheduler_Worker-2] 02db09aa-9c69-3eb2-b6b9-0bfa13482b64    packages.scheduler.cronJob.handler.startJob.main    Starting scheduled job packages.middleware.pub.server.core.gcApi
+2026-08-13 19:15:00,001 INFO c.e.m.t.Tenant [DefaultQuartzScheduler_Worker-2] 02db09aa-9c69-3eb2-b6b9-0bfa13482b64    packages.scheduler.cronJob.handler.startJob.main    Starting scheduled job packages.middleware.pub.server.core.gcApi
+2026-08-13 19:15:00,001 INFO c.e.m.t.Tenant [DefaultQuartzScheduler_Worker-2] 02db09aa-9c69-3eb2-b6b9-0bfa13482b64    packages.scheduler.cronJob.handler.startJob.main    Updatng database status to running**********************
+2026-08-13 19:15:00,001 INFO c.e.m.t.Tenant [DefaultQuartzScheduler_Worker-2] 02db09aa-9c69-3eb2-b6b9-0bfa13482b64    packages.scheduler.cronJob.handler.startJob.main    Updatng database status to running**********************
+2026-08-13 19:15:00,001 INFO c.e.m.t.Tenant [DefaultQuartzScheduler_Worker-2] 02db09aa-9c69-3eb2-b6b9-0bfa13482b64    packages.scheduler.cronJob.handler.startJob.main    Database updated. Id:5
+2026-08-13 19:15:00,017 INFO c.e.m.t.Tenant [DefaultQuartzScheduler_Worker-2] 02db09aa-9c69-3eb2-b6b9-0bfa13482b64    packages.scheduler.cronJob.handler.startJob.main    SELECT "id", "serviceFqn", "cron", "status", "lasterror", "enabled", "owner_node", "last_run", 
+"next_run", "job_name", "created_time"
+FROM "Schedulers" WHERE "id" = '?';
+2026-08-13 19:15:00,017 INFO c.e.m.t.Tenant [DefaultQuartzScheduler_Worker-2] 02db09aa-9c69-3eb2-b6b9-0bfa13482b64    packages.scheduler.cronJob.handler.startJob.main    gc
+2026-08-13 19:15:00,017 INFO c.e.m.t.Tenant [DefaultQuartzScheduler_Worker-2] 02db09aa-9c69-3eb2-b6b9-0bfa13482b64    packages.scheduler.cronJob.handler.startJob.main    gc
+2026-08-13 19:15:00,017 INFO c.e.m.t.Tenant [DefaultQuartzScheduler_Worker-2] 02db09aa-9c69-3eb2-b6b9-0bfa13482b64    packages.scheduler.cronJob.handler.startJob.main    completed
+2026-08-13 19:15:00,017 INFO c.e.m.t.Tenant [DefaultQuartzScheduler_Worker-2] 02db09aa-9c69-3eb2-b6b9-0bfa13482b64    packages.scheduler.cronJob.handler.startJob.main    packages.middleware.pub.server.core.gcApi
+2026-08-13 19:15:00,017 INFO c.e.m.t.Tenant [DefaultQuartzScheduler_Worker-2] 02db09aa-9c69-3eb2-b6b9-0bfa13482b64    packages.scheduler.cronJob.handler.startJob.main    Task with correlationId: 2030e045-f8a9-3124-b95d-3c7074aec8fc, Completed Successfully
+2026-08-13 19:16:00,030 INFO c.e.m.t.Tenant [DefaultQuartzScheduler_Worker-3] b7124b9f-ec3a-3058-b222-54b9062d9375    packages.scheduler.cronJob.handler.startJob.main    Starting scheduled job packages.middleware.pub.server.core.gcApi
+2026-08-13 19:16:00,030 INFO c.e.m.t.Tenant [DefaultQuartzScheduler_Worker-3] b7124b9f-ec3a-3058-b222-54b9062d9375    packages.scheduler.cronJob.handler.startJob.main    Starting scheduled job packages.middleware.pub.server.core.gcApi
+2026-08-13 19:16:00,032 INFO c.e.m.t.Tenant [DefaultQuartzScheduler_Worker-3] b7124b9f-ec3a-3058-b222-54b9062d9375    packages.scheduler.cronJob.handler.startJob.main    Updatng database status to running**********************
+2026-08-13 19:16:00,032 INFO c.e.m.t.Tenant [DefaultQuartzScheduler_Worker-3] b7124b9f-ec3a-3058-b222-54b9062d9375    packages.scheduler.cronJob.handler.startJob.main    Updatng database status to running**********************
+2026-08-13 19:16:00,032 INFO c.e.m.t.Tenant [DefaultQuartzScheduler_Worker-3] b7124b9f-ec3a-3058-b222-54b9062d9375    packages.scheduler.cronJob.handler.startJob.main    Database updated. Id:5
+2026-08-13 19:16:00,032 INFO c.e.m.t.Tenant [DefaultQuartzScheduler_Worker-3] b7124b9f-ec3a-3058-b222-54b9062d9375    packages.scheduler.cronJob.handler.startJob.main    SELECT "id", "serviceFqn", "cron", "status", "lasterror", "enabled", "owner_node", "last_run", 
+"next_run", "job_name", "created_time"
+FROM "Schedulers" WHERE "id" = '?';
+2026-08-13 19:16:00,032 INFO c.e.m.t.Tenant [DefaultQuartzScheduler_Worker-3] b7124b9f-ec3a-3058-b222-54b9062d9375    packages.scheduler.cronJob.handler.startJob.main    gc
+2026-08-13 19:16:00,032 INFO c.e.m.t.Tenant [DefaultQuartzScheduler_Worker-3] b7124b9f-ec3a-3058-b222-54b9062d9375    packages.scheduler.cronJob.handler.startJob.main    gc
+2026-08-13 19:16:00,045 INFO c.e.m.t.Tenant [DefaultQuartzScheduler_Worker-3] b7124b9f-ec3a-3058-b222-54b9062d9375    packages.scheduler.cronJob.handler.startJob.main    completed
+2026-08-13 19:16:00,045 INFO c.e.m.t.Tenant [DefaultQuartzScheduler_Worker-3] b7124b9f-ec3a-3058-b222-54b9062d9375    packages.scheduler.cronJob.handler.startJob.main    packages.middleware.pub.server.core.gcApi
+2026-08-13 19:16:00,045 INFO c.e.m.t.Tenant [DefaultQuartzScheduler_Worker-3] b7124b9f-ec3a-3058-b222-54b9062d9375    packages.scheduler.cronJob.handler.startJob.main    Task with correlationId: 04656b38-07c8-334d-bc33-f18496be88f6, Completed Successfully
+2026-08-13 19:17:00,020 INFO c.e.m.t.Tenant [DefaultQuartzScheduler_Worker-4] a8310dcf-9233-3a30-b33c-506941bfac1c    packages.scheduler.cronJob.handler.startJob.main    Starting scheduled job packages.middleware.pub.server.core.gcApi
+2026-08-13 19:17:00,020 INFO c.e.m.t.Tenant [DefaultQuartzScheduler_Worker-4] a8310dcf-9233-3a30-b33c-506941bfac1c    packages.scheduler.cronJob.handler.startJob.main    Starting scheduled job packages.middleware.pub.server.core.gcApi
+2026-08-13 19:17:00,020 INFO c.e.m.t.Tenant [DefaultQuartzScheduler_Worker-4] a8310dcf-9233-3a30-b33c-506941bfac1c    packages.scheduler.cronJob.handler.startJob.main    Updatng database status to running**********************
+2026-08-13 19:17:00,020 INFO c.e.m.t.Tenant [DefaultQuartzScheduler_Worker-4] a8310dcf-9233-3a30-b33c-506941bfac1c    packages.scheduler.cronJob.handler.startJob.main    Updatng database status to running**********************
+2026-08-13 19:17:00,020 INFO c.e.m.t.Tenant [DefaultQuartzScheduler_Worker-4] a8310dcf-9233-3a30-b33c-506941bfac1c    packages.scheduler.cronJob.handler.startJob.main    Database updated. Id:5
+2026-08-13 19:17:00,025 INFO c.e.m.t.Tenant [DefaultQuartzScheduler_Worker-4] a8310dcf-9233-3a30-b33c-506941bfac1c    packages.scheduler.cronJob.handler.startJob.main    SELECT "id", "serviceFqn", "cron", "status", "lasterror", "enabled", "owner_node", "last_run", 
+"next_run", "job_name", "created_time"
+FROM "Schedulers" WHERE "id" = '?';
+2026-08-13 19:17:00,025 INFO c.e.m.t.Tenant [DefaultQuartzScheduler_Worker-4] a8310dcf-9233-3a30-b33c-506941bfac1c    packages.scheduler.cronJob.handler.startJob.main    gc
+2026-08-13 19:17:00,025 INFO c.e.m.t.Tenant [DefaultQuartzScheduler_Worker-4] a8310dcf-9233-3a30-b33c-506941bfac1c    packages.scheduler.cronJob.handler.startJob.main    gc
+2026-08-13 19:17:00,025 INFO c.e.m.t.Tenant [DefaultQuartzScheduler_Worker-4] a8310dcf-9233-3a30-b33c-506941bfac1c    packages.scheduler.cronJob.handler.startJob.main    completed
+2026-08-13 19:17:00,025 INFO c.e.m.t.Tenant [DefaultQuartzScheduler_Worker-4] a8310dcf-9233-3a30-b33c-506941bfac1c    packages.scheduler.cronJob.handler.startJob.main    packages.middleware.pub.server.core.gcApi
+2026-08-13 19:17:00,041 INFO c.e.m.t.Tenant [DefaultQuartzScheduler_Worker-4] a8310dcf-9233-3a30-b33c-506941bfac1c    packages.scheduler.cronJob.handler.startJob.main    Task with correlationId: 75b1982d-fe06-3620-9cd8-302e986d8ded, Completed Successfully
+2026-08-13 19:18:00,019 INFO c.e.m.t.Tenant [DefaultQuartzScheduler_Worker-5] b2b18548-2bae-3110-9e2c-0b0b62c51d77    packages.scheduler.cronJob.handler.startJob.main    Starting scheduled job packages.middleware.pub.server.core.gcApi
+2026-08-13 19:18:00,019 INFO c.e.m.t.Tenant [DefaultQuartzScheduler_Worker-5] b2b18548-2bae-3110-9e2c-0b0b62c51d77    packages.scheduler.cronJob.handler.startJob.main    Starting scheduled job packages.middleware.pub.server.core.gcApi
+2026-08-13 19:18:00,019 INFO c.e.m.t.Tenant [DefaultQuartzScheduler_Worker-5] b2b18548-2bae-3110-9e2c-0b0b62c51d77    packages.scheduler.cronJob.handler.startJob.main    Updatng database status to running**********************
+2026-08-13 19:18:00,019 INFO c.e.m.t.Tenant [DefaultQuartzScheduler_Worker-5] b2b18548-2bae-3110-9e2c-0b0b62c51d77    packages.scheduler.cronJob.handler.startJob.main    Updatng database status to running**********************
+2026-08-13 19:18:00,019 INFO c.e.m.t.Tenant [DefaultQuartzScheduler_Worker-5] b2b18548-2bae-3110-9e2c-0b0b62c51d77    packages.scheduler.cronJob.handler.startJob.main    Database updated. Id:5
+2026-08-13 19:18:00,027 INFO c.e.m.t.Tenant [DefaultQuartzScheduler_Worker-5] b2b18548-2bae-3110-9e2c-0b0b62c51d77    packages.scheduler.cronJob.handler.startJob.main    SELECT "id", "serviceFqn", "cron", "status", "lasterror", "enabled", "owner_node", "last_run", 
+"next_run", "job_name", "created_time"
+FROM "Schedulers" WHERE "id" = '?';
+2026-08-13 19:18:00,027 INFO c.e.m.t.Tenant [DefaultQuartzScheduler_Worker-5] b2b18548-2bae-3110-9e2c-0b0b62c51d77    packages.scheduler.cronJob.handler.startJob.main    gc
+2026-08-13 19:18:00,027 INFO c.e.m.t.Tenant [DefaultQuartzScheduler_Worker-5] b2b18548-2bae-3110-9e2c-0b0b62c51d77    packages.scheduler.cronJob.handler.startJob.main    gc
+2026-08-13 19:18:00,031 INFO c.e.m.t.Tenant [DefaultQuartzScheduler_Worker-5] b2b18548-2bae-3110-9e2c-0b0b62c51d77    packages.scheduler.cronJob.handler.startJob.main    completed
+2026-08-13 19:18:00,032 INFO c.e.m.t.Tenant [DefaultQuartzScheduler_Worker-5] b2b18548-2bae-3110-9e2c-0b0b62c51d77    packages.scheduler.cronJob.handler.startJob.main    packages.middleware.pub.server.core.gcApi
+2026-08-13 19:18:00,036 INFO c.e.m.t.Tenant [DefaultQuartzScheduler_Worker-5] b2b18548-2bae-3110-9e2c-0b0b62c51d77    packages.scheduler.cronJob.handler.startJob.main    Task with correlationId: 853af119-2084-3be7-aca2-d4375426102b, Completed Successfully
+2026-08-13 19:19:00,016 INFO c.e.m.t.Tenant [DefaultQuartzScheduler_Worker-6] 7f2e4ea6-cc24-31e2-88f5-0056a7440254    packages.scheduler.cronJob.handler.startJob.main    Starting scheduled job packages.middleware.pub.server.core.gcApi
+2026-08-13 19:19:00,016 INFO c.e.m.t.Tenant [DefaultQuartzScheduler_Worker-6] 7f2e4ea6-cc24-31e2-88f5-0056a7440254    packages.scheduler.cronJob.handler.startJob.main    Starting scheduled job packages.middleware.pub.server.core.gcApi
+2026-08-13 19:19:00,016 INFO c.e.m.t.Tenant [DefaultQuartzScheduler_Worker-6] 7f2e4ea6-cc24-31e2-88f5-0056a7440254    packages.scheduler.cronJob.handler.startJob.main    Updatng database status to running**********************
+2026-08-13 19:19:00,016 INFO c.e.m.t.Tenant [DefaultQuartzScheduler_Worker-6] 7f2e4ea6-cc24-31e2-88f5-0056a7440254    packages.scheduler.cronJob.handler.startJob.main    Updatng database status to running**********************
+2026-08-13 19:19:00,016 INFO c.e.m.t.Tenant [DefaultQuartzScheduler_Worker-6] 7f2e4ea6-cc24-31e2-88f5-0056a7440254    packages.scheduler.cronJob.handler.startJob.main    Database updated. Id:5
+2026-08-13 19:19:00,032 INFO c.e.m.t.Tenant [DefaultQuartzScheduler_Worker-6] 7f2e4ea6-cc24-31e2-88f5-0056a7440254    packages.scheduler.cronJob.handler.startJob.main    SELECT "id", "serviceFqn", "cron", "status", "lasterror", "enabled", "owner_node", "last_run", 
+"next_run", "job_name", "created_time"
+FROM "Schedulers" WHERE "id" = '?';
+2026-08-13 19:19:00,032 INFO c.e.m.t.Tenant [DefaultQuartzScheduler_Worker-6] 7f2e4ea6-cc24-31e2-88f5-0056a7440254    packages.scheduler.cronJob.handler.startJob.main    gc
+2026-08-13 19:19:00,032 INFO c.e.m.t.Tenant [DefaultQuartzScheduler_Worker-6] 7f2e4ea6-cc24-31e2-88f5-0056a7440254    packages.scheduler.cronJob.handler.startJob.main    gc
+2026-08-13 19:19:00,032 INFO c.e.m.t.Tenant [DefaultQuartzScheduler_Worker-6] 7f2e4ea6-cc24-31e2-88f5-0056a7440254    packages.scheduler.cronJob.handler.startJob.main    completed
+2026-08-13 19:19:00,032 INFO c.e.m.t.Tenant [DefaultQuartzScheduler_Worker-6] 7f2e4ea6-cc24-31e2-88f5-0056a7440254    packages.scheduler.cronJob.handler.startJob.main    packages.middleware.pub.server.core.gcApi
+2026-08-13 19:19:00,041 INFO c.e.m.t.Tenant [DefaultQuartzScheduler_Worker-6] 7f2e4ea6-cc24-31e2-88f5-0056a7440254    packages.scheduler.cronJob.handler.startJob.main    Task with correlationId: 34ec6bb4-56fa-360d-8a7e-e7af86494807, Completed Successfully
+2026-08-13 19:20:00,011 INFO c.e.m.t.Tenant [DefaultQuartzScheduler_Worker-7] c2e0f9e6-e46e-376f-9572-cc1caa6c439e    packages.scheduler.cronJob.handler.startJob.main    Starting scheduled job packages.middleware.pub.server.core.gcApi
+2026-08-13 19:20:00,011 INFO c.e.m.t.Tenant [DefaultQuartzScheduler_Worker-7] c2e0f9e6-e46e-376f-9572-cc1caa6c439e    packages.scheduler.cronJob.handler.startJob.main    Starting scheduled job packages.middleware.pub.server.core.gcApi
+2026-08-13 19:20:00,022 INFO c.e.m.t.Tenant [DefaultQuartzScheduler_Worker-7] c2e0f9e6-e46e-376f-9572-cc1caa6c439e    packages.scheduler.cronJob.handler.startJob.main    Updatng database status to running**********************
+2026-08-13 19:20:00,022 INFO c.e.m.t.Tenant [DefaultQuartzScheduler_Worker-7] c2e0f9e6-e46e-376f-9572-cc1caa6c439e    packages.scheduler.cronJob.handler.startJob.main    Updatng database status to running**********************
+2026-08-13 19:20:00,022 INFO c.e.m.t.Tenant [DefaultQuartzScheduler_Worker-7] c2e0f9e6-e46e-376f-9572-cc1caa6c439e    packages.scheduler.cronJob.handler.startJob.main    Database updated. Id:5
+2026-08-13 19:20:00,029 INFO c.e.m.t.Tenant [DefaultQuartzScheduler_Worker-7] c2e0f9e6-e46e-376f-9572-cc1caa6c439e    packages.scheduler.cronJob.handler.startJob.main    SELECT "id", "serviceFqn", "cron", "status", "lasterror", "enabled", "owner_node", "last_run", 
+"next_run", "job_name", "created_time"
+FROM "Schedulers" WHERE "id" = '?';
+2026-08-13 19:20:00,029 INFO c.e.m.t.Tenant [DefaultQuartzScheduler_Worker-7] c2e0f9e6-e46e-376f-9572-cc1caa6c439e    packages.scheduler.cronJob.handler.startJob.main    gc
+2026-08-13 19:20:00,029 INFO c.e.m.t.Tenant [DefaultQuartzScheduler_Worker-7] c2e0f9e6-e46e-376f-9572-cc1caa6c439e    packages.scheduler.cronJob.handler.startJob.main    gc
+2026-08-13 19:20:00,034 INFO c.e.m.t.Tenant [DefaultQuartzScheduler_Worker-7] c2e0f9e6-e46e-376f-9572-cc1caa6c439e    packages.scheduler.cronJob.handler.startJob.main    completed
+2026-08-13 19:20:00,034 INFO c.e.m.t.Tenant [DefaultQuartzScheduler_Worker-7] c2e0f9e6-e46e-376f-9572-cc1caa6c439e    packages.scheduler.cronJob.handler.startJob.main    packages.middleware.pub.server.core.gcApi
+2026-08-13 19:20:00,039 INFO c.e.m.t.Tenant [DefaultQuartzScheduler_Worker-7] c2e0f9e6-e46e-376f-9572-cc1caa6c439e    packages.scheduler.cronJob.handler.startJob.main    Task with correlationId: dc3d1d68-37fd-3696-a6a9-3b715f83db83, Completed Successfully

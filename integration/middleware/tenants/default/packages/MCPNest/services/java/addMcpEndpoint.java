@@ -9,6 +9,7 @@ try {
     Map request=new HashMap();
     request.put("mcpAlias",dataPipeline.getString("mcpAlias"));
     request.put("endpointUrl",dataPipeline.getString("endpointUrl"));
+    request.put("packageName",dataPipeline.getString("packageName"));
     request.put("mcpName",dataPipeline.getString("mcpName"));
     request.put("description",dataPipeline.getString("description"));
     request.put("endpointType",dataPipeline.getString("endpointType"));

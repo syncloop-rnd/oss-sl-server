@@ -1,0 +1,1 @@
+import{t as e}from"./vendor-react-BoEa23SJ.js";var t=e();function n(){return(0,t.jsx)(`div`,{className:`relative h-[220px] overflow-hidden rounded-lg border border-[#e7e7e7] bg-white`,"aria-hidden":!0,children:(0,t.jsx)(`div`,{className:`app-card-loading-shimmer absolute inset-0 rounded-lg`})})}export{n as t};

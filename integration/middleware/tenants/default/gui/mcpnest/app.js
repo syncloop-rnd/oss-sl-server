@@ -1170,6 +1170,24 @@
         showModal('addMcpModal');
       };
 
+      vm.isSyncloopMcpForm = function () {
+        var request = vm.forms.mcp && vm.forms.mcp.request;
+        return !!request && request.connectionType === 'SYNCLOOP';
+      };
+
+      vm.onMcpConnectionTypeChange = function () {
+        var request = vm.forms.mcp.request;
+        if (request.connectionType === 'SYNCLOOP') {
+          request.authType = 'SYNCLOOP';
+          request.endpointType = 'SYNCLOOP';
+          request.authInfo = defaultMcpAuthInfo();
+        } else {
+          request.authType = request.authType === 'SYNCLOOP' ? 'NONE' : request.authType;
+          request.endpointType = request.endpointType === 'SYNCLOOP' ? 'STANDARD' : request.endpointType;
+        }
+        vm.initMcpAuthEditor();
+      };
+
       vm.providerNameSearch = '';
       vm.selectedProviderName = null;
 
@@ -1214,9 +1232,11 @@
         vm.selectedTemplate = manualTemplate();
         vm.forms.mcp = formFromTemplate(vm.selectedTemplate);
         vm.forms.mcp.request.mcpId = mcp.mcpId || '';
+        vm.forms.mcp.request.connectionType = (mcp.authType === 'SYNCLOOP' || mcp.authType === 'INTERNAL' || mcp.endpointType === 'SYNCLOOP') ? 'SYNCLOOP' : 'REMOTE';
         vm.forms.mcp.request.mcpAlias = mcp.alias || '';
         vm.forms.mcp.request.mcpName = mcp.name || '';
         vm.forms.mcp.request.endpointUrl = mcp.endpoint || '';
+        vm.forms.mcp.request.packageName = mcp.packageName || (vm.forms.mcp.request.connectionType === 'SYNCLOOP' ? (mcp.endpoint || '') : '');
         vm.forms.mcp.request.description = mcp.description || '';
         vm.forms.mcp.request.endpointType = mcp.endpointType || 'STANDARD';
         vm.forms.mcp.request.authType = mcp.authType === 'CUSTOM_HEADER' ? 'API_KEY' : (mcp.authType || 'NONE');
@@ -1236,6 +1256,7 @@
         vm.forms.cloneMcp.request.mcpId = mcp.mcpId;
         vm.forms.cloneMcp.request.newMcpAlias = (mcp.alias || mcp.name || 'cloned-mcp') + '-copy';
         vm.forms.cloneMcp.request.endpointUrl = mcp.endpoint || '';
+        vm.forms.cloneMcp.request.packageName = mcp.packageName || ((mcp.authType === 'SYNCLOOP' || mcp.authType === 'INTERNAL') ? (mcp.endpoint || '') : '');
         vm.forms.cloneMcp.request.mcpName = mcp.name || mcp.alias || 'MCP';
         vm.forms.cloneMcp.request.description = mcp.description || '';
         vm.forms.cloneMcp.request.endpointType = mcp.endpointType || 'STANDARD';
@@ -1337,6 +1358,18 @@
           return;
         }
         payload.request.categories = normalizeCategories(payload.request.categories, ['MCPNEST_MCP']);
+        if (payload.request.connectionType === 'SYNCLOOP') {
+          payload.request.packageName = String(payload.request.packageName || '').trim();
+          if (!payload.request.packageName) {
+            vm.notify('warning', 'Package name required', 'Enter the Syncloop package that exposes the MCP tools.');
+            return;
+          }
+          payload.request.endpointUrl = payload.request.packageName;
+          payload.request.endpointType = 'SYNCLOOP';
+          payload.request.authType = 'SYNCLOOP';
+          payload.request.authInfo = {};
+        }
+        delete payload.request.connectionType;
         var templateAuthInfo = normalizeAuthInfo(payload.request.authInfo, payload.request.authType);
         var editorAuthInfo = normalizeAuthInfo(vm.mcpAuthEditor.model, payload.request.authType);
         payload.request.authInfo = compactObject(mergeSchemaValues(editorAuthInfo, templateAuthInfo)) || {};
@@ -1824,14 +1857,17 @@
         vm.collectionWizard.collectionId = vm.collectionLookup.id;
         vm.collectionWizard.collectionName = findCollectionName(vm.collectionLookup.id) || vm.collectionLookup.id;
         vm.collectionWizard.description = findCollectionDescription(vm.collectionLookup.id) || '';
+        vm.collectionWizard.enabled = findCollectionEnabled(vm.collectionLookup.id);
         vm.collectionWizard.step = 2;
 
         vm.loadCollectionTools(vm.collectionLookup.id).then(function (tools) {
           var list = tools || [];
           vm.collectionWizard.availableTools = angular.copy(list);
           vm.collectionWizard.selected = {};
+          vm.collectionWizard.initialMappings = {};
           list.forEach(function (tool) {
             vm.collectionWizard.selected[tool.toolId] = true;
+            vm.collectionWizard.initialMappings[tool.toolId] = tool.collectionToolId;
           });
         });
 
@@ -1881,7 +1917,7 @@
 
       vm.submitCollectionWizard = function () {
         var toolIds = vm.selectedWizardToolIds();
-        if (!toolIds.length) {
+        if (!toolIds.length && vm.collectionWizard.mode === 'create') {
           vm.notify('warning', 'No tools selected', 'Select at least one tool before applying the wizard.');
           return;
         }
@@ -1916,7 +1952,9 @@
             request: {
               collectionId: vm.collectionWizard.collectionId,
               collectionName: vm.collectionWizard.collectionName || vm.collectionWizard.collectionId,
-              description: vm.collectionWizard.description || ''
+              description: vm.collectionWizard.description || '',
+              enabled: vm.collectionWizard.enabled,
+              overwrite: true
             }
           }).then(function (response) {
             var result = unwrapResult(response);
@@ -1930,12 +1968,24 @@
         }
 
         return collectionPromise.then(function (collectionId) {
+          var removedMappings = Object.keys(vm.collectionWizard.initialMappings || {}).filter(function (toolId) {
+            return !vm.collectionWizard.selected[toolId];
+          }).map(function (toolId) {
+            return vm.collectionWizard.initialMappings[toolId];
+          });
           return chain(toolIds, function (toolId) {
             return api('addToolToCollection', { collectionId: collectionId, toolId: toolId }, { quietErrors: true })
               .catch(function (err) {
                 if (String(err && err.message || err).indexOf('already exists') >= 0) return null;
                 throw err;
               });
+          }).then(function () {
+            return chain(removedMappings, function (collectionToolId) {
+              return api('removeToolFromCollection', {
+                collectionId: collectionId,
+                collectionToolId: collectionToolId
+              });
+            });
           }).then(function () {
             vm.notify('success', 'Collection updated', toolIds.length + ' tool(s) are available in the collection.');
             vm.collectionLookup.id = collectionId;
@@ -3706,7 +3756,9 @@
           request: {
             mcpId: '',
             mcpAlias: '',
+            connectionType: 'REMOTE',
             endpointUrl: '',
+            packageName: '',
             mcpName: '',
             description: '',
             endpointType: 'STANDARD',
@@ -3894,6 +3946,7 @@
         normalized.alias = firstPresent(source, ['alias', 'mcpAlias', 'mcp_alias', 'MCP_ALIAS']);
         normalized.name = firstPresent(source, ['name', 'mcpName', 'mcp_name', 'MCP_NAME']);
         normalized.endpoint = firstPresent(source, ['endpoint', 'endpointUrl', 'endpoint_url', 'ENDPOINT']);
+        normalized.packageName = firstPresent(source, ['packageName', 'package_name', 'PACKAGE_NAME']);
         normalized.endpointType = firstPresent(source, ['endpointType', 'endpoint_type', 'ENDPOINT_TYPE']);
         normalized.authType = firstPresent(source, ['authType', 'auth_type', 'AUTH_TYPE']);
         normalized.description = firstPresent(source, ['description', 'DESCRIPTION']);
@@ -3957,7 +4010,8 @@
           mcpId: '',
           toolSearch: '',
           availableTools: [],
-          selected: {}
+          selected: {},
+          initialMappings: {}
         };
       }
 
@@ -4004,6 +4058,7 @@
             mcpId: '',
             newMcpAlias: '',
             endpointUrl: '',
+            packageName: '',
             mcpName: '',
             description: '',
             endpointType: 'STANDARD',
@@ -4319,6 +4374,15 @@
           return entry.collectionId === collectionId;
         })[0];
         return item && item.description;
+      }
+
+      function findCollectionEnabled(collectionId) {
+        var item = vm.collections.filter(function (entry) {
+          return entry.collectionId === collectionId;
+        })[0] || vm.recentCollections.filter(function (entry) {
+          return entry.collectionId === collectionId;
+        })[0];
+        return item ? truthy(item.enabled) : true;
       }
 
       function samplePayload(operationId) {

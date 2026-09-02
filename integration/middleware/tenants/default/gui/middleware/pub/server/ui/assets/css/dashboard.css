@@ -1253,9 +1253,9 @@ button.cn_trs {
     width: auto;
 }
 
-.nav>li>a {
+/* .nav>li>a {
     padding: 10px 40px;
-}
+} */
 
 .form-group input {
     background: #fafafa;

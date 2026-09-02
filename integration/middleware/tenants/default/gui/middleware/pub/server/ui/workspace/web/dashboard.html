@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -27,12 +28,8 @@
 	<link href="middleware/pub/server/ui/assets/css/preload.css" rel="stylesheet">
 	<link rel="stylesheet" href="middleware/pub/server/ui/assets/css/select2.min.css">
 	<link rel="stylesheet" href="middleware/pub/server/ui/css/sweetalert.css">
-	<script src="/middleware/pub/server/ui/javascript/sweetalert.min.js"></script>
-	<script src="/middleware/pub/server/ui/javascript/sweetalert.init.js"></script>
 	<link rel="stylesheet" href="middleware/pub/server/ui/assets/css/videopopup.css">
 	<script src="middleware/pub/server/ui/javascript/workspace-profile-header.js?v=workspace-profile-v2"></script>
-	<script src="https://cdn.jsdelivr.net/npm/js-cookie@2.2.1/src/js.cookie.js"></script>
-	<script src="https://cdn.jsdelivr.net/npm/js-cookie@2/src/js.cookie.min.js"></script>
 	<script type="text/javascript">
 		var SDK_EMBEDDED = false;
 	</script>
@@ -44,8 +41,8 @@
 	<style>
 		.preload .pre-content{left: 80px;}
 		main {
-			display: block !important;
-		}
+    display: block !important;
+}
 		.modal-header {
 			display: inline-block;
 		}
@@ -65,175 +62,1662 @@
 			display: none;
 		}
 
-		body {
-			background: #f7f9fc;
-		}
-
-		main.loader-shell {
-			min-height: calc(100vh - 72px);
-			display: flex !important;
-			align-items: center;
-			justify-content: center;
-			padding: 24px;
-		}
-
-		.loader-card {
-			display: flex;
-			flex-direction: column;
-			align-items: center;
-			justify-content: center;
-			min-width: 280px;
-			padding: 34px 30px;
-			border: 1px solid #e7ecf4;
-			border-radius: 8px;
-			background: #ffffff;
-			box-shadow: 0 12px 34px rgba(4, 13, 33, 0.08);
-			text-align: center;
-		}
-
-		.loader-icon {
-			position: relative;
-			width: 54px;
-			height: 54px;
-			margin-bottom: 18px;
-		}
-
-		.loader-icon::before,
-		.loader-icon::after {
-			content: "";
-			position: absolute;
-			inset: 0;
-			border-radius: 50%;
-			border: 4px solid transparent;
-		}
-
-		.loader-icon::before {
-			border-top-color: #2c61f5;
-			border-right-color: #2c61f5;
-			animation: loader-spin 0.8s linear infinite;
-		}
-
-		.loader-icon::after {
-			inset: 10px;
-			border-top-color: #44b678;
-			border-left-color: #44b678;
-			animation: loader-spin 1.1s linear infinite reverse;
-		}
-
-		.loader-text {
-			margin: 0;
-			color: #434550;
-			font-size: 16px;
-			font-weight: 500;
-			line-height: 1.4;
-		}
-
-		.loader-dots {
-			display: flex;
-			gap: 6px;
-			margin-top: 12px;
-		}
-
-		.loader-dots span {
-			width: 7px;
-			height: 7px;
-			border-radius: 50%;
-			background: #8996a4;
-			animation: loader-pulse 1s ease-in-out infinite;
-		}
-
-		.loader-dots span:nth-child(2) {
-			animation-delay: 0.15s;
-		}
-
-		.loader-dots span:nth-child(3) {
-			animation-delay: 0.3s;
-		}
-
-		@keyframes loader-spin {
-			to {
-				transform: rotate(360deg);
-			}
-		}
-
-		@keyframes loader-pulse {
-			0%, 100% {
-				opacity: 0.35;
-				transform: translateY(0);
-			}
-
-			50% {
-				opacity: 1;
-				transform: translateY(-4px);
-			}
-		}
-
 	</style>
 
 </head>
 <body>
+	<script type="syncloop/body-analytics"></script>
+	<div class="preload">
+		<div class="pre-wrap">
+			<div class="pre-top">
+				<div class="pre-brand">
+					<div class="pre-logo placeholder-content">
+					</div>
+				</div>
+
+				<div class="pre-menu">
+				  <div class="pre-switch">
+				  <div class="pre-large placeholder-content"></div>
+				  </div>
+
+				  <div class="pre-switch">
+					<div class="pre-large placeholder-content"></div>
+				  </div>
+
+				  <div class="pre-switch">
+					<div class="pre-large placeholder-content"></div>
+				  </div>
+				</div>
+			</div>
+
+
+		<div class="pre-wrapper">
+			<div class="pre-sidebar work">
+				<div class="pre-switch pre-menu">
+					<div class="pre-dot placeholder-content"></div>
+				</div>
+
+				<div class="pre-switch pre-menu">
+					<div class="pre-dot placeholder-content"></div>
+				</div>
+
+				<div class="pre-switch pre-menu">
+					<div class="pre-dot placeholder-content"></div>
+				</div>
+
+				<div class="pre-switch pre-menu">
+					<div class="pre-dot placeholder-content"></div>
+				</div>
+
+				<div class="pre-switch pre-menu">
+					<div class="pre-dot placeholder-content"></div>
+				</div>
+
+				<div class="pre-switch pre-menu">
+					<div class="pre-dot placeholder-content"></div>
+				</div>
+
+				<div class="pre-switch pre-menu">
+					<div class="pre-dot placeholder-content"></div>
+				</div>
+
+				<div class="pre-switch pre-menu">
+					<div class="pre-dot placeholder-content"></div>
+				</div>
+
+				<div class="pre-switch pre-menu">
+					<div class="pre-dot placeholder-content"></div>
+				</div>
+
+				<div class="pre-switch pre-menu">
+					<div class="pre-dot placeholder-content"></div>
+				</div>
+			</div>
+
+		  <div class="pre-content">
+			<div class="pre-wrap">
+			  <div class="pre-box-row">
+				<div class="pre-box-col">
+				  <div class="pre-box placeholder-content">
+				  </div>
+				</div>
+				<div class="pre-box-col">
+				  <div class="pre-box placeholder-content">
+				  </div>
+				</div>
+				<div class="pre-box-col">
+				  <div class="pre-box placeholder-content">
+				  </div>
+				</div>
+			  </div>
+
+
+			  <div class="pre-subhead pre-subhead2 placeholder-content">
+			  </div>
+			  <div class="pre-box-row">
+				<div class="pre-box-col">
+				  <div class="pre-box placeholder-content height180">
+				  </div>
+				</div>
+				<div class="pre-box-col">
+				  <div class="pre-box placeholder-content height180">
+				  </div>
+				</div>
+				<div class="pre-box-col">
+				  <div class="pre-box placeholder-content height180">
+				  </div>
+				</div>
+				<div class="pre-box-col">
+				  <div class="pre-box placeholder-content height180">
+				  </div>
+				</div>
+				<div class="pre-box-col">
+				  <div class="pre-box placeholder-content height180">
+				  </div>
+				</div>
+			  </div>
+			</div>
+		  </div>
+		  </div>
+
+		</div>
+	</div>
+
+
+	<div id="toasts"></div>
+
+
 <header class="navbar custom_head sticky-top flex-md-nowrap bg-gray">
 	<div id="license_warning" class="toast-warning" style="display: none;">
 		<div class="toast-content">
-			<i class="toast-check"><svg xmlns="http://www.w3.org/2000/svg" width="24px" height="24px" viewBox="0 0 24 24" fill="#000000"><g id="SVGRepo_bgCarrier" stroke-width="0"/><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"/><g id="SVGRepo_iconCarrier"><path fill="none" stroke="#ffffff" stroke-linejoin="round" stroke-width="2" d="M12,3 L22,21 L2,21 L12,3 Z M12,9 L12,15 M12,16 L12,18"/></g></svg></i>
-			<div class="message">
-				<h5>Warning</h5>
-				<p>Maximum two users are allowed on community version. <a target="_blank" href="https://www.syncloop.com/terms-conditions.html?utm_source=Website&utm_medium=click&utm_id=terms-conditions&utm_content=footer-link">Click here</a> to view the community usage terms and conditions.</p>
-			</div>
+		  <i class="toast-check"><svg xmlns="http://www.w3.org/2000/svg" width="24px" height="24px" viewBox="0 0 24 24" fill="#000000">
+			<g id="SVGRepo_bgCarrier" stroke-width="0"/>
+			<g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"/>
+			<g id="SVGRepo_iconCarrier"> <path fill="none" stroke="#ffffff" stroke-linejoin="round" stroke-width="2" d="M12,3 L22,21 L2,21 L12,3 Z M12,9 L12,15 M12,16 L12,18"/> </g>
+			</svg></i>
+		  <div class="message">
+			<h5>Warning</h5>
+			<p>Maximum two users are allowed on community version. <a target="_blank" href="https://www.syncloop.com/terms-conditions.html?utm_source=Website&utm_medium=click&utm_id=terms-conditions&utm_content=footer-link">Click here</a> to view the community usage terms and conditions.</p>
+		  </div>
 		</div>
-		<i onclick="$(this).parent().hide();" class="toast-close"><svg xmlns="http://www.w3.org/2000/svg" width="14px" height="14px" viewBox="0 0 24 24" fill="none"><g id="SVGRepo_bgCarrier" stroke-width="0"/><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"/><g id="SVGRepo_iconCarrier"><path fill-rule="evenodd" clip-rule="evenodd" d="M5.29289 5.29289C5.68342 4.90237 6.31658 4.90237 6.70711 5.29289L12 10.5858L17.2929 5.29289C17.6834 4.90237 18.3166 4.90237 18.7071 5.29289C19.0976 5.68342 19.0976 6.31658 18.7071 6.70711L13.4142 12L18.7071 17.2929C19.0976 17.6834 19.0976 18.3166 18.7071 18.7071C18.3166 19.0976 17.6834 19.0976 17.2929 18.7071L12 13.4142L6.70711 18.7071C6.31658 19.0976 5.68342 19.0976 5.29289 18.7071C4.90237 18.3166 4.90237 17.6834 5.29289 17.2929L10.5858 12L5.29289 6.70711C4.90237 6.31658 4.90237 5.68342 5.29289 5.29289Z" fill="#040d21"/></g></svg></i>
-	</div>
-	<div id="mostRecentlyOpened">
-		<a class="eka_logo" href="middleware/pub/server/ui/workspace/web/dashboard.html?utm_source=Workspace&utm_medium=dashboard-page">
-			<img class="ekalogos" src="middleware/pub/server/ui/assets/img/syncloop-logo.svg">
-		</a>
-		<a href="middleware/pub/server/ui/workspace/web/dashboard.html?utm_source=Workspace&utm_medium=dashboard-page" class="header_home">
-			<img src="middleware/pub/server/ui/assets/img/header_nav.svg">
-		</a>
-	</div>
+		<i onclick="$(this).parent().hide();" class="toast-close"><svg xmlns="http://www.w3.org/2000/svg" width="14px" height="14px" viewBox="0 0 24 24" fill="none">
+			<g id="SVGRepo_bgCarrier" stroke-width="0"/>
+			<g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"/>
+			<g id="SVGRepo_iconCarrier"> <path fill-rule="evenodd" clip-rule="evenodd" d="M5.29289 5.29289C5.68342 4.90237 6.31658 4.90237 6.70711 5.29289L12 10.5858L17.2929 5.29289C17.6834 4.90237 18.3166 4.90237 18.7071 5.29289C19.0976 5.68342 19.0976 6.31658 18.7071 6.70711L13.4142 12L18.7071 17.2929C19.0976 17.6834 19.0976 18.3166 18.7071 18.7071C18.3166 19.0976 17.6834 19.0976 17.2929 18.7071L12 13.4142L6.70711 18.7071C6.31658 19.0976 5.68342 19.0976 5.29289 18.7071C4.90237 18.3166 4.90237 17.6834 5.29289 17.2929L10.5858 12L5.29289 6.70711C4.90237 6.31658 4.90237 5.68342 5.29289 5.29289Z" fill="#040d21"/> </g>
+			</svg></i>
+	  </div>
+ <div id="mostRecentlyOpened">
+	<a class="eka_logo" href="middleware/pub/server/ui/workspace/web/dashboard.html?utm_source=Workspace&utm_medium=dashboard-page">
+		<img class="ekalogos" src="middleware/pub/server/ui/assets/img/syncloop-logo.svg">
+	</a>
+	<a href="middleware/pub/server/ui/workspace/web/dashboard.html?utm_source=Workspace&utm_medium=dashboard-page"class="header_home">
+				<img src="middleware/pub/server/ui/assets/img/header_nav.svg">
+	</a>
+</div>
 	<div class="navbar-nav tp_m">
 		<div class="nav-item text-nowrap">
-			<div class="workspace-profile-header-host"></div>
+
+             <!--
+             <div class="head_rightpanel">
+				 <div>
+					<span class="head_tenant" id="header-tenant-name">...</span>
+				 </div>
+				 <div class="profile-shell">
+					 <span class="head_username" id="name-icon">NK</span>
+
+
+					<div class="profile-card" id="profile-card-container">
+
+					<div class="header">
+						<div class="email" id="profile-card-email">user@syncloop</div>
+						<div class="close-btn" id="profile-card-close">&times;</div>
+					</div>
+
+					<div class="avatar" id="profile-card-avatar">NK</div>
+
+					<div class="greeting" id="profile-card-greeting">Hi, User!</div>
+
+					<div class="menu-item">
+						<span class="icon">⚙️</span>
+						<span>Settings</span>
+					</div>
+
+					<div class="menu-item">
+						<span class="icon">🏠</span>
+						<span>Go to workspace</span>
+					</div>
+
+					<div class="menu-item">
+						<span class="icon">👥</span>
+						<span>Invite to Syncloop</span>
+					</div>
+
+					<div class="menu-item">
+						<span class="icon">🗑️</span>
+						<span>Clear cache</span>
+					</div>
+
+					<div class="menu-item">
+						<span class="icon">↩️</span>
+						<span>Logout</span>
+					</div>
+
+					</div>
+
+
+				 </div>
+			 </div>
+			 -->
+			 <div class="workspace-profile-header-host"></div>
+
+			<!-- <a href="https://www.udemy.com/course/syncloop-ai/?referralCode=FE8BC4DE6B60DD9509C7" target="_blank" class="dropbtn">
+				<img class="hvc" src="middleware/pub/server/ui/icons/play_icon.svg">&nbsp; Watch Tutorials</a>
+			<button type="button" onclick="clearCacheExceptAuth()" class="dropbtn"><span><img class="hvc" src="middleware/pub/server/ui/icons/clear_cache.svg"></span>&nbsp; Clear Cache</button>
+			<button type="button" class="dropbtn" onclick="doLogout()"><img class="hvc" src="middleware/pub/server/ui/icons/icn_logout.svg">&nbsp; Logout</button> -->
 		</div>
 	</div>
 </header>
 
-<main class="loader-shell">
-	<div class="loader-card">
-		<div class="loader-icon" aria-hidden="true"></div>
-		<p class="loader-text">Loading dashboard...</p>
-		<div class="loader-dots" aria-hidden="true">
-			<span></span>
-			<span></span>
-			<span></span>
-		</div>
-	</div>
-</main>
+<main class="rg_br">
+	<div class="container-fluid ">
+		<div class="flex_main">
+			<aside class="dashboard-collapsible-sidebar d-flex width_collapse flex-column flex-shrink-0 eka-side p-0" data-match-height="groupName">
+				<ul class="nav nav-pills nav-flush flex-column mb-auto text-center left-m-bar">
+                    <!-- <li>
+                        <a href="middleware/pub/server/ui/workspace/web/dashboard.html?utm_source=Workspace&utm_medium=dashboard-page" class="nav-link active py-3 " title="Home" data-bs-toggle="tooltip" data-bs-placement="right">
+                            <svg class="ic1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" id="Layer_1" x="0px" y="0px" viewBox="0 0 46 46" style="enable-background:new 0 0 46 46;" xml:space="preserve">
+                                <style type="text/css">
+                                    .st0{fill:none;stroke:#434550;stroke-width:2.4;stroke-linecap:round;}
+                                    .st1{fill:none;stroke:#434550;stroke-width:2.4;stroke-linecap:round;stroke-linejoin:round;}
+                                </style>
+                                <path class="st0" d="M17,39c-3.8,0-5.6,0-6.8-1.2C9,36.7,9,34.8,9,31v-8.5c0-2.7,0-4.1,0.5-5.3c0.5-1.2,1.6-2.1,3.6-3.8l2-1.7  C18.9,8.6,20.7,7,23,7s4.1,1.6,7.8,4.8l2,1.7c2.1,1.8,3.1,2.6,3.6,3.8c0.5,1.2,0.5,2.5,0.5,5.3V31c0,3.8,0,5.6-1.2,6.8  c-1.2,1.2-3,1.2-6.8,1.2"/>
+                                <path class="st1" d="M27.9,39V28c0-0.6-0.4-1-1-1h-8c-0.6,0-1,0.4-1,1v11"/>
+                                </svg>
+                        </a>
+                    </li> -->
+					<li class="collapse_btnsidebar">
+						<span>Dashboard</span>
+						<a href="javascript:void(0);" id="collapse_sidebar"><img src="../../../../../../Awareness/pub/images/dashboard-icon.svg"></a>
+					</li>
+					<!-- <li>
+                        <a onclick="openaitab('apps')" href="/dashboard/studio" class="nav-link py-2" title="Studio" data-bs-toggle="tooltip" data-bs-placement="right">
+                           <img src="../../../../../../Awareness/pub/images/menu_studio.svg" style="width: 28px;">
+						   <span class="nav_text">Studio</span>
+                        </a>
+                    </li> -->
+                    <li>
+                        <a onclick="openaitab('apps')" href="/dashboard/apps" class="nav-link py-2" title="Apps" data-bs-toggle="tooltip" data-bs-placement="right">
+                           <img src="../../../../../../Awareness/pub/images/menu_apps.svg" style="width: 28px;">
+						    <span class="nav_text">Apps</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="/dashboard/team" class="nav-link py-2" title="Teams" data-bs-toggle="tooltip" data-bs-placement="right">
+                         	  <img src="../../../../../../Awareness/pub/images/menu_team.svg" style="width: 28px;">
+							   <span class="nav_text">Teams</span>
+                        </a>
+                    </li>
+                    <!--<li>
+                        <a onclick="openaitab('agents')"  href="/Awareness/console.html" class="nav-link py-3 " title="Agents" data-bs-toggle="tooltip"
+                           data-bs-placement="right">
+							 <img src="../../../../../../Awareness/pub/images/menu_agent.svg" style="width: 32px;">
+                        </a>
+                    </li>-->
+					<li>
+						<a href="/dashboard/agent" class="nav-link py-2" title="Agents" data-bs-toggle="tooltip"
+						   data-bs-placement="right">
+							<img src="../../../../../../Awareness/pub/images/menu_agent.svg" style="width: 28px;">
+							<span class="nav_text">Agents</span>
+						</a>
+					</li>
+                    <!--<li>
+                        <a onclick="openaitab('tools')"  href="/Awareness/console.html" id="createBuildExport" class="nav-link py-3" title="Tools" data-bs-toggle="tooltip"
+                           data-bs-placement="right">
+                              <img src="../../../../../../Awareness/pub/images/menu_tools.svg" style="width: 32px;">
+                        </a>
+                    </li>-->
+					<li>
+						<a href="/dashboard/tools" class="nav-link py-2" title="Tools" data-bs-toggle="tooltip" data-bs-placement="right">
+							<img src="../../../../../../Awareness/pub/images/menu_tools.svg" style="width: 28px;">
+							<span class="nav_text">Tools</span>
+						</a>
+					</li>
+					<li>
+						<a href="/dashboard/mcp" class="nav-link py-2" title="MCP" data-bs-toggle="tooltip" data-bs-placement="right">
+							<img src="../../../../../../Awareness/pub/images/mcp_icon.svg" style="width: 28px;">
+							<span class="nav_text">MCP</span>
+						</a>
+					</li>
+                    <li>
+                        <a href="/middleware/pub/server/ui/workspace/web/api.html?utm_source=Workspace&utm_medium=api-page"  class="nav-link py-2" title="Api's" data-bs-toggle="tooltip"
+                           data-bs-placement="right">
+                            <img src="../../../../../../Awareness/pub/images/menu_APIs.svg" style="width: 28px;">
+							<span class="nav_text">Api's</span>
+                        </a>
+                    </li>
+					<li>
+						<a href="javascript:void(0)" onclick="triggerImport()"
+						   class="nav-link py-2"
+						   title="Import"
+						   data-bs-toggle="tooltip"
+						   data-bs-placement="right">
+							<img src="../../../../../../Awareness/pub/images/menu_import.svg" style="width:28px;">
+							<span class="nav_text">Import</span>
+						</a>
+					</li>
 
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+					<li>
+						<a href="javascript:void(0)" onclick="exportJSON()"
+						   class="nav-link py-2"
+						   title="Export"
+						   data-bs-toggle="tooltip"
+						   data-bs-placement="right">
+							<img src="../../../../../../Awareness/pub/images/menu_export.svg" style="width:28px;">
+							<span class="nav_text">Export</span>
+						</a>
+					</li>
+					<li hidden><input type="file" id="jsonImport" accept=".json,application/json" onchange="importJSON(this.files[0]); this.value = ''"></li>
+                    <li>
+                        <a href="/dashboard/llm"  class="nav-link py-2" title="LLM's" data-bs-toggle="tooltip" data-bs-placement="right">
+                            <img src="../../../../../../Awareness/pub/images/menu_LLM.svg" style="width: 28px;">
+							<span class="nav_text">LLM's</span>
+                        </a>
+                    </li>
+					  <li>
+                        <a href="/dashboard/embeddings" class="nav-link py-2" title="Embedding Models" data-bs-toggle="tooltip"
+                           data-bs-placement="right">
+                           <img src="../../../../../../Awareness/pub/images/embedd_icon.svg" style="width: 28px;">
+						   <span class="nav_text">Embedding Models</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="/dashboard/knowledge" class="nav-link py-2" title="Knowledge Base" data-bs-toggle="tooltip"
+                           data-bs-placement="right">
+                           <img src="../../../../../../Awareness/pub/images/menu_knowledgebase.svg" style="width: 28px;">
+						   <span class="nav_text">Knowledge Base</span>
+                        </a>
+                    </li>
+
+                </ul>
+			</aside>
+
+			<div class="flex_rightside px-5 pr-0 p-3 rg_pnl" data-match-height="groupName">
+				<main class="dashboard_wrapper">
+					<div class="crte">
+						<!-- <h3>New</h3> -->
+						<div class="dash_options">
+							<h4>Welcome back to Syncloop</h4>
+							<p>Create new project to start from scratch. Open existing projects from the folders.</p>
+						</div>
+
+						<div class="dash_action_tab">
+							<div class="row">
+								<div class="col-sm-6 col-md-6 col-lg-6">
+									<div class="crd-body">
+										<a href="/dashboard/apps">
+										<div class="grid_in">
+												<i><img src="middleware/pub/server/ui/assets/img/home_Apps.svg"></i>
+												<div class="binfo">
+													<h6>Build your AI Apps</h6>
+													<p>Apps, Agents, Tools & more</p>
+												</div>
+											</div>
+											<i class="rght_arw"><svg xmlns="http://www.w3.org/2000/svg" width="13" height="24" viewBox="0 0 13 24" fill="none">
+												<path d="M0.852688 24C0.649133 24 0.44082 23.9195 0.284609 23.7631C-0.0278125 23.4504 -0.0278125 22.9387 0.284609 22.626L10.9781 11.9183L0.440821 1.37167C0.128399 1.05894 0.128399 0.547224 0.440821 0.234524C0.753242 -0.0781748 1.26448 -0.0781748 1.57691 0.234524L12.6822 11.3497C12.9946 11.6624 12.9946 12.1741 12.6822 12.4868L1.4207 23.7631C1.26448 23.9194 1.05622 24 0.852664 24L0.852688 24Z" fill="#8996a4"/>
+											</svg></i>
+										</a>
+									</div>
+								</div>
+								<div class="col-sm-6 col-md-6 col-lg-6">
+									<div class="crd-body">
+										<a href="/dashboard/team">
+										<div class="grid_in">
+											<i><img src="middleware/pub/server/ui/assets/img/home_Teams.svg"></i>
+											<div class="binfo">
+												<h6>Teams</h6>
+												<p>Empowering agents, tools, and knowledge base</p>
+											</div>
+											</div>
+											<i class="rght_arw"><svg xmlns="http://www.w3.org/2000/svg" width="13" height="24" viewBox="0 0 13 24" fill="none">
+												<path d="M0.852688 24C0.649133 24 0.44082 23.9195 0.284609 23.7631C-0.0278125 23.4504 -0.0278125 22.9387 0.284609 22.626L10.9781 11.9183L0.440821 1.37167C0.128399 1.05894 0.128399 0.547224 0.440821 0.234524C0.753242 -0.0781748 1.26448 -0.0781748 1.57691 0.234524L12.6822 11.3497C12.9946 11.6624 12.9946 12.1741 12.6822 12.4868L1.4207 23.7631C1.26448 23.9194 1.05622 24 0.852664 24L0.852688 24Z" fill="#8996a4"/>
+												</svg></i>
+										</a>
+									</div>
+								</div>
+								<div class="col-sm-6 col-md-6 col-lg-6">
+									<div class="crd-body">
+										<a href="dashboard/agent">
+										<div class="grid_in">
+											<i><img src="middleware/pub/server/ui/assets/img/home_Agent.svg"></i>
+											<div class="binfo">
+												<h6>Agent</h6>
+												<p>Agent act autonomously to automate tasks and manage data</p>
+											</div>
+											</div>
+											<i class="rght_arw"><svg xmlns="http://www.w3.org/2000/svg" width="13" height="24" viewBox="0 0 13 24" fill="none">
+												<path d="M0.852688 24C0.649133 24 0.44082 23.9195 0.284609 23.7631C-0.0278125 23.4504 -0.0278125 22.9387 0.284609 22.626L10.9781 11.9183L0.440821 1.37167C0.128399 1.05894 0.128399 0.547224 0.440821 0.234524C0.753242 -0.0781748 1.26448 -0.0781748 1.57691 0.234524L12.6822 11.3497C12.9946 11.6624 12.9946 12.1741 12.6822 12.4868L1.4207 23.7631C1.26448 23.9194 1.05622 24 0.852664 24L0.852688 24Z" fill="#8996a4"/>
+												</svg></i>
+										</a>
+									</div>
+								</div>
+								<div class="col-sm-6 col-md-6 col-lg-6">
+									<div class="crd-body">
+										<a href="/dashboard/tools">
+										<div class="grid_in">
+											<i><img src="middleware/pub/server/ui/assets/img/home_Tools.svg"></i>
+											<div class="binfo">
+												<h6>Tools</h6>
+												<p>Tools that connect agents with APIs, data, and external systems</p>
+											</div>
+											</div>
+											<i class="rght_arw"><svg xmlns="http://www.w3.org/2000/svg" width="13" height="24" viewBox="0 0 13 24" fill="none">
+												<path d="M0.852688 24C0.649133 24 0.44082 23.9195 0.284609 23.7631C-0.0278125 23.4504 -0.0278125 22.9387 0.284609 22.626L10.9781 11.9183L0.440821 1.37167C0.128399 1.05894 0.128399 0.547224 0.440821 0.234524C0.753242 -0.0781748 1.26448 -0.0781748 1.57691 0.234524L12.6822 11.3497C12.9946 11.6624 12.9946 12.1741 12.6822 12.4868L1.4207 23.7631C1.26448 23.9194 1.05622 24 0.852664 24L0.852688 24Z" fill="#8996a4"/>
+												</svg></i>
+										</a>
+									</div>
+								</div>
+
+								<!-- <div class="col-sm-6 col-md-6 col-lg-6">
+									<div class="crd-body">
+										<a role="button" data-bs-toggle="modal" data-bs-target="#importSwaggerModal">
+											<div class="grid_in">
+											<i><img src="middleware/pub/server/ui/assets/img/open-api.svg"></i>
+											<div class="binfo">
+												<h6>Import OpenAPI/Postman Collection</h6>
+												<p>Start with API first approach.</p>
+											</div>
+											</div>
+											<i class="rght_arw"><svg xmlns="http://www.w3.org/2000/svg" width="13" height="24" viewBox="0 0 13 24" fill="none">
+												<path d="M0.852688 24C0.649133 24 0.44082 23.9195 0.284609 23.7631C-0.0278125 23.4504 -0.0278125 22.9387 0.284609 22.626L10.9781 11.9183L0.440821 1.37167C0.128399 1.05894 0.128399 0.547224 0.440821 0.234524C0.753242 -0.0781748 1.26448 -0.0781748 1.57691 0.234524L12.6822 11.3497C12.9946 11.6624 12.9946 12.1741 12.6822 12.4868L1.4207 23.7631C1.26448 23.9194 1.05622 24 0.852664 24L0.852688 24Z" fill="#8996a4"/>
+												</svg></i>
+										</a>
+									</div>
+								</div> -->
+								<!-- <div class="col-sm-6 col-md-6 col-lg-6">
+									<div class="crd-body">
+										<a href="middleware/pub/server/ui/workspace/web/setting.html?tab=deployments">
+											<div class="grid_in">
+											<i><img src="middleware/pub/server/ui/assets/img/ready-to-use.svg"></i>
+											<div class="binfo">
+												<h6>Create an Environment</h6>
+												<p>Create a new Syncloop environment or add an existing environment. </p>
+											</div>
+										</div>
+										<i class="rght_arw"><svg xmlns="http://www.w3.org/2000/svg" width="13" height="24" viewBox="0 0 13 24" fill="none">
+											<path d="M0.852688 24C0.649133 24 0.44082 23.9195 0.284609 23.7631C-0.0278125 23.4504 -0.0278125 22.9387 0.284609 22.626L10.9781 11.9183L0.440821 1.37167C0.128399 1.05894 0.128399 0.547224 0.440821 0.234524C0.753242 -0.0781748 1.26448 -0.0781748 1.57691 0.234524L12.6822 11.3497C12.9946 11.6624 12.9946 12.1741 12.6822 12.4868L1.4207 23.7631C1.26448 23.9194 1.05622 24 0.852664 24L0.852688 24Z" fill="#8996a4"/>
+											</svg></i>
+										</a>
+									</div>
+								</div> -->
+
+								<!-- <div class="col-sm-6 col-md-6 col-lg-6">
+									<div class="crd-body">
+										<a href="middleware/pub/server/ui/workspace/web/marketplace.html?utm_source=Workspace&amp;utm_medium=marketplace-page">
+											<div class="grid_in">
+											<i><img src="middleware/pub/server/ui/assets/img/Marketplace.svg"></i>
+											<div class="binfo">
+												<h6>Go to Marketplace</h6>
+												<p>Install plugins and integrate with your APIs</p>
+											</div>
+										</div>
+										<i class="rght_arw"><svg xmlns="http://www.w3.org/2000/svg" width="13" height="24" viewBox="0 0 13 24" fill="none">
+											<path d="M0.852688 24C0.649133 24 0.44082 23.9195 0.284609 23.7631C-0.0278125 23.4504 -0.0278125 22.9387 0.284609 22.626L10.9781 11.9183L0.440821 1.37167C0.128399 1.05894 0.128399 0.547224 0.440821 0.234524C0.753242 -0.0781748 1.26448 -0.0781748 1.57691 0.234524L12.6822 11.3497C12.9946 11.6624 12.9946 12.1741 12.6822 12.4868L1.4207 23.7631C1.26448 23.9194 1.05622 24 0.852664 24L0.852688 24Z" fill="#8996a4"/>
+											</svg></i>
+										</a>
+									</div>
+								</div> -->
+								<div class="col-sm-6 col-md-6 col-lg-6">
+									<div class="crd-body">
+										<a href="middleware/pub/server/ui/workspace/web/workspace.html">
+											<div class="grid_in">
+											<i><img src="middleware/pub/server/ui/assets/img/home_Workspace.svg"></i>
+											<div class="binfo">
+												<h6>Go to Workspace</h6>
+												<p>Build, Debug & Promote your APIs</p>
+											</div>
+											</div>
+											<i class="rght_arw"><svg xmlns="http://www.w3.org/2000/svg" width="13" height="24" viewBox="0 0 13 24" fill="none">
+												<path d="M0.852688 24C0.649133 24 0.44082 23.9195 0.284609 23.7631C-0.0278125 23.4504 -0.0278125 22.9387 0.284609 22.626L10.9781 11.9183L0.440821 1.37167C0.128399 1.05894 0.128399 0.547224 0.440821 0.234524C0.753242 -0.0781748 1.26448 -0.0781748 1.57691 0.234524L12.6822 11.3497C12.9946 11.6624 12.9946 12.1741 12.6822 12.4868L1.4207 23.7631C1.26448 23.9194 1.05622 24 0.852664 24L0.852688 24Z" fill="#8996a4"/>
+												</svg></i>
+										</a>
+									</div>
+								</div>
+								<div class="col-sm-6 col-md-6 col-lg-6">
+									<div class="crd-body">
+										<a role="button"
+										   data-bs-toggle="modal"
+										   data-bs-target="#importSwaggerModal">
+											<div class="grid_in">
+												<i><img src="middleware/pub/server/ui/assets/img/open-api.svg"></i>
+												<div class="binfo">
+													<h6>Import OpenAPI / Postman Collection</h6>
+													<p>Start with API first approach.</p>
+												</div>
+											</div>
+										</a>
+									</div>
+								</div>
+							</div>
+						</div>
+
+						<div class="dash_options" style="display: none;">
+							<h4>Welcome to Syncloop</h4>
+							<p>Create new project to start from scratch. Open existing projects from the folders.</p>
+							<ul class="opt_grid">
+								<li>
+									<a href="middleware/pub/server/ui/workspace/web/workspace.html">
+										<span><img src="middleware/pub/server/ui/assets/img/create_api.svg"></span>
+										<p>Go to workspace</p>
+									</a>
+								</li>
+								<li>
+									<a role="button" data-target="#importSwaggerModal" data-toggle="modal">
+										<span><img src="middleware/pub/server/ui/assets/img/open-api.svg"></span>
+										<p>Import OpenAPI / Postman Collection</p>
+									</a>
+								</li>
+								<li>
+									<a href="middleware/pub/server/ui/workspace/web/create-new-environment.html">
+										<span><img src="middleware/pub/server/ui/assets/img/ready-to-use.svg"></span>
+										<p>Create an environment</p>
+									</a>
+								</li>
+								<li>
+									<a href="middleware/pub/server/ui/workspace/web/marketplace.html?utm_source=Workspace&utm_medium=marketplace-page">
+										<span><img src="middleware/pub/server/ui/assets/img/Marketplace.svg"></span>
+										<p>Go to marketplace</p>
+									</a>
+								</li>
+							</ul>
+						</div>
+
+
+
+					</div>
+					<div class="crte custom_padding">
+
+						<div class="getting_str quick_start">
+							<h2 class="mb-5">Getting Started</h2>
+							<div class="row">
+								<div class="col-sm-6 col-md-6 col-lg-3">
+								<div class="v_outer">
+									<div class="position-relative">
+										<a href="https://www.udemy.com/course/syncloop-ai/learn/lecture/52384733?kw=Syncloop+AI&src=sac#overview"  class="video-icon trainig_v_icon" target="_blank">
+											<img src="middleware/pub/server/ui/assets/img/training_video-1.png" class="img-fluid rounded-custom shadow-lg" alt="testimonial author">
+											<i class="fa fa-play training_v"></i>
+										</a>
+									</div>
+								</div>
+							</div>
+							<div class="col-sm-6 col-md-6 col-lg-5">
+								<div class="v_outer">
+									<h3>Quick Start with Syncloop</h3>
+									<p>Experience the power of Syncloop AI — a platform for building intelligent, multi-agent automation workflows. Learn to design Agents, connect Tools and APIs, and integrate LLMs to create smarter solutions. Join our Udemy course today and start building the future with Syncloop AI!.</p>
+								</div>
+							</div>
+							</div>
+						</div>
+
+						<!-- <div class="getting_str">
+							<h2>Examples</h2>
+							<div class="row">
+								<div class="col-sm-6 col-md-6 col-lg-3">
+								<div class="v_outer">
+									<div class="position-relative">
+										<a href="javascript:void(0)" id="video4" class="video-icon trainig_v_icon"><img src="https://syncloop.com/assets/img/video/training_video-4.webp" class="img-fluid rounded-custom shadow-lg" alt="testimonial author">
+											<i class="fa fa-play training_v"></i>
+										</a>
+									</div>
+									<h3>Weather API</h3>
+									<p>This video tutorial demonstrates how an external Weather API is consumed on the Syncloop API Development platform. The said API provides weather information based on geographical coordinates. </p>
+								</div>
+							</div>
+							<div class="col-sm-6 col-md-6 col-lg-3">
+								<div class="v_outer">
+									<div class="position-relative">
+										<a href="javascript:void(0)" id="video5" class="video-icon trainig_v_icon"><img src="https://syncloop.com/assets/img/video/training_video-5.webp" class="img-fluid rounded-custom shadow-lg" alt="testimonial author">
+											<i class="fa fa-play training_v"></i>
+										</a>
+									</div>
+									<h3>Crypto Converter API</h3>
+									<p>This video tutorial demonstrates how an external Crypto API is consumed on the Syncloop API Development platform. The said API provides information regarding the current conversion rates between two currencies.</p>
+								</div>
+							</div>
+							</div>
+						</div>
+
+						<div class="getting_str">
+							<h2>More detailed video</h2>
+							<a class="see_all_vd" target="_blank" href="https://syncloop.com/howto.html">See all</a>
+							<div class="row">
+
+							</div>
+						</div> -->
+
+						<!-- <div class="row">
+							<div class="col-sm-6 col-md-6 col-lg-3">
+								<div class="v_outer">
+									<div class="position-relative">
+										<a href="javascript:void(0)" id="video2" class="video-icon trainig_v_icon"><img src="https://syncloop.com/assets/img/video/training_video-2.webp" class="img-fluid rounded-custom shadow-lg" alt="testimonial author">
+											<i class="fa fa-play training_v"></i>
+										</a>
+									</div>
+									<h3>Conditional Logic</h3>
+									<p>This video tutorial demonstrates the implementation of conditional logic using a switch statement to provide the given country's capital on the Syncloop API Development Platform.</p>
+								</div>
+							</div>
+							<div class="col-sm-6 col-md-6 col-lg-3">
+								<div class="v_outer">
+									<div class="position-relative">
+										<a href="javascript:void(0)" id="video3" class="video-icon trainig_v_icon"><img src="https://syncloop.com/assets/img/video/training_video-3.webp" class="img-fluid rounded-custom shadow-lg" alt="testimonial author">
+											<i class="fa fa-play training_v"></i>
+										</a>
+									</div>
+									<h3>Looping Logic</h3>
+									<p>This video tutorial demonstrates the implementation of looping logic to provide multiple country-capital on the Syncloop API Development Platform.</p>
+								</div>
+							</div>
+							<div class="col-sm-6 col-md-6 col-lg-3">
+								 <div class="v_outer">
+									<div class="position-relative">
+										<a href="javascript:void(0)" id="video7" class="video-icon trainig_v_icon"><img src="https://www.syncloop.com/assets/img/video/training_video-7.png" class="img-fluid rounded-custom shadow-lg" alt="testimonial author">
+											<i class="fa fa-play training_v"></i>
+										 </a>
+									 </div>
+									<h3>Exception Handling</h3>
+									<p>This video will demonstrate the handling of exceptions in the Flow Service and also sending of custom objects and customer information with exceptions.</p>
+								</div>
+							</div>
+							<div class="col-sm-6 col-md-6 col-lg-3">
+								<div class="v_outer">
+								   <div class="position-relative">
+									   <a href="javascript:void(0)" id="video8" class="video-icon trainig_v_icon"><img src="https://www.syncloop.com/assets/img/video/training_video-8.png" class="img-fluid rounded-custom shadow-lg" alt="testimonial author">
+										   <i class="fa fa-play training_v"></i>
+										</a>
+									</div>
+								   <h3>Communicate with SFTP SSH</h3>
+								   <p>This video tutorial demonstrates how to remotely communicate with Secure File Transfer Protocol and SSH. Here one EC2 user instance is used to get files from the directory using the proper authentication mechanism.</p>
+							   </div>
+						   </div>
+						</div> -->
+						<div class="row">
+
+							<!-- <div class="col-sm-6 col-md-6 col-lg-3">
+								 <div class="v_outer">
+									<div class="position-relative">
+										<a href="javascript:void(0)" id="video10" class="video-icon trainig_v_icon"><img src="https://www.syncloop.com/assets/img/video/training_video-6.png" class="img-fluid rounded-custom shadow-lg" alt="testimonial author">
+											<i class="fa fa-play training_v"></i>
+										 </a>
+									 </div>
+									<h3>Return Custom HTTP Status Codes & Headers</h3>
+									<p>This video will demonstrate the sending of custom HTTP Status Codes and Headers from a Flow Service for getting an appropriate response.</p>
+								</div>
+							</div> -->
+							<!--<div class="col-sm-6 col-md-6 col-lg-4">
+								 <div class="v_outer">
+									<div class="position-relative">
+										<a href="javascript:void(0)" id="video9" class="video-icon trainig_v_icon"><img src="https://www.syncloop.com/assets/img/video/training_video-9.png" class="img-fluid rounded-custom shadow-lg" alt="testimonial author">
+											<i class="fa fa-play training_v"></i>
+										 </a>
+									 </div>
+									<h3>Json Transformation</h3>
+									<p>This video tutorial demonstrates how to work on a Complex object and convert it into a more deep complex object using a flow service on the Syncloop Platform.</p>
+								</div>
+							</div>
+							<div class="col-sm-6 col-md-6 col-lg-4">
+								 <div class="v_outer">
+									<div class="position-relative">
+										<a href="javascript:void(0)" id="video10" class="video-icon trainig_v_icon"><img src="https://www.syncloop.com/assets/img/video/training_video-10.png" class="img-fluid rounded-custom shadow-lg" alt="testimonial author">
+											<i class="fa fa-play training_v"></i>
+										 </a>
+									 </div>
+									<h3>XML to CSV Transformation</h3>
+									<p>This video tutorial demonstrates how to convert an XML file to a flat file in a .csv format. Here an array is used for temporarily storing the XML values and those values are reflected back onto the flat file.</p>
+								</div>
+							</div>-->
+
+						</div>
+					</div>
+					<div class="crte" style="display:none;">
+						<h3>Recent file list</h3>
+						<div class="table-responsive">
+							<table id="recent_file">
+								<tr>
+									<th>API Type</th>
+									<th>Name of API</th>
+									<th>Last Modified by</th>
+									<th>Status</th>
+									<th>Last Modified</th>
+								</tr>
+								<tr>
+									<td>LoginAPIs</td>
+									<td><a href="javascript:void(0)">Type of APIs</a></td>
+									<td>Neerja k</td>
+									<td><span class="green">Published</span></td>
+									<td>5 hours ago</td>
+								</tr>
+								<tr>
+									<td>LoginAPIs</td>
+									<td><a href="javascript:void(0)">Type of APIs</a></td>
+									<td>Neerja k</td>
+									<td>Draft</td>
+									<td>12 hours ago</td>
+								</tr>
+								<tr>
+									<td>LoginAPIs</td>
+									<td><a href="javascript:void(0)">Type of APIs</a></td>
+									<td>Neerja k</td>
+									<td><span class="green">Published</span></td>
+									<td>6 hours ago</td>
+								</tr>
+								<tr>
+									<td>LoginAPIs</td>
+									<td><a href="javascript:void(0)">Type of APIs</a></td>
+									<td>Neerja k</td>
+									<td>Draft</td>
+									<td>2 hours ago</td>
+								</tr>
+							</table>
+						</div>
+					</div>
+					<div class="crte" style="display:none;">
+						<h3>Popular wrappers</h3>
+						<div class="row">
+							<div class="col-sm-6 col-md-6 col-lg-3 pp_wra">
+								<div class="wra_outer">
+									<img src="middleware/pub/server/ui/assets/img/amazon_web_services.png">
+								</div>
+								<p>Amazon AWS Services</p>
+							</div>
+							<div class="col-sm-6 col-md-6 col-lg-3 pp_wra">
+								<div class="wra_outer">
+									<img src="middleware/pub/server/ui/assets/img/google-logo.png">
+								</div>
+								<p>Google Services</p>
+							</div>
+							<div class="col-sm-6 col-md-6 col-lg-3 pp_wra">
+								<div class="wra_outer">
+									<img src="middleware/pub/server/ui/assets/img/amazon_web_services.png">
+								</div>
+								<p>Amazon AWS Services</p>
+							</div>
+							<div class="col-sm-6 col-md-6 col-lg-3 pp_wra">
+								<div class="wra_outer">
+									<img src="middleware/pub/server/ui/assets/img/amazon_web_services.png">
+								</div>
+								<p>Amazon AWS Services</p>
+							</div>
+						</div>
+					</div>
+					<div id="importSwaggerModal" class="modal" data-easein="slideDownBigIn" tabindex="-1" role="dialog" aria-labelledby="costumModalLabel" aria-hidden="false">
+						<div class="modal-dialog modal-lg modal-dialog-centered custom_style">
+							<div class="modal-content">
+								<div class="modal-header">
+									<button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close" onclick="resetFunction()"></button>
+
+									<h4 class="modal-title" id="costumModalLabel">
+										Import from
+									</h4>
+								</div>
+								<div class="modal-body">
+									<div class="demo">
+										<div role="tabpanel">
+											<!-- Nav tabs -->
+											<ul class="nav nav-tabs nav-justified nav-tabs-dropdown" role="tablist">
+								<li class="nav-item" role="presentation"><a class="nav-link active" href="#swagger-file" aria-controls="swagger-file" role="tab" data-bs-toggle="tab">File</a></li>
+								<li class="nav-item" role="presentation"><a class="nav-link" href="#swagger-link" aria-controls="swagger-link" role="tab" data-bs-toggle="tab">Link</a></li>
+											</ul>
+											<!-- Tab panes -->
+											<div class="tab-content">
+								<div role="tabpanel" class="tab-pane active" id="swagger-file">
+									<form>
+										<label for="swagger-file-input" class="br_dropzone">
+											<img src="middleware/pub/server/ui/assets/img/import_icon.svg">
+											<button type="button" class="choose_file_btn btn btn-gry">Choose file</button>
+											<input type="file" id="swagger-file-input" name="file" onchange="evaluateFile(this)" required>
+															<input type="text" id="fileName" name="fileName" placeholder="Drag and drop your files here or browse to upload" readonly>
+														</label>
+
+															<input type="reset" name="button" id="resetBtn" style="display: none">
+													</form>
+												</div>
+								<div role="tabpanel" class="tab-pane" id="swagger-link">
+													<div class="form-group">
+														<label>Add your link here </label>
+														<input class="form-control" type="text" id="json_file_link" placeholder="e.g. https://petstore3.swagger.io/api/v3/openapi.json" value="">
+													</div>
+													<div class="anc_kbtn">
+														<button type="button" id="" class="btn btn-gry" onclick="evaluateLink(this)">Continue</button>
+													</div>
+												</div>
+											</div>
+										</div>
+									</div>
+									<!-- <a href="javascript:void(0)">Learn more about the different import formats supported</a> -->
+								</div>
+							</div>
+						</div>
+					</div>
+					<div id="importFileModal" class="modal" data-easein="slideDownBigIn" tabindex="-1" role="dialog" aria-labelledby="costumModalLabel" aria-hidden="false">
+						<div class="modal-dialog modal-lg modal-dialog-centered custom_style">
+							<div class="modal-content">
+								<div class="modal-header">
+									<button type="button" class="close" data-bs-dismiss="modal" aria-hidden="true" onclick="resetFunction()">
+										×
+									</button>
+									<h4 class="modal-title" id="costumModalLabel">
+										Select files to import
+									</h4>
+								</div>
+								<div class="modal-body">
+									<div class="select_import sl_imp">
+										<!-- <p>Select files to import</p> -->
+										<div class="row">
+											<div class="col-md-12 mb-15">
+												<label for="">Package Name: </label>
+												<input class="form-control" id="package_name" onkeyup="importAPIInSchemaValidate(this)"/>
+												<p id="info_message"></p>
+											</div>
+
+
+											<div class="col-md-12 mb-15">
+												<label for="">Import as: </label>
+												<div class="im_chk">
+													<input class="styled-checkbox" id="client_lib" name="" type="checkbox" value="">
+													<label class="enble_check" for="client_lib">Client</label> &nbsp;
+
+													<input class="styled-checkbox" id="server_stub" name="" type="checkbox" value="">
+													<label class="enble_check" for="server_stub">Server Stub</label>
+												</div>
+												<!-- <div class=""> -->
+													<!-- <input type="checkbox" id="client_lib" />Client <input type="checkbox" id="server_stub" />Server Stub -->
+												<!-- </div> -->
+											</div>
+										</div>
+
+										<div style="display:none;">
+											<table>
+												<tr>
+													<td>Package Name: </td>
+													<td><input class="form-control" id="package_name" /></td>
+												</tr>
+												<tr>
+													<td>Import as: </td>
+													<td><input type="checkbox" id="client_lib" />Client <input type="checkbox" id="server_stub" />Server Stub </td>
+												</tr>
+											</table>
+										</div>
+										<div class="anc_kbtn imp">
+											<button type="button" class="cn_trs" style="display: none;" data-dismiss="modal" onclick="resetFunction()">Cancel</button>
+											<button type="button" id="button" class="btn btn-gry" onclick="importSwagger(this)">Import</button>
+										</div>
+									</div>
+								</div>
+								<div id="overlay">
+									<div class="cv-spinner">
+										<span class="spinner"></span>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+
+
+
+					<div id="yesNoModal" class="modal" data-easein="slideDownBigIn" tabindex="-1" role="dialog" aria-labelledby="costumModalLabel" aria-hidden="false">
+						<div class="modal-dialog modal-md modal-dialog-centered custom_style">
+							<div class="modal-content">
+								<div class="modal-header">
+									<button type="button" class="close" aria-hidden="true" onclick='$("#yesNoModal").modal("toggle");'>
+										×
+									</button>
+									<h4 class="modal-title" id="costumModalLabel1">
+										Package Confliction!
+									</h4>
+								</div>
+								<div class="modal-body">
+									<p>This package already exists. Do want to override it?</p>
+									<div class="ys_imp">
+										<button type="button" id="overrideButton" class="btn btn-gry" onclick="importAction(true, this)">Yes, Override it</button> &nbsp;
+										<button type="button" id="copyButton" class="cn_trs" onclick="importAction(false, this)">No, Create new copy</button>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div id="jwtModelDialog" class="modal">
+						<!-- Modal content -->
+						<div class="modal-content" style="width:650px;height:auto;">
+							<span id="closejwtModelDialog" class="close">&times;</span>
+							<h3>API token</h3>
+
+							<div class="row exp_alg">
+								<div class="col-md-3"><label>Expiration in:</label></div>
+								<div class="col-md-4">
+									<select id="jwt_expiration_in" class="form-control">
+										<option value="2">2 Hours</option>
+										<option value="4">4 Hours</option>
+										<option value="6">6 Hours</option>
+										<option value="8">8 Hours</option>
+										<option value="expir_custom">Custom</option>
+									</select>
+								</div>
+								<div id="expir_custom" class="col-md-3 cs_opt">
+									<input placeholder="Custom Value" class="form-control" type="number" min="2" max="800"
+										   id="expir_custom_hours" value="8"/>
+									<span class="h_title">hours</span>
+								</div>
+							</div>
+
+							<div class="row exp_alg">
+								<div class="col-md-3"><label>Api Endpoint:</label></div>
+								<div class="col-md-9">
+									<input id="api-endpoint-gt" class="form-control" readonly="readonly" />
+								</div>
+							</div>
+
+							<div class="row exp_alg" style="margin-top:10px; margin-bottom:15px;">
+								<div class="col-md-3"><label for="jwt_token_key">Token key:</label></div>
+								<div class="col-md-9"><input id="jwt_token_key" type="text" class="form-control" value="" /></div>
+							</div>
+
+							<div class="copy-text3" id="jwtNameDiv" style="margin-top:0; margin-bottom:15px;">
+								<a class="copy_icon" href="javascript:void(0)" id="button-copy"><img
+										src="middleware/pub/server/ui/icons/copy-svgrepo-com.svg"></a>
+								<label for="jwtInput">Bearer Token: </label>
+								<textarea id="jwtInput" name="jwtInput" value="" class="form-control"
+										  readonly="readonly"></textarea>
+							</div>
+
+							<div class="anc_kbtn">
+								<button type="button" class="btn btn-primary2" onclick="openJWTPopupTime()">Generate token
+								</button> &nbsp;
+								<button type="button" id="JWTOKButton" class="btn btn-primary">OK</button>
+							</div>
+						</div>
+					</div>
+
+
+			<div id="vidBox">
+					<div class="videCont">
+						<video id="v1" controls="controls">
+							<source src="https://syncloop.com/assets/videos/training1/Syncloop-Udemy-Video1-QuickStart.webm" type="video/webm">
+							<source src="https://syncloop.com/assets/videos/training1/Syncloop-Udemy-Video1-QuickStart.mp4" type="video/mp4">
+						</video>
+					</div>
+				</div>
+
+				<div id="vidBox2">
+					<div class="videCont">
+						<video id="v2" controls="controls">
+							<source src="https://syncloop.com/assets/videos/training1/Syncloop-Video2-ConditionalLogic.webm" type="video/webm">
+							<source src="https://syncloop.com/assets/videos/training1/Syncloop-Video2-ConditionalLogic.mp4" type="video/mp4">
+						</video>
+					</div>
+				</div>
+
+				<div id="vidBox3">
+					<div class="videCont">
+						<video id="v3" controls="controls">
+							<source src="https://syncloop.com/assets/videos/training1/Syncloop-Video3-LoopLogic.webm" type="video/webm">
+							<source src="https://syncloop.com/assets/videos/training1/Syncloop-Video3-LoopLogic.mp4" type="video/mp4">
+						</video>
+					</div>
+				</div>
+
+				<div id="vidBox4">
+					<div class="videCont">
+						<video id="v4" controls="controls">
+							<source src="https://syncloop.com/assets/videos/training1/Syncloop-Video5-WeatherAPI.webm" type="video/webm">
+							<source src="https://syncloop.com/assets/videos/training1/Syncloop-Video5-WeatherAPI.mp4" type="video/mp4">
+						</video>
+					</div>
+				</div>
+
+				<div id="vidBox5">
+					<div class="videCont">
+						<video id="v5" controls="controls">
+							<source src="https://syncloop.com/assets/videos/training1/Syncloop-Video4-CryptoCompare.webm" type="video/webm">
+							<source src="https://syncloop.com/assets/videos/training1/Syncloop-Video4-CryptoCompare.mp4" type="video/mp4">
+						</video>
+					</div>
+				</div>
+
+				<div id="vidBox6">
+					<div class="videCont">
+						<video id="v6" controls="controls">
+							<source src="https://syncloop.com/assets/videos/Create_Flow_Service.webm" type="video/webm">
+							<source src="https://syncloop.com/assets/videos/Create_Flow_Service.mp4" type="video/mp4">
+						</video>
+					</div>
+				</div>
+
+				<div id="vidBox7">
+					<div class="videCont">
+						<video id="v7" controls="controls">
+							<source src="https://syncloop.com/assets/videos/training1/Syncloop-Video6-ExceptionHandling.webm" type="video/webm">
+							<source src="https://syncloop.com/assets/videos/training1/Syncloop-Video6-ExceptionHandling.mp4" type="video/mp4">
+						</video>
+					</div>
+				</div>
+
+				<div id="vidBox8">
+					<div class="videCont">
+						<video id="v8" controls="controls">
+							<source src="https://syncloop.com/assets/videos/training1/Syncloop-Video8-CommunicateWithSFTPSSH.webm" type="video/webm">
+							<source src="https://syncloop.com/assets/videos/training1/Syncloop-Video8-CommunicateWithSFTPSSH.mp4" type="video/mp4">
+						</video>
+					</div>
+				</div>
+
+				<div id="vidBox9">
+					<div class="videCont">
+						<video id="v9" controls="controls">
+							<source src="https://syncloop.com/assets/videos/training/Json_Transformation_R_VP8.webm" type="video/webm">
+							<source src="https://syncloop.com/assets/videos/training/Json_Transformation_R_VP8.mp4" type="video/mp4">
+						</video>
+					</div>
+				</div>
+
+
+
+
+				<div id="vidBox10">
+					<div class="videCont">
+						<video id="v10" controls="controls">
+							<source src="https://www.syncloop.com/assets/videos/training1/Syncloop-Video7-ReturnCustomHTTP.webm" type="video/webm">
+							<source src="https://www.syncloop.com/assets/videos/training1/Syncloop-Video7-ReturnCustomHTTP.mp4" type="video/mp4">
+						</video>
+					</div>
+				</div>
+
+
+				</main>
+			</div>
+			<div id="serviceImportedModelDialog" class="modal">
+				<!-- Modal content -->
+				<div class="modal-content" style="width:950px;height:auto;">
+					<span id="closeServiceImportedModelDialog" class="close" >&times;</span>
+					<!-- <h3>Service</h3> -->
+					<div class="service_hd">
+						<div class="exl_icon"><img src="middleware/pub/server/ui/icons/import-fl.svg"></div>
+						<div class="sv_heading">
+							<h2>List of Imported files</h2>
+						</div>
+					</div>
+					<div class="service_tree_v_Imported" id="service_tree_v_Imported">
+					</div>
+					<div class="anc_kbtn"><button class="btn btn-primary" onclick='$("#closeServiceImportedModelDialog").trigger("click")'>Okay</button></div>
+				</div>
+			</div>
+			<!-- environment update popup -->
+			<div id="newUpdateModelDialog" class="modal">
+				<!-- Modal content -->
+				<div class="modal-content" style="width:650px;height:auto;">
+					<span id="closenewUpdateModelDialog" class="close hide" style="display: none;" >&times;</span>
+					<div class="env_latest_update">
+						<h3 id="update_popup_title">Updating environment</h3>
+						<p id="updating_popup_description">Please wait... your environment is getting updated.</p>
+						<div class="progress_outer">
+							<progress id="progressBar" max="100" value="0"></progress>
+							<span id="percentage">0%</span>
+						</div>
+					</div>
+				</div>
+			</div>
+			<!-- environment update popup -->
+<script src="middleware/pub/server/ui/javascript/showdown.min.js"></script>
+<script	src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<script src="middleware/pub/server/ui/assets/js/skeleton.js"></script>
+<script	src="middleware/pub/server/ui/javascript/jstree.min.js"></script>
+<script src="middleware/pub/server/ui/javascript/jstreetable.js"></script>
 <script src="middleware/pub/server/ui/javascript/middleware.js"></script>
+<script src="middleware/pub/server/ui/assets/js/bootstrap.bundle.min.js"></script>
+<script src="middleware/pub/server/ui/assets/js/sidebars.js"></script>
+<script src="middleware/pub/server/ui/javascript/sweetalert.min.js"></script>
+<script src="middleware/pub/server/ui/javascript/sweetalert.init.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/js-cookie@2.2.1/src/js.cookie.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/js-cookie@2/src/js.cookie.min.js"></script>
+
+
+
+<script src="middleware/pub/server/ui/assets/js/videopopup.js"></script>
 <script src="middleware/pub/server/ui/javascript/syncloop-nonenterprise.js"></script>
-<script src="middleware/pub/server/ui/javascript/workspace-profile-header.js?v=workspace-profile-v2"></script>
+<script src="../../../../../../Awareness/pub/assets/console.js"></script>
 <script>
-	(function () {
-		var targetOnSuccess = "/middleware/pub/server/ui/workspace/web/dashboard-v2.html";
-		var targetOnError = "/middleware/pub/server/ui/workspace/web/dashboard-v1.html";
-		var base_url=env.API_BASE_URL + "/tenant/" + localStorage.getItem('tenant');
+	window.onload = function () {
+		var sidebar = document.querySelector(".dashboard-collapsible-sidebar");
+		var sidebarToggle = document.getElementById("collapse_sidebar");
+		var sidebarTooltips = sidebar.querySelectorAll('[data-bs-toggle="tooltip"]');
+
+		function updateSidebarTooltips(isExpanded) {
+			sidebarTooltips.forEach(function (element) {
+				var tooltip = bootstrap.Tooltip.getInstance(element) || new bootstrap.Tooltip(element);
+				if (isExpanded) {
+					tooltip.hide();
+					tooltip.disable();
+				} else {
+					tooltip.enable();
+				}
+			});
+		}
+
+		sidebarToggle.onclick = function () {
+			sidebar.classList.toggle("width_collapseincrease");
+
+			var isExpanded = sidebar.classList.contains("width_collapseincrease");
+			sidebarToggle.setAttribute("aria-expanded", String(isExpanded));
+			updateSidebarTooltips(isExpanded);
+		};
+
+		var isInitiallyExpanded = sidebar.classList.contains("width_collapseincrease");
+		sidebarToggle.setAttribute("aria-expanded", String(isInitiallyExpanded));
+		updateSidebarTooltips(isInitiallyExpanded);
+	};
+
+
+$(window).ready(function () {
+	$(".preload").delay(0).fadeOut(80);
+  });
+</script>
+
+<script>
+$(function() {
+  $('#jwt_expiration_in').change(function(){
+    $('.cs_opt').hide();
+    $('#' + $(this).val()).show();
+  });
+});
+</script>
+
+<script>
+let copyText3 = document.querySelector(".copy-text3");
+    document.querySelector("#button-copy").onclick = function () {
+        document.querySelector("#jwtInput").select();
+        document.execCommand("copy");
+        copyText3.classList.add("active");
+        window.getSelection().removeAllRanges();
+        setTimeout(function () {
+        copyText3.classList.remove("active");
+    }, 2500);
+    };
+</script>
+
+<script type="text/javascript">
+
+
+	function getCurrentUser() {
+		asyncRestRequest("/packages.middleware.pub.service.getCurrentUserAccount.main", null,  "GET", function (response) {
+
+			if (null == response.profile.name) {
+				if (null == response.profile.email) {
+					$("#loggedin-name-panel").hide();
+				} else {
+					$("#loggedin-name").html(response.profile.email);
+				}
+			} else if ("" == response.profile.name) {
+				$("#loggedin-name").html("User");
+			} else {
+				$("#loggedin-name").html(response.profile.name);
+			}
+
+			if (null == response.profile.email) {
+				$("#loggedin-email-panel").hide();
+			} else if ("" == response.profile.email) {
+				$("#loggedin-email").html("user@syncloop");
+			} else if ("" != response.profile.email) {
+				$("#loggedin-email").html(response.profile.email);
+			}
+
+			$("#loggedin-userId").html(response.userId);
+			$("#profile-tenant-name").html(localStorage.getItem("tenant"));
+			/*var cookies = document.cookie.split(";");
+			for  (var i = 0 ; i < cookies.length ; i++) {
+				var coo = cookies[i].split("=");
+				if (coo[0].trim() == "tenant") {
+					$("#profile-tenant-name").html(coo[1].replaceAll('"', "").split(" ")[0] );
+				}
+			}*/
+
+			let HTML = "";
+			for (let i = 0 ; i < response.profile.groups.length ; i++) {
+				HTML += "<span class=\"bubble\">" + response.profile.groups[i] + "</span>";
+			}
+
+			let name = response.userId;
+			name = name.trim() == "" ? response.profile.name : name;
+			name = name.trim() == "" ? response.profile.email : name;
+			name = name.trim() == "" ? "User" : name;
+			$("#name-icon").html(name.substr(0, 1).toUpperCase());
+			$("#loggedin-roles").html(HTML);
+
+		}, function(error) {
+
+		});
+
+	}
+
+	$(document).ready(function () {
+		getCurrentUser();
+		loadPackages();
+
+
+//drag drop//
+
+		var onDragEnter = function(event) {
+					$(".br_dropzone").addClass("dragover");
+					console.log("onDragEnter");
+				},
+
+				onDragOver = function(event) {
+					event.preventDefault();
+					if (!$(".br_dropzone").hasClass("dragover"))
+						$(".br_dropzone").addClass("dragover");
+					console.log("onDragOver");
+				},
+
+				onDragLeave = function(event) {
+					event.preventDefault();
+					$(".br_dropzone").removeClass("dragover");
+					console.log("onDragLeave");
+				},
+
+				onDrop = function(event) {
+					$(".br_dropzone").removeClass("dragover");
+					$(".br_dropzone").addClass("dragdrop");
+					validateContent(event.originalEvent.dataTransfer.files[0]);
+					console.log("onDrop");
+				};
+
+		$(".br_dropzone")
+				//.on("dragenter", onDragEnter)
+				//.on("dragover", onDragOver)
+				//.on("dragleave", onDragLeave)
+				//.on("drop", onDrop);
+
+
+	});
+
+	let specsName = null;
+	function validateContent(file) {
+		if (!file.name.endsWith(".json")) {
+			swal({
+					title: "Only JSON file is allowed.",
+					text: "",
+					type: "error",
+					confirmButtonColor: "#f2533e"
+				});
+
+
+			return ;
+		}
+		const reader = new FileReader();
+		reader.addEventListener('load', function() {
+			Uploaded_File_Content = JSON.parse(reader.result);
+			if (null != Uploaded_File_Content.info && null != Uploaded_File_Content.info._postman_id) {
+				specsName = "POSTMAN";
+			} else if (null != Uploaded_File_Content.openapi) {
+				specsName = "OPENAPI";
+			}
+
+			switch (specsName) {
+				case "POSTMAN":
+					if (Uploaded_File_Content.info.schema != "https://schema.getpostman.com/json/collection/v2.1.0/collection.json") {
+						swal({
+								title: "Only Postman Collection version >= 2.0.1 is required.",
+								text: "",
+								type: "error",
+								confirmButtonColor: "#f2533e"
+							});
+
+						$(ref).html("Continue");
+						$(ref).removeAttr("disabled");
+						return ;
+					}
+					break;
+
+				case "OPENAPI":
+					if (parseFloat(Uploaded_File_Content.openapi) < 3) {
+						swal({
+								title: "Only OpenAPI version >= 3 is required.",
+								text: "",
+								type: "error",
+								confirmButtonColor: "#f2533e"
+							});
+
+						$(ref).html("Continue");
+						$(ref).removeAttr("disabled");
+						return ;
+					}
+					break;
+
+				default:
+					swal({
+							title: "Only OpenAPI version >= 3 or Postman Collection version >= 2.1 is required.",
+							text: "",
+							type: "error",
+							confirmButtonColor: "#f2533e"
+						});
+
+					$(ref).html("Continue");
+					$(ref).removeAttr("disabled");
+					return ;
+			}
+			$("#importFileModal").modal('toggle');
+			$("#importSwaggerModal").modal('toggle');
+			$("#package_name").val(file.name.replace(/[^a-zA-Z0-9]/g, "_"));
+			importAPIInSchemaValidate(document.getElementById('package_name'));
+		});
+		reader.readAsText(file);
+	}
+
+	function evaluateFile(ref) {
+		validateContent(ref.files[0]);
+		ref.form.fileName.value = ref.files[0].name;
+		document.getElementById('resetBtn').click();
+	}
+
+	function resetFunction(){
+		$("#json_file_link").val('');
+		$("#client_lib").prop("checked", false);
+		$("#server_stub").prop("checked", false);
+		document.getElementById("resetBtn").click();
+	}
+
+	function evaluateLink(ref) {
+		$(ref).html("...");
+		$(ref).attr("disabled", "disabled");
+		let fileLink = $("#json_file_link").val();
+		fetch(fileLink)
+				.then(response => {
+					let isJson = false;
+					for (const [header, value] of response.headers) {
+						if (header == "content-type" && value == "application/json") {
+							isJson = true;
+						}
+					}
+
+					if (isJson) {
+						return response.json();
+					}
+					swal({
+							title: "Only JSON content is allowed.",
+							text: "",
+							type: "error",
+							confirmButtonColor: "#f2533e"
+						});
+
+					$(ref).html("Continue");
+					$(ref).removeAttr("disabled");
+					return null;
+				})
+				.then(data => {
+					Uploaded_File_Content = data;
+
+					if (null != Uploaded_File_Content.info && null != Uploaded_File_Content.info._postman_id) {
+						specsName = "POSTMAN";
+					} else if (null != Uploaded_File_Content.openapi) {
+						specsName = "OPENAPI";
+					}
+
+					switch (specsName) {
+						case "POSTMAN":
+							if (Uploaded_File_Content.info.schema != "https://schema.getpostman.com/json/collection/v2.1.0/collection.json") {
+								swal({
+										title: "Only Postman Collection version >= 2.0.1 is required.",
+										text: "",
+										type: "error",
+										confirmButtonColor: "#f2533e"
+									});
+
+								$(ref).html("Continue");
+								$(ref).removeAttr("disabled");
+								return ;
+							}
+							break;
+
+						case "OPENAPI":
+							if (parseFloat(Uploaded_File_Content.openapi) < 3) {
+								swal({
+										title: "Only OpenAPI version >= 3 is required.",
+										text: "",
+										type: "error",
+										confirmButtonColor: "#f2533e"
+									});
+
+								$(ref).html("Continue");
+								$(ref).removeAttr("disabled");
+								return ;
+							}
+							break;
+
+						default:
+							swal({
+								title: "Only OpenAPI version >= 3 or Postman Collection version >= 2.1 is required.",
+								text: "",
+								type: "error",
+								confirmButtonColor: "#f2533e"
+							});
+
+							$(ref).html("Continue");
+							$(ref).removeAttr("disabled");
+							return ;
+					}
+
+					if (null != Uploaded_File_Content) {
+						$("#importFileModal").modal('toggle');
+						$("#importSwaggerModal").modal('toggle');
+					}
+
+					var filename = fileLink.substring(fileLink.lastIndexOf('/') + 1);
+					$("#package_name").val(filename.replace(/[^a-zA-Z0-9]/g, "_"));
+
+					$(ref).html("Continue");
+					$(ref).removeAttr("disabled");
+				}).catch(error => {
+					swal({
+							title: "Invalid Link",
+							text: "",
+							type: "error",
+							confirmButtonColor: "#f2533e"
+						});
+
+					$(ref).html("Continue");
+					$(ref).removeAttr("disabled");
+				});
+	}
+
+	function importSwagger(ref) {
+		if ($("#package_name").val().trim() == "") {
+			swal({
+					title: "Invalid package name",
+					text: "",
+					type: "error",
+					confirmButtonColor: "#f2533e"
+				});
+
+			return ;
+		} else if (!($("#client_lib").is(":checked") || $("#server_stub").is(":checked"))) {
+			swal({
+					title: "Choose at least one from import as",
+					text: "",
+					type: "error",
+					confirmButtonColor: "#f2533e"
+				});
+
+			return ;
+		}
+
+		for (var i = 0; i < keywords.length; i++) {
+			if (keywords[i] == $("#package_name").val().trim()) {
+				swal({
+						title: "Your package name is invalid. Please choose some other name.",
+						text: "",
+						type: "error",
+						confirmButtonColor: "#f2533e"
+					});
+
+				return;
+			}
+		}
+
+		let isPkgExists = false;
+		for (var i = 0; i < (packages.children || []).length; i++) {
+			if (packages.children[i].text == $("#package_name").val().trim()) {
+				isPkgExists = true;
+				break;
+			}
+		}
+
+		if (isPkgExists) {
+			$("#yesNoModal").modal('toggle');
+		} else {
+			importNow(ref, $("#package_name").val().trim());
+		}
+	}
+
+	function importAction(action, ref) {
+
+		if (action) {
+			importNow(ref, $("#package_name").val().trim());
+		} else {
+			importNow(ref, $("#package_name").val().trim() + "_copy");
+		}
+	}
+
+	function importNow(ref, packageName) {
+		const buttonText = "Import";
+
+		$(ref).html("Importing...");
+		$(ref).attr("disabled", "disabled");
+
+		let url = window.ENV.API_BASE_URL + "/tenant/" + localStorage.getItem("tenant") + "/packages.middleware.pub.specs.swagger.v3.SwaggerImport.main";
+		if (specsName == "POSTMAN") {
+			url = window.ENV.API_BASE_URL + "/tenant/" + localStorage.getItem("tenant") + "/packages.middleware.pub.specs.postman.v3.PostmanImport.main";
+		}
+
+		collecta('Import', '', specsName, 'Importing API');
+
 		$.ajax({
+			type: "POST",
+			url: url + "?generateClient=" + $("#client_lib").is(":checked")
+					+ "&generateServerStub=" + $("#server_stub").is(":checked") + "&packageName=" + packageName.trim(),
+			data: JSON.stringify(Uploaded_File_Content),
 			headers: { "Authorization": `Bearer ${localStorage.getItem("AuthToken")}` },
-			type: "GET",
-			url: base_url+"/packages.Awareness.dashboard.services.api.initialize.main",
-			success: function () {
-				window.location.replace(targetOnSuccess);
+			contentType: "application/json",
+			success: function(response) {
+				$(ref).html(buttonText);
+				$(ref).removeAttr("disabled");
+
+				if (response && response.status === false) {
+					swal({
+						title: "Import Failed",
+						text: response.message || "Import failed. Please check the file and try again.",
+						type: "error",
+						confirmButtonColor: "#f2533e"
+					});
+					return;
+				}
+
+				swal({
+							title: "Imported successfully",
+							text: "Go to Workspace > Packages",
+							type: "success",
+							showCancelButton: true,
+							confirmButtonColor: "#2C61F5",
+							cancelButtonText: "No, Stay here !!",
+							confirmButtonText: "Let's Go !!",
+							showLoaderOnConfirm : true,
+							closeOnConfirm: true,
+							closeOnCancel: true
+						},
+						function(isConfirm){
+							if (isConfirm) {
+								location.href = "middleware/pub/server/ui/workspace/web/workspace.html?sfocus=files/packages/" + packageName;
+							}
+							else {
+								swal({
+										title: "Cancelled !!",
+										text: "Redirection Cancelled !!",
+										type: "success",
+										confirmButtonColor: "#2C61F5"
+									});
+
+							}
+						});
+				// importSwagger(this)
+				//swal("Imported successfully", "Go to Workspace > Packages", "success");
+				$("#importFileModal").modal('toggle');
+
+				$("#json_file_link").val('');
+				$("#client_lib").prop("checked", false);
+				$("#server_stub").prop("checked", false);
+
+				if ($("#yesNoModal").attr('class').includes("show")) {
+					$("#yesNoModal").modal('toggle');
+				}
+
 			},
-			error: function (errormessage) {
-				if (handleSessionExpired(errormessage)) {
-                    return;
-                }
-				window.location.replace(targetOnError);
+			error: function(xhr, status, error) {
+				swal({
+						title: "Error occurred, Please try later",
+						text: "",
+						type: "error",
+						confirmButtonColor: "#f2533e"
+					});
+
+				$(ref).html(buttonText);
+				$(ref).removeAttr("disabled");
 			}
 		});
-	})();
+	}
+
+	$(document).on('show.bs.modal', '#yesNoModal', function () {
+		$("#overrideButton").html("Yes, Override it").removeAttr("disabled");
+		$("#copyButton").html("No, Create new copy").removeAttr("disabled");
+	});
+
+	let Uploaded_File_Content = null;
+	let packages = {};
+
+	function loadPackages() {
+		asyncRestRequest("/packages.middleware.pub.server.browse.getPackagesAsTree.main", null,  "GET", function (response) {
+
+			packages = response;
+			}, function(errormessage) {
+
+		});
+
+	}
+
+	function triggerImport() {
+		document.getElementById("jsonImport").click();
+	}
+
+	function importJSON(file) {
+		if (!file) return;
+		file.text().then(JSON.parse).then(function (data) {
+			return $.ajax({
+				type: "POST",
+				url: window.ENV.API_BASE_URL + "/tenant/" + localStorage.getItem("tenant") + "/packages.Awareness.dashboard.services.api.importAll.main",
+				data: JSON.stringify(data),
+				headers: { "Authorization": "Bearer " + localStorage.getItem("AuthToken") },
+				contentType: "application/json"
+			});
+		}).then(function (response) {
+			if (!response || (response.status !== "success" && response.status !== "partial_success")) throw new Error("Import failed");
+			swal("Done", "JSON imported successfully.", "success");
+		}).catch(function (error) {
+			swal("Import Failed", error.message, "error");
+		});
+	}
+
+	function exportJSON() {
+		$.ajax({
+			url: window.ENV.API_BASE_URL + "/tenant/" + localStorage.getItem("tenant") + "/packages.Awareness.dashboard.services.api.exportAll.main?_ts=" + Date.now(),
+			headers: { "Authorization": "Bearer " + localStorage.getItem("AuthToken") }
+		}).then(function (response) {
+			if (response && (response.error || String(response.status).toLowerCase() === "failed")) throw new Error(response.error || "Export failed");
+			var transient = ["editing", "_original", "expanded", "roleDescriptionDecoded", "functionDescriptionDecoded", "inputJSONSchemaDecoded"];
+			var json = JSON.stringify(response && response.spec || response || {}, function (key, value) {
+				return transient.includes(key) ? undefined : value;
+			}, 2);
+			var link = document.createElement("a");
+			link.href = URL.createObjectURL(new Blob([json], { type: "application/json" }));
+			link.download = "syncloop_ai_environment.json";
+			link.click();
+			setTimeout(function () { URL.revokeObjectURL(link.href); });
+		}).catch(function (error) {
+			swal("Export Failed", error.message, "error");
+		});
+	}
+
+	function openConsoleTab(tabName) {
+		try {
+			localStorage.setItem('activeTab', tabName);
+			if (tabName === "apps") {
+				window.location.href = env.CDN_API_BASE_URL + '/dashboard/apps';
+			} else {
+				window.location.href = env.CDN_API_BASE_URL + '/Awareness/console.html';
+			}
+		} catch (e) {
+			console.error("Failed to set activeTab:", e);
+			window.location.href = env.CDN_API_BASE_URL + '/Awareness/console.html';
+		}
+	}
+
+
+	function removeActiveTab() {
+		localStorage.removeItem('activeTab');
+	}
+
+	function aiInitialize() {
+		asyncRestRequest("/packages.Awareness.dashboard.services.api.initialize.main", null,  "GET", function (response) {
+			packages = response;
+		}, function(errormessage) {
+		});
+	}
+	aiInitialize();
 </script>
 </body>
 </html>

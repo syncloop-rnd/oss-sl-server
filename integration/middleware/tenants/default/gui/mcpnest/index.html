@@ -48,13 +48,13 @@
         <label class="form-label endpoint-title">Target Server</label>
         <div class="endpoint-row">
           <select class="form-select endpoint-protocol" ng-model="app.login.protocol">
-            <option value="https">https</option>
             <option value="http">http</option>
+			<option value="https">https</option>
           </select>
           <span class="endpoint-sep">://</span>
-          <input class="form-control endpoint-host" ng-model="app.login.host" placeholder="dev-new-api.syncloop.com" required>
+          <input class="form-control endpoint-host" ng-model="app.login.host" placeholder="localhost" required>
           <span class="endpoint-sep">:</span>
-          <input class="form-control endpoint-port" ng-model="app.login.port" placeholder="443">
+          <input class="form-control endpoint-port" ng-model="app.login.port" placeholder="8080">
         </div>
       </div>
       <div class="setup-steps">
@@ -142,7 +142,7 @@
         <div class="row g-3">
           <div class="col-12">
             <label class="form-label">Tenant name or id</label>
-            <input class="form-control" ng-model="app.login.tenant" placeholder="1782168784544462123" required>
+            <input class="form-control" ng-model="app.login.tenant" placeholder="default" required>
           </div>
           <div class="col-12">
             <label class="form-label">Bearer token</label>
@@ -1211,6 +1211,13 @@
         </div>
         <div class="modal-body">
           <div class="row g-3">
+            <div class="col-12">
+              <label class="form-label">Connection</label>
+              <select class="form-select" ng-model="app.forms.mcp.request.connectionType" ng-change="app.onMcpConnectionTypeChange()">
+                <option value="REMOTE">Remote MCP endpoint</option>
+                <option value="SYNCLOOP">Internal Syncloop package</option>
+              </select>
+            </div>
             <div class="col-md-6"><label class="form-label">Alias</label><input class="form-control" ng-model="app.forms.mcp.request.mcpAlias" required></div>
             <div class="col-md-6">
               <label class="form-label">Name</label>
@@ -1219,8 +1226,12 @@
                 <button type="button" class="btn btn-outline-primary" ng-if="app.forms.mcp.request.authType === 'OIDC'" ng-click="app.openProviderNameSelector()" title="Choose provider name"><i class="ph-bold ph-magnifying-glass"></i> Choose</button>
               </div>
             </div>
-            <div class="col-12"><label class="form-label">Endpoint URL</label><input class="form-control" ng-model="app.forms.mcp.request.endpointUrl" placeholder="https://mcp.example.com/api/v1/connect" required></div>
-            <div class="col-md-6">
+            <div class="col-12" ng-if="app.isSyncloopMcpForm()">
+              <label class="form-label">Package name</label>
+              <input class="form-control" ng-model="app.forms.mcp.request.packageName" placeholder="packages.example" required>
+            </div>
+            <div class="col-12" ng-if="!app.isSyncloopMcpForm()"><label class="form-label">Endpoint URL</label><input class="form-control" ng-model="app.forms.mcp.request.endpointUrl" placeholder="https://mcp.example.com/api/v1/connect" required></div>
+            <div class="col-md-6" ng-if="!app.isSyncloopMcpForm()">
               <label class="form-label">Endpoint type</label>
               <select class="form-select" ng-model="app.forms.mcp.request.endpointType">
                 <option value="STANDARD">STANDARD</option>
@@ -1228,7 +1239,7 @@
                 <option value="STREAMABLE_HTTP">STREAMABLE_HTTP</option>
               </select>
             </div>
-            <div class="col-md-6">
+            <div class="col-md-6" ng-if="!app.isSyncloopMcpForm()">
               <label class="form-label">Auth type</label>
               <select class="form-select" ng-model="app.forms.mcp.request.authType" ng-change="app.onMcpAuthTypeChange()">
                 <option value="NONE">NONE</option>
@@ -1281,7 +1292,7 @@
             </div>
           </div>
 
-          <div class="form-section" ng-if="app.forms.mcp.request.authType !== 'NONE'">
+          <div class="form-section" ng-if="!app.isSyncloopMcpForm() && app.forms.mcp.request.authType !== 'NONE'">
             <div class="form-section-title"><i class="ph-bold ph-lock-key"></i>AuthInfo payload (schema editor)</div>
             <ul class="nav nav-tabs calltool-tabs" role="tablist">
               <li class="nav-item" role="presentation"><button class="nav-link active" data-bs-toggle="tab" data-bs-target="#mcpauth-editor" type="button" role="tab">Editor</button></li>
@@ -1414,7 +1425,8 @@
             <div class="col-md-6"><label class="form-label">New MCP alias</label><input class="form-control" ng-model="app.forms.cloneMcp.request.newMcpAlias" required></div>
             <div class="col-md-6"><label class="form-label">Name</label><input class="form-control" ng-model="app.forms.cloneMcp.request.mcpName" readonly></div>
             <div class="col-md-6"><label class="form-label">Endpoint type</label><input class="form-control" ng-model="app.forms.cloneMcp.request.endpointType" readonly></div>
-            <div class="col-12"><label class="form-label">Endpoint URL</label><input class="form-control" ng-model="app.forms.cloneMcp.request.endpointUrl" readonly></div>
+            <div class="col-12" ng-if="app.forms.cloneMcp.request.authType === 'SYNCLOOP' || app.forms.cloneMcp.request.authType === 'INTERNAL' || app.forms.cloneMcp.request.endpointType === 'SYNCLOOP'"><label class="form-label">Package name</label><input class="form-control" ng-model="app.forms.cloneMcp.request.packageName" readonly></div>
+            <div class="col-12" ng-if="app.forms.cloneMcp.request.authType !== 'SYNCLOOP' && app.forms.cloneMcp.request.authType !== 'INTERNAL' && app.forms.cloneMcp.request.endpointType !== 'SYNCLOOP'"><label class="form-label">Endpoint URL</label><input class="form-control" ng-model="app.forms.cloneMcp.request.endpointUrl" readonly></div>
             <div class="col-12"><label class="form-label">Description</label><textarea class="form-control" rows="2" ng-model="app.forms.cloneMcp.request.description"></textarea></div>
             <div class="col-12">
               <label class="wizard-switch android-switch-row">

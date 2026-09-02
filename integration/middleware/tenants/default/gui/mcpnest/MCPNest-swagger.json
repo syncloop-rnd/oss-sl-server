@@ -15,7 +15,7 @@
     "/packages.MCPNest.wrapper.api.createToolCollection.main": {
       "post": {
         "summary": "",
-        "description": "",
+        "description": "Creates a collection. When overwrite is true, updates the existing collection in place and preserves its tool mappings.",
         "operationId": "createToolCollection",
         "requestBody": {
           "description": "",
@@ -38,6 +38,15 @@
                       "enabled": {
                         "type": "boolean",
                         "description": ""
+                      },
+                      "collectionId": {
+                        "type": "string",
+                        "description": "Existing collection UUID. Required by the update wizard when overwrite is true."
+                      },
+                      "overwrite": {
+                        "type": "boolean",
+                        "default": false,
+                        "description": "When true, update the matching existing collection. Omit or false for new collection creation."
                       }
                     },
                     "description": ""
@@ -191,6 +200,10 @@
                         "items": {
                           "type": "string"
                         }
+                      },
+                      "packageName": {
+                        "type": "string",
+                        "description": "Syncloop package name. Required when authType is SYNCLOOP or INTERNAL."
                       }
                     },
                     "description": ""
@@ -878,6 +891,10 @@
                             "items": {
                               "type": "string"
                             }
+                          },
+                          "packageName": {
+                            "type": "string",
+                            "description": "Package name for a Syncloop internal MCP."
                           }
                         }
                       }
@@ -2865,6 +2882,10 @@
                       },
                       "enabled": {
                         "type": "boolean"
+                      },
+                      "packageName": {
+                        "type": "string",
+                        "description": "Syncloop package name. Required when authType is SYNCLOOP or INTERNAL."
                       }
                     }
                   }
@@ -6361,6 +6382,18 @@
                     "cacheExpireSeconds": {
                       "type": "integer",
                       "maximum": 300
+                    },
+                    "fqn": {
+                      "type": "string"
+                    },
+                    "packageName": {
+                      "type": "string"
+                    },
+                    "tenant": {
+                      "type": "string"
+                    },
+                    "executionRoute": {
+                      "type": "string"
                     }
                   }
                 }

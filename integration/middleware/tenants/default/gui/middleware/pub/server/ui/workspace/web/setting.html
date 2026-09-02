@@ -69,7 +69,7 @@
             margin-right: 0px !important;
         }
 
-    
+
     </style>
     <style>
         .tooltip {
@@ -392,7 +392,7 @@
             position: relative;
         }
 
-     
+
 
         .tenant-copy-btn:hover img,
         .tenant-copy-btn:focus img {
@@ -435,11 +435,11 @@
             z-index: 5;
         }
 
-        .tenant-copy-btn.tenant-copy-confirmed::after,
+        /* .tenant-copy-btn.tenant-copy-confirmed::after,
         .tenant-copy-btn.tenant-copy-confirmed::before {
             opacity: 1;
             transform: translateX(-50%) translateY(0);
-        }
+        } */
 
         .tenant-active-badge {
             display: none;
@@ -603,7 +603,7 @@
             opacity: .45;
         }
 
-    
+
         .tenant-modal .modal-dialog {
             max-width: 620px;
             width: 100%;
@@ -854,7 +854,7 @@
 </head>
 
 <body>
-    
+
     <script type="syncloop/body-analytics"></script>
     <header class="navbar custom_head custom_head sticky-top flex-md-nowrap bg-gray">
         <div id="license_warning" class="toast-warning" style="display: none;">
@@ -1207,7 +1207,7 @@
                                          <li id="tab-tenants" class="tab-action ">
                                             <a href="#tenant_tab" data-toggle="tab">Tenant</a>
                                         </li>
-                                        
+
                                         <li id="tab-users" class="tab-action">
                                             <a href="#team_tab" data-toggle="tab">Team </a>
                                         </li>
@@ -1342,7 +1342,7 @@
                                                             </div>
                                                         </div>
                                                         <div class="modal-footer">
-                                                            <button class="btn-gry2" 
+                                                            <button class="btn-gry2"
                                                                 data-bs-dismiss="modal" aria-label="Close">Cancel</button>
                                                             <button type="button" class="btn_primary"
                                                                 id="create-tenant-submit"
@@ -1358,7 +1358,7 @@
                                                 <div class="tenant-management-toolbar">
                                                     <!-- <h3 class="tenant-management-title">Tenant</h3> -->
                                                     <div class="dataTables_length" id="tenantTable_length">
-                                                        <label>Show 
+                                                        <label>Show
                                                             <select id="tenant-page-length" name="tenantTable_length" aria-controls="tenantTable" class="" onchange="changeTenantPageLength(this.value)">
                                                                 <option value="10">10</option>
                                                                 <option value="25">25</option>
@@ -1375,7 +1375,7 @@
                                                                 oninput="filterTenantTable()">
                                                             <button type="button" id="tenant-search-clear" class="tenant-search-clear" aria-label="Clear tenant search">×</button>
                                                         </div>
-                                                        
+
                                                     </div>
                                                 </div>
                                                 <div class="table-responsive tenant-table-wrap">
@@ -1413,23 +1413,26 @@
                                                 tabindex="-1" aria-labelledby="editTenantModalLabel"
                                                 aria-hidden="true" style="z-index: 9999;">
                                                 <div class="modal-dialog">
-                                                    <div class="modal-content" style="width: 700px">
+                                                    <div class="modal-content" style="width: 650px">
                                                         <div class="primary-header">
-                                                            <h4 id="editTenantModalLabel">Edit tenant</h4>
-                                                            <button type="button" class="close_primary" data-bs-dismiss="modal" aria-label="Close">
+                                                           <div>
+                                                                <h4 id="editTenantModalLabel">Edit tenant</h4>
+                                                                <h6> Create a new tenant to organize your projects, teams, and resources in one place.</h6>
+                                                            </div>
+                                                            <button type="button" class="close_primary" data-bs-dismiss="modal" aria-label="Close" style="margin-top: -25px;">
                                                                <img src="./compliance/public/images/Close_round_duotone_line.svg" alt="">
                                                             </button>
                                                         </div>
                                                         <div class="modal-body">
-                                                            <div class="create-tenant-row primary_space">
-                                                                <label for="tenant-edit-name" class="primary_label">Tenant Name</label>
-     <input class="primary_input" type="text" id="tenant-edit-name" placeholder="Enter name" value="">
-     <div id="tenant-edit-name-error" class="tenant-name-error" role="alert">Tenant name cannot exceed 20 characters.</div>
+                                                            <div class="primary_space">
+                                                                <!-- <label for="tenant-edit-name" class="primary_label">Tenant Name</label> -->
+                                                                <input class="primary_input" type="text" id="tenant-edit-name" placeholder="Enter name" value="">
+                                                                <div id="tenant-edit-name-error" class="tenant-name-error" role="alert">Tenant name cannot exceed 20 characters.</div>
                                                             </div>
-                                                            <div class="create-tenant-row primary_space">
+                                                            <!-- <div class="create-tenant-row primary_space">
                                                                 <label for="tenant-edit-id" class="primary_label">Tenant ID</label>
                                                                 <input class="primary_input" type="text" id="tenant-edit-id" value="" readonly>
-                                                            </div>
+                                                            </div> -->
                                                         </div>
                                                         <div class="modal-footer">
                                                             <button type="button" class="btn-gry2" data-bs-dismiss="modal" aria-label="Close">Cancel</button>
@@ -1439,7 +1442,7 @@
                                                 </div>
                                             </div>
                                         </div>
-                                        
+
                                         <div class="tab-pane" id="team_tab">
                                             <div class="tabl_outer">
                                                 <div class="table-responsive">
@@ -3027,13 +3030,18 @@
 
     function tenantCopyText(text, button) {
         function onSuccess() {
-            if (button) {
-                button.classList.add("tenant-copy-confirmed");
-                setTimeout(function () {
-                    button.classList.remove("tenant-copy-confirmed");
-                }, 1500);
-            }
+        if (button) {
+            // ✅ Tooltip "Copied" dikhao
+            button.setAttribute("data-tooltip", "Copied");
+            button.classList.add("tenant-copy-confirmed");
+
+            setTimeout(function () {
+                button.classList.remove("tenant-copy-confirmed");
+                // ✅ 1.5 second baad wapas "Copy tenant ID"
+                button.setAttribute("data-tooltip", "Copy Tenant ID");
+            }, 1500);
         }
+    }
 
         function fallbackCopy() {
             var input = document.createElement("textarea");
@@ -3080,8 +3088,7 @@
         var filteredRows = tenantRows.filter(function (row) {
             return !query || tenantNormalize(tenantGetSearchText(row)).indexOf(query) !== -1;
         }).sort(function (left, right) {
-            return Number(right.active) - Number(left.active) ||
-                tenantNormalize(left.name).localeCompare(tenantNormalize(right.name));
+            return Number(right.active) - Number(left.active);
         });
         if (!filteredRows.length) {
             if (query) {
@@ -3288,7 +3295,10 @@
                 throw new Error((payload && (payload.message || payload.error)) || "Unable to update tenant.");
             }
             $("#editTenantModal").modal("hide");
-            if (row.active && document.getElementById("workspace-header-tenant")) document.getElementById("workspace-header-tenant").textContent = updatedName;
+            if (row.active) localStorage.setItem("tenantDisplayName", updatedName);
+            document.dispatchEvent(new CustomEvent("syncloop:tenant-renamed", {
+                detail: { active: row.active, displayName: updatedName }
+            }));
             swal({ title: "Tenant updated successfully.", text: "", type: "success", confirmButtonColor: "#2C61F5" });
             loadTenantTable();
         }).catch(function (error) {
@@ -3858,7 +3868,7 @@
     const TENANT_SELECTION_URL = "/middleware/pub/server/ui/tenant/selectTenant.html";
 
     function mountTenantModals() {
-        ["#createTenantModal"].forEach(function (selector) {
+        ["#createTenantModal", "#editTenantModal"].forEach(function (selector) {
             var modal = $(selector);
             if (modal.length && modal.parent()[0] !== document.body) {
                 modal.appendTo("body");
@@ -5044,7 +5054,7 @@ function addCredential(ref) {
     }
 
     $(ref).attr('disabled', 'disabled').html('...');
-    
+
     // Using the requested testCredential.main endpoint with GET method
     asyncRestRequest("/packages.middleware.pub.environments.api.createCredential.main", JSON.stringify(payload), "POST", function (response) {
         $(ref).removeAttr('disabled').html('Save');
@@ -5087,7 +5097,7 @@ function credentialValidator(payload) {
 
     // --- 1. Common Validation: Credential Name ---
     const nameRegex = /^(?=.*[a-zA-Z])[a-zA-Z0-9_]+$/;
-    
+
     if (!nameRegex.test(name)) {
         swal({
             title: "Invalid Credential Name",
@@ -5117,7 +5127,7 @@ function credentialValidator(payload) {
     // --- 2. Type-Specific Validation ---
     if (type === "BASIC") {
         const unameRegex = /^(?=.*[a-zA-Z])[a-zA-Z0-9_@.-]+$/;
-        
+
         if (!unameRegex.test(api_username)) {
             swal({
                 title: "Invalid Username",
@@ -5137,7 +5147,7 @@ function credentialValidator(payload) {
             });
             return false;
         }
-    } 
+    }
     else if (type === "Bearer") {
         const token = getMetaValue("token");
         if (!token) {
@@ -5149,7 +5159,7 @@ function credentialValidator(payload) {
             });
             return false;
         }
-    } 
+    }
     else if (type === "API_KEY") {
         const key = getMetaValue("key");
         const value = getMetaValue("value");
@@ -5162,13 +5172,13 @@ function credentialValidator(payload) {
             });
             return false;
         }
-    } 
+    }
     else if (type === "AWS") {
         const accessKey = getMetaValue("accessKey");
         const secretKey = getMetaValue("secretKey");
         const region = getMetaValue("region");
         const serviceName = getMetaValue("serviceName");
-        
+
         if (!accessKey || !secretKey || !region || !serviceName) {
             swal({
                 title: "Validation Error",
@@ -5621,7 +5631,13 @@ function credentialValidator(payload) {
             $("#ServerID").html(response.instanceUUID);
             $("#ServerClusterID").html(response.instanceClusterUUID);
             $("#LicenseValidity").html(new Date(response.license_expiry));
-            $("#gui_version").html(response.guiVersion);
+            $.ajax({
+                url: "/build",
+                method: "GET",
+                success: function(data) {
+                    $("#gui_version").html(data);
+                }
+            });
             $("#packages_version").html(response.packagesVersion);
             $("#api-endpoint-gt").val(response.api_url);
             $("#request-a-license-an").attr("href", "https://www.syncloop.com/request-a-license.html?serverId=" + response.instanceUUID

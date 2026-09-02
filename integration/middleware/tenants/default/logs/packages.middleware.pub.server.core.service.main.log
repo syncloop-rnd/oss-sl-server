@@ -1,0 +1,10 @@
+2026-08-13 18:11:19,040 INFO c.e.m.t.Tenant [artemis-task-consumer-9] 04d338c2-efe3-4b4f-9612-b3396ec626bf    packages.middleware.pub.server.core.service.main    Service ---> Invoke
+2026-08-13 18:11:19,070 INFO c.e.m.t.Tenant [artemis-task-consumer-9] 04d338c2-efe3-4b4f-9612-b3396ec626bf    packages.middleware.pub.server.core.service.main    packages.middleware.pub.server.startUpServices.start.main
+2026-08-13 18:11:19,073 INFO c.e.m.t.Tenant [artemis-task-consumer-9] 04d338c2-efe3-4b4f-9612-b3396ec626bf    packages.middleware.pub.server.core.service.main    packages.middleware.pub.security.initOIDCProfiles.main
+2026-08-13 18:11:19,074 INFO c.e.m.t.Tenant [artemis-task-consumer-9] 04d338c2-efe3-4b4f-9612-b3396ec626bf    packages.middleware.pub.server.core.service.main    packages.scheduler.cronJob.handler.startSchedulerAndLoadJobs.main
+2026-08-13 18:11:19,130 WARN c.e.m.d.ArtemisQueueService [artemis-task-consumer-9] Queued task failed. batchId=50a20443-828c-457a-91b7-e6bce2f08d56, tenant=default, reason=java.lang.InterruptedException
+2026-08-13 18:13:31,788 INFO c.e.m.t.Tenant [artemis-task-consumer-8] 15fabfbb-f3dd-4f3c-9529-7a0de38ce49c    packages.middleware.pub.server.core.service.main    Service ---> Invoke
+2026-08-13 18:13:31,821 INFO c.e.m.t.Tenant [artemis-task-consumer-8] 15fabfbb-f3dd-4f3c-9529-7a0de38ce49c    packages.middleware.pub.server.core.service.main    packages.middleware.pub.server.startUpServices.start.main
+2026-08-13 18:13:31,825 INFO c.e.m.t.Tenant [artemis-task-consumer-8] 15fabfbb-f3dd-4f3c-9529-7a0de38ce49c    packages.middleware.pub.server.core.service.main    packages.middleware.pub.security.initOIDCProfiles.main
+2026-08-13 18:13:31,827 INFO c.e.m.t.Tenant [artemis-task-consumer-8] 15fabfbb-f3dd-4f3c-9529-7a0de38ce49c    packages.middleware.pub.server.core.service.main    packages.scheduler.cronJob.handler.startSchedulerAndLoadJobs.main
+2026-08-13 18:13:31,890 WARN c.e.m.d.ArtemisQueueService [artemis-task-consumer-8] Queued task failed. batchId=768569b0-3650-4be0-91e2-fd3fbdcbe5ca, tenant=default, reason=java.lang.InterruptedException

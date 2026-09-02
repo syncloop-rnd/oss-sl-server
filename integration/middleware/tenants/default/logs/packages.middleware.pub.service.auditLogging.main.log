@@ -1,0 +1,16 @@
+2026-08-13 18:11:19,194 WARN c.e.m.t.Tenant [artemis-task-consumer-1] 04d338c2-efe3-4b4f-9612-b3396ec626bf    packages.middleware.pub.service.auditLogging.main    Unexpected value: document
+2026-08-13 18:11:19,233 WARN c.e.m.t.Tenant [artemis-task-consumer-2] 04d338c2-efe3-4b4f-9612-b3396ec626bf    packages.middleware.pub.service.auditLogging.main    Unexpected value: document
+2026-08-13 18:11:19,886 WARN c.e.m.t.Tenant [artemis-task-consumer-3] 04d338c2-efe3-4b4f-9612-b3396ec626bf    packages.middleware.pub.service.auditLogging.main    Unexpected value: document
+2026-08-13 18:11:23,642 WARN c.e.m.d.ArtemisQueueService [artemis-task-consumer-1] Queued task failed. batchId=49578af5-7e71-4075-bef3-eb15e09b3aa0, tenant=default, reason=java.lang.InterruptedException
+2026-08-13 18:11:23,642 WARN c.e.m.d.ArtemisQueueService [artemis-task-consumer-3] Queued task failed. batchId=ecf18a59-6a68-477a-b30e-a62b98c8ecdb, tenant=default, reason=java.lang.InterruptedException
+2026-08-13 18:11:23,642 WARN c.e.m.d.ArtemisQueueService [artemis-task-consumer-2] Queued task failed. batchId=b47d2f04-a516-49b8-b9e9-fe09381e17c4, tenant=default, reason=java.lang.InterruptedException
+2026-08-13 18:13:31,946 WARN c.e.m.t.Tenant [artemis-task-consumer-4] 15fabfbb-f3dd-4f3c-9529-7a0de38ce49c    packages.middleware.pub.service.auditLogging.main    Unexpected value: document
+2026-08-13 18:13:31,962 WARN c.e.m.t.Tenant [artemis-task-consumer-3] 15fabfbb-f3dd-4f3c-9529-7a0de38ce49c    packages.middleware.pub.service.auditLogging.main    Unexpected value: document
+2026-08-13 18:13:32,401 WARN c.e.m.d.ArtemisQueueService [artemis-task-consumer-3] Queued task failed. batchId=9c1b024c-c48e-45c9-9850-ea59d2e3c406, tenant=default, reason=java.lang.InterruptedException
+2026-08-13 18:13:32,401 WARN c.e.m.d.ArtemisQueueService [artemis-task-consumer-4] Queued task failed. batchId=90d1826c-bf77-4daf-8f99-7fbfe04659c0, tenant=default, reason=java.lang.InterruptedException
+2026-08-13 18:13:32,420 WARN c.e.m.t.Tenant [artemis-task-consumer-9] 15fabfbb-f3dd-4f3c-9529-7a0de38ce49c    packages.middleware.pub.service.auditLogging.main    Unexpected value: document
+2026-08-13 18:13:32,436 WARN c.e.m.d.ArtemisQueueService [artemis-task-consumer-9] Queued task failed. batchId=1f61da61-9858-485c-b1e9-7caea559321b, tenant=default, reason=java.lang.InterruptedException
+2026-08-13 18:13:32,505 WARN c.e.m.t.Tenant [artemis-task-consumer-2] 15fabfbb-f3dd-4f3c-9529-7a0de38ce49c    packages.middleware.pub.service.auditLogging.main    Unexpected value: document
+2026-08-13 18:13:32,517 WARN c.e.m.d.ArtemisQueueService [artemis-task-consumer-2] Queued task failed. batchId=89ffc6bc-9055-4f9c-95ff-a203072fa0e0, tenant=default, reason=java.lang.InterruptedException
+2026-08-13 18:13:32,609 WARN c.e.m.t.Tenant [artemis-task-consumer-1] 15fabfbb-f3dd-4f3c-9529-7a0de38ce49c    packages.middleware.pub.service.auditLogging.main    Unexpected value: document
+2026-08-13 18:13:32,624 WARN c.e.m.d.ArtemisQueueService [artemis-task-consumer-1] Queued task failed. batchId=6602b07c-4c03-4b66-a7ec-aeaeaf9d8a14, tenant=default, reason=java.lang.InterruptedException

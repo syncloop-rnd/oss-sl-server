@@ -8255,7 +8255,7 @@ function createThreadForGPT() {
 	  localStorage.setItem('activeTab', newtab);
    }
 
-function updateServiceUsingGPT(overwrite, response) {
+function updateServiceUsingGPT(overwrite, response, onRefreshComplete) {
     response = JSON.parse(response);
     updateUUID(response.latest.api);
 
@@ -8357,21 +8357,22 @@ function updateServiceUsingGPT(overwrite, response) {
         if (data != null)
             localStorage.setItem(flowJsTree_id, JSON.stringify(data));
     }
-    loadFromLocalStorage2(overwrite);
+    loadFromLocalStorage2(overwrite, onRefreshComplete);
 }
 
-function loadFromLocalStorage2(overwrite) {
+function loadFromLocalStorage2(overwrite, onRefreshComplete) {
     //alert("loaded");
     localStorage.setItem("enableServiceSelectionMode", false);
     inputJsTree_id = loadFile + "_inputJsTree";
     outputJsTree_id = loadFile + "_outputJsTree";
     flowJsTree_id = loadFile + "_flowJsTree";
+    var treesToRefresh = [];
     var inputRef = inputJstreeRef;
     var data = localStorage.getItem(inputJsTree_id);
     if (data != null && data.trim().length > 0) {
         setUnsavedChanges(loadFile);
         inputRef.settings.core.data = JSON.parse(data);
-        inputRef.refresh();
+        treesToRefresh.push(inputRef);
     }
 
     var outputRef = outputJstreeRef;
@@ -8380,7 +8381,7 @@ function loadFromLocalStorage2(overwrite) {
         setUnsavedChanges(loadFile);
 
         outputRef.settings.core.data = JSON.parse(data);
-        outputRef.refresh();
+        treesToRefresh.push(outputRef);
     }
 
     var flowRef = flowDesignerJsTreeRef;
@@ -8397,8 +8398,28 @@ function loadFromLocalStorage2(overwrite) {
         }
 
         flowRef.settings.core.data = data;
-        flowRef.refresh();
+        treesToRefresh.push(flowRef);
     }
+
+    if (typeof onRefreshComplete === "function") {
+        var pendingRefreshes = treesToRefresh.length;
+        if (pendingRefreshes === 0) {
+            onRefreshComplete();
+        } else {
+            treesToRefresh.forEach(function (treeRef) {
+                treeRef.get_container().one("refresh.jstree.chatGeneratedApi", function () {
+                    pendingRefreshes--;
+                    if (pendingRefreshes === 0) {
+                        onRefreshComplete();
+                    }
+                });
+            });
+        }
+    }
+
+    treesToRefresh.forEach(function (treeRef) {
+        treeRef.refresh();
+    });
 
     let pathItems = SDK_EMBEDDED ? "" : loadFile.replace("files/", "").split("/");
 

@@ -1,0 +1,6 @@
+2026-08-13 18:11:19,863 INFO c.e.m.t.Tenant [syncloop-runtime-3] 04d338c2-efe3-4b4f-9612-b3396ec626bf    packages.middleware.pub.security.OIDCLogin.Okta.OIDCProfile.main    JWT endpoint
+2026-08-13 18:11:19,863 INFO c.e.m.a.Security [syncloop-runtime-3] /tenant/default/jwt/okta/login
+2026-08-13 18:11:19,863 INFO c.e.m.t.Tenant [syncloop-runtime-3] 04d338c2-efe3-4b4f-9612-b3396ec626bf    packages.middleware.pub.security.OIDCLogin.Okta.OIDCProfile.main    /tenant/default/jwt/okta/login
+2026-08-13 18:13:32,479 INFO c.e.m.t.Tenant [syncloop-runtime-3] 15fabfbb-f3dd-4f3c-9529-7a0de38ce49c    packages.middleware.pub.security.OIDCLogin.Okta.OIDCProfile.main    JWT endpoint
+2026-08-13 18:13:32,479 INFO c.e.m.a.Security [syncloop-runtime-3] /tenant/default/jwt/okta/login
+2026-08-13 18:13:32,479 INFO c.e.m.t.Tenant [syncloop-runtime-3] 15fabfbb-f3dd-4f3c-9529-7a0de38ce49c    packages.middleware.pub.security.OIDCLogin.Okta.OIDCProfile.main    /tenant/default/jwt/okta/login

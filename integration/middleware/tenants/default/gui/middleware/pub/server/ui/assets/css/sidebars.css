@@ -38,7 +38,151 @@ main {
 .nav-flush .nav-link {
   border-radius: 0;
 }
-
+.dashboard-collapsible-sidebar .nav-flush .nav-link {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+}
+.flex_main{
+  display: flex;
+}
+.dashboard-collapsible-sidebar.width_collapse{
+  width: 64px;
+  transition: width 300ms cubic-bezier(.4, 0, .2, 1);
+  will-change: width;
+}
+.dashboard-collapsible-sidebar .collapse_btnsidebar a{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding-left: 0 !important;
+  transition: padding 300ms ease, transform 300ms ease;
+}
+.dashboard-collapsible-sidebar.width_collapseincrease{
+  width: 260px !important;
+}
+.dashboard-collapsible-sidebar.width_collapse > ul{
+  width: 56px !important;
+  transition: width 300ms cubic-bezier(.4, 0, .2, 1);
+}
+.dashboard-collapsible-sidebar.width_collapseincrease > ul{
+  width: 260px !important;
+}
+.dashboard-collapsible-sidebar li{
+  padding-bottom: 3px;
+}
+.dashboard-collapsible-sidebar li a{
+  padding: 10px 14px;
+}
+.dashboard-collapsible-sidebar .left-m-bar > li:not(.collapse_btnsidebar) > .nav-link{
+  position: relative;
+  height: 48px;
+  min-height: 48px;
+  box-sizing: border-box;
+  padding: 0;
+}
+.dashboard-collapsible-sidebar .left-m-bar > li:not(.collapse_btnsidebar) > .nav-link > img{
+  display: block;
+  position: absolute;
+  top: 50%;
+  left: 14px;
+  width: 28px;
+  max-height: 28px;
+  object-fit: contain;
+  transform: translateY(-50%);
+}
+.dashboard-collapsible-sidebar .nav-link .nav_text{
+    position: absolute;
+    top: 50%;
+    left: 52px;
+    font-size: 15px;
+    font-weight: 400;
+    color: #4b4b4b;
+    flex-shrink: 0;
+    display: inline-block;
+    max-width: 0;
+    opacity: 0;
+    overflow: hidden;
+    transform: translate(-8px, -50%);
+    white-space: nowrap;
+    transition: max-width 300ms cubic-bezier(.4, 0, .2, 1), opacity 180ms ease, transform 300ms ease;
+}
+.dashboard-collapsible-sidebar.width_collapseincrease .nav-link .nav_text {
+    max-width: 180px;
+    opacity: 1;
+    transform: translate(0, -50%);
+    transition-delay: 60ms;
+}
+.flex_rightside{
+  flex: 1;
+  flex-direction: column;
+}
+.dashboard-collapsible-sidebar .collapse_btnsidebar{
+  padding-top: 15px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  min-height: 64px;
+  box-sizing: border-box;
+}
+.dashboard-collapsible-sidebar .collapse_btnsidebar span{
+  max-width: 0;
+  opacity: 0;
+  overflow: hidden;
+  transform: translateX(-8px);
+  transition: max-width 300ms cubic-bezier(.4, 0, .2, 1), opacity 180ms ease, transform 300ms ease;
+}
+.dashboard-collapsible-sidebar.width_collapse:not(.width_collapseincrease) .collapse_btnsidebar{
+  justify-content: center;
+}
+.dashboard-collapsible-sidebar.width_collapse:not(.width_collapseincrease) .collapse_btnsidebar a{
+  padding-left: 7px !important;
+  padding-right: 7px;
+}
+.dashboard-collapsible-sidebar.width_collapse:not(.width_collapseincrease) .left-m-bar > li:not(.collapse_btnsidebar) > .nav-link{
+  width: 44px;
+  margin-left: 6px;
+  margin-right: 0;
+  padding: 0;
+}
+.dashboard-collapsible-sidebar.width_collapse:not(.width_collapseincrease) .left-m-bar > li:not(.collapse_btnsidebar) > .nav-link > img{
+  left: 8px;
+}
+.dashboard-collapsible-sidebar.width_collapseincrease .left-m-bar > li:not(.collapse_btnsidebar) > .nav-link{
+  width: 100%;
+  margin-left: 0;
+  margin-right: 0;
+  padding: 0;
+}
+.dashboard-collapsible-sidebar.width_collapseincrease .collapse_btnsidebar{
+  padding-left: 14px;
+  padding-right: 4px;
+}
+.dashboard-collapsible-sidebar.width_collapseincrease .collapse_btnsidebar span{
+  color: #252525;
+  font-size: 15px;
+  font-weight: 700;
+  line-height: 1;
+  white-space: nowrap;
+  max-width: 150px;
+  opacity: 1;
+  transform: translateX(0);
+  transition-delay: 60ms;
+}
+.dashboard-collapsible-sidebar.width_collapseincrease .collapse_btnsidebar a{
+  margin-left: auto;
+  padding: 10px 4px 10px 10px !important;
+}
+@media (prefers-reduced-motion: reduce) {
+  .dashboard-collapsible-sidebar.width_collapse,
+  .dashboard-collapsible-sidebar.width_collapse > ul,
+  .dashboard-collapsible-sidebar .collapse_btnsidebar a,
+  .dashboard-collapsible-sidebar .collapse_btnsidebar span,
+  .dashboard-collapsible-sidebar .nav-link .nav_text {
+    transition: none;
+  }
+}
 .btn-toggle {
   display: inline-flex;
   align-items: center;

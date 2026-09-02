@@ -201,7 +201,7 @@
         "state" : {
           "loaded" : true,
           "opened" : false,
-          "selected" : false,
+          "selected" : true,
           "disabled" : false
         },
         "data" : { },
@@ -666,6 +666,80 @@
         "status" : "enabled"
       },
       "children" : [ {
+        "id" : "j1_14",
+        "text" : "CASE",
+        "li_attr" : {
+          "id" : "j1_14"
+        },
+        "a_attr" : {
+          "href" : "#",
+          "id" : "j1_14_anchor"
+        },
+        "state" : {
+          "loaded" : true,
+          "opened" : true,
+          "selected" : false,
+          "disabled" : false
+        },
+        "data" : {
+          "guid" : "e9cb765f-3fcd-49a0-8485-7b79a4583b54",
+          "columnType" : "-1",
+          "case" : "server/discover"
+        },
+        "children" : [ {
+          "id" : "j1_16",
+          "text" : "Invoke",
+          "li_attr" : {
+            "id" : "j1_16"
+          },
+          "a_attr" : {
+            "href" : "#",
+            "id" : "j1_16_anchor"
+          },
+          "state" : {
+            "loaded" : true,
+            "opened" : false,
+            "selected" : true,
+            "disabled" : false
+          },
+          "data" : {
+            "guid" : "55e7645b-33df-484c-952b-2dc6b0d86b8c",
+            "columnType" : "-1",
+            "lines" : [ {
+              "inputPath" : "*payload/result",
+              "outputPath" : "result",
+              "inpJsTree" : "#launching_arrow_jsTree_function",
+              "outpJsTree" : "#landing_arrow_jsTree",
+              "INPath" : "*payload/result",
+              "OUTPath" : "result",
+              "direction" : "out",
+              "op" : "copy",
+              "line" : 0,
+              "dashedLine" : false,
+              "inType" : "document",
+              "outType" : "document",
+              "inTypePath" : "document/document",
+              "outTypePath" : "document"
+            } ],
+            "transformers" : [ {
+              "op" : "copy",
+              "from" : "/*payload/result",
+              "to" : "/result",
+              "inTypePath" : "document/document",
+              "outTypePath" : "document",
+              "direction" : "out"
+            } ],
+            "fqn" : "packages/middleware/pub/server/mcp/initialize",
+            "serviceType" : "api",
+            "dropList" : [ ],
+            "createList" : [ ],
+            "initiateList" : [ ]
+          },
+          "children" : [ ],
+          "type" : "invoke"
+        } ],
+        "type" : "group"
+      }, {
         "id" : "j1_2",
         "text" : "CASE",
         "li_attr" : {
@@ -751,7 +825,7 @@
         },
         "state" : {
           "loaded" : true,
-          "opened" : true,
+          "opened" : false,
           "selected" : false,
           "disabled" : false
         },
@@ -877,7 +951,7 @@
         },
         "state" : {
           "loaded" : true,
-          "opened" : true,
+          "opened" : false,
           "selected" : false,
           "disabled" : false
         },
@@ -1097,12 +1171,11 @@
     "api_info" : {
       "title" : "",
       "description" : ""
-    },
-    "lockedByUser" : ""
+    }
   },
   "consumers" : "",
   "developers" : "developers",
   "enableServiceDocumentValidation" : false,
-  "created_on" : "1784322578264",
-  "modified_on" : 1784322578264
+  "created_on" : "1788283824129",
+  "modified_on" : 1788283824129
 }

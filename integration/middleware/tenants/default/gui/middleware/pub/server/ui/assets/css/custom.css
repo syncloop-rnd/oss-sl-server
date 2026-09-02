@@ -301,11 +301,22 @@ a.nav-link.active svg.mkrtt path {
     width: 4.5rem;
     height: 100vh;
     border-right: 1px solid #ccc;
+    padding-top: 14px;
+    padding-left: 0;
 }
 
 .bg-gray {
     background: #f9f9f9;
 }
+
+
+
+
+
+
+
+
+
 
 /* warning toast */
 .toast-warning{
@@ -1813,13 +1824,13 @@ a.nav-link.px-3 img {
 }
 
 
-.eka-side ul li a {
-    padding: 12px 10px !important;
-}
+/* .eka-side ul li a {
+    padding: 10px 10px !important;
+} */
 
-.eka-side ul li {
+/* .eka-side ul li {
     padding: 0px 0px;
-}
+} */
 
 
 /* api dataTable loder */
@@ -4452,19 +4463,7 @@ pre.code.code-jquery {
     background: #dbe1ea;
     margin: 4px 0;
 }
-#create-tenant-overlay{
-position: fixed;
-    inset: 0;
-    background: rgba(0, 0, 0, .45);
-    display: flex;
-    justify-content: center;
-    z-index: 99999;
-    align-items: flex-start;
-    animation: tenant-overlay-in .18s ease-out;
-}
-#create-tenant-overlay .create-tenant-modal{
-    animation: tenant-modal-in .22s ease-out;
-}
+
 @keyframes tenant-overlay-in{from{opacity:0}to{opacity:1}}
 @keyframes tenant-modal-in{from{opacity:0;transform:translateY(-12px) scale(.98)}to{opacity:1;transform:translateY(0) scale(1)}}
 .close-create-tenant{
@@ -4499,6 +4498,19 @@ position: fixed;
         transform: rotate(360deg);
     }
 }
+
+#create-tenant-overlay{
+position: fixed;
+    inset: 0;
+    background: rgba(0, 0, 0, .45);
+    display: flex;
+    justify-content: center;
+    z-index: 99999;
+    align-items: flex-start;
+    opacity: 0;
+    transition: opacity .3s ease;
+}
+
 .create-tenant-modal{
     width: 650px;
     background: #fff;
@@ -4506,7 +4518,19 @@ position: fixed;
     overflow: hidden;
     border-radius: 4.8px;
     padding: 27px 30px;
-        margin-top: 2%;
+        transform: translateY(-40px);
+    opacity: 0;
+    transition: all .3s ease;
+}
+
+/* Animation on page load */
+#create-tenant-overlay.show {
+    opacity: 1;
+}
+
+#create-tenant-overlay.show .create-tenant-modal {
+    transform: translateY(40px);
+    opacity: 1;
 }
 .ellipsis-text {
   width: 170px;
@@ -4598,6 +4622,38 @@ position: fixed;
     cursor: not-allowed;
     opacity: 1;
     box-shadow: none !important;
+}
+
+.tenant-copy-btn {
+    position: relative;
+}
+
+.tenant-copy-btn::after {
+    content: attr(data-tooltip);
+    position: absolute;
+    bottom: 100%;
+    left: 50%;
+    transform: translateX(-50%);
+    background: #333;
+    color: #fff;
+    padding: 4px 8px;
+    border-radius: 4px;
+    font-size: 12px;
+    white-space: nowrap;
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.2s;
+    margin-bottom: 5px;
+}
+
+/* ✅ Hover pr tooltip show ho */
+.tenant-copy-btn:hover::after {
+    opacity: 1;
+}
+
+/* ✅ Copied state mein bhi show ho */
+.tenant-copy-confirmed::after {
+    opacity: 1;
 }
 .close_primary img{
         width: 25px;

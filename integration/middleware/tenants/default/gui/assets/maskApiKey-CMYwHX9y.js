@@ -1,0 +1,1 @@
+function e(e){let t=e.trim();if(!t||t.length<=8)return`***`;let n=t.slice(0,4),r=t.slice(-4);return`${n}${`*`.repeat(Math.min(11,t.length-8))}${r}`}export{e as t};

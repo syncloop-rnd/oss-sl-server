@@ -1,6 +1,6 @@
 #FileLock
-#Fri Jul 17 00:22:19 MDT 2026
+#Thu Aug 13 19:21:00 MDT 2026
 hostName=MyProArt-PC.lan
-id=19f6ebd79799f873287eefca630a4dc71c23adb1eec
+id=19ffddbac9cc0bac0bd66908633e167f7fda757ddcb
 method=file
-server=10.224.1.30\:57780
+server=192.168.1.152\:64336

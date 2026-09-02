@@ -1,6 +1,6 @@
 (function () {
-    var SETTINGS_URL = "/middleware/pub/server/ui/workspace/web/setting.html?tab=profile";
-    var WORKSPACE_URL = "/middleware/pub/server/ui/workspace/web/workspace.html?utm_source=Workspace&utm_medium=workspace-page";
+    var SETTINGS_URL = "middleware/pub/server/ui/workspace/web/setting.html?tab=profile";
+    var WORKSPACE_URL = "middleware/pub/server/ui/workspace/web/workspace.html?utm_source=Workspace&utm_medium=workspace-page";
     var API_BASE = (window.ENV && window.ENV.API_BASE_URL) || window.location.origin;
     var tenantCreationEnabled = false;
     var HEADER_HTML = [
@@ -9,11 +9,11 @@
         '        <div class="tenant-switcher">',
         '            <button type="button" class="tenant-trigger" id="workspace-tenant-trigger" aria-expanded="false">',
         '                <span class="head_tenant" id="workspace-header-tenant"></span>',
-        '                <img class="tenant-trigger-arrow" src="/middleware/pub/server/ui/assets/img/white-dropdown.svg" alt="">',
+        '                <img class="tenant-trigger-arrow" src="middleware/pub/server/ui/assets/img/white-dropdown.svg" alt="">',
         '            </button>',
         '            <div class="tenant-modal" id="workspace-tenant-modal">',
         '                <div class="tenant-modal-header">',
-        '                    <h2>Available tenants</h2>',
+        '                    <h2>Available tenants</h2>',     
         '                </div>',
         // '                <div class="tenant-count" id="workspace-tenant-count">0 tenants</div>',
         '                <div class="tenant-feedback" id="workspace-tenant-feedback"></div>',
@@ -27,15 +27,15 @@
         '            <div class="profile-card" id="workspace-profile-card">',
         '                <div class="header">',
         '                    <div class="email" id="workspace-profile-email">user@syncloop</div>',
-        '                    <div class="close-btn" id="workspace-profile-close">',
+        '                    <div class="close-btn" id="workspace-profile-close">',        
         '                    </div>',
         '                </div>',
         '                <div class="avatar" id="workspace-profile-avatar">NK</div>',
         '                <div class="greeting" id="workspace-profile-greeting">Hi, User!</div>',
-        '                <div class="menu-item" data-profile-action="settings"><span class="icon"><img src="/middleware/pub/server/ui/assets/img/setting.svg"></span><span>Settings</span></div>',
-        '                <div class="menu-item" data-profile-action="workspace"><span class="icon"><img src="/middleware/pub/server/ui/assets/img/goto-workspace.svg"></span><span>Go to workspace</span></div>',
-        '                <div class="menu-item" data-profile-action="clear-cache"><span class="icon"><img src="/middleware/pub/server/ui/assets/img/clear_cache.svg"></span><span>Clear cache</span></div>',
-        '                <div class="menu-item" data-profile-action="logout"><span class="icon"><img src="/middleware/pub/server/ui/assets/img/Logout.svg"></span><span class="logout-color">Logout</span></div>',
+        '                <div class="menu-item" data-profile-action="settings"><span class="icon"><img src="middleware/pub/server/ui/assets/img/setting.svg"></span><span>Settings</span></div>',
+        '                <div class="menu-item" data-profile-action="workspace"><span class="icon"><img src="middleware/pub/server/ui/assets/img/goto-workspace.svg"></span><span>Go to workspace</span></div>',
+        '                <div class="menu-item" data-profile-action="clear-cache"><span class="icon"><img src="middleware/pub/server/ui/assets/img/clear_cache.svg"></span><span>Clear cache</span></div>',
+        '                <div class="menu-item" data-profile-action="logout"><span class="icon"><img src="middleware/pub/server/ui/assets/img/Logout.svg"></span><span class="logout-color">Logout</span></div>',
         '            </div>',
         '        </div>',
         '    </div>',
@@ -486,8 +486,8 @@ function copyTenantText(text, action) {
         var tenantDisplayName = getTenantDisplayName(tenant);
           var currentUserId = localStorage.getItem("loginUserId") || "";
         var tenantCreatedBy = tenant.createdBy || tenant.createdById || "";
-
-        var canEdit = currentUserId &&
+        
+        var canEdit = currentUserId && 
                     normalizeTenantName(tenantCreatedBy) === normalizeTenantName(currentUserId);
         return (
             '<button type="button" class="tenant-card' + (isActive ? ' active' : '') + '" data-tenant-index="' + index + '">' +
@@ -497,7 +497,7 @@ function copyTenantText(text, action) {
                     '<span class="tenant-icon">' +
                         escapeHtml(getTenantInitials(tenantDisplayName)) +
                     '</span>' +
-
+                   
 
                     '<span class="tenant-meta-group">' +
                         '<span class="tenant-name ellipsis-text">' +
@@ -506,7 +506,7 @@ function copyTenantText(text, action) {
                     '</span>' +
 
                 '</div>' +
-                  '<span class="tenants-action">' +
+                  '<span class="tenants-action">' + 
                         '<a href="#" class="tenant-copy-action" data-tenant-index="' + index + '" data-tooltip="Copy Tenant ID" aria-label="Copy tenant">' +
                             '<img src="./compliance/public/images/copy-icon.svg" alt="">' +
                         '</a>' +
@@ -519,12 +519,12 @@ function copyTenantText(text, action) {
                         // '</a>' +
                     '</span>' +
                 '<div class="tenant-members" style="display:flex;align-items:center;gap:5px;">' +
-
+                   
                     '<span>' +
                         escapeHtml(getTenantMemberLabel(tenant)) +
                     '</span>' +
 
-                    // '<img class="tenant-arrow" src="/middleware/pub/server/ui/assets/img/side-arrow.svg" alt="">' +
+                    // '<img class="tenant-arrow" src="middleware/pub/server/ui/assets/img/side-arrow.svg" alt="">' +
 
                 '</div>' +
 
@@ -557,7 +557,7 @@ function copyTenantText(text, action) {
     if (tenantCreationEnabled) {
         html.push(
             '<button type="button" id="create-tenant-btn" class="tenant-create-btnnew">' +
-                '<img src="/middleware/pub/server/ui/assets/img/Createtenants.svg" alt="">' +
+                '<img src="middleware/pub/server/ui/assets/img/Createtenants.svg" alt="">' +
                 '<span>Create tenant</span>' +
             '</button>'
         );
@@ -611,7 +611,7 @@ function copyTenantText(text, action) {
                 openCreateTenantModal(root);
             });
         }
-
+        
 }
 
 function openCreateTenantModal(root) {
@@ -633,8 +633,8 @@ function openCreateTenantModal(root) {
                         '<h4>Create tenant</h4>' +
                         '<h6> Create a new tenant to organize your projects, teams, and resources in one place.</h6>' +
                '</div>' +
-
-
+                
+                
                 '<button type="button" class="close_primary close-create-tenant" data-bs-dismiss="modal" aria-label="Close">' +
                 '<img src="./compliance/public/images/Close_round_duotone_line.svg" alt="">' +
                 '</button>' +
@@ -642,7 +642,7 @@ function openCreateTenantModal(root) {
 
             '<div class="create-tenant-body">' +
 
-                '<div class="tenant-row">' +
+                '<div class="tenant-row">' +                    
                     '<input id="tenant-name-input" type="text" class="primary_input" placeholder="Enter tenant name">' +
                 '</div>' +
 
@@ -662,13 +662,22 @@ function openCreateTenantModal(root) {
 
     document.body.appendChild(overlay);
 
+    document.body.appendChild(overlay);
+
+    requestAnimationFrame(function () {
+        overlay.classList.add("show");
+    });
+
 // Cancel Button
 var cancelBtn = overlay.querySelector(".cancel-create-tenant");
 if (cancelBtn) {
     cancelBtn.addEventListener("click", function (e) {
         e.preventDefault();
         e.stopPropagation();
-        overlay.remove();
+       setTimeout(function(){
+            overlay.remove();
+         },500)
+        overlay.classList.remove("show");
     });
 }
 
@@ -678,8 +687,11 @@ console.log(closeBtn);
 if (closeBtn) {
     closeBtn.addEventListener("click", function (e) {
         e.preventDefault();
-        e.stopPropagation();
-        overlay.remove();
+        e.stopPropagation();         
+         overlay.classList.remove("show");
+         setTimeout(function(){
+            overlay.remove();
+         },500)
     });
 }
 
@@ -700,7 +712,13 @@ overlay.addEventListener("click", function (e) {
     input.setAttribute("aria-invalid", "true");
     input.focus();
 }
+function closeModal() {
+    overlay.classList.remove("show");
 
+    setTimeout(function () {
+        overlay.remove();
+    }, 300); // CSS transition ke equal
+}
 function clearCreateTenantError() {
     var errorBox = overlay.querySelector("#create-tenant-error");
     var input = overlay.querySelector("#tenant-name-input");
@@ -816,23 +834,31 @@ function openEditTenantModal(root, tenant) {
         modal.setAttribute("tabindex", "-1");
         modal.setAttribute("aria-labelledby", "editTenantModalLabel");
         modal.innerHTML = '<div class="modal-dialog"><div class="modal-content" style="width: 700px">' +
-            '<div class="primary-header"><h4 id="editTenantModalLabel">Edit tenant</h4>' +
-            '<button type="button" class="close_primary" data-bs-dismiss="modal" aria-label="Close"><img src="./compliance/public/images/Close_round_duotone_line.svg" alt=""></button></div>' +
-            '<div class="modal-body"><div class="create-tenant-row primary_space"><label for="tenant-edit-name" class="primary_label">Tenant Name</label>' +
+            '<div class="primary-header">' +
+            '<div>' +
+            '<h4 id="editTenantModalLabel">Edit tenant</h4>' +
+            '<h6> Create a new tenant to organize your projects, teams, and resources in one place.</h6>' +
+            '</div>' +
+            '<button type="button" class="close_primary" data-bs-dismiss="modal" aria-label="Close" style="margin-top: -25px"><img src="./compliance/public/images/Close_round_duotone_line.svg" alt=""></button></div>' +
+            '<div class="modal-body"><div class="create-tenant-row primary_space">' +
             '<input class="primary_input" type="text" id="tenant-edit-name" placeholder="Enter name" value="">' +
             '<div id="tenant-edit-name-error" style="display:none;color:#ef4444;font-size:14px;">Tenant name cannot exceed 20 characters.</div></div>' +
-            '<div class="create-tenant-row primary_space"><label for="tenant-edit-id" class="primary_label">Tenant ID</label>' +
-            '<input class="primary_input" type="text" id="tenant-edit-id" value="" readonly></div></div>' +
+            '</div>' +
             '<div class="modal-footer"><button type="button" class="btn-gry2" data-bs-dismiss="modal">Cancel</button>' +
             '<button type="button" class="btn_primary" id="tenant-edit-save-btn">Save</button></div></div></div>';
         document.body.appendChild(modal);
     }
 
+    // Settings keeps this modal inside the Tenant tab. Move an existing modal
+    // to the body as well, otherwise a hidden tab can also hide the modal.
+    if (modal.parentNode !== document.body) {
+        document.body.appendChild(modal);
+    }
+
     var input = modal.querySelector("#tenant-edit-name");
-    var idInput = modal.querySelector("#tenant-edit-id");
     var submitButton = modal.querySelector("#tenant-edit-save-btn");
     input.value = currentName;
-    idInput.value = tenantId;
+    // Tenant ID is retained in `tenantId` for the save request but is not shown.
     input.addEventListener("input", function () {
         var invalid = input.value.trim().length > 20;
         submitButton.disabled = invalid;
@@ -899,7 +925,14 @@ function openEditTenantModal(root, tenant) {
             submitButton.textContent = "Save";
         });
     };
-    if (window.jQuery) window.jQuery(modal).modal("show");
+    // Settings loads Bootstrap 5 as well as the legacy Bootstrap 3 jQuery
+    // plugin. Prefer the Bootstrap 5 API so the exact #editTenantModal is
+    // consistently displayed on that page.
+    if (window.bootstrap && window.bootstrap.Modal) {
+        window.bootstrap.Modal.getOrCreateInstance(modal).show();
+    } else if (window.jQuery && window.jQuery.fn && typeof window.jQuery.fn.modal === "function") {
+        window.jQuery(modal).modal("show");
+    }
 }
     function switchTenant(root, tenant, button) {
         var authToken = localStorage.getItem("AuthToken") || "";
@@ -1240,6 +1273,14 @@ if (newRoot) {
         window.setTimeout(mountWorkspaceProfileHeader, 0);
         window.setTimeout(mountWorkspaceProfileHeader, 200);
     }
+
+    document.addEventListener("syncloop:tenant-renamed", function (event) {
+        var root = getExistingRoot();
+        var detail = event.detail || {};
+        if (!root) return;
+        if (detail.active) updateHeaderTenantName(root, detail.displayName);
+        loadTenants(root);
+    });
 
     if (window.jQuery) {
         window.jQuery(scheduleMounts);

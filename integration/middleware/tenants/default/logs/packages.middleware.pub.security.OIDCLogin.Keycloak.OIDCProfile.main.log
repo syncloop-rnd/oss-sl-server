@@ -1,0 +1,12 @@
+2026-08-13 18:11:19,390 INFO c.e.m.t.Tenant [syncloop-runtime-3] 04d338c2-efe3-4b4f-9612-b3396ec626bf    packages.middleware.pub.security.OIDCLogin.Keycloak.OIDCProfile.main    JWT endpoint
+2026-08-13 18:11:19,390 INFO c.e.m.a.Security [syncloop-runtime-3] /tenant/default/jwt/keycloak/login
+2026-08-13 18:11:19,390 INFO c.e.m.t.Tenant [syncloop-runtime-3] 04d338c2-efe3-4b4f-9612-b3396ec626bf    packages.middleware.pub.security.OIDCLogin.Keycloak.OIDCProfile.main    /tenant/default/jwt/keycloak/login
+2026-08-13 18:11:19,862 INFO c.e.m.a.p.AuthConfigFactory [syncloop-runtime-3] Re-direct URI:----------------------
+2026-08-13 18:11:19,862 INFO c.e.m.a.p.AuthConfigFactory [syncloop-runtime-3] http://localhost:8080/callback/tenant/default/okta/login?client_name=OidcClient
+2026-08-13 18:11:19,862 INFO c.e.m.a.Security [syncloop-runtime-3] JWT endpoint
+2026-08-13 18:13:32,125 INFO c.e.m.t.Tenant [syncloop-runtime-3] 15fabfbb-f3dd-4f3c-9529-7a0de38ce49c    packages.middleware.pub.security.OIDCLogin.Keycloak.OIDCProfile.main    JWT endpoint
+2026-08-13 18:13:32,125 INFO c.e.m.a.Security [syncloop-runtime-3] /tenant/default/jwt/keycloak/login
+2026-08-13 18:13:32,125 INFO c.e.m.t.Tenant [syncloop-runtime-3] 15fabfbb-f3dd-4f3c-9529-7a0de38ce49c    packages.middleware.pub.security.OIDCLogin.Keycloak.OIDCProfile.main    /tenant/default/jwt/keycloak/login
+2026-08-13 18:13:32,478 INFO c.e.m.a.p.AuthConfigFactory [syncloop-runtime-3] Re-direct URI:----------------------
+2026-08-13 18:13:32,478 INFO c.e.m.a.p.AuthConfigFactory [syncloop-runtime-3] http://localhost:8080/callback/tenant/default/okta/login?client_name=OidcClient
+2026-08-13 18:13:32,478 INFO c.e.m.a.Security [syncloop-runtime-3] JWT endpoint
