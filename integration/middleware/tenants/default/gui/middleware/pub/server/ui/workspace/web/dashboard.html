@@ -212,19 +212,18 @@
 <script src="middleware/pub/server/ui/javascript/workspace-profile-header.js?v=workspace-profile-v2"></script>
 <script>
 	(function () {
-		var targetOnSuccess = "/middleware/pub/server/ui/workspace/web/dashboard-v2.html";
-		var targetOnError = "/middleware/pub/server/ui/workspace/web/dashboard-v1.html";
-
-		$.ajax({
-			type: "GET",
-			url: "/packages.Awareness.dashboard.services.api.initialize.main",
-			success: function () {
-				window.location.replace(targetOnSuccess);
-			},
-			error: function () {
-				window.location.replace(targetOnError);
-			}
-		});
+		var workspace_dashboard = "/middleware/pub/server/ui/workspace/web/dashboard-v1.html";
+	var awareness_dashboard = "/middleware/pub/server/ui/workspace/web/dashboard-v2.html";
+    
+    
+    asyncRestRequest("/files/packages/Awareness/dashboard/services/api/initialize.api", null, "GET", 
+        function (response) {
+            window.location.replace(awareness_dashboard);
+        }, 
+        function (error) {
+            window.location.replace(workspace_dashboard);
+        }
+    );
 	})();
 </script>
 </body>
