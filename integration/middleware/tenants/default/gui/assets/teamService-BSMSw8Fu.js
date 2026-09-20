@@ -1,0 +1,1 @@
+import{h as e}from"./teamService-pDE8foFg.js";export{e as fetchTeamFormApps};

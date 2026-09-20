@@ -627,6 +627,55 @@ function asyncRestRequest(url, payload, method, callBack, errorCallback) {
     })
 }
 
+function createDefaultTenantResources(tenantName) {
+    var name = String(tenantName || "").trim();
+    var base = (window.ENV && window.ENV.API_BASE_URL) || window.location.origin;
+    var token = localStorage.getItem("AuthToken") || "";
+    var requestTenant = String(localStorage.getItem("tenant") ||
+        localStorage.getItem("loginTenant") || "default").trim();
+
+    if (!name) {
+        return Promise.reject(new Error("Tenant name is required."));
+    }
+
+    function getDefaultTenantResourcesError(payload) {
+        if (payload && typeof payload.error === "string" && payload.error.trim()) return payload.error.trim();
+        if (payload && typeof payload.message === "string" && payload.message.trim()) return payload.message.trim();
+        if (payload && payload.error && typeof payload.error === "object") {
+            return payload.error.error_detail || payload.error.message || payload.error.detail;
+        }
+        return null;
+    }
+
+    var url = String(base).replace(/\/+$/, "") + "/tenant/" + encodeURIComponent(requestTenant) +
+        "/packages.Awareness.dashboard.services.api.createDefaultTenantResources.main";
+
+    return fetch(url, {
+        method: "POST",
+        headers: {
+            "Authorization": "Bearer " + token,
+            "Content-Type": "application/json",
+            "tenant": requestTenant
+        },
+        body: JSON.stringify({ tenantName: name })
+    }).then(function (response) {
+        return response.json().then(function (payload) {
+            if (!response.ok || !payload || payload.status !== true) {
+                throw new Error(getDefaultTenantResourcesError(payload) ||
+                    "Default tenant resources could not be created.");
+            }
+            var welcomeAgentId = String(payload.welcomeAgentId || "").trim();
+            if (!welcomeAgentId) {
+                throw new Error("Syncloop Assistant was created without returning its agent id.");
+            }
+            localStorage.setItem("welcome_agent_creation_status", "true");
+            localStorage.setItem("welcome_agent_id", welcomeAgentId);
+            localStorage.setItem("welcome_agent_tenant_id", name);
+            return payload;
+        });
+    });
+}
+
 function asyncRestRequestV2(url, payload, method, callBack, errorCallback) {
     var contentTypeValue = 'application/json';
 
@@ -4886,7 +4935,7 @@ function createNewTenant(ref) {
 
 function createAutoTenant() {
     let url = "/public/createNewTenant";
-
+    debugger;
     asyncRestRequest(
         url,
         null,
@@ -4895,6 +4944,8 @@ function createAutoTenant() {
             if (response.status === true) {
                 // location.href = "middleware/pub/server/ui/workspace/web/dashboard.html";
                 location.href = "/files/gui/middleware/oidc.html";
+                localStorage.setItem("is_new_tenant", true);
+                debugger;
             } else {
 
                 swal({
@@ -6530,7 +6581,6 @@ function openJWTPopup() {
         jwt_expiration_in = 8;
     });*/
 
-    jwt_expiration_in = 8;
     if (!$("#jwt_token_key").val()) {
         $("#jwt_token_key").val(tokenKey);
     }
@@ -6573,6 +6623,22 @@ function openJWTPopupTime() {
         return ;
     }
     openJWTPopup();
+}
+
+function getOneTimeToken() {
+    getLoggedInUser();
+
+    var userId = USER_PROFILE.userId || localStorage.getItem("loginUserId") || "";
+    var tokenKey = "OTSU-" + crypto.randomUUID();
+
+    return $.ajax({
+        url: resolveUrl("/jwt?expiration_time=8&userID=" + encodeURIComponent(userId) +
+            "&token_key=" + encodeURIComponent(tokenKey)),
+        type: "GET",
+        headers: {
+            "Authorization": `Bearer ${localStorage.getItem("AuthToken")}`
+        }
+    });
 }
 
 function focusOnElement(file, shouldOpen) {

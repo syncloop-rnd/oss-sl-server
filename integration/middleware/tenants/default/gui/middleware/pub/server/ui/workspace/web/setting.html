@@ -1316,32 +1316,26 @@
                                                     </div>
                                                 </div>
                                             </div>
-                                            <div class="modal nw_popup fade" id="createTenantModal" tabindex="-1"
+                                            <div class="modal nw_popup fade tenant-create-react-modal" id="createTenantModal" tabindex="-1"
                                                 aria-labelledby="createTenantModalLabel" aria-hidden="true">
                                                 <div class="modal-dialog">
-                                                    <div class="modal-content" style="width: 700px">
-                                                        <div class="primary-header">
-                                                            <h4 id="createTenantModalLabel">Create
-                                                                tenant</h5>
-                                                            <button type="button" class="close_primary"
-                                                                data-bs-dismiss="modal" aria-label="Close">
+                                                    <div class="modal-content tenant-create-react-panel">
+                                                        <div class="tenant-create-react-header">
+                                                            <h4 id="createTenantModalLabel">Create tenant</h4>
+                                                            <p>Create a new tenant to organize your projects, teams, and resources in one place.</p>
+                                                            <button type="button" class="tenant-create-react-close close_primary"
+                                                                data-bs-dismiss="modal" aria-label="Close create tenant modal">
                                                                 <img src="./compliance/public/images/Close_round_duotone_line.svg" alt="">
                                                             </button>
                                                         </div>
                                                         <div class="modal-body">
-                                                            <div class="create-tenant-row primary_space">
-                                                                <label for="create-tenant-name" class="primary_label">
-                                                                    Tenant Name
-                                                                    <!-- <img src="middleware/pub/server/ui/assets/img/info-icon.svg"
-                                                                        alt=""> -->
-                                                                </label>
+                                                            <label for="create-tenant-name" class="visually-hidden">Tenant name</label>
                                                                 <input type="text" id="create-tenant-name"
-                                                                    class="primary_input"
-         placeholder="Enter name" value="">
-     <div id="create-tenant-name-error" class="tenant-name-error" role="alert">Tenant name cannot exceed 20 characters.</div>
-                                                            </div>
+                                                                    class="tenant-create-react-input"
+                                                                    placeholder="Enter tenant name" value="">
+                                                            <div id="create-tenant-name-error" class="tenant-create-react-error" role="alert">Tenant name cannot exceed 20 characters.</div>
                                                         </div>
-                                                        <div class="modal-footer">
+                                                        <div class="modal-footer tenant-create-react-actions">
                                                             <button class="btn-gry2"
                                                                 data-bs-dismiss="modal" aria-label="Close">Cancel</button>
                                                             <button type="button" class="btn_primary"
@@ -1417,7 +1411,7 @@
                                                         <div class="primary-header">
                                                            <div>
                                                                 <h4 id="editTenantModalLabel">Edit tenant</h4>
-                                                                <h6> Create a new tenant to organize your projects, teams, and resources in one place.</h6>
+                                                                <h6> Update the tenant display name for your workspace.</h6>
                                                             </div>
                                                             <button type="button" class="close_primary" data-bs-dismiss="modal" aria-label="Close" style="margin-top: -25px;">
                                                                <img src="./compliance/public/images/Close_round_duotone_line.svg" alt="">
@@ -3914,7 +3908,16 @@
             return;
         }
 
-        ref.attr("disabled", "disabled").text("Creating...");
+        const modal = $("#createTenantModal");
+        const modalActions = modal.find(".modal-footer button, .close_primary");
+
+        function setCreatingTenant(busy) {
+            modalActions.prop("disabled", busy);
+            $("#create-tenant-name").prop("disabled", busy);
+            ref.text(busy ? "Creating..." : "Create tenant");
+        }
+
+        setCreatingTenant(true);
 
         asyncRestRequest("/packages.middleware.pub.tenant.createNewTenantForCurrentUser.main",
             JSON.stringify({
@@ -3922,20 +3925,40 @@
             }),
             "POST",
             function (response) {
-                ref.removeAttr("disabled").text("Create");
-
                 if (response && response.status === true) {
-                    $("#createTenantModal").modal('toggle');
-                    swal({
-                        title: "Tenant created successfully.",
-                        text: "Your new tenant has been created successfully. You’ll now be redirected to the tenant selection screen to open your new workspace.",
-                        type: "success",
-                        customClass: "tenant-success-popup",
-                        confirmButtonColor: "#2C61F5"
-                    }, function () {
-                        redirectToTenantSelectionAfterCreate(response.tenantName || tenantName || "");
+                    if (!response.tenantName) {
+                        setCreatingTenant(false);
+                        swal({
+                            title: "Tenant creation response was incomplete",
+                            text: "The tenant was created, but its internal tenant id was not returned.",
+                            type: "error",
+                            confirmButtonColor: "#f2533e"
+                        });
+                        return;
+                    }
+                    createDefaultTenantResources(response.tenantName).then(function () {
+                        setCreatingTenant(false);
+                        $("#createTenantModal").modal('toggle');
+                        swal({
+                            title: "Tenant created successfully.",
+                            text: "Your new tenant has been created successfully. You’ll now be redirected to the tenant selection screen to open your new workspace.",
+                            type: "success",
+                            customClass: "tenant-success-popup",
+                            confirmButtonColor: "#2C61F5"
+                        }, function () {
+                            redirectToTenantSelectionAfterCreate(response.tenantName || tenantName || "");
+                        });
+                    }).catch(function (error) {
+                        setCreatingTenant(false);
+                        swal({
+                            title: "Default resources could not be created",
+                            text: error.message || "The tenant was created, but its default agents and LLMs were not created.",
+                            type: "error",
+                            confirmButtonColor: "#f2533e"
+                        });
                     });
                 } else {
+                    setCreatingTenant(false);
                     swal({
                         title: "Tenant creation failed",
                         text: response && (response.message || response.error) ? (response.message || response.error) : "Please try again.",
@@ -3945,7 +3968,7 @@
                 }
             },
             function (error) {
-                ref.removeAttr("disabled").text("Create");
+                setCreatingTenant(false);
                 swal({
                     title: "Tenant creation failed",
                     text: error && error.error ? error.error : "Please try again.",

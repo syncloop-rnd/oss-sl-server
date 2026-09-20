@@ -326,9 +326,12 @@
 								</div>
 								<div class="avatar" id="workspace-profile-avatar">RU</div>
 								<div class="greeting" id="workspace-profile-greeting">Hi, User!</div>
-								<div class="menu-item" data-profile-action="settings"><span class="icon"><img src="/middleware/pub/server/ui/assets/img/setting.svg"></span><span>Settings</span></div>
 								<div class="menu-item" data-profile-action="workspace"><span class="icon"><img src="/middleware/pub/server/ui/assets/img/goto-workspace.svg"></span><span>Go to workspace</span></div>
+
+								
+								
 								<div class="menu-item" data-profile-action="clear-cache"><span class="icon"><img src="/middleware/pub/server/ui/assets/img/clear_cache.svg"></span><span>Clear cache</span></div>
+								<div class="menu-item" data-profile-action="settings"><span class="icon"><img src="/middleware/pub/server/ui/assets/img/setting.svg"></span><span>Settings</span></div>
 								<div class="menu-item" data-profile-action="logout"><span class="icon"><img src="/middleware/pub/server/ui/assets/img/Logout.svg"></span><span class="logout-color">Logout</span></div>
 							</div>
 						</div>
@@ -504,7 +507,7 @@
 					<div class="crte">
 						<!-- <h3>New</h3> -->
 						<div class="dash_options">
-							<h4>Welcome back to Syncloop</h4>
+							<h4>Welcome back to Syncloop 11</h4>
 							<p>Create new project to start from scratch. Open existing projects from the folders.</p>
 						</div>
 
@@ -751,24 +754,24 @@
 										<div role="tabpanel">
 											<!-- Nav tabs -->
 											<ul class="nav nav-tabs nav-justified nav-tabs-dropdown" role="tablist">
-												<li role="presentation"><a class="active" href="#file" aria-controls="file" role="tab" data-bs-toggle="tab">File</a></li>
-												<li role="presentation"><a href="#link" aria-controls="link" role="tab" data-bs-toggle="tab">Link</a></li>
+														<li class="nav-item" role="presentation"><a class="nav-link active" href="#swagger-file" aria-controls="swagger-file" role="tab" data-bs-toggle="tab">File</a></li>
+														<li class="nav-item" role="presentation"><a class="nav-link" href="#swagger-link" aria-controls="swagger-link" role="tab" data-bs-toggle="tab">Link</a></li>
 											</ul>
 											<!-- Tab panes -->
 											<div class="tab-content">
-												<div role="tabpanel" class="tab-pane active" id="file">
+								<div role="tabpanel" class="tab-pane active" id="swagger-file">
 													<form>
-														<label for="file" class="br_dropzone">
+										<label for="swagger-file-input" class="br_dropzone">
 															<img src="/middleware/pub/server/ui/assets/img/import_icon.svg">
 															<button type="button" class="choose_file_btn btn btn-gry">Choose file</button>
-															<input type="file" id="file" name="file" onchange="evaluateFile(this)" required>
+										<input type="file" id="swagger-file-input" name="file" onchange="evaluateFile(this)" required>
 															<input type="text" id="fileName" name="fileName" placeholder="Drag and drop your files here or browse to upload" readonly>
 														</label>
 
 															<input type="reset" name="button" id="resetBtn" style="display: none">
 													</form>
 												</div>
-												<div role="tabpanel" class="tab-pane" id="link">
+								<div role="tabpanel" class="tab-pane" id="swagger-link">
 													<div class="form-group">
 														<label>Add your link here </label>
 														<input class="form-control" type="text" id="json_file_link" placeholder="e.g. https://petstore3.swagger.io/api/v3/openapi.json" value="">
@@ -1303,7 +1306,7 @@ let copyText3 = document.querySelector(".copy-text3");
 		}
 
 		let isPkgExists = false;
-		for (var i = 0; i < packages.children.length; i++) {
+		for (var i = 0; i < (packages.children || []).length; i++) {
 			if (packages.children[i].text == $("#package_name").val().trim()) {
 				isPkgExists = true;
 				break;

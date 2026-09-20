@@ -856,13 +856,26 @@ $(function() {
 
 			asyncRestRequest("/build?" + qp, content, "POST",
 					function(response) {
-						$("#download_package_process").hide();
-						$("#download_package_box").removeAttr("style");
-
 						if (response.status == "200") {
-							window.open(window.ENV.API_BASE_URL + "/tenant/" + localStorage.getItem("tenant") + response.url
-									+ "?access_token=" + encodeURIComponent(localStorage.getItem("AuthToken")), '_blank');
+							getOneTimeToken().done(function(token) {
+								var downloadUrl = window.ENV.API_BASE_URL + "/tenant/" + localStorage.getItem("tenant") + response.url
+										+ "?access_token=" + encodeURIComponent(token);
+								window.open(downloadUrl, '_blank');
+								$("#download_package_process").hide();
+								$("#download_package_box").removeAttr("style");
+							}).fail(function(xhr, status, error) {
+								$("#download_package_process").hide();
+								$("#download_package_box").removeAttr("style");
+								swal({
+									title: "Error",
+									text: "Unable to create a download token. Please try again later.",
+									type: "error",
+									confirmButtonColor: "#f2533e"
+								});
+							});
 						} else {
+							$("#download_package_process").hide();
+							$("#download_package_box").removeAttr("style");
 							swal({
 									title: "Error",
 									text: "Unable to download packages. Please try again later.",
@@ -873,7 +886,7 @@ $(function() {
 						}
 					},
 					function(errormessage) {
-						$("#download_package_process").show();
+						$("#download_package_process").hide();
 						$("#download_package_box").removeAttr("style");
 						swal({
 							title: "Error",

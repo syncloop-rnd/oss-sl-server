@@ -31,10 +31,11 @@
         '                    </div>',
         '                </div>',
         '                <div class="avatar" id="workspace-profile-avatar">NK</div>',
-        '                <div class="greeting" id="workspace-profile-greeting">Hi, User!</div>',
+        '                <div class="greeting" id="workspace-profile-greeting">Hi, User!</div>',        
+        '                <div class="menu-item" data-profile-action="workspace"><span class="icon"><img src="middleware/pub/server/ui/assets/img/goto-workspace.svg"></span><span>Go to Workspace</span></div>',
+        '                <a class="menu-item" href="https://www.udemy.com/course/syncloop-ai/?referralCode=FE8BC4DE6B60DD9509C7" target="_blank" rel="noopener noreferrer" ><span class="icon"><img src="middleware/pub/server/ui/assets/img/watchvideos.svg"></span><span>Watch Tutorials</span></a>',
+        '                <div class="menu-item" data-profile-action="clear-cache"><span class="icon"><img src="middleware/pub/server/ui/assets/img/clear_cache.svg"></span><span>Clear Cache</span></div>',
         '                <div class="menu-item" data-profile-action="settings"><span class="icon"><img src="middleware/pub/server/ui/assets/img/setting.svg"></span><span>Settings</span></div>',
-        '                <div class="menu-item" data-profile-action="workspace"><span class="icon"><img src="middleware/pub/server/ui/assets/img/goto-workspace.svg"></span><span>Go to workspace</span></div>',
-        '                <div class="menu-item" data-profile-action="clear-cache"><span class="icon"><img src="middleware/pub/server/ui/assets/img/clear_cache.svg"></span><span>Clear cache</span></div>',
         '                <div class="menu-item" data-profile-action="logout"><span class="icon"><img src="middleware/pub/server/ui/assets/img/Logout.svg"></span><span class="logout-color">Logout</span></div>',
         '            </div>',
         '        </div>',
@@ -626,32 +627,25 @@ function openCreateTenantModal(root) {
     overlay.id = "create-tenant-overlay";
 
     overlay.innerHTML =
-        '<div class="create-tenant-modal">' +
+        '<div class="create-tenant-modal tenant-create-react-panel">' +
 
-            '<div class="primary-header">' +
-               '<div>' +
-                        '<h4>Create tenant</h4>' +
-                        '<h6> Create a new tenant to organize your projects, teams, and resources in one place.</h6>' +
-               '</div>' +
-                
-                
-                '<button type="button" class="close_primary close-create-tenant" data-bs-dismiss="modal" aria-label="Close">' +
+            '<div class="tenant-create-react-header">' +
+                '<h4>Create tenant</h4>' +
+                '<p>Create a new tenant to organize your projects, teams, and resources in one place.</p>' +
+                '<button type="button" class="tenant-create-react-close close-create-tenant" aria-label="Close create tenant modal">' +
                 '<img src="./compliance/public/images/Close_round_duotone_line.svg" alt="">' +
                 '</button>' +
             '</div>' +
 
             '<div class="create-tenant-body">' +
+                '<label class="visually-hidden" for="tenant-name-input">Tenant name</label>' +
+                '<input id="tenant-name-input" type="text" class="tenant-create-react-input" placeholder="Enter tenant name">' +
 
-                '<div class="tenant-row">' +                    
-                    '<input id="tenant-name-input" type="text" class="primary_input" placeholder="Enter tenant name">' +
-                '</div>' +
-
-                '<div id="create-tenant-error" style="display:none;margin:-18px 0 20px 0px;color:#ff1f1f;font-size:14px;align-items:center;gap:10px;">' +
-                    '<span style="display:inline-flex;width:18px;height:18px;border:2px solid #ff1f1f;border-radius:50%;align-items:center;justify-content:center;font-size:12px;font-weight:700;line-height:1;">!</span>' +
+                '<div id="create-tenant-error" class="tenant-create-react-error" role="alert">' +
                     '<span class="create-tenant-error-text"></span>' +
                 '</div>' +
 
-                '<div class="tenant-popupbtn">' +
+                '<div class="tenant-create-react-actions">' +
                    '<button class="cancel-create-tenant btn-gry2">Cancel</button>' +
                     '<button id="create-tenant-submit" class="btn_primary">Create tenant</button>' +
                 '</div>' +
@@ -662,62 +656,77 @@ function openCreateTenantModal(root) {
 
     document.body.appendChild(overlay);
 
-    document.body.appendChild(overlay);
-
     requestAnimationFrame(function () {
         overlay.classList.add("show");
     });
 
-// Cancel Button
-var cancelBtn = overlay.querySelector(".cancel-create-tenant");
-if (cancelBtn) {
-    cancelBtn.addEventListener("click", function (e) {
-        e.preventDefault();
-        e.stopPropagation();
-       setTimeout(function(){
-            overlay.remove();
-         },500)
-        overlay.classList.remove("show");
-    });
-}
+    var cancelBtn = overlay.querySelector(".cancel-create-tenant");
+    var creatingTenant = false;
+    var closingTenantModal = false;
 
-// Close button (agar future me add karo)
+    function closeCreateTenantModal() {
+        if (creatingTenant || closingTenantModal) {
+            return;
+        }
+
+        closingTenantModal = true;
+        overlay.classList.remove("show");
+        window.setTimeout(function () {
+            overlay.remove();
+        }, 220);
+    }
+
+    if (cancelBtn) {
+        cancelBtn.addEventListener("click", function (e) {
+            e.preventDefault();
+            e.stopPropagation();
+            closeCreateTenantModal();
+        });
+    }
+
 var closeBtn = overlay.querySelector(".close-create-tenant");
-console.log(closeBtn);
 if (closeBtn) {
     closeBtn.addEventListener("click", function (e) {
         e.preventDefault();
-        e.stopPropagation();         
-         overlay.classList.remove("show");
-         setTimeout(function(){
-            overlay.remove();
-         },500)
+        e.stopPropagation();
+        closeCreateTenantModal();
     });
 }
 
 // Click outside modal
 overlay.addEventListener("click", function (e) {
     if (e.target === overlay) {
-        overlay.remove();
+        closeCreateTenantModal();
     }
 });
 
-    function showCreateTenantError(message) {
+function setCreateTenantBusy(busy) {
+    creatingTenant = busy;
+    overlay.querySelector("#tenant-name-input").disabled = busy;
+    overlay.querySelector("#create-tenant-submit").disabled = busy;
+    cancelBtn.disabled = busy;
+    closeBtn.disabled = busy;
+    overlay.querySelector("#create-tenant-submit").textContent = busy ? "Creating..." : "Create tenant";
+}
+
+function getTenantResponseError(payload, fallback) {
+    if (payload && typeof payload.error === "string" && payload.error.trim()) return payload.error.trim();
+    if (payload && typeof payload.message === "string" && payload.message.trim()) return payload.message.trim();
+    if (payload && payload.error && typeof payload.error === "object") {
+        return payload.error.error_detail || payload.error.message || payload.error.detail || fallback;
+    }
+    return fallback;
+}
+
+function showCreateTenantError(message) {
     var errorBox = overlay.querySelector("#create-tenant-error");
     var errorText = overlay.querySelector(".create-tenant-error-text");
     var input = overlay.querySelector("#tenant-name-input");
 
     errorText.textContent = message || "Unable to create tenant. Please try again.";
-    errorBox.style.display = "flex";
+    errorBox.style.display = "block";
     input.setAttribute("aria-invalid", "true");
     input.focus();
-}
-function closeModal() {
-    overlay.classList.remove("show");
-
-    setTimeout(function () {
-        overlay.remove();
-    }, 300); // CSS transition ke equal
 }
 function clearCreateTenantError() {
     var errorBox = overlay.querySelector("#create-tenant-error");
@@ -744,10 +753,9 @@ overlay.querySelector("#tenant-name-input").addEventListener("input", validateCr
 
 overlay.querySelector("#create-tenant-submit").onclick = function () {
     var input = overlay.querySelector("#tenant-name-input");
-    var submitButton = overlay.querySelector("#create-tenant-submit");
     var tenantName = input.value.trim();
     var authToken = localStorage.getItem("AuthToken") || "";
-    var currentTenant = localStorage.getItem("loginTenant") || getStoredTenant() || "default";
+    var currentTenant = getStoredTenant();
 
     clearCreateTenantError();
 
@@ -758,8 +766,7 @@ overlay.querySelector("#create-tenant-submit").onclick = function () {
         return;
     }
 
-    submitButton.disabled = true;
-    submitButton.textContent = "Creating...";
+    setCreateTenantBusy(true);
 
     window.fetch(API_BASE + "/tenant/" + encodeURIComponent(currentTenant) + "/packages.middleware.pub.tenant.createNewTenantForCurrentUser.main", {
         method: "POST",
@@ -787,30 +794,38 @@ overlay.querySelector("#create-tenant-submit").onclick = function () {
         }
 
         if (!createdSuccessfully) {
-            showCreateTenantError((payload && (payload.error || payload.message)) || "Unable to create tenant. Please try again.");
+            showCreateTenantError(getTenantResponseError(payload, "Unable to create tenant. Please try again."));
             return;
         }
 
-        overlay.remove();
+        if (!payload.tenantName) {
+            showCreateTenantError("Tenant was created but its internal tenant id was not returned.");
+            return;
+        }
 
-        swal({
-            title: 'Tenant "' + tenantName + '" has been successfully created',
-            text: "You are still using your current tenant.",
-            type: "success",
-            confirmButtonText: "OK",
-            confirmButtonColor: "#2C61F5"
-        }, function () {
-            loadTenants(root);
-            if (typeof loadTenantTable === "function") {
-                loadTenantTable();
-            }
+        return createDefaultTenantResources(payload.tenantName).then(function () {
+            overlay.remove();
+
+            swal({
+                title: 'Tenant "' + tenantName + '" has been successfully created',
+                text: "You are still using your current tenant.",
+                type: "success",
+                confirmButtonText: "OK",
+                confirmButtonColor: "#2C61F5"
+            }, function () {
+                loadTenants(root);
+                if (typeof loadTenantTable === "function") {
+                    loadTenantTable();
+                }
+            });
+        }).catch(function (error) {
+            showCreateTenantError(error.message || "Tenant was created, but default resources could not be created.");
         });
     }).catch(function () {
         showCreateTenantError("Unable to create tenant. Please try again.");
     }).finally(function () {
         if (document.body.contains(overlay)) {
-            submitButton.disabled = false;
-            submitButton.textContent = "Create";
+            setCreateTenantBusy(false);
         }
     });
 };
@@ -837,7 +852,7 @@ function openEditTenantModal(root, tenant) {
             '<div class="primary-header">' +
             '<div>' +
             '<h4 id="editTenantModalLabel">Edit tenant</h4>' +
-            '<h6> Create a new tenant to organize your projects, teams, and resources in one place.</h6>' +
+            '<h6> Update the tenant display name for your workspace.</h6>' +
             '</div>' +
             '<button type="button" class="close_primary" data-bs-dismiss="modal" aria-label="Close" style="margin-top: -25px"><img src="./compliance/public/images/Close_round_duotone_line.svg" alt=""></button></div>' +
             '<div class="modal-body"><div class="create-tenant-row primary_space">' +
@@ -901,7 +916,7 @@ function openEditTenantModal(root, tenant) {
             return response.json();
         }).then(function (payload) {
             if (payload && payload.tenantNameAvailable === false) throw new Error("This name is already in use. Please try another tenant name.");
-            if (!payload || payload.status !== true) throw new Error((payload && (payload.error || payload.message)) || "Unable to update tenant. Please try again.");
+            if (!payload || payload.status !== true) throw new Error(getTenantResponseError(payload, "Unable to update tenant. Please try again."));
 
             if (window.jQuery) window.jQuery(modal).modal("hide");
             if (typeof loadTenantTable === "function") loadTenantTable();

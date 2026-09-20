@@ -619,6 +619,23 @@ input[type="search"] {
   font-family: Figtree, sans-serif !important;
 }
 
+#workspace-profile-card a.menu-item,
+#workspace-profile-card a.menu-item:visited,
+#workspace-profile-card a.menu-item:hover,
+#workspace-profile-card a.menu-item:focus {
+  color: #202020;
+  text-decoration: none;
+  opacity: 1;
+}
+
+#workspace-profile-card .menu-item:hover {
+  background: #f9f9f9;
+}
+
+#workspace-profile-card [data-profile-action="logout"]:hover {
+  background: #fff2f2;
+}
+
 .menu-item:hover{
   background:#f7f7f7;
 }
@@ -3493,7 +3510,23 @@ button.btn.btn-red {
     float: left;
     margin-left: 0;
 }
-
+.create_agent{
+   background-color: #fff;
+    border-radius: 8px;
+    padding: 13px 20px 12px;
+    border: none;
+    display: flex;
+    gap: 10px;
+    align-items: center;
+    justify-content: center;
+    color: #2C61F5;
+    font-size: 14px;
+    font-weight: 600;
+    letter-spacing: .2px;
+}
+.create_agent img{
+    margin-top: -3px;
+}
 a.rf_btn {
     background: #fff;
     border: solid 1px;
@@ -4716,6 +4749,161 @@ position: fixed;
     justify-content: end;
 }
 
+.tenant-create-react-panel {
+    position: relative;
+    width: 100%;
+    max-width: 650px;
+    padding: 28px;
+    border: 0;
+    border-radius: 4.8px;
+    background: #fff;
+    box-shadow: 0 18px 42px rgba(0, 0, 0, 0.18);
+    font-family: Inter, sans-serif;
+}
+
+.tenant-create-react-header {
+    position: relative;
+}
+
+.tenant-create-react-header h4 {
+    margin: 0;
+    color: #101010;
+    font-size: 16px;
+    font-weight: 600;
+}
+
+.tenant-create-react-header p {
+    max-width: 520px;
+    margin: 8px 0 0;
+    color: #808080;
+    font-size: 14px;
+    line-height: 1.35;
+}
+
+.tenant-create-react-close {
+    position: absolute;
+    top: 0;
+    right: 0;
+    padding: 0;
+    border: 0;
+    background: transparent;
+    border-radius: .5rem;
+}
+
+.tenant-create-react-close img {
+    width: 25px;
+}
+
+.tenant-create-react-input {
+    width: 100%;
+    height: 48px;
+    padding: 0 16px;
+    border: 1px solid #d4d4d8 !important;
+    border-radius: 4px;
+    color: #202124;
+    font-size: 16px;
+    outline: none;
+}
+.tenant-create-react-close:hover{
+    background-color: #f3f4f6;
+
+}
+
+.tenant-create-react-input::placeholder {
+    color: #c2c8d1;
+}
+
+.tenant-create-react-input[aria-invalid="true"] {
+    border-color: #fca5a5;
+}
+
+.tenant-create-react-input:disabled {
+    cursor: not-allowed;
+    background: #f8fafc;
+    color: #8a94a6;
+}
+
+.tenant-create-react-error {
+    display: none;
+    margin-top: 8px;
+    color: #dc2626;
+    font-size: 13px;
+}
+
+.tenant-create-react-actions {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    gap: 12px;
+    margin-top: 16px;
+}
+
+.tenant-create-react-panel .create-tenant-body,
+.tenant-create-react-modal .modal-body {
+    padding: 16px 0 0;
+}
+
+.tenant-create-react-modal .modal-footer {
+    padding: 0;
+    border: 0;
+    justify-content: flex-end;
+    margin-top: 24px;
+}
+
+.tenant-create-react-actions .btn-gry2,
+.tenant-create-react-actions .btn_primary {
+    padding: 10px 20px;
+    border-radius: 8px;
+    font-size: 14px;
+}
+
+.tenant-create-react-actions .btn_primary {
+    font-weight: 500;
+    box-shadow: none !important;
+}
+
+.tenant-create-react-actions .btn_primary:disabled,
+.tenant-create-react-actions .btn_primary:disabled:hover {
+    background: #2563eb;
+    color: #fff;
+    opacity: 1;
+}
+
+#create-tenant-overlay {
+    padding: 24px 16px;
+    background: rgba(0, 0, 0, 0.5);
+    transition-duration: 200ms;
+}
+
+#create-tenant-overlay .tenant-create-react-panel {
+    transform: scale(0.9);
+    opacity: 0;
+    transition: opacity 220ms ease, transform 220ms cubic-bezier(0.4, 0, 0.2, 1);
+    transform-origin: center;
+}
+
+#create-tenant-overlay.show .tenant-create-react-panel {
+    transform: translateY(0) scale(1);
+    opacity: 1;
+}
+
+.tenant-create-react-modal .modal-dialog {
+    width: calc(100% - 32px);
+    max-width: 650px;
+    margin: 24px auto !important;
+    transform: none !important;
+}
+
+.tenant-create-react-modal .modal-content {
+    width: 100%;
+    max-width: 650px;
+    margin: 0;
+    padding: 28px;
+    border: 0;
+    border-radius: 4.8px;
+    box-shadow: 0 18px 42px rgba(0, 0, 0, 0.18) !important;
+}
+
 .tenant-card {
     width: 100%;
     border: 1px solid #e5e7eb;
@@ -4789,3 +4977,108 @@ position: fixed;
     font-size: 13px;
 }
 /* workspace-profile-header-v3 end */
+
+
+.first_agent{
+     position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        display: none;
+        align-items: center;
+        justify-content: center;
+        background-color: rgba(0, 0, 0, .6);
+}
+.first_agentmodal{
+    width: 600px;
+  background: white;
+  border-radius: 8px;
+  border-radius: 14px;
+}
+.first_agentmodal-header{
+    background: linear-gradient(100deg, #6D0CCE -4.13%, #2C61F5 61.56%, #0D850A 127.25%);
+    padding: 30px;
+  
+    border-top-left-radius: 12px;
+    border-top-right-radius: 12px;
+    position: relative;
+}
+.first_agentmodal-headersubtitle{
+    font-weight: 500;
+    font-size: 13px;
+    letter-spacing: 16%;
+    color: #fff;
+    background-color: #fff;
+    border-radius: 4px;
+    color: #3A6BF6;
+    padding: 8px 12px;
+    width: fit-content;
+ 
+}
+.first_agentmodal-headertitle{
+    color: #fff;
+    font-size: 30px;
+    font-weight: 700;
+    margin: 28px 0 12px;
+}
+.first_agentmodal-headerpara{
+    color: #fff;
+    font-size: 15px;
+    line-height: 21px;
+     font-weight: 500;
+     margin-bottom: 0;
+}
+.first_agentmodal-body{
+    background-color: #fff;
+    padding: 30px;
+    border-bottom-left-radius: 12px;
+    border-bottom-right-radius: 12px;
+}
+.first_agentmodal--close{
+       position: absolute;
+        right: 27px;
+    top: 29px;
+    width: 32px;
+    cursor: pointer;
+    border-radius: .5rem;
+}
+.first_agentmodal--close:hover{
+    background-color: rgba(255,255,255,0.1);
+}
+.first_agentmodal-bodybox{
+    background: #EBECF099;
+    border: 1px solid #D7DDF4;
+    border-radius: 4px;
+    padding: 8px 20px;
+    margin-bottom: 30px;
+    font-weight: 500;
+    width: fit-content;
+    font-size: 15px;
+    letter-spacing: .5px;
+}
+.first_agentmodal-boxdots{
+  background-color: #27C034;
+    width: 10px;
+    height: 10px;
+    display: inline-block;
+    border-radius: 50%;
+    margin-right: 8px;
+}
+.skip_btn{
+    color: #999BA2;
+    font-weight: 600;
+    font-size: 14px;    
+}
+.explore_agent{
+    background: #2C61F5;
+    color: #fff;
+    border-radius: 8px;
+     font-weight: 600;
+    font-size: 15px;  
+    padding: 12px 20px;
+}
+.explore_agent:hover{
+    background-color: #1c55de;
+    color: #fff;
+}

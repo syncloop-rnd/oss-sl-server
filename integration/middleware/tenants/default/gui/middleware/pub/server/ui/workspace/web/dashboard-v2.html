@@ -21,7 +21,7 @@
 
 	<!-- Custom styles for this template -->
 	<link href="middleware/pub/server/ui/assets/css/sidebars.css" rel="stylesheet">
-	<link href="middleware/pub/server/ui/assets/css/custom.css?v=workspace-profile-v2" rel="stylesheet">
+	<link href="middleware/pub/server/ui/assets/css/custom.css?v=workspace-profile-v4" rel="stylesheet">
 	<link href="middleware/pub/server/ui/assets/css/dashboard.css" rel="stylesheet">
 	<link rel="stylesheet" href="middleware/pub/server/ui/assets/css/login.css">
 	<link href="middleware/pub/server/ui/css/style.min.css" rel="stylesheet">
@@ -29,7 +29,7 @@
 	<link rel="stylesheet" href="middleware/pub/server/ui/assets/css/select2.min.css">
 	<link rel="stylesheet" href="middleware/pub/server/ui/css/sweetalert.css">
 	<link rel="stylesheet" href="middleware/pub/server/ui/assets/css/videopopup.css">
-	<script src="middleware/pub/server/ui/javascript/workspace-profile-header.js?v=workspace-profile-v2"></script>
+	<script src="middleware/pub/server/ui/javascript/workspace-profile-header.js?v=workspace-profile-v4"></script>
 	<script type="text/javascript">
 		var SDK_EMBEDDED = false;
 	</script>
@@ -61,7 +61,21 @@
 		#aPiTable_filter {
 			display: none;
 		}
+		.demo .nav-item{
+			flex-grow: 0;
+		}
 
+		.demo .nav-link{
+			font-weight: 500 !important;
+			font-size: 14px !important;
+			padding: 10px 40px;
+			color: #9ca3af;
+		}
+		.demo .nav-link.active{
+				color: #495057;
+				background-color: #eceff1 !important;
+				border-radius: 5px;
+		}
 	</style>
 
 </head>
@@ -280,8 +294,8 @@
 
 <main class="rg_br">
 	<div class="container-fluid ">
-		<div class="row">
-			<div class="col-lg-1 d-flex flex-column flex-shrink-0 eka-side p-0" data-match-height="groupName">
+		<div class="flex_main">
+			<aside class="dashboard-collapsible-sidebar d-flex width_collapse flex-column flex-shrink-0 eka-side p-0" data-match-height="groupName">
 				<ul class="nav nav-pills nav-flush flex-column mb-auto text-center left-m-bar">
                     <!-- <li>
                         <a href="middleware/pub/server/ui/workspace/web/dashboard.html?utm_source=Workspace&utm_medium=dashboard-page" class="nav-link active py-3 " title="Home" data-bs-toggle="tooltip" data-bs-placement="right">
@@ -295,14 +309,26 @@
                                 </svg>
                         </a>
                     </li> -->
+					<li class="collapse_btnsidebar">
+						<span>Dashboard</span>
+						<a href="javascript:void(0);" id="collapse_sidebar"><img src="../../../../../../Awareness/pub/images/dashboard-icon.svg"></a>
+					</li>
+					<!-- <li>
+                        <a onclick="openaitab('apps')" href="/dashboard/studio" class="nav-link py-2" title="Studio" data-bs-toggle="tooltip" data-bs-placement="right">
+                           <img src="../../../../../../Awareness/pub/images/menu_studio.svg" style="width: 28px;">
+						   <span class="nav_text">Studio</span>
+                        </a>
+                    </li> -->
                     <li>
-                        <a onclick="openaitab('apps')" href="/dashboard/apps" class="nav-link py-3" title="Apps" data-bs-toggle="tooltip" data-bs-placement="right">
-                           <img src="../../../../../../Awareness/pub/images/menu_apps.svg" style="width: 32px;">
+                        <a onclick="openaitab('apps')" href="/dashboard/apps" class="nav-link py-2" title="Apps" data-bs-toggle="tooltip" data-bs-placement="right">
+                           <img src="../../../../../../Awareness/pub/images/menu_apps.svg" style="width: 28px;">
+						    <span class="nav_text">Apps</span>
                         </a>
                     </li>
                     <li>
-                        <a href="/dashboard/team" class="nav-link py-3 " title="Teams" data-bs-toggle="tooltip" data-bs-placement="right">
-                         	  <img src="../../../../../../Awareness/pub/images/menu_team.svg" style="width: 32px;">
+                        <a href="/dashboard/team" class="nav-link py-2" title="Teams" data-bs-toggle="tooltip" data-bs-placement="right">
+                         	  <img src="../../../../../../Awareness/pub/images/menu_team.svg" style="width: 28px;">
+							   <span class="nav_text">Teams</span>
                         </a>
                     </li>
                     <!--<li>
@@ -312,9 +338,10 @@
                         </a>
                     </li>-->
 					<li>
-						<a href="/dashboard/agent" class="nav-link py-3 " title="Agents" data-bs-toggle="tooltip"
+						<a href="/dashboard/agent" class="nav-link py-2" title="Agents" data-bs-toggle="tooltip"
 						   data-bs-placement="right">
-							<img src="../../../../../../Awareness/pub/images/menu_agent.svg" style="width: 32px;">
+							<img src="../../../../../../Awareness/pub/images/menu_agent.svg" style="width: 28px;">
+							<span class="nav_text">Agents</span>
 						</a>
 					</li>
                     <!--<li>
@@ -324,68 +351,78 @@
                         </a>
                     </li>-->
 					<li>
-						<a href="/dashboard/tools" class="nav-link py-3" title="Tools" data-bs-toggle="tooltip" data-bs-placement="right">
-							<img src="../../../../../../Awareness/pub/images/menu_tools.svg" style="width: 32px;">
+						<a href="/dashboard/tools" class="nav-link py-2" title="Tools" data-bs-toggle="tooltip" data-bs-placement="right">
+							<img src="../../../../../../Awareness/pub/images/menu_tools.svg" style="width: 28px;">
+							<span class="nav_text">Tools</span>
 						</a>
 					</li>
 					<li>
-						<a href="/dashboard/mcp" class="nav-link py-3" title="MCP" data-bs-toggle="tooltip" data-bs-placement="right">
-							<img src="../../../../../../Awareness/pub/images/mcp_icon.svg" style="width: 32px;">
+						<a href="/dashboard/mcp" class="nav-link py-2" title="MCP" data-bs-toggle="tooltip" data-bs-placement="right">
+							<img src="../../../../../../Awareness/pub/images/mcp_icon.svg" style="width: 28px;">
+							<span class="nav_text">MCP</span>
 						</a>
 					</li>
                     <li>
-                        <a href="/middleware/pub/server/ui/workspace/web/api.html?utm_source=Workspace&utm_medium=api-page"  class="nav-link py-3" title="Api's" data-bs-toggle="tooltip"
+                        <a href="/middleware/pub/server/ui/workspace/web/api.html?utm_source=Workspace&utm_medium=api-page"  class="nav-link py-2" title="Api's" data-bs-toggle="tooltip"
                            data-bs-placement="right">
-                            <img src="../../../../../../Awareness/pub/images/menu_APIs.svg" style="width: 32px;">
+                            <img src="../../../../../../Awareness/pub/images/menu_APIs.svg" style="width: 28px;">
+							<span class="nav_text">Api's</span>
                         </a>
                     </li>
 					<li>
-						<a href="/dashboard/apps?action=import"
-						   class="nav-link py-3"
+						<a href="javascript:void(0)" onclick="triggerImport()"
+						   class="nav-link py-2"
 						   title="Import"
 						   data-bs-toggle="tooltip"
 						   data-bs-placement="right">
-							<img src="../../../../../../Awareness/pub/images/menu_import.svg" style="width:32px;">
+							<img src="../../../../../../Awareness/pub/images/menu_import.svg" style="width:28px;">
+							<span class="nav_text">Import</span>
 						</a>
 					</li>
 
 					<li>
-						<a href="/dashboard/apps?action=export"
-						   class="nav-link py-3"
+						<a href="javascript:void(0)" onclick="exportJSON()"
+						   class="nav-link py-2"
 						   title="Export"
 						   data-bs-toggle="tooltip"
 						   data-bs-placement="right">
-							<img src="../../../../../../Awareness/pub/images/menu_export.svg" style="width:32px;">
+							<img src="../../../../../../Awareness/pub/images/menu_export.svg" style="width:28px;">
+							<span class="nav_text">Export</span>
 						</a>
 					</li>
+					<li hidden><input type="file" id="jsonImport" accept=".json,application/json" onchange="importJSON(this.files[0]); this.value = ''"></li>
                     <li>
-                        <a href="/dashboard/llm"  class="nav-link py-3" title="LLM's" data-bs-toggle="tooltip" data-bs-placement="right">
-                            <img src="../../../../../../Awareness/pub/images/menu_LLM.svg" style="width: 32px;">
+                        <a href="/dashboard/llm"  class="nav-link py-2" title="LLM's" data-bs-toggle="tooltip" data-bs-placement="right">
+                            <img src="../../../../../../Awareness/pub/images/menu_LLM.svg" style="width: 28px;">
+							<span class="nav_text">LLM's</span>
                         </a>
                     </li>
 					  <li>
-                        <a href="/dashboard/embeddings" class="nav-link py-3" title="Embedding Models" data-bs-toggle="tooltip"
+                        <a href="/dashboard/embeddings" class="nav-link py-2" title="Embedding Models" data-bs-toggle="tooltip"
                            data-bs-placement="right">
-                           <img src="../../../../../../Awareness/pub/images/embedd_icon.svg" style="width: 32px;">
+                           <img src="../../../../../../Awareness/pub/images/embedd_icon.svg" style="width: 28px;">
+						   <span class="nav_text">Embedding Models</span>
                         </a>
                     </li>
                     <li>
-                        <a href="/dashboard/knowledge" class="nav-link py-3" title="Knowledge Base" data-bs-toggle="tooltip"
+                        <a href="/dashboard/knowledge" class="nav-link py-2" title="Knowledge Base" data-bs-toggle="tooltip"
                            data-bs-placement="right">
-                           <img src="../../../../../../Awareness/pub/images/menu_knowledgebase.svg" style="width: 32px;">
+                           <img src="../../../../../../Awareness/pub/images/menu_knowledgebase.svg" style="width: 28px;">
+						   <span class="nav_text">Knowledge Base</span>
                         </a>
                     </li>
 
                 </ul>
-			</div>
+			</aside>
 
-			<div class="col-lg-11 px-5 pr-0 p-3 rg_pnl" data-match-height="groupName">
+			<div class="flex_rightside px-5 pr-0 p-3 rg_pnl" data-match-height="groupName">
 				<main class="dashboard_wrapper">
 					<div class="crte">
 						<!-- <h3>New</h3> -->
 						<div class="dash_options">
 							<h4>Welcome back to Syncloop</h4>
-							<p>Create new project to start from scratch. Open existing projects from the folders.</p>
+							<p>Create and explore AI agents without configuring an LLM first. Your agent comes with Syncloop Assistant <br> to get you started — you can connect your own LLM anytime.</p>
+							<button type="button" class="create_agent" ><img src="middleware/pub/server/ui/assets/img/agent-welcome-icon.svg"> Create Agent</button>
 						</div>
 
 						<div class="dash_action_tab">
@@ -802,24 +839,24 @@
 										<div role="tabpanel">
 											<!-- Nav tabs -->
 											<ul class="nav nav-tabs nav-justified nav-tabs-dropdown" role="tablist">
-												<li role="presentation"><a class="active" href="#file" aria-controls="file" role="tab" data-bs-toggle="tab">File</a></li>
-												<li role="presentation"><a href="#link" aria-controls="link" role="tab" data-bs-toggle="tab">Link</a></li>
+														<li class="nav-item" role="presentation"><a class="nav-link active" href="#swagger-file" aria-controls="swagger-file" role="tab" data-bs-toggle="tab">File</a></li>
+														<li class="nav-item" role="presentation"><a class="nav-link" href="#swagger-link" aria-controls="swagger-link" role="tab" data-bs-toggle="tab">Link</a></li>
 											</ul>
 											<!-- Tab panes -->
 											<div class="tab-content">
-												<div role="tabpanel" class="tab-pane active" id="file">
+								<div role="tabpanel" class="tab-pane active" id="swagger-file">
 													<form>
-														<label for="file" class="br_dropzone">
+										<label for="swagger-file-input" class="br_dropzone">
 															<img src="middleware/pub/server/ui/assets/img/import_icon.svg">
 															<button type="button" class="choose_file_btn btn btn-gry">Choose file</button>
-															<input type="file" id="file" name="file" onchange="evaluateFile(this)" required>
+										<input type="file" id="swagger-file-input" name="file" onchange="evaluateFile(this)" required>
 															<input type="text" id="fileName" name="fileName" placeholder="Drag and drop your files here or browse to upload" readonly>
 														</label>
 
 															<input type="reset" name="button" id="resetBtn" style="display: none">
 													</form>
 												</div>
-												<div role="tabpanel" class="tab-pane" id="link">
+								<div role="tabpanel" class="tab-pane" id="swagger-link">
 													<div class="form-group">
 														<label>Add your link here </label>
 														<input class="form-control" type="text" id="json_file_link" placeholder="e.g. https://petstore3.swagger.io/api/v3/openapi.json" value="">
@@ -1103,6 +1140,26 @@
 					</div>
 				</div>
 			</div>
+
+    <div class="first_agent">
+        <div class="first_agentmodal">
+			 <div class="first_agentmodal-header">
+                 <div class="first_agentmodal-headersubtitle">WELCOME TO SYNCLOOP</div>
+				 <h5 class="first_agentmodal-headertitle">Your first agent is ready!</h5>
+				 <p class="first_agentmodal-headerpara">Start chatting with Syncloop Assistant and discover your new AI agent. Ask questions, try prompts, and connect your own LLM anytime in Settings.</p>
+				 <img src="middleware/pub/server/ui/assets/img/popup_Close_icon.svg" class="first_agentmodal--close" role="button" tabindex="0" aria-label="Close welcome modal">
+				</div>
+			 <div class="first_agentmodal-body">
+				<div class="first_agentmodal-bodybox">
+					<span class="first_agentmodal-boxdots"></span>Powered by Syncloop Assistant — Included with your workspace
+				</div>
+				<div class="d-flex  align-items-center justify-content-between" style="padding: 0 4px;">
+					<a href="#" class="skip_btn">Skip for now</a>
+					<a href="#" class="explore_agent">Explore Agent</a>
+				</div>
+			 </div>
+		</div>
+	</div>
 			<!-- environment update popup -->
 <script src="middleware/pub/server/ui/javascript/showdown.min.js"></script>
 <script	src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
@@ -1123,6 +1180,179 @@
 <script src="middleware/pub/server/ui/javascript/syncloop-nonenterprise.js"></script>
 <script src="../../../../../../Awareness/pub/assets/console.js"></script>
 <script>
+	var welcomeAgentId = "";
+	var welcomeAgentTenantId = "";
+	var welcomeAgentCreationStatus = false;
+
+	function loadWelcomeAgentState() {
+		welcomeAgentId = String(localStorage.getItem("welcome_agent_id") || "").trim();
+		welcomeAgentTenantId = String(localStorage.getItem("welcome_agent_tenant_id") || "").trim();
+		welcomeAgentCreationStatus = Boolean(
+			localStorage.getItem("welcome_agent_creation_status") === "true" &&
+			welcomeAgentId &&
+			welcomeAgentTenantId &&
+			welcomeAgentTenantId === String(localStorage.getItem("tenant") || "").trim()
+		);
+	}
+
+	loadWelcomeAgentState();
+
+	function hideFirstAgentModal(event) {
+		if (event) {
+			event.preventDefault();
+		}
+
+		var firstAgentModal = document.querySelector(".first_agent");
+		if (firstAgentModal) {
+			firstAgentModal.style.display = "none";
+			firstAgentModal.setAttribute("aria-hidden", "true");
+		}
+	}
+
+	function openWelcomeAgent(event) {
+		if (event) {
+			event.preventDefault();
+		}
+
+		var target = "/dashboard/agent";
+		if (welcomeAgentCreationStatus && welcomeAgentId) {
+			localStorage.setItem("welcome_agent_creation_status", "false");
+			target += "/" + encodeURIComponent(welcomeAgentId);
+		}
+		window.location.href = target;
+	}
+
+    function openNewAgent(event) {
+		if (event) {
+			event.preventDefault();
+		}
+
+		var target = "/dashboard/agent";
+		target += "/" + encodeURIComponent(uuidv4());
+		window.location.href = target;
+	}
+
+	function updateFirstAgentModalVisibility() {
+		var firstAgentModal = document.querySelector(".first_agent");
+		if (firstAgentModal) {
+			var shouldShow = welcomeAgentCreationStatus && welcomeAgentId;
+			firstAgentModal.style.display = shouldShow ? "flex" : "none";
+			firstAgentModal.setAttribute("aria-hidden", shouldShow ? "false" : "true");
+		}
+	}
+
+	function injectWelcomeAgentInProgressToast() {
+		var existingToast = document.getElementById("welcome-agent-in-progress-toast");
+		if (existingToast) {
+			return existingToast;
+		}
+
+		var header = document.querySelector(".custom_head");
+		if (!header) {
+			return null;
+		}
+
+		var toast = document.createElement("div");
+		toast.id = "welcome-agent-in-progress-toast";
+		toast.className = "toast-warning";
+		toast.setAttribute("role", "status");
+		toast.setAttribute("aria-live", "polite");
+		toast.innerHTML = `
+			<div class="toast-content">
+				<i class="toast-check " aria-hidden="true">
+				  <div class="spinner-border" role="status">
+						<span class="visually-hidden">Loading...</span>
+						</div>
+				</i>
+				<div class="message">
+					<h5>In Progress</h5>
+					<p>A default agent, <b>Syncloop Assistant</b>, is being created for you. It will be ready in a few seconds.</p>
+				</div>
+			</div>`;
+
+		header.appendChild(toast);
+		return toast;
+	}
+
+	function setupWelcomeAgentForNewUser() {
+		if (localStorage.getItem("welcome_agent_setup_pending") !== "true") {
+			return;
+		}
+
+		var tenantName = String(localStorage.getItem("tenant") || "").trim();
+		if (!tenantName) {
+			return;
+		}
+
+		var inProgressToast = injectWelcomeAgentInProgressToast();
+
+		createDefaultTenantResources(tenantName).then(function () {
+			if (inProgressToast) {
+				inProgressToast.remove();
+			}
+			localStorage.removeItem("welcome_agent_setup_pending");
+			loadWelcomeAgentState();
+			updateFirstAgentModalVisibility();
+		}).catch(function (error) {
+			if (inProgressToast) {
+				inProgressToast.remove();
+			}
+			console.error("Unable to create default resources for the new user:", error);
+		});
+	}
+
+	document.querySelectorAll(".first_agentmodal--close, .skip_btn").forEach(function (dismissControl) {
+		dismissControl.addEventListener("click", hideFirstAgentModal);
+	});
+
+	var firstAgentModalClose = document.querySelector(".first_agentmodal--close");
+	if (firstAgentModalClose) {
+		firstAgentModalClose.addEventListener("keydown", function (event) {
+			if (event.key === "Enter" || event.key === " ") {
+				hideFirstAgentModal(event);
+			}
+		});
+	}
+
+	document.querySelectorAll(".explore_agent").forEach(function (agentControl) {
+		agentControl.addEventListener("click", openWelcomeAgent);
+	});
+
+	document.querySelectorAll(".create_agent").forEach(function (agentControl) {
+		agentControl.addEventListener("click", openNewAgent);
+	});
+
+	updateFirstAgentModalVisibility();
+
+		window.onload = function () {
+		var sidebar = document.querySelector(".dashboard-collapsible-sidebar");
+		var sidebarToggle = document.getElementById("collapse_sidebar");
+		var sidebarTooltips = sidebar.querySelectorAll('[data-bs-toggle="tooltip"]');
+
+		function updateSidebarTooltips(isExpanded) {
+			sidebarTooltips.forEach(function (element) {
+				var tooltip = bootstrap.Tooltip.getInstance(element) || new bootstrap.Tooltip(element);
+				if (isExpanded) {
+					tooltip.hide();
+					tooltip.disable();
+				} else {
+					tooltip.enable();
+				}
+			});
+		}
+
+		sidebarToggle.onclick = function () {
+			sidebar.classList.toggle("width_collapseincrease");
+
+			var isExpanded = sidebar.classList.contains("width_collapseincrease");
+			sidebarToggle.setAttribute("aria-expanded", String(isExpanded));
+			updateSidebarTooltips(isExpanded);
+		};
+
+		var isInitiallyExpanded = sidebar.classList.contains("width_collapseincrease");
+		sidebarToggle.setAttribute("aria-expanded", String(isInitiallyExpanded));
+		updateSidebarTooltips(isInitiallyExpanded);
+	};
 $(window).ready(function () {
 	$(".preload").delay(0).fadeOut(80);
   });
@@ -1469,7 +1699,7 @@ let copyText3 = document.querySelector(".copy-text3");
 		}
 
 		let isPkgExists = false;
-		for (var i = 0; i < packages.children.length; i++) {
+		for (var i = 0; i < (packages.children || []).length; i++) {
 			if (packages.children[i].text == $("#package_name").val().trim()) {
 				isPkgExists = true;
 				break;
@@ -1619,8 +1849,15 @@ let copyText3 = document.querySelector(".copy-text3");
 	function aiInitialize() {
 		asyncRestRequest("/packages.Awareness.dashboard.services.api.initialize.main", null,  "GET", function (response) {
 			packages = response;
+			updateFirstAgentModalVisibility();
 		}, function(errormessage) {
+			updateFirstAgentModalVisibility();
 		});
+	}
+	if (document.readyState === "complete") {
+		setupWelcomeAgentForNewUser();
+	} else {
+		window.addEventListener("load", setupWelcomeAgentForNewUser, { once: true });
 	}
 	aiInitialize();
 </script>

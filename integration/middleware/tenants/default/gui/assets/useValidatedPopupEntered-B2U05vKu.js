@@ -1,0 +1,1 @@
+import{r as e}from"./rolldown-runtime-Dw2cE7zH.js";import{tt as t}from"./vendor-lucide-DbZuonqX.js";var n=e(t(),1);function r(e){let[t,r]=(0,n.useState)(!1);return(0,n.useEffect)(()=>{if(!e){r(!1);return}let t=requestAnimationFrame(()=>{requestAnimationFrame(()=>r(!0))});return()=>cancelAnimationFrame(t)},[e]),t}export{r as t};

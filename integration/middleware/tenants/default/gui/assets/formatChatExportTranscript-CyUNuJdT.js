@@ -1,0 +1,5 @@
+import{h as e}from"./studioIcons-C2LHjEZX.js";function t(t){return[...t].sort((t,n)=>{let r=e(t)??2**53-1,i=e(n)??2**53-1;if(r!==i)return r-i;let a=typeof t.MODIFIED_TS_MS==`number`?t.MODIFIED_TS_MS:Number(t.MODIFIED_TS_MS??t.CREATED_TS_MS??0),o=typeof n.MODIFIED_TS_MS==`number`?n.MODIFIED_TS_MS:Number(n.MODIFIED_TS_MS??n.CREATED_TS_MS??0);if(o!==a)return o-a;let s=typeof t.DATETIME==`string`?Number(t.DATETIME.trim())||0:Number(t.DATETIME??0);return(typeof n.DATETIME==`string`?Number(n.DATETIME.trim())||0:Number(n.DATETIME??0))-s})}function n(e){let t=[],n=[];for(let r of e){if(r.role!==`user`&&r.role!==`assistant`)continue;let e=r.role===`user`?`User`:`Agent`;n.push(`${e}: ${r.content}`),r.role===`assistant`&&(t.push(n.join(`
+`)),n=[])}return n.length>0&&t.push(n.join(`
+`)),t.join(`
+
+`)}export{t as n,n as t};

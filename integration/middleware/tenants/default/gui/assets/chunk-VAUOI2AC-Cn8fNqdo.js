@@ -1,1 +1,0 @@
-import{n as e}from"./chunk-Y2CYZVJY-Cc4-2YC8.js";import"./src-CacuXPPS.js";import{x as t}from"./chunk-WYO6CB5R-BPcmJRvE.js";import{k as n}from"./vendor-reactflow-16qXvbFo.js";var r=e(e=>{let{securityLevel:r}=t(),i=n(`body`);return r===`sandbox`&&(i=n((n(`#i${e}`).node()?.contentDocument??document).body)),i.select(`#${e}`)},`selectSvgElement`);export{r as t};

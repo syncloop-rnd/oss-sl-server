@@ -122,6 +122,7 @@
 			if (event.data.action === "installLoggingKeys") {
 				installLoggingKeys(event.data.payload);
 			}
+
 		});
 
 	</script>
@@ -346,6 +347,13 @@
 		});
 
 		function installLoggingKeys(payload) {
+
+			debugger;
+			if (payload.is_new_tenant) {
+				localStorage.setItem("welcome_agent_setup_pending", true);
+				localStorage.setItem("welcome_agent_setup_init", true);
+			}
+
 			localStorage.removeItem("tenant");
 			localStorage.setItem("AuthToken", payload.token);
 			localStorage.setItem("loginTenant", !payload.tenant ? "default" : payload.tenant);

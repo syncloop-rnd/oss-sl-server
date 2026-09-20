@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Syncloop Authorization Channel</title>
-    <script src="https://dev-pt.syncloop.com/env.js"></script>
+    <script src="https://cloud.syncloop.com/env.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/js-cookie@2.2.1/src/js.cookie.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/js-cookie@2/src/js.cookie.min.js"></script>
     <script src="/files/gui/middleware/pub/server/ui/javascript/middleware.js"></script>
@@ -42,12 +42,14 @@
                     url: "/jwt?expiration_time=2&userID=" + profile.userId + "&token_key=" + profile.userId,
                     method: "GET",
                     success: function (data) {
+                        debugger;
                         window.opener.postMessage(
                             {
                                 action: "installLoggingKeys",
                                 payload: {
                                     token: data,
-                                    tenant: profile.profile.tenant
+                                    tenant: profile.profile.tenant,
+                                    is_new_tenant: null == localStorage.getItem("is_new_tenant") ? false : localStorage.getItem("is_new_tenant")
                                 }
                             },
                             window.env.CDN_API_BASE_URL

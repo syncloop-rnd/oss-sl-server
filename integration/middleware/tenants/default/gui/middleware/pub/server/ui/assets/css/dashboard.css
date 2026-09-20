@@ -39,7 +39,7 @@ body {
 }
 
 #importSwaggerModal ul.nav.nav-tabs {
-  margin-bottom: 7px !important;
+  margin-bottom: 20px !important;
 }
 
 .dash_options p {
@@ -55,7 +55,7 @@ body {
   background: linear-gradient(100deg, #6D0CCE -4.13%, #2C61F5 61.56%, #0D850A 127.25%);
   padding: 30px;
   color: #fff;
-  height: 190px;
+  height: 258px;
 }
 
 .opt_grid {
@@ -718,7 +718,7 @@ form input {
 
 .dash_action_tab {
   padding: 0 25px;
-  margin: -86px 0 0px;
+  margin: -48px 0 0px;
 }
 
 .crd-body {
