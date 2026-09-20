@@ -76,7 +76,7 @@ echo "Launching MiddlewareServer..."
 echo
 
 # Start Java process
-exec sudo -E $JAVA_HOME/java \
+exec sudo -E $JAVA_HOME/bin/java \
     $DEBUG_OPTS \
     $ADD_OPENS \
     -cp "$CP" \
