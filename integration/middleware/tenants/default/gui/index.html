@@ -2,7 +2,7 @@
 
 <head>
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Syncloop AI — Build & Automate Workflows</title>
+    <title>Syncloop AI - Build & Automate Workflows</title>
 
     <meta name="description"
           content="Build and automate workflows with a powerful AI system by Syncloop. Streamline operations, integrate tools, and scale faster. Get started today." />
@@ -14,7 +14,7 @@
 
     <!-- Open Graph / WhatsApp / Facebook -->
     <meta property="og:title"
-          content="Syncloop AI — Build & Automate Workflows" />
+          content="Syncloop AI - Build & Automate Workflows" />
 
     <meta property="og:description"
           content="Build and automate workflows with a powerful AI system by Syncloop. Streamline operations, integrate tools, and scale faster. Get started today." />
@@ -35,7 +35,7 @@
     <meta name="twitter:card" content="summary_large_image" />
 
     <meta name="twitter:title"
-          content="Syncloop AI — Build & Automate Workflows" />
+          content="Syncloop AI - Build & Automate Workflows" />
 
     <meta name="twitter:description"
           content="Build and automate workflows with a powerful AI system by Syncloop. Streamline operations, integrate tools, and scale faster." />
@@ -47,36 +47,55 @@
     <script>
         window.ENV = window.env || {};
     </script>
-   <script type="module" crossorigin src="/assets/index-BshfDPoh.js"></script>
-   <link rel="modulepreload" crossorigin href="/assets/rolldown-runtime-Dw2cE7zH.js">
-   <link rel="modulepreload" crossorigin href="/assets/vendor-lucide-BkDakTMq.js">
-   <link rel="modulepreload" crossorigin href="/assets/vendor-redux-BxmcBPDP.js">
-   <link rel="modulepreload" crossorigin href="/assets/vendor-router-Dd8AOUPy.js">
-   <link rel="modulepreload" crossorigin href="/assets/vendor-react-BoEa23SJ.js">
-   <link rel="modulepreload" crossorigin href="/assets/env-DtmASy57.js">
-   <link rel="modulepreload" crossorigin href="/assets/extractSyncloopErrorDetail-FZppiuRX.js">
-   <link rel="modulepreload" crossorigin href="/assets/clsx-DIZ_YDR7.js">
-   <link rel="modulepreload" crossorigin href="/assets/syncloopApiResponse-B1_jTHn8.js">
-   <link rel="modulepreload" crossorigin href="/assets/teamService-C49kqrlz.js">
-   <link rel="modulepreload" crossorigin href="/assets/studioIcons-Cdm_dr4T.js">
-   <link rel="modulepreload" crossorigin href="/assets/Close_round_duotone_line-BzkOUL-D.js">
-   <link rel="modulepreload" crossorigin href="/assets/info-DQNOi0dU.js">
-   <link rel="modulepreload" crossorigin href="/assets/useValidatedPopupEntered-DfYOBO1I.js">
-   <link rel="modulepreload" crossorigin href="/assets/RightDrawer-CvsmrT8_.js">
-   <link rel="modulepreload" crossorigin href="/assets/listAgentsCache-2nTZDiiE.js">
-   <link rel="modulepreload" crossorigin href="/assets/AppViewerChatDrawer-CIu0DID_.js">
-   <link rel="modulepreload" crossorigin href="/assets/sweetAlert-BAQF1zRu.js">
-   <link rel="modulepreload" crossorigin href="/assets/sessionProbeCache-pj2WpomV.js">
-   <link rel="modulepreload" crossorigin href="/assets/dashboard-icon-B0HwECX5.js">
-   <link rel="modulepreload" crossorigin href="/assets/useBreadcrumbDetail-BFl3WlDP.js">
-   <link rel="modulepreload" crossorigin href="/assets/AppsLayout-Be0OfYIb.js">
-   <link rel="modulepreload" crossorigin href="/assets/delete_exclamation-RtgXoYu4.js">
-   <link rel="modulepreload" crossorigin href="/assets/GlobalPopupModal-RUHaOka4.js">
-   <link rel="modulepreload" crossorigin href="/assets/savedTeamsStorage-DHYZNM_9.js">
-   <link rel="modulepreload" crossorigin href="/assets/fetchTeamsParse-t2wObX7D.js">
-   <link rel="modulepreload" crossorigin href="/assets/teamsViewerSlice-CXpGvCcu.js">
-   <link rel="stylesheet" crossorigin href="/assets/sweetAlert-B70YlXsi.css">
-   <link rel="stylesheet" crossorigin href="/assets/index-iorXhmnX.css">
+    <script>
+        // auth_token: public standalone seeds localStorage.AuthToken when missing (never overwrites).
+        // When set → Awareness WS. When empty (e.g. private/incognito window) → HTTP /chat fallback.
+        // Host should inject a real short-lived token in prod for WS.
+        window.__INITIAL_DATA__ = {
+            // "agent_welcome_message": "Welcome to PEC! Your academic guide is here. Ask me anything about curriculum, courses, enrolment, and academic programs.",
+            "required_login": false,
+            "enable_websocket": true,
+            // "auth_token": ''
+
+
+            // public standalone for local testing
+            // "auth_token": `Bearer ${localStorage.getItem('AuthToken')}`
+
+        }
+    </script>
+     <script type="module" crossorigin src="/assets/index-BsMcj96q.js"></script>
+     <link rel="modulepreload" crossorigin href="/assets/rolldown-runtime-Dw2cE7zH.js">
+     <link rel="modulepreload" crossorigin href="/assets/vendor-lucide-DbZuonqX.js">
+     <link rel="modulepreload" crossorigin href="/assets/vendor-redux-BjPYU-iQ.js">
+     <link rel="modulepreload" crossorigin href="/assets/vendor-router-BMzH3GwG.js">
+     <link rel="modulepreload" crossorigin href="/assets/vendor-react-CrYwfm-2.js">
+     <link rel="modulepreload" crossorigin href="/assets/env-TbOwXajo.js">
+     <link rel="modulepreload" crossorigin href="/assets/dashboardExportListFallback-CRsGgX3k.js">
+     <link rel="modulepreload" crossorigin href="/assets/teamService-pDE8foFg.js">
+     <link rel="modulepreload" crossorigin href="/assets/clsx-DIZ_YDR7.js">
+     <link rel="modulepreload" crossorigin href="/assets/Close_round_duotone_line-BYbb471b.js">
+     <link rel="modulepreload" crossorigin href="/assets/listAgentsCache-CnicMdYh.js">
+     <link rel="modulepreload" crossorigin href="/assets/studioIcons-C2LHjEZX.js">
+     <link rel="modulepreload" crossorigin href="/assets/info-DY2fOGW8.js">
+     <link rel="modulepreload" crossorigin href="/assets/useValidatedPopupEntered-B2U05vKu.js">
+     <link rel="modulepreload" crossorigin href="/assets/RightDrawer-DsXRg5H2.js">
+     <link rel="modulepreload" crossorigin href="/assets/GlobalPopupModal-BmD0yz37.js">
+     <link rel="modulepreload" crossorigin href="/assets/FilePreviewModal-CMxv-wxf.js">
+     <link rel="modulepreload" crossorigin href="/assets/llmModelCatalog-B1b09igW.js">
+     <link rel="modulepreload" crossorigin href="/assets/AppViewerChatDrawer-mEZnWF70.js">
+     <link rel="modulepreload" crossorigin href="/assets/sweetAlert-BAQF1zRu.js">
+     <link rel="modulepreload" crossorigin href="/assets/separatedDashboardListCaches-DS02zXcU.js">
+     <link rel="modulepreload" crossorigin href="/assets/useDashboardData-EPPDifiw.js">
+     <link rel="modulepreload" crossorigin href="/assets/sessionProbeCache-KXbje-qU.js">
+     <link rel="modulepreload" crossorigin href="/assets/dashboard-icon-mEJGdO6s.js">
+     <link rel="modulepreload" crossorigin href="/assets/delete_exclamation-RtgXoYu4.js">
+     <link rel="modulepreload" crossorigin href="/assets/useBreadcrumbDetail-DyhkfI1z.js">
+     <link rel="modulepreload" crossorigin href="/assets/AppsLayout-Cvnl82vX.js">
+     <link rel="modulepreload" crossorigin href="/assets/savedTeamsStorage-atEIF9sW.js">
+     <link rel="modulepreload" crossorigin href="/assets/fetchTeamsParse-CSSI8IyQ.js">
+     <link rel="modulepreload" crossorigin href="/assets/teamsViewerSlice-DU7MI0QQ.js">
+     <link rel="stylesheet" crossorigin href="/assets/sweetAlert-B70YlXsi.css">
+     <link rel="stylesheet" crossorigin href="/assets/index-CIPCMX55.css">
 
     <script type="syncloop/analytics"></script>
 
